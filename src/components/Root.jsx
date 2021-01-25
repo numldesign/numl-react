@@ -5,7 +5,7 @@ export default function Root({ children, onInit, ...props }) {
   useEffect(() => {
     requireNude()
       .then(Nude => {
-        onInit(Nude);
+        onInit && onInit(Nude);
 
         Nude.init();
       });
@@ -13,7 +13,10 @@ export default function Root({ children, onInit, ...props }) {
 
   return <nu-root
     style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
+    padding="2x"
+    fill="subtle"
     {...props}>
-    { children }
+    <nu-theme hue="262"/>
+    {children}
   </nu-root>;
 }

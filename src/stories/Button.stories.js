@@ -7,18 +7,27 @@ export default {
   component: Button,
   argTypes: {
     size: {
-      defaultValue: 'md',
+      defaultValue: undefined,
       control: {
         type: 'radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
+    special: {
+      defaultValue: false,
+      control: {
+        type: 'boolean',
+      },
+    }
   },
 };
 
-const Template = ({ label, ...args }) => (
+const Template = ({ label, special, ...args }) => (
   <Root>
-    <Button {...args}>
+    <Button
+      special={special || undefined}
+      {...args}
+    >
       {label}
     </Button>
   </Root>
@@ -26,7 +35,7 @@ const Template = ({ label, ...args }) => (
 
 export const Special = Template.bind({});
 Special.args = {
-  special: '',
+  special: true,
   label: 'Button',
 };
 

@@ -1,4 +1,13 @@
 <script>
   document.documentElement.dataset.nuPrevent = '';
 </script>
-<script src="https://cdn.skypack.dev/numl" type="module" />
+<script>
+  setTimeout(() => {
+    const script = document.createElement('script');
+
+    script.src = 'https://cdn.skypack.dev/numl';
+    script.type = 'module';
+
+    document.body.appendChild(script);
+  });
+</script>
