@@ -7,6 +7,10 @@ We have created example integrations to document some of the ways you could incl
 - [create-react-app with gatsby-plugin-numl example](https://numl.design/handbook/integration/react)
 - [next.js example](https://numl.design/handbook/integration/next-js)
 
+## Built with Numl
+
+* [Cube.js UIKit](https://github.com/cube-js/cubejs-ui-kit) by **Cube Dev**.
+
 ## License
 
 [MIT](LICENSE)
