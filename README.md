@@ -9,7 +9,7 @@ We have created example integrations to document some of the ways you could incl
 
 ## Built with Numl
 
-* [Cube.js UIKit](https://github.com/cube-js/cubejs-ui-kit) by **Cube Dev**.
+* [Cube.js UI Kit](https://github.com/cube-js/cubejs-ui-kit) by **Cube Dev**.
 
 ## License
 
