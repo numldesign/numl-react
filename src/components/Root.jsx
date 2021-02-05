@@ -5,6 +5,8 @@ export default function Root({ children, onInit, ...props }) {
   useEffect(() => {
     requireNude()
       .then(Nude => {
+        document.documentElement.dataset.nuIcons = 'ion';
+
         onInit && onInit(Nude);
 
         Nude.init();

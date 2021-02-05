@@ -9,7 +9,7 @@ export default {
     size: {
       defaultValue: undefined,
       control: {
-        type: 'radio',
+        type: 'inline-radio',
         options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
@@ -28,6 +28,7 @@ const Template = ({ label, special, ...args }) => (
       special={special || undefined}
       {...args}
     >
+      <nu-icon name="add-circle-outline"/>
       {label}
     </Button>
   </Root>
