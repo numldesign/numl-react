@@ -28,7 +28,6 @@ const Template = ({ label, special, ...args }) => (
       special={special || undefined}
       {...args}
     >
-      <nu-icon name="add-circle-outline"/>
       {label}
     </Button>
   </Root>
