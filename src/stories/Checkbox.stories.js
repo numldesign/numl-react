@@ -1,6 +1,5 @@
 import React from 'react';
 import Checkbox from '../components/Checkbox';
-import CheckboxField from '../components/CheckboxField';
 import Root from '../components/Root';
 
 export default {
@@ -23,25 +22,19 @@ export default {
   },
 };
 
-const TemplateCheckbox = ({ label, ...args }) => (
+const Template = ({ children, ...args }) => (
   <Root>
-    {label ? <CheckboxField
-      label={label}
-      {...args}
-    /> : <Checkbox
-      {...args}
-    />}
+    {children ? <Checkbox.Field children={children} {...args} /> : <Checkbox {...args} />}
   </Root>
 );
 
-export const Basic = TemplateCheckbox.bind({});
+export const Basic = Template.bind({});
 Basic.args = {
   checked: false,
-  label: '',
 };
 
-export const WithLabel = TemplateCheckbox.bind({});
+export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  label: 'Checkbox',
+  children: 'Checkbox',
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import Root from '../components/Root';
 import Switch from '../components/Switch';
-import SwitchField from '../components/SwitchField'
 
 export default {
   title: 'Example/Switch',
@@ -20,7 +19,7 @@ export default {
         type: 'text',
       },
     },
-    fill:{
+    fill: {
       control: {
         type: 'color',
       },
@@ -28,25 +27,19 @@ export default {
   },
 };
 
-const TemplateSwitchtoggle = ({ label, ...args }) => (
+const Template = ({ children, ...args }) => (
   <Root>
-    {label ? <SwitchField
-      label={label}
-      {...args}
-    /> : <Switch
-        {...args}
-      />}
+    {children ? <Switch.Field children={children} {...args} /> : <Switch {...args} />}
   </Root>
 );
 
-export const Basic = TemplateSwitchtoggle.bind({});
+export const Basic = Template.bind({});
 Basic.args = {
   checked: false,
-  label: '',
 };
 
-export const WithLabel = TemplateSwitchtoggle.bind({});
+export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  label: 'Switch',
+  children: 'Switch',
 };

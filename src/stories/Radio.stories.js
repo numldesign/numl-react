@@ -23,20 +23,19 @@ export default {
   },
 };
 
-const Template = ({ label, ...args }) => (
+const Template = ({ children, ...args }) => (
   <Root>
-    {label ? <Radio.Field label={label} {...args} /> : <Radio {...args} />}
+    {children ? <Radio.Field children={children} {...args} /> : <Radio {...args} />}
   </Root>
 );
 
 export const Basic = Template.bind({});
 Basic.args = {
   checked: false,
-  label: "",
 };
 
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  label: "Radio",
+  children: "Radio",
 };
