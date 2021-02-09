@@ -39,7 +39,5 @@ export default function Action({ as, onTap, onInput, to, children, label, ...pro
 
 Action.propTypes = {
   onTap: T.func,
-  big: T.bool,
-  purple: T.bool,
   to: T.string,
 };

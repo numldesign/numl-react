@@ -1,7 +1,6 @@
 import React from "react";
 import Root from "../components/Root";
 import Radio from "../components/Radio";
-import RadioField from "../components/RadioField";
 
 export default {
   title: "Example/Radio",
@@ -26,7 +25,7 @@ export default {
 
 const Template = ({ label, ...args }) => (
   <Root>
-    {label ? <RadioField label={label} {...args} /> : <Radio {...args} />}
+    {label ? <Radio.Field label={label} {...args} /> : <Radio {...args} />}
   </Root>
 );
 
@@ -39,5 +38,5 @@ Basic.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  label: "Radiobutton",
+  label: "Radio",
 };

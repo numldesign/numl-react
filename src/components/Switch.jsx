@@ -1,3 +1,4 @@
+import T from 'prop-types';
 import ActionElement from './Action';
 
 export default function Switch(allProps) {
@@ -9,4 +10,7 @@ export default function Switch(allProps) {
   return ActionElement({ as: 'nu-switch', checked, disabled, ...otherProps });
 }
 
-Switch.propTypes = ActionElement.propTypes;
+Switch.propTypes = {
+  ...ActionElement.propTypes,
+  checked: T.bool,
+};

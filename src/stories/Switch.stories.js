@@ -48,5 +48,5 @@ Basic.args = {
 export const WithLabel = TemplateSwitchtoggle.bind({});
 WithLabel.args = {
   checked: false,
-  label: 'Switchtoggle',
+  label: 'Switch',
 };
