@@ -1,11 +1,11 @@
 import React from 'react';
-import Switchtoggle from '../components/Switchtoggle';
-import SwitchtoggleField from '../components/SwitchtoggleField'
 import Root from '../components/Root';
+import Switch from '../components/Switch';
+import SwitchField from '../components/SwitchField'
 
 export default {
-  title: 'Example/Switchtoggle',
-  component: Switchtoggle,
+  title: 'Example/Switch',
+  component: Switch,
   argTypes: {
     size: {
       defaultValue: undefined,
@@ -30,10 +30,10 @@ export default {
 
 const TemplateSwitchtoggle = ({ label, ...args }) => (
   <Root>
-    {label ? <SwitchtoggleField
+    {label ? <SwitchField
       label={label}
       {...args}
-    /> : <Switchtoggle
+    /> : <Switch
         {...args}
       />}
   </Root>

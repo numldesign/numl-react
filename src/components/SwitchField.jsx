@@ -1,7 +1,7 @@
 import React from 'react';
 import ActionElement from './Action';
 
-export default function RadiobuttonField(allProps) {
+export default function SwitchField(allProps) {
   let { checked, disabled, id, label, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -9,7 +9,7 @@ export default function RadiobuttonField(allProps) {
 
   return <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
     {ActionElement({
-      as: 'nu-radio',
+      as: 'nu-switch',
       checked,
       disabled,
       id,
@@ -19,4 +19,4 @@ export default function RadiobuttonField(allProps) {
   </nu-field>;
 }
 
-RadiobuttonField.propTypes = ActionElement.propTypes;
+SwitchField.propTypes = ActionElement.propTypes;

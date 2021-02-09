@@ -1,6 +1,6 @@
 import ActionElement from './Action';
 
-export default function Switchtoggle(allProps) {
+export default function Switch(allProps) {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -9,4 +9,4 @@ export default function Switchtoggle(allProps) {
   return ActionElement({ as: 'nu-switch', checked, disabled, ...otherProps });
 }
 
-Switchtoggle.propTypes = ActionElement.propTypes;
+Switch.propTypes = ActionElement.propTypes;

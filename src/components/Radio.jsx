@@ -1,7 +1,7 @@
 import React from 'react';
 import ActionElement from './Action';
 
-export default function Radiobutton(allProps) {
+export default function Radio(allProps) {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -10,4 +10,4 @@ export default function Radiobutton(allProps) {
   return ActionElement({ as: 'nu-radio', checked, disabled, ...otherProps });
 }
 
-Radiobutton.propTypes = ActionElement.propTypes;
+Radio.propTypes = ActionElement.propTypes;
