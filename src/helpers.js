@@ -1,5 +1,5 @@
 export function requireNude() {
-  if (typeof window === 'undefined') return new Promise(() => {});
+  if (typeof window === 'undefined') return new Promise(() => { });
 
   if (window.Nude) {
     return Promise.resolve(window.Nude);
@@ -97,4 +97,16 @@ export function JsxInnerText(children, counter = 0) {
   return children.reduce((str, obj) => {
     return str + ' ' + JsxInnerText(obj);
   }, '').trim();
+}
+
+export function themeAttr(allProps) {
+  const themeType = ['special', 'success', 'warning', 'danger'].find(type => allProps[type]);
+  const THEME_TYPES = {
+    special: 'special',
+    success: 'success special',
+    warning: 'warning special',
+    danger: 'danger special',
+
+  }
+  return THEME_TYPES[themeType]
 }
