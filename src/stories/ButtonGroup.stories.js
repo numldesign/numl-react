@@ -15,23 +15,10 @@ export default {
         options: ["xs", "sm", "md", "lg", "xl", undefined],
       },
     },
-    inline: {
-      defaultValue: true,
-      control: {
-        type: 'boolean',
-      },
-    },
     special: {
       defaultValue: true,
       control: {
         type: 'boolean',min: 0, max: 10, step: 1
-      },
-    },
-    gap: {
-      defaultValue: 1,
-      control: {
-        type: 'number',
-
       },
     },
   },

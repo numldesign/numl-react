@@ -7,11 +7,10 @@ export default function Button(props) {
 }
 
 Button.Group = function ButtonGroup(allProps) {
-    let { children, inline, onChange,gap, ...otherProps } = allProps;
+    let { children, ...props } = allProps;
 
-    inline = !!inline || null;
     return (
-        <nu-btngroup use-radiogroup="no" theme={themeAttr(allProps)} inline={inline} group-radius="1r" border="#clear" gap={`${gap}x :inline[${gap}x]`} flow="column :inline[row]" {...otherProps}>
+        <nu-btngroup use-radiogroup="no" theme={themeAttr(allProps)} inline={true} group-radius="1r" border="#clear" flow="column :inline[row]" {...props}>
             {children}
         </nu-btngroup>
     );

@@ -9,7 +9,6 @@ const ROLE_MAP = {
   'nu-checkbox': 'checkbox',
   'nu-switch': 'switch',
   'nu-radio': 'radio',
-  'nu-icon': 'icon'
 };
 
 export default function Action({ as, onTap, onInput, to, children, label, ...props }) {
