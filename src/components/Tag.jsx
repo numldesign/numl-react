@@ -1,36 +1,31 @@
 import T from "prop-types";
 import { themeAttr } from "../helpers";
+import ActionElement from './Action';
 
-const iconSize = {
-    xs: "2",
-    sm: "4",
-    md: "6",
-    lg: "8",
-    xl: "10",
-};
 
 export default function Tag(allProps) {
-    let { size = "xs", label, showicon } = allProps;
-    showicon = !!showicon || false;
+    let { size = "sm", label, deletable, theme } = allProps;
+    deletable = !!deletable || false;
+
+    const iconProps = {
+        name: "close-outline"
+    }
     return (
         <nu-badge
             size={size}
-            theme={themeAttr(allProps)}
+            theme={theme || themeAttr(allProps)}
             radius="left right"
             padding="0.5x 1x 0.5x 1x"
         >
             {label}
-            {showicon && (
-                <nu-icon
-                    size={`${iconSize[size]}x`}
-                    name="close-outline"
-                    rotate="270deg"
-                />
-            )}
+            {deletable && ActionElement({ as: 'nu-icon', ...iconProps })}
         </nu-badge>
     );
 }
 
 Tag.propTypes = {
+    ...ActionElement.propTypes,
     size: T.string,
+    label: T.string,
+    deletable: T.bool,
 };

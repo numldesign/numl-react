@@ -11,14 +11,15 @@ export default {
       defaultValue: undefined,
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        options: ['sm', 'md', 'lg', undefined],
       },
     },
-    special: {
-      defaultValue: true,
+    theme: {
+      defaultValue: 'special',
       control: {
-        type: 'boolean',
-      },
+        type: 'select',
+        options: ['special', 'success', 'warning', 'danger']
+      }
     },
     icon: {
       defaultValue: undefined,

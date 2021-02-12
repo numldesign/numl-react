@@ -1,11 +1,11 @@
 import T from "prop-types";
 import { themeAttr } from "../helpers";
 export default function Badge(allProps) {
-    const { size = "xs", label, icon } = allProps;
+    const { size = "sm", label, icon, theme } = allProps;
     return (
         <nu-badge
             size={size}
-            theme={themeAttr(allProps)}
+            theme={theme || themeAttr(allProps)}
             radius="4x"
             padding="0.5x 1x 0.5x 1x"
         >

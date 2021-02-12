@@ -17,10 +17,10 @@ const textSize = {
     'xl': '5'
 }
 export default function Avatar(allProps) {
-    let { size = 'md', username } = allProps;
+    let { size = 'md', username, theme } = allProps;
     const showDefaultAvatar = !!!username || null;
     return (
-        <nu-circle theme={themeAttr(allProps)} display="flex" content="center" items="center" size={`${iconSize[size]}x`}  >
+        <nu-circle theme={theme || themeAttr(allProps)} display="flex" content="center" items="center" color="#text-soft" size={`${iconSize[size]}x`}  >
             {showDefaultAvatar && <nu-icon size={`${iconSize[size]}x`} name='person-circle-outline' />}
             {!showDefaultAvatar &&
                 <nu-label text="up" size={`${textSize[size]}x`}>
@@ -39,7 +39,7 @@ Avatar.Profile = function AvatarProfile(allProps) {
                     <Avatar {...allProps} />
                     <nu-block>
                         {username ? <nu-block size={size}>{username}</nu-block> : ''}
-                        {subtitle ? <nu-block size={size}>{subtitle}</nu-block> : ''}
+                        {subtitle ? <nu-block color="#text-soft" size={size}>{subtitle}</nu-block> : ''}
                     </nu-block>
 
                     {showArrow &&

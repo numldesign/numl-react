@@ -13,18 +13,19 @@ export default {
                 options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
             },
         },
-        special: {
-            defaultValue: true,
+        theme: {
+            defaultValue: 'special',
             control: {
-                type: 'boolean',
-            },
+                type: 'select',
+                options: ['special', 'success', 'warning', 'danger']
+            }
         },
         showArrow: {
             defaultValue: false,
             control: {
-              type: 'boolean',
+                type: 'boolean',
             },
-          },
+        },
     },
 };
 

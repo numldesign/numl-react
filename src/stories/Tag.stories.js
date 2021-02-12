@@ -7,19 +7,21 @@ export default {
   component: Tag,
   argTypes: {
     size: {
-      defaultValue: undefined,
+      defaultValue: 'md',
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        options: ['sm', 'md', 'lg', undefined],
       },
     },
-    special: {
-      defaultValue: true,
+    theme: {
+      defaultValue: 'special',
       control: {
-        type: 'boolean',
-      },
+        type: 'select',
+        options:['special','success','warning','danger']
+      }
+
     },
-    showicon: {
+    deletable: {
       defaultValue: false,
       control: {
         type: 'boolean',
@@ -41,6 +43,6 @@ Default.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  showicon: true,
+  deletable: true,
   label: 'Informational'
 };

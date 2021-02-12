@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { themeAttr } from '../helpers';
 import ActionElement from './Action';
 
@@ -7,22 +7,13 @@ export default function Button(props) {
 }
 
 Button.Group = function ButtonGroup(allProps) {
-    const ref = useRef();
-    let { disabled, children, inline, onChange, ...otherProps } = allProps;
+    let { children, inline, onChange,gap, ...otherProps } = allProps;
 
-    disabled = !!disabled || null;
     inline = !!inline || null;
-
-    useEffect(() => {
-        if (ref.current && onChange) {
-            ref.current.addEventListener('change', (evt) => onChange(evt.detail));
-        }
-    }, []);
-
     return (
-        <nu-radiogroup theme={themeAttr(allProps)} disabled={disabled} inline={inline} group-radius="1r" border="#clear" gap="1x:inline[2x]" flow="column :inline[row]" {...otherProps}>
+        <nu-btngroup use-radiogroup="no" theme={themeAttr(allProps)} inline={inline} group-radius="1r" border="#clear" gap={`${gap}x :inline[${gap}x]`} flow="column :inline[row]" {...otherProps}>
             {children}
-        </nu-radiogroup>
+        </nu-btngroup>
     );
 };
 

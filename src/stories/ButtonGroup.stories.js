@@ -24,7 +24,14 @@ export default {
     special: {
       defaultValue: true,
       control: {
-        type: 'boolean',
+        type: 'boolean',min: 0, max: 10, step: 1
+      },
+    },
+    gap: {
+      defaultValue: 1,
+      control: {
+        type: 'number',
+
       },
     },
   },
@@ -39,26 +46,26 @@ const Template = (args) => (
 export const Basic = Template.bind({});
 Basic.args = {
   children: [
-    <Button>Button</Button>,
-    <Button>Button</Button>,
-    <Button>Button</Button>
+    <Button key="one">Button</Button>,
+    <Button key="two">Button</Button>,
+    <Button key="three">Button</Button>
   ]
 }
 
 export const BasicWithDisclosure = Template.bind({});
 BasicWithDisclosure.args = {
   children: [
-    <Button>Button <Icon name='chevron-down-outline'></Icon></Button>,
-    <Button>Button <Icon name='chevron-down-outline'></Icon></Button>,
-    <Button>Button <Icon name='chevron-down-outline'></Icon></Button>
+    <Button key="one">Button <Icon name='chevron-down-outline'></Icon></Button>,
+    <Button key="two">Button <Icon name='chevron-down-outline'></Icon></Button>,
+    <Button key="three">Button <Icon name='chevron-down-outline'></Icon></Button>
   ]
 }
 
 export const BasicWithCheckbox = Template.bind({});
 BasicWithCheckbox.args = {
   children: [
-    <Button><Checkbox checked disabled ></Checkbox>Button</Button>,
-    <Button><Checkbox checked disabled ></Checkbox>Button</Button>,
-    <Button><Checkbox checked disabled ></Checkbox>Button</Button>
+    <Button key="one"><Checkbox checked disabled ></Checkbox>Button</Button>,
+    <Button key="two"><Checkbox checked disabled ></Checkbox>Button</Button>,
+    <Button key="three"><Checkbox checked disabled ></Checkbox>Button</Button>
   ],
 };
