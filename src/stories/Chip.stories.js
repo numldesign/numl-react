@@ -1,0 +1,48 @@
+import React from 'react';
+import Chip from '../components/Chip';
+import Root from '../components/Root';
+import Icon from '../components/Icon';
+
+export default {
+  title: 'Example/Chip',
+  component: Chip,
+  argTypes: {
+    size: {
+      defaultValue: undefined,
+      control: {
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+      },
+    },
+    special: {
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+    },
+    icon: {
+      defaultValue: undefined,
+      control: {
+        type: null
+      }
+    }
+  },
+};
+
+const Template = ({ ...args }) => (
+  <Root>
+    {<Chip {...args} />}
+  </Root>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  label: 'Neutral',
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: 'Informational',
+  name: 'information-circle-outline',
+  icon: <Icon name='information-circle-outline'></Icon>
+};

@@ -5,5 +5,5 @@ export default function Icon(allProps) {
 }
 
 Icon.propTypes = {
-    value: T.bool,
+    name: T.string,
 };
