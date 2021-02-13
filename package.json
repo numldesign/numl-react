@@ -58,6 +58,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "npx prettier --write ./src"
+    "*.{js,jsx,css,md}": "prettier --write ./src"
   }
 }

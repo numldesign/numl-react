@@ -15,11 +15,11 @@ export default function Tag(allProps) {
       {...otherProps}
     >
       {label}
-      {deletable && (
+      {deletable ? (
         <Action>
           <Icon name="close-outline" />
         </Action>
-      )}
+      ) : null}
     </nu-badge>
   );
 }
