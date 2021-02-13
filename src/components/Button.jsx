@@ -7,15 +7,17 @@ export default function Button(props) {
 }
 
 Button.Group = function ButtonGroup(allProps) {
-  let { children, theme, ...props } = allProps;
+  let { children, flow, groupRadius, ...props } = allProps;
+
+  flow = flow || 'row';
+  groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
     <nu-btngroup
       use-radiogroup="no"
-      theme={theme || themeAttr(allProps, true)}
-      group-radius="1r"
+      flow={flow}
+      group-radius={groupRadius}
       border="#clear"
-      flow="column :inline[row]"
       {...props}
     >
       {children}
