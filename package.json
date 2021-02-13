@@ -26,8 +26,12 @@
     "@storybook/react": "^6.1.15",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.6.1",
+    "husky": "^5.0.9",
     "jsx-native-events": "^1.0.2",
+    "lint-staged": "^10.5.4",
     "numl": "1.0.0-beta.17",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
@@ -46,5 +50,13 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }

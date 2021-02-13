@@ -16,7 +16,7 @@ export default {
     inline: {
       defaultValue: false,
       control: {
-        type: 'boolean',
+        type: "boolean",
       },
     },
   },
@@ -24,33 +24,44 @@ export default {
 
 const Template = (args) => (
   <Root>
-    <Radio.Group {...args}/>
+    <Radio.Group {...args} />
   </Root>
 );
 
 export const Basic = Template.bind({});
 Basic.args = {
   children: [
-    <Radio.Field key="one" value="one">One</Radio.Field>,
-    <Radio.Field key="two" value="two">Two</Radio.Field>
-  ]
+    <Radio.Field key="one" value="one">
+      One
+    </Radio.Field>,
+    <Radio.Field key="two" value="two">
+      Two
+    </Radio.Field>,
+  ],
 };
 
 export const Inline = Template.bind({});
 Inline.args = {
   inline: true,
   children: [
-    <Radio.Field key="one" value="one">One</Radio.Field>,
-    <Radio.Field key="two" value="two">Two</Radio.Field>
-  ]
+    <Radio.Field key="one" value="one">
+      One
+    </Radio.Field>,
+    <Radio.Field key="two" value="two">
+      Two
+    </Radio.Field>,
+  ],
 };
-
 
 export const WithDefaultValue = Template.bind({});
 WithDefaultValue.args = {
-  value: 'two',
+  value: "two",
   children: [
-    <Radio.Field key="one" value="one">One</Radio.Field>,
-    <Radio.Field key="two" value="two">Two</Radio.Field>
-  ]
+    <Radio.Field key="one" value="one">
+      One
+    </Radio.Field>,
+    <Radio.Field key="two" value="two">
+      Two
+    </Radio.Field>,
+  ],
 };

@@ -1,24 +1,24 @@
-import React from 'react';
-import Checkbox from '../components/Checkbox';
-import Root from '../components/Root';
+import React from "react";
+import Checkbox from "../components/Checkbox";
+import Root from "../components/Root";
 
 export default {
-  title: 'Example/Checkbox',
+  title: "Example/Checkbox",
   component: Checkbox,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        type: "inline-radio",
+        options: ["xs", "sm", "md", "lg", "xl", undefined],
       },
     },
     label: {
-      defaultValue: 'Checkbox',
+      defaultValue: "Checkbox",
       control: {
-        type: 'text',
+        type: "text",
       },
-    }
+    },
   },
 };
 
@@ -36,5 +36,5 @@ Basic.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  children: 'Checkbox',
+  children: "Checkbox",
 };

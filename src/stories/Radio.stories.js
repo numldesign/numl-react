@@ -24,9 +24,7 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <Root>
-    {children ? <Radio.Field children={children} {...args} /> : <Radio {...args} />}
-  </Root>
+  <Root>{children ? <Radio.Field children={children} {...args} /> : <Radio {...args} />}</Root>
 );
 
 export const Basic = Template.bind({});

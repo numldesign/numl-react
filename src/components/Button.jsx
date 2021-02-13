@@ -1,9 +1,9 @@
-import React from 'react';
-import { themeAttr } from '../helpers';
-import ActionElement from './Action';
+import React from "react";
+import { themeAttr } from "../helpers";
+import ActionElement from "./Action";
 
 export default function Button(props) {
-  return ActionElement({ as: 'nu-btn', ...props });
+  return ActionElement({ as: "nu-btn", ...props });
 }
 
 Button.Group = function ButtonGroup(allProps) {
@@ -11,8 +11,13 @@ Button.Group = function ButtonGroup(allProps) {
 
   return (
     <nu-btngroup
-      use-radiogroup="no" theme={theme || themeAttr(allProps, true)} group-radius="1r"
-      border="#clear" flow="column :inline[row]" {...props}>
+      use-radiogroup="no"
+      theme={theme || themeAttr(allProps, true)}
+      group-radius="1r"
+      border="#clear"
+      flow="column :inline[row]"
+      {...props}
+    >
       {children}
     </nu-btngroup>
   );

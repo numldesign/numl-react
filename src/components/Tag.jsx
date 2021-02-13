@@ -1,10 +1,10 @@
 import T from "prop-types";
 import { themeAttr } from "../helpers";
-import Action from './Action';
-import Icon from './Icon';
+import Action from "./Action";
+import Icon from "./Icon";
 
 export default function Tag(allProps) {
-  const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;
+  const { size = "sm", label, deletable, theme, ...otherProps } = allProps;
 
   return (
     <nu-badge
@@ -15,11 +15,11 @@ export default function Tag(allProps) {
       {...otherProps}
     >
       {label}
-      {deletable &&
-      <Action>
-        <Icon name="close-outline"/>
-      </Action>
-      }
+      {deletable && (
+        <Action>
+          <Icon name="close-outline" />
+        </Action>
+      )}
     </nu-badge>
   );
 }
