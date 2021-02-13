@@ -99,14 +99,16 @@ export function JsxInnerText(children, counter = 0) {
   }, '').trim();
 }
 
-export function themeAttr(allProps) {
-  const themeType = ['special', 'success', 'warning', 'danger'].find(type => allProps[type]);
-  const THEME_TYPES = {
-    special: 'special',
-    success: 'success special',
-    warning: 'warning special',
-    danger: 'danger special',
+const THEME_TYPES = {
+  special: 'special',
+  success: 'success special',
+  warning: 'warning special',
+  danger: 'danger special',
+};
 
-  }
-  return THEME_TYPES[themeType]
+export function themeAttr(allProps, specialAsTheme) {
+  const propList = (specialAsTheme ? ['special'] : []).concat(['success', 'warning', 'danger']);
+  const themeType = propList.find(type => allProps[type]);
+
+  return THEME_TYPES[themeType];
 }

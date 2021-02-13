@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import T from 'prop-types';
 import ActionElement from './Action';
 
@@ -26,7 +26,8 @@ Radio.Group = function RadioGroup(allProps) {
   }, []);
 
   return (
-    <nu-radiogroup disabled={disabled} gap="1x :inline[2x]" inline={inline} flow="column :inline[row]" {...otherProps}>
+    <nu-radiogroup disabled={disabled} gap="1x :inline[2x]" inline={inline}
+                   flow="column :inline[row]" {...otherProps}>
       {children}
     </nu-radiogroup>
   );
@@ -46,7 +47,7 @@ Radio.Field = function RadioField(allProps) {
       id,
       ...otherProps,
     })}
-    { children ? <nu-label for={id}>{children}</nu-label> : ''}
+    {children ? <nu-label for={id}>{children}</nu-label> : ''}
   </nu-field>;
 };
 
