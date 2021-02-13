@@ -1,25 +1,25 @@
-import React from "react";
-import Root from "../components/Root";
-import Radio from "../components/Radio";
+import React from 'react';
+import Root from '../components/Root';
+import Radio from '../components/Radio';
 
 export default {
-  title: "Example/Radio",
+  title: 'Example/Radio',
   component: Radio,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     label: {
-      defaultValue: "Radio",
+      defaultValue: 'Radio',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
-    fill: { control: "color" },
+    fill: { control: 'color' },
   },
 };
 
@@ -35,5 +35,5 @@ Basic.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  children: "Radio",
+  children: 'Radio',
 };

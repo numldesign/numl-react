@@ -1,22 +1,22 @@
-import React from "react";
-import Root from "../components/Root";
-import Radio from "../components/Radio";
+import React from 'react';
+import Root from '../components/Root';
+import Radio from '../components/Radio';
 
 export default {
-  title: "Example/RadioGroup",
+  title: 'Example/RadioGroup',
   component: Radio.Group,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     inline: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   },
@@ -55,7 +55,7 @@ Inline.args = {
 
 export const WithDefaultValue = Template.bind({});
 WithDefaultValue.args = {
-  value: "two",
+  value: 'two',
   children: [
     <Radio.Field key="one" value="one">
       One

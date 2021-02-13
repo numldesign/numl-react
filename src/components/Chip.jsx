@@ -1,16 +1,16 @@
-import T from "prop-types";
-import { themeAttr } from "../helpers";
+import T from 'prop-types';
+import { themeAttr } from '../helpers';
 
 const iconSize = {
-  xs: "2",
-  sm: "4",
-  md: "6",
-  lg: "8",
-  xl: "10",
+  xs: '2',
+  sm: '4',
+  md: '6',
+  lg: '8',
+  xl: '10',
 };
 
 export default function Chip(allProps) {
-  const { size = "sm", label, icon, theme } = allProps;
+  const { size = 'sm', label, icon, theme } = allProps;
 
   return (
     <nu-badge

@@ -1,6 +1,6 @@
-import React from "react";
-import T from "prop-types";
-import ActionElement from "./Action";
+import React from 'react';
+import T from 'prop-types';
+import ActionElement from './Action';
 
 export default function Checkbox(allProps) {
   let { checked, disabled, ...otherProps } = allProps;
@@ -8,7 +8,7 @@ export default function Checkbox(allProps) {
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: "nu-checkbox", checked, disabled, ...otherProps });
+  return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
 Checkbox.Field = function CheckboxField(allProps) {
@@ -26,13 +26,13 @@ Checkbox.Field = function CheckboxField(allProps) {
       {...otherProps}
     >
       {ActionElement({
-        as: "nu-checkbox",
+        as: 'nu-checkbox',
         checked,
         disabled,
         id,
         ...otherProps,
       })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ""}
+      {children ? <nu-label for={id}>{children}</nu-label> : ''}
     </nu-field>
   );
 };

@@ -1,8 +1,8 @@
-import T from "prop-types";
-import { themeAttr } from "../helpers";
+import T from 'prop-types';
+import { themeAttr } from '../helpers';
 
 export default function Badge(allProps) {
-  const { size = "sm", label, icon, theme, ...otherProps } = allProps;
+  const { size = 'sm', label, icon, theme, ...otherProps } = allProps;
   return (
     <nu-badge
       size={size}

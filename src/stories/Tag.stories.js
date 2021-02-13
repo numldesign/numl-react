@@ -1,29 +1,29 @@
-import React from "react";
-import Tag from "../components/Tag";
-import Root from "../components/Root";
+import React from 'react';
+import Tag from '../components/Tag';
+import Root from '../components/Root';
 
 export default {
-  title: "Example/Tag",
+  title: 'Example/Tag',
   component: Tag,
   argTypes: {
     size: {
-      defaultValue: "md",
+      defaultValue: 'md',
       control: {
-        type: "inline-radio",
-        options: ["sm", "md", "lg", undefined],
+        type: 'inline-radio',
+        options: ['sm', 'md', 'lg', undefined],
       },
     },
     theme: {
-      defaultValue: "special",
+      defaultValue: 'special',
       control: {
-        type: "select",
-        options: ["special", "success", "warning", "danger"],
+        type: 'select',
+        options: ['special', 'success', 'warning', 'danger'],
       },
     },
     deletable: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   },
@@ -33,11 +33,11 @@ const Template = ({ ...args }) => <Root>{<Tag {...args} />}</Root>;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Neutral",
+  label: 'Neutral',
 };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   deletable: true,
-  label: "Informational",
+  label: 'Informational',
 };

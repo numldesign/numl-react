@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import T from "prop-types";
-import ActionElement from "./Action";
+import React, { useEffect, useRef } from 'react';
+import T from 'prop-types';
+import ActionElement from './Action';
 
 export default function Radio(allProps) {
   let { checked, disabled, ...otherProps } = allProps;
@@ -8,7 +8,7 @@ export default function Radio(allProps) {
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: "nu-radio", checked, disabled, ...otherProps });
+  return ActionElement({ as: 'nu-radio', checked, disabled, ...otherProps });
 }
 
 Radio.Group = function RadioGroup(allProps) {
@@ -21,7 +21,7 @@ Radio.Group = function RadioGroup(allProps) {
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener("change", (evt) => onChange(evt.detail));
+      ref.current.addEventListener('change', (evt) => onChange(evt.detail));
     }
   }, []);
 
@@ -53,13 +53,13 @@ Radio.Field = function RadioField(allProps) {
       {...otherProps}
     >
       {ActionElement({
-        as: "nu-radio",
+        as: 'nu-radio',
         checked,
         disabled,
         id,
         ...otherProps,
       })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ""}
+      {children ? <nu-label for={id}>{children}</nu-label> : ''}
     </nu-field>
   );
 };

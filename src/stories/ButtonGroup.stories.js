@@ -1,24 +1,24 @@
-import React from "react";
-import Root from "../components/Root";
-import Button from "../components/Button";
-import Icon from "../components/Icon";
-import Checkbox from "../components/Checkbox";
+import React from 'react';
+import Root from '../components/Root';
+import Button from '../components/Button';
+import Icon from '../components/Icon';
+import Checkbox from '../components/Checkbox';
 
 export default {
-  title: "Example/ButtonGroup",
+  title: 'Example/ButtonGroup',
   component: Button.Group,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     special: {
       defaultValue: true,
       control: {
-        type: "boolean",
+        type: 'boolean',
         min: 0,
         max: 10,
         step: 1,

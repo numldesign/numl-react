@@ -1,27 +1,27 @@
-import React from "react";
-import Root from "../components/Root";
-import Switch from "../components/Switch";
+import React from 'react';
+import Root from '../components/Root';
+import Switch from '../components/Switch';
 
 export default {
-  title: "Example/Switch",
+  title: 'Example/Switch',
   component: Switch,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     label: {
-      defaultValue: "Switchtoggle",
+      defaultValue: 'Switchtoggle',
       control: {
-        type: "text",
+        type: 'text',
       },
     },
     fill: {
       control: {
-        type: "color",
+        type: 'color',
       },
     },
   },
@@ -39,5 +39,5 @@ Basic.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  children: "Switch",
+  children: 'Switch',
 };

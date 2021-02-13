@@ -1,25 +1,25 @@
-import React from "react";
-import T from "prop-types";
-import { themeAttr } from "../helpers";
+import React from 'react';
+import T from 'prop-types';
+import { themeAttr } from '../helpers';
 
 const iconSize = {
-  xs: "2",
-  sm: "4",
-  md: "6",
-  lg: "8",
-  xl: "10",
+  xs: '2',
+  sm: '4',
+  md: '6',
+  lg: '8',
+  xl: '10',
 };
 
 const textSize = {
-  xs: "1",
-  sm: "2",
-  md: "3",
-  lg: "4",
-  xl: "5",
+  xs: '1',
+  sm: '2',
+  md: '3',
+  lg: '4',
+  xl: '5',
 };
 
 export default function Avatar(allProps) {
-  let { size = "md", username, theme, ...otherProps } = allProps;
+  let { size = 'md', username, theme, ...otherProps } = allProps;
 
   const showDefaultAvatar = !!!username || null;
 
@@ -48,7 +48,7 @@ export default function Avatar(allProps) {
 
 Avatar.Profile = function AvatarProfile(allProps) {
   let {
-    size = "md",
+    size = 'md',
     username,
     subtitle,
     showArrow,

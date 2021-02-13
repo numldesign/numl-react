@@ -1,31 +1,31 @@
-import React from "react";
-import Root from "../components/Root";
-import Avatar from "../components/Avatar";
+import React from 'react';
+import Root from '../components/Root';
+import Avatar from '../components/Avatar';
 
-const THEMES = ["special", "success", "warning", "danger"];
+const THEMES = ['special', 'success', 'warning', 'danger'];
 
 export default {
-  title: "Example/Avatar",
+  title: 'Example/Avatar',
   component: Avatar,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     theme: {
       defaultValue: undefined,
       control: {
-        type: "select",
+        type: 'select',
         options: [undefined, ...THEMES],
       },
     },
     showArrow: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   },
@@ -56,6 +56,6 @@ Basic.args = {};
 
 export const WithLabel = Template.bind({});
 WithLabel.args = {
-  username: "Van Gough",
-  subtitle: "subtitle",
+  username: 'Van Gough',
+  subtitle: 'subtitle',
 };

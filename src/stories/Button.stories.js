@@ -1,22 +1,22 @@
-import React from "react";
-import Button from "../components/Button";
-import Root from "../components/Root";
+import React from 'react';
+import Button from '../components/Button';
+import Root from '../components/Root';
 
 export default {
-  title: "Example/Button",
+  title: 'Example/Button',
   component: Button,
   argTypes: {
     size: {
       defaultValue: undefined,
       control: {
-        type: "inline-radio",
-        options: ["xs", "sm", "md", "lg", "xl", undefined],
+        type: 'inline-radio',
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     special: {
       defaultValue: false,
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   },
@@ -33,10 +33,10 @@ const Template = ({ label, special, ...args }) => (
 export const Special = Template.bind({});
 Special.args = {
   special: true,
-  label: "Button",
+  label: 'Button',
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Button",
+  label: 'Button',
 };
