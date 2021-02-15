@@ -1,8 +1,7 @@
 import React from 'react';
 import Root from '../components/Root';
 import Avatar from '../components/Avatar';
-
-const THEMES = ['special', 'success', 'warning', 'danger'];
+import { THEMES, themeToProps } from '../helpers';
 
 export default {
   title: 'Example/Avatar',
@@ -30,16 +29,6 @@ export default {
     },
   },
 };
-
-function themeToProps(prop) {
-  return THEMES.reduce((obj, theme) => {
-    if (prop === theme) {
-      obj[prop] = true;
-    }
-
-    return obj;
-  }, {});
-}
 
 const Template = ({ theme, ...args }) => (
   <Root>

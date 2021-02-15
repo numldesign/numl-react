@@ -103,6 +103,8 @@ export function JsxInnerText(children, counter = 0) {
     .trim();
 }
 
+export const THEMES = ['special', 'success', 'warning', 'danger'];
+
 const THEME_TYPES = {
   special: 'special',
   success: 'success special',
@@ -113,6 +115,14 @@ const THEME_TYPES = {
 export function themeAttr(allProps, specialAsTheme) {
   const propList = (specialAsTheme ? ['special'] : []).concat(['success', 'warning', 'danger']);
   const themeType = propList.find((type) => allProps[type]);
-
   return THEME_TYPES[themeType];
+}
+
+export function themeToProps(prop) {
+  return THEMES.reduce((obj, theme) => {
+    if (prop === theme) {
+      obj[prop] = true;
+    }
+    return obj;
+  }, {});
 }

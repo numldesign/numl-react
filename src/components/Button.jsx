@@ -10,7 +10,8 @@ Button.Group = function ButtonGroup(allProps) {
   let { children, flow, groupRadius, ...props } = allProps;
 
   flow = flow || 'row';
-  groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
+  groupRadius =
+    groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
     <nu-btngroup
