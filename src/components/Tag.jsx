@@ -12,6 +12,7 @@ export default function Tag(allProps) {
       theme={theme || themeAttr(allProps)}
       radius="left right"
       padding="0.5x 1x 0.5x 1x"
+      space="50% 0"
       {...otherProps}
     >
       {label}
