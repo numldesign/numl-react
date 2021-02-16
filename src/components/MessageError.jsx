@@ -4,11 +4,11 @@ import T from 'prop-types';
 import { themeAttr } from '../helpers';
 
 export default function MessageError(allProps) {
-  let { iconName, theme, message, ...otherProps } = allProps;
+  let { icon, theme, message, ...otherProps } = allProps;
 
   return (
     <nu-el theme={theme || themeAttr(allProps, true)} {...otherProps}>
-      <nu-icon name={iconName} text="middle"></nu-icon>
+      {typeof icon === 'string' ? <nu-icon name={icon} text="middle" /> : icon}
       <nu-el text="middle" padding="1x left">
         {message}
       </nu-el>
@@ -17,6 +17,6 @@ export default function MessageError(allProps) {
 }
 
 MessageError.propTypes = {
-  iconName: T.string,
+  icon: T.oneOfType([T.string, T.element]),
   message: T.string,
 };

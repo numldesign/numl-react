@@ -1,6 +1,7 @@
 import React from 'react';
 import Root from '../components/Root';
 import MessageError from '../components/MessageError';
+import Icon from '../components/Icon';
 
 import { THEMES } from '../helpers';
 
@@ -28,7 +29,7 @@ export default {
         type: 'text',
       },
     },
-    iconName: {
+    icon: {
       defaultValue: 'alert-circle-outline',
       control: {
         type: 'text',
@@ -44,3 +45,6 @@ const Template = ({ ...args }) => (
 );
 
 export const Basic = Template.bind({});
+Basic.args = {
+  icon: <Icon name="information-circle-outline"></Icon>,
+};
