@@ -3,7 +3,7 @@ import T from 'prop-types';
 import { themeAttr } from '../helpers';
 
 export default function ExceptionList(allProps) {
-  let { size, title, label, theme, iconName, ...otherProps } = allProps;
+  let { size, title, label, theme, icon, ...otherProps } = allProps;
 
   return (
     <nu-el
@@ -11,7 +11,7 @@ export default function ExceptionList(allProps) {
       theme={theme || themeAttr(allProps, true)}
       {...otherProps}
     >
-      {iconName ? <nu-icon name={iconName} {...otherProps} /> : null}
+      {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
       {title ? (
         <nu-el text="middle" padding="0.5x left">
           {title} -
@@ -27,6 +27,6 @@ export default function ExceptionList(allProps) {
 ExceptionList.propTypes = {
   size: T.string,
   label: T.string,
-  iconName: T.string,
+  icon: T.oneOfType([T.string, T.element]),
   title: T.string,
 };

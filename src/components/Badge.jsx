@@ -11,7 +11,7 @@ export default function Badge(allProps) {
       padding="0.5x 1x 0.5x 1x"
       {...otherProps}
     >
-      {icon}
+      {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
       {label}
     </nu-badge>
   );
@@ -20,5 +20,5 @@ export default function Badge(allProps) {
 Badge.propTypes = {
   size: T.string,
   label: T.string,
-  icon: T.element,
+  icon: T.oneOfType([T.string, T.element]),
 };

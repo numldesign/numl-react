@@ -22,9 +22,9 @@ export default {
       },
     },
     icon: {
-      defaultValue: undefined,
+      defaultValue: 'alert-circle-outline',
       control: {
-        type: null,
+        type: 'text',
       },
     },
   },

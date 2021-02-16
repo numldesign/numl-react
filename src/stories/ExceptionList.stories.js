@@ -1,6 +1,7 @@
 import React from 'react';
 import Root from '../components/Root';
 import ExceptionList from '../components/ExceptionList';
+import Icon from '../components/Icon';
 import { THEMES, themeToProps } from '../helpers';
 
 export default {
@@ -33,8 +34,7 @@ export default {
         type: 'text',
       },
     },
-    iconName: {
-      defaultValue: undefined,
+    icon: {
       control: {
         type: 'text',
       },
@@ -53,6 +53,7 @@ export const Default = Template.bind({});
 Default.args = {
   theme: 'special',
   label: 'Label',
+  icon: 'alert-circle-outline',
 };
 
 export const LabelWithIcon = Template.bind({});
@@ -60,7 +61,7 @@ export const LabelWithIcon = Template.bind({});
 LabelWithIcon.args = {
   theme: 'special',
   label: 'Label',
-  iconName: 'reader-outline',
+  icon: <Icon name="reader-outline"></Icon>,
 };
 
 export const LabelWithIconTitle = Template.bind({});
@@ -69,5 +70,5 @@ LabelWithIconTitle.args = {
   theme: 'special',
   label: 'Label',
   title: 'Title',
-  iconName: 'alert-circle-outline',
+  icon: 'reader-outline',
 };

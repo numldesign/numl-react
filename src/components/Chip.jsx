@@ -19,7 +19,7 @@ export default function Chip(allProps) {
       radius="4x"
       padding="0.5x 1x 0.5x 1x"
     >
-      {icon}
+      {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
       {label}
       <nu-icon
         size={`${iconSize[size]}x`}
@@ -33,5 +33,5 @@ export default function Chip(allProps) {
 Chip.propTypes = {
   size: T.string,
   label: T.string,
-  icon: T.element,
+  icon: T.oneOfType([T.string, T.element]),
 };
