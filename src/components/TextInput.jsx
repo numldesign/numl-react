@@ -54,7 +54,7 @@ TextInput.Field = function TextField(allProps) {
   let inputSize = otherProps.size === 'sm' ? '20em' : '100%';
 
   return (
-    <nu-field {...otherProps} width={inputSize}>
+    <nu-field width={inputSize}>
       <nu-flex content="space-between">
         <nu-label for={label}>
           {label} {required && <nu-el theme="danger">{` * `}</nu-el>}

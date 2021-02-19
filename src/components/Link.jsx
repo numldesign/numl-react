@@ -1,10 +1,12 @@
 import T from 'prop-types';
 
+import ActionElement from './Action';
+
 export default function Link(allProps) {
   const { label, icon, ...otherProps } = allProps;
 
   return (
-    <nu-link text="n" {...otherProps}>
+    <ActionElement as="nu-link" text="n" {...otherProps}>
       {label}
       {icon &&
         (typeof icon === 'string' ? (
@@ -12,7 +14,7 @@ export default function Link(allProps) {
         ) : (
           icon
         ))}
-    </nu-link>
+    </ActionElement>
   );
 }
 
