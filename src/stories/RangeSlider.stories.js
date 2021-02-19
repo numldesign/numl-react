@@ -37,7 +37,7 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <Root>
+  <Root padding="6x 2x">
     <RangeSlider {...args} />
   </Root>
 );

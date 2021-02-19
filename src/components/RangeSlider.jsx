@@ -1,12 +1,44 @@
+import { useState, useRef, useEffect } from 'react';
 import T from 'prop-types';
+import NativeLink from './NativeLink';
+
+const getPlace = (place, value) => {
+  place = place === 'bottom' ? 'bottom' : 'top';
+
+  return `outside-${place} left 1.5x ${value}%`;
+};
 
 export default function RangeSlider(allProps) {
-  const { id = 'value', ...otherProps } = allProps;
+  const { id, value, tooltipPlace, ...otherProps } = allProps;
+  const [sliderValue, setSliderValue] = useState(value || 0);
+  const ref = useRef();
+
+  const place = getPlace(tooltipPlace, sliderValue);
+
+  useEffect(() => {
+    function setValue(evt) {
+      setSliderValue(evt.detail);
+    }
+
+    if (ref.current) {
+      ref.current.addEventListener('input', setValue);
+    }
+
+    return () => {
+      ref.current.removeEventListener('input', setValue);
+    };
+  }, []);
+
   return (
-    <nu-block>
-      <nu-slider control={`${id}[value]`} trigger {...otherProps} />
-      <nu-tooltip width="max-content">
-        <nu-value id={id} padding></nu-value>
+    <nu-block use-hover box="y">
+      <nu-slider
+        ref={ref}
+        id={id}
+        control={`${id}[value]`}
+        {...otherProps}
+      />
+      <nu-tooltip width="max-content" place={place} move="(-50% + .25x) 0">
+        {sliderValue}
       </nu-tooltip>
     </nu-block>
   );
