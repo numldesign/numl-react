@@ -27,13 +27,25 @@ export default {
         type: 'boolean',
       },
     },
+    username: {
+      control: {
+        type: 'text',
+      },
+    },
+    subtitle: {
+      control: {
+        type: 'text',
+      },
+    },
   },
 };
 
 const Template = ({ theme, ...args }) => (
   <Root>
-    {args.username || args.subtitle ? (
-      <Avatar.Profile {...args} {...themeToProps(theme)} />
+    {args.username && args.subtitle ? (
+      <Avatar.Profile {...args} {...themeToProps(theme)}>
+        <Avatar username={args.username} />
+      </Avatar.Profile>
     ) : (
       <Avatar {...args} {...themeToProps(theme)} />
     )}

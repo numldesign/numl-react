@@ -53,6 +53,7 @@ Avatar.Profile = function AvatarProfile(allProps) {
     subtitle,
     showArrow,
     theme,
+    children,
     ...otherProps
   } = allProps;
   return (
@@ -67,7 +68,7 @@ Avatar.Profile = function AvatarProfile(allProps) {
       theme={theme || themeAttr(allProps, true)}
       {...otherProps}
     >
-      <Avatar {...allProps} />
+      {children}
       <nu-block grow="1">
         {username ? (
           <nu-block color="#text" size={size}>
