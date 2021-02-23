@@ -3,7 +3,7 @@ import Tag from '../components/Tag';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/Tag',
+  title: 'Example/Atoms/Tag',
   component: Tag,
   argTypes: {
     size: {

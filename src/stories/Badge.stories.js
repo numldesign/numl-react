@@ -4,7 +4,7 @@ import Root from '../components/Root';
 import Icon from '../components/Icon';
 
 export default {
-  title: 'Example/Badge',
+  title: 'Example/Atoms/Badge',
   component: Badge,
   argTypes: {
     size: {

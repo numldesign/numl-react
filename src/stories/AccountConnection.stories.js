@@ -4,7 +4,7 @@ import Root from '../components/Root';
 import Link from '../components/Link';
 
 export default {
-  title: 'Example/AccountConnection',
+  title: 'Example/Molecules/AccountConnection',
   component: AccountConnection,
   argTypes: {
     username: {

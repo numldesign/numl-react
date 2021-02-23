@@ -5,7 +5,7 @@ import Icon from '../components/Icon';
 import Checkbox from '../components/Checkbox';
 
 export default {
-  title: 'Example/ButtonGroup',
+  title: 'Example/Atoms/ButtonGroup',
   component: Button.Group,
   argTypes: {
     size: {

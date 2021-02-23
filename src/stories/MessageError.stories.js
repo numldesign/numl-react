@@ -6,7 +6,7 @@ import Icon from '../components/Icon';
 import { THEMES } from '../helpers';
 
 export default {
-  title: 'Example/MessageError',
+  title: 'Example/Atoms/MessageError',
   component: MessageError,
   argTypes: {
     size: {

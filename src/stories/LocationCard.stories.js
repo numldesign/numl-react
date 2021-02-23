@@ -3,7 +3,7 @@ import LocationCard from '../components/LocationCard';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/LocationCard',
+  title: 'Example/Molecules/LocationCard',
   component: LocationCard,
   argTypes: {
     name: {

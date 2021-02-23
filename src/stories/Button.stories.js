@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/Button',
+  title: 'Example/Atoms/Button',
   component: Button,
   argTypes: {
     size: {

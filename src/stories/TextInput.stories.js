@@ -3,7 +3,7 @@ import Root from '../components/Root';
 import TextInput from '../components/TextInput';
 
 export default {
-  title: 'Example/TextInput',
+  title: 'Example/Atoms/TextInput',
   component: TextInput,
   argTypes: {
     size: {

@@ -4,7 +4,7 @@ import Avatar from '../components/Avatar';
 import { THEMES, themeToProps } from '../helpers';
 
 export default {
-  title: 'Example/Avatar',
+  title: 'Example/Atoms/Avatar',
   component: Avatar,
   argTypes: {
     size: {

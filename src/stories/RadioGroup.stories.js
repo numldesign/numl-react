@@ -3,7 +3,7 @@ import Root from '../components/Root';
 import Radio from '../components/Radio';
 
 export default {
-  title: 'Example/RadioGroup',
+  title: 'Example/Atoms/RadioGroup',
   component: Radio.Group,
   argTypes: {
     size: {

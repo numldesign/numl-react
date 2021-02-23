@@ -3,7 +3,7 @@ import ProgressBar from '../components/ProgressBar';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/ProgressBar',
+  title: 'Example/Atoms/ProgressBar',
   component: ProgressBar,
   argTypes: {
     size: {

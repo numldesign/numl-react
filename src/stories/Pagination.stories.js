@@ -4,7 +4,7 @@ import Pagination from '../components/Pagination';
 import Icon from '../components/Icon';
 
 export default {
-  title: 'Example/Pagination',
+  title: 'Example/Atoms/Pagination',
   component: Pagination,
   argTypes: {
     size: {

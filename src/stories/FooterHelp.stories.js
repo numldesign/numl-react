@@ -5,7 +5,7 @@ import Icon from '../components/Icon';
 import Link from '../components/Link';
 
 export default {
-  title: 'Example/FooterHelp',
+  title: 'Example/Atoms/FooterHelp',
   component: FooterHelp,
   argTypes: {
     size: {

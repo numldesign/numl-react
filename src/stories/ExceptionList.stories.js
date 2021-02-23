@@ -5,7 +5,7 @@ import Icon from '../components/Icon';
 import { THEMES, themeToProps } from '../helpers';
 
 export default {
-  title: 'Example/ExceptionList',
+  title: 'Example/Atoms/ExceptionList',
   component: ExceptionList,
   argTypes: {
     size: {

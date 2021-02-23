@@ -3,7 +3,7 @@ import Root from '../components/Root';
 import Thumbnail from '../components/Thumbnail';
 
 export default {
-  title: 'Example/Thumbnail',
+  title: 'Example/Atoms/Thumbnail',
   component: Thumbnail,
   argTypes: {
     size: {

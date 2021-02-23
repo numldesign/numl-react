@@ -4,7 +4,7 @@ import Root from '../components/Root';
 import Icon from '../components/Icon';
 
 export default {
-  title: 'Example/Chip',
+  title: 'Example/Atoms/Chip',
   component: Chip,
   argTypes: {
     size: {

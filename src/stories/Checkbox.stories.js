@@ -3,7 +3,7 @@ import Checkbox from '../components/Checkbox';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/Checkbox',
+  title: 'Example/Atoms/Checkbox',
   component: Checkbox,
   argTypes: {
     size: {

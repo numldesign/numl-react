@@ -5,7 +5,7 @@ import Link from '../components/Link';
 import Icon from '../components/Icon';
 
 export default {
-  title: 'Example/Link',
+  title: 'Example/Atoms/Link',
   component: Link,
   argTypes: {
     size: {

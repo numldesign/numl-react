@@ -3,7 +3,7 @@ import RangeSlider from '../components/RangeSlider';
 import Root from '../components/Root';
 
 export default {
-  title: 'Example/RangeSlider',
+  title: 'Example/Atoms/RangeSlider',
   component: RangeSlider,
   argTypes: {
     size: {

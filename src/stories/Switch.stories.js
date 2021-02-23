@@ -3,7 +3,7 @@ import Root from '../components/Root';
 import Switch from '../components/Switch';
 
 export default {
-  title: 'Example/Switch',
+  title: 'Example/Atoms/Switch',
   component: Switch,
   argTypes: {
     size: {
