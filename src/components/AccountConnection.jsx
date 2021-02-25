@@ -28,15 +28,15 @@ export default function AccountConnection(allProps) {
             <Avatar username={username} />
           </Avatar.Profile>
         ) : (
-            <nu-block padding="2x">
-              <nu-block size="md" text="sb">
-                {username}
-              </nu-block>
-              <nu-block size="sm" color="#text-soft">
-                No account connected
+          <nu-block padding="2x">
+            <nu-block size="md" text="sb">
+              {username}
             </nu-block>
+            <nu-block size="sm" color="#text-soft">
+              No account connected
             </nu-block>
-          )}
+          </nu-block>
+        )}
         <nu-block padding="2x">
           <Button
             special={isConnected ? undefined : true}

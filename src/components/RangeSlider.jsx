@@ -31,12 +31,7 @@ export default function RangeSlider(allProps) {
 
   return (
     <nu-block use-hover box="y">
-      <nu-slider
-        ref={ref}
-        id={id}
-        control={`${id}[value]`}
-        {...otherProps}
-      />
+      <nu-slider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
       <nu-tooltip width="max-content" place={place} move="(-50% + .25x) 0">
         {sliderValue}
       </nu-tooltip>
