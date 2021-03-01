@@ -24,10 +24,18 @@ const Template = ({ ...args }) => (
 export const Default = Template.bind({});
 Default.args = {
   username: 'Example App',
-  onConnectionChange: () => {},
-  description: [
+  isConnected: false,
+  onConnectionChange: (props) => console.log(props),
+  children: [
     'By clicking Connect, you agree to accept Sample App’s ',
     <Link label="terms and conditions." />,
     ' You’ll pay a commission rate of 15% on sales made through Sample App.',
   ],
+};
+
+export const WithoutChildren = Template.bind({});
+WithoutChildren.args = {
+  username: 'Example App',
+  isConnected: true,
+  onConnectionChange: (props) => console.log(props),
 };

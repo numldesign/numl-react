@@ -5,7 +5,7 @@ import Avatar from './Avatar';
 import Button from './Button';
 
 export default function AccountConnection(allProps) {
-  const { username, description, onConnectionChange, ...otherProps } = allProps;
+  const { username, children, onConnectionChange, ...otherProps } = allProps;
 
   const [isConnected, setIsConnected] = useState(Boolean(allProps.isConnected));
 
@@ -15,20 +15,28 @@ export default function AccountConnection(allProps) {
   }, [isConnected]);
 
   return (
-    <nu-block radius="1x" border="1bw" fill="bg" {...otherProps}>
-      <nu-flex content="space-between" items="flex-start" flow="row wrap">
+    <nu-pane
+      radius="1x"
+      border="1bw"
+      fill="bg"
+      padding="2x"
+      flow="column"
+      items="stretch"
+      {...otherProps}
+    >
+      <nu-pane content="space-between" flow="row wrap" gap="1x">
         {isConnected ? (
           <Avatar.Profile
             username={username}
             subtitle="Account connected"
-            padding="2x"
             radius="0x"
             border="0bw"
+            padding="0"
           >
             <Avatar username={username} />
           </Avatar.Profile>
         ) : (
-          <nu-block padding="2x">
+          <nu-block>
             <nu-block size="md" text="sb">
               {username}
             </nu-block>
@@ -37,7 +45,7 @@ export default function AccountConnection(allProps) {
             </nu-block>
           </nu-block>
         )}
-        <nu-block padding="2x">
+        <nu-block>
           <Button
             special={isConnected ? undefined : true}
             onClick={handleConnect}
@@ -45,14 +53,14 @@ export default function AccountConnection(allProps) {
             {isConnected ? 'Disconnect' : 'Connect'}
           </Button>
         </nu-block>
-      </nu-flex>
-      {!isConnected && <nu-block padding="0 2x 2x 2x">{description}</nu-block>}
-    </nu-block>
+      </nu-pane>
+      {children ? <nu-block>{children}</nu-block> : null}
+    </nu-pane>
   );
 }
 
 AccountConnection.propTypes = {
+  isConnected: T.bool,
   username: T.string,
-  description: T.string,
   onConnectionChange: T.func,
 };

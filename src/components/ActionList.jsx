@@ -1,30 +1,26 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 export default function ActionList(allProps) {
-  const ref = useRef();
-
-  const { header, defaultValue, onChange, children, ...otherProps } = allProps;
-
-  useEffect(() => {
-    if (ref.current && onChange) {
-      ref.current.addEventListener('input', (evt) => onChange(evt.detail));
-    }
-  }, []);
+  const { header, children, ...otherProps } = allProps;
 
   return (
-    <nu-listbox ref={ref} value={defaultValue} {...otherProps}>
+    <nu-menu border="1bw" padding="0" {...otherProps}>
       {header ? (
-        <nu-option use-actions="n" border="bottom">
+        <nu-block padding="1x 1.6x" text="sb" border="bottom">
           {header}
-        </nu-option>
+        </nu-block>
       ) : null}
       {children}
-    </nu-listbox>
+    </nu-menu>
   );
 }
 
 ActionList.Item = function ActionItem(allProps) {
   const { children, ...otherProps } = allProps;
 
-  return <nu-option {...otherProps}>{children}</nu-option>;
+  return (
+    <nu-menuitem content="start" {...otherProps}>
+      {children}
+    </nu-menuitem>
+  );
 };
