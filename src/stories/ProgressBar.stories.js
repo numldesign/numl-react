@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from '../components/ProgressBar';
+import ProgressBar from '../Atoms/ProgressBar';
 import Root from '../components/Root';
 
 export default {

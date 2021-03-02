@@ -1,6 +1,6 @@
 import T from 'prop-types';
 
-import ActionElement from './Action';
+import ActionElement from '../components/Action';
 
 export default function Link(allProps) {
   const { label, icon, ...otherProps } = allProps;

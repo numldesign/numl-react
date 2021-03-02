@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Root from '../components/Root';
-import MessageError from '../components/MessageError';
-import Icon from '../components/Icon';
+import MessageError from '../Atoms/MessageError';
+import Icon from '../Atoms/Icon';
 
 import { THEMES } from '../helpers';
 

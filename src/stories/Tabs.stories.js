@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Root from '../components/Root';
-import Tabs from '../components/Tabs';
-import Icon from '../components/Icon';
+import Tabs from '../Molecules/Tabs';
+import Icon from '../Atoms/Icon';
 
 export default {
   title: 'Example/Molecules/Tabs',

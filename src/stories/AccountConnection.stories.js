@@ -1,7 +1,8 @@
 import React from 'react';
-import AccountConnection from '../components/AccountConnection';
+
 import Root from '../components/Root';
-import Link from '../components/Link';
+import AccountConnection from '../Molecules/AccountConnection';
+import Link from '../Atoms/Link';
 
 export default {
   title: 'Example/Molecules/AccountConnection',

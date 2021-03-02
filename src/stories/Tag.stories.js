@@ -1,5 +1,5 @@
 import React from 'react';
-import Tag from '../components/Tag';
+import Tag from '../Atoms/Tag';
 import Root from '../components/Root';
 
 export default {

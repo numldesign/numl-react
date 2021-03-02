@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import { themeAttr } from '../helpers';
-import Action from './Action';
+import Action from '../components/Action';
 import Icon from './Icon';
 
 export default function Tag(allProps) {

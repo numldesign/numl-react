@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ActionList from '../components/ActionList';
-import Icon from '../components/Icon';
+import ActionList from '../Molecules/ActionList';
+import Icon from '../Atoms/Icon';
 import Root from '../components/Root';
 
 export default {

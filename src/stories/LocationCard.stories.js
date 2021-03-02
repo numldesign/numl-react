@@ -1,5 +1,6 @@
 import React from 'react';
-import LocationCard from '../components/LocationCard';
+
+import LocationCard from '../Molecules/LocationCard';
 import Root from '../components/Root';
 
 export default {

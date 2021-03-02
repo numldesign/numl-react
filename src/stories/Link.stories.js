@@ -1,8 +1,8 @@
 import React from 'react';
-import Root from '../components/Root';
-import Link from '../components/Link';
 
-import Icon from '../components/Icon';
+import Root from '../components/Root';
+import Link from '../Atoms/Link';
+import Icon from '../Atoms/Icon';
 
 export default {
   title: 'Example/Atoms/Link',

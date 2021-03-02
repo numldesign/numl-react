@@ -1,5 +1,6 @@
 import React from 'react';
-import Checkbox from '../components/Checkbox';
+
+import Checkbox from '../Atoms/Checkbox';
 import Root from '../components/Root';
 
 export default {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SettingCard from '../components/SettingCard';
+import SettingCard from '../Molecules/SettingCard';
 import Root from '../components/Root';
 
 export default {

@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Root from '../components/Root';
-import Pagination from '../components/Pagination';
-import Icon from '../components/Icon';
+import Pagination from '../Atoms/Pagination';
+import Icon from '../Atoms/Icon';
 
 export default {
   title: 'Example/Atoms/Pagination',

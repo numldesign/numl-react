@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import T from 'prop-types';
-import NativeLink from './NativeLink';
 
 const getPlace = (place, value) => {
   place = place === 'bottom' ? 'bottom' : 'top';

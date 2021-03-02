@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from '../components/Button';
+
+import Button from '../Atoms/Button';
 import Root from '../components/Root';
 
 export default {

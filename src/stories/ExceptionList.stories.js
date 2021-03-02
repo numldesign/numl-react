@@ -1,7 +1,8 @@
 import React from 'react';
+
 import Root from '../components/Root';
-import ExceptionList from '../components/ExceptionList';
-import Icon from '../components/Icon';
+import ExceptionList from '../Atoms/ExceptionList';
+import Icon from '../Atoms/Icon';
 import { THEMES, themeToProps } from '../helpers';
 
 export default {

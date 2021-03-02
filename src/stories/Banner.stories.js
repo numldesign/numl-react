@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Banner from '../components/Banner';
-import Button from '../components/Button';
-import Icon from '../components/Icon';
+import Banner from '../Molecules/Banner';
+import Button from '../Atoms/Button';
+import Icon from '../Atoms/Icon';
 import Root from '../components/Root';
 
 export default {

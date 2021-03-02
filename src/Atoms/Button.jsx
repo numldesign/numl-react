@@ -1,6 +1,6 @@
 import React from 'react';
 import { themeAttr } from '../helpers';
-import ActionElement from './Action';
+import ActionElement from '../components/Action';
 
 export default function Button(props) {
   return ActionElement({ as: 'nu-btn', ...props });

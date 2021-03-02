@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import T from 'prop-types';
-import ActionElement from './Action';
+import ActionElement from '../components/Action';
 
 export default function Radio(allProps) {
   let { checked, disabled, ...otherProps } = allProps;

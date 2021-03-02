@@ -1,6 +1,6 @@
 import React from 'react';
 import Root from '../components/Root';
-import TextInput from '../components/TextInput';
+import TextInput from '../Atoms/TextInput';
 
 export default {
   title: 'Example/Atoms/TextInput',

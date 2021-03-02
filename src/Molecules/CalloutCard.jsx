@@ -19,11 +19,11 @@ export default function CalloutCard(allProps) {
       items="start"
       {...otherProps}
     >
-      <nu-grid flex="2" gap="2x">
+      <nu-flex flex="1" gap="2x" flow="column wrap">
         <nu-block text="sb">{heading}</nu-block>
         <nu-block size="sm">{description}</nu-block>
         <nu-block>{actions}</nu-block>
-      </nu-grid>
+      </nu-flex>
       {extra}
       {closeAction ? closeAction : null}
     </nu-pane>

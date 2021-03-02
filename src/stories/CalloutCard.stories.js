@@ -1,9 +1,7 @@
 import React from 'react';
-
-import CalloutCard from '../components/CalloutCard';
 import Root from '../components/Root';
-import Button from '../components/Button';
-import Icon from '../components/Icon';
+import CalloutCard from '../Molecules/CalloutCard';
+import Button from '../Atoms/Button';
 
 export default {
   title: 'Example/Molecules/CalloutCard',
@@ -34,7 +32,7 @@ Default.args = {
   description: 'Upload your store’s logo, change colors and fonts, and more.',
   actions: [
     <Button key="1">Customize Checkout</Button>,
-    <Button key="2" clear>
+    <Button key="2" clear text="wrap">
       Learn more about customizing checkout
     </Button>,
   ],
@@ -42,6 +40,7 @@ Default.args = {
     <Button
       padding="0"
       border="0"
+      width="3"
       onClick={() => {
         console.log('close');
       }}
@@ -50,7 +49,7 @@ Default.args = {
     </Button>
   ),
   extra: (
-    <nu-block flex="1" height="min 20x">
+    <nu-block width="10" height="min 20x">
       <nu-img src="https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png" />
     </nu-block>
   ),

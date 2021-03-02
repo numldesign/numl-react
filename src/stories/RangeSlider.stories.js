@@ -1,5 +1,5 @@
 import React from 'react';
-import RangeSlider from '../components/RangeSlider';
+import RangeSlider from '../Atoms/RangeSlider';
 import Root from '../components/Root';
 
 export default {
