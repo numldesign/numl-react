@@ -21,12 +21,13 @@ Radio.Group = function RadioGroup(allProps) {
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener('change', (evt) => onChange(evt.detail));
+      ref.current.addEventListener('input', (evt) => onChange(evt.detail));
     }
   }, []);
 
   return (
     <nu-radiogroup
+      ref={ref}
       disabled={disabled}
       gap="1x :inline[2x]"
       inline={inline}

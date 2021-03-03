@@ -37,6 +37,7 @@ export default function Action({
 
   return (
     <Tag
+      ref={ref}
       role={!to ? ROLE_MAP[as] || 'button' : null}
       to={to}
       label={label}

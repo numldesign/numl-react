@@ -12,7 +12,16 @@ export default function Checkbox(allProps) {
 }
 
 Checkbox.Field = function CheckboxField(allProps) {
-  let { checked, disabled, id, children, ...otherProps } = allProps;
+  let {
+    checked,
+    disabled,
+    id,
+    children,
+    onTap,
+    onInput,
+    value,
+    ...otherProps
+  } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
@@ -30,7 +39,9 @@ Checkbox.Field = function CheckboxField(allProps) {
         checked,
         disabled,
         id,
-        ...otherProps,
+        onTap,
+        onInput,
+        value, // if not pass value, onInput handler return only Boolean
       })}
       {children ? <nu-label for={id}>{children}</nu-label> : ''}
     </nu-field>
