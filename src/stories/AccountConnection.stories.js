@@ -29,7 +29,7 @@ Default.args = {
   onConnectionChange: (props) => console.log(props),
   children: [
     'By clicking Connect, you agree to accept Sample App’s ',
-    <Link label="terms and conditions." />,
+    <Link key="1" label="terms and conditions." />,
     ' You’ll pay a commission rate of 15% on sales made through Sample App.',
   ],
 };

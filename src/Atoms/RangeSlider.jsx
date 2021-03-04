@@ -24,7 +24,7 @@ export default function RangeSlider(allProps) {
     }
 
     return () => {
-      ref.current.removeEventListener('input', setValue);
+      ref.current && ref.current.removeEventListener('input', setValue);
     };
   }, []);
 

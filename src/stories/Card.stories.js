@@ -43,7 +43,7 @@ WithHeaderAction.args = {
   heading: 'Heading',
   body: 'Body',
   headerActions: [
-    <Button padding="0" radius="0" border="0" color="#special">
+    <Button key="1" padding="0" radius="0" border="0" color="#special">
       Button
     </Button>,
   ],
@@ -55,7 +55,7 @@ WithBodyAction.args = {
   subheading: 'Subheading',
   body: 'Body',
   bodyActions: [
-    <Button padding="0" radius="0" border="0" color="#special">
+    <Button key="1" padding="0" radius="0" border="0" color="#special">
       Button
     </Button>,
   ],
@@ -67,11 +67,16 @@ WithFooterActions.args = {
   subheading: 'Subheading',
   body: 'Body',
   headerActions: [
-    <Button padding="0" radius="0" border="0" color="#special">
+    <Button key="1" padding="0" radius="0" border="0" color="#special">
       Button
     </Button>,
   ],
-  footerActions: [<Button>Button</Button>, <Button special>Button</Button>],
+  footerActions: [
+    <Button key="1">Button</Button>,
+    <Button special key="2">
+      Button
+    </Button>,
+  ],
 };
 
 export const SectionExample = Template.bind({});
@@ -80,11 +85,16 @@ SectionExample.args = {
   subheading: 'Subheading',
   body: 'Body',
   headerActions: [
-    <Button padding="0" radius="0" border="0" color="#special">
+    <Button key="1" padding="0" radius="0" border="0" color="#special">
       Button
     </Button>,
   ],
-  footerActions: [<Button>Button</Button>, <Button special>Button</Button>],
+  footerActions: [
+    <Button key="1">Button</Button>,
+    <Button special key="2">
+      Button
+    </Button>,
+  ],
   children: [
     <Card
       key="one"
@@ -93,7 +103,7 @@ SectionExample.args = {
       body="Body"
       subheading="Subheading"
       bodyActions={[
-        <Button padding="0" radius="0" border="0" color="#special">
+        <Button key="1" padding="0" radius="0" border="0" color="#special">
           Button
         </Button>,
       ]}

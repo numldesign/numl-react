@@ -30,7 +30,12 @@ Default.args = {
       This will reset your device to its default factor settings
     </nu-block>
   ),
-  footerActions: [<Button>Button</Button>, <Button special>Button</Button>],
+  footerActions: [
+    <Button key="1">Button</Button>,
+    <Button key="2" special>
+      Button
+    </Button>,
+  ],
   closeAction: (
     <Button padding="0" clear>
       <Icon name="close" />
@@ -48,7 +53,12 @@ WithoutHeader.args = {
       store without leaving Instagram.
     </nu-block>
   ),
-  footerActions: [<Button>Button</Button>, <Button special>Button</Button>],
+  footerActions: [
+    <Button key="1">Button</Button>,
+    <Button key="2" special>
+      Button
+    </Button>,
+  ],
   closeAction: (
     <Button padding="0" clear>
       <Icon name="close" />
