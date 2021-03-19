@@ -1,6 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
-import { themeAttr } from '../helpers';
+import { themeAttr } from '../../helpers';
 
 export default function ExceptionList(allProps) {
   let { size, title, label, theme, icon, ...otherProps } = allProps;

@@ -1,17 +1,27 @@
+import React from 'react';
 import T from 'prop-types';
-import ActionElement from '../components/Action';
+import ActionElement from '../../components/Action';
 
-export default function Switch(allProps) {
+export default function Checkbox(allProps) {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: 'nu-switch', checked, disabled, ...otherProps });
+  return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
-Switch.Field = function SwitchField(allProps) {
-  let { checked, disabled, id, children, ...otherProps } = allProps;
+Checkbox.Field = function CheckboxField(allProps) {
+  let {
+    checked,
+    disabled,
+    id,
+    children,
+    onTap,
+    onInput,
+    value,
+    ...otherProps
+  } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
@@ -25,18 +35,20 @@ Switch.Field = function SwitchField(allProps) {
       {...otherProps}
     >
       {ActionElement({
-        as: 'nu-switch',
+        as: 'nu-checkbox',
         checked,
         disabled,
         id,
-        ...otherProps,
+        onTap,
+        onInput,
+        value, // if not pass value, onInput handler return only Boolean
       })}
       {children ? <nu-label for={id}>{children}</nu-label> : ''}
     </nu-field>
   );
 };
 
-Switch.propTypes = {
+Checkbox.propTypes = {
   ...ActionElement.propTypes,
   checked: T.bool,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { themeAttr } from '../helpers';
+import { themeAttr } from '../../helpers';
 
 export default function MessageError(allProps) {
   let { icon, theme, message, ...otherProps } = allProps;

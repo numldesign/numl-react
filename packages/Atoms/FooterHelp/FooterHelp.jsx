@@ -1,7 +1,7 @@
 import T from 'prop-types';
 
-import Icon from './Icon';
-import Link from './Link';
+import Icon from '../Icon/Icon';
+import Link from '../Link';
 
 export default function FooterHelp(allProps) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;

@@ -1,5 +1,5 @@
 import T from 'prop-types';
-import { themeAttr } from '../helpers';
+import { themeAttr } from '../../helpers';
 
 const iconSize = {
   xs: '2',
