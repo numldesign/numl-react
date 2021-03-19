@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import Icon from '../Atoms/Icon';
+import Icon from '../Atoms/Icon/Icon';
 
 export default function Banner(allProps) {
   const {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Chip from '../Atoms/Chip';
-import Icon from '../Atoms/Icon';
+import Root from './../../Components/Root';
+import Chip from './Chip';
+import Icon from './../Icon/Icon';
 
 export default {
   title: 'Example/Atoms/Chip',

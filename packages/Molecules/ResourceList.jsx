@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
-import Avatar from '../Atoms/Avatar';
-import Checkbox from '../Atoms/Checkbox';
+import Avatar from '../Atoms/Avatar/Avatar';
+import Checkbox from '../Atoms/Checkbox/Checkbox';
 
 export default function ResourceList(allProps) {
   const ref = useRef();

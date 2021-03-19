@@ -1,8 +1,8 @@
 import React from 'react';
 
 import ActionList from '../Molecules/ActionList';
-import Icon from '../Atoms/Icon';
-import Root from '../components/Root';
+import Icon from '../Atoms/Icon/Icon';
+import Root from './../Components/Root';
 
 export default {
   title: 'Example/Molecules/ActionList',
@@ -27,7 +27,7 @@ Default.args = {
   header: 'FILE OPTIONS',
   children: [
     <ActionList.Item key="1" onClick={(e) => console.log('import clicked ', e)}>
-      Import
+      Importimport ActionList from './../Molecules/ActionList';
     </ActionList.Item>,
     <ActionList.Item key="2" onClick={(e) => console.log('Export clicked ', e)}>
       Export

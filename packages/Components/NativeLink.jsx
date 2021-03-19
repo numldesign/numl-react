@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import T from 'prop-types';
-import { JsxInnerText } from '../helpers';
+import { JsxInnerText } from './../helpers';
 
 /**
  * This element is required to improve SEO by providing valid HTML linking between pages.

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import ExceptionList from '../Atoms/ExceptionList';
-import Icon from '../Atoms/Icon';
-import { THEMES, themeToProps } from '../helpers';
+import ExceptionList from './ExceptionList';
+import Icon from './../Icon/Icon';
+import { THEMES, themeToProps } from '../../helpers';
+import Root from './../../Components/Root';
 
 export default {
   title: 'Example/Atoms/ExceptionList',

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import OptionList from '../Molecules/OptionList';
-import Thumbnail from '../Atoms/Thumbnail';
-import Badge from '../Atoms/Badge';
-import Icon from '../Atoms/Icon';
-import Button from '../Atoms/Button';
+import Thumbnail from '../Atoms/Thumbnail/Thumbnail';
+import Badge from '../Atoms/Badge/Badge';
+import Icon from '../Atoms/Icon/Icon';
+import Button from '../Atoms/Button/Button';
 
 export default {
   title: 'Example/Molecules/OptionList',

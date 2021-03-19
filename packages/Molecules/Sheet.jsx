@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
-import Checkbox from '../Atoms/Checkbox';
+import Checkbox from '../Atoms/Checkbox/Checkbox';
 
 export default function Sheet(allProps) {
   const {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Avatar from '../Atoms/Avatar';
-import { THEMES, themeToProps } from '../helpers';
+import Root from './../../Components/Root';
+import { THEMES, themeToProps } from '../../helpers';
+import Avatar from './Avatar';
 
 export default {
   title: 'Example/Atoms/Avatar',

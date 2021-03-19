@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import PageAction from '../Molecules/PageAction';
 
 export default {

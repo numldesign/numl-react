@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-import Checkbox from '../Atoms/Checkbox';
+import Checkbox from '../Atoms/Checkbox/Checkbox';
 
 export default function OptionList(allProps) {
   const ref = useRef();

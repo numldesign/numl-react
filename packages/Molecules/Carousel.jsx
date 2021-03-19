@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import T from 'prop-types';
 
-import Icon from '../Atoms/Icon';
+import Icon from '../Atoms/Icon/Icon';
 
 export default function Carousel(allProps) {
   const {

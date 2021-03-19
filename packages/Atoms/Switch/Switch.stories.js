@@ -1,6 +1,6 @@
 import React from 'react';
-import Root from '../components/Root';
-import Switch from '../Atoms/Switch';
+import Root from './../../Components/Root';
+import Switch from './Switch';
 
 export default {
   title: 'Example/Atoms/Switch',

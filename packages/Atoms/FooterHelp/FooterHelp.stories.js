@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import FooterHelp from '../Atoms/FooterHelp';
-import Icon from '../Atoms/Icon';
-import Link from '../Atoms/Link';
+import Root from './../../Components/Root';
+import FooterHelp from './FooterHelp';
+import Icon from '../Icon/Icon';
+import Link from './../Link/Link';
 
 export default {
   title: 'Example/Atoms/FooterHelp',

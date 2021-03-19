@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../Atoms/Button';
+import Button from '../Atoms/Button/Button';
 
-import Root from '../Components/Root';
+import Root from './../Components/Root';
 import Tooltip from '../Molecules/Tooltip';
 
 export default {

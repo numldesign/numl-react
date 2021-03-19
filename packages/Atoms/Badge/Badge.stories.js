@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Badge from '../Atoms/Badge';
-import Icon from '../Atoms/Icon';
+import Root from './../../Components/Root';
+import Icon from '../Icon/Icon';
+import Badge from './Badge';
 
 export default {
   title: 'Example/Atoms/Badge',

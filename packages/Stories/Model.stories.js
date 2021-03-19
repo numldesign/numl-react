@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import Model from '../Molecules/Model';
-import Button from '../Atoms/Button';
-import Icon from '../Atoms/Icon';
+import Button from '../Atoms/Button/Button';
+import Icon from '../Atoms/Icon/Icon';
 
 export default {
   title: 'Example/Molecules/Model',

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { requireNude } from '../helpers';
+import { requireNude } from './../helpers';
 
 export default function Root({ children, onInit, ...props }) {
   useEffect(() => {

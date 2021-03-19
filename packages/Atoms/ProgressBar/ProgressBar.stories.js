@@ -1,6 +1,6 @@
 import React from 'react';
-import ProgressBar from '../Atoms/ProgressBar';
-import Root from '../components/Root';
+import Root from './../../Components/Root';
+import ProgressBar from './ProgressBar';
 
 export default {
   title: 'Example/Atoms/ProgressBar',

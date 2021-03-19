@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Icon from '../Atoms/Icon';
+import Root from './../Components/Root';
+import Icon from '../Atoms/Icon/Icon';
 import BottomNavigation from '../Molecules/BottomNavigation';
 
 export default {

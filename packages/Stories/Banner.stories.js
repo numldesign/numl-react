@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Banner from '../Molecules/Banner';
-import Button from '../Atoms/Button';
-import Icon from '../Atoms/Icon';
-import Root from '../components/Root';
+import Button from '../Atoms/Button/Button';
+import Icon from '../Atoms/Icon/Icon';
+import Root from './../Components/Root';
 
 export default {
   title: 'Example/Molecules/Banner',

@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import ChoiceList from '../Molecules/ChoiceList';
-import TextInput from '../Atoms/TextInput';
+import TextInput from '../Atoms/TextInput/TextInput';
 
 export default {
   title: 'Example/Molecules/ChoiceList',

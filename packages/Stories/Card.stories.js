@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Card from '../Molecules/Card';
-import Button from '../Atoms/Button';
-import Root from '../components/Root';
+import Button from '../Atoms/Button/Button';
+import Root from './../Components/Root';
 
 export default {
   title: 'Example/Molecules/Card',

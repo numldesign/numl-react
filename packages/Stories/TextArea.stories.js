@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import TextArea from '../Molecules/TextArea';
-import Radio from '../Atoms/Radio';
+import Radio from '../Atoms/Radio/Radio';
 
 export default {
   title: 'Example/Molecules/TextArea',

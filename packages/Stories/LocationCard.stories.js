@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LocationCard from '../Molecules/LocationCard';
-import Root from '../components/Root';
+import Root from './../Components/Root';
 
 export default {
   title: 'Example/Molecules/LocationCard',

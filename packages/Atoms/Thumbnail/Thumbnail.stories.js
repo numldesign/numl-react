@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Thumbnail from '../Atoms/Thumbnail';
+import Thumbnail from './Thumbnail';
+import Root from './../../Components/Root';
 
 export default {
   title: 'Example/Atoms/Thumbnail',

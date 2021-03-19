@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Atoms/Button';
+import Button from '../Atoms/Button/Button';
 
 export default function PageAction(allProps) {
   const { primaryAction, secondaryActions, ...otherProps } = allProps;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Root from '../components/Root';
-import Radio from '../Atoms/Radio';
+import Root from './../../Components/Root';
+import Radio from './Radio';
 
 export default {
   title: 'Example/Atoms/Radio',

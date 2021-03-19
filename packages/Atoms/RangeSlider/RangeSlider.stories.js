@@ -1,6 +1,6 @@
 import React from 'react';
-import RangeSlider from '../Atoms/RangeSlider';
-import Root from '../components/Root';
+import Root from './../../Components/Root';
+import RangeSlider from './RangeSlider';
 
 export default {
   title: 'Example/Atoms/RangeSlider',

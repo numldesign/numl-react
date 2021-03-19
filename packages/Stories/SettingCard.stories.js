@@ -1,6 +1,6 @@
 import React from 'react';
 import SettingCard from '../Molecules/SettingCard';
-import Root from '../components/Root';
+import Root from './../Components/Root';
 
 export default {
   title: 'Example/Molecules/SettingCard',

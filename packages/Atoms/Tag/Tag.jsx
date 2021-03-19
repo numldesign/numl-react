@@ -1,7 +1,7 @@
 import T from 'prop-types';
 import { themeAttr } from '../../helpers';
-import Action from '../../components/Action';
-import Icon from './Icon';
+import Action from '../../Components/Action';
+import Icon from '../Icon/Icon';
 
 export default function Tag(allProps) {
   const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;

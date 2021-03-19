@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import Icon from '../Atoms/Icon';
+import Icon from '../Atoms/Icon/Icon';
 
 export default function SettingCard(allProps) {
   const { title, subtitle, icon, ...otherProps } = allProps;

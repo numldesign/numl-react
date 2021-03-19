@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import Carousel from '../Molecules/Carousel';
 
 export default {

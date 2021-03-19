@@ -1,7 +1,7 @@
 import React from 'react';
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import CalloutCard from '../Molecules/CalloutCard';
-import Button from '../Atoms/Button';
+import Button from '../Atoms/Button/Button';
 
 export default {
   title: 'Example/Molecules/CalloutCard',

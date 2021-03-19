@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DataTable from '../Molecules/DataTable';
-import Root from '../components/Root';
-import Link from '../Atoms/Link';
+import Root from './../Components/Root';
+import Link from '../Atoms/Link/Link';
 
 export default {
   title: 'Example/Molecules/DataTable',

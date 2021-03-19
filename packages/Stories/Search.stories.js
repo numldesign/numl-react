@@ -1,8 +1,8 @@
 import React from 'react';
-import Icon from '../Atoms/Icon';
-import Link from '../Atoms/Link';
+import Icon from '../Atoms/Icon/Icon';
+import Link from '../Atoms/Link/Link';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import Search from '../Molecules/Search';
 
 export default {

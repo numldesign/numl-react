@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../Atoms/Button';
-import Icon from '../Atoms/Icon';
+import Button from '../Atoms/Button/Button';
+import Icon from '../Atoms/Icon/Icon';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import EmptyState from '../Molecules/EmptyState';
 
 export default {

@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import MessageError from '../Atoms/MessageError';
-import Icon from '../Atoms/Icon';
-
-import { THEMES } from '../helpers';
+import Icon from './../Icon/Icon';
+import Root from './../../Components/Root';
+import MessageError from './MessageError';
+import { THEMES } from '../../helpers';
 
 export default {
   title: 'Example/Atoms/MessageError',

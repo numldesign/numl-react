@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Root from '../components/Root';
-import Button from '../Atoms/Button';
-import Icon from '../Atoms/Icon';
-import Checkbox from '../Atoms/Checkbox';
+import Root from './../Components/Root';
+import Button from '../Atoms/Button/Button';
+import Icon from '../Atoms/Icon/Icon';
+import Checkbox from '../Atoms/Checkbox/Checkbox';
 
 export default {
   title: 'Example/Atoms/ButtonGroup',

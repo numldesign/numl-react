@@ -1,6 +1,5 @@
 import T from 'prop-types';
-
-import Icon from './Icon';
+import Icon from '../Icon/Icon';
 
 export default function Pagination(allProps) {
   const { size = 'md', flow, label, previous, next, ...otherProps } = allProps;

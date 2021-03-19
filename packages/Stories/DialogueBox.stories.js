@@ -1,10 +1,10 @@
 import React from 'react';
 
 import DialogueBox from '../Molecules/DialogueBox';
-import Button from '../Atoms/Button';
-import Root from '../components/Root';
-import Radio from '../Atoms/Radio';
-import Avatar from '../Atoms/Avatar';
+import Button from '../Atoms/Button/Button';
+import Root from './../Components/Root';
+import Radio from '../Atoms/Radio/Radio';
+import Avatar from '../Atoms/Avatar/Avatar';
 
 export default {
   title: 'Example/Molecules/DialogueBox',

@@ -1,6 +1,6 @@
 import React from 'react';
-import Tag from '../Atoms/Tag';
-import Root from '../components/Root';
+import Root from './../../Components/Root';
+import Tag from './Tag';
 
 export default {
   title: 'Example/Atoms/Tag',

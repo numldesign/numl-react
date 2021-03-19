@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Checkbox from '../Atoms/Checkbox';
-import Root from '../components/Root';
+import Root from './../../Components/Root';
+import Checkbox from './Checkbox';
 
 export default {
   title: 'Example/Atoms/Checkbox',

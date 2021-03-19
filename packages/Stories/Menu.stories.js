@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Root from '../components/Root';
+import Root from './../Components/Root';
 import Menu from '../Molecules/Menu';
-import Icon from '../Atoms/Icon';
+import Icon from '../Atoms/Icon/Icon';
 
 export default {
   title: 'Example/Molecules/Menu',
