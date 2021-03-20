@@ -1,9 +1,8 @@
 import React from 'react';
-
-import Button from '../../Atoms/Button/Button';
-import Root from '../../Components/Root';
-import Radio from '../../Atoms/Radio/Radio';
 import Avatar from '../../Atoms/Avatar/Avatar';
+import Button from '../../Atoms/Button/Button';
+import Radio from '../../Atoms/Radio/Radio';
+import Root from '../../Components/Root';
 import DialogueBox from './DialogueBox';
 
 export default {

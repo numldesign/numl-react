@@ -1,5 +1,5 @@
-import React from 'react';
 import T from 'prop-types';
+import React from 'react';
 import ActionElement from '../../Components/Action';
 
 export default function Checkbox(allProps) {

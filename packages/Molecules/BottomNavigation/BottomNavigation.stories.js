@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
 import Icon from '../../Atoms/Icon/Icon';
+import Root from '../../Components/Root';
 import BottomNavigation from './BottomNavigation';
 
 export default {

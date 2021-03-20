@@ -1,6 +1,5 @@
-import React, { useCallback } from 'react';
 import T from 'prop-types';
-
+import React, { useCallback } from 'react';
 import Button from '../../Atoms/Button/Button';
 
 export default function SettingToggle(allProps) {

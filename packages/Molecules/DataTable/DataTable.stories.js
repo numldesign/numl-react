@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
 import Link from '../../Atoms/Link/Link';
+import Root from '../../Components/Root';
 import DataTable from './DataTable';
 
 export default {

@@ -1,12 +1,10 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
-
-import TextInput from '../../Atoms/TextInput/TextInput';
 import Button from '../../Atoms/Button/Button';
 import Icon from '../../Atoms/Icon/Icon';
-import Filters from './Filters';
+import TextInput from '../../Atoms/TextInput/TextInput';
+import Root from '../../Components/Root';
 import Menu from './../Menu/Menu';
+import Filters from './Filters';
 
 export default {
   title: 'Example/Molecules/Filters',

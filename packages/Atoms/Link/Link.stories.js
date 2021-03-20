@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Root from './../../Components/Root';
 import Icon from './../Icon/Icon';
 import Link from './Link';

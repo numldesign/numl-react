@@ -1,7 +1,7 @@
-import React from 'react';
 import T from 'prop-types';
-import Icon from './../Icon/Icon';
+import React from 'react';
 import Button from './../Button/Button';
+import Icon from './../Icon/Icon';
 
 export default function TextInput(allProps) {
   let {

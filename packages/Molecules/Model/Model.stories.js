@@ -1,8 +1,7 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
 import Button from '../../Atoms/Button/Button';
 import Icon from '../../Atoms/Icon/Icon';
+import Root from '../../Components/Root';
 import Model from './Model';
 
 export default {

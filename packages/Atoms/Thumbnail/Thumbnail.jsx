@@ -1,5 +1,5 @@
-import React from 'react';
 import T from 'prop-types';
+import React from 'react';
 
 const iconSize = {
   xs: '2',

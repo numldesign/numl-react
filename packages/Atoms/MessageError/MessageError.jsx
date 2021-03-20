@@ -1,6 +1,5 @@
-import React from 'react';
 import T from 'prop-types';
-
+import React from 'react';
 import { themeAttr } from '../../helpers';
 
 export default function MessageError(allProps) {

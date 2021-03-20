@@ -1,6 +1,5 @@
-import React from 'react';
 import T from 'prop-types';
-
+import React from 'react';
 import Icon from '../../Atoms/Icon/Icon';
 
 export default function SettingCard(allProps) {

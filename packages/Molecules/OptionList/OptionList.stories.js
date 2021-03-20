@@ -1,10 +1,9 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
-import Thumbnail from '../../Atoms/Thumbnail/Thumbnail';
 import Badge from '../../Atoms/Badge/Badge';
-import Icon from '../../Atoms/Icon/Icon';
 import Button from '../../Atoms/Button/Button';
+import Icon from '../../Atoms/Icon/Icon';
+import Thumbnail from '../../Atoms/Thumbnail/Thumbnail';
+import Root from '../../Components/Root';
 import OptionList from './OptionList';
 
 export default {

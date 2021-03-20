@@ -1,10 +1,9 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
-import Popover from './Popover';
-import TextInput from '../../Atoms/TextInput/TextInput';
 import Button from '../../Atoms/Button/Button';
+import TextInput from '../../Atoms/TextInput/TextInput';
+import Root from '../../Components/Root';
 import ActionList from './../ActionList/ActionList';
+import Popover from './Popover';
 
 export default {
   title: 'Example/Molecules/Popover',

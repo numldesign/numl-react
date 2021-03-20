@@ -1,5 +1,4 @@
 import T from 'prop-types';
-
 import Icon from '../Icon/Icon';
 import Link from '../Link/Link';
 

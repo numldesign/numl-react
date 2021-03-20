@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-
 import T from 'prop-types';
+import React, { useEffect, useRef } from 'react';
 
 export default function Tabs(allProps) {
   const ref = useRef();

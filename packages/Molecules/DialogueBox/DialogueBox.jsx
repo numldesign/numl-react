@@ -1,5 +1,5 @@
-import React from 'react';
 import T from 'prop-types';
+import React from 'react';
 
 export default function DialogueBox(allProps) {
   const { heading, actions, children, ...otherProps } = allProps;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../../Atoms/Button/Button';
 import Icon from '../../Atoms/Icon/Icon';
-
 import Root from '../../Components/Root';
 import EmptyState from './EmptyState';
 

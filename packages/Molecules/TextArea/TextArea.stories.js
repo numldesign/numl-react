@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Root from '../../Components/Root';
 import Radio from '../../Atoms/Radio/Radio';
+import Root from '../../Components/Root';
 import TextArea from './TextArea';
 
 export default {

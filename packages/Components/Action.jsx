@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
 import T from 'prop-types';
+import React, { useEffect, useRef } from 'react';
 import NativeLink from './NativeLink';
 
 const ROLE_MAP = {

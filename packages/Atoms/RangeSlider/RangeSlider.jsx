@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
 import T from 'prop-types';
+import { useEffect, useRef, useState } from 'react';
 
 const getPlace = (place, value) => {
   place = place === 'bottom' ? 'bottom' : 'top';

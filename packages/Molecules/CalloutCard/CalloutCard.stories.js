@@ -1,6 +1,6 @@
 import React from 'react';
-import Root from '../../Components/Root';
 import Button from '../../Atoms/Button/Button';
+import Root from '../../Components/Root';
 import CalloutCard from './CalloutCard';
 
 export default {

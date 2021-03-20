@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react';
 import T from 'prop-types';
-
+import React, { useEffect, useRef } from 'react';
 import Icon from '../../Atoms/Icon/Icon';
 
 export default function Search(allProps) {

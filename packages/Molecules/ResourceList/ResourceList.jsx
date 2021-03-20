@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-
+import React, { useEffect, useRef } from 'react';
 import Avatar from '../../Atoms/Avatar/Avatar';
 import Checkbox from '../../Atoms/Checkbox/Checkbox';
 

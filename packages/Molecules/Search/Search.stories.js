@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from '../../Atoms/Icon/Icon';
 import Link from '../../Atoms/Link/Link';
-
 import Root from '../../Components/Root';
 import Search from './Search';
 

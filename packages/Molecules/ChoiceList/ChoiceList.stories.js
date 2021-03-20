@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
-
-import Root from '../../Components/Root';
 import TextInput from '../../Atoms/TextInput/TextInput';
+import Root from '../../Components/Root';
 import ChoiceList from './ChoiceList';
 
 export default {

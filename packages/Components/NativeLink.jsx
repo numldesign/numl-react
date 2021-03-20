@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import T from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { JsxInnerText } from './../helpers';
 
 /**

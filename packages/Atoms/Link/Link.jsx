@@ -1,5 +1,4 @@
 import T from 'prop-types';
-
 import ActionElement from '../../Components/Action';
 
 export default function Link(allProps) {

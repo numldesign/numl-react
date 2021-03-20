@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from 'react';
-
-import Radio from '../../Atoms/Radio/Radio';
+import React, { useCallback, useState } from 'react';
 import Checkbox from '../../Atoms/Checkbox/Checkbox';
+import Radio from '../../Atoms/Radio/Radio';
 
 export default function ChoiceList(allProps) {
   const {

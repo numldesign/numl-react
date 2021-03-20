@@ -1,6 +1,5 @@
-import React, { useState, useCallback } from 'react';
 import T from 'prop-types';
-
+import React, { useCallback, useState } from 'react';
 import Avatar from '../../Atoms/Avatar/Avatar';
 import Button from '../../Atoms/Button/Button';
 
