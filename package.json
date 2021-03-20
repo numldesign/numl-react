@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prettier": "prettier --write ./src"
+    "prettier": "prettier --write ./packages"
   },
   "repository": {
     "type": "git",
@@ -58,6 +58,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,css,md}": "prettier --write ./src"
+    "*.{js,jsx,css,md}": "prettier --write ./packages"
   }
 }

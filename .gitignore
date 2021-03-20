@@ -7,7 +7,7 @@ yarn.lock
 dist
 .cache
 test.html
-src/numl
+packages/numl
 static
 build-storybook.log
 

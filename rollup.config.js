@@ -6,18 +6,10 @@ import commonjs from '@rollup/plugin-commonjs';
 
 const babelConfig = {
   babelHelpers: 'bundled',
-  'presets': [
-    '@babel/preset-react'
-  ],
+  presets: ['@babel/preset-react'],
 };
 
-const external = [
-  'jsx-native-events',
-  'react',
-  'react-dom',
-  'prop-types',
-  'numl-react',
-];
+const external = ['jsx-native-events', 'react', 'react-dom', 'prop-types', 'numl-react'];
 
 const plugins = [
   terser(),
@@ -32,13 +24,15 @@ const plugins = [
 
 export default [
   {
-    input: 'src/core.js',
+    input: 'packages/core.js',
     external,
-    output: [{
-      name: 'Numl React Components',
-      dir: './dist/',
-      format: 'es',
-    }],
+    output: [
+      {
+        name: 'Numl React Components',
+        dir: './dist/',
+        format: 'es',
+      },
+    ],
     plugins,
   },
 ];
