@@ -13,7 +13,7 @@ const ROLE_MAP: any = {
 };
 
 function ActionElement(allProps: TActionProps): JSX.Element {
-  let { as, onTap, onInput, to, children, label, ...props } = allProps;
+  let { as, onTap, onInput, to, children, label, ...otherProps } = allProps;
   const Tag = as || 'nu-action';
   const ref: any = useRef();
 
@@ -37,7 +37,7 @@ function ActionElement(allProps: TActionProps): JSX.Element {
       role={!to ? ROLE_MAP[as] || 'button' : null}
       to={to}
       label={label}
-      {...props}
+      {...otherProps}
     >
       {children}
       {NativeLink({ to, label, children })}
