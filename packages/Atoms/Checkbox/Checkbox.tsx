@@ -12,7 +12,9 @@ function Checkbox(allProps: TCheckboxProps): JSX.Element {
   return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
-Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
+Checkbox.Field = function CheckboxField(
+  allProps: TCheckboxFieldProps
+): JSX.Element {
   let {
     checked,
     disabled,

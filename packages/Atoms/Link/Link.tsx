@@ -25,5 +25,4 @@ Link.propTypes = {
   icon: T.oneOfType([T.string, T.element]),
 };
 
-
 export default Link;

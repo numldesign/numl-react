@@ -33,5 +33,4 @@ Tag.propTypes = {
   deletable: T.bool,
 };
 
-
 export default Tag;

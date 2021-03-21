@@ -13,15 +13,7 @@ const ROLE_MAP: any = {
 };
 
 function ActionElement(allProps: TActionProps): JSX.Element {
-  let {
-    as,
-    onTap,
-    onInput,
-    to,
-    children,
-    label,
-    ...props
-  } = allProps
+  let { as, onTap, onInput, to, children, label, ...props } = allProps;
   const Tag = as || 'nu-action';
   const ref: any = useRef();
 
@@ -32,7 +24,9 @@ function ActionElement(allProps: TActionProps): JSX.Element {
       }
 
       if (onInput) {
-        ref.current.addEventListener('input', (evt: any) => onInput(evt.detail));
+        ref.current.addEventListener('input', (evt: any) =>
+          onInput(evt.detail)
+        );
       }
     }
   }, []);
