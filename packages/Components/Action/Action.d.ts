@@ -1,7 +1,6 @@
-
 import { TActionProps } from './Action.type';
 
-function Action(props: TActionProps): JSX.Element
+function Action(props: TActionProps): JSX.Element;
 
 Action.propTypes = {
   onTap: T.func,

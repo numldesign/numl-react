@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { themeAttr } from '../../helpers.js';
 import { screenSizes } from '../../Shared/NumlTypes.js';
-import { AvatarIconSize, AvatarTextSize, TAvatarProfileProps, TAvatarProps } from './Avatar.type';
+import {
+  AvatarIconSize,
+  AvatarTextSize,
+  TAvatarProfileProps,
+  TAvatarProps,
+} from './Avatar.type';
 
 function Avatar(allProps: TAvatarProps): JSX.Element {
   let { size = screenSizes.MD, username, theme, ...otherProps } = allProps;
@@ -21,7 +26,10 @@ function Avatar(allProps: TAvatarProps): JSX.Element {
       {...otherProps}
     >
       {showDefaultAvatar && (
-        <nu-icon size={`${AvatarIconSize[size]}x`} name="person-circle-outline" />
+        <nu-icon
+          size={`${AvatarIconSize[size]}x`}
+          name="person-circle-outline"
+        />
       )}
       {!showDefaultAvatar ? (
         <nu-label text="up" size={`${AvatarTextSize[size]}x`}>
@@ -32,7 +40,9 @@ function Avatar(allProps: TAvatarProps): JSX.Element {
   );
 }
 
-Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
+Avatar.Profile = function AvatarProfile(
+  allProps: TAvatarProfileProps
+): JSX.Element {
   let {
     size = screenSizes.MD,
     username,
