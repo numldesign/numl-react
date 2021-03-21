@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Root from './../../Components/Root';
 import { THEMES, themeToProps } from '../../helpers';
+import Root from './../../Components/Root';
 import Avatar from './Avatar';
 
 export default {
@@ -9,21 +8,20 @@ export default {
   component: Avatar,
   argTypes: {
     size: {
-      defaultValue: undefined,
+      defaultValue: 'md',
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        options: ['xs', 'sm', 'md', 'lg', 'xl'],
       },
     },
     theme: {
-      defaultValue: undefined,
       control: {
         type: 'select',
-        options: [undefined, ...THEMES],
+        options: [...THEMES],
       },
     },
     showArrow: {
-      defaultValue: false,
+      defaultValue: true,
       control: {
         type: 'boolean',
       },
@@ -43,7 +41,7 @@ export default {
 
 const Template = ({ theme, ...args }) => (
   <Root>
-    {args.username && args.subtitle ? (
+    {args.username || args.subtitle ? (
       <Avatar.Profile {...args} {...themeToProps(theme)}>
         <Avatar username={args.username} />
       </Avatar.Profile>
@@ -54,7 +52,9 @@ const Template = ({ theme, ...args }) => (
 );
 
 export const Basic = Template.bind({});
-Basic.args = {};
+Basic.args = {
+  label: 'Font Size',
+};
 
 export const WithLabel = Template.bind({});
 WithLabel.args = {

@@ -1,7 +1,9 @@
 import T from 'prop-types';
+import React from 'react';
 import { themeAttr } from '../../helpers';
+import { TBadgeProps } from './Badge.type';
 
-export default function Badge(allProps) {
+export default function Badge(allProps: TBadgeProps): JSX.Element {
   const { size = 'sm', label, icon, theme, ...otherProps } = allProps;
   return (
     <nu-badge

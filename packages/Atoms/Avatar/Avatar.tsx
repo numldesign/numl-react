@@ -1,25 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import T from 'prop-types';
-import { themeAttr } from '../../helpers';
+import { themeAttr } from '../../helpers.js';
+import { screenSizes } from '../../Shared/NumlTypes.js';
+import { AvatarIconSize, AvatarTextSize, TAvatarProfileProps, TAvatarProps } from './Avatar.type';
 
-const iconSize = {
-  xs: '2',
-  sm: '4',
-  md: '6',
-  lg: '8',
-  xl: '10',
-};
-
-const textSize = {
-  xs: '1',
-  sm: '2',
-  md: '3',
-  lg: '4',
-  xl: '5',
-};
-
-export default function Avatar(allProps) {
-  let { size = 'md', username, theme, ...otherProps } = allProps;
+function Avatar(allProps: TAvatarProps): JSX.Element {
+  let { size = screenSizes.MD, username, theme, ...otherProps } = allProps;
 
   const showDefaultAvatar = !!!username || null;
 
@@ -31,14 +17,14 @@ export default function Avatar(allProps) {
       items="center"
       color="#text-soft"
       fill=""
-      size={`${iconSize[size]}x`}
+      size={`${AvatarIconSize[size]}x`}
       {...otherProps}
     >
       {showDefaultAvatar && (
-        <nu-icon size={`${iconSize[size]}x`} name="person-circle-outline" />
+        <nu-icon size={`${AvatarIconSize[size]}x`} name="person-circle-outline" />
       )}
       {!showDefaultAvatar ? (
-        <nu-label text="up" size={`${textSize[size]}x`}>
+        <nu-label text="up" size={`${AvatarTextSize[size]}x`}>
           {username?.slice(0, 2)}
         </nu-label>
       ) : null}
@@ -46,9 +32,9 @@ export default function Avatar(allProps) {
   );
 }
 
-Avatar.Profile = function AvatarProfile(allProps) {
+Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
   let {
-    size = 'md',
+    size = screenSizes.MD,
     username,
     subtitle,
     showArrow,
@@ -87,7 +73,7 @@ Avatar.Profile = function AvatarProfile(allProps) {
 
       {showArrow ? (
         <nu-icon
-          size={`${textSize[size]}x`}
+          size={`${AvatarTextSize[size]}x`}
           name="chevron-down-outline"
           color="#text"
         />
@@ -97,8 +83,10 @@ Avatar.Profile = function AvatarProfile(allProps) {
 };
 
 Avatar.propTypes = {
-  showArrow: T.bool,
-  size: T.string,
-  username: T.string,
-  subtitle: T.string,
+  showArrow: PropTypes.bool,
+  size: PropTypes.string,
+  username: PropTypes.string,
+  subtitle: PropTypes.string,
 };
+
+export default Avatar;

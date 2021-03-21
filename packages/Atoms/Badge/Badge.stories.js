@@ -1,5 +1,4 @@
 import React from 'react';
-import Icon from '../Icon/Icon';
 import Root from './../../Components/Root';
 import Badge from './Badge';
 
@@ -8,10 +7,10 @@ export default {
   component: Badge,
   argTypes: {
     size: {
-      defaultValue: undefined,
+      defaultValue: 'md',
       control: {
         type: 'inline-radio',
-        options: ['sm', 'md', 'lg', undefined],
+        options: ['xs', 'sm', 'md', 'lg', 'xl'],
       },
     },
     theme: {
@@ -40,6 +39,6 @@ Default.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Informational',
-  name: 'ellipse-outline',
-  icon: <Icon name="ellipse-outline"></Icon>,
+  name: 'alert-circle-outline',
+  icon: `alert-circle-outline`,
 };
