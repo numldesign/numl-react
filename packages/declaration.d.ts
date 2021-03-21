@@ -7,5 +7,9 @@ declare namespace JSX {
     'nu-card': any;
     'nu-badge': any;
     'nu-btngroup': any;
+    'nu-field': any;
+    'nu-checkbox': any;
+    'nu-icon': any;
+    'nu-radiogroup': any;
   }
 }

@@ -1,6 +1,7 @@
 import T from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { JsxInnerText } from './../helpers';
+import { JsxInnerText } from './../../helpers';
+import { TNativeLinkProps } from './NativeLink.type';
 
 /**
  * This element is required to improve SEO by providing valid HTML linking between pages.
@@ -9,7 +10,8 @@ import { JsxInnerText } from './../helpers';
  * @return {JSX.Element|undefined}
  * @constructor
  */
-export default function NativeLink({ to, label, children }) {
+function NativeLink(allProps: TNativeLinkProps) {
+  let { to, label, children } = allProps;
   const newTab = to && to.startsWith('!');
   const href = to && to.slice(newTab ? 1 : 0);
   const [showLinkText, setShowLinkText] = useState(true);
@@ -19,7 +21,7 @@ export default function NativeLink({ to, label, children }) {
   });
 
   return href ? (
-    <a href={href} target={newTab ? '_blank' : null}>
+    <a href={href} target={newTab ? '_blank' : undefined}>
       {showLinkText ? label || JsxInnerText(children) : null}
     </a>
   ) : undefined;
@@ -28,3 +30,5 @@ export default function NativeLink({ to, label, children }) {
 NativeLink.propTypes = {
   to: T.string.isRequired,
 };
+
+export default NativeLink;

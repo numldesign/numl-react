@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React from 'react';
-import ActionElement from '../../Components/Action';
+import { ActionElement } from '../../Components/Action';
+import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
-export default function Checkbox(allProps) {
+function Checkbox(allProps: TCheckboxProps): JSX.Element {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -11,7 +12,7 @@ export default function Checkbox(allProps) {
   return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
-Checkbox.Field = function CheckboxField(allProps) {
+Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
   let {
     checked,
     disabled,
@@ -52,3 +53,5 @@ Checkbox.propTypes = {
   ...ActionElement.propTypes,
   checked: T.bool,
 };
+
+export default Checkbox;

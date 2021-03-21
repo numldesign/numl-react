@@ -1,6 +1,7 @@
 import T from 'prop-types';
+import React from 'react';
 
-export default function Icon(allProps) {
+export default function Icon(allProps: any) {
   return <nu-icon {...allProps} />;
 }
 

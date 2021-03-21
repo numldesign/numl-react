@@ -1,7 +1,9 @@
 import T from 'prop-types';
-import ActionElement from '../../Components/Action';
+import React from 'react';
+import { ActionElement } from '../../Components/Action';
+import { TLinkProps } from './Link.type';
 
-export default function Link(allProps) {
+function Link(allProps: TLinkProps) {
   const { label, icon, ...otherProps } = allProps;
 
   return (
@@ -22,3 +24,6 @@ Link.propTypes = {
   label: T.string,
   icon: T.oneOfType([T.string, T.element]),
 };
+
+
+export default Link;

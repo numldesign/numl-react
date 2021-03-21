@@ -1,9 +1,11 @@
 import T from 'prop-types';
-import Action from '../../Components/Action';
+import React from 'react';
+import { ActionElement } from '../../Components/Action';
 import { themeAttr } from '../../helpers';
 import Icon from '../Icon/Icon';
+import { TTagProps } from './Tag.type';
 
-export default function Tag(allProps) {
+function Tag(allProps: TTagProps): JSX.Element {
   const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;
 
   return (
@@ -17,9 +19,9 @@ export default function Tag(allProps) {
     >
       {label}
       {deletable ? (
-        <Action>
+        <ActionElement>
           <Icon name="close-outline" />
-        </Action>
+        </ActionElement>
       ) : null}
     </nu-badge>
   );
@@ -30,3 +32,6 @@ Tag.propTypes = {
   label: T.string,
   deletable: T.bool,
 };
+
+
+export default Tag;

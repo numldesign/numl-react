@@ -1,10 +1,3 @@
-import { TActionProps } from './Action.type';
+export * from './Action';
+export { default } from './Action';
 
-function Action(props: TActionProps): JSX.Element;
-
-Action.propTypes = {
-  onTap: T.func,
-  to: T.string,
-};
-
-export default Action;

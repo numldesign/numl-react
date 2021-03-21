@@ -2,7 +2,7 @@ import React from 'react';
 import { ActionElement } from '../../Components/Action';
 import { TButtonGroupProps, TButtonProps } from './Button.type';
 
-export default function Button(otherProps: TButtonProps): JSX.Element {
+function Button(otherProps: TButtonProps): JSX.Element {
   return ActionElement({ as: 'nu-btn', ...otherProps });
 }
 
@@ -27,3 +27,4 @@ Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
 };
 
 Button.propTypes = ActionElement.propTypes;
+export default Button;

@@ -7,10 +7,10 @@ export default {
   component: Button,
   argTypes: {
     size: {
-      defaultValue: undefined,
+      defaultValue: 'md',
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        options: ['xs', 'sm', 'md', 'lg', 'xl'],
       },
     },
     special: {

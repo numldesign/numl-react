@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import ActionElement from '../../Components/Action';
+import { ActionElement } from '../../Components/Action';
+import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
-export default function Radio(allProps) {
+function Radio(allProps: TRadioProps): JSX.Element {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -11,8 +12,8 @@ export default function Radio(allProps) {
   return ActionElement({ as: 'nu-radio', checked, disabled, ...otherProps });
 }
 
-Radio.Group = function RadioGroup(allProps) {
-  const ref = useRef();
+Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
+  const ref: any = useRef();
 
   let { disabled, children, inline, onChange, ...otherProps } = allProps;
 
@@ -39,7 +40,7 @@ Radio.Group = function RadioGroup(allProps) {
   );
 };
 
-Radio.Field = function RadioField(allProps) {
+Radio.Field = function RadioField(allProps: TRadioFieldProps) {
   let { checked, disabled, id, label, children, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -69,3 +70,5 @@ Radio.propTypes = {
   ...ActionElement.propTypes,
   checked: T.bool,
 };
+
+export default Radio;

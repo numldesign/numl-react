@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import NativeLink from '../NativeLink';
+import { NativeLink } from '../NativeLink';
+import { TActionProps } from './Action.type';
 
-const ROLE_MAP = {
+const ROLE_MAP: any = {
   'nu-btn': 'button',
   'nu-link': 'link',
   'nu-cardbtn': 'button',
@@ -11,17 +12,18 @@ const ROLE_MAP = {
   'nu-radio': 'radio',
 };
 
-export default function Action({
-  as,
-  onTap,
-  onInput,
-  to,
-  children,
-  label,
-  ...props
-}) {
+function ActionElement(allProps: TActionProps): JSX.Element {
+  let {
+    as,
+    onTap,
+    onInput,
+    to,
+    children,
+    label,
+    ...props
+  } = allProps
   const Tag = as || 'nu-action';
-  const ref = useRef();
+  const ref: any = useRef();
 
   useEffect(() => {
     if (ref.current) {
@@ -30,7 +32,7 @@ export default function Action({
       }
 
       if (onInput) {
-        ref.current.addEventListener('input', (evt) => onInput(evt.detail));
+        ref.current.addEventListener('input', (evt: any) => onInput(evt.detail));
       }
     }
   }, []);
@@ -49,7 +51,9 @@ export default function Action({
   );
 }
 
-Action.propTypes = {
+ActionElement.propTypes = {
   onTap: T.func,
   to: T.string,
 };
+
+export default ActionElement;
