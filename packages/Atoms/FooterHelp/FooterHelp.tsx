@@ -1,8 +1,10 @@
 import T from 'prop-types';
-import Icon from '../Icon/Icon';
-import Link from '../Link/Link';
+import React from 'react';
+import { Icon } from './../Icon';
+import { Link } from './../Link';
+import { TFooterHelp } from './FooterHelp.type';
 
-export default function FooterHelp(allProps) {
+function FooterHelp(allProps: TFooterHelp) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;
   return (
     <nu-block radius="4x" border="1bw" padding="2x" {...otherProps}>
@@ -23,3 +25,5 @@ FooterHelp.propTypes = {
   icon: T.oneOfType([T.string, T.element]),
   link: T.oneOfType([T.string, T.element]),
 };
+
+export default FooterHelp;

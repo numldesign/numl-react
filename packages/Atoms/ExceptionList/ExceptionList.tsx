@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React from 'react';
 import { themeAttr } from '../../helpers';
+import TExceptionListProps from './ExceptionList.type';
 
-export default function ExceptionList(allProps) {
+function ExceptionList(allProps: TExceptionListProps) {
   let { size, title, label, theme, icon, ...otherProps } = allProps;
 
   return (
@@ -30,3 +31,5 @@ ExceptionList.propTypes = {
   icon: T.oneOfType([T.string, T.element]),
   title: T.string,
 };
+
+export default ExceptionList;

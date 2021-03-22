@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React from 'react';
 import { themeAttr } from '../../helpers';
+import { TMessageErrorProps } from './MessageError.type';
 
-export default function MessageError(allProps) {
+function MessageError(allProps: TMessageErrorProps) {
   let { icon, theme, message, ...otherProps } = allProps;
 
   return (
@@ -19,3 +20,5 @@ MessageError.propTypes = {
   icon: T.oneOfType([T.string, T.element]),
   message: T.string,
 };
+
+export default MessageError;

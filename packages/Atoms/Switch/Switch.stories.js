@@ -7,10 +7,10 @@ export default {
   component: Switch,
   argTypes: {
     size: {
-      defaultValue: 'md',
+      defaultValue: undefined,
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
+        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
       },
     },
     label: {

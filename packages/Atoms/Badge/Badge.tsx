@@ -3,7 +3,7 @@ import React from 'react';
 import { themeAttr } from '../../helpers';
 import { TBadgeProps } from './Badge.type';
 
-export default function Badge(allProps: TBadgeProps): JSX.Element {
+function Badge(allProps: TBadgeProps): JSX.Element {
   const { size = 'sm', label, icon, theme, ...otherProps } = allProps;
   return (
     <nu-badge
@@ -24,3 +24,4 @@ Badge.propTypes = {
   label: T.string,
   icon: T.oneOfType([T.string, T.element]),
 };
+export default Badge;

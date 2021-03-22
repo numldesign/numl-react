@@ -18,7 +18,7 @@ export interface TAvatarProfileProps extends BaseProps {
   children?: any;
 }
 
-export const AvatarIconSize = {
+export const IconSize = {
   xs: '2',
   sm: '4',
   md: '6',

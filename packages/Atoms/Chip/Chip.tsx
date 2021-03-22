@@ -1,16 +1,13 @@
 import T from 'prop-types';
+import React from 'react';
 import { themeAttr } from '../../helpers';
+import { screenSizes } from '../../Shared/NumlTypes';
+import { IconSize } from './../Avatar/Avatar.type';
+import { TChipProps } from './Chip.type';
 
-const iconSize = {
-  xs: '2',
-  sm: '4',
-  md: '6',
-  lg: '8',
-  xl: '10',
-};
 
-export default function Chip(allProps) {
-  const { size = 'sm', label, icon, theme } = allProps;
+function Chip(allProps: TChipProps): JSX.Element {
+  const { size = screenSizes.MD, label, icon, theme } = allProps;
 
   return (
     <nu-badge
@@ -22,7 +19,7 @@ export default function Chip(allProps) {
       {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
       {label}
       <nu-icon
-        size={`${iconSize[size]}x`}
+        size={`${IconSize[size]}x`}
         name="close-outline"
         rotate="270deg"
       />
@@ -35,3 +32,6 @@ Chip.propTypes = {
   label: T.string,
   icon: T.oneOfType([T.string, T.element]),
 };
+
+
+export default Chip;

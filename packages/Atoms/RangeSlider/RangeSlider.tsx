@@ -1,21 +1,22 @@
 import T from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { TRangeSliderProps } from './RangeSlider.type';
 
-const getPlace = (place, value) => {
+const getPlace = (place: string, value: string) => {
   place = place === 'bottom' ? 'bottom' : 'top';
 
   return `outside-${place} left 1.5x ${value}%`;
 };
 
-export default function RangeSlider(allProps) {
+function RangeSlider(allProps: TRangeSliderProps): JSX.Element {
   const { id, value, tooltipPlace, ...otherProps } = allProps;
   const [sliderValue, setSliderValue] = useState(value || 0);
-  const ref = useRef();
+  const ref: any = useRef();
 
   const place = getPlace(tooltipPlace, sliderValue);
 
   useEffect(() => {
-    function setValue(evt) {
+    function setValue(evt: any) {
       setSliderValue(evt.detail);
     }
 
@@ -46,3 +47,5 @@ RangeSlider.propTypes = {
   value: T.string,
   step: T.string,
 };
+
+export default RangeSlider

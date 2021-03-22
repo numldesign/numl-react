@@ -1,9 +1,9 @@
 import T from 'prop-types';
 import React from 'react';
-import Button from './../Button/Button';
-import Icon from './../Icon/Icon';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 
-export default function TextInput(allProps) {
+function TextInput(allProps) {
   let {
     size,
     prefix,
@@ -40,7 +40,7 @@ export default function TextInput(allProps) {
   );
 }
 
-TextInput.Field = function TextField(allProps) {
+TextInput.Field = function TextField(allProps: any) {
   let {
     label,
     required,
@@ -111,3 +111,5 @@ TextInput.propTypes = {
   helpText: T.string,
   helpTextClear: T.bool,
 };
+
+export default TextInput;

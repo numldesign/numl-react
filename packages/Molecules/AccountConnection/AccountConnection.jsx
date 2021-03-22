@@ -1,7 +1,7 @@
 import T from 'prop-types';
 import React, { useCallback, useState } from 'react';
 import Button from '../../Atoms/Button/Button';
-import Avatar from './../../Atoms/Avatar';
+import { Avatar } from './../../Atoms/Avatar';
 
 export default function AccountConnection(allProps) {
   const { username, children, onConnectionChange, ...otherProps } = allProps;

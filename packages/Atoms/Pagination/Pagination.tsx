@@ -1,7 +1,9 @@
 import T from 'prop-types';
+import React from 'react';
 import Icon from '../Icon/Icon';
+import { TPaginationProps } from './Pagination.type';
 
-export default function Pagination(allProps) {
+function Pagination(allProps: TPaginationProps) {
   const { size = 'md', flow, label, previous, next, ...otherProps } = allProps;
   const isVertical = flow === 'column';
 
@@ -30,3 +32,5 @@ Pagination.propTypes = {
   next: T.oneOfType([T.string, T.element]),
   label: T.string,
 };
+
+export default Pagination;
