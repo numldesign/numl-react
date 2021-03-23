@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React from 'react';
 import Icon from '../../Atoms/Icon/Icon';
+import { TSettingCardProps } from './SettingCard.type';
 
-export default function SettingCard(allProps) {
+function SettingCard(allProps: TSettingCardProps) {
   const { title, subtitle, icon, ...otherProps } = allProps;
 
   return (
@@ -34,3 +35,5 @@ SettingCard.propTypes = {
   subtitle: T.string,
   icon: T.oneOfType([T.string, T.element]),
 };
+
+export default SettingCard;

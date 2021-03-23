@@ -1,2 +1,2 @@
-export * from './Avatar';
-export { default as Avatar } from './Avatar';
+export * from './SettingCard';
+export { default as SettingCard } from './SettingCard';

@@ -1,8 +1,9 @@
 import T from 'prop-types';
 import React, { useCallback } from 'react';
-import Button from '../../Atoms/Button/Button';
+import { Button } from '../../Atoms/Button';
+import { TSettingToggleProps } from './SettingToggle.type';
 
-export default function SettingToggle(allProps) {
+function SettingToggle(allProps: TSettingToggleProps) {
   const {
     text,
     activeText,
@@ -36,3 +37,5 @@ SettingToggle.propTypes = {
   isActive: T.bool,
   onAction: T.func,
 };
+
+export default SettingToggle;

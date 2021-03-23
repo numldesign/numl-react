@@ -1,10 +1,11 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import Icon from '../../Atoms/Icon/Icon';
+import { TSearchProps } from './Search.type';
 
-export default function Search(allProps) {
-  const ref = useRef();
-  const listBoxRef = useRef();
+function Search(allProps: TSearchProps): JSX.Element {
+  const ref: any = useRef();
+  const listBoxRef: any = useRef();
 
   const {
     value,
@@ -21,10 +22,12 @@ export default function Search(allProps) {
 
   useEffect(() => {
     if (ref && ref.current && onSearchInput) {
-      ref.current.addEventListener('input', (evt) => onSearchInput(evt.detail));
+      ref.current.addEventListener('input', (evt: any) =>
+        onSearchInput(evt.detail)
+      );
     }
     if (listBoxRef && listBoxRef.current && onResultItemInput) {
-      listBoxRef.current.addEventListener('input', (evt) =>
+      listBoxRef.current.addEventListener('input', (evt: any) =>
         onResultItemInput(evt.detail)
       );
     }
@@ -56,6 +59,7 @@ export default function Search(allProps) {
                   </nu-option>
                 );
               }
+              return;
             })
           : null}
       </nu-listbox>
@@ -74,3 +78,5 @@ Search.propTypes = {
   resultList: T.array,
   renderResultItem: T.func,
 };
+
+export default Search;

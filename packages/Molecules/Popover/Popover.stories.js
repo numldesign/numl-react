@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../Atoms/Button/Button';
-import TextInput from '../../Atoms/TextInput/TextInput';
+import { Button } from '../../Atoms/Button/';
+import { TextInput } from '../../Atoms/TextInput';
 import Root from '../../Components/Root';
-import ActionList from './../ActionList/ActionList';
+import { ActionList } from './../ActionList';
 import Popover from './Popover';
 
 export default {

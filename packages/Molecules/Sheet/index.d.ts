@@ -1,2 +1,2 @@
-export * from './Avatar';
-export { default as Avatar } from './Avatar';
+export * from './Sheet';
+export { default as Sheet } from './Sheet';

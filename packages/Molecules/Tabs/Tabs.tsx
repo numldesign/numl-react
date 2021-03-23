@@ -1,15 +1,16 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
+import { TTabItemProps, TTabsProps } from './Tabs.type';
 
-export default function Tabs(allProps) {
-  const ref = useRef();
+function Tabs(allProps: TTabsProps) {
+  const ref: any = useRef();
 
   const { prefix, defaultValue, onChange, children, ...otherProps } = allProps;
   const content = prefix ? 'flex-start' : 'space-between';
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener('input', (evt) => onChange(evt.detail));
+      ref.current.addEventListener('input', (evt: any) => onChange(evt.detail));
     }
   }, []);
 
@@ -24,7 +25,7 @@ export default function Tabs(allProps) {
         {prefix}
         {children}
       </nu-tablist>
-      {children.map((child) => {
+      {children.map((child: any) => {
         return (
           <nu-block key={child.props.tab} id={child.props.tab}>
             {child.props.children}
@@ -35,7 +36,7 @@ export default function Tabs(allProps) {
   );
 }
 
-Tabs.Item = function TabItem(allProps) {
+Tabs.Item = function TabItem(allProps: TTabItemProps) {
   const { label, tab, prefix, suffix, ...otherProps } = allProps;
   return (
     <nu-tab content="center" value={tab} control={tab} trigger {...otherProps}>
@@ -51,3 +52,5 @@ Tabs.propTypes = {
   defaultValue: T.string,
   onChange: T.func,
 };
+
+export default Tabs;

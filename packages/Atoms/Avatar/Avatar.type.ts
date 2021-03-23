@@ -2,7 +2,7 @@ import { BaseProps } from '../..';
 import { screenSizes } from '../../Shared/NumlTypes';
 
 export interface TAvatarProps extends BaseProps {
-  size?: screenSizes;
+  size?: screenSizes | string;
   fontSize?: screenSizes;
   showArrow?: boolean;
   username?: string;

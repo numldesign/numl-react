@@ -1,6 +1,7 @@
 import React from 'react';
+import { TTooltipProps } from './Tooltip.type';
 
-export default function Tooltip(allProps) {
+function Tooltip(allProps: TTooltipProps) {
   const { description, width, ...otherProps } = allProps;
   return (
     <nu-tooltip width={width || 'max-content'} {...otherProps}>
@@ -8,3 +9,5 @@ export default function Tooltip(allProps) {
     </nu-tooltip>
   );
 }
+
+export default Tooltip;

@@ -1,3 +1,6 @@
 import { BaseProps } from '../..';
-export interface TAvatarProps extends BaseProps {
+export interface TTextAreaProps extends BaseProps {}
+export interface TTextAreaFieldProps extends BaseProps {
+  children?: any;
+  fieldProps?: any;
 }

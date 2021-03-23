@@ -1,11 +1,12 @@
 import React from 'react';
+import { TTextAreaFieldProps, TTextAreaProps } from './TextArea.type';
 
-export default function TextArea(allProps) {
+function TextArea(allProps: TTextAreaProps) {
   const { ...otherProps } = allProps;
   return <nu-textarea {...otherProps} />;
 }
 
-TextArea.Field = function TextAreaField(allProps) {
+TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
   const { children, fieldProps = {}, ...otherProps } = allProps;
 
   return (
@@ -15,3 +16,5 @@ TextArea.Field = function TextAreaField(allProps) {
     </nu-field>
   );
 };
+
+export default TextArea;

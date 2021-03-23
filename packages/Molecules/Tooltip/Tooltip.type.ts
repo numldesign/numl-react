@@ -1,3 +1,5 @@
 import { BaseProps } from '../..';
-export interface TAvatarProps extends BaseProps {
+export interface TTooltipProps extends BaseProps {
+  description?: any;
+  width?: any;
 }

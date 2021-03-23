@@ -22,4 +22,4 @@ Menu.Item = function MenuItem(allProps: TMenuItemProps) {
   );
 };
 
-export default Menu
+export default Menu;

@@ -1,3 +1,4 @@
 import { BaseProps } from '../..';
-export interface TAvatarProps extends BaseProps {
+export interface TPopoverProps extends BaseProps {
+  children?: any;
 }

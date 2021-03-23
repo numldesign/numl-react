@@ -1,15 +1,16 @@
 import React from 'react';
-import Button from '../../Atoms/Button/Button';
+import { Button } from '../../Atoms/Button';
+import { TPageActionProps } from './PageAction.type';
 
-export default function PageAction(allProps) {
+function PageAction(allProps: TPageActionProps) {
   const { primaryAction, secondaryActions, ...otherProps } = allProps;
-
   const flowContent = !!secondaryActions ? 'space-between' : 'flex-end';
+
   return (
     <nu-pane content={flowContent} {...otherProps}>
       {!!secondaryActions ? (
         <nu-pane>
-          {secondaryActions.map((action) => {
+          {secondaryActions.map((action: any) => {
             return (
               <Button
                 key={action.content}
@@ -30,3 +31,5 @@ export default function PageAction(allProps) {
     </nu-pane>
   );
 }
+
+export default PageAction;

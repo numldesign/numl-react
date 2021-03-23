@@ -1,3 +1,5 @@
 import { BaseProps } from '../..';
-export interface TAvatarProps extends BaseProps {
+export interface TPageActionProps extends BaseProps {
+  primaryAction?: any;
+  secondaryActions?: any;
 }

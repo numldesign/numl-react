@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from '../../Atoms/Radio/Radio';
+import { Radio } from '../../Atoms/Radio';
 import Root from '../../Components/Root';
 import TextArea from './TextArea';
 

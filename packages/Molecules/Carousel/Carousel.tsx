@@ -7,8 +7,8 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
   const {
     items,
     activeIndex,
-    onPreviousClick = () => { },
-    onNextClick = () => { },
+    onPreviousClick = () => {},
+    onNextClick = () => {},
     ...otherProps
   } = allProps;
 
@@ -17,27 +17,21 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
   const [slides] = useState(itemList.length);
   const [currentSlide, setCurrentSlide] = useState(activeIndex || 0);
 
-  const handlePreviousClick = useCallback(
-    () => {
-      if (currentSlide > 0) {
-        const newValue = currentSlide - 1;
-        setCurrentSlide(newValue);
-        onPreviousClick({ value: newValue });
-      }
-    },
-    [currentSlide]
-  );
+  const handlePreviousClick = useCallback(() => {
+    if (currentSlide > 0) {
+      const newValue = currentSlide - 1;
+      setCurrentSlide(newValue);
+      onPreviousClick({ value: newValue });
+    }
+  }, [currentSlide]);
 
-  const handleNextClick = useCallback(
-    () => {
-      if (currentSlide < slides - 1) {
-        const newValue = currentSlide + 1;
-        setCurrentSlide(newValue);
-        onNextClick(newValue);
-      }
-    },
-    [currentSlide]
-  );
+  const handleNextClick = useCallback(() => {
+    if (currentSlide < slides - 1) {
+      const newValue = currentSlide + 1;
+      setCurrentSlide(newValue);
+      onNextClick(newValue);
+    }
+  }, [currentSlide]);
 
   return (
     <nu-block style={{ position: 'relative' }} {...otherProps}>

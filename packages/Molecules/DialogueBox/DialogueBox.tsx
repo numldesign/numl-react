@@ -25,4 +25,4 @@ DialogueBox.propTypes = {
   heading: T.string,
 };
 
-export default DialogueBox
+export default DialogueBox;

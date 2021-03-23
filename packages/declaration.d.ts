@@ -37,5 +37,9 @@ declare namespace JSX {
     'nu-cell': any;
     'nu-listbox': any;
     'nu-option': any;
+    'nu-popup': any;
+    'nu-tablist': any;
+    'nu-tab': any;
+    'nu-textarea': any;
   }
 }

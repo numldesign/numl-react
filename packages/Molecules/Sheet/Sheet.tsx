@@ -1,7 +1,8 @@
 import React, { useCallback, useState } from 'react';
-import Checkbox from '../../Atoms/Checkbox/Checkbox';
+import { Checkbox } from '../../Atoms/Checkbox';
+import { TSheetProps } from './Sheet.type';
 
-export default function Sheet(allProps) {
+function Sheet(allProps: TSheetProps): JSX.Element {
   const {
     heading,
     footerActions,
@@ -27,7 +28,7 @@ export default function Sheet(allProps) {
         selectedValues.add(checkboxName);
       }
       setSelectedValues(selectedValues);
-      onChange([...selectedValues]);
+      onChange([...Array.from(selectedValues)]);
     },
     [selectedValues]
   );
@@ -83,7 +84,7 @@ export default function Sheet(allProps) {
  *
  * @param {*} value handle user input values and convert it into Set
  */
-const getDefaultCheckValue = (value) => {
+const getDefaultCheckValue = (value: any): Set<any> => {
   if (typeof value === 'string') {
     return new Set([value]);
   } else if (Array.isArray(value)) {
@@ -92,3 +93,5 @@ const getDefaultCheckValue = (value) => {
     return new Set();
   }
 };
+
+export default Sheet;
