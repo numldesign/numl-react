@@ -48,4 +48,4 @@ RangeSlider.propTypes = {
   step: T.string,
 };
 
-export default RangeSlider
+export default RangeSlider;

@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 
-function TextInput(allProps) {
+function TextInput(allProps: any) {
   let {
     size,
     prefix,

@@ -5,7 +5,6 @@ import { screenSizes } from '../../Shared/NumlTypes';
 import { IconSize } from './../Avatar/Avatar.type';
 import { TChipProps } from './Chip.type';
 
-
 function Chip(allProps: TChipProps): JSX.Element {
   const { size = screenSizes.MD, label, icon, theme } = allProps;
 
@@ -32,6 +31,5 @@ Chip.propTypes = {
   label: T.string,
   icon: T.oneOfType([T.string, T.element]),
 };
-
 
 export default Chip;

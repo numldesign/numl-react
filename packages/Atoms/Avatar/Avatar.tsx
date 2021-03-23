@@ -3,8 +3,10 @@ import React from 'react';
 import { themeAttr } from '../../helpers.js';
 import { screenSizes } from '../../Shared/NumlTypes.js';
 import {
-  AvatarTextSize, IconSize, TAvatarProfileProps,
-  TAvatarProps
+  AvatarTextSize,
+  IconSize,
+  TAvatarProfileProps,
+  TAvatarProps,
 } from './Avatar.type';
 
 function Avatar(allProps: TAvatarProps): JSX.Element {
@@ -24,10 +26,7 @@ function Avatar(allProps: TAvatarProps): JSX.Element {
       {...otherProps}
     >
       {showDefaultAvatar && (
-        <nu-icon
-          size={`${IconSize[size]}x`}
-          name="person-circle-outline"
-        />
+        <nu-icon size={`${IconSize[size]}x`} name="person-circle-outline" />
       )}
       {!showDefaultAvatar ? (
         <nu-label text="up" size={`${AvatarTextSize[size]}x`}>

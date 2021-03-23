@@ -7,4 +7,3 @@ export interface TThumbnailProps extends BaseProps {
   alt: any;
   fit: any;
 }
-

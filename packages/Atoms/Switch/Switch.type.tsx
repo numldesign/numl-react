@@ -1,4 +1,3 @@
-
 import { BaseProps } from './../../index.d';
 
 export interface TSwitchProps extends BaseProps {
