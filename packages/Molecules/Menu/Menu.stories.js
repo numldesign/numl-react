@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Icon from '../../Atoms/Icon/Icon';
+import { Icon } from '../../Atoms/Icon';
 import Root from '../../Components/Root';
 import Menu from './Menu';
 

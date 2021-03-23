@@ -22,5 +22,20 @@ declare namespace JSX {
     'nu-input': any;
     'nu-img': any;
     'nu-link': any;
+    'nu-pane': any;
+    'nu-menu': any;
+    'nu-menuitem': any;
+    'nu-flow': any;
+    'nu-grid': any;
+    'nu-list': any;
+    'nu-listitem': any;
+    'nu-table': any;
+    'nu-attrs': any;
+    'nu-rowgroup': any;
+    'nu-row': any;
+    'nu-columnheader': any;
+    'nu-cell': any;
+    'nu-listbox': any;
+    'nu-option': any;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../Atoms/Button/Button';
-import Icon from '../../Atoms/Icon/Icon';
+import { Button } from '../../Atoms/Button';
+import { Icon } from '../../Atoms/Icon';
 import Root from '../../Components/Root';
 import Model from './Model';
 

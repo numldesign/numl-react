@@ -1,6 +1,6 @@
 import React from 'react';
 import Root from './../../Components/Root';
-import Icon from './../Icon/Icon';
+import { Icon } from './../Icon';
 import Chip from './Chip';
 
 export default {

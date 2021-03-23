@@ -12,6 +12,7 @@ export interface TCheckboxFieldProps extends BaseProps {
   children?: any;
   onTap?: any;
   onInput?: any;
+  items?: any;
   value?: any;
   groupRadius?: any;
 }

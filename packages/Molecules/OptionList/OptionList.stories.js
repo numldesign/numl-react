@@ -1,8 +1,8 @@
 import React from 'react';
-import Badge from '../../Atoms/Badge/Badge';
-import Button from '../../Atoms/Button/Button';
-import Icon from '../../Atoms/Icon/Icon';
-import Thumbnail from '../../Atoms/Thumbnail/Thumbnail';
+import { Badge } from '../../Atoms/Badge';
+import { Button } from '../../Atoms/Button';
+import { Icon } from '../../Atoms/Icon';
+import { Thumbnail } from '../../Atoms/Thumbnail';
 import Root from '../../Components/Root';
 import OptionList from './OptionList';
 

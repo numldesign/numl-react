@@ -15,6 +15,9 @@ export interface TAvatarProfileProps extends BaseProps {
   subtitle?: string;
   showArrow?: boolean;
   theme?: any;
+  radius?: any;
+  border?: any;
+  padding?: any;
   children?: any;
 }
 

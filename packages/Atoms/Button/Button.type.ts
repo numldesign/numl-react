@@ -7,6 +7,7 @@ export interface TButtonProps extends BaseProps {
   clear?: any;
   padding?: any;
   onClick?: any;
+  special?: any;
 }
 
 export interface TButtonGroupProps extends BaseProps {
