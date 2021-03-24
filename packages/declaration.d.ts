@@ -41,5 +41,9 @@ declare namespace JSX {
     'nu-tablist': any;
     'nu-tab': any;
     'nu-textarea': any;
+    'nu-root': any;
+    'nu-theme': any;
+    'nu-dropdownicon': any;
+    'nu-value': any;
   }
 }

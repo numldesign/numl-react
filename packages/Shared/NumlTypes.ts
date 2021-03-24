@@ -5,3 +5,6 @@ export enum screenSizes {
   LG = 'lg',
   XL = 'xl',
 }
+export interface BaseProps {
+  otherProps?: unknown;
+}

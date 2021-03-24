@@ -1,4 +1,4 @@
-import { BaseProps } from '../..';
+import { BaseProps } from '../../../Shared/NumlTypes';
 
 export interface TNativeLinkProps extends BaseProps {
   to?: any;

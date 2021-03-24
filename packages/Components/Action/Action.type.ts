@@ -1,4 +1,4 @@
-import { BaseProps } from './../../index.d';
+import { BaseProps } from '../../../Shared/NumlTypes';
 
 export interface TActionProps extends BaseProps {
   checked?: any;
