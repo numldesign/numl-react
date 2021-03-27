@@ -47,5 +47,6 @@ declare namespace JSX {
     'nu-value': any;
     'nu-in': any;
     'nu-svg': any;
+    'nu-header': any;
   }
 }

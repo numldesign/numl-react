@@ -5,13 +5,7 @@ import TopBar from '../src/TopBar';
 export default {
   title: 'Example/Organisms/TopBar',
   component: TopBar,
-  argTypes: {
-    header: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
 };
 
 const Template = ({ ...args }) => (
@@ -22,6 +16,9 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  header: 'ContextualSaveBar',
+  placeholder: 'Text Field',
+  nuLinkAction: 'https://www.google.com/',
+  username: 'Syed Umer Hasan',
+  menuIcon: 'menu-outline',
   children: [],
 };

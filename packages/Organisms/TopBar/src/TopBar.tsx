@@ -7,9 +7,8 @@ function TopBar(props) {
     placeholder,
     nuLinkAction,
     logo,
-    username = 'Jhon Doe',
+    username,
     menuIcon,
-    children,
     ...otherprops
   } = props;
   return (
@@ -37,12 +36,15 @@ function TopBar(props) {
 
         <nu-block responsive="766px|318px">
           <nu-grid columns="1fr" items="end">
-            <nu-block>
-              <nu-icon text="middle" name="person" size="3x" padding></nu-icon>
-              <nu-el text="middle bold" show="y|n">
-                {username}
-              </nu-el>
-            </nu-block>
+            <nu-btn toggle fill="#base" border="0">
+              <nu-block>
+                <nu-icon text="middle" name="person" padding></nu-icon>
+                <nu-el text="middle bold" show="y|n">
+                  {username}
+                </nu-el>
+              </nu-block>
+              <nu-popup>Content</nu-popup>
+            </nu-btn>
           </nu-grid>
         </nu-block>
       </nu-grid>
