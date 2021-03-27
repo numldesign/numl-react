@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { requireNude } from '../helpers';
 
 export default function Root(props: any) {
-  let { children, onInit, ...otherProps } = props;
+  let { children, onInit, padding = '2x', ...otherProps } = props;
 
   useEffect(() => {
     requireNude().then((Nude: any) => {
@@ -18,7 +18,7 @@ export default function Root(props: any) {
         WebkitFontSmoothing: 'antialiased',
         MozOsxFontSmoothing: 'grayscale',
       }}
-      padding="2x"
+      padding={padding}
       fill="subtle"
       {...otherProps}
     >

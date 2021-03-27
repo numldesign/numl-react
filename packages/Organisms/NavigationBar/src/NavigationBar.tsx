@@ -3,7 +3,12 @@ import React from 'react';
 function NavigationBarRow(props) {
   let { items, ...otherProps } = props;
   return (
-    <nu-grid column="1fr" overflow="hidden" content="stretch" height="min 100%">
+    <nu-grid
+      content="start stretch"
+      item="start stretch"
+      height="90vh"
+      overflow="auto"
+    >
       {items &&
         items.map(function (eachItem) {
           return (
@@ -44,17 +49,18 @@ function NavigationBarRow(props) {
 }
 
 function NavigationBar(props) {
-  let { items, content = 'stretch', ...otherProps } = props;
+  let { items, ...otherProps } = props;
   return (
-    <nu-grid content={content} fill="">
+    <nu-grid content="stretch" height="100vh" width="min 256px">
       <NavigationBarRow items={items}></NavigationBarRow>
       <nu-footer
-        column="-1"
+        column="0"
         fill=""
         border
+        height="10vh"
         padding="1x 2x"
         cursor="pointer"
-        width="min 256px"
+        height="max 70px"
         use-hover
         mark="hover"
       >
