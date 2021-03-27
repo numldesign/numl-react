@@ -12,11 +12,13 @@ function TopBar(props) {
     ...otherprops
   } = props;
   return (
-    <nu-block fill="#base" padding responsive="1334px|1022px|766px|318px">
+    <nu-block>
       <nu-grid
+        responsive="1300px|1000px|800px|400px"
         gap="36x|14x|8x|1x"
         columns="auto 4fr auto|auto 3fr auto|auto 2fr auto|auto 2fr auto"
         items="center stretch"
+        padding
       >
         <nu-block row="1">
           <nu-block to={nuLinkAction} show="y|y|n|n">
@@ -34,9 +36,9 @@ function TopBar(props) {
           <nu-input border="0" placeholder={placeholder}></nu-input>
         </nu-inputgroup>
 
-        <nu-block responsive="766px|318px">
+        <nu-block responsive="900px|400px">
           <nu-grid columns="1fr" items="end">
-            <nu-btn toggle fill="#base" border="0">
+            <nu-btn toggle border="0" padding="0px 10px" fill="">
               <nu-block>
                 <nu-icon text="middle" name="person" padding></nu-icon>
                 <nu-el text="middle bold" show="y|n">

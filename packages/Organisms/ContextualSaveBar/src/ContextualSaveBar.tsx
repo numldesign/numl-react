@@ -67,10 +67,10 @@ function ContextualSaveBar(props) {
           <nu-el text="middle">Unsaved Changes</nu-el>
         </nu-in>
         <nu-btngroup gap fill="light" border="0" inline>
-          <nu-btn fill="bg" radius>
+          <nu-btn fill="bg" radius width="max 84px">
             Discard
           </nu-btn>
-          <nu-btn fill="special-bg" radius>
+          <nu-btn fill="special-bg" radius width="max 84px">
             Save
           </nu-btn>
         </nu-btngroup>

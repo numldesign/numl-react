@@ -9,7 +9,6 @@ declare namespace JSX {
     'nu-btngroup': any;
     'nu-field': any;
     'nu-checkbox': any;
-    'nu-icon': any;
     'nu-radiogroup': any;
     'nu-badge': any;
     'nu-el': any;
