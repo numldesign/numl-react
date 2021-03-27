@@ -1,8 +1,8 @@
-import { terser } from 'rollup-plugin-terser';
-import url from '@rollup/plugin-url';
 import babel from '@rollup/plugin-babel';
-import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import url from '@rollup/plugin-url';
+import { terser } from 'rollup-plugin-terser';
 
 const babelConfig = {
   babelHelpers: 'bundled',
@@ -15,7 +15,7 @@ const plugins = [
   terser(),
   resolve({
     mainFields: ['module', 'main', 'jsnext:main'],
-    extensions: ['.jsx', '.js'],
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
   }),
   commonjs(),
   url(),

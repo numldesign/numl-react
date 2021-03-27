@@ -45,5 +45,7 @@ declare namespace JSX {
     'nu-theme': any;
     'nu-dropdownicon': any;
     'nu-value': any;
+    'nu-in': any;
+    'nu-svg': any;
   }
 }
