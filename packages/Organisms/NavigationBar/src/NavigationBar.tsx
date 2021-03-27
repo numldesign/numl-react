@@ -44,25 +44,25 @@ function NavigationBarRow(props) {
 }
 
 function NavigationBar(props) {
-  let { items, ...otherProps } = props;
+  let { items, content = 'stretch', ...otherProps } = props;
   return (
-    <nu-grid row="auto 5fr" content="stretch">
+    <nu-grid content={content} fill="">
       <NavigationBarRow items={items}></NavigationBarRow>
-      <nu-header
+      <nu-footer
         column="-1"
         fill=""
+        border
         padding="1x 2x"
         cursor="pointer"
         width="min 256px"
-        radius
         use-hover
         mark="hover"
       >
-        <nu-icon column="1" name="home"></nu-icon>
+        <nu-icon column="1" name="settings-outline"></nu-icon>
         <nu-el text="middle" padding column="2">
           Settings
         </nu-el>
-      </nu-header>
+      </nu-footer>
     </nu-grid>
   );
 }
