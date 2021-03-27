@@ -7,20 +7,20 @@ function TopBar(props) {
     placeholder,
     nuLinkAction,
     logo,
-    username,
+    username = 'Jhon Doe',
     menuIcon,
     children,
     ...otherprops
   } = props;
   return (
-    <nu-block fill="#base" padding responsive="1337px|1024px|767px|320px">
+    <nu-block fill="#base" padding responsive="1334px|1022px|766px|318px">
       <nu-grid
-        gap="36x|24px|8px|8px"
-        columns="1fr 5fr 1fr|1fr 4fr 1fr|auto 2fr auto|auto 2fr auto"
-        content="stretch space-around"
+        gap="36x|14x|8x|1x"
+        columns="auto 4fr auto|auto 3fr auto|auto 2fr auto|auto 2fr auto"
+        items="center stretch"
       >
-        <nu-block>
-          <nu-block to={nuLinkAction} show="y|y|n|n" space="right center">
+        <nu-block row="1">
+          <nu-block to={nuLinkAction} show="y|y|n|n">
             {logo ? logo : <ForunIcon></ForunIcon>}
           </nu-block>
           <nu-icon
@@ -34,11 +34,12 @@ function TopBar(props) {
           <nu-icon name="search" width="2.5em" color></nu-icon>
           <nu-input border="0" placeholder={placeholder}></nu-input>
         </nu-inputgroup>
-        <nu-block responsive="769px|768px" space="center">
-          <nu-grid columns="1fr|1fr" items="end">
+
+        <nu-block responsive="766px|318px">
+          <nu-grid columns="1fr" items="end">
             <nu-block>
               <nu-icon text="middle" name="person" size="3x" padding></nu-icon>
-              <nu-el text="middle" show="y|n">
+              <nu-el text="middle bold" show="y|n">
                 {username}
               </nu-el>
             </nu-block>
