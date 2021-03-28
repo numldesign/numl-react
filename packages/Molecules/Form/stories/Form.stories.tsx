@@ -12,12 +12,7 @@ const Template = ({ ...args }) => (
     <Form {...args}>
       <Form.Field name="name">
         <Form.Label>Name</Form.Label>
-        <Form.Input
-          grow="1"
-          is-focus
-          outline="y"
-          placeholder="Focus"
-        ></Form.Input>
+        <Form.Input grow="1" placeholder="Focus"></Form.Input>
         <Form.Check
           message="Name should not contain digits or any special characters"
           assert={(val) => typeof val === 'string' && val.match(/^[a-z]*$/i)}
