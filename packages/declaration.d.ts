@@ -48,5 +48,8 @@ declare namespace JSX {
     'nu-svg': any;
     'nu-header': any;
     'nu-footer': any;
+    'nu-form': any;
+    'nu-check': any;
+    'nu-btn': any;
   }
 }
