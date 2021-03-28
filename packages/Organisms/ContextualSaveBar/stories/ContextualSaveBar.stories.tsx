@@ -5,23 +5,17 @@ import ContextualSaveBar from './../src/ContextualSaveBar';
 export default {
   title: 'Example/Organisms/ContextualSaveBar',
   component: ContextualSaveBar,
-  argTypes: {
-    header: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  argTypes: {},
 };
 
 const Template = ({ ...args }) => (
-  <Root>
+  <Root padding="0">
     <ContextualSaveBar {...args} />
   </Root>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  header: 'ContextualSaveBar',
-  children: [],
+  message: 'Unsaved Changes',
+  buttonWidth: '6rem',
 };

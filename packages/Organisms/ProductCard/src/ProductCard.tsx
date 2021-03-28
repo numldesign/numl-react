@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProductCard(props) {
   let {
-    width = '280px',
+    width = '350px',
     name,
     image,
     detail,
@@ -14,9 +14,15 @@ function ProductCard(props) {
     ...otherProps
   } = props;
   return (
-    <nu-grid columns="auto" row="auto" content="start" {...otherProps}>
+    <nu-grid
+      columns="auto"
+      row="auto"
+      content="start"
+      width={width}
+      {...otherProps}
+    >
       <nu-card padding="20px" radius="8px">
-        <nu-img column="1" width={width} src={image} fit="fill"></nu-img>
+        <nu-img column="1" width="100%" src={image} fit="fill"></nu-img>
         <nu-block>
           <ProductDetail
             name={name}
