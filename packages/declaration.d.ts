@@ -51,5 +51,9 @@ declare namespace JSX {
     'nu-form': any;
     'nu-check': any;
     'nu-btn': any;
+    'nu-fileinput': any;
+    'nu-numinput': any;
+    'nu-inputgroup': any;
+    'nu-flow': any;
   }
 }
