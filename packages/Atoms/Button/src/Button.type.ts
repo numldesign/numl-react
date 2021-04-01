@@ -1,13 +1,12 @@
 import { BaseProps } from '../../../Shared/NumlTypes';
 
 export interface TButtonProps extends BaseProps {
-  children?: any;
-  flow?: any;
-  groupRadius?: any;
-  clear?: any;
+  label?: string;
+  fill?: string;
+  theme?: any;
   padding?: any;
-  onClick?: any;
-  special?: any;
+  size?: string;
+  showDropdown?: any;
 }
 
 export interface TButtonGroupProps extends BaseProps {

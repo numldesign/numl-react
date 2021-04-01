@@ -1,54 +1,58 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { screenSizes } from '../../../Shared/NumlTypes';
-import { themeAttr } from './../../../helpers';
-import {
-  AvatarTextSize,
-  IconSize,
-  TAvatarProfileProps,
-  TAvatarProps,
-} from './Avatar.type';
+import { TAvatarProfileProps, TAvatarProps } from './Avatar.type';
 
-function Avatar(allProps: TAvatarProps): JSX.Element {
-  let { size = screenSizes.MD, username, theme, ...otherProps } = allProps;
-
-  const showDefaultAvatar = !!!username || null;
-
+const Avatar = function Avatar(allProps: TAvatarProps): JSX.Element {
+  let {
+    size = 3,
+    username,
+    showIcon,
+    fill,
+    children,
+    ...otherProps
+  } = allProps;
+  let childSize = size;
+  if (childSize && !isNaN(+childSize)) {
+    childSize = +size - +size / 3;
+  }
   return (
     <nu-circle
-      theme={theme || themeAttr(allProps, true)}
       display="flex"
       content="center"
       items="center"
-      color="#text-soft"
-      fill=""
-      size={`${IconSize[size]}x`}
+      fill={fill}
+      border="0"
+      size={size}
       {...otherProps}
     >
-      {showDefaultAvatar && (
-        <nu-icon size={`${IconSize[size]}x`} name="person-circle-outline" />
+      {!showIcon && username ? (
+        <nu-el size={childSize} text="uppercase">
+          {username.slice(0, 2)}
+        </nu-el>
+      ) : (
+        <nu-icon size={childSize} name={'person'} />
       )}
-      {!showDefaultAvatar ? (
-        <nu-label text="up" size={`${AvatarTextSize[size]}x`}>
-          {username?.slice(0, 2)}
-        </nu-label>
-      ) : null}
     </nu-circle>
   );
-}
+};
 
 Avatar.Profile = function AvatarProfile(
   allProps: TAvatarProfileProps
 ): JSX.Element {
   let {
-    size = screenSizes.MD,
+    size = 1,
     username,
     subtitle,
-    showArrow,
-    theme,
+    fill,
     children,
+    showArrow,
     ...otherProps
   } = allProps;
+
+  let childSize = size;
+  if (childSize && !isNaN(+childSize)) {
+    childSize = +size / 2;
+  }
   return (
     <nu-card
       display="flex"
@@ -56,34 +60,27 @@ Avatar.Profile = function AvatarProfile(
       items="center stretch"
       flow="row"
       gap="1x"
+      cursor="pointer"
       padding="1x"
-      fill=""
-      theme={theme || themeAttr(allProps, true)}
+      fill={fill}
       {...otherProps}
     >
       {children}
       <nu-block grow="1">
         {username ? (
-          <nu-block color="#text" size={size}>
+          <nu-block color="#text" size={childSize}>
             {username}
           </nu-block>
         ) : null}
         {subtitle ? (
-          <nu-block
-            color="#text-soft"
-            size={`(@${size}-font-size - 2px) (@${size}-line-height - 2px)`}
-          >
+          <nu-block color="#text-soft" size={childSize}>
             {subtitle}
           </nu-block>
         ) : null}
       </nu-block>
 
       {showArrow ? (
-        <nu-icon
-          size={`${AvatarTextSize[size]}x`}
-          name="chevron-down-outline"
-          color="#text"
-        />
+        <nu-icon size={childSize} name="chevron-down-outline" color="#text" />
       ) : null}
     </nu-card>
   );

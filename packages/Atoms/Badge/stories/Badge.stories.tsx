@@ -7,38 +7,48 @@ export default {
   component: Badge,
   argTypes: {
     size: {
-      defaultValue: 'md',
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
+        type: 'text',
       },
     },
     theme: {
       defaultValue: 'special',
       control: {
         type: 'select',
-        options: ['special', 'success', 'warning', 'danger'],
-      },
-    },
-    icon: {
-      defaultValue: 'alert-circle-outline',
-      control: {
-        type: 'text',
+        options: ['bg', 'special', 'success', 'warning', 'danger'],
       },
     },
   },
 };
 
-const Template = ({ ...args }) => <Root>{<Badge {...args} />}</Root>;
+const DefaultTemplate = function (props) {
+  const { ...otherProps } = props;
+  return (
+    <Root>
+      <Badge {...otherProps}></Badge>
+    </Root>
+  );
+};
 
-export const Default = Template.bind({});
+export const Default = DefaultTemplate.bind({});
 Default.args = {
   label: 'Neutral',
 };
 
-export const WithIcon = Template.bind({});
+const WithIconTemplate = function (props) {
+  const { label, ...otherProps } = props;
+  return (
+    <Root>
+      <Badge {...otherProps} icon={props.icon}>
+        <Badge.Label>{props.label}</Badge.Label>
+      </Badge>
+    </Root>
+  );
+};
+
+export const WithIcon = WithIconTemplate.bind({});
+
 WithIcon.args = {
   label: 'Informational',
-  name: 'alert-circle-outline',
-  icon: `alert-circle-outline`,
+  icon: <Badge.Icon name="alert-circle-outline" size="2"></Badge.Icon>,
 };

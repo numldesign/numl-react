@@ -6,35 +6,116 @@ export default {
   title: 'Example/Atoms/Button',
   component: Button,
   argTypes: {
-    size: {
-      defaultValue: 'md',
+    label: {
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
-      },
-    },
-    special: {
-      defaultValue: false,
-      control: {
-        type: 'boolean',
+        type: 'text',
       },
     },
   },
 };
 
-const Template = ({ label, special, ...args }) => (
+const Template = ({ label, ...args }) => (
   <Root>
-    <Button special={special || undefined} {...args}>
-      {label}
+    <Button
+      showDropdown={
+        <nu-icon
+          name="chevron-down ^:pressed[chevron-up]"
+          gap="10rem"
+        ></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+    <br />
+    <br />
+    <Button
+      theme="special"
+      padding="0.4 0.6"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      theme="special"
+      padding="0.5 1"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      theme="special"
+      padding="0.6 1.2"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+    <br />
+    <br />
+    <Button
+      theme="danger"
+      padding="0.4 0.6"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      theme="danger"
+      padding="0.5 1"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
+    </Button>
+
+    <Button
+      theme="danger"
+      special="special"
+      padding="0.6 1.2"
+      showDropdown={
+        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
+      }
+      {...args}
+    >
+      <Button.Label>{label}</Button.Label>
     </Button>
   </Root>
 );
-
-export const Special = Template.bind({});
-Special.args = {
-  special: true,
-  label: 'Button',
-};
 
 export const Default = Template.bind({});
 Default.args = {

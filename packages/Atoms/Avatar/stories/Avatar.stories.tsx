@@ -1,5 +1,4 @@
 import React from 'react';
-import { THEMES, themeToProps } from '../../../helpers';
 import Root from '../../../Components/Root';
 import Avatar from '../src/Avatar';
 
@@ -8,56 +7,45 @@ export default {
   component: Avatar,
   argTypes: {
     size: {
-      defaultValue: 'md',
+      defaultValue: 1.75,
+      control: {
+        type: 'text',
+      },
+    },
+    fill: {
+      defaultValue: '#special-bg',
       control: {
         type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
-      },
-    },
-    theme: {
-      control: {
-        type: 'select',
-        options: [...THEMES],
-      },
-    },
-    showArrow: {
-      defaultValue: true,
-      control: {
-        type: 'boolean',
-      },
-    },
-    username: {
-      control: {
-        type: 'text',
-      },
-    },
-    subtitle: {
-      control: {
-        type: 'text',
+        options: ['#bg', '#special-bg', '#danger', '#success', '#warning'],
       },
     },
   },
 };
 
-const Template = ({ theme, ...args }) => (
-  <Root>
-    {args.username || args.subtitle ? (
-      <Avatar.Profile {...args} {...themeToProps(theme)}>
-        <Avatar username={args.username} />
-      </Avatar.Profile>
-    ) : (
-      <Avatar {...args} {...themeToProps(theme)} />
-    )}
-  </Root>
-);
-
-export const Basic = Template.bind({});
-Basic.args = {
-  label: 'Font Size',
+const Template = ({ ...args }) => {
+  return (
+    <Root>
+      <Avatar {...args}></Avatar>
+    </Root>
+  );
 };
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
+export const Basic = Template.bind({});
+Basic.args = {};
+
+const Profile = ({ ...args }) => {
+  return (
+    <Root>
+      <Avatar.Profile {...args}>
+        <Avatar {...args}></Avatar>
+      </Avatar.Profile>
+    </Root>
+  );
+};
+export const AvatarProfile = Profile.bind({});
+AvatarProfile.args = {
   username: 'Van Gough',
   subtitle: 'subtitle',
+  showArrow: true,
+  showIcon: false,
 };

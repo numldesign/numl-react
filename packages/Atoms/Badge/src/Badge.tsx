@@ -1,27 +1,28 @@
-import T from 'prop-types';
 import React from 'react';
-import { themeAttr } from '../../../helpers';
 import { TBadgeProps } from './Badge.type';
 
 function Badge(allProps: TBadgeProps): JSX.Element {
-  const { size = 'sm', label, icon, theme, ...otherProps } = allProps;
+  const { children, size, label, icon, ...otherProps } = allProps;
   return (
-    <nu-badge
-      size={size}
-      theme={theme || themeAttr(allProps)}
-      radius="4x"
-      padding="0.5x 1x 0.5x 1x"
-      {...otherProps}
-    >
+    <nu-badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>
       {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
-      {label}
+      {children ? children : <Badge.Label size={size}>{label}</Badge.Label>}
     </nu-badge>
   );
 }
 
-Badge.propTypes = {
-  size: T.string,
-  label: T.string,
-  icon: T.oneOfType([T.string, T.element]),
+Badge.Label = function BadgeLabel(props: any): JSX.Element {
+  let { children, size, ...otherProps } = props;
+  return (
+    <nu-el size={size} {...otherProps}>
+      {children}
+    </nu-el>
+  );
 };
+
+Badge.Icon = function BadgeIcon(props: any): JSX.Element {
+  let { name, ...otherProps } = props;
+  return <nu-icon name={name} {...otherProps}></nu-icon>;
+};
+
 export default Badge;

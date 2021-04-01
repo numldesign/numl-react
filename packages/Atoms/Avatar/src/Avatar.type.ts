@@ -1,19 +1,17 @@
-import { BaseProps, screenSizes } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../Shared/NumlTypes';
 
 export interface TAvatarProps extends BaseProps {
-  size?: screenSizes | string;
-  fontSize?: screenSizes;
-  showArrow?: boolean;
+  size?: string | number;
   username?: string;
-  theme?: string;
+  fill?: string;
 }
 
 export interface TAvatarProfileProps extends BaseProps {
-  size?: screenSizes;
+  size?: string | number;
   username?: string;
   subtitle?: string;
   showArrow?: boolean;
-  theme?: any;
+  fill?: any;
   radius?: any;
   border?: any;
   padding?: any;

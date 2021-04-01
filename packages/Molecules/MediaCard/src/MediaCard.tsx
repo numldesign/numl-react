@@ -1,6 +1,7 @@
 import React from 'react';
 
-function MediaCard() {
+function MediaCard(props) {
+  const { src, ...otherProps } = props;
   return (
     <nu-card padding="2x" columns="1fr">
       <nu-img

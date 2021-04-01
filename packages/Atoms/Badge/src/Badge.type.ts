@@ -1,8 +1,8 @@
-import { BaseProps, screenSizes } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../Shared/NumlTypes';
 
 export interface TBadgeProps extends BaseProps {
-  size: screenSizes;
-  label: string;
-  icon: any;
-  theme: any;
+  size?: string | number;
+  label?: string;
+  icon?: any;
+  theme?: any;
 }
