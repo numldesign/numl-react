@@ -2,16 +2,15 @@ import React from 'react';
 import Root from '../../../Components/Root';
 import { Icon } from '../../Icon';
 import { Pagination } from '../index';
+import { Button } from './../../Button/';
 
 export default {
   title: 'Example/Atoms/Pagination',
   component: Pagination,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        type: 'text',
       },
     },
     label: {
@@ -46,12 +45,34 @@ export const Basic = Template.bind({});
 export const Horizontal = Template.bind({});
 Horizontal.args = {
   flow: 'column',
-  previous: <Icon name="chevron-up" />,
-  next: <Icon name="chevron-down" />,
+  previous: (
+    <Button>
+      <Icon name="chevron-up" />
+    </Button>
+  ),
+  next: (
+    <Button>
+      <Icon name="chevron-down" />
+    </Button>
+  ),
 };
 
-export const WithCustomIcon = Template.bind({});
+const AttributeTemplate = ({ ...args }) => (
+  <Root>
+    <Pagination {...args} />
+  </Root>
+);
+
+export const WithCustomIcon = AttributeTemplate.bind({});
 WithCustomIcon.args = {
-  previous: <Icon name="hand-left-outline" />,
-  next: <Icon name="hand-right-outline" />,
+  previous: (
+    <Button>
+      <Icon name="hand-left-outline" />
+    </Button>
+  ),
+  next: (
+    <Button>
+      <Icon name="hand-left-outline" />
+    </Button>
+  ),
 };

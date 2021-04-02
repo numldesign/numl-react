@@ -1,31 +1,22 @@
 import React from 'react';
 import { ActionElement } from './../../../Components/Action';
-import { TButtonGroupProps } from './Button.type';
+import { TButtonGroupProps, TButtonProps } from './Button.type';
 
-function Button(props): JSX.Element {
+function Button(props: TButtonProps): JSX.Element {
   const {
     children,
     size = 0.9,
-    showDropdown,
-    special,
-    theme,
-    fill = 'bg',
+    showDropdown = false,
+    theme = 'default',
     padding = '0.5 1 0.5 1',
     otherProps,
   } = props;
   return (
     <nu-btn
-      toggle
-      inset="n :active[y]"
-      mark="hover"
       size={size}
       theme={theme}
-      special={special}
-      color="text"
-      use-focus
-      fill={fill}
+      color="#text"
       padding={padding}
-      outline="focus"
       {...otherProps}
     >
       {children ? children : null}
