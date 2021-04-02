@@ -7,12 +7,11 @@ export default {
   component: Radio,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        type: 'text',
       },
     },
+
     label: {
       defaultValue: 'Radio',
       control: {

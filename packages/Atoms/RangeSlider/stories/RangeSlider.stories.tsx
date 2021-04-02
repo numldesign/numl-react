@@ -7,10 +7,8 @@ export default {
   component: RangeSlider,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['sm', 'md', 'lg', undefined],
+        type: 'text',
       },
     },
     min: {

@@ -6,13 +6,6 @@ export default {
   title: 'Example/Atoms/Thumbnail',
   component: Thumbnail,
   argTypes: {
-    size: {
-      defaultValue: 'md',
-      control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
-      },
-    },
     fit: {
       defaultValue: 'fill',
       control: {

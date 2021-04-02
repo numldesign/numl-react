@@ -3,7 +3,7 @@ import React from 'react';
 import { TThumbnailProps } from './Thumbnail.type';
 
 function Thumbnail(allProps: TThumbnailProps) {
-  let { size, source, alt, fit, ...otherProps } = allProps;
+  let { source, alt, fit, ...otherProps } = allProps;
 
   return (
     <nu-el

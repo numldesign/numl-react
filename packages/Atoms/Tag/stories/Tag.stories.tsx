@@ -7,10 +7,8 @@ export default {
   component: Tag,
   argTypes: {
     size: {
-      defaultValue: 'md',
       control: {
-        type: 'inline-radio',
-        options: ['sm', 'md', 'lg', undefined],
+        type: 'text',
       },
     },
     theme: {

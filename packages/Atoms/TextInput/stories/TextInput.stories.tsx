@@ -7,10 +7,8 @@ export default {
   component: TextInput,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['sm', 'lg', undefined],
+        type: 'text',
       },
     },
     placeholder: {
