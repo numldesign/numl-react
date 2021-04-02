@@ -1,5 +1,12 @@
 # Always validate all commits, and ignore the PR title
 commitsOnly: true
+# Require at least one commit to be valid
+# this is only relevant when using commitsOnly: true or titleAndCommits: true,
+# which validate all commits by default
+anyCommit: true
+# By default types specified in commitizen/conventional-commit-types is used.
+# See: https://github.com/commitizen/conventional-commit-types/blob/v3.0.0/index.json
+# You can override the valid types
 types:
   - feat
   - fix
