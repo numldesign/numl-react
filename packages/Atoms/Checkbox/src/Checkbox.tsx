@@ -21,6 +21,7 @@ Checkbox.Field = function CheckboxField(
     id,
     children,
     onTap,
+    label,
     onInput,
     value,
     ...otherProps
@@ -46,8 +47,18 @@ Checkbox.Field = function CheckboxField(
         onInput,
         value, // if not pass value, onInput handler return only Boolean
       })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ''}
+      {label && !children ? label : ''}
+      {children ? children : ''}
     </nu-field>
+  );
+};
+
+Checkbox.Label = function CheckboxLabel(props) {
+  const { id, children, ...otherProps } = props;
+  return (
+    <nu-label for={id} {...otherProps}>
+      {children}
+    </nu-label>
   );
 };
 

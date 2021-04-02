@@ -1,6 +1,5 @@
 import React from 'react';
 import Root from '../../../Components/Root';
-import { THEMES, themeToProps } from '../../../helpers';
 import { Icon } from '../../Icon/';
 import { ExceptionList } from '../index';
 
@@ -9,32 +8,6 @@ export default {
   component: ExceptionList,
   argTypes: {
     size: {
-      defaultValue: undefined,
-      control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
-      },
-    },
-    theme: {
-      defaultValue: undefined,
-      control: {
-        type: 'select',
-        options: [undefined, ...THEMES],
-      },
-    },
-    label: {
-      defaultValue: 'Label',
-      control: {
-        type: 'text',
-      },
-    },
-    title: {
-      defaultValue: undefined,
-      control: {
-        type: 'text',
-      },
-    },
-    icon: {
       control: {
         type: 'text',
       },
@@ -42,29 +15,50 @@ export default {
   },
 };
 
-const Template = ({ theme, ...args }) => (
-  <Root>
-    <ExceptionList {...args} {...themeToProps(theme)} />
-  </Root>
-);
+const Template = ({ title, label, icon, ...args }) => {
+  let items = [{ title, label, icon }];
+  return (
+    <Root>
+      <ExceptionList items={items} {...args} />
+    </Root>
+  );
+};
 
 export const Default = Template.bind({});
 
 Default.args = {
   theme: 'special',
+  title: 'Title',
   label: 'Label',
   icon: 'alert-circle-outline',
 };
 
-export const LabelWithIcon = Template.bind({});
+const Template2 = ({ title, label, icon, ...args }) => {
+  let items = [{ title, label, icon }];
+  return (
+    <Root>
+      <ExceptionList items={items} {...args} />
+    </Root>
+  );
+};
+export const LabelWithIcon = Template2.bind({});
 
 LabelWithIcon.args = {
   theme: 'special',
+  title: 'Title',
   label: 'Label',
   icon: <Icon name="reader-outline"></Icon>,
 };
 
-export const LabelWithIconTitle = Template.bind({});
+const Template3 = ({ title, label, icon, ...args }) => {
+  let items = [{ title, label, icon }];
+  return (
+    <Root>
+      <ExceptionList items={items} {...args} />
+    </Root>
+  );
+};
+export const LabelWithIconTitle = Template3.bind({});
 
 LabelWithIconTitle.args = {
   theme: 'special',

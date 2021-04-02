@@ -1,8 +1,7 @@
-import { screenSizes } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../Shared/NumlTypes';
 
-export interface TChipProps {
-  size: screenSizes;
-  label: string;
-  icon: any;
-  theme: any;
+export interface TChipProps extends BaseProps {
+  label?: string;
+  icon?: any;
+  actionIcon?: any;
 }

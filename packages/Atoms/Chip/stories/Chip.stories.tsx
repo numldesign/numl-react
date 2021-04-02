@@ -8,38 +8,132 @@ export default {
   component: Chip,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['sm', 'md', 'lg', undefined],
+        type: 'text',
       },
     },
     theme: {
-      defaultValue: 'special',
+      defaultValue: undefined,
       control: {
         type: 'select',
-        options: ['special', 'success', 'warning', 'danger'],
-      },
-    },
-    icon: {
-      defaultValue: 'alert-circle-outline',
-      control: {
-        type: 'text',
+        options: [undefined, 'special', 'success', 'warning', 'danger'],
       },
     },
   },
 };
 
-const Template = ({ ...args }) => <Root>{<Chip {...args} />}</Root>;
+const Template = function ({ ...args }) {
+  return (
+    <Root>
+      <Chip use-hover mark="hover" {...args}>
+        {' '}
+      </Chip>
+      <Chip use-hover mark="hover" use-focus outline="focus" {...args}>
+        {' '}
+      </Chip>
+      <Chip use-hover mark="hover" use-active inset="n :active[y]" {...args}>
+        {' '}
+      </Chip>
+      <Chip
+        use-hover
+        mark="hover"
+        use-active
+        inset="n :active[y]"
+        use-focus
+        outline="focus"
+        {...args}
+      >
+        {' '}
+      </Chip>
+    </Root>
+  );
+};
 
-export const Default = Template.bind({});
+const Template2 = function ({ children, ...args }) {
+  return (
+    <Root>
+      <Chip use-hover mark="hover" {...args}>
+        {children}
+      </Chip>
+      <Chip use-hover mark="hover" use-focus outline="focus" {...args}>
+        {children}
+      </Chip>
+      <Chip use-hover mark="hover" use-active inset="n :active[y]" {...args}>
+        {children}
+      </Chip>
+      <Chip
+        use-hover
+        mark="hover"
+        use-active
+        inset="n :active[y]"
+        use-focus
+        outline="focus"
+        {...args}
+      >
+        {children}
+      </Chip>
+    </Root>
+  );
+};
+const Template3 = function ({ children, ...args }) {
+  return (
+    <Root>
+      <Chip
+        use-hover
+        mark="hover"
+        {...args}
+        actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}
+      >
+        {children}
+      </Chip>
+      <Chip
+        use-hover
+        mark="hover"
+        use-focus
+        outline="focus"
+        {...args}
+        actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}
+      >
+        {children}
+      </Chip>
+      <Chip
+        use-hover
+        mark="hover"
+        use-active
+        inset="n :active[y]"
+        {...args}
+        actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}
+      >
+        {children}
+      </Chip>
+      <Chip
+        use-hover
+        mark="hover"
+        use-active
+        inset="n :active[y]"
+        use-focus
+        outline="focus"
+        {...args}
+        actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}
+      >
+        {children}
+      </Chip>
+    </Root>
+  );
+};
+export const Default: any = Template.bind({});
 Default.args = {
   label: 'Neutral',
 };
 
-export const WithIcon = Template.bind({});
+export const WithIcon: any = Template2.bind({});
 WithIcon.args = {
-  label: 'Informational',
-  name: 'information-circle-outline',
+  children: 'Neutral',
+  icon: 'information-circle-outline',
+};
+
+export const WithIconAndAction: any = Template3.bind({});
+WithIconAndAction.args = {
+  children: 'Neutral',
   icon: <Icon name="information-circle-outline"></Icon>,
 };

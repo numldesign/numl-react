@@ -1,35 +1,28 @@
-import T from 'prop-types';
 import React from 'react';
-import { themeAttr } from '../../../helpers';
-import TExceptionListProps from './ExceptionList.type';
+import { TExceptionListProps } from './ExceptionList.type';
 
 function ExceptionList(allProps: TExceptionListProps) {
-  let { size, title, label, theme, icon, ...otherProps } = allProps;
+  let { items, ...otherProps } = allProps;
 
   return (
-    <nu-el
-      size={size}
-      theme={theme || themeAttr(allProps, true)}
-      {...otherProps}
-    >
-      {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
-      {title ? (
-        <nu-el text="middle" padding="0.5x left">
-          {title} -
-        </nu-el>
-      ) : null}
-      <nu-el text="middle" padding="0.5x left">
-        {label}
-      </nu-el>
+    <nu-el {...otherProps}>
+      {typeof items == 'object' && items.length > 0
+        ? items.map((eachItem, index) => {
+            return (
+              <nu-grid gap columns="auto auto auto auto" key={index}>
+                {typeof eachItem.icon == 'string' ? (
+                  <nu-icon name={eachItem.icon} />
+                ) : (
+                  eachItem.icon
+                )}
+                <nu-el text="middle">{eachItem.title}</nu-el>-
+                <nu-el text="middle">{eachItem.label}</nu-el>
+              </nu-grid>
+            );
+          })
+        : null}
     </nu-el>
   );
 }
-
-ExceptionList.propTypes = {
-  size: T.string,
-  label: T.string,
-  icon: T.oneOfType([T.string, T.element]),
-  title: T.string,
-};
 
 export default ExceptionList;

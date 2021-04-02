@@ -8,6 +8,7 @@ export interface TCheckboxProps extends BaseProps {
 export interface TCheckboxFieldProps extends BaseProps {
   checked?: any;
   disabled?: any;
+  label?: any;
   id?: any;
   children?: any;
   onTap?: any;

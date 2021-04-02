@@ -50,5 +50,5 @@ export const WithIcon = WithIconTemplate.bind({});
 
 WithIcon.args = {
   label: 'Informational',
-  icon: <Badge.Icon name="alert-circle-outline" size="2"></Badge.Icon>,
+  icon: <Badge.Icon name="alert-circle-outline"></Badge.Icon>,
 };

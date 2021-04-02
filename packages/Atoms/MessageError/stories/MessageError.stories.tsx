@@ -1,6 +1,5 @@
 import React from 'react';
 import Root from '../../../Components/Root';
-import { THEMES } from '../../../helpers';
 import { Icon } from '../../Icon';
 import { MessageError } from '../index';
 
@@ -9,27 +8,6 @@ export default {
   component: MessageError,
   argTypes: {
     size: {
-      defaultValue: undefined,
-      control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
-      },
-    },
-    theme: {
-      defaultValue: undefined,
-      control: {
-        type: 'select',
-        options: [undefined, ...THEMES],
-      },
-    },
-    message: {
-      defaultValue: 'This is not valid',
-      control: {
-        type: 'text',
-      },
-    },
-    icon: {
-      defaultValue: 'alert-circle-outline',
       control: {
         type: 'text',
       },
@@ -37,13 +15,28 @@ export default {
   },
 };
 
-const Template = ({ ...args }) => (
+const Template = ({ children, ...args }) => (
   <Root>
-    <MessageError {...args} />
+    <MessageError {...args}>{children}</MessageError>
   </Root>
 );
 
 export const Basic = Template.bind({});
 Basic.args = {
+  icon: 'information-circle-outline',
+  children: 'This is not valid',
+  theme: 'danger',
+};
+
+const Template2 = ({ children, ...args }) => (
+  <Root>
+    <MessageError {...args}>{children}</MessageError>
+  </Root>
+);
+
+export const WithIcon = Template2.bind({});
+WithIcon.args = {
   icon: <Icon name="information-circle-outline"></Icon>,
+  children: 'This is not valid',
+  theme: 'danger',
 };

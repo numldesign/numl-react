@@ -9,11 +9,10 @@ export default {
     size: {
       defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        type: 'text',
       },
     },
-    label: {
+    checked: {
       defaultValue: 'Checkbox',
       control: {
         type: 'text',
@@ -24,21 +23,25 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <Root>
-    {children ? (
-      <Checkbox.Field children={children} {...args} />
-    ) : (
-      <Checkbox {...args} />
-    )}
+    <Checkbox.Field {...args}></Checkbox.Field>
   </Root>
 );
 
 export const Basic: any = Template.bind({});
 Basic.args = {
-  checked: false,
+  checked: true,
+  label: 'Label Name',
 };
 
-export const WithLabel: any = Template.bind({});
+const Template2 = ({ children, ...args }) => (
+  <Root>
+    <Checkbox.Field {...args}>
+      <Checkbox.Label>{children}</Checkbox.Label>
+    </Checkbox.Field>
+  </Root>
+);
+export const WithLabel: any = Template2.bind({});
 WithLabel.args = {
-  checked: false,
-  children: 'Checkbox',
+  checked: true,
+  children: 'Label Name',
 };

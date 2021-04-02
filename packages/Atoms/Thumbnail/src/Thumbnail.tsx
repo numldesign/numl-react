@@ -1,19 +1,15 @@
 import T from 'prop-types';
 import React from 'react';
-import { screenSizes } from '../../../Shared/NumlTypes';
-import { IconSize } from '../../Avatar/src/Avatar.type';
 import { TThumbnailProps } from './Thumbnail.type';
 
 function Thumbnail(allProps: TThumbnailProps) {
-  let { size = screenSizes.MD, source, alt, fit, ...otherProps } = allProps;
+  let { size, source, alt, fit, ...otherProps } = allProps;
 
   return (
     <nu-el
       display="flex"
       content="center"
       items="center"
-      width={`${IconSize[size]}0px`}
-      height={`${IconSize[size]}0px`}
       radius=".5r"
       overflow="no"
       {...otherProps}

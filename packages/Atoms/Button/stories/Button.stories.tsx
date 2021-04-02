@@ -16,15 +16,7 @@ export default {
 
 const Template = ({ label, ...args }) => (
   <Root>
-    <Button
-      showDropdown={
-        <nu-icon
-          name="chevron-down ^:pressed[chevron-up]"
-          gap="10rem"
-        ></nu-icon>
-      }
-      {...args}
-    >
+    <Button {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
@@ -47,14 +39,7 @@ const Template = ({ label, ...args }) => (
     </Button>
     <br />
     <br />
-    <Button
-      theme="special"
-      padding="0.4 0.6"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="special" padding="0.4 0.6" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
@@ -81,14 +66,7 @@ const Template = ({ label, ...args }) => (
     </Button>
     <br />
     <br />
-    <Button
-      theme="danger"
-      padding="0.4 0.6"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="danger" padding="0.4 0.6" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
