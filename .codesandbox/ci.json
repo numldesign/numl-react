@@ -13,7 +13,7 @@
     },
     "sandboxes": [
         "vanilla",
-        "new",
+        "new"
     ],
     "node": "14"
 }
