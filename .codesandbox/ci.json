@@ -1,0 +1,18 @@
+{
+    "installCommand": "install",
+    "buildCommand": "build",
+    "packages": [
+        "packages/Atoms",
+        "packages/Molecules",
+        "packages/Organisms"
+    ],
+    "publishDirectory": {
+        "react": "build/node_modules/react",
+        "react-dom": "build/node_modules/react-dom"
+    },
+    "sandboxes": [
+        "vanilla",
+        "new"
+    ],
+    "node": "14"
+}
