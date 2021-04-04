@@ -76,16 +76,16 @@ BasicWithDisclosure.args = {
 export const BasicWithCheckbox: any = Template.bind({});
 BasicWithCheckbox.args = {
   children: [
-    <Button key="one">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+    <Button key="one" padding="1">
+      <Button.Checkbox padding="0" is-hover="false"></Button.Checkbox>
       <Button.Label>Button</Button.Label>
     </Button>,
-    <Button key="two">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+    <Button key="two" padding="1">
+      <Button.Checkbox padding="0" is-hover="false"></Button.Checkbox>
       <Button.Label>Button</Button.Label>
     </Button>,
-    <Button key="three">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+    <Button key="three" padding="1">
+      <Button.Checkbox padding="0" is-hover="false"></Button.Checkbox>
       <Button.Label>Button</Button.Label>
     </Button>,
   ],

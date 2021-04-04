@@ -29,8 +29,12 @@ function Button(props: TButtonProps): JSX.Element {
 }
 
 Button.Label = function ButtonLabel(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-el {...otherProps}>{children}</nu-el>;
+  const { children, padding = '0 1', ...otherProps } = props;
+  return (
+    <nu-el padding={padding} {...otherProps}>
+      {children}
+    </nu-el>
+  );
 };
 
 Button.Icon = function ButtonIcon(props: any) {
