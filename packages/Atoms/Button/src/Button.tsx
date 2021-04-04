@@ -70,8 +70,12 @@ Button.Item = function ButtonDropDownPopupList(props: any) {
 };
 
 Button.Checkbox = function ButtonCheckbox(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-checkbox {...otherProps}>{children}</nu-checkbox>;
+  const { children, padding = '0', ...otherProps } = props;
+  return (
+    <nu-checkbox padding={padding} {...otherProps}>
+      {children}
+    </nu-checkbox>
+  );
 };
 
 Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
