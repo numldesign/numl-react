@@ -20,21 +20,11 @@ const Template = ({ label, ...args }) => (
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
     <br />
@@ -43,25 +33,11 @@ const Template = ({ label, ...args }) => (
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      theme="special"
-      padding="0.5 1"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="special" padding="0.5 1" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      theme="special"
-      padding="0.6 1.2"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="special" padding="0.6 1.2" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
     <br />
@@ -70,26 +46,11 @@ const Template = ({ label, ...args }) => (
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      theme="danger"
-      padding="0.5 1"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="danger" padding="0.5 1" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
 
-    <Button
-      theme="danger"
-      special="special"
-      padding="0.6 1.2"
-      showDropdown={
-        <nu-icon name="chevron-down ^:pressed[chevron-up]"></nu-icon>
-      }
-      {...args}
-    >
+    <Button theme="danger" special="special" padding="0.6 1.2" {...args}>
       <Button.Label>{label}</Button.Label>
     </Button>
   </Root>
