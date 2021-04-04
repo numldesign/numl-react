@@ -6,7 +6,6 @@ function Button(props: TButtonProps): JSX.Element {
   const {
     children,
     size = 0.9,
-    showDropdown = false,
     theme = 'default',
     padding = '0.5 1 0.5 1',
     otherProps,
@@ -15,21 +14,18 @@ function Button(props: TButtonProps): JSX.Element {
     <nu-btn
       size={size}
       theme={theme}
-      toggle={false}
       color="#text"
       selectable="false"
-      border={'1px ' + theme}
       padding={padding}
       {...otherProps}
     >
       {children ? children : null}
-      {showDropdown ? showDropdown : null}
     </nu-btn>
   );
 }
 
 Button.Label = function ButtonLabel(props: any) {
-  const { children, padding = '0 1', ...otherProps } = props;
+  const { children, padding = '0.5', ...otherProps } = props;
   return (
     <nu-el padding={padding} {...otherProps}>
       {children}
