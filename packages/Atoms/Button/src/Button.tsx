@@ -15,6 +15,7 @@ function Button(props: TButtonProps): JSX.Element {
     <nu-btn
       size={size}
       theme={theme}
+      toggle={false}
       color="#text"
       padding={padding}
       {...otherProps}
@@ -24,9 +25,15 @@ function Button(props: TButtonProps): JSX.Element {
     </nu-btn>
   );
 }
-Button.Label = function ButtonLabel(props) {
+
+Button.Label = function ButtonLabel(props: any) {
   const { children, ...otherProps } = props;
   return <nu-el {...otherProps}>{children}</nu-el>;
+};
+
+Button.Icon = function ButtonLabel(props: any) {
+  const { children, ...otherProps } = props;
+  return <nu-icon {...otherProps}>{children}</nu-icon>;
 };
 
 Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {

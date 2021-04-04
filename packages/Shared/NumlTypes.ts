@@ -92,6 +92,7 @@ export interface BaseProps {
   haspopup?: string;
   activedescendant?: string;
   t?: string;
+  toggle?: boolean;
   'use-focus'?: boolean;
   'use-hover'?: boolean;
   'use-listbox'?: boolean;
