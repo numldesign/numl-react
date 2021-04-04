@@ -1,8 +1,6 @@
 import React from 'react';
 import Root from '../../../Components/Root';
-import { Icon } from '../../Icon';
 import { Button } from '../index';
-import { Checkbox } from './../../Checkbox';
 
 export default {
   title: 'Example/Atoms/ButtonGroup',
@@ -34,7 +32,9 @@ const Template = (args: any) => (
 export const Basic: any = Template.bind({});
 Basic.args = {
   children: [
-    <Button key="one">Button</Button>,
+    <Button key="one" toggle={false}>
+      Button
+    </Button>,
     <Button key="two">Button</Button>,
     <Button key="three">Button</Button>,
   ],
@@ -44,13 +44,31 @@ export const BasicWithDisclosure: any = Template.bind({});
 BasicWithDisclosure.args = {
   children: [
     <Button key="one">
-      Button <Icon name="chevron-down-outline"></Icon>
+      <Button.Label text="center">Button</Button.Label>
+      <Button.DropDown></Button.DropDown>
+      <Button.Popup>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+      </Button.Popup>
     </Button>,
     <Button key="two">
-      Button <Icon name="chevron-down-outline"></Icon>
+      <Button.Label text="center">Button</Button.Label>
+      <Button.DropDown></Button.DropDown>
+      <Button.Popup>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+      </Button.Popup>
     </Button>,
     <Button key="three">
-      Button <Icon name="chevron-down-outline"></Icon>
+      Button
+      <Button.DropDown></Button.DropDown>
+      <Button.Popup>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+        <Button.Item>PopupItem</Button.Item>
+      </Button.Popup>
     </Button>,
   ],
 };
@@ -59,13 +77,16 @@ export const BasicWithCheckbox: any = Template.bind({});
 BasicWithCheckbox.args = {
   children: [
     <Button key="one">
-      <Checkbox></Checkbox>Button
+      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Label>Button</Button.Label>
     </Button>,
     <Button key="two">
-      <Checkbox></Checkbox>Button
+      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Label>Button</Button.Label>
     </Button>,
     <Button key="three">
-      <Checkbox></Checkbox>Button
+      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Label>Button</Button.Label>
     </Button>,
   ],
 };

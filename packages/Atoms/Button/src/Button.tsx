@@ -33,9 +33,45 @@ Button.Label = function ButtonLabel(props: any) {
   return <nu-el {...otherProps}>{children}</nu-el>;
 };
 
-Button.Icon = function ButtonLabel(props: any) {
+Button.Icon = function ButtonIcon(props: any) {
   const { children, ...otherProps } = props;
   return <nu-icon {...otherProps}>{children}</nu-icon>;
+};
+
+Button.DropDown = function ButtonDropDown(props: any) {
+  const { children, ...otherProps } = props;
+  return <nu-dropdownicon {...otherProps}>{children}</nu-dropdownicon>;
+};
+
+Button.Popup = function ButtonDropDownPopup(props: any) {
+  const {
+    padding = '1x 0',
+    flow = 'column',
+    display = 'flex',
+    children,
+    ...otherProps
+  } = props;
+  return (
+    <nu-popup
+      use-menu
+      display={display}
+      padding={padding}
+      flow={flow}
+      {...otherProps}
+    >
+      {children}
+    </nu-popup>
+  );
+};
+
+Button.Item = function ButtonDropDownPopupList(props: any) {
+  const { children, ...otherProps } = props;
+  return <nu-menuitem {...otherProps}>{children}</nu-menuitem>;
+};
+
+Button.Checkbox = function ButtonCheckbox(props: any) {
+  const { children, ...otherProps } = props;
+  return <nu-checkbox {...otherProps}>{children}</nu-checkbox>;
 };
 
 Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
