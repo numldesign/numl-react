@@ -41,8 +41,9 @@ jobs:
         run: |
           git config --global user.email "nsk9195@gmail.com"
           git config --global user.name "shubhamkaushal"
-      - name: Build packages
-        run: yarn build
+
+      # - name: Build packages
+      #   run: yarn build
 
       - name: Run tests
         run: yarn test
