@@ -45,8 +45,8 @@ jobs:
       # - name: Build packages
       #   run: yarn build
 
-      - name: Run tests
-        run: yarn test
+      # - name: Run tests
+      #   run: yarn test
 
       - name: Publish packages
         uses: changesets/action@master
