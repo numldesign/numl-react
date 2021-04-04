@@ -9,10 +9,8 @@ export default {
   component: Button.Group,
   argTypes: {
     size: {
-      defaultValue: undefined,
       control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
+        type: 'text',
       },
     },
     special: {
@@ -61,13 +59,13 @@ export const BasicWithCheckbox: any = Template.bind({});
 BasicWithCheckbox.args = {
   children: [
     <Button key="one">
-      <Checkbox checked disabled></Checkbox>Button
+      <Checkbox></Checkbox>Button
     </Button>,
     <Button key="two">
-      <Checkbox checked disabled></Checkbox>Button
+      <Checkbox></Checkbox>Button
     </Button>,
     <Button key="three">
-      <Checkbox checked disabled></Checkbox>Button
+      <Checkbox></Checkbox>Button
     </Button>,
   ],
 };
