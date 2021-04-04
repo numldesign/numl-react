@@ -17,6 +17,8 @@ function Button(props: TButtonProps): JSX.Element {
       theme={theme}
       toggle={false}
       color="#text"
+      selectable="false"
+      border={'1px ' + theme}
       padding={padding}
       {...otherProps}
     >

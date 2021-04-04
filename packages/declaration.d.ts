@@ -55,5 +55,11 @@ declare namespace JSX {
     'nu-numinput': any;
     'nu-inputgroup': any;
     'nu-flow': any;
+    'nu-h1': any;
+    'nu-h2': any;
+    'nu-h3': any;
+    'nu-h4': any;
+    'nu-h5': any;
+    'nu-h6': any;
   }
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Root from '../../../Components/Root';
 import Button from '../src/Button';
-import { Icon } from './../../Icon';
+import { Grid } from './../../../Components/Grid/';
+import { Heading } from './../../../Components/Heading/src/Heading';
 
 export default {
   title: 'Example/Atoms/Button',
@@ -16,49 +17,116 @@ export default {
 };
 
 const Template = function (props: any) {
-  const { label, ...args } = props;
+  const { label, ...otherProps } = props;
   return (
     <Root>
-      <Button {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+      <Grid columns="auto" rows="1fr" gap>
+        <Grid.Row row="1">
+          <Grid.Column column="1" padding="0 1">
+            <Heading.Two>Default</Heading.Two>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row row="2">
+          <Grid.Column column="1" padding="0 1">
+            <Button {...otherProps} gap padding="0.4 0.6">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
 
-      <Button {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+          <Grid.Column column="2" padding="0 1">
+            <Button {...otherProps} gap padding="0.5 1">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
 
-      <Button {...args}>
-        <Button.Label>{label}</Button.Label>
-        <Icon name="chevron-down ^:pressed[chevron-up]"></Icon>
-      </Button>
-      <br />
-      <br />
-      <Button theme="special" padding="0.4 0.6" {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+          <Grid.Column column="3" padding="0 1">
+            <Button {...otherProps} gap padding="0.6 1.2">
+              <Button.Label>{label}</Button.Label>
+              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
 
-      <Button theme="special" padding="0.5 1" {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+        <Grid.Row row="3">
+          <Grid.Column column="1" padding="0 1">
+            <Heading.Two>Special</Heading.Two>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row row="4">
+          <Grid.Column column="1" padding="0 1">
+            <Button {...otherProps} theme="special" gap padding="0.4 0.6">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
 
-      <Button theme="special" padding="0.6 1.2" {...args}>
-        <Button.Label>{label}</Button.Label>
-        <Icon name="chevron-down ^:pressed[chevron-up]"></Icon>
-      </Button>
-      <br />
-      <br />
-      <Button theme="danger" padding="0.4 0.6" {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+          <Grid.Column column="2" padding="0 1">
+            <Button {...otherProps} theme="special" gap padding="0.5 1">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
 
-      <Button theme="danger" padding="0.5 1" {...args}>
-        <Button.Label>{label}</Button.Label>
-      </Button>
+          <Grid.Column column="3" padding="0 1">
+            <Button {...otherProps} theme="special" gap padding="0.6 1.2">
+              <Button.Label>{label}</Button.Label>
+              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
 
-      <Button theme="danger" special="special" padding="0.6 1.2" {...args}>
-        <Button.Label>{label}</Button.Label>
-        <Icon name="chevron-down ^:pressed[chevron-up]"></Icon>
-      </Button>
+        <Grid.Row row="5">
+          <Grid.Column column="1" padding="0 1">
+            <Heading.Two>Danger</Heading.Two>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row row="6">
+          <Grid.Column column="1" padding="0 1">
+            <Button {...otherProps} theme="danger" gap padding="0.4 0.6">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
+
+          <Grid.Column column="2" padding="0 1">
+            <Button {...otherProps} theme="danger" gap padding="0.5 1">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
+
+          <Grid.Column column="3" padding="0 1">
+            <Button {...otherProps} theme="danger" gap padding="0.6 1.2">
+              <Button.Label>{label}</Button.Label>
+              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row row="7">
+          <Grid.Column column="1" padding="0 1">
+            <Heading.Two>Warning</Heading.Two>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row row="8">
+          <Grid.Column column="1" padding="0 1">
+            <Button {...otherProps} theme="warning" gap padding="0.4 0.6">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
+
+          <Grid.Column column="2" padding="0 1">
+            <Button {...otherProps} theme="warning" gap padding="0.5 1">
+              <Button.Label>{label}</Button.Label>
+            </Button>
+          </Grid.Column>
+
+          <Grid.Column column="3" padding="0 1">
+            <Button {...otherProps} theme="warning" gap padding="0.6 1.2">
+              <Button.Label>{label}</Button.Label>
+              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </Root>
   );
 };

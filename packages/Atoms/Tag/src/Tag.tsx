@@ -1,7 +1,6 @@
 import T from 'prop-types';
 import React from 'react';
 import { ActionElement } from '../../../Components/Action';
-import { themeAttr } from '../../../helpers';
 import { Icon } from '../../Icon';
 import { TTagProps } from './Tag.type';
 
@@ -11,7 +10,7 @@ function Tag(allProps: TTagProps): JSX.Element {
   return (
     <nu-badge
       size={size}
-      theme={theme || themeAttr(allProps)}
+      theme={theme}
       radius="left right"
       padding="0.5x 1x 0.5x 1x"
       space="50% 0"
