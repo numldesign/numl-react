@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
