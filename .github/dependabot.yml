@@ -8,4 +8,17 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
+      # Check for updates managed by Composer once a week
       interval: "weekly"
+      
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      # Check for updates managed by Composer once a week
+      interval: "weekly"
+      
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every weekday
+      interval: "daily"
