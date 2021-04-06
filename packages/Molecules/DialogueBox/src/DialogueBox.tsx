@@ -1,17 +1,26 @@
-import T from 'prop-types';
 import React from 'react';
 import { TDialogueBoxProps } from './DialogueBox.type';
 
 function DialogueBox(allProps: TDialogueBoxProps) {
-  const { heading, actions, children, ...otherProps } = allProps;
+  const {
+    heading,
+    place = 'inside',
+    radius = '0.5',
+    gap = '0.5',
+    box = 'y',
+    fill = '#dark.50',
+    actions,
+    children,
+    ...otherProps
+  } = allProps;
   return (
     <nu-flex
       nu-overlay
-      place="inside"
-      fill="#dark.50"
-      box="y"
-      gap="1x"
-      radius="1x"
+      place={place}
+      fill={fill}
+      box={box}
+      gap={gap}
+      radius={radius}
       {...otherProps}
     >
       {heading ? <nu-block text="sb">{heading}</nu-block> : null}
@@ -20,9 +29,5 @@ function DialogueBox(allProps: TDialogueBoxProps) {
     </nu-flex>
   );
 }
-
-DialogueBox.propTypes = {
-  heading: T.string,
-};
 
 export default DialogueBox;

@@ -169,7 +169,7 @@ export const WithSelectableItems = (args) => {
         >
           <Icon
             name="checkmark-outline"
-            opacity={selected === 'Single' ? 1 : 0}
+            opacity={selected === 'Single' ? '1' : '0'}
             transition="opacity .1s"
           />
           Single
@@ -185,7 +185,7 @@ export const WithSelectableItems = (args) => {
         >
           <Icon
             name="checkmark-outline"
-            opacity={selected === '1.15' ? 1 : 0}
+            opacity={selected === '1.15' ? '1' : '0'}
             transition="opacity .1s"
           />
           1.15

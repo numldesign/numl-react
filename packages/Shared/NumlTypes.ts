@@ -52,7 +52,7 @@ export interface BaseProps {
   size?: string;
   hide?: string;
   show?: string;
-  opacity?: string;
+  opacity?: boolean;
   transition?: string;
   scrollbar?: string;
   before?: string;
@@ -133,7 +133,7 @@ export interface BaseProps {
   'use-menuitem'?: boolean;
   'use-offset'?: boolean;
   'use-appear'?: boolean;
-  'use-hotkey'?: boolean;
+  'use-hotkey'?: string;
   'use-current'?: boolean;
   type?: string;
   precision?: string;

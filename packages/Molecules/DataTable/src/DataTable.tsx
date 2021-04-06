@@ -2,7 +2,15 @@ import React from 'react';
 import { TDataTableProps } from './DataTable.type';
 
 function DataTable(allProps: TDataTableProps) {
-  const { headings, rows, totals, footerContent, ...otherProps } = allProps;
+  const {
+    headings,
+    rows,
+    width = '100%',
+    height = '100%',
+    totals,
+    footerContent,
+    ...otherProps
+  } = allProps;
 
   let headingList = headings && headings.length ? [...headings] : [];
   let rowList = rows && rows.length ? [...rows] : [];
@@ -10,7 +18,7 @@ function DataTable(allProps: TDataTableProps) {
 
   return (
     <nu-block {...otherProps}>
-      <nu-table width="100%">
+      <nu-table width={width} height={height}>
         <nu-attrs for="cell" height="3"></nu-attrs>
         <nu-attrs for="columnheader" border="bottom"></nu-attrs>
         {headingList.length ? (
@@ -46,7 +54,7 @@ function DataTable(allProps: TDataTableProps) {
         ) : null}
       </nu-table>
       <nu-pane height="3" content="center" fill="subtle">
-        {footerContent}
+        Showing {rows.length} of {rows.length}
       </nu-pane>
     </nu-block>
   );

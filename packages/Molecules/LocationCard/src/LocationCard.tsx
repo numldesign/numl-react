@@ -4,10 +4,17 @@ import { Icon } from '../../../Atoms/Icon';
 import { TLocationCardProps } from './LocationCard.type';
 
 function LocationCard(allProps: TLocationCardProps): JSX.Element {
-  const { name, address, ...otherProps } = allProps;
+  const {
+    name,
+    radius = '1x',
+    border = '1bw',
+    fill = 'bg',
+    address,
+    ...otherProps
+  } = allProps;
 
   return (
-    <nu-flex radius="1x" border="1bw" fill="bg" {...otherProps}>
+    <nu-flex radius={radius} border={border} fill={fill} {...otherProps}>
       <nu-flex padding="2x 0 2x 2x" items="center">
         <Icon
           name="pin"
