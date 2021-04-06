@@ -3,6 +3,7 @@ import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
 import Root from '../../../Components/Root';
 import { Model } from '../index';
+import { Block } from './../../../Components/Block/';
 
 export default {
   title: 'Example/Molecules/Model',
@@ -20,14 +21,14 @@ Default.args = {
   fill: 'bg',
   border: '1bw',
   heading: (
-    <nu-block size="xl" color="#text-soft">
+    <Block size="xl" color="#text-soft">
       Reach more shoppers with Instagram product tags
-    </nu-block>
+    </Block>
   ),
   body: (
-    <nu-block size="md" color="#text-soft">
+    <Block size="md" color="#text-soft">
       This will reset your device to its default factor settings
-    </nu-block>
+    </Block>
   ),
   footerActions: [
     <Button key="1">Button</Button>,
@@ -36,7 +37,7 @@ Default.args = {
     </Button>,
   ],
   closeAction: (
-    <Button padding="0" clear>
+    <Button padding="0">
       <Icon name="close" />
     </Button>
   ),
@@ -47,10 +48,10 @@ WithoutHeader.args = {
   fill: 'bg',
   border: '1bw',
   body: (
-    <nu-block size="md" color="#text-soft">
+    <Block size="md" color="#text-soft">
       Use Instagram posts to share your products with millions of people. Let
       shoppers buy from your store without leaving Instagram.
-    </nu-block>
+    </Block>
   ),
   footerActions: [
     <Button key="1">Button</Button>,

@@ -4,7 +4,9 @@ import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
 import { Thumbnail } from '../../../Atoms/Thumbnail';
 import Root from '../../../Components/Root';
-import OptionList from './OptionList';
+import OptionList from '../src/OptionList';
+import { Block } from './../../../Components/Block';
+import { Grid } from './../../../Components/Grid';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -142,13 +144,13 @@ OptionListWithTable.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <nu-grid columns="repeat(5, 1fr)" flow="column" items="center start">
-        <nu-block>{item.label}</nu-block>
-        <nu-block>{item.col1}</nu-block>
-        <nu-block>{item.col2}</nu-block>
-        <nu-block>{item.badge}</nu-block>
-        <nu-block>{item.icon}</nu-block>
-      </nu-grid>
+      <Grid columns="repeat(5, 1fr)" flow="column" items="center start">
+        <Block>{item.label}</Block>
+        <Block>{item.col1}</Block>
+        <Block>{item.col2}</Block>
+        <Block>{item.badge}</Block>
+        <Block>{item.icon}</Block>
+      </Grid>
     );
   },
   options: [
@@ -233,14 +235,14 @@ OptionListWithTableAndInput.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <nu-grid columns="repeat(6, 1fr)" flow="column" items="center start">
-        <nu-block>{item.label}</nu-block>
-        <nu-block>{item.col1}</nu-block>
-        <nu-block>{item.col2}</nu-block>
-        <nu-block>{item.badge}</nu-block>
-        <nu-block>{item.icon}</nu-block>
+      <Grid columns="repeat(6, 1fr)" flow="column" items="center start">
+        <Block>{item.label}</Block>
+        <Block>{item.col1}</Block>
+        <Block>{item.col2}</Block>
+        <Block>{item.badge}</Block>
+        <Block>{item.icon}</Block>
         {item.custom ? (
-          <nu-block>
+          <Block>
             <nu-pane padding="0.5x 0" key="1">
               <Button.Group>
                 <Button key="1">Add</Button>
@@ -251,9 +253,9 @@ OptionListWithTableAndInput.args = {
             <Button key="2" width="100%">
               Button
             </Button>
-          </nu-block>
+          </Block>
         ) : null}
-      </nu-grid>
+      </Grid>
     );
   },
   options: [
@@ -334,28 +336,28 @@ OptionListWithCardDesign.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <nu-grid columns="40px 1fr" flow="column" gap="2x">
+      <Grid columns="40px 1fr" flow="column" gap="2x">
         <Thumbnail width="40px" key="1" source={item.image} />
-        <nu-grid gap="0.5x" size="sm">
-          <nu-block>
-            <nu-block>{item.name}</nu-block>
-            <nu-block color="#text-soft">{item.modelNo}</nu-block>
-          </nu-block>
-          <nu-block>
-            <nu-block>When sold out</nu-block>
-            <nu-block color="#text-soft">{item.status}</nu-block>
-          </nu-block>
+        <Grid gap="0.5x" size="sm">
+          <Block>
+            <Block>{item.name}</Block>
+            <Block color="#text-soft">{item.modelNo}</Block>
+          </Block>
+          <Block>
+            <Block>When sold out</Block>
+            <Block color="#text-soft">{item.status}</Block>
+          </Block>
           <nu-pane>
-            <nu-block>
-              <nu-block>Available</nu-block>
-              <nu-block color="#text-soft">{item.available}</nu-block>
-            </nu-block>
-            <nu-block>
-              <nu-block>Available</nu-block>
-              <nu-block color="#text-soft">{item.available}</nu-block>
-            </nu-block>
+            <Block>
+              <Block>Available</Block>
+              <Block color="#text-soft">{item.available}</Block>
+            </Block>
+            <Block>
+              <Block>Available</Block>
+              <Block color="#text-soft">{item.available}</Block>
+            </Block>
           </nu-pane>
-          <nu-block>
+          <Block>
             <nu-pane padding="0.5x 0" key="1">
               <Button.Group>
                 <Button key="1">Add</Button>
@@ -366,9 +368,9 @@ OptionListWithCardDesign.args = {
             <Button key="2" width="100%">
               Button
             </Button>
-          </nu-block>
-        </nu-grid>
-      </nu-grid>
+          </Block>
+        </Grid>
+      </Grid>
     );
   },
   options: [

@@ -10,6 +10,8 @@ function ResourceList(allProps: TResourceListProps) {
     multiSelect,
     items,
     onChange,
+    padding = '0',
+    border = '0',
     contentWrapperProps,
     itemWrapperProps,
     renderItem,
@@ -26,8 +28,8 @@ function ResourceList(allProps: TResourceListProps) {
     <nu-block {...otherProps}>
       <nu-listbox
         ref={ref}
-        border="n"
-        padding="0"
+        border={border}
+        padding={padding}
         value={selected}
         multiple={multiSelect || undefined}
       >
@@ -48,7 +50,7 @@ function ResourceList(allProps: TResourceListProps) {
                   >
                     <nu-pane gap="2x">
                       {multiSelect ? <Checkbox checked={checked} /> : null}
-                      <Avatar size="md" username={item.avatar} />
+                      <Avatar.Icon fill="danger" special border="0" />
                     </nu-pane>
                     <nu-block {...itemWrapperProps}>
                       {renderItem && renderItem({ item, value, index })}

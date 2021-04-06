@@ -39,7 +39,7 @@ Default.args = {
     </Button>,
   ],
   closeAction: (
-    <Button padding="0" clear>
+    <Button padding="0">
       <Icon name="close" />
     </Button>
   ),

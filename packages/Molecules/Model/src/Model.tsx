@@ -2,15 +2,25 @@ import React from 'react';
 import { TModelProps } from './Model.type';
 
 function Model(allProps: TModelProps) {
-  const { heading, body, footerActions, closeAction, ...otherProps } = allProps;
+  const {
+    heading,
+    place = 'inside',
+    fill = '#dark.50',
+    box = 'y',
+    radius = '0.5',
+    body,
+    footerActions,
+    closeAction,
+    ...otherProps
+  } = allProps;
 
   return (
     <nu-block
       nu-overlay
-      place="inside"
-      fill="#dark.50"
-      box="y"
-      radius="1x"
+      place={place}
+      fill={fill}
+      box={box}
+      radius={radius}
       {...otherProps}
     >
       {heading ? (

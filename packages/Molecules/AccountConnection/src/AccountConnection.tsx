@@ -46,10 +46,10 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
           </>
         ) : (
           <nu-block>
-            <nu-block size="1.2" text="sb">
+            <nu-block size="md" text="sb">
               {username}
             </nu-block>
-            <nu-block size="0.7" color="#text-soft">
+            <nu-block size="sm" color="#text-soft">
               {subtitle}
             </nu-block>
           </nu-block>

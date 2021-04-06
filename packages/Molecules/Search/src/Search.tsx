@@ -1,4 +1,3 @@
-import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import { Icon } from '../../../Atoms/Icon';
 import { TSearchProps } from './Search.type';
@@ -15,6 +14,7 @@ function Search(allProps: TSearchProps): JSX.Element {
     inputGroupProps,
     resultContainerProps,
     extraActions,
+    border = '0',
     resultList,
     renderResultItem,
     ...otherProps
@@ -45,7 +45,7 @@ function Search(allProps: TSearchProps): JSX.Element {
 
       <nu-listbox
         ref={listBoxRef}
-        border="n"
+        border="0"
         padding="0"
         gap
         {...resultContainerProps}
@@ -66,17 +66,5 @@ function Search(allProps: TSearchProps): JSX.Element {
     </nu-grid>
   );
 }
-
-Search.propTypes = {
-  value: T.string,
-  onSearchInput: T.func,
-  onResultItemInput: T.func,
-  inputProps: T.object,
-  inputGroupProps: T.object,
-  resultContainerProps: T.object,
-  extraActions: T.any,
-  resultList: T.array,
-  renderResultItem: T.func,
-};
 
 export default Search;
