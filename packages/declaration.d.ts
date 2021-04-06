@@ -62,5 +62,6 @@ declare namespace JSX {
     'nu-h5': any;
     'nu-h6': any;
     'nu-popuplistbox': any;
+    'nu-img': any;
   }
 }

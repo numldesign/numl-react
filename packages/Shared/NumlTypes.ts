@@ -84,6 +84,7 @@ export interface BaseProps {
   valuemin?: string;
   valuemax?: string;
   valuenow?: string;
+  name?: string;
   setsize?: string;
   posinset?: string;
   expanded?: string;
@@ -136,14 +137,14 @@ export interface BaseProps {
   'use-current'?: boolean;
   type?: string;
   precision?: string;
-  disabled?: string;
+  disabled?: boolean;
   'link-value'?: string;
   value?: string;
   'off-value'?: string;
   scrollto?: string;
   action?: string;
   lang?: string;
-  special?: string;
+  special?: boolean;
   placeholder?: string;
   min?: string;
   max?: string;

@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { TMenuItemProps, TMenuProps } from './Menu.type';
 
 function Menu(allProps: TMenuProps) {
-  return <nu-menu {...allProps} />;
+  const { children, ...otherProps } = allProps;
+  return <nu-menu {...otherProps}>{children}</nu-menu>;
 }
 
 Menu.Item = function MenuItem(allProps: TMenuItemProps) {

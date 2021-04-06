@@ -26,7 +26,7 @@ Default.args = {
   header: 'FILE OPTIONS',
   children: [
     <ActionList.Item key="1" onClick={(e) => console.log('import clicked ', e)}>
-      Importimport ActionList from './../Molecules/ActionList';
+      Import ActionList from './../Molecules/ActionList';
     </ActionList.Item>,
     <ActionList.Item key="2" onClick={(e) => console.log('Export clicked ', e)}>
       Export
