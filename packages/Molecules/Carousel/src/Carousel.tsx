@@ -1,4 +1,3 @@
-import T from 'prop-types';
 import React, { useCallback, useState } from 'react';
 import { Icon } from '../../../Atoms/Icon';
 import { TCarouselProps } from './Carousel.type';
@@ -7,6 +6,8 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
   const {
     items,
     activeIndex,
+    width = 'auto',
+    height = 'auto',
     onPreviousClick = () => {},
     onNextClick = () => {},
     ...otherProps
@@ -34,7 +35,12 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
   }, [currentSlide]);
 
   return (
-    <nu-block style={{ position: 'relative' }} {...otherProps}>
+    <nu-block
+      style={{ position: 'relative' }}
+      width={width}
+      height={height}
+      {...otherProps}
+    >
       <nu-block overflow="hidden">
         <nu-pane flow="row nowrap" gap="0" width={`${slides}00%`}>
           {items.map((_image: any, _index: any) => {
@@ -47,7 +53,12 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
                 transition="move .2s"
                 content="center"
               >
-                <nu-img src={_image} fit="fill"></nu-img>
+                <nu-img
+                  src={_image}
+                  fit="fill"
+                  height={height}
+                  width={width}
+                ></nu-img>
               </nu-flex>
             );
           })}
@@ -84,12 +95,5 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
     </nu-block>
   );
 }
-
-Carousel.propTypes = {
-  items: T.array,
-  activeIndex: T.number,
-  onPreviousClick: T.func,
-  onNextClick: T.func,
-};
 
 export default Carousel;

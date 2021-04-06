@@ -50,34 +50,31 @@ CalloutCard.Landscape = function CalloutCardLandScape(props) {
     ...otherProps
   } = props;
   return (
-    <nu-flow gap>
-      <nu-card padding={padding} gap="0.5" {...otherProps}>
-        <Grid
-          responsive="800px|801px"
-          columns="auto auto|auto"
-          gap
-          content="space-between"
-          width="100%"
-        >
-          {heading && description ? (
-            <Grid.Column column="1|1" row="1|2">
-              <Block>
-                <nu-el text="sb">{heading}</nu-el>
-              </Block>
-              <Block>
-                <nu-el size="sm">{description}</nu-el>
-              </Block>
-              {actions ? <nu-el padding="1 0">{actions}</nu-el> : null}
-            </Grid.Column>
-          ) : null}
-          {src ? (
-            <Grid.Column column="2|1" row="1|1">
-              <Image height="auto" src={src}></Image>
-            </Grid.Column>
-          ) : null}
-        </Grid>
-      </nu-card>
-    </nu-flow>
+    <nu-card padding={padding} gap="0.5" block {...otherProps}>
+      <Grid
+        responsive="800px|801px"
+        columns="auto auto|auto"
+        gap="1"
+        content="space-between"
+      >
+        {heading && description ? (
+          <Grid.Column column="1|1" row="1|2">
+            <Block>
+              <nu-el text="sb">{heading}</nu-el>
+            </Block>
+            <Block>
+              <nu-el size="sm">{description}</nu-el>
+            </Block>
+            {actions ? <nu-el padding="1 0">{actions}</nu-el> : null}
+          </Grid.Column>
+        ) : null}
+        {src ? (
+          <Grid.Column column="2|1" row="1|1">
+            <Image height="auto" src={src}></Image>
+          </Grid.Column>
+        ) : null}
+      </Grid>
+    </nu-card>
   );
 };
 
