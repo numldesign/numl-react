@@ -13,10 +13,6 @@
   "author": "Numl.Design Team",
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
