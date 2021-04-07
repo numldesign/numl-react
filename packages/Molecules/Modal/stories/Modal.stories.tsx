@@ -1,18 +1,18 @@
 import React from 'react';
 import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
+import { Block } from '../../../Components/Block';
 import Root from '../../../Components/Root';
-import { Model } from '../index';
-import { Block } from './../../../Components/Block/';
+import { Modal } from '../index';
 
 export default {
-  title: 'Example/Molecules/Model',
-  component: Model,
+  title: 'Example/Molecules/Modal',
+  component: Modal,
 };
 
 const Template = ({ ...args }) => (
   <Root>
-    <Model {...args} />
+    <Modal {...args} />
   </Root>
 );
 

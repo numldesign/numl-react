@@ -1,7 +1,7 @@
 import React from 'react';
-import { TModelProps } from './Model.type';
+import { TModalProps } from './Modal.type';
 
-function Model(allProps: TModelProps) {
+function Modal(allProps: TModalProps) {
   const {
     heading,
     place = 'inside',
@@ -54,4 +54,4 @@ function Model(allProps: TModelProps) {
   );
 }
 
-export default Model;
+export default Modal;
