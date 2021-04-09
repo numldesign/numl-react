@@ -11,8 +11,7 @@
     "test:watch": "jest --watch",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "prepare": "husky install"
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
