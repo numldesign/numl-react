@@ -1,17 +1,11 @@
 {
     "buildCommand": "build",
-    "packages": [
-        "packages/Atoms",
-        "packages/Components",
-        "packages/Molecules",
-        "packages/Organisms"
-    ],
+    "packages": [],
     "publishDirectory": {
-        "react": "build/node_modules/react",
-        "react-dom": "build/node_modules/react-dom"
+        "react": "dist"
     },
     "sandboxes": [
-        "vanilla"
+        "new"
     ],
     "node": "12"
 }
