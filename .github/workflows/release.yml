@@ -1,7 +1,7 @@
 name: Publish to NPM
 
 on:
-  push:
+   [push, pull_request]:
     paths:
       - "packages/**"
     branches:
