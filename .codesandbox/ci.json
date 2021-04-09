@@ -12,8 +12,7 @@
         "react-dom": "build/node_modules/react-dom"
     },
     "sandboxes": [
-        "vanilla",
-        "new"
+        "vanilla"
     ],
-    "node": "14"
+    "node": "12"
 }
