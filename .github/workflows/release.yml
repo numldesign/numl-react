@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 12.x
 
-      - uses: actions/cache@v2.1.4
+      - uses: actions/cache@master
         name: Load Yarn cache
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
@@ -49,7 +49,7 @@ jobs:
       #   run: yarn test
 
       - name: Publish packages
-        # uses: changesets/action@master
+        uses: changesets/action@master
         with:
           publish: yarn release
           commit: "chore(release): version packages"
