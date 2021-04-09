@@ -1,4 +1,4 @@
-[*.{js,html,css,json}]
+[*.{js,jsx,ts,tsx,html,css,json}]
 indent_style = space
 indent_size = 2
 end_of_line = lf
