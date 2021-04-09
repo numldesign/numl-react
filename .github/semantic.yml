@@ -1,3 +1,5 @@
+# Workflow name
+name: 'Semantics'
 # Always validate all commits, and ignore the PR title
 commitsOnly: true
 # Require at least one commit to be valid
