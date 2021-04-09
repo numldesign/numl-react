@@ -1,11 +1,9 @@
 {
     "buildCommand": "build",
-    "packages": [
-        "packages/Atoms",
-        "packages/Components",
-        "packages/Molecules",
-        "packages/Organisms"
-    ],
+    "packages": [],
+    "publishDirectory": {
+        "react": "dist"
+    },
     "sandboxes": [
         "new"
     ],
