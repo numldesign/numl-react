@@ -5,7 +5,7 @@
         "numl-react": "./dist/"
     },
     "sandboxes": [
-        "vanilla"
+        "num-react"
     ],
     "node": "12"
 }
