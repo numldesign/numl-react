@@ -2,54 +2,54 @@ name: Test and release
 
 # Run the workflow when a Pull Request is opened or when changes are pushed to master
 on:
- pull_request:
- push:
-  branches: [ master ]
+  pull_request:
+  push:
+    branches: [master]
 
 jobs:
- test:
-  runs-on: ubuntu-latest
-  strategy:
-   matrix:
-    node-version: [10.x, 12.x, 14.x]
-  steps:
-  # Fetch the latest commit
-  - name: Checkout
-    uses: actions/checkout@v2
-
-  # Setup Node.js using the appropriate version
-  - name: Use Node.js 
-    uses: actions/setup-node@v1
-    with:
-      node-version: "14.x"
-
-  # Install package dependencies
-  - name: Install
-    run : npm ci
-
-  # Run tests
-  - name: Test
-    run: npm test
-
-  release:
-    # Only release on push to master
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+  test:
     runs-on: ubuntu-latest
-    # Waits for test jobs for each Node.js version to complete
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      # Fetch the latest commit
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
+      # Setup Node.js using the appropriate version
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
 
-    - name: Install
-        run : npm ci
+      # Install package dependencies
+      - name: Install
+        run: npm ci
 
-    - name: Release
-      run: npx semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # Run tests
+      - name: Test
+        run: npm test
+
+    release:
+      # Only release on push to master
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      runs-on: ubuntu-latest
+      # Waits for test jobs for each Node.js version to complete
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: 14.x
+
+        - name: Install
+          run: npm ci
+
+        - name: Release
+          run: npx semantic-release
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

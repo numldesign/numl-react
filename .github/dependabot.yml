@@ -10,13 +10,13 @@ updates:
     schedule:
       # Check for updates managed by Composer once a week
       interval: "weekly"
-      
+
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
       # Check for updates managed by Composer once a week
       interval: "weekly"
-      
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
