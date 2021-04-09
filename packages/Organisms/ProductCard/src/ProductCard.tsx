@@ -14,13 +14,7 @@ function ProductCard(props) {
     ...otherProps
   } = props;
   return (
-    <nu-grid
-      columns="auto"
-      row="auto"
-      content="start"
-      width={width}
-      {...otherProps}
-    >
+    <nu-grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
       <nu-card padding="20px" radius="8px">
         <nu-img column="1" width="100%" src={image} fit="fill"></nu-img>
         <nu-block>
@@ -103,9 +97,7 @@ function ProductColors(props: { color: any }) {
       <nu-flex row="2" gap items="center">
         {color &&
           color.map(function (color) {
-            return (
-              <nu-circle size="3x" fill={color} cursor="pointer"></nu-circle>
-            );
+            return <nu-circle size="3x" fill={color} cursor="pointer"></nu-circle>;
           })}
       </nu-flex>
     </nu-grid>

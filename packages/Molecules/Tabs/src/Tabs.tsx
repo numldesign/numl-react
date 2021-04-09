@@ -16,12 +16,7 @@ function Tabs(allProps: TTabsProps) {
 
   return (
     <nu-block>
-      <nu-tablist
-        ref={ref}
-        content={content}
-        value={defaultValue}
-        {...otherProps}
-      >
+      <nu-tablist ref={ref} content={content} value={defaultValue} {...otherProps}>
         {prefix}
         {children}
       </nu-tablist>

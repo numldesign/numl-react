@@ -40,8 +40,7 @@ Default.args = {
       Learn more about customizing checkout
     </Button>,
   ],
-  src:
-    'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
+  src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
   closeAction: (
     <Button
       padding="0"
@@ -71,8 +70,7 @@ WithoutAction.args = {
       Learn more about customizing checkout
     </Button>,
   ],
-  src:
-    'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
+  src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
   extra: (
     <Block width="10" height="min 20x">
       <Image src="https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png" />
@@ -99,8 +97,7 @@ Landscape.args = {
       Learn more about customizing checkout
     </Link>,
   ],
-  src:
-    'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
+  src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
   extra: (
     <Block width="10" height="min 20x">
       <Image src="https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png" />

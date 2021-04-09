@@ -92,9 +92,7 @@ export function copyToClipboard(text: any) {
 
   return success
     ? Promise.resolve()
-    : Promise.reject(
-        new DOMException('The request is not allowed', 'NotAllowedError')
-      );
+    : Promise.reject(new DOMException('The request is not allowed', 'NotAllowedError'));
 }
 
 export function JsxInnerText(children: any, counter = 0): any {

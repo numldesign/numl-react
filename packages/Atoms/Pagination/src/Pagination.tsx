@@ -7,11 +7,7 @@ function Pagination(allProps: TPaginationProps) {
   const isVertical = flow === 'column';
 
   return (
-    <nu-btngroup
-      flow={flow}
-      group-radius={isVertical ? 'column' : 'row'}
-      {...otherProps}
-    >
+    <nu-btngroup flow={flow} group-radius={isVertical ? 'column' : 'row'} {...otherProps}>
       {typeof previous === 'string' ? (
         <nu-btn id="previous">
           <Icon name={previous} />
@@ -20,12 +16,7 @@ function Pagination(allProps: TPaginationProps) {
         previous
       )}
       {label && !isVertical && (
-        <nu-label
-          display="flex"
-          content="center"
-          items="center"
-          fill="transparent"
-        >
+        <nu-label display="flex" content="center" items="center" fill="transparent">
           {label}
         </nu-label>
       )}

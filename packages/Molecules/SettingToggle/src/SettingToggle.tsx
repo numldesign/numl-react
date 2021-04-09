@@ -4,14 +4,7 @@ import { Button } from '../../../Atoms/Button';
 import { TSettingToggleProps } from './SettingToggle.type';
 
 function SettingToggle(allProps: TSettingToggleProps) {
-  const {
-    text,
-    activeText,
-    inactiveText,
-    isActive,
-    onAction,
-    ...otherProps
-  } = allProps;
+  const { text, activeText, inactiveText, isActive, onAction, ...otherProps } = allProps;
 
   const handleStatusChange = useCallback(() => {
     onAction({ status: !isActive });
@@ -20,8 +13,7 @@ function SettingToggle(allProps: TSettingToggleProps) {
   return (
     <nu-pane {...otherProps}>
       <nu-block>
-        <nu-el>{text}</nu-el>{' '}
-        <nu-el text="sb">{isActive ? activeText : inactiveText}</nu-el>
+        <nu-el>{text}</nu-el> <nu-el text="sb">{isActive ? activeText : inactiveText}</nu-el>
       </nu-block>
       <Button special={isActive ? true : undefined} onTap={handleStatusChange}>
         {isActive ? activeText : inactiveText}

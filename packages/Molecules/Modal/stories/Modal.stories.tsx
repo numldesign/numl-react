@@ -49,8 +49,8 @@ WithoutHeader.args = {
   border: '1bw',
   body: (
     <Block size="md" color="#text-soft">
-      Use Instagram posts to share your products with millions of people. Let
-      shoppers buy from your store without leaving Instagram.
+      Use Instagram posts to share your products with millions of people. Let shoppers buy from your
+      store without leaving Instagram.
     </Block>
   ),
   footerActions: [

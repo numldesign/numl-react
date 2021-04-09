@@ -14,12 +14,7 @@ function MediaCard(props) {
   return (
     <nu-card padding={padding} columns={columns} {...otherProps}>
       <nu-img src={src} width="100%" height="9.875rem"></nu-img>
-      <nu-grid
-        columns="auto 1fr"
-        content="stretch end"
-        items="stretch end"
-        padding="2x 0x"
-      >
+      <nu-grid columns="auto 1fr" content="stretch end" items="stretch end" padding="2x 0x">
         <nu-el text="bold">{heading}</nu-el>
         <nu-icon align-self="end" name="ellipsis-horizontal-outline"></nu-icon>
       </nu-grid>

@@ -19,13 +19,7 @@ Switch.Field = function SwitchField(allProps: TSwitchFieldProps) {
   disabled = !!disabled || null;
 
   return (
-    <nu-field
-      display="flex"
-      flow="row"
-      items="center start"
-      gap="1x"
-      {...otherProps}
-    >
+    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
       {ActionElement({
         as: 'nu-switch',
         checked,

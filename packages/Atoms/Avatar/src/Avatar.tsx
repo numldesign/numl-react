@@ -41,9 +41,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
       {showIcon && showIcon != 'false' && !children ? (
         <Avatar.Icon {...allProps}></Avatar.Icon>
       ) : null}
-      {(username || subtitle) && !children ? (
-        <Avatar.Profile {...allProps}></Avatar.Profile>
-      ) : null}
+      {(username || subtitle) && !children ? <Avatar.Profile {...allProps}></Avatar.Profile> : null}
 
       {showArrow ? (
         <Avatar.DropDown toggle>
@@ -93,9 +91,7 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   );
 };
 
-Avatar.Profile = function AvatarProfile(
-  allProps: TAvatarProfileProps
-): JSX.Element {
+Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
   let { size = 2, username, subtitle, ...otherProps } = allProps;
 
   let childSize = size;
@@ -124,21 +120,9 @@ Avatar.DropDown = function AvatarDropDown(props: any) {
 };
 
 Avatar.Popup = function AvatarPopup(props: any) {
-  const {
-    padding = '1x 0',
-    flow = 'column',
-    display = 'flex',
-    children,
-    ...otherProps
-  } = props;
+  const { padding = '1x 0', flow = 'column', display = 'flex', children, ...otherProps } = props;
   return (
-    <nu-popup
-      use-menu
-      display={display}
-      padding={padding}
-      flow={flow}
-      {...otherProps}
-    >
+    <nu-popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
       {children}
     </nu-popup>
   );

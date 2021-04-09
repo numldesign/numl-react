@@ -31,17 +31,10 @@ Default.args = {
     <ActionList.Item key="2" onClick={(e) => console.log('Export clicked ', e)}>
       Export
     </ActionList.Item>,
-    <ActionList.Item
-      key="3"
-      onClick={(e) => console.log('Duplicate clicked ', e)}
-    >
+    <ActionList.Item key="3" onClick={(e) => console.log('Duplicate clicked ', e)}>
       Duplicate
     </ActionList.Item>,
-    <ActionList.Item
-      key="4"
-      disabled
-      onClick={(e) => console.log('Share clicked ', e)}
-    >
+    <ActionList.Item key="4" disabled onClick={(e) => console.log('Share clicked ', e)}>
       Share
     </ActionList.Item>,
   ],
@@ -82,9 +75,7 @@ WithHelperText.args = {
     </ActionList.Item>,
     <ActionList.Item key="4" flow="row" gap="0" disabled>
       <nu-block>Blog posts</nu-block>
-      <nu-block color="#text-soft">
-        Manage blogs published to your Online Store
-      </nu-block>
+      <nu-block color="#text-soft">Manage blogs published to your Online Store</nu-block>
     </ActionList.Item>,
   ],
 };

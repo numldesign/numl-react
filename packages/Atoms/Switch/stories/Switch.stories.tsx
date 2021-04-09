@@ -26,13 +26,7 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <Root>
-    {children ? (
-      <Switch.Field children={children} {...args} />
-    ) : (
-      <Switch {...args} />
-    )}
-  </Root>
+  <Root>{children ? <Switch.Field children={children} {...args} /> : <Switch {...args} />}</Root>
 );
 
 export const Basic = Template.bind({});

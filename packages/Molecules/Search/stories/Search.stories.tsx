@@ -27,12 +27,8 @@ const resultTemplate = (item) => {
       {item.title && (
         <nu-block>
           <nu-block text="sb">{item.title}</nu-block>
-          {item.description && (
-            <nu-block color="#text-strong">{item.description}</nu-block>
-          )}
-          {item.description2 && (
-            <nu-block color="#text-strong">{item.description2}</nu-block>
-          )}
+          {item.description && <nu-block color="#text-strong">{item.description}</nu-block>}
+          {item.description2 && <nu-block color="#text-strong">{item.description2}</nu-block>}
         </nu-block>
       )}
       {item.suffix}

@@ -46,21 +46,9 @@ Button.DropDown = function ButtonDropDown(props: any) {
 };
 
 Button.Popup = function ButtonDropDownPopup(props: any) {
-  const {
-    padding = '1x 0',
-    flow = 'column',
-    display = 'flex',
-    children,
-    ...otherProps
-  } = props;
+  const { padding = '1x 0', flow = 'column', display = 'flex', children, ...otherProps } = props;
   return (
-    <nu-popup
-      use-menu
-      display={display}
-      padding={padding}
-      flow={flow}
-      {...otherProps}
-    >
+    <nu-popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
       {children}
     </nu-popup>
   );
@@ -84,8 +72,7 @@ Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
   let { children, flow, groupRadius, ...otherProps } = allProps;
 
   flow = flow || 'row';
-  groupRadius =
-    groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
+  groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
     <nu-btngroup

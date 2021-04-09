@@ -40,23 +40,10 @@ function CalloutCard(allProps: TCalloutCardProps): JSX.Element {
 }
 
 CalloutCard.Landscape = function CalloutCardLandScape(props) {
-  const {
-    children,
-    padding,
-    src,
-    heading,
-    actions,
-    description,
-    ...otherProps
-  } = props;
+  const { children, padding, src, heading, actions, description, ...otherProps } = props;
   return (
     <nu-card padding={padding} gap="0.5" block {...otherProps}>
-      <Grid
-        responsive="800px|801px"
-        columns="auto auto|auto"
-        gap="1"
-        content="space-between"
-      >
+      <Grid responsive="800px|801px" columns="auto auto|auto" gap="1" content="space-between">
         {heading && description ? (
           <Grid.Column column="1|1" row="1|2">
             <Block>

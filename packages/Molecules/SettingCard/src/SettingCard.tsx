@@ -15,22 +15,9 @@ function SettingCard(allProps: TSettingCardProps) {
   } = allProps;
 
   return (
-    <nu-pane
-      fill={fill}
-      gap={gap}
-      padding={padding}
-      items={items}
-      {...otherProps}
-    >
+    <nu-pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
       {typeof icon === 'string' ? (
-        <Icon
-          name={icon}
-          padding="1x"
-          width="4x"
-          height="4x"
-          fill="special-mark"
-          radius="1.2x"
-        />
+        <Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
       ) : (
         icon
       )}

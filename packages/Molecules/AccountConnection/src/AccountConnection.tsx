@@ -55,10 +55,7 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
           </nu-block>
         )}
         <nu-block>
-          <Button
-            theme={!isConnected ? 'special' : 'default'}
-            onClick={handleConnect}
-          >
+          <Button theme={!isConnected ? 'special' : 'default'} onClick={handleConnect}>
             {isConnected ? 'Disconnect' : 'Connect'}
           </Button>
         </nu-block>

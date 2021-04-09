@@ -22,14 +22,10 @@ function Search(allProps: TSearchProps): JSX.Element {
 
   useEffect(() => {
     if (ref && ref.current && onSearchInput) {
-      ref.current.addEventListener('input', (evt: any) =>
-        onSearchInput(evt.detail)
-      );
+      ref.current.addEventListener('input', (evt: any) => onSearchInput(evt.detail));
     }
     if (listBoxRef && listBoxRef.current && onResultItemInput) {
-      listBoxRef.current.addEventListener('input', (evt: any) =>
-        onResultItemInput(evt.detail)
-      );
+      listBoxRef.current.addEventListener('input', (evt: any) => onResultItemInput(evt.detail));
     }
   }, []);
 
@@ -43,13 +39,7 @@ function Search(allProps: TSearchProps): JSX.Element {
         {extraActions}
       </nu-inputgroup>
 
-      <nu-listbox
-        ref={listBoxRef}
-        border="0"
-        padding="0"
-        gap
-        {...resultContainerProps}
-      >
+      <nu-listbox ref={listBoxRef} border="0" padding="0" gap {...resultContainerProps}>
         {renderList.length
           ? renderList.map((item) => {
               if (renderResultItem) {

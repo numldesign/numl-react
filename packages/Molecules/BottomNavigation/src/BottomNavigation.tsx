@@ -1,28 +1,17 @@
 import React from 'react';
-import {
-  TBottomNavigationItemProps,
-  TBottomNavigationProps,
-} from './BottomNavigation.type';
+import { TBottomNavigationItemProps, TBottomNavigationProps } from './BottomNavigation.type';
 
 function BottomNavigation(allProps: TBottomNavigationProps): JSX.Element {
   const { header, children, ...otherProps } = allProps;
 
   return (
-    <nu-menu
-      border="1bw"
-      padding="0"
-      flow="row"
-      items="stretch"
-      {...otherProps}
-    >
+    <nu-menu border="1bw" padding="0" flow="row" items="stretch" {...otherProps}>
       {children}
     </nu-menu>
   );
 }
 
-BottomNavigation.Item = function BottomNavigationItem(
-  allProps: TBottomNavigationItemProps
-) {
+BottomNavigation.Item = function BottomNavigationItem(allProps: TBottomNavigationItemProps) {
   const { children, ...otherProps } = allProps;
 
   return (

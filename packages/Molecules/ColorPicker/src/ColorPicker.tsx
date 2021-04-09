@@ -22,13 +22,7 @@ function ColorModifier(props) {
 
 function ColorSelector(props: any) {
   return (
-    <nu-grid
-      columns="auto"
-      padding="2x 0x"
-      items="center"
-      gap="2x"
-      content="center"
-    >
+    <nu-grid columns="auto" padding="2x 0x" items="center" gap="2x" content="center">
       <nu-slider
         column="1"
         width="15.375rem"
@@ -65,34 +59,12 @@ function ColorCode(props) {
       <nu-grid columns="1fr 3fr 1fr " items="center" gap="2x" content="stretch">
         <nu-btn column="1" height="2.25rem" toggle text="normal">
           <nu-el>RGB</nu-el>
-          <nu-icon
-            name="chevron-down ^:pressed[chevron-up]"
-            size="md"
-            text="normal"
-          ></nu-icon>
+          <nu-icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></nu-icon>
         </nu-btn>
         <nu-btngroup column="2" height="2.25rem" value="rgb">
-          <nu-numinput
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></nu-numinput>
-          <nu-numinput
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></nu-numinput>
-          <nu-numinput
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></nu-numinput>
+          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
+          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
+          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
         </nu-btngroup>
         <nu-numinput
           column="3"

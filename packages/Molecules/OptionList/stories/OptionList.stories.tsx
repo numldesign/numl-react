@@ -102,10 +102,7 @@ WithMultiSelectThumbnailBadge.args = {
   renderContent: ({ item }) => {
     return (
       <nu-pane>
-        <Thumbnail
-          width="40px"
-          source="https://source.unsplash.com/user/erondu/100x100"
-        />
+        <Thumbnail width="40px" source="https://source.unsplash.com/user/erondu/100x100" />
         {item.label}
         <Badge label="Neutral" padding="0 1x" />
       </nu-pane>

@@ -28,9 +28,7 @@ function Card(allProps: TCardProps) {
           {body ? (
             <nu-pane items="flex-start">
               <nu-block flex="1">
-                {subheading ? (
-                  <nu-block size="xs">{subheading}</nu-block>
-                ) : null}
+                {subheading ? <nu-block size="xs">{subheading}</nu-block> : null}
                 <nu-block size="sm">{body}</nu-block>
               </nu-block>
               {bodyActions}

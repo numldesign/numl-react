@@ -35,8 +35,7 @@ function OptionList(allProps: TOptionListProps) {
       >
         {options && options.length
           ? options.map((item: any, index: any) => {
-              const checked =
-                multiSelect && selected && selected.includes(String(index));
+              const checked = multiSelect && selected && selected.includes(String(index));
               return (
                 <nu-option key={index} value={index} {...contentWrapperProps}>
                   {multiSelect ? (
@@ -52,13 +51,8 @@ function OptionList(allProps: TOptionListProps) {
 
         {sections && sections.length
           ? sections.map(
-              (
-                option: { renderHeader: any; options: string | any[] },
-                sectionIndex: any
-              ) => {
-                const sectionHeader = option.renderHeader
-                  ? option.renderHeader
-                  : null;
+              (option: { renderHeader: any; options: string | any[] }, sectionIndex: any) => {
+                const sectionHeader = option.renderHeader ? option.renderHeader : null;
                 const optionList: any =
                   option.options && option.options.length ? option.options : [];
                 return (
@@ -66,23 +60,15 @@ function OptionList(allProps: TOptionListProps) {
                     {sectionHeader}
                     {optionList.map((item: { index: any }) => {
                       const index = item.index;
-                      const checked =
-                        multiSelect &&
-                        selected &&
-                        selected.includes(String(index));
+                      const checked = multiSelect && selected && selected.includes(String(index));
                       return (
-                        <nu-option
-                          key={index}
-                          value={index}
-                          {...contentWrapperProps}
-                        >
+                        <nu-option key={index} value={index} {...contentWrapperProps}>
                           {multiSelect ? (
                             <nu-block {...checkboxWrapperProps}>
                               <Checkbox checked={checked} />
                             </nu-block>
                           ) : null}
-                          {renderContent &&
-                            renderContent({ item, index, sectionIndex })}
+                          {renderContent && renderContent({ item, index, sectionIndex })}
                         </nu-option>
                       );
                     })}

@@ -15,32 +15,15 @@ function Modal(allProps: TModalProps) {
   } = allProps;
 
   return (
-    <nu-block
-      nu-overlay
-      place={place}
-      fill={fill}
-      box={box}
-      radius={radius}
-      {...otherProps}
-    >
+    <nu-block nu-overlay place={place} fill={fill} box={box} radius={radius} {...otherProps}>
       {heading ? (
-        <nu-pane
-          padding="2x"
-          border="bottom"
-          items="start"
-          content="space-between"
-        >
+        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
           {heading}
           {closeAction}
         </nu-pane>
       ) : null}
       {body ? (
-        <nu-pane
-          padding="2x"
-          border="bottom"
-          items="start"
-          content="space-between"
-        >
+        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
           {body}
           {!heading ? closeAction : null}
         </nu-pane>

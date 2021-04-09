@@ -52,12 +52,7 @@ export const WithIcons = (args) => {
           <Icon name="share-social-outline" />
           Share
         </Menu.Item>
-        <Menu.Item
-          value="Getlink"
-          border="bottom"
-          columns="auto 1fr"
-          onClick={handleMenuClick}
-        >
+        <Menu.Item value="Getlink" border="bottom" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="link-outline" />
           Get link
         </Menu.Item>
@@ -65,11 +60,7 @@ export const WithIcons = (args) => {
           <Icon name="copy-outline" />
           Copy
         </Menu.Item>
-        <Menu.Item
-          value="Download"
-          columns="auto 1fr"
-          onClick={handleMenuClick}
-        >
+        <Menu.Item value="Download" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="download-outline" />
           Download
         </Menu.Item>
