@@ -1,28 +1,26 @@
 import React from 'react';
+import { Block } from './../../../Components/Block/';
 
 function MediaCard(props) {
-  const { src, ...otherProps } = props;
+  const {
+    src,
+    action,
+    heading,
+    description,
+    padding = '2x',
+    columns = 'auto',
+    ...otherProps
+  } = props;
   return (
-    <nu-card padding="2x" columns="1fr">
-      <nu-img
-        src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area_web-f17b1f60e6.jpg"
-        width="100%"
-        height="9.875rem"
-      ></nu-img>
-      <nu-grid
-        columns="auto 1fr"
-        content="stretch end"
-        items="stretch end"
-        padding="2x 0x"
-      >
-        <nu-el text="bold">New product and the market</nu-el>
+    <nu-card padding={padding} columns={columns} {...otherProps}>
+      <nu-img src={src} width="100%" height="9.875rem"></nu-img>
+      <nu-grid columns="auto 1fr" content="stretch end" items="stretch end" padding="2x 0x">
+        <nu-el text="bold">{heading}</nu-el>
         <nu-icon align-self="end" name="ellipsis-horizontal-outline"></nu-icon>
       </nu-grid>
       <nu-grid columns="auto" gap>
-        <nu-el row="1">Product details</nu-el>
-        <nu-btn row="2" width="6.813rem">
-          Learn More
-        </nu-btn>
+        {description ? <nu-el row="1">{description}</nu-el> : null}
+        {action ? <Block row="2">{action}</Block> : null}
       </nu-grid>
     </nu-card>
   );

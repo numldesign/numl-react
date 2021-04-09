@@ -2,7 +2,15 @@ import React from 'react';
 import { TDataTableProps } from './DataTable.type';
 
 function DataTable(allProps: TDataTableProps) {
-  const { headings, rows, totals, footerContent, ...otherProps } = allProps;
+  const {
+    headings,
+    rows,
+    width = '100%',
+    height = '100%',
+    totals,
+    footerContent,
+    ...otherProps
+  } = allProps;
 
   let headingList = headings && headings.length ? [...headings] : [];
   let rowList = rows && rows.length ? [...rows] : [];
@@ -10,14 +18,16 @@ function DataTable(allProps: TDataTableProps) {
 
   return (
     <nu-block {...otherProps}>
-      <nu-table width="100%">
-        <nu-attrs for="cell" height="3"></nu-attrs>
-        <nu-attrs for="columnheader" border="bottom"></nu-attrs>
+      <nu-table width={width} height={height}>
         {headingList.length ? (
           <nu-rowgroup>
             <nu-row>
               {headingList.map((header) => {
-                return <nu-columnheader key={header}>{header}</nu-columnheader>;
+                return (
+                  <nu-columnheader border="bottom" key={header}>
+                    {header}
+                  </nu-columnheader>
+                );
               })}
             </nu-row>
           </nu-rowgroup>
@@ -26,7 +36,11 @@ function DataTable(allProps: TDataTableProps) {
           <nu-rowgroup fill="subtle">
             <nu-row>
               {totalList.map((total, index) => {
-                return <nu-cell key={index}>{total}</nu-cell>;
+                return (
+                  <nu-cell height="3" key={index}>
+                    {total}
+                  </nu-cell>
+                );
               })}
             </nu-row>
           </nu-rowgroup>
@@ -37,7 +51,11 @@ function DataTable(allProps: TDataTableProps) {
               return (
                 <nu-row key={rowIndex}>
                   {row.map((rowData: any, index: any) => {
-                    return <nu-cell key={index}>{rowData}</nu-cell>;
+                    return (
+                      <nu-cell height="3" key={index}>
+                        {rowData}
+                      </nu-cell>
+                    );
                   })}
                 </nu-row>
               );
@@ -46,7 +64,7 @@ function DataTable(allProps: TDataTableProps) {
         ) : null}
       </nu-table>
       <nu-pane height="3" content="center" fill="subtle">
-        {footerContent}
+        Showing {rows.length} of {rows.length}
       </nu-pane>
     </nu-block>
   );

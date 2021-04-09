@@ -1,22 +1,23 @@
-import T from 'prop-types';
 import React from 'react';
 import { Icon } from '../../../Atoms/Icon';
 import { TSettingCardProps } from './SettingCard.type';
 
 function SettingCard(allProps: TSettingCardProps) {
-  const { title, subtitle, icon, ...otherProps } = allProps;
+  const {
+    title,
+    fill = 'bg',
+    gap = '2x',
+    padding = '2x',
+    items = 'flex-start',
+    subtitle,
+    icon,
+    ...otherProps
+  } = allProps;
 
   return (
-    <nu-pane fill="bg" gap="2x" padding="2x" items="flex-start" {...otherProps}>
+    <nu-pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
       {typeof icon === 'string' ? (
-        <Icon
-          name={icon}
-          padding="1x"
-          width="4x"
-          height="4x"
-          fill="special-mark"
-          radius="1.2x"
-        />
+        <Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
       ) : (
         icon
       )}
@@ -29,11 +30,5 @@ function SettingCard(allProps: TSettingCardProps) {
     </nu-pane>
   );
 }
-
-SettingCard.propTypes = {
-  title: T.string,
-  subtitle: T.string,
-  icon: T.oneOfType([T.string, T.element]),
-};
 
 export default SettingCard;

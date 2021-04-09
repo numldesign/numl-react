@@ -16,9 +16,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
 
   const choiceList = choices && choices.length ? [...choices] : [];
 
-  const [selectedValues, setSelectedValues] = useState(
-    getDefaultCheckValue(selected)
-  );
+  const [selectedValues, setSelectedValues] = useState(getDefaultCheckValue(selected));
 
   const handleChecklistChange = useCallback(
     (checkboxName) => {
@@ -34,21 +32,9 @@ function Sheet(allProps: TSheetProps): JSX.Element {
   );
 
   return (
-    <nu-block
-      nu-overlay
-      place="inside"
-      fill="#dark.50"
-      box="y"
-      radius="1x"
-      {...otherProps}
-    >
+    <nu-block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
       {heading ? (
-        <nu-pane
-          padding="2x"
-          border="bottom"
-          items="start"
-          content="space-between"
-        >
+        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
           {heading}
           {closeAction}
         </nu-pane>

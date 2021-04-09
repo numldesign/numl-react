@@ -3,6 +3,7 @@ import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
 import Root from '../../../Components/Root';
 import { Banner } from '../index';
+import { Grid } from './../../../Components/Grid';
 
 export default {
   title: 'Example/Molecules/Banner',
@@ -31,10 +32,14 @@ export const Default = Template.bind({});
 Default.args = {
   heading: 'Default Banner',
   footerActions: [
-    <Button key="1">Button</Button>,
-    <Button key="2" clear>
-      Button
-    </Button>,
+    <Grid gap="1" columns="auto auto">
+      <Button key="1" gap="1" theme="danger">
+        Close
+      </Button>
+      <Button key="2" gap="1">
+        Save
+      </Button>
+    </Grid>,
   ],
   closeAction: (
     <Button
@@ -44,9 +49,10 @@ Default.args = {
         console.log('close');
       }}
     >
-      <nu-icon name="close" />
+      <Icon name="close" />
     </Button>
   ),
   prefix: <Icon name="information-circle-outline" />,
-  children: 'Body Text. Link',
+  children:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
 };

@@ -24,9 +24,7 @@ function ActionElement(allProps: TActionProps): JSX.Element {
       }
 
       if (onInput) {
-        ref.current.addEventListener('input', (evt: any) =>
-          onInput(evt.detail)
-        );
+        ref.current.addEventListener('input', (evt: any) => onInput(evt.detail));
       }
     }
   }, []);

@@ -34,66 +34,45 @@ const Template = ({ ...args }) => (
 export const Default = Template.bind({});
 Default.args = {
   heading: 'Heading',
-  body: 'Body',
+  body:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
 };
 
 export const WithHeaderAction = Template.bind({});
 WithHeaderAction.args = {
   heading: 'Heading',
-  body: 'Body',
-  headerActions: [
-    <Button key="1" padding="0" radius="0" border="0" color="#special">
-      Button
-    </Button>,
-  ],
+  body:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+  headerActions: [<Button color="#special">Click Me</Button>],
 };
 
 export const WithBodyAction = Template.bind({});
 WithBodyAction.args = {
   heading: 'Heading',
   subheading: 'Subheading',
-  body: 'Body',
-  bodyActions: [
-    <Button key="1" padding="0" radius="0" border="0" color="#special">
-      Button
-    </Button>,
-  ],
+  body:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+  bodyActions: [<Button color="#special">Click Me</Button>],
 };
 
 export const WithFooterActions = Template.bind({});
 WithFooterActions.args = {
   heading: 'Heading',
   subheading: 'Subheading',
-  body: 'Body',
-  headerActions: [
-    <Button key="1" padding="0" radius="0" border="0" color="#special">
-      Button
-    </Button>,
-  ],
-  footerActions: [
-    <Button key="1">Button</Button>,
-    <Button special key="2">
-      Button
-    </Button>,
-  ],
+  body:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+  headerActions: [<Button color="#special">Click Me</Button>],
+  footerActions: [<Button key="1">Button</Button>, <Button special>Click Me</Button>],
 };
 
 export const SectionExample = Template.bind({});
 SectionExample.args = {
   heading: 'Heading',
   subheading: 'Subheading',
-  body: 'Body',
-  headerActions: [
-    <Button key="1" padding="0" radius="0" border="0" color="#special">
-      Button
-    </Button>,
-  ],
-  footerActions: [
-    <Button key="1">Button</Button>,
-    <Button special key="2">
-      Button
-    </Button>,
-  ],
+  body:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+  headerActions: [<Button color="#special">Click Me</Button>],
+  footerActions: [<Button>Click Me</Button>, <Button special>Click Me</Button>],
   children: [
     <Card
       key="one"
@@ -103,17 +82,11 @@ SectionExample.args = {
       subheading="Subheading"
       bodyActions={[
         <Button key="1" padding="0" radius="0" border="0" color="#special">
-          Button
+          Click Me
         </Button>,
       ]}
     />,
-    <Card
-      key="two"
-      body="Body"
-      radius="0"
-      border="top"
-      subheading="Subheading"
-    />,
+    <Card key="two" body="Body" radius="0" border="top" subheading="Subheading" />,
     <Card key="three" body="Body" radius="0" border="top" />,
   ],
 };

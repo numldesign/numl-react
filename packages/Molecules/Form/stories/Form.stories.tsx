@@ -21,18 +21,12 @@ const Template = ({ ...args }) => (
       <Form.Field name="username">
         <Form.Label>User Name</Form.Label>
         <Form.Input grow="1"></Form.Input>
-        <Form.Check
-          message="This field is required"
-          assert="required"
-        ></Form.Check>
+        <Form.Check message="This field is required" assert="required"></Form.Check>
       </Form.Field>
       <Form.Field name="email">
         <Form.Label>Email Address</Form.Label>
         <Form.Input grow="1"></Form.Input>
-        <Form.Check
-          message="Email Address is required"
-          assert="required"
-        ></Form.Check>
+        <Form.Check message="Email Address is required" assert="required"></Form.Check>
       </Form.Field>
       <Form.Submit>Submit</Form.Submit>
     </Form>

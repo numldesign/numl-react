@@ -57,7 +57,5 @@ export const WithCustom = Template.bind({});
 WithCustom.args = {
   label: 'Learn more about',
   icon: <Icon name="help" />,
-  link: (
-    <Link to="https://numl.design" label="product" icon="help-circle-outline" />
-  ),
+  link: <Link to="https://numl.design" label="product" icon="help-circle-outline" />,
 };

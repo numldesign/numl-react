@@ -7,15 +7,11 @@ function DatePicker(allProps: TDatePickerProps) {
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener('input', (evt: InputEvent) =>
-        onChange(evt.detail)
-      );
+      ref.current.addEventListener('input', (evt: InputEvent) => onChange(evt.detail));
     }
   }, []);
 
-  return (
-    <nu-card ref={ref} use-datePicker width="min-content" {...otherProps} />
-  );
+  return <nu-card ref={ref} use-datePicker width="min-content" {...otherProps} />;
 }
 
 export default DatePicker;

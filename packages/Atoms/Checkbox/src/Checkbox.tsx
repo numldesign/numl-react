@@ -12,32 +12,14 @@ function Checkbox(allProps: TCheckboxProps): JSX.Element {
   return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
-Checkbox.Field = function CheckboxField(
-  allProps: TCheckboxFieldProps
-): JSX.Element {
-  let {
-    checked,
-    disabled,
-    id,
-    children,
-    onTap,
-    label,
-    onInput,
-    value,
-    ...otherProps
-  } = allProps;
+Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
+  let { checked, disabled, id, children, onTap, label, onInput, value, ...otherProps } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
 
   return (
-    <nu-field
-      display="flex"
-      flow="row"
-      items="center start"
-      gap="1x"
-      {...otherProps}
-    >
+    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
       {ActionElement({
         as: 'nu-checkbox',
         checked,

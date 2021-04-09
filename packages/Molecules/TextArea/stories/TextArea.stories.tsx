@@ -47,11 +47,7 @@ export const WithRadio = Template.bind({});
 WithRadio.args = {
   placeholder: 'Here is a simple placeholder',
   children: (
-    <Radio.Group
-      inline
-      size="sm"
-      onChange={(props) => console.log('selected ', props)}
-    >
+    <Radio.Group inline size="sm" onChange={(props) => console.log('selected ', props)}>
       <Radio.Field key="label_1" value="label_1">
         Label 1
       </Radio.Field>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { requireNude } from '../helpers';
 
 export default function Root(props: any) {
-  let { children, onInit, padding = '2x', ...otherProps } = props;
+  let { children, onInit, padding = 'around', ...otherProps } = props;
 
   useEffect(() => {
     requireNude().then((Nude: any) => {
@@ -22,7 +22,8 @@ export default function Root(props: any) {
       fill="subtle"
       {...otherProps}
     >
-      <nu-theme hue="262" />
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       {children}
     </nu-root>
   );

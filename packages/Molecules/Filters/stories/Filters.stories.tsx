@@ -22,10 +22,7 @@ Default.args = {
   responsive: '601px',
   flow: 'column|row',
   filterSearch: (
-    <TextInput
-      placeholder="Text Field"
-      prefix={<Icon name="search-outline" padding="1x" />}
-    />
+    <TextInput placeholder="Text Field" prefix={<Icon name="search-outline" padding="1x" />} />
   ),
   filterGroup: (
     <Button.Group>
@@ -34,16 +31,10 @@ Default.args = {
         <Icon name="chevron-down-outline" />
         <nu-popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
-            <Menu.Item
-              value="Action 1"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+            <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
             </Menu.Item>
-            <Menu.Item
-              value="Action 2"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+            <Menu.Item value="Action 2" onClick={(evt) => console.log(evt.target.value)}>
               Action 2
             </Menu.Item>
           </Menu>
@@ -79,16 +70,10 @@ WithoutSearch.args = {
         <Icon name="chevron-down-outline" />
         <nu-popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
-            <Menu.Item
-              value="Action 1"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+            <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
             </Menu.Item>
-            <Menu.Item
-              value="Action 2"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+            <Menu.Item value="Action 2" onClick={(evt) => console.log(evt.target.value)}>
               Action 2
             </Menu.Item>
           </Menu>

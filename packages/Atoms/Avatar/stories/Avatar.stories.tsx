@@ -25,7 +25,7 @@ export default {
 const Template = ({ ...args }) => {
   return (
     <Root>
-      <Avatar {...args}></Avatar>
+      <Avatar.Icon {...args}></Avatar.Icon>
     </Root>
   );
 };
@@ -36,9 +36,7 @@ Basic.args = {};
 const Profile = ({ ...args }) => {
   return (
     <Root>
-      <Avatar.Profile {...args}>
-        <Avatar {...args}></Avatar>
-      </Avatar.Profile>
+      <Avatar {...args}></Avatar>
     </Root>
   );
 };

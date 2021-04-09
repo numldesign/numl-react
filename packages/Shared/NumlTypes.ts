@@ -52,7 +52,7 @@ export interface BaseProps {
   size?: string;
   hide?: string;
   show?: string;
-  opacity?: string;
+  opacity?: boolean;
   transition?: string;
   scrollbar?: string;
   before?: string;
@@ -84,6 +84,7 @@ export interface BaseProps {
   valuemin?: string;
   valuemax?: string;
   valuenow?: string;
+  name?: string;
   setsize?: string;
   posinset?: string;
   expanded?: string;
@@ -92,6 +93,7 @@ export interface BaseProps {
   haspopup?: string;
   activedescendant?: string;
   t?: string;
+  toggle?: boolean;
   'use-focus'?: boolean;
   'use-hover'?: boolean;
   'use-listbox'?: boolean;
@@ -131,18 +133,18 @@ export interface BaseProps {
   'use-menuitem'?: boolean;
   'use-offset'?: boolean;
   'use-appear'?: boolean;
-  'use-hotkey'?: boolean;
+  'use-hotkey'?: string;
   'use-current'?: boolean;
   type?: string;
   precision?: string;
-  disabled?: string;
+  disabled?: boolean;
   'link-value'?: string;
   value?: string;
   'off-value'?: string;
   scrollto?: string;
   action?: string;
   lang?: string;
-  special?: string;
+  special?: boolean;
   placeholder?: string;
   min?: string;
   max?: string;
@@ -215,17 +217,4 @@ export enum Sizes {
   h5 = 'h5',
   h6 = 'h6',
 }
-export const SizesList = [
-  'xxs',
-  'xs',
-  'sm',
-  'md',
-  'lg',
-  'xl',
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-];
+export const SizesList = ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];

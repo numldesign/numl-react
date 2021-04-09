@@ -52,12 +52,7 @@ export const WithIcons = (args) => {
           <Icon name="share-social-outline" />
           Share
         </Menu.Item>
-        <Menu.Item
-          value="Getlink"
-          border="bottom"
-          columns="auto 1fr"
-          onClick={handleMenuClick}
-        >
+        <Menu.Item value="Getlink" border="bottom" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="link-outline" />
           Get link
         </Menu.Item>
@@ -65,11 +60,7 @@ export const WithIcons = (args) => {
           <Icon name="copy-outline" />
           Copy
         </Menu.Item>
-        <Menu.Item
-          value="Download"
-          columns="auto 1fr"
-          onClick={handleMenuClick}
-        >
+        <Menu.Item value="Download" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="download-outline" />
           Download
         </Menu.Item>
@@ -169,7 +160,7 @@ export const WithSelectableItems = (args) => {
         >
           <Icon
             name="checkmark-outline"
-            opacity={selected === 'Single' ? 1 : 0}
+            opacity={selected === 'Single' ? '1' : '0'}
             transition="opacity .1s"
           />
           Single
@@ -185,7 +176,7 @@ export const WithSelectableItems = (args) => {
         >
           <Icon
             name="checkmark-outline"
-            opacity={selected === '1.15' ? 1 : 0}
+            opacity={selected === '1.15' ? '1' : '0'}
             transition="opacity .1s"
           />
           1.15

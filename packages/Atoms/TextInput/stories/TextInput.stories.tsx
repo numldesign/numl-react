@@ -80,11 +80,7 @@ const Template = ({ theme, ...args }) => {
     args.validationMessage ||
     args.helpText ||
     args.helpTextClear;
-  return (
-    <Root>
-      {showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}
-    </Root>
-  );
+  return <Root>{showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}</Root>;
 };
 
 export const Basic = Template.bind({});

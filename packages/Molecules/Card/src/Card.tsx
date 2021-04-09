@@ -1,4 +1,3 @@
-import T from 'prop-types';
 import React from 'react';
 import { TCardProps } from './Card.type';
 
@@ -7,6 +6,7 @@ function Card(allProps: TCardProps) {
     heading,
     subheading,
     body,
+    padding = '0',
     headerActions,
     footerActions,
     bodyActions,
@@ -14,43 +14,36 @@ function Card(allProps: TCardProps) {
     ...otherProps
   } = allProps;
   return (
-    <nu-card padding="0" {...otherProps}>
-      <nu-flow padding="2x" gap="1x">
-        {heading && (
-          <nu-pane>
-            <nu-block flex="1" size="md" text="sb" color="#text-soft">
-              {heading}
-            </nu-block>
-            {headerActions}
-          </nu-pane>
-        )}
-        {body ? (
-          <nu-pane items="flex-start">
-            <nu-block flex="1">
-              {subheading ? <nu-block size="xs">{subheading}</nu-block> : null}
-              <nu-block size="sm">{body}</nu-block>
-            </nu-block>
-            {bodyActions}
-          </nu-pane>
-        ) : null}
-      </nu-flow>
+    <nu-card padding={padding} {...otherProps}>
+      {heading || body ? (
+        <nu-flow padding="2x" gap="1x">
+          {heading && (
+            <nu-pane>
+              <nu-block flex="1" size="1" text="sb" color="#text-soft">
+                {heading}
+              </nu-block>
+              {headerActions}
+            </nu-pane>
+          )}
+          {body ? (
+            <nu-pane items="flex-start">
+              <nu-block flex="1">
+                {subheading ? <nu-block size="xs">{subheading}</nu-block> : null}
+                <nu-block size="sm">{body}</nu-block>
+              </nu-block>
+              {bodyActions}
+            </nu-pane>
+          ) : null}
+        </nu-flow>
+      ) : null}
       {children}
       {footerActions ? (
-        <nu-pane content="flex-end" gap="1x" padding="2x">
+        <nu-pane content="flex-end" gap="0.3" padding="0.5">
           {footerActions}
         </nu-pane>
       ) : null}
     </nu-card>
   );
 }
-
-Card.propTypes = {
-  heading: T.string,
-  subheading: T.string,
-  body: T.string,
-  headerActions: T.any,
-  footerActions: T.any,
-  bodyActions: T.any,
-};
 
 export default Card;

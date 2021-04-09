@@ -3,14 +3,7 @@ import { ForunIcon } from './ForunIcon';
 
 function TopBar(props) {
   /** working on this */
-  let {
-    placeholder,
-    nuLinkAction,
-    logo,
-    username,
-    menuIcon,
-    ...otherprops
-  } = props;
+  let { placeholder, nuLinkAction, logo, username, menuIcon, ...otherprops } = props;
   return (
     <nu-block>
       <nu-grid

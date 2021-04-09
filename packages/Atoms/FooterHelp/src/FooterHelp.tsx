@@ -10,11 +10,7 @@ function FooterHelp(allProps: TFooterHelp) {
     <nu-block radius="4x" border="1bw" padding="2x" {...otherProps}>
       {typeof icon === 'string' ? <Icon name={icon} /> : icon}
       <nu-el padding="0 4px">{label}</nu-el>
-      {typeof link === 'string' ? (
-        <Link to={link} label={linkLabel} icon="exit-outline" />
-      ) : (
-        link
-      )}
+      {typeof link === 'string' ? <Link to={link} label={linkLabel} icon="exit-outline" /> : link}
     </nu-block>
   );
 }

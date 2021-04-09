@@ -4,21 +4,13 @@ import Button from '../../Button/src/Button';
 import Icon from '../../Icon/src/Icon';
 
 function TextInput(allProps: any) {
-  let {
-    size,
-    prefix,
-    suffix,
-    disabled,
-    clearButton,
-    ...otherInputProps
-  } = allProps;
+  let { size, prefix, suffix, disabled, clearButton, ...otherInputProps } = allProps;
 
   const inputSize = size === 'sm' ? '20em' : '100%';
 
   return (
     <nu-inputgroup width={inputSize} padding="2px">
-      {prefix &&
-        (typeof prefix === 'string' ? <nu-icon name={prefix} /> : prefix)}
+      {prefix && (typeof prefix === 'string' ? <nu-icon name={prefix} /> : prefix)}
       <nu-input disabled={disabled || undefined} {...otherInputProps} />
       {suffix && (
         <nu-flex items="center">

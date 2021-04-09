@@ -9,12 +9,7 @@ function Link(allProps: TLinkProps) {
   return (
     <ActionElement as="nu-link" text="n" {...otherProps}>
       {label}
-      {icon &&
-        (typeof icon === 'string' ? (
-          <nu-icon name={icon} text="middle" />
-        ) : (
-          icon
-        ))}
+      {icon && (typeof icon === 'string' ? <nu-icon name={icon} text="middle" /> : icon)}
     </ActionElement>
   );
 }

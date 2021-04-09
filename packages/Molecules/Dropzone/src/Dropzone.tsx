@@ -1,22 +1,12 @@
 import React from 'react';
 
 function Dropzone(props) {
-  const {
-    width = '100%',
-    height = '15.625rem',
-    children,
-    ...otherProps
-  } = props;
+  const { width = '100%', height = '15.625rem', children, ...otherProps } = props;
 
   return (
     <nu-fileinput width={width} height={height} {...otherProps} flow="row">
       <nu-block row="-3">
-        <svg
-          width="97"
-          viewBox="0 0 97 88"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="97" viewBox="0 0 97 88" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M72.5 12V9.25C72.4937 7.06392 71.6224 4.96918 70.0766 3.42338C68.5308 1.87758 66.4361 1.00635 64.25 1H9.25C7.06392 1.00635 4.96918 1.87758 3.42338 3.42338C1.87758 4.96918 1.00635 7.06392 1 9.25V53.25C1.00635 55.4361 1.87758 57.5308 3.42338 59.0766C4.96918 60.6224 7.06392 61.4937 9.25 61.5H12"
             stroke="#E1DEE4"

@@ -17,7 +17,7 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
-    <AccountConnection {...args} />
+    <AccountConnection {...args}></AccountConnection>
   </Root>
 );
 
@@ -26,6 +26,7 @@ Default.args = {
   username: 'Example App',
   isConnected: false,
   onConnectionChange: (props) => console.log(props),
+  subtitle: 'Account connected',
   children: [
     'By clicking Connect, you agree to accept Sample App’s ',
     <Link key="1" label="terms and conditions." />,
@@ -38,4 +39,5 @@ WithoutChildren.args = {
   username: 'Example App',
   isConnected: true,
   onConnectionChange: (props) => console.log(props),
+  subtitle: 'Account connected',
 };
