@@ -10,7 +10,8 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
