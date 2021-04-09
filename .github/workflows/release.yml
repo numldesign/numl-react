@@ -19,7 +19,7 @@ jobs:
 
       # Setup Node.js using the appropriate version
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: "14.x"
 
@@ -41,7 +41,7 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Setup Node.js
-          uses: actions/setup-node@v1
+          uses: actions/setup-node@v2.1.5
           with:
             node-version: 14.x
 
