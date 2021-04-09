@@ -2,8 +2,7 @@
     "buildCommand": "build",
     "packages": [],
     "publishDirectory": {
-        "react": "build/node_modules/react",
-        "react-dom": "build/node_modules/react-dom"
+        "numl-react": "./dist/"
     },
     "sandboxes": [
         "vanilla"
