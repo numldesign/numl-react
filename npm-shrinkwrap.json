@@ -16,7 +16,6 @@
         "numl": "1.0.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "typescript": "^4.2.3",
         "vite": "^2.1.5"
       },
       "devDependencies": {
@@ -47,7 +46,6 @@
         "chromatic": "^5.6.1",
         "husky": "^6.0.0",
         "jest": "^26.6.3",
-        "jsx-native-events": "^1.0.2",
         "lint-staged": "^10.5.4",
         "prettier": "2.2.1",
         "pretty-quick": "^3.1.0",
@@ -27367,9 +27365,10 @@
       }
     },
     "node_modules/typescript": {
-      "version": "4.2.4",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz",
-      "integrity": "sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==",
+      "version": "4.2.3",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.2.3.tgz",
+      "integrity": "sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==",
+      "dev": true,
       "bin": {
         "tsc": "bin/tsc",
         "tsserver": "bin/tsserver"
@@ -51550,9 +51549,10 @@
       }
     },
     "typescript": {
-      "version": "4.2.4",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz",
-      "integrity": "sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg=="
+      "version": "4.2.3",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.2.3.tgz",
+      "integrity": "sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==",
+      "dev": true
     },
     "uglify-js": {
       "version": "3.13.3",
