@@ -14,6 +14,8 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './packages/entry.ts'),
       name: 'Avatar',
+      formats : ['es','cjs','umd','iife'],
+      minify : false
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

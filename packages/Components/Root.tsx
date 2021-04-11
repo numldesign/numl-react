@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { requireNude } from '../helpers';
 
-export default function Root(props: any) {
+export function Root(props: any) {
   let { children, onInit, padding = 'around', ...otherProps } = props;
 
   useEffect(() => {

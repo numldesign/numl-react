@@ -1,8 +1,7 @@
 {
   "name": "numl-react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React wrappers and components for Numl.Design",
-  "main": "dist",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -22,6 +21,8 @@
     "numl": "1.0.1",
     "jsx-native-events": "^2.0.0"
   },
+  "files": ["dist"],
+  "main": "index.js",
   "devDependencies": {
     "@changesets/cli": "^2.16.0",
     "@types/node": "^14.14.35",
