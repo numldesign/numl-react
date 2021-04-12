@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { requireNude } from '../helpers';
+import "numl/dist/index"
 
 export function Root(props: any) {
   let { children, onInit, padding = 'around', ...otherProps } = props;

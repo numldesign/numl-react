@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-export function requireNude() {
+export function requireNude(): Promise<any> {
   if (typeof window === 'undefined') return new Promise(() => {});
 
   if (window.Nude) {
