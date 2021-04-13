@@ -31,14 +31,14 @@ export default {
   },
 };
 
-const Template = function({ ...args }){
-return (
-  <Root>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-    <ProgressBar {...args} />
-  </Root>
-) 
-}
+const Template = function ({ ...args }) {
+  return (
+    <Root>
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ProgressBar {...args} />
+    </Root>
+  );
+};
 
 export const Default = Template.bind({});
