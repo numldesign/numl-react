@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import TextInput from '../src/TextInput';
 
 export default {
@@ -80,7 +80,14 @@ const Template = ({ theme, ...args }) => {
     args.validationMessage ||
     args.helpText ||
     args.helpTextClear;
-  return <Root>{showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}</Root>;
+  return (
+    <Root>
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
+      {showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}
+    </Root>
+  );
 };
 
 export const Basic = Template.bind({});

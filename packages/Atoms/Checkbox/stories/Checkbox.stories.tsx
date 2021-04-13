@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import Checkbox from '../src/Checkbox';
 
 export default {
@@ -22,7 +22,9 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <Root>
+  <Root fill="subtle">
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <Checkbox.Field {...args}></Checkbox.Field>
   </Root>
 );
@@ -34,7 +36,9 @@ Basic.args = {
 };
 
 const Template2 = ({ children, ...args }) => (
-  <Root>
+  <Root fill="subtle">
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <Checkbox.Field {...args}>
       <Checkbox.Label>{children}</Checkbox.Label>
     </Checkbox.Field>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from '../../../Atoms/Button';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { CalloutCard } from '../index';
 import { Icon } from './../../../Atoms/Icon';
 import { Link } from './../../../Atoms/Link';
-import { Block } from './../../../Components/Block';
-import { Image } from './../../../Components/Image';
+import { Block } from './../../../Elements/Block';
+import { Image } from './../../../Elements/Image';
 
 export default {
   title: 'Example/Molecules/CalloutCard',
@@ -26,6 +26,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <CalloutCard {...args} width="500px" />
   </Root>
 );
@@ -80,6 +83,9 @@ WithoutAction.args = {
 
 const Template2 = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />

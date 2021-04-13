@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { MediaCard } from '../index';
 import { Button } from './../../../Atoms/Button/';
 
@@ -10,6 +10,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <MediaCard {...args}></MediaCard>
   </Root>
 );

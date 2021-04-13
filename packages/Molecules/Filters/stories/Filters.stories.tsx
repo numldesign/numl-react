@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
 import { TextInput } from '../../../Atoms/TextInput';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { Menu } from '../../Menu';
 import { Filters } from '../index';
 
@@ -13,6 +13,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <Filters {...args} />
   </Root>
 );

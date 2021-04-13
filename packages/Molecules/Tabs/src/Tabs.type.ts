@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../NumlTypes';
 export interface TTabsProps extends BaseProps {
   prefix?: any;
   defaultValue?: any;

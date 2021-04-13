@@ -3,10 +3,10 @@ import { Badge } from '../../../Atoms/Badge';
 import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
 import { Thumbnail } from '../../../Atoms/Thumbnail';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import OptionList from '../src/OptionList';
-import { Block } from './../../../Components/Block';
-import { Grid } from './../../../Components/Grid';
+import { Block } from './../../../Elements/Block';
+import { Grid } from './../../../Elements/Grid';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -15,6 +15,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <OptionList {...args} />
   </Root>
 );

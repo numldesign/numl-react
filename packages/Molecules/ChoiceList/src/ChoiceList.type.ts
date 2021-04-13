@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../NumlTypes';
 export interface TChoiceListProps extends BaseProps {
   heading?: any;
   choices?: any;

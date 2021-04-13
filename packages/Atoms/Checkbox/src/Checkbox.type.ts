@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../Shared/NumlTypes';
+import { BaseProps } from '../../../NumlTypes';
 
 export interface TCheckboxProps extends BaseProps {
   checked?: any;

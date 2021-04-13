@@ -1,8 +1,8 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { Button } from '../index';
-import { Grid } from './../../../Components/Grid/';
-import { Heading } from './../../../Components/Heading/src/Heading';
+import { Grid } from './../../../Elements/Grid/';
+import { Heading } from './../../../Elements/Heading/src/Heading';
 
 export default {
   title: 'Example/Atoms/Button',
@@ -19,7 +19,9 @@ export default {
 const Template = function (props: any) {
   const { label, ...otherProps } = props;
   return (
-    <Root>
+    <Root fill="subtle">
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Grid columns="auto" rows="1fr" gap>
         <Grid.Row row="1">
           <Grid.Column column="1" padding="0x 2x">

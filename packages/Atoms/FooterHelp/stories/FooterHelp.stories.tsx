@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { Icon } from '../../Icon';
 import { Link } from '../../Link';
 import { FooterHelp } from '../index';
@@ -40,7 +40,9 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <Root>
+  <Root fill="subtle">
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <FooterHelp {...args} />
   </Root>
 );

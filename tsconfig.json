@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "types": [
-      "vite/client"
+      "vite/client",
+      "node", 
+      "lodash", 
+      "express", 
+      "zone.js"
     ],
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
@@ -51,7 +55,7 @@
     "allowSyntheticDefaultImports": true, /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
     "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "preserveSymlinks": true, /* Do not resolve the real path of symlinks. */
-    // "allowUmdGlobalAccess": true,                /* Allow accessing UMD globals from modules. */
+    "allowUmdGlobalAccess": true,                /* Allow accessing UMD globals from modules. */
     /* Source Map Options */
     // "sourceRoot": "",                            /* Specify the location where debugger should locate TypeScript files instead of source locations. */
     // "mapRoot": "",                               /* Specify the location where debugger should locate map files instead of generated locations. */
@@ -68,5 +72,8 @@
     "*.config.js",
     "node_modules",
     "./packages/Molecules/**/**/*.stories.tsx"
+  ],
+  "include": [
+    "packages/global.d.ts",
   ]
 }

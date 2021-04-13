@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React from 'react';
-import { ActionElement } from '../../../Components/Action';
+import { ActionElement } from '../../../Elements/Action';
 import { TSwitchFieldProps, TSwitchProps } from './Switch.type';
 
 function Switch(allProps: TSwitchProps) {

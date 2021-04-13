@@ -1,5 +1,6 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import Avatar from '../src/Avatar';
 
 export default {
@@ -24,9 +25,11 @@ export default {
 
 const Template = ({ ...args }) => {
   return (
-    <Root>
+    <NumlProvider>
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Avatar.Icon {...args}></Avatar.Icon>
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -35,7 +38,9 @@ Basic.args = {};
 
 const Profile = ({ ...args }) => {
   return (
-    <Root>
+    <Root fill="subtle">
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Avatar {...args}></Avatar>
     </Root>
   );

@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import TextInput from '../../../Atoms/TextInput/src/TextInput';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import ChoiceList from '../src/ChoiceList';
 
 export default {
@@ -10,6 +10,9 @@ export default {
 
 const Template = (args) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <ChoiceList {...args} />
   </Root>
 );
@@ -34,6 +37,9 @@ export const WithTextBox = (args) => {
 
   return (
     <Root>
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
       <ChoiceList
         {...args}
         heading="Label"

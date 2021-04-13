@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React from 'react';
-import { ActionElement } from '../../../Components/Action';
+import { ActionElement } from '../../../Elements/Action';
 import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
 function Checkbox(allProps: TCheckboxProps): JSX.Element {

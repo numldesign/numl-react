@@ -1,7 +1,7 @@
 import React from 'react';
-import { Block } from './../../../Components/Block';
-import { Grid } from './../../../Components/Grid';
-import { Image } from './../../../Components/Image';
+import { Block } from './../../../Elements/Block';
+import { Grid } from './../../../Elements/Grid';
+import { Image } from './../../../Elements/Image';
 import { TCalloutCardProps } from './CalloutCard.type';
 
 function CalloutCard(allProps: TCalloutCardProps): JSX.Element {

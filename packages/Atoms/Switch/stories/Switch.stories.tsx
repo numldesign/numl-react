@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { Switch } from '../index';
 
 export default {
@@ -26,7 +26,12 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <Root>{children ? <Switch.Field children={children} {...args} /> : <Switch {...args} />}</Root>
+  <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
+    {children ? <Switch.Field children={children} {...args} /> : <Switch {...args} />}
+  </Root>
 );
 
 export const Basic = Template.bind({});

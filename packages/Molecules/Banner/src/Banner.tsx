@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../../../Atoms/Icon';
-import { Block } from './../../../Components/Block';
+import { Block } from './../../../Elements/Block';
 import { TBannerProps } from './Banner.type';
 
 function Banner(allProps: TBannerProps): JSX.Element {

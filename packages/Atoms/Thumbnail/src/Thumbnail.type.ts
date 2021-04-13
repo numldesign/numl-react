@@ -1,4 +1,4 @@
-import { BaseProps, screenSizes } from '../../../Shared/NumlTypes';
+import { BaseProps, screenSizes } from '../../../NumlTypes';
 
 export interface TThumbnailProps extends BaseProps {
   size: screenSizes;

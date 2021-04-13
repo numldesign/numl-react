@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionElement } from './../../../Components/Action';
+import { ActionElement } from './../../../Elements/Action';
 import { TButtonGroupProps, TButtonProps } from './Button.type';
 
 function Button(props: TButtonProps): JSX.Element {

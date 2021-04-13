@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import Badge from '../src/Badge';
 
 export default {
@@ -24,7 +24,9 @@ export default {
 const DefaultTemplate = function (props) {
   const { ...otherProps } = props;
   return (
-    <Root>
+    <Root fill="subtle">
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Badge {...otherProps}></Badge>
     </Root>
   );
@@ -38,7 +40,9 @@ Default.args = {
 const WithIconTemplate = function (props) {
   const { label, ...otherProps } = props;
   return (
-    <Root>
+    <Root fill="subtle">
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Badge {...otherProps} icon={props.icon}>
         <Badge.Label>{props.label}</Badge.Label>
       </Badge>

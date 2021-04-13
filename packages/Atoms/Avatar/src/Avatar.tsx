@@ -101,12 +101,12 @@ Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Elem
   return (
     <nu-block grow="1" {...otherProps}>
       {username ? (
-        <nu-block color="#text" size={childSize} padding="0.2">
+        <nu-block size={childSize} padding="0.2">
           {username}
         </nu-block>
       ) : null}
       {subtitle ? (
-        <nu-block color="#text-soft" size={childSize} padding="0.2">
+        <nu-block size={childSize} padding="0.2">
           {subtitle}
         </nu-block>
       ) : null}

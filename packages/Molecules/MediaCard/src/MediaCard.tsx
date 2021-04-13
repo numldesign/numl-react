@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block } from './../../../Components/Block/';
+import { Block } from './../../../Elements/Block/';
 
 function MediaCard(props) {
   const {

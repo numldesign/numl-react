@@ -1,9 +1,3 @@
-declare global {
-  interface Window {
-    Nude: any;
-  }
-}
-
 export function requireNude(): Promise<any> {
   if (typeof window === 'undefined') return new Promise(() => {});
 
@@ -14,6 +8,24 @@ export function requireNude(): Promise<any> {
       window.addEventListener('nudeReady', () => {
         resolve(window.Nude);
       });
+    });
+  }
+}
+
+export function LoadNuml(): Promise<any> {
+  if (window.Nude) {
+    return Promise.resolve(window.Nude);
+  } else {
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.skypack.dev/numl@v1.1.0';
+      script.type = 'module';
+      script.id = 'numl';
+      document.body.appendChild(script);
+      script.onload = () => {
+        console.log('loaded');
+        return Promise.resolve(window.Nude);
+      };
     });
   }
 }

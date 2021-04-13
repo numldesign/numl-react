@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { ActionElement } from '../../../Components/Action';
+import { ActionElement } from '../../../Elements/Action';
 import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
 function Radio(allProps: TRadioProps): JSX.Element {

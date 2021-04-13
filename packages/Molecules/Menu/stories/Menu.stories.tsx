@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from '../../../Atoms/Icon';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import { Menu } from '../index';
 
 export default {
@@ -15,6 +15,9 @@ export const Default = (args) => {
 
   return (
     <Root>
+      <nu-theme hue="290" saturation="75"></nu-theme>
+      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
       <Menu {...args} border radius size="sm">
         <Menu.Item value="undo" onClick={handleMenuClick}>
           Undo
@@ -44,6 +47,9 @@ export const WithIcons = (args) => {
   return (
     <Root>
       <Menu {...args} border radius size="sm">
+        <nu-theme hue="290" saturation="75"></nu-theme>
+        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
         <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="eye-outline" />
           Preview
@@ -77,6 +83,9 @@ export const WithHotKeyAndPopup = (args) => {
   return (
     <Root>
       <Menu {...args} border radius size="sm">
+        <nu-theme hue="290" saturation="75"></nu-theme>
+        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
         <Menu.Item
           value="Cut"
           columns="auto 1fr auto"
@@ -149,6 +158,9 @@ export const WithSelectableItems = (args) => {
   return (
     <Root>
       <Menu {...args} border radius size="sm">
+        <nu-theme hue="290" saturation="75"></nu-theme>
+        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
         <Menu.Item
           value="Single"
           columns="auto 1fr"

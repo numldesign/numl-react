@@ -1,4 +1,5 @@
-export { Root } from './Components/Root';
+export { default as Root } from './Elements/Root';
+export { NumlProvider } from './Elements/NumlProvider';
 export { Avatar } from './Atoms/Avatar/';
 export { Badge } from './Atoms/Badge/';
 export { Button } from './Atoms/Button/';
@@ -6,7 +7,7 @@ export { Checkbox } from './Atoms/Checkbox/';
 export { Chip } from './Atoms/Chip/';
 export { ExceptionList } from './Atoms/ExceptionList/';
 export { FooterHelp } from './Atoms/FooterHelp/';
-export { requireNude } from './helpers'
+export { requireNude } from './helpers';
 export { MessageError } from './Atoms/MessageError/';
 export { Pagination } from './Atoms/Pagination/';
 export { ProgressBar } from './Atoms/ProgressBar/';

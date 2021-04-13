@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../../../Atoms/Button';
 import { Icon } from '../../../Atoms/Icon';
-import Root from '../../../Components/Root';
+import Root from '../../../Elements/Root';
 import EmptyState from '../src/EmptyState';
 
 export default {
@@ -23,6 +23,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <Root>
+    <nu-theme hue="290" saturation="75"></nu-theme>
+    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+
     <EmptyState {...args} />
   </Root>
 );
