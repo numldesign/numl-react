@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "packages/Atoms/Avatar/*"
+  ],
+  "version": "0.0.5"
+}

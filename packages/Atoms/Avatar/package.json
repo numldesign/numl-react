@@ -1,5 +1,5 @@
 {
-  "name": "@numl-react/avatar",
+  "name": "@numl/avatar",
   "version": "0.0.1",
   "description": "A simple and accessible accordion component for React & Chakra UI",
   "keywords": [
@@ -13,7 +13,7 @@
   "author": "Numl.Design Team",
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "main": "./index",
+  "main": "./index.js",
   "files": [
     "dist"
   ],
@@ -28,11 +28,7 @@
   "bugs": {
     "url": "https://github.com/numldesign/numl-react/issues"
   },
-  "scripts": {
-    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
-    "build": "concurrently yarn:build:*",
-    "test": "jest --env=jsdom --passWithNoTests"
-  },
+  "scripts": {},
   "devDependencies": {
     "react": "^17.0.1"
   },
