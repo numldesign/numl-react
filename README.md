@@ -6,7 +6,7 @@ Modular & Accessible React Components made on top of Numl 🚀
 [![](https://img.shields.io/npm/dt/numl-react.svg?style=flat)](https://www.npmjs.com/package/numl-react)
 [![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
 
-### Warning: This project is WIP, API might change without notice.
+Warning: This project is WIP, API might change without notice.
 
 ## Quick Start
 
