@@ -1,6 +1,8 @@
 {
   "packages": [
-    "packages/Atoms/Avatar/*"
+    "./packages/*",
+    "./packages/Atoms/*",
+    "./packages/Molecules/*"
   ],
   "version": "0.0.5"
 }
