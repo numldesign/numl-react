@@ -1,21 +1,21 @@
-# @numl-react/footerhelp
+# @numl-react/footer-help
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/footerhelp
+yarn add @numl-react/footer-help
 
 # or
 
-npm i @numl-react/footerhelp
+npm i @numl-react/footer-help
 ```
 
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/footerhelp';
+import { ComponentName } from '@numl-react/footer-help';
 ```
 
 ## Component
