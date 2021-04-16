@@ -21,7 +21,7 @@ OR
 
 yarn add @numl-react/core
 ```
-https://cdn.jsdelivr.net/npm/@numl-react/core@0.0.7/
+
 via [JsDelivr](https://cdn.jsdelivr.net/):
 
 ```html
