@@ -1,6 +1,6 @@
 # @numl-react/avatar
 
-WIP
+Intro: WIP
 
 ## Installation
 
@@ -18,7 +18,7 @@ npm i @numl-react/avatar
 import { ComponentName } from '@numl-react/avatar';
 ```
 
-## Component:
+## Component
 
 WIP
 
@@ -26,6 +26,6 @@ WIP
 
 WIP
 
-## References:
+## References
 
 WIP
