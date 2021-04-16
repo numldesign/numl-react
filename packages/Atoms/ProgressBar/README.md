@@ -1,21 +1,21 @@
-# @numl-react/progressbar
+# @numl-react/progress-bar
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/progressbar
+yarn add @numl-react/progress-bar
 
 # or
 
-npm i @numl-react/progressbar
+npm i @numl-react/progress-bar
 ```
 
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/progressbar';
+import { ComponentName } from '@numl-react/progress-bar';
 ```
 
 ## Component
