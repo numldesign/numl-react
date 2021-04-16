@@ -1,21 +1,21 @@
-# @numl-react/exceptionlist
+# @numl-react/exception-list
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/exceptionlist
+yarn add @numl-react/exception-list
 
 # or
 
-npm i @numl-react/exceptionlist
+npm i @numl-react/exception-list
 ```
 
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/exceptionlst';
+import { ComponentName } from '@numl-react/exception-list';
 ```
 
 ## Component
