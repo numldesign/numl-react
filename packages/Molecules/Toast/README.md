@@ -1,21 +1,21 @@
-# @numl-react/search
+# @numl-react/toast
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/search
+yarn add @numl-react/toast
 
 # or
 
-npm i @numl-react/search
+npm i @numl-react/toast
 ```
 
 ## Import Components
 
 ```jsx
-import { Search } from '@numl-react/search';
+import { Toast } from '@numl-react/toast';
 ```
 
 ## Component
@@ -23,7 +23,7 @@ import { Search } from '@numl-react/search';
 WIP
 
 ## Usage
-
+a
 WIP
 
 ## References

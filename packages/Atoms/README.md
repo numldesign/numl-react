@@ -1,21 +1,21 @@
-# @numl-react/atom
+# @numl-react/molecules
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/atom
+yarn add @numl-react/molecules
 
 # or
 
-npm i @numl-react/atom
+npm i @numl-react/molecules
 ```
 
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/atom';
+import { AccountConnection, Banner } from '@numl-react/molecules';
 ```
 
 ## Component

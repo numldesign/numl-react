@@ -1,10 +1,6 @@
 # @numl-react/molecules
 
-An accordion is a vertically stacked set of interactive headings that each
-contain a title or content snippet representing a section of content.
-
-The headings function as controls that enable users to reveal or hide their
-associated sections of content.
+Intro: WIP
 
 ## Installation
 
@@ -19,7 +15,7 @@ npm i @numl-react/molecules
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/molecules';
+import { Avatar, Button, Link } from '@numl-react/molecules';
 ```
 
 ## Component

@@ -1,21 +1,21 @@
-# @numl-react/search
+# @numl-react/form
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/search
+yarn add @numl-react/form
 
 # or
 
-npm i @numl-react/search
+npm i @numl-react/form
 ```
 
 ## Import Components
 
 ```jsx
-import { Search } from '@numl-react/search';
+import { Form } from '@numl-react/form';
 ```
 
 ## Component
