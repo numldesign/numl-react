@@ -1,5 +1,3 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-git add .
 npm run prettier
-git add .
