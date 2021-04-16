@@ -28,14 +28,4 @@ WIP
 
 ## References
 
-WIP## Component
-
-WIP
-
-## Usage
-
-WIP
-
-## References
-
 WIP
