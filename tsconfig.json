@@ -3,9 +3,6 @@
     "types": [
       "vite/client",
       "node", 
-      "lodash", 
-      "express", 
-      "zone.js"
     ],
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
