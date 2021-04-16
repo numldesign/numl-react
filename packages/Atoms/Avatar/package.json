@@ -1,14 +1,16 @@
 {
   "name": "@numl-react/avatar",
   "version": "0.0.1",
-  "description": "A simple and accessible accordion component for React & Chakra UI",
+  "description": "Avatars are used to show a thumbnail representation of an individual or business in the interface.",
   "keywords": [
-    "design",
-    "system",
-    "components",
+    "component",
+    "avatar",
+    "initials",
     "react",
-    "numl",
-    "uikit"
+    "react-components",
+    "profile-image",
+    "numl-react",
+    "photo"
   ],
   "author": "Numl.Design Team",
   "license": "MIT",
