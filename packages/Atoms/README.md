@@ -1,6 +1,6 @@
 # @numl-react/atom
 
-WIP
+Intro: WIP
 
 ## Installation
 
@@ -18,7 +18,7 @@ npm i @numl-react/atom
 import { ComponentName } from '@numl-react/atom';
 ```
 
-## Component:
+## Component
 
 WIP
 
@@ -26,6 +26,6 @@ WIP
 
 WIP
 
-## References:
+## References
 
 WIP
