@@ -4,11 +4,12 @@ module.exports = {
   build: {
     outDir: './packages/Atoms/Avatar/dist',
     lib: {
-      entry: path.resolve(__dirname, './index'),
+      entry: path.resolve(__dirname, './index.ts'),
       name: 'Avatar',
       formats: ['es', 'cjs'],
       minify: false,
     },
+    root:path.resolve(__dirname, './index.ts'),
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library

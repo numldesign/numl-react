@@ -28,11 +28,7 @@
   "bugs": {
     "url": "https://github.com/numldesign/numl-react/issues"
   },
-  "scripts": {
-    "start": "nodemon --watch src --exec yarn build -e ts,tsx",
-    "build": "concurrently yarn:build:*",
-    "test": "jest --env=jsdom --passWithNoTests"
-  },
+
   "devDependencies": {
     "react": "^17.0.1"
   },
