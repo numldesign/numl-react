@@ -15,7 +15,7 @@ npm i @numl-react/atom
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/{atom}';
+import { ComponentName } from '@numl-react/atom';
 ```
 
 ## Component:
