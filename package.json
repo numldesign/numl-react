@@ -1,5 +1,5 @@
 {
-  "name": "@numl/numl-react",
+  "name": "@numl-react/core",
   "version": "0.0.7",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
@@ -8,7 +8,25 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "build": "vite build",
-    "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.js",
+    "atoms" : "npm-run-all --parallel build:*",
+    "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.ts",
+    "build:badge": "vite build --config ./packages/Atoms/Badge/vite.config.ts",
+    "build:button": "vite build --config ./packages/Atoms/Button/vite.config.ts",
+    "build:checkbox": "vite build --config ./packages/Atoms/Checkbox/vite.config.ts",
+    "build:chip": "vite build --config ./packages/Atoms/Chip/vite.config.ts",
+    "build:exceptionlist": "vite build --config ./packages/Atoms/ExceptionList/vite.config.ts",
+    "build:footerhelp": "vite build --config ./packages/Atoms/FooterHelp/vite.config.ts",
+    "build:icon": "vite build --config ./packages/Atoms/Icon/vite.config.ts",
+    "build:link": "vite build --config ./packages/Atoms/Link/vite.config.ts",
+    "build:messageerror": "vite build --config ./packages/Atoms/MessageError/vite.config.ts",
+    "build:pagination": "vite build --config ./packages/Atoms/Pagination/vite.config.ts",
+    "build:progressbar": "vite build --config ./packages/Atoms/ProgressBar/vite.config.ts",
+    "build:radio": "vite build --config ./packages/Atoms/Radio/vite.config.ts",
+    "build:rangeslider": "vite build --config ./packages/Atoms/RangeSlider/vite.config.ts",
+    "build:switch": "vite build --config ./packages/Atoms/Switch/vite.config.ts",
+    "build:tag": "vite build --config ./packages/Atoms/Tag/vite.config.ts",
+    "build:textinput": "vite build --config ./packages/Atoms/TextInput/vite.config.ts",
+    "build:thumbnail": "vite build --config ./packages/Atoms/Thumbnail/vite.config.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "serve": "vite preview",
@@ -20,9 +38,6 @@
   },
   "files": [
     "dist"
-  ],
-  "workspaces": [
-    "packages/Atoms/Avatar"
   ],
   "main": "index.js",
   "devDependencies": {
@@ -59,6 +74,7 @@
     "jest": "^26.6.3",
     "jsx-native-events": "^2.0.0",
     "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
     "numl": "1.0.1",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",

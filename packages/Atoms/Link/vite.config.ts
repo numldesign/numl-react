@@ -11,11 +11,12 @@ const path = require('path');
 
 module.exports = {
   build: {
+    outDir: './packages/Atoms/Link/dist',
     lib: {
-      entry: path.resolve(__dirname, './packages/entry.ts'),
-      name: 'Avatar',
-      formats : ['es','cjs'],
-      minify : false
+      entry: path.resolve(__dirname, './index'),
+      name: 'Link',
+      formats: ['es', 'cjs'],
+      minify: false,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

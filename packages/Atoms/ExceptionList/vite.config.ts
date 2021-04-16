@@ -1,20 +1,13 @@
-// import { defineConfig } from 'vite'
-// import reactRefresh from '@vitejs/plugin-react-refresh'
-
-// https://vitejs.dev/config/
-// export default defineConfig({
-//   // plugins: [reactRefresh()]
-// })
 
 // vite.config.js
 const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/Avatar/dist',
+    outDir: './packages/Atoms/ExceptionList/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
-      name: 'Avatar',
+      name: 'ExceptionList',
       formats: ['es', 'cjs'],
       minify: false,
     },
