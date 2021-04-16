@@ -18,7 +18,7 @@ npm i @numl-react/badge
 import { ComponentName } from '@numl-react/badge';
 ```
 
-## Component:
+## Component
 
 WIP
 
@@ -26,6 +26,6 @@ WIP
 
 WIP
 
-## References:
+## References
 
 WIP
