@@ -15,7 +15,7 @@
   "author": "Numl.Design Team",
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "main": "./index.js",
+  "main": "./index.ts",
   "files": [
     "dist"
   ],

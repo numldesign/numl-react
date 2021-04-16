@@ -1,4 +1,4 @@
 'use strict';
 
 // @ts-ignore
-module.exports = require('./dist/numl-react.cjs');
+module.exports = require('./dist/core.cjs');
