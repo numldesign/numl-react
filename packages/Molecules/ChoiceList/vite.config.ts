@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/Avatar/dist',
+    outDir: './packages/Molecules/ChoiceList/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
-      name: 'Avatar',
+      name: 'ChoiceList',
       formats: ['es', 'cjs'],
       minify: false,
     },
