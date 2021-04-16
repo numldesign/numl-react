@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.7",
+  "version": "0.0.9-alpha.1",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -8,8 +8,8 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "build": "vite build",
-    "atoms" : "npm-run-all --parallel build:*",
-    "molecules" : "npm-run-all --parallel build:*",
+    "atoms": "npm-run-all --parallel build:*",
+    "molecules": "npm-run-all --parallel build:*",
     "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.ts",
     "build:badge": "vite build --config ./packages/Atoms/Badge/vite.config.ts",
     "build:button": "vite build --config ./packages/Atoms/Button/vite.config.ts",
