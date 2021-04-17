@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import Thumbnail from '../src/Thumbnail';
 
 export default {
@@ -27,11 +27,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <Root>
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     {<Thumbnail {...args} />}
-  </Root>
+  </NumlProvider>
 );
 
 export const Default = Template.bind({});

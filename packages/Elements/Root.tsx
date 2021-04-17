@@ -1,19 +1,10 @@
-import React, { useEffect } from 'react';
-import { requireNude } from '../helpers';
+import React from 'react';
 
 export default function Root(props: any) {
-  let { children, onInit, fill = '', padding = 'around', ...otherProps } = props;
-
-  useEffect(() => {
-    requireNude().then((Nude: any) => {
-      document.documentElement.dataset['nuIcons'] = 'ion';
-      onInit && onInit(Nude);
-      Nude.init();
-    });
-  }, []);
+  let { children, onInit, fill = 'black', padding = 'around', ...otherProps } = props;
 
   return (
-    <nu-root padding={padding} fill={'black'} {...otherProps}>
+    <nu-root padding={padding} fill={fill} {...otherProps}>
       {children}
     </nu-root>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { Icon } from '../../Icon';
 import Chip from '../src/Chip';
 
@@ -24,7 +24,7 @@ export default {
 
 const Template = function ({ ...args }) {
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip use-hover mark="hover" {...args}>
@@ -47,13 +47,13 @@ const Template = function ({ ...args }) {
       >
         {' '}
       </Chip>
-    </Root>
+    </NumlProvider>
   );
 };
 
 const Template2 = function ({ children, ...args }) {
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip use-hover mark="hover" {...args}>
@@ -76,12 +76,12 @@ const Template2 = function ({ children, ...args }) {
       >
         {children}
       </Chip>
-    </Root>
+    </NumlProvider>
   );
 };
 const Template3 = function ({ children, ...args }) {
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip
@@ -124,7 +124,7 @@ const Template3 = function ({ children, ...args }) {
       >
         {children}
       </Chip>
-    </Root>
+    </NumlProvider>
   );
 };
 export const Default: any = Template.bind({});

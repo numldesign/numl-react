@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import TextInput from '../../../Atoms/TextInput/src/TextInput';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import ChoiceList from '../src/ChoiceList';
 
 export default {
@@ -9,12 +9,12 @@ export default {
 };
 
 const Template = (args) => (
-  <Root>
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
     <ChoiceList {...args} />
-  </Root>
+  </NumlProvider>
 );
 
 export const Default = Template.bind({});
@@ -36,7 +36,7 @@ export const WithTextBox = (args) => {
   }, []);
 
   return (
-    <Root>
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
@@ -55,7 +55,7 @@ export const WithTextBox = (args) => {
         selected={selected}
         onChange={handleChange}
       />
-    </Root>
+    </NumlProvider>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { Icon } from '../../Icon';
 import { Link } from '../../Link';
 import { FooterHelp } from '../index';
@@ -40,11 +40,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <Root fill="subtle">
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <FooterHelp {...args} />
-  </Root>
+  </NumlProvider>
 );
 
 export const Basic = Template.bind({});

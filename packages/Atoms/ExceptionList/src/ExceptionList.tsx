@@ -7,7 +7,7 @@ function ExceptionList(allProps: TExceptionListProps) {
   return (
     <nu-el {...otherProps}>
       {typeof items == 'object' && items.length > 0
-        ? items.map((eachItem, index) => {
+        ? items.map((eachItem: any, index: any) => {
             return (
               <nu-grid gap columns="auto auto auto auto" key={index}>
                 {typeof eachItem.icon == 'string' ? (

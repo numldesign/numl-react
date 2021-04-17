@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { Icon } from '../../Icon/';
 import { ExceptionList } from '../index';
 
@@ -18,11 +18,11 @@ export default {
 const Template = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -38,11 +38,11 @@ Default.args = {
 const Template2 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />
-    </Root>
+    </NumlProvider>
   );
 };
 export const LabelWithIcon = Template2.bind({});
@@ -57,11 +57,11 @@ LabelWithIcon.args = {
 const Template3 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />
-    </Root>
+    </NumlProvider>
   );
 };
 export const LabelWithIconTitle = Template3.bind({});

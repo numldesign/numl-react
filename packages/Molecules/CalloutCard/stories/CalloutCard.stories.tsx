@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../../../Atoms/Button';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { CalloutCard } from '../index';
 import { Icon } from './../../../Atoms/Icon';
 import { Link } from './../../../Atoms/Link';
@@ -25,12 +25,12 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <Root>
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
     <CalloutCard {...args} width="500px" />
-  </Root>
+  </NumlProvider>
 );
 
 export const Default = Template.bind({});
@@ -82,14 +82,14 @@ WithoutAction.args = {
 };
 
 const Template2 = ({ ...args }) => (
-  <Root>
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />
-  </Root>
+  </NumlProvider>
 );
 
 export const Landscape = Template2.bind({});

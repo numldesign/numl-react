@@ -1,6 +1,6 @@
 import React from 'react';
 import { Radio } from '../../../Atoms/Radio';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { TextArea } from '../index';
 
 export default {
@@ -17,7 +17,7 @@ export default {
 };
 
 const Template = ({ children, fieldProps, ...args }) => (
-  <Root>
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
@@ -26,7 +26,7 @@ const Template = ({ children, fieldProps, ...args }) => (
     ) : (
       <TextArea {...args} />
     )}
-  </Root>
+  </NumlProvider>
 );
 
 export const Default = Template.bind({});

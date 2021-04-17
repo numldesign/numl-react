@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Icon } from '../../../Atoms/Icon';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { Menu } from '../index';
 
 export default {
@@ -14,7 +14,7 @@ export const Default = (args) => {
   };
 
   return (
-    <Root>
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
@@ -35,7 +35,7 @@ export const Default = (args) => {
           Paste
         </Menu.Item>
       </Menu>
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -45,7 +45,7 @@ export const WithIcons = (args) => {
   };
 
   return (
-    <Root>
+    <NumlProvider fill="black">
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
@@ -71,7 +71,7 @@ export const WithIcons = (args) => {
           Download
         </Menu.Item>
       </Menu>
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -81,7 +81,7 @@ export const WithHotKeyAndPopup = (args) => {
   };
 
   return (
-    <Root>
+    <NumlProvider fill="black">
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
@@ -143,7 +143,7 @@ export const WithHotKeyAndPopup = (args) => {
           </nu-popup>
         </Menu.Item>
       </Menu>
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -156,7 +156,7 @@ export const WithSelectableItems = (args) => {
   };
 
   return (
-    <Root>
+    <NumlProvider fill="black">
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
@@ -248,6 +248,6 @@ export const WithSelectableItems = (args) => {
           Custom spacing..
         </Menu.Item>
       </Menu>
-    </Root>
+    </NumlProvider>
   );
 };

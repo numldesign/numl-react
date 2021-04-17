@@ -38,10 +38,8 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
       {...otherProps}
     >
       {children}
-      {showIcon && showIcon != 'false' && !children ? (
-        <Avatar.Icon {...allProps}></Avatar.Icon>
-      ) : null}
-      {(username || subtitle) && !children ? <Avatar.Profile {...allProps}></Avatar.Profile> : null}
+      <Avatar.Icon {...allProps}></Avatar.Icon>
+      {username && !children ? <Avatar.Profile {...allProps}></Avatar.Profile> : null}
 
       {showArrow ? (
         <Avatar.DropDown toggle>

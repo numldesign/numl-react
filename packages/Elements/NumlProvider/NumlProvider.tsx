@@ -3,11 +3,29 @@ import { LoadNuml } from '../../helpers';
 import Root from './../Root';
 
 export const NumlProvider = (props: any) => {
-  const { children, ...otherProps } = props;
-  const [status, setStatus] = useState(false);
+  const { children, onInit, height = '100%', fill, ...otherProps } = props;
+  let [status, setStatus] = useState(false);
+
   useEffect(() => {
-    LoadNuml().then((data) => setStatus(true));
+    if (!status) {
+      LoadNuml()
+        .then((Nude: any) => {
+          Nude.init();
+          document.documentElement.dataset['nuIcons'] = 'ion';
+          onInit && onInit(Nude);
+          setStatus(true);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }, []);
 
-  return status && <Root {...otherProps}>{children}</Root>;
+  return (
+    status && (
+      <Root {...otherProps} fill={fill} height={height}>
+        {children}
+      </Root>
+    )
+  );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import { Icon } from '../../Icon';
 import { MessageError } from '../index';
 
@@ -16,11 +16,11 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <Root fill="subtle">
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <MessageError {...args}>{children}</MessageError>
-  </Root>
+  </NumlProvider>
 );
 
 export const Basic = Template.bind({});
@@ -31,11 +31,11 @@ Basic.args = {
 };
 
 const Template2 = ({ children, ...args }) => (
-  <Root fill="subtle">
+  <NumlProvider fill="black">
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <MessageError {...args}>{children}</MessageError>
-  </Root>
+  </NumlProvider>
 );
 
 export const WithIcon = Template2.bind({});

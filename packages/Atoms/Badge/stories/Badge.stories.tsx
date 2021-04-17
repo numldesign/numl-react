@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../../../Elements/Root';
+import { NumlProvider } from '../../../Elements/NumlProvider';
 import Badge from '../src/Badge';
 
 export default {
@@ -24,11 +24,11 @@ export default {
 const DefaultTemplate = function (props) {
   const { ...otherProps } = props;
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="subtle">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Badge {...otherProps}></Badge>
-    </Root>
+    </NumlProvider>
   );
 };
 
@@ -40,13 +40,13 @@ Default.args = {
 const WithIconTemplate = function (props) {
   const { label, ...otherProps } = props;
   return (
-    <Root fill="subtle">
+    <NumlProvider fill="black">
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Badge {...otherProps} icon={props.icon}>
         <Badge.Label>{props.label}</Badge.Label>
       </Badge>
-    </Root>
+    </NumlProvider>
   );
 };
 
