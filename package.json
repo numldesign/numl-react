@@ -8,7 +8,7 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "build": "npm-run-all build:*",
-    "build:all": "vite build --config ./vite.config.ts",
+    "build:numl-react": "vite build --config ./vite.config.ts",
     "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.ts",
     "build:badge": "vite build --config ./packages/Atoms/Badge/vite.config.ts",
     "build:button": "vite build --config ./packages/Atoms/Button/vite.config.ts",

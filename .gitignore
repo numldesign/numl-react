@@ -6,5 +6,6 @@ dist
 .cache
 test.html
 static
+package-lock.json
 build-storybook.log
 
