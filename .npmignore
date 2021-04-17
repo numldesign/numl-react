@@ -14,7 +14,9 @@ npm-debug.log
 .idea
 node_modules
 package-lock.json
+lerna-debug.log
 yarn-error.log
+.npmrc
 yarn.lock
 .cache
 test.html

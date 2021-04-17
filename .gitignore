@@ -2,10 +2,9 @@
 .idea
 node_modules
 yarn-error.log
+.npmrc
 dist
 .cache
-test.html
 static
-package-lock.json
 build-storybook.log
-
+lerna-debug.log
