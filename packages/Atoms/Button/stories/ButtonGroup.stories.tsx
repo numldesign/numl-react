@@ -24,7 +24,7 @@ export default {
 };
 
 const Template = (args: any) => (
-  <NumlProvider fill="black">
+  <NumlProvider>
     <nu-theme hue="290" saturation="75"></nu-theme>
     <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
     <Button.Group {...args} />

@@ -18,7 +18,7 @@ export default {
 const Template = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />
@@ -38,7 +38,7 @@ Default.args = {
 const Template2 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />
@@ -57,7 +57,7 @@ LabelWithIcon.args = {
 const Template3 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <ExceptionList items={items} {...args} />

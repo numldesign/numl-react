@@ -24,7 +24,7 @@ export default {
 
 const Template = ({ ...args }) => {
   return (
-    <NumlProvider fill={'black'}>
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Avatar.Icon {...args}></Avatar.Icon>
@@ -37,7 +37,7 @@ Basic.args = {};
 
 const Profile = ({ ...args }) => {
   return (
-    <NumlProvider fill={'black'}>
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Avatar {...args}></Avatar>

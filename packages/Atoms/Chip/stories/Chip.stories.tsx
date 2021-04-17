@@ -24,7 +24,7 @@ export default {
 
 const Template = function ({ ...args }) {
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip use-hover mark="hover" {...args}>
@@ -53,7 +53,7 @@ const Template = function ({ ...args }) {
 
 const Template2 = function ({ children, ...args }) {
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip use-hover mark="hover" {...args}>
@@ -81,7 +81,7 @@ const Template2 = function ({ children, ...args }) {
 };
 const Template3 = function ({ children, ...args }) {
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Chip

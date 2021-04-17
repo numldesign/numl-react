@@ -14,7 +14,7 @@ export const Default = (args) => {
   };
 
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
 
@@ -45,7 +45,7 @@ export const WithIcons = (args) => {
   };
 
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
@@ -81,7 +81,7 @@ export const WithHotKeyAndPopup = (args) => {
   };
 
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
@@ -156,7 +156,7 @@ export const WithSelectableItems = (args) => {
   };
 
   return (
-    <NumlProvider fill="black">
+    <NumlProvider>
       <Menu {...args} border radius size="sm">
         <nu-theme hue="290" saturation="75"></nu-theme>
         <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
