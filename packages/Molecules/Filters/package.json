@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/filters",
-  "version": "0.0.9-alpha1",
+  "version": "0.0.9",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
