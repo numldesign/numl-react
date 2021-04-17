@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { LoadNuml } from '../../helpers';
 import Root from './../Root';
+import Nude from 'numl';
 
 export const NumlProvider = (props: any) => {
   const { children, ...otherProps } = props;
-  const [status, setStatus] = useState(false);
-  useEffect(() => {
-    LoadNuml().then((data) => setStatus(true));
-  }, []);
-
-  return status && <Root {...otherProps}>{children}</Root>;
+  Nude.init();
+  return <Root {...otherProps}>{children}</Root>;
 };

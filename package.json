@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.9-alpha1",
+  "version": "0.0.9-alpha5",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -8,6 +8,7 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "build": "npm-run-all build:*",
+    "build:all": "vite build --config ./vite.config.ts",
     "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.ts",
     "build:badge": "vite build --config ./packages/Atoms/Badge/vite.config.ts",
     "build:button": "vite build --config ./packages/Atoms/Button/vite.config.ts",
@@ -62,8 +63,7 @@
     "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "serve": "vite preview",
-    "prepare": "husky install"
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -72,7 +72,11 @@
   "files": [
     "dist"
   ],
-  "main": "index.js",
+  "dependencies": {
+    "numl": "^1.1.0"
+  },
+  "main": "./dist/core.cjs.js",
+  "module": "./dist/core.es.js",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -108,7 +112,6 @@
     "jsx-native-events": "^2.0.0",
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
-    "numl": "1.0.1",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
     "prop-types": "^15.7.2",
