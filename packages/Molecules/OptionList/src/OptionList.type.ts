@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from '../../../numl';
 
 export interface TOptionListProps extends BaseProps {
   selected?: any;

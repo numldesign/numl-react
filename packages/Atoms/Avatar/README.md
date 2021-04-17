@@ -15,7 +15,7 @@ npm i @numl-react/avatar
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/avatar';
+import { Avatar } from '@numl-react/avatar';
 ```
 
 ## Component

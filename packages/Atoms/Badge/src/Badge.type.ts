@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from '../../../numl';
 
 export interface TBadgeProps extends BaseProps {
   size?: string | number;

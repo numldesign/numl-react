@@ -15,7 +15,7 @@ npm i @numl-react/progress-bar
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/progress-bar';
+import { ProgressBar } from '@numl-react/progress-bar';
 ```
 
 ## Component

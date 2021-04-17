@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from '../../../numl';
 
 export interface TAccountConnectionProps extends BaseProps {
   username?: string;

@@ -15,7 +15,7 @@ npm i @numl-react/badge
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/badge';
+import { Badge } from '@numl-react/badge';
 ```
 
 ## Component

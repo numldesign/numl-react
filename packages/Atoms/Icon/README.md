@@ -15,7 +15,7 @@ npm i @numl-react/icon
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/icon';
+import { Icon } from '@numl-react/icon';
 ```
 
 ## Component

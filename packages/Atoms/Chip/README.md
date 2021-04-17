@@ -15,7 +15,7 @@ npm i @numl-react/chip
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/chip';
+import { Chip } from '@numl-react/chip';
 ```
 
 ## Component

@@ -1,4 +1,4 @@
-import { BaseProps, screenSizes } from '../../../NumlTypes';
+import { BaseProps, screenSizes } from '../../../numl';
 
 export interface TTagProps extends BaseProps {
   size?: screenSizes;

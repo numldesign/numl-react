@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from '../../../numl';
 export interface TCalloutCardProps extends BaseProps {
   heading?: any;
   description?: any;

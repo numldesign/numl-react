@@ -15,7 +15,7 @@ npm i @numl-react/checkbox
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/checkbox';
+import { Checkbox } from '@numl-react/checkbox';
 ```
 
 ## Component

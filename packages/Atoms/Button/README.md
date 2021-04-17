@@ -17,7 +17,7 @@ npm i @numl-react/button
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/button';
+import { Button } from '@numl-react/button';
 ```
 
 ## Component

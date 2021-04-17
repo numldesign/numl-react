@@ -15,7 +15,7 @@ npm i @numl-react/message-error
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/message-error';
+import { MessageError } from '@numl-react/message-error';
 ```
 
 ## Component

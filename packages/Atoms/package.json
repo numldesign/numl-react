@@ -27,11 +27,5 @@
   },
   "bugs": {
     "url": "https://github.com/numldesign/numl-react/issues"
-  },
-  "devDependencies": {
-    "react": "^17.0.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.6"
   }
 }

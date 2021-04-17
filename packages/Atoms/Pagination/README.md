@@ -19,7 +19,7 @@ npm i @numl-react/pagination
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/pagination';
+import { Pagination } from '@numl-react/pagination';
 ```
 
 ## Component

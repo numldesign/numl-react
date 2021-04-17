@@ -1,5 +1,5 @@
 export { default as Root } from './Elements/Root';
-export { NumlProvider } from './Elements/NumlProvider';
+export * as NumlProvider from './Elements/NumlProvider';
 export { Avatar } from './Atoms/Avatar/';
 export { Badge } from './Atoms/Badge/';
 export { Button } from './Atoms/Button/';

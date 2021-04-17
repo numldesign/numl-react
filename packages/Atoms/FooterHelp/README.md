@@ -15,7 +15,7 @@ npm i @numl-react/footer-help
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/footer-help';
+import { FooterHelp } from '@numl-react/footer-help';
 ```
 
 ## Component

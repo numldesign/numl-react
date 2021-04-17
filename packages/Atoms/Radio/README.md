@@ -15,7 +15,7 @@ npm i @numl-react/radio
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/radio';
+import { Radio } from '@numl-react/radio';
 ```
 
 ## Component

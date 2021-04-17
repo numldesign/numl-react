@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from './../../../numl';
 
 export interface TAvatarIconProps extends BaseProps {
   username?: string;

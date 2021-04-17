@@ -15,7 +15,7 @@ npm i @numl-react/tag
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/tag';
+import { Tag } from '@numl-react/tag';
 ```
 
 ## Component

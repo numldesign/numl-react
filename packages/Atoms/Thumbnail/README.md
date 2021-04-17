@@ -15,7 +15,7 @@ npm i @numl-react/thumbnail
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/thumbnail';
+import { Thumbnail } from '@numl-react/thumbnail';
 ```
 
 ## Component

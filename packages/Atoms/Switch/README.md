@@ -15,7 +15,7 @@ npm i @numl-react/switch
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/switch';
+import { Switch } from '@numl-react/switch';
 ```
 
 ## Component

@@ -15,7 +15,7 @@ npm i @numl-react/text-input
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/text-input';
+import { TextInput } from '@numl-react/text-input';
 ```
 
 ## Component

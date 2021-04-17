@@ -22,7 +22,6 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
   const [isConnected, setIsConnected] = useState(Boolean(allProps.isConnected));
 
   const handleConnect = useCallback(() => {
-    console.log('I am umer');
     setIsConnected(!isConnected);
     onConnectionChange({ connected: !isConnected });
   }, [isConnected]);

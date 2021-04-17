@@ -15,7 +15,7 @@ npm i @numl-react/exception-list
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/exception-list';
+import { ExceptionList } from '@numl-react/exception-list';
 ```
 
 ## Component

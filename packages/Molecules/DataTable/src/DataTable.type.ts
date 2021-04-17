@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../NumlTypes';
+import { BaseProps } from '../../../numl';
 export interface TDataTableProps extends BaseProps {
   headings?: any;
   rows?: any;

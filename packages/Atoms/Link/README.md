@@ -15,7 +15,7 @@ npm i @numl-react/link
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/link';
+import { Link } from '@numl-react/link';
 ```
 
 ## Component

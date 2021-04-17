@@ -15,7 +15,7 @@ npm i @numl-react/range-slider
 ## Import Components
 
 ```jsx
-import { ComponentName } from '@numl-react/range-slider';
+import { RangeSlider } from '@numl-react/range-slider';
 ```
 
 ## Component
