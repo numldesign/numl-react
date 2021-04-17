@@ -3,7 +3,8 @@
     "./",
     "./packages/*",
     "./packages/Atoms/*",
-    "./packages/Molecules/*"
+    "./packages/Molecules/*",
+    "./packages/Elements/*"
   ],
   "version": "0.0.11-alpha.0"
 }
