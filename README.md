@@ -39,4 +39,3 @@ For discussions, suggestions and contributions, create an issue or join our [Dis
 ## License
 
 [MIT](LICENSE)
-
