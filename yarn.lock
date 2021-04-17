@@ -2303,7 +2303,7 @@
     "prop-types" "^15.7.2"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/addons@6.2.8":
+"@storybook/addons@^6.2.8", "@storybook/addons@6.2.8":
   "integrity" "sha512-zbavtYi66HAtgAROw5h4mR3mD9239ocCaYiasRanM+qyprguIvADPMGzgOA7COVfNI9MiIkxSA+E9oZ1y5PKfQ=="
   "resolved" "https://registry.npmjs.org/@storybook/addons/-/addons-6.2.8.tgz"
   "version" "6.2.8"
@@ -2748,7 +2748,7 @@
     "prettier" "~2.2.1"
     "regenerator-runtime" "^0.13.7"
 
-"@storybook/theming@6.2.8":
+"@storybook/theming@^6.2.8", "@storybook/theming@6.2.8":
   "integrity" "sha512-aQ+VCvzbfaAsq99g0ZsP1/rZFwXqbsTYLaRV/uZ8DA+wLF7uzlAl+FA5HyneStSj9ysyvdyARGxT2SBAT+azyQ=="
   "resolved" "https://registry.npmjs.org/@storybook/theming/-/theming-6.2.8.tgz"
   "version" "6.2.8"
