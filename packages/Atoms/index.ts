@@ -2,9 +2,9 @@
 export { requireNude } from '../helpers';
 
 /*** Exporting Modules */
-export { Avatar } from "./Avatar"
-export { Icon } from "./Icon"
-export { Link } from "./Link"
+export { Avatar } from './Avatar';
+export { Icon } from './Icon';
+export { Link } from './Link';
 export { Badge } from './Badge/';
 export { Button } from './Button/';
 export { Checkbox } from './Checkbox/';
