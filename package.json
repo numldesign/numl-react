@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.15",
+  "version": "0.0.10-prerelease",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "storybook": "start-storybook -p 6006",
