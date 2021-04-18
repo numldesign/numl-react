@@ -69,6 +69,7 @@
     "build:flex": "vite build --config ./packages/Elements/Flex/vite.config.ts",
     "build:flow": "vite build --config ./packages/Elements/Flow/vite.config.ts",
     "build:pane": "vite build --config ./packages/Elements/Pane/vite.config.ts",
+    "build:search-element": "vite build --config ./packages/Elements/Search/vite.config.ts",
     "build:svg": "vite build --config ./packages/Elements/Svg/vite.config.ts",
     "build:atoms": "vite build --config ./packages/Atoms/vite.config.ts",
     "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
