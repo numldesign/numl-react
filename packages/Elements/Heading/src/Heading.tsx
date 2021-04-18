@@ -4,8 +4,7 @@ export const Heading = (props) => {
   const { children, level = '1', ...otherProps } = props;
   return (
     <nu-heading level={level} {...otherProps}>
-      {' '}
-      {children}{' '}
+      {children}
     </nu-heading>
   );
 };
