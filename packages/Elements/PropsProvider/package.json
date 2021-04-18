@@ -1,7 +1,7 @@
 {
   "name": "@numl-react/props",
   "version": "0.0.14",
-  "description": "Props Box for Numl React by NUML.Design.",
+  "description": "PropsProvider Box for Numl React by NUML.Design.",
   "keywords": [
     "component",
     "avatar",

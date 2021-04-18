@@ -1,2 +1,2 @@
-export * from './NumlProvider';
-export { NumlProvider } from './NumlProvider';
+export * from './src/NumlProvider';
+export { NumlProvider } from './src/NumlProvider';

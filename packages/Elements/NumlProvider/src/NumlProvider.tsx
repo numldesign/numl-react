@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { LoadNuml } from '../../helpers';
-import Root from './../Root';
+import { LoadNuml } from '../../../helpers';
+import Root from '../../Root';
 
 export const NumlProvider = (props: any) => {
   const { children, onInit, height = '100%', fill, ...otherProps } = props;

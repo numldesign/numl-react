@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Elements/Props/dist',
+    outDir: './packages/Elements/Flow/dist',
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
-      name: 'Props',
+      name: 'Flow',
       formats: ['es', 'cjs'],
       minify: false,
     },

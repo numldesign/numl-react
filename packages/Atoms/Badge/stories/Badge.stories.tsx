@@ -24,7 +24,7 @@ export default {
 const DefaultTemplate = function (props) {
   const { ...otherProps } = props;
   return (
-    <NumlProvider fill="subtle">
+    <NumlProvider>
       <nu-theme hue="290" saturation="75"></nu-theme>
       <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
       <Badge {...otherProps}></Badge>

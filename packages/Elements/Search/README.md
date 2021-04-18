@@ -1,21 +1,21 @@
-# @numl-react/props
+# @numl-react/search
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/props
+yarn add @numl-react/search
 
 # or
 
-npm i @numl-react/props
+npm i @numl-react/search
 ```
 
 ## Import Components
 
 ```jsx
-import { Props } from '@numl-react/props';
+import { Search } from '@numl-react/search';
 ```
 
 ## Component

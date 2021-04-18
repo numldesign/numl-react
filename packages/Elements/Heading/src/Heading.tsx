@@ -1,8 +1,13 @@
 import React from 'react';
 
 export const Heading = (props) => {
-  const { children, ...otherProps } = props;
-  return <nu-h1 {...otherProps}> {children} </nu-h1>;
+  const { children, level = '1', ...otherProps } = props;
+  return (
+    <nu-heading level={level} {...otherProps}>
+      {' '}
+      {children}{' '}
+    </nu-heading>
+  );
 };
 Heading.One = (props: any) => {
   const { children, ...otherProps } = props;
