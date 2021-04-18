@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.12-alpha.0",
+  "version": "0.0.12",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "storybook": "start-storybook -p 6006",
@@ -155,5 +155,6 @@
   },
   "lint-staged": {
     "**/*": "prettier --write ./packages --ignore-unknown"
-  }
+  },
+  "gitHead": "23cc31ad1ebb67d9dfec75351a02436537b9d246"
 }
