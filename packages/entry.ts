@@ -58,3 +58,4 @@ export { Block } from './Elements/Block/';
 export { Grid } from './Elements/Grid/';
 export { Heading } from './Elements/Heading/';
 export { Image } from './Elements/Image/';
+export { ThemeProvider } from './Elements/ThemeProvider';
