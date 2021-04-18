@@ -1,4 +1,6 @@
 export { NumlProvider } from './Elements/NumlProvider';
+
+/** Atoms */
 export { Avatar } from './Atoms/Avatar/';
 export { Badge } from './Atoms/Badge/';
 export { Button } from './Atoms/Button/';
@@ -16,6 +18,8 @@ export { Switch } from './Atoms/Switch/';
 export { Tag } from './Atoms/Tag/';
 export { TextInput } from './Atoms/TextInput/';
 export { Thumbnail } from './Atoms/Thumbnail/';
+
+/** Molecules */
 export { AccountConnection } from './Molecules/AccountConnection/';
 export { ActionList } from './Molecules/ActionList/';
 export { Banner } from './Molecules/Banner/';
@@ -48,3 +52,9 @@ export { Tabs } from './Molecules/Tabs/';
 export { TextArea } from './Molecules/TextArea/';
 export { Toast } from './Molecules/Toast/';
 export { Tooltip } from './Molecules/Tooltip/';
+
+/** Elements */
+export { Block } from './Elements/Block/';
+export { Grid } from './Elements/Grid/';
+export { Heading } from './Elements/Heading/';
+export { Image } from './Elements/Image/';

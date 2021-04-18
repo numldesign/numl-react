@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Elements/Image/dist',
+    outDir: './packages/Elements/Heading/dist',
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
-      name: 'Image',
+      name: 'Heading',
       formats: ['es', 'cjs'],
       minify: false,
     },
