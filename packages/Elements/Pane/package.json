@@ -1,0 +1,39 @@
+{
+  "name": "@numl-react/pane",
+  "version": "0.0.11",
+  "description": "Pane for Numl React by NUML.Design.",
+  "keywords": [
+    "component",
+    "pane",
+    "initials",
+    "react",
+    "react-components",
+    "numl-react",
+    "photo"
+  ],
+  "author": "Numl.Design Team",
+  "license": "MIT",
+  "homepage": "https://github.com/numldesign/numl-react#readme",
+  "main": "./dist/core.cjs.js",
+  "module": "./dist/core.es.js",
+  "exports": {
+    ".": {
+      "require": "./dist/core.cjs.js",
+      "default": "./dist/core.es.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numldesign/numl-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/numldesign/numl-react/issues"
+  }
+}
