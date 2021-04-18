@@ -63,6 +63,7 @@
     "build:heading": "vite build --config ./packages/Elements/Heading/vite.config.ts",
     "build:grid": "vite build --config ./packages/Elements/Grid/vite.config.ts",
     "build:block": "vite build --config ./packages/Elements/Block/vite.config.ts",
+    "build:themeprovider": "vite build --config ./packages/Elements/ThemeProvider/vite.config.ts",
     "build:atoms": "vite build --config ./packages/Atoms/vite.config.ts",
     "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
     "test": "jest",
