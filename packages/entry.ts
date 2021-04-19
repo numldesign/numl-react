@@ -1,6 +1,7 @@
 export { NumlProvider } from './Elements/NumlProvider';
 export { ThemeProvider } from './Elements/ThemeProvider';
 export { PropsProvider } from './Elements/PropsProvider';
+export { AttributeProvider } from './Elements/AttributeProvider';
 
 /** Atoms */
 export { Avatar } from './Atoms/Avatar/';

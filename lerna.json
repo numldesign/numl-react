@@ -1,10 +1,13 @@
 {
+  "lerna" : "2.0.0",
   "packages": [
     "./",
+    "./documentation/*",
     "./packages/*",
     "./packages/Atoms/*",
     "./packages/Molecules/*",
     "./packages/Elements/*"
   ],
+  "npmClient": "yarn",
   "version": "0.0.15"
 }

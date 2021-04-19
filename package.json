@@ -65,6 +65,7 @@
     "build:themeprovider": "vite build --config ./packages/Elements/ThemeProvider/vite.config.ts",
     "build:propsprovider": "vite build --config ./packages/Elements/PropsProvider/vite.config.ts",
     "build:numlprovider": "vite build --config ./packages/Elements/NumlProvider/vite.config.ts",
+    "build:attributeprovider": "vite build --config ./packages/Elements/AttributeProvider/vite.config.ts",
     "build:base": "vite build --config ./packages/Elements/Base/vite.config.ts",
     "build:flex": "vite build --config ./packages/Elements/Flex/vite.config.ts",
     "build:flow": "vite build --config ./packages/Elements/Flow/vite.config.ts",
