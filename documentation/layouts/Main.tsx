@@ -1,76 +1,67 @@
-import Head from "next/head";
-import {
-  Block,
-  NumlProvider,
-  Flow,
-  Grid,
-  PropsProvider,
-  ThemeProvider
-} from "@numl-react/core";
-import * as React from "react";
-
-import LayoutTheme from "./LayoutTheme";
-import NavigationBar from "../components/NavigationBar";
-import Sidebar from "../components/Sidebar.js";
-import MobileBar from "../components/MobileBar.js";
-import TableOfContent from "../layouts/TableOfContent";
-
-/** Numl Imports */
-import {} from "@numl-react/core";
+import Head from 'next/head';
+import { Block, NumlProvider, Flow, Grid, PropsProvider } from '@numl-react/core';
+import * as React from 'react';
+import { MDXProvider } from '@mdx-js/react';
+import Components from "../mdx-provider"
+import LayoutTheme from './LayoutTheme';
+import NavigationBar from '../components/NavigationBar';
+import Sidebar from '../components/Sidebar';
+import MobileBar from '../components/MobileBar';
+import TableOfContent from './TableOfContent';
 
 const sidebar = [
   {
-    heading: "Introduction",
+    heading: 'Introduction',
     children: [
       {
-        link: "/",
-        value: "Getting Started",
+        link: '/',
+        value: 'Getting Started',
       },
     ],
   },
   {
-    heading: "Basic",
+    heading: 'Basic',
     children: [
       {
-        link: "/",
-        value: "Core Concepts",
+        link: '/',
+        value: 'Core Concepts',
       },
       {
-        link: "/",
-        value: "Basic Styling",
+        link: '/',
+        value: 'Basic Styling',
       },
       {
-        link: "/",
-        value: "Syntax in-depth",
+        link: '/',
+        value: 'Syntax in-depth',
       },
     ],
   },
   {
-    heading: "Features",
+    heading: 'Features',
     children: [
       {
-        link: "/",
-        value: "Responsiveness",
+        link: '/',
+        value: 'Responsiveness',
       },
       {
-        link: "/",
-        value: "States",
+        link: '/',
+        value: 'States',
       },
       {
-        link: "/",
-        value: "Themes",
+        link: '/',
+        value: 'Themes',
       },
     ],
   },
 ];
 
-export default function ({ children }) {
+export default function Layout({children}) {
   React.useEffect(() => {
-    window.addEventListener("nudeReady", function () {
-      window.Nude.scheme("dark");
+    window.addEventListener('nudeReady', function () {
+      window.Nude.scheme('dark');
       // OPTIONAL: define custom units
-      window.Nude.units.define("gp", "var(--grid-gap)");
-      window.Nude.units.define("cp", "var(--content-padding)");
+      window.Nude.units.define('gp', 'var(--grid-gap)');
+      window.Nude.units.define('cp', 'var(--content-padding)');
     });
   }, []);
   return (
@@ -81,12 +72,11 @@ export default function ({ children }) {
       theme="main"
     >
       <Head>
-        <html nu-scheme="auto" nu-contrast="auto" nu-scheme="dark" />
         <title>Head tag</title>
       </Head>
 
-      <LayoutTheme />
-      <NavigationBar />
+      <LayoutTheme></LayoutTheme>
+      <NavigationBar></NavigationBar>
 
       <Flow fill="#page-bg">
         <PropsProvider
@@ -95,11 +85,7 @@ export default function ({ children }) {
           transition="120ms"
         />
         <nu-attrs for="list" position="inside" />
-        <nu-attrs
-          for="cd"
-          fill="^root diff :dark[#dark]"
-          shadow=".5"
-        ></nu-attrs>
+        <nu-attrs for="cd" fill="^root diff :dark[#dark]" shadow=".5"></nu-attrs>
         <nu-attrs for="code" size="md"></nu-attrs>
         <Grid
           space="around"
@@ -130,7 +116,9 @@ export default function ({ children }) {
               content="start stretch"
               is-responsive="root"
             >
-              <Block>{children}</Block>
+              <Block>
+                <MDXProvider components={Components}>{children}</MDXProvider>
+              </Block>
               <TableOfContent></TableOfContent>
             </Grid>
           </Block>

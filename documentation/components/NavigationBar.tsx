@@ -10,7 +10,7 @@ import {
   } from "@numl-react/core";
 import { Icon } from "@numl-react/icon";
   
-export default ({ children }) => {
+export default () => {
     return (
         <Block
           border="bottom"

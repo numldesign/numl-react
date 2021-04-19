@@ -7,7 +7,7 @@ import {
   Block,
 } from "@numl-react/core";
 
-export default function ({ children }) {
+export default function () {
   return (
     <Block order="2|||1" show="y|||n" is-responsive="root">
       <Block

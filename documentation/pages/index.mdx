@@ -1,0 +1,11 @@
+import Layout from '../layouts/Main.tsx';
+import Component from '../mdx-provider.ts';
+const { Button, Block, Heading, Base } = Component;
+
+export default () => (
+  <Layout>
+    <Block responsive="850px|800px" padding="1 0">
+      <Heading level="1|3">Introduction</Heading>
+    </Block>
+  </Layout>
+);

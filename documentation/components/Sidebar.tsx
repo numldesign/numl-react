@@ -1,10 +1,9 @@
-import { Base, Heading } from "@numl-react/core";
+import { Base, Heading, Button } from "@numl-react/core";
 export default (props) => {
   const { data } = props;
   return (
     <nu-nav
       label="Main"
-      aria-label="Main"
       display="flex"
       flow="column"
       items="stretch"
@@ -14,7 +13,6 @@ export default (props) => {
       height="min (100vh - --topbar-offset)|||max (100vh - --topbar-offset - 9x)"
       padding="4x 1x 4x 0|||0 1cp 4x"
       space="1x left"
-      role="navigation"
       is-responsive="root"
     >
       {data.map(function (eachData, key) {
@@ -26,7 +24,6 @@ export default (props) => {
               text="up b"
               color="#text.60"
               padding="0 0 1x 1x"
-              children={heading}
               key={key}
             >
               {heading}
@@ -45,7 +42,7 @@ const NavigationList = ({ data }) => {
       {data.length > 0 &&
         data.map((eachChild, key) => {
           return (
-            <nu-btn
+            <Button
               key={key}
               to={eachChild.link}
               padding=".5x 1x"
@@ -62,7 +59,7 @@ const NavigationList = ({ data }) => {
               is-focusable
             >
               {eachChild.value}
-            </nu-btn>
+            </Button>
           );
         })}
     </>

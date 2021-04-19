@@ -1,4 +1,4 @@
-import Layout from '../layouts/Main.js';
+import Layout from '../layouts/Main';
 
 /** Numl Imports */
 import { Block } from '@numl-react/core';

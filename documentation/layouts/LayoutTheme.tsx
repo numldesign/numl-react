@@ -3,7 +3,7 @@ import {
   ThemeProvider
 } from "@numl-react/core";
 
-export default function ({ children }) {
+export default function () {
   return (
     <>
       <ThemeProvider hue="290" saturation="75" />
