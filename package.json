@@ -165,5 +165,5 @@
   "lint-staged": {
     "**/*": "prettier --write ./packages --ignore-unknown"
   },
-  "gitHead": "23cc31ad1ebb67d9dfec75351a02436537b9d246"
+  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a"
 }
