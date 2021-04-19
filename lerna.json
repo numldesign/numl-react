@@ -1,5 +1,5 @@
 {
-  "lerna" : "2.0.0",
+  "lerna": "2.0.0",
   "packages": [
     "./",
     "./documentation/*",
@@ -9,5 +9,5 @@
     "./packages/Elements/*"
   ],
   "npmClient": "yarn",
-  "version": "0.0.15"
+  "version": "0.0.16"
 }
