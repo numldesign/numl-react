@@ -75,9 +75,6 @@
     "build:atoms": "vite build --config ./packages/Atoms/vite.config.ts",
     "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
     "build:numl-react": "vite build --config ./vite.config.ts",
-    "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish",
-    "version": "lerna version",
     "test": "jest",
     "test:watch": "jest --watch",
     "serve": "vite preview"
