@@ -2,7 +2,7 @@
   "scripts": {
     "layer0:dev": "layer0 dev",
     "layer0:build": "layer0 build",
-    "layer0:deploy": "layer0 deploy",
+    "layer0:deploy": "layer0 deploy --team=numl",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
