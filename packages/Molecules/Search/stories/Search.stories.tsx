@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  Search,
-  Icon,
-  Link,
-  Block,
-  Grid,
-  Base,
-  Pane,
-} from '../../../entry';
+import { NumlProvider, ThemeProvider, Search, Icon, Link, Block, Grid, Base, Pane } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Search',

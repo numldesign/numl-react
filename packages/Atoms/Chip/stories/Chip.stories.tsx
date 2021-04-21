@@ -34,15 +34,7 @@ const Template = function ({ ...args }) {
       <Chip use-hover mark="hover" use-active inset="n :active[y]" {...args}>
         {' '}
       </Chip>
-      <Chip
-        use-hover
-        mark="hover"
-        use-active
-        inset="n :active[y]"
-        use-focus
-        outline="focus"
-        {...args}
-      >
+      <Chip use-hover mark="hover" use-active inset="n :active[y]" use-focus outline="focus" {...args}>
         {' '}
       </Chip>
     </NumlProvider>
@@ -63,15 +55,7 @@ const Template2 = function ({ children, ...args }) {
       <Chip use-hover mark="hover" use-active inset="n :active[y]" {...args}>
         {children}
       </Chip>
-      <Chip
-        use-hover
-        mark="hover"
-        use-active
-        inset="n :active[y]"
-        use-focus
-        outline="focus"
-        {...args}
-      >
+      <Chip use-hover mark="hover" use-active inset="n :active[y]" use-focus outline="focus" {...args}>
         {children}
       </Chip>
     </NumlProvider>
@@ -82,12 +66,7 @@ const Template3 = function ({ children, ...args }) {
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75"></ThemeProvider>
       <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Chip
-        use-hover
-        mark="hover"
-        {...args}
-        actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}
-      >
+      <Chip use-hover mark="hover" {...args} actionIcon={<Icon name="close-circle-outline" size="1"></Icon>}>
         {children}
       </Chip>
       <Chip

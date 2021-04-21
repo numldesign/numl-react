@@ -16,13 +16,7 @@ function Chip(allProps: TChipProps): JSX.Element {
   } = allProps;
 
   return (
-    <nu-badge
-      radius={radius}
-      padding={padding}
-      cursor="pointer"
-      selectable={selectable}
-      {...otherProp}
-    >
+    <nu-badge radius={radius} padding={padding} cursor="pointer" selectable={selectable} {...otherProp}>
       {typeof icon === 'string' ? <nu-icon name={icon} size={size} /> : icon}
       {children && children.trim().length > 0 ? children : null}
       {label && children.trim().length == 0 ? label : null}

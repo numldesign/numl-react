@@ -17,11 +17,7 @@ function TopBar(props) {
           <nu-block to={nuLinkAction} show="y|y|n|n">
             {logo ? logo : <ForunIcon></ForunIcon>}
           </nu-block>
-          <nu-icon
-            color=":active[#special]"
-            name={menuIcon ? menuIcon : 'menu-outline'}
-            show="n|n|y|y"
-          ></nu-icon>
+          <nu-icon color=":active[#special]" name={menuIcon ? menuIcon : 'menu-outline'} show="n|n|y|y"></nu-icon>
         </nu-block>
 
         <nu-inputgroup>

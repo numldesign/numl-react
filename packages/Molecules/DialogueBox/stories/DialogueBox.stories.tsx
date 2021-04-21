@@ -48,11 +48,7 @@ WithRadioGroup.args = {
   flow: 'column',
   heading: 'Reset Settings',
   children: (
-    <Radio.Group
-      padding="1x 0"
-      border="top bottom"
-      onChange={(props) => console.log('selected ', props)}
-    >
+    <Radio.Group padding="1x 0" border="top bottom" onChange={(props) => console.log('selected ', props)}>
       <Radio.Field key="one" value="one">
         One
       </Radio.Field>

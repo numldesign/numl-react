@@ -163,11 +163,7 @@ OptionListWithTable.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Byward Market
         </Pane>
       ),
@@ -179,11 +175,7 @@ OptionListWithTable.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Centretown
         </Pane>
       ),
@@ -195,11 +187,7 @@ OptionListWithTable.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Hintonburg
         </Pane>
       ),
@@ -211,11 +199,7 @@ OptionListWithTable.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Westboro
         </Pane>
       ),
@@ -268,11 +252,7 @@ OptionListWithTableAndInput.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Byward Market
         </Pane>
       ),
@@ -296,11 +276,7 @@ OptionListWithTableAndInput.args = {
     {
       label: (
         <Pane>
-          <Thumbnail
-            width="40px"
-            key="1"
-            source="https://source.unsplash.com/user/erondu/100x100"
-          />
+          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Centretown
         </Pane>
       ),

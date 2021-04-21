@@ -35,12 +35,7 @@ function Dropzone(props: any) {
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-          <path
-            d="M82.25 67.1858V79.1328"
-            stroke="#E1DEE4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M82.25 67.1858V79.1328" stroke="#E1DEE4" stroke-linecap="round" stroke-linejoin="round" />
           <path
             d="M83.5 58V22.6545C83.5 18.289 79.961 14.75 75.5955 14.75H22.6545C18.289 14.75 14.75 18.289 14.75 22.6545V64.5955C14.75 68.961 18.289 72.5 22.6545 72.5H68"
             stroke="#E1DEE4"

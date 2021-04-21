@@ -3,16 +3,7 @@ import { Checkbox } from '../../../Atoms/Checkbox';
 import { TSheetProps } from './Sheet.type';
 
 function Sheet(allProps: TSheetProps): JSX.Element {
-  const {
-    heading,
-    footerActions,
-    closeAction,
-    choices,
-    selected,
-    onChange,
-    contentHeight,
-    ...otherProps
-  } = allProps;
+  const { heading, footerActions, closeAction, choices, selected, onChange, contentHeight, ...otherProps } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
 
@@ -45,12 +36,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
               const { label, value } = choice;
               const isChecked = selectedValues.has(value) ? true : undefined;
               return (
-                <Checkbox.Field
-                  key={value}
-                  checked={isChecked}
-                  value={value}
-                  onInput={handleChecklistChange}
-                >
+                <Checkbox.Field key={value} checked={isChecked} value={value} onInput={handleChecklistChange}>
                   {label}
                 </Checkbox.Field>
               );

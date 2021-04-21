@@ -2,15 +2,7 @@ import React from 'react';
 import { Block, Card, Image, Grid, Base, Icon } from './../../../entry';
 
 function MediaCard(props: any) {
-  const {
-    src,
-    action,
-    heading,
-    description,
-    padding = '2x',
-    columns = 'auto',
-    ...otherProps
-  } = props;
+  const { src, action, heading, description, padding = '2x', columns = 'auto', ...otherProps } = props;
   return (
     <Card padding={padding} columns={columns} {...otherProps}>
       <Image src={src} width="100%" height="9.875rem"></Image>

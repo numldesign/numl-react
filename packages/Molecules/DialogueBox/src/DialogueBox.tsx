@@ -14,15 +14,7 @@ function DialogueBox(allProps: TDialogueBoxProps) {
     ...otherProps
   } = allProps;
   return (
-    <nu-flex
-      nu-overlay
-      place={place}
-      fill={fill}
-      box={box}
-      gap={gap}
-      radius={radius}
-      {...otherProps}
-    >
+    <nu-flex nu-overlay place={place} fill={fill} box={box} gap={gap} radius={radius} {...otherProps}>
       {heading ? <nu-block text="sb">{heading}</nu-block> : null}
       {children ? <nu-block size="sm">{children}</nu-block> : null}
       <nu-pane content="flex-end">{actions}</nu-pane>

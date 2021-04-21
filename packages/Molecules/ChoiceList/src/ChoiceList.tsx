@@ -32,9 +32,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps)
             return (
               <nu-listitem key={value}>
                 <Radio.Field value={value}>{label}</Radio.Field>
-                {renderChildren && value === selected ? (
-                  <nu-list type="none">{renderChildren}</nu-list>
-                ) : null}
+                {renderChildren && value === selected ? <nu-list type="none">{renderChildren}</nu-list> : null}
               </nu-listitem>
             );
           })}
@@ -72,12 +70,7 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
             <nu-listitem key={value}>
-              <Checkbox.Field
-                checked={isChecked}
-                value={value}
-                items="start"
-                onInput={handleChecklistChange}
-              >
+              <Checkbox.Field checked={isChecked} value={value} items="start" onInput={handleChecklistChange}>
                 <nu-block>{label}</nu-block>
                 <nu-block color="#text-soft">{helpText}</nu-block>
               </Checkbox.Field>

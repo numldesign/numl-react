@@ -13,8 +13,7 @@ export function requireNude(): Promise<any> {
 }
 
 export function LoadNuml(): Promise<any> {
-  if (typeof window === 'undefined')
-    return new Promise((_resolve, reject) => reject('window not found'));
+  if (typeof window === 'undefined') return new Promise((_resolve, reject) => reject('window not found'));
 
   return new Promise((resolve) => {
     const script = document.createElement('script');
@@ -66,9 +65,7 @@ export function copyToClipboard(text: any) {
   // context (i.e. HTTPS)
   if (navigator.clipboard) {
     return navigator.clipboard.writeText(text).catch(function (err) {
-      throw err !== undefined
-        ? err
-        : new DOMException('The request is not allowed', 'NotAllowedError');
+      throw err !== undefined ? err : new DOMException('The request is not allowed', 'NotAllowedError');
     });
   }
 

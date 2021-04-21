@@ -13,14 +13,7 @@ function Button(props: TButtonProps): JSX.Element {
     ...otherProps
   } = props;
   return (
-    <nu-btn
-      size={size}
-      theme={theme}
-      color={color}
-      selectable={selectable}
-      padding={padding}
-      {...otherProps}
-    >
+    <nu-btn size={size} theme={theme} color={color} selectable={selectable} padding={padding} {...otherProps}>
       {children ? children : null}
     </nu-btn>
   );
@@ -75,13 +68,7 @@ Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
   groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
-    <nu-btngroup
-      use-radiogroup="no"
-      flow={flow}
-      group-radius={groupRadius}
-      border="#clear"
-      {...otherProps}
-    >
+    <nu-btngroup use-radiogroup="no" flow={flow} group-radius={groupRadius} border="#clear" {...otherProps}>
       {children}
     </nu-btngroup>
   );

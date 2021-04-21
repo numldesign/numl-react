@@ -16,8 +16,7 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  src:
-    'https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area_web-f17b1f60e6.jpg',
+  src: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area_web-f17b1f60e6.jpg',
   heading: 'New product and the market',
   description: 'Product details',
   action: <Button> Learn More </Button>,

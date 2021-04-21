@@ -30,13 +30,7 @@ function ActionElement(allProps: TActionProps): JSX.Element {
   }, []);
 
   return (
-    <Tag
-      ref={ref}
-      role={!to ? ROLE_MAP[as] || 'button' : null}
-      to={to}
-      label={label}
-      {...otherProps}
-    >
+    <Tag ref={ref} role={!to ? ROLE_MAP[as] || 'button' : null} to={to} label={label} {...otherProps}>
       {children}
       {NativeLink({ to, label, children })}
     </Tag>

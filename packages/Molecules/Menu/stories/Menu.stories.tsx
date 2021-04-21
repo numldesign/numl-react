@@ -167,11 +167,7 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Single' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon
-            name="checkmark-outline"
-            opacity={selected === 'Single' ? '1' : '0'}
-            transition="opacity .1s"
-          />
+          <Icon name="checkmark-outline" opacity={selected === 'Single' ? '1' : '0'} transition="opacity .1s" />
           Single
         </Menu.Item>
         <Menu.Item
@@ -183,11 +179,7 @@ export const WithSelectableItems = (args) => {
           color={selected === '1.15' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon
-            name="checkmark-outline"
-            opacity={selected === '1.15' ? '1' : '0'}
-            transition="opacity .1s"
-          />
+          <Icon name="checkmark-outline" opacity={selected === '1.15' ? '1' : '0'} transition="opacity .1s" />
           1.15
         </Menu.Item>
         <Menu.Item
@@ -199,11 +191,7 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Default' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon
-            name="checkmark-outline"
-            opacity={selected === 'Default' ? 1 : 0}
-            transition="opacity .1s"
-          />
+          <Icon name="checkmark-outline" opacity={selected === 'Default' ? 1 : 0} transition="opacity .1s" />
           Default
         </Menu.Item>
         <Menu.Item
@@ -216,11 +204,7 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Custom:_1.2' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon
-            name="checkmark-outline"
-            opacity={selected === 'Custom:_1.2' ? 1 : 0}
-            transition="opacity .1s"
-          />
+          <Icon name="checkmark-outline" opacity={selected === 'Custom:_1.2' ? 1 : 0} transition="opacity .1s" />
           Custom: 1.2
         </Menu.Item>
         <Menu.Item value="add_space_before" columns="1fr auto">

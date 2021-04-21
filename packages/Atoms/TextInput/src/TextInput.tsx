@@ -33,15 +33,7 @@ function TextInput(allProps: any) {
 }
 
 TextInput.Field = function TextField(allProps: any) {
-  let {
-    label,
-    required,
-    link,
-    validationMessage,
-    helpText,
-    helpTextClear,
-    ...otherProps
-  } = allProps;
+  let { label, required, link, validationMessage, helpText, helpTextClear, ...otherProps } = allProps;
 
   let inputSize = otherProps.size === 'sm' ? '20em' : '100%';
 

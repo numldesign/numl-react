@@ -1,18 +1,7 @@
 import React from 'react';
 
 function ProductCard(props) {
-  let {
-    width = '350px',
-    name,
-    image,
-    detail,
-    price,
-    color,
-    currency,
-    sizes,
-    rating,
-    ...otherProps
-  } = props;
+  let { width = '350px', name, image, detail, price, color, currency, sizes, rating, ...otherProps } = props;
   return (
     <nu-grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
       <nu-card padding="20px" radius="8px">
@@ -167,18 +156,7 @@ function ProductDetail(props) {
 }
 
 ProductCard.Landscape = function (props) {
-  let {
-    width = '280px',
-    name,
-    image,
-    detail,
-    price,
-    color,
-    sizes,
-    currency,
-    rating,
-    ...otherProps
-  } = props;
+  let { width = '280px', name, image, detail, price, color, sizes, currency, rating, ...otherProps } = props;
 
   return (
     <nu-flex gap content="space-between" items="center" padding>

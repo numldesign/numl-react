@@ -12,11 +12,7 @@ function PageAction(allProps: TPageActionProps) {
         <nu-pane>
           {secondaryActions.map((action: any) => {
             return (
-              <Button
-                key={action.content}
-                theme={action.destructive ? 'danger' : undefined}
-                {...action}
-              >
+              <Button key={action.content} theme={action.destructive ? 'danger' : undefined} {...action}>
                 {action.content}
               </Button>
             );

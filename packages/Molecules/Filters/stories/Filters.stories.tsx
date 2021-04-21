@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  TextInput,
-  Icon,
-  Button,
-  Menu,
-  Filters,
-  Popup,
-} from '../../../entry';
+import { NumlProvider, ThemeProvider, TextInput, Icon, Button, Menu, Filters, Popup } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Filters',
@@ -27,9 +18,7 @@ export const Default = Template.bind({});
 Default.args = {
   responsive: '601px',
   flow: 'column|row',
-  filterSearch: (
-    <TextInput placeholder="Text Field" prefix={<Icon name="search-outline" padding="1x" />} />
-  ),
+  filterSearch: <TextInput placeholder="Text Field" prefix={<Icon name="search-outline" padding="1x" />} />,
   filterGroup: (
     <Button.Group>
       <Button key="one">

@@ -5,16 +5,7 @@ import { Image } from './../../../Elements/Image';
 import { TCalloutCardProps } from './CalloutCard.type';
 
 function CalloutCard(allProps: TCalloutCardProps): JSX.Element {
-  const {
-    heading,
-    description,
-    actions,
-    padding = 1,
-    src,
-    extra,
-    closeAction,
-    ...otherProps
-  } = allProps;
+  const { heading, description, actions, padding = 1, src, extra, closeAction, ...otherProps } = allProps;
   return (
     <nu-card padding={padding} {...otherProps}>
       <Grid columns="auto" content="space-between">

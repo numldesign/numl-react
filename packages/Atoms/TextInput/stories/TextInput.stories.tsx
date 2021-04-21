@@ -73,12 +73,7 @@ export default {
 
 const Template = ({ theme, ...args }) => {
   const showInputField =
-    args.label ||
-    args.required ||
-    args.link ||
-    args.validationMessage ||
-    args.helpText ||
-    args.helpTextClear;
+    args.label || args.required || args.link || args.validationMessage || args.helpText || args.helpTextClear;
   return (
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75"></ThemeProvider>

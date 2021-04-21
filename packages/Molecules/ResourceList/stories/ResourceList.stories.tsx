@@ -57,12 +57,7 @@ WithMultiSelect.args = {
   },
   renderItem: ({ item }) => {
     return (
-      <Pane
-        content="space-between|flex-start"
-        items="center|flex-start"
-        flow="row|column"
-        text="wrap"
-      >
+      <Pane content="space-between|flex-start" items="center|flex-start" flow="row|column" text="wrap">
         <Block>
           <Block>{item.name}</Block>
           <Block color="#text-soft">{item.location}</Block>

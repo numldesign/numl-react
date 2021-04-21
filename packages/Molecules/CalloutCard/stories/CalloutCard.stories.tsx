@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  NumlProvider,
-  Icon,
-  ThemeProvider,
-  CalloutCard,
-  Link,
-  Block,
-  Image,
-  Button,
-} from '../../../entry';
+import { NumlProvider, Icon, ThemeProvider, CalloutCard, Link, Block, Image, Button } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/CalloutCard',

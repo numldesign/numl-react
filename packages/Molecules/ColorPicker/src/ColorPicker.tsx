@@ -22,13 +22,7 @@ function ColorModifier() {
 }
 
 function ColorSelector(props: any) {
-  let {
-    columns = 'auto',
-    padding = '2x 0x',
-    items = 'center',
-    gap = '2x',
-    content = 'center',
-  } = props;
+  let { columns = 'auto', padding = '2x 0x', items = 'center', gap = '2x', content = 'center' } = props;
   return (
     <Grid columns={columns} padding={padding} items={items} gap={gap} content={content}>
       <nu-slider
@@ -70,27 +64,9 @@ function ColorCode(props: any) {
           <Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></Icon>
         </Button>
         <nu-buttongroup column="2" height="2.25rem" value="rgb">
-          <Input.Number
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></Input.Number>
-          <Input.Number
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></Input.Number>
-          <Input.Number
-            precision="0"
-            min="0"
-            max="255"
-            value="0"
-            label="Number input"
-          ></Input.Number>
+          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
         </nu-buttongroup>
         <Input.Number
           column="3"

@@ -10,13 +10,8 @@ function ExceptionList(allProps: TExceptionListProps) {
         ? items.map((eachItem: any, index: any) => {
             return (
               <nu-grid gap columns="auto auto auto auto" key={index}>
-                {typeof eachItem.icon == 'string' ? (
-                  <nu-icon name={eachItem.icon} />
-                ) : (
-                  eachItem.icon
-                )}
-                <nu-el text="middle">{eachItem.title}</nu-el>-
-                <nu-el text="middle">{eachItem.label}</nu-el>
+                {typeof eachItem.icon == 'string' ? <nu-icon name={eachItem.icon} /> : eachItem.icon}
+                <nu-el text="middle">{eachItem.title}</nu-el>-<nu-el text="middle">{eachItem.label}</nu-el>
               </nu-grid>
             );
           })

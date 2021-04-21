@@ -2,15 +2,7 @@ import React from 'react';
 import { TEmptyStateProps } from './EmptyState.type';
 
 function EmptyState(allProps: TEmptyStateProps): JSX.Element {
-  const {
-    heading,
-    description,
-    flow = 'column',
-    radius = '1x',
-    actions,
-    children,
-    ...otherProps
-  } = allProps;
+  const { heading, description, flow = 'column', radius = '1x', actions, children, ...otherProps } = allProps;
 
   return (
     <nu-pane flow={flow} radius={radius} {...otherProps}>
