@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from '../../../Atoms/Link';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { AccountConnection } from '../index';
+import { NumlProvider, ThemeProvider, AccountConnection, Link } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/AccountConnection',
@@ -17,8 +15,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     <AccountConnection {...args}></AccountConnection>
   </NumlProvider>

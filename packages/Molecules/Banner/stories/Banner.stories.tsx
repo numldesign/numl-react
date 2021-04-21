@@ -1,9 +1,5 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { Icon } from '../../../Atoms/Icon';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Banner } from '../index';
-import { Grid } from './../../../Elements/Grid';
+import { Banner, Button, Grid, Icon, NumlProvider, ThemeProvider } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Banner',
@@ -24,9 +20,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Banner {...args} />
   </NumlProvider>
 );

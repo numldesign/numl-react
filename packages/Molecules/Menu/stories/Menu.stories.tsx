@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Menu } from '../index';
+import { NumlProvider, ThemeProvider, Icon, Menu, Base, Popup, DropdownIcon } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Menu',
@@ -15,9 +13,8 @@ export const Default = (args) => {
 
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <Menu {...args} border radius size="sm">
         <Menu.Item value="undo" onClick={handleMenuClick}>
           Undo
@@ -47,8 +44,8 @@ export const WithIcons = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <nu-theme hue="290" saturation="75"></nu-theme>
-        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
         <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
           <Icon name="eye-outline" />
@@ -83,8 +80,8 @@ export const WithHotKeyAndPopup = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <nu-theme hue="290" saturation="75"></nu-theme>
-        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
         <Menu.Item
           value="Cut"
@@ -95,9 +92,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <Icon name="cut-outline" />
           Cut
-          <nu-el>
+          <Base>
             <Icon name="logo-windows" />X
-          </nu-el>
+          </Base>
         </Menu.Item>
         <Menu.Item
           value="Copy"
@@ -108,9 +105,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <Icon name="copy-outline" />
           Copy
-          <nu-el>
+          <Base>
             <Icon name="logo-windows" />C
-          </nu-el>
+          </Base>
         </Menu.Item>
         <Menu.Item
           border="bottom"
@@ -122,15 +119,15 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <Icon name="clipboard-outline" />
           Paste
-          <nu-el>
+          <Base>
             <Icon name="logo-windows" />P
-          </nu-el>
+          </Base>
         </Menu.Item>
         <Menu.Item value="Webclipboard" columns="auto 1fr auto">
           <Icon name="cloudy-outline" />
           Web clipboard
-          <nu-dropdownicon width="6x" />
-          <nu-popup use-menu display="flex" padding="1x 0" flow="column">
+          <DropdownIcon width="6x" />
+          <Popup use-menu display="flex" padding="1x 0" flow="column">
             <Menu.Item value="Label1" onClick={handleMenuClick}>
               Label 1
             </Menu.Item>
@@ -140,7 +137,7 @@ export const WithHotKeyAndPopup = (args) => {
             <Menu.Item value="Label3" onClick={handleMenuClick}>
               Label 3
             </Menu.Item>
-          </nu-popup>
+          </Popup>
         </Menu.Item>
       </Menu>
     </NumlProvider>
@@ -158,8 +155,8 @@ export const WithSelectableItems = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <nu-theme hue="290" saturation="75"></nu-theme>
-        <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
         <Menu.Item
           value="Single"
@@ -228,8 +225,8 @@ export const WithSelectableItems = (args) => {
         </Menu.Item>
         <Menu.Item value="add_space_before" columns="1fr auto">
           Add space before paragraph
-          <nu-dropdownicon width="6x" />
-          <nu-popup use-menu display="flex" padding="1x 0" flow="column">
+          <DropdownIcon width="6x" />
+          <Popup use-menu display="flex" padding="1x 0" flow="column">
             <Menu.Item value="Label1" onClick={handleMenuClick}>
               Label 1
             </Menu.Item>
@@ -239,7 +236,7 @@ export const WithSelectableItems = (args) => {
             <Menu.Item value="Label3" onClick={handleMenuClick}>
               Label 3
             </Menu.Item>
-          </nu-popup>
+          </Popup>
         </Menu.Item>
         <Menu.Item value="add_space_before" onClick={handleMenuClick}>
           Add space after paragraph

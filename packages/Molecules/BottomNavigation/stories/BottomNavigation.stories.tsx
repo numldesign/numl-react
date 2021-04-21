@@ -1,7 +1,5 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { BottomNavigation } from '../index';
+import { NumlProvider, ThemeProvider, BottomNavigation, Icon } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/BottomNavigation',
@@ -10,8 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     <BottomNavigation {...args} />
   </NumlProvider>

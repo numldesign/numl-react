@@ -1,10 +1,14 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { Icon } from '../../../Atoms/Icon';
-import { TextInput } from '../../../Atoms/TextInput';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Menu } from '../../Menu';
-import { Filters } from '../index';
+import {
+  NumlProvider,
+  ThemeProvider,
+  TextInput,
+  Icon,
+  Button,
+  Menu,
+  Filters,
+  Popup,
+} from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Filters',
@@ -13,9 +17,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Filters {...args} />
   </NumlProvider>
 );
@@ -32,7 +35,7 @@ Default.args = {
       <Button key="one">
         Button
         <Icon name="chevron-down-outline" />
-        <nu-popup use-menu display="flex" padding="1x 0" flow="column">
+        <Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
             <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
@@ -41,7 +44,7 @@ Default.args = {
               Action 2
             </Menu.Item>
           </Menu>
-        </nu-popup>
+        </Popup>
       </Button>
       <Button key="two">
         Button
@@ -71,7 +74,7 @@ WithoutSearch.args = {
       <Button key="one">
         Button
         <Icon name="chevron-down-outline" />
-        <nu-popup use-menu display="flex" padding="1x 0" flow="column">
+        <Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
             <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
@@ -80,7 +83,7 @@ WithoutSearch.args = {
               Action 2
             </Menu.Item>
           </Menu>
-        </nu-popup>
+        </Popup>
       </Button>
       <Button key="two">
         Button

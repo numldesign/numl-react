@@ -1,8 +1,5 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { Icon } from '../../../Atoms/Icon';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Sheet } from '../index';
+import { NumlProvider, ThemeProvider, Icon, Sheet, Button, Block } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Sheet',
@@ -11,9 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Sheet {...args} />
   </NumlProvider>
 );
@@ -31,9 +27,9 @@ Default.args = {
   ],
   onChange: (props) => console.log(props),
   heading: (
-    <nu-block size="xl" color="#text-soft">
+    <Block size="xl" color="#text-soft">
       Manage sales channels
-    </nu-block>
+    </Block>
   ),
   footerActions: [
     <Button key="1">Cancel</Button>,

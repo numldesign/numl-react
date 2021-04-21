@@ -1,7 +1,5 @@
 import React from 'react';
-import { Radio } from '../../../Atoms/Radio';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { TextArea } from '../index';
+import { NumlProvider, ThemeProvider, Radio, TextArea } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/TextArea',
@@ -18,8 +16,8 @@ export default {
 
 const Template = ({ children, fieldProps, ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     {children || fieldProps ? (
       <TextArea.Field {...args} children={children} fieldProps={fieldProps} />

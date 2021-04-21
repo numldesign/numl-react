@@ -1,6 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { ResourceList } from '../index';
+import { NumlProvider, ThemeProvider, ResourceList, Block, Pane } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/ResourceList',
@@ -9,9 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <ResourceList {...args} />
   </NumlProvider>
 );
@@ -23,10 +21,10 @@ Default.args = {
   },
   renderItem: ({ item }) => {
     return (
-      <nu-block text="wrap">
-        <nu-block>{item.name}</nu-block>
-        <nu-block color="#text-soft">{item.location}</nu-block>
-      </nu-block>
+      <Block text="wrap">
+        <Block>{item.name}</Block>
+        <Block color="#text-soft">{item.location}</Block>
+      </Block>
     );
   },
   items: [
@@ -59,21 +57,21 @@ WithMultiSelect.args = {
   },
   renderItem: ({ item }) => {
     return (
-      <nu-pane
+      <Pane
         content="space-between|flex-start"
         items="center|flex-start"
         flow="row|column"
         text="wrap"
       >
-        <nu-block>
-          <nu-block>{item.name}</nu-block>
-          <nu-block color="#text-soft">{item.location}</nu-block>
-        </nu-block>
-        <nu-pane gap="3x">
-          <nu-block>{item.totalOrders}</nu-block>
-          <nu-block>{item.cost}</nu-block>
-        </nu-pane>
-      </nu-pane>
+        <Block>
+          <Block>{item.name}</Block>
+          <Block color="#text-soft">{item.location}</Block>
+        </Block>
+        <Pane gap="3x">
+          <Block>{item.totalOrders}</Block>
+          <Block>{item.cost}</Block>
+        </Pane>
+      </Pane>
     );
   },
   items: [

@@ -1,9 +1,15 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { TextInput } from '../../../Atoms/TextInput';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { ActionList } from '../../ActionList';
-import { Popover } from '../index';
+import {
+  NumlProvider,
+  ThemeProvider,
+  ActionList,
+  Popover,
+  Button,
+  Input,
+  TextInput,
+  DropdownIcon,
+  Flex,
+} from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Popover',
@@ -12,14 +18,13 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
-    <nu-btn width="10" columns="1fr auto" value="Select">
-      <nu-value />
-      <nu-dropdownicon></nu-dropdownicon>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <Button width="10" columns="1fr auto" value="Select">
+      <Input.Value />
+      <DropdownIcon></DropdownIcon>
       <Popover {...args} />
-    </nu-btn>
+    </Button>
   </NumlProvider>
 );
 
@@ -44,10 +49,10 @@ Default.args = {
 export const WithForm = Template.bind({});
 WithForm.args = {
   children: (
-    <nu-flex gap="2x" flow="column" width="max-content" padding="1x">
+    <Flex gap="2x" flow="column" width="max-content" padding="1x">
       <TextInput.Field label="Show all customers where:" placeholder="Today" />
       <TextInput.Field label="Tags" value="Jaded Pixel" />
       <Button width="min-content">Add Filter</Button>
-    </nu-flex>
+    </Flex>
   ),
 };

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Tooltip } from '../index';
+import { NumlProvider, ThemeProvider, Tooltip, Button } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Tooltip',
@@ -17,9 +15,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider padding="6x 2x">
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Button>
       Hover me
       <Tooltip {...args} />

@@ -50,7 +50,7 @@ export interface BaseProps {
   size?: string;
   hide?: string;
   show?: string;
-  opacity?: boolean;
+  opacity?: string | boolean | number;
   transition?: string;
   scrollbar?: string;
   before?: string;
@@ -118,7 +118,7 @@ export interface BaseProps {
   checked?: string;
   selected?: string;
   target?: string;
-  to?: string;
+  to?: string | any;
   begin?: string;
   end?: string;
   for?: string;
@@ -158,6 +158,8 @@ export interface BaseProps {
   success?: string;
   danger?: string;
   warning?: string;
+  onClick?: any;
+  clear?: boolean;
 }
 
 export enum Sizes {

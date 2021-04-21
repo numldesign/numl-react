@@ -1,12 +1,18 @@
 import React from 'react';
-import { Badge } from '../../../Atoms/Badge';
-import { Button } from '../../../Atoms/Button';
-import { Icon } from '../../../Atoms/Icon';
-import { Thumbnail } from '../../../Atoms/Thumbnail';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import OptionList from '../src/OptionList';
-import { Block } from './../../../Elements/Block';
-import { Grid } from './../../../Elements/Grid';
+import {
+  NumlProvider,
+  Badge,
+  Button,
+  Icon,
+  Thumbnail,
+  OptionList,
+  Block,
+  Grid,
+  Pane,
+  ThemeProvider,
+  Heading,
+  Input,
+} from '../../../entry';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -15,8 +21,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     <OptionList {...args} />
   </NumlProvider>
@@ -38,9 +44,9 @@ Default.args = {
     return item.label;
   },
   renderHeader: (
-    <nu-heading padding="1x 1.4x" level="6" text="cap">
+    <Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
-    </nu-heading>
+    </Heading>
   ),
   options: [
     { value: 'byward_market', label: 'Byward Market' },
@@ -73,9 +79,9 @@ WithSection.args = {
     },
     {
       renderHeader: (
-        <nu-heading padding="1x 1.4x" level="6" text="cap">
+        <Heading padding="1x 1.5x" level="6" text="cap">
           Inventory Location
-        </nu-heading>
+        </Heading>
       ),
       options: [
         { index: 3, value: 'source', label: 'Traffic referrer source' },
@@ -104,17 +110,17 @@ WithMultiSelectThumbnailBadge.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <nu-pane>
+      <Pane>
         <Thumbnail width="40px" source="https://source.unsplash.com/user/erondu/100x100" />
         {item.label}
         <Badge label="Neutral" padding="0 1x" />
-      </nu-pane>
+      </Pane>
     );
   },
   renderHeader: (
-    <nu-heading padding="1x 1.4x" level="6" text="cap">
+    <Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
-    </nu-heading>
+    </Heading>
   ),
   options: [
     { value: 'byward_market', label: 'Byward Market' },
@@ -156,14 +162,14 @@ OptionListWithTable.args = {
   options: [
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Byward Market
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
@@ -172,14 +178,14 @@ OptionListWithTable.args = {
     },
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Centretown
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
@@ -188,14 +194,14 @@ OptionListWithTable.args = {
     },
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Hintonburg
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
@@ -204,14 +210,14 @@ OptionListWithTable.args = {
     },
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Westboro
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
@@ -243,13 +249,13 @@ OptionListWithTableAndInput.args = {
         <Block>{item.icon}</Block>
         {item.custom ? (
           <Block>
-            <nu-pane padding="0.5x 0" key="1">
+            <Pane padding="0.5x 0" key="1">
               <Button.Group>
                 <Button key="1">Add</Button>
                 <Button key="2">Set</Button>
               </Button.Group>
-              <nu-numinput placeholder="Enter Amount" width="min 6x" />
-            </nu-pane>
+              <Input.Number placeholder="Enter Amount" width="min 6x" />
+            </Pane>
             <Button key="2" width="100%">
               Button
             </Button>
@@ -261,27 +267,27 @@ OptionListWithTableAndInput.args = {
   options: [
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Byward Market
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
       icon: <Icon key="1" name="help-circle-outline" />,
       custom: [
-        <nu-pane padding="0.5x 0" key="1">
+        <Pane padding="0.5x 0" key="1">
           <Button.Group>
             <Button key="1">Add</Button>
             <Button key="2">Set</Button>
           </Button.Group>
-          <nu-numinput placeholder="Enter Amount" width="min 6x" />
-        </nu-pane>,
+          <Input.Number placeholder="Enter Amount" width="min 6x" />
+        </Pane>,
         <Button key="2" width="100%">
           Button
         </Button>,
@@ -289,27 +295,27 @@ OptionListWithTableAndInput.args = {
     },
     {
       label: (
-        <nu-pane>
+        <Pane>
           <Thumbnail
             width="40px"
             key="1"
             source="https://source.unsplash.com/user/erondu/100x100"
           />
           Centretown
-        </nu-pane>
+        </Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="2" label="Neutral" padding="0 1x" />,
       icon: <Icon key="2" name="help-circle-outline" />,
       custom: [
-        <nu-pane padding="0.5x 0" key="1">
+        <Pane padding="0.5x 0" key="1">
           <Button.Group>
             <Button key="1">Add</Button>
             <Button key="2">Set</Button>
           </Button.Group>
-          <nu-numinput placeholder="Enter Amount" width="min 6x" />
-        </nu-pane>,
+          <Input.Number placeholder="Enter Amount" width="min 6x" />
+        </Pane>,
         <Button key="2" width="100%">
           Button
         </Button>,
@@ -347,7 +353,7 @@ OptionListWithCardDesign.args = {
             <Block>When sold out</Block>
             <Block color="#text-soft">{item.status}</Block>
           </Block>
-          <nu-pane>
+          <Pane>
             <Block>
               <Block>Available</Block>
               <Block color="#text-soft">{item.available}</Block>
@@ -356,15 +362,15 @@ OptionListWithCardDesign.args = {
               <Block>Available</Block>
               <Block color="#text-soft">{item.available}</Block>
             </Block>
-          </nu-pane>
+          </Pane>
           <Block>
-            <nu-pane padding="0.5x 0" key="1">
+            <Pane padding="0.5x 0" key="1">
               <Button.Group>
                 <Button key="1">Add</Button>
                 <Button key="2">Set</Button>
               </Button.Group>
-              <nu-numinput placeholder="Enter Amount" width="min 6x" />
-            </nu-pane>
+              <Input.Number placeholder="Enter Amount" width="min 6x" />
+            </Pane>
             <Button key="2" width="100%">
               Button
             </Button>

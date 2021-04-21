@@ -1,7 +1,5 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Tabs } from '../index';
+import { NumlProvider, ThemeProvider, Tabs, Icon } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Tabs',
@@ -10,9 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Tabs {...args} />
   </NumlProvider>
 );
@@ -27,10 +24,10 @@ Basic.args = {
   defaultValue: 'accept',
   onChange: (tab) => console.log('selected tab ', tab),
   children: [
-    <Tabs.Item key="1" flex="1" padding="1.6x" tab="library" label="Library">
+    <Tabs.Item key="1" flex="1" padding="1.5x" tab="library" label="Library">
       Library Content
     </Tabs.Item>,
-    <Tabs.Item key="2" flex="1" padding="1.6x" tab="accept" label="Accepts Marketing">
+    <Tabs.Item key="2" flex="1" padding="1.5x" tab="accept" label="Accepts Marketing">
       Accepts Marketing Content
     </Tabs.Item>,
   ],
@@ -49,7 +46,7 @@ WithPrefixSuffixTab.args = {
   children: [
     <Tabs.Item
       key="1"
-      padding="1.6x"
+      padding="1.5x"
       tab="library"
       label="Library"
       prefix={<Icon name="checkmark" />}
@@ -59,7 +56,7 @@ WithPrefixSuffixTab.args = {
     </Tabs.Item>,
     <Tabs.Item
       key="2"
-      padding="1.6x"
+      padding="1.5x"
       tab="accept"
       label="Accepts Marketing"
       prefix={<Icon name="checkmark" />}

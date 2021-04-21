@@ -1,8 +1,15 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { Link } from '../../../Atoms/Link';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Search } from '../index';
+import {
+  NumlProvider,
+  ThemeProvider,
+  Search,
+  Icon,
+  Link,
+  Block,
+  Grid,
+  Base,
+  Pane,
+} from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Search',
@@ -11,30 +18,30 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Search {...args} />
   </NumlProvider>
 );
 
 const resultTemplate = (item) => {
   return (
-    <nu-grid gap flow="column" columns="4x auto 6x">
+    <Grid gap flow="column" columns="4x auto 6x">
       {item.prefix && (
-        <nu-block text="center">
+        <Block text="center">
           <Icon name={item.prefix} />
-        </nu-block>
+        </Block>
       )}
-      {item.emptyGap && <nu-el />}
+      {item.emptyGap && <Base />}
       {item.title && (
-        <nu-block>
-          <nu-block text="sb">{item.title}</nu-block>
-          {item.description && <nu-block color="#text-strong">{item.description}</nu-block>}
-          {item.description2 && <nu-block color="#text-strong">{item.description2}</nu-block>}
-        </nu-block>
+        <Block>
+          <Block text="sb">{item.title}</Block>
+          {item.description && <Block color="#text-strong">{item.description}</Block>}
+          {item.description2 && <Block color="#text-strong">{item.description2}</Block>}
+        </Block>
       )}
       {item.suffix}
-    </nu-grid>
+    </Grid>
   );
 };
 
@@ -52,9 +59,9 @@ Default.args = {
     fill: 'bg',
   },
   extraActions: (
-    <nu-pane width="4x">
+    <Pane width="4x">
       <Link to="https://numl.design" icon={<Icon name="exit-outline" />} />
-    </nu-pane>
+    </Pane>
   ),
   value: 'acb',
   resultList: [
@@ -73,14 +80,14 @@ Default.args = {
       title: 'Draft orders',
       description: 'Process, track, and fulfill your orders',
       suffix: (
-        <nu-pane text="center" gap=".4x">
-          <nu-el fill="bg" radius padding="0 .4x">
+        <Pane text="center" gap=".4x">
+          <Base fill="bg" radius padding="0 .4x">
             G
-          </nu-el>
-          <nu-el fill="bg" radius padding="0 .4x">
+          </Base>
+          <Base fill="bg" radius padding="0 .4x">
             O
-          </nu-el>
-        </nu-pane>
+          </Base>
+        </Pane>
       ),
       value: 'value_3',
     },
@@ -90,9 +97,9 @@ Default.args = {
       description: 'Process, track, and fulfill your orders',
       description2: 'Orders / Drafts',
       suffix: (
-        <nu-block text="center">
+        <Block text="center">
           <Link to="https://numl.design" icon={<Icon name="exit-outline" />} />
-        </nu-block>
+        </Block>
       ),
       value: 'value_4',
     },

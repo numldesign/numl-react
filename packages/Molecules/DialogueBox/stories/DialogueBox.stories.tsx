@@ -1,9 +1,5 @@
 import React from 'react';
-import Avatar from '../../../Atoms/Avatar/src/Avatar';
-import { Button } from '../../../Atoms/Button';
-import Radio from '../../../Atoms/Radio/src/Radio';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import DialogueBox from '../src/DialogueBox';
+import { NumlProvider, Radio, DialogueBox, Button, Avatar, ThemeProvider } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
@@ -19,8 +15,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     <DialogueBox {...args} />
   </NumlProvider>

@@ -68,3 +68,6 @@ export { Pane } from './Elements/Pane';
 export { Svg } from './Elements/Svg';
 export { Flow } from './Elements/Flow';
 export { ActionElement } from './Elements/Action';
+export { Popup } from './Elements/Popup';
+export { DropdownIcon } from './Elements/DropdownIcon';
+export { Input } from './Elements/Input';

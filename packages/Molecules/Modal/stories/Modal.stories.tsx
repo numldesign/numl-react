@@ -1,9 +1,5 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
-import { Icon } from '../../../Atoms/Icon';
-import { Block } from '../../../Elements/Block';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Modal } from '../index';
+import { NumlProvider, ThemeProvider, Block, Modal, Icon, Button } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Modal',
@@ -12,9 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Modal {...args} />
   </NumlProvider>
 );

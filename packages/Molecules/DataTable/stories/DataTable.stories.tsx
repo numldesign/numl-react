@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from '../../../Atoms/Link';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import DataTable from '../src/DataTable';
+import { NumlProvider, ThemeProvider, DataTable, Link } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/DataTable',
@@ -10,9 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <DataTable {...args} />
   </NumlProvider>
 );

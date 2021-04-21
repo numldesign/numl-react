@@ -1,7 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import TextInput from '../../../Atoms/TextInput/src/TextInput';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import ChoiceList from '../src/ChoiceList';
+import { NumlProvider, ThemeProvider, TextInput, ChoiceList } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/ChoiceList',
@@ -10,9 +8,8 @@ export default {
 
 const Template = (args) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <ChoiceList {...args} />
   </NumlProvider>
 );
@@ -37,8 +34,8 @@ export const WithTextBox = (args) => {
 
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
       <ChoiceList
         {...args}
