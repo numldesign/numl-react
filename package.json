@@ -91,6 +91,7 @@
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
+  "typings": "./dist/typings/entry.d.ts",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
