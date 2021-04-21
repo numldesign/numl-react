@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { withLayer0 } = require('@layer0/next/config')
+const { withLayer0, withServiceWorker  } = require('@layer0/next/config')
 const withMDX = require('@next/mdx')({
     extension: /\.mdx$/
 })
