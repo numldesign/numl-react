@@ -1,6 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import Checkbox from '../src/Checkbox';
+import { NumlProvider, ThemeProvider, Checkbox } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Checkbox',
@@ -23,8 +22,8 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Checkbox.Field {...args}></Checkbox.Field>
   </NumlProvider>
 );
@@ -37,8 +36,8 @@ Basic.args = {
 
 const Template2 = ({ children, ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Checkbox.Field {...args}>
       <Checkbox.Label>{children}</Checkbox.Label>
     </Checkbox.Field>

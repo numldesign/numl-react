@@ -1,7 +1,7 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
+
+import { NumlProvider, ExceptionList, ThemeProvider } from '../../../entry';
 import { Icon } from '../../Icon/';
-import { ExceptionList } from '../index';
 
 export default {
   title: 'Example/Atoms/ExceptionList',
@@ -19,8 +19,8 @@ const Template = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );
@@ -39,8 +39,8 @@ const Template2 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );
@@ -58,8 +58,8 @@ const Template3 = ({ title, label, icon, ...args }) => {
   let items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import RangeSlider from '../src/RangeSlider';
+import { NumlProvider, ThemeProvider, RangeSlider } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/RangeSlider',
@@ -36,9 +35,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider padding="6x 2x">
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
-
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <RangeSlider {...args} />
   </NumlProvider>
 );

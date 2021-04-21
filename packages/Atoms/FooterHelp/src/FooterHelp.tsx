@@ -1,17 +1,16 @@
 import T from 'prop-types';
 import React from 'react';
-import { Icon } from '../../Icon';
-import { Link } from '../../Link';
 import { TFooterHelp } from './FooterHelp.type';
+import { Block, Base, Link, Icon } from './../../../entry';
 
 function FooterHelp(allProps: TFooterHelp) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;
   return (
-    <nu-block radius="4x" border="1bw" padding="2x" {...otherProps}>
+    <Block radius="4x" border="1bw" padding="2x" {...otherProps}>
       {typeof icon === 'string' ? <Icon name={icon} /> : icon}
-      <nu-el padding="0 4px">{label}</nu-el>
+      <Base padding="0 4px">{label}</Base>
       {typeof link === 'string' ? <Link to={link} label={linkLabel} icon="exit-outline" /> : link}
-    </nu-block>
+    </Block>
   );
 }
 

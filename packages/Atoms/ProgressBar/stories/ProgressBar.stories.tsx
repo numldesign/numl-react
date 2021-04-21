@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
+import { NumlProvider, ThemeProvider } from '../../../entry';
 import { ProgressBar } from '../index';
 
 export default {
@@ -34,8 +34,8 @@ export default {
 const Template = function ({ ...args }) {
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <ProgressBar {...args} />
     </NumlProvider>
   );

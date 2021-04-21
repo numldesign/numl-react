@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
+import { NumlProvider, ThemeProvider } from '../../../entry';
 import { Radio } from '../index';
 
 export default {
@@ -24,8 +24,8 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     {children ? <Radio.Field children={children} {...args} /> : <Radio {...args} />}
   </NumlProvider>
 );

@@ -1,7 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Icon } from '../../Icon';
-import { Link } from '../index';
+import { NumlProvider, ThemeProvider, Icon, Link } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Link',
@@ -36,8 +34,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Link {...args} />
   </NumlProvider>
 );

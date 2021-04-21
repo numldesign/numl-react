@@ -1,8 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Icon } from '../../Icon';
-import { Pagination } from '../index';
-import { Button } from './../../Button/';
+import { NumlProvider, ThemeProvider, Icon, Pagination, Button } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Pagination',
@@ -36,8 +33,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Pagination {...args} />
   </NumlProvider>
 );
@@ -61,8 +58,8 @@ Horizontal.args = {
 
 const AttributeTemplate = ({ ...args }) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Pagination {...args} />
   </NumlProvider>
 );

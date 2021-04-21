@@ -32,9 +32,4 @@ Switch.Field = function SwitchField(allProps: TSwitchFieldProps) {
   );
 };
 
-Switch.propTypes = {
-  ...ActionElement.propTypes,
-  checked: T.bool,
-};
-
 export default Switch;

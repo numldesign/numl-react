@@ -1,8 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
-import { Button } from '../index';
-import { Grid } from './../../../Elements/Grid/';
-import { Heading } from './../../../Elements/Heading/src/Heading';
+import { NumlProvider, ThemeProvider, Button, Grid, Heading } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Button',
@@ -20,8 +17,8 @@ const Template = function (props: any) {
   const { label, ...otherProps } = props;
   return (
     <NumlProvider>
-      <nu-theme hue="290" saturation="75"></nu-theme>
-      <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <Grid columns="auto" rows="1fr" gap>
         <Grid.Row row="1">
           <Grid.Column column="1" padding="0x 2x">
