@@ -62,6 +62,7 @@ export interface BaseProps {
   fade?: string;
   drop?: string;
   origin?: string;
+  block?: boolean;
   selectable?: string;
   box?: string;
   lineClamp?: string;

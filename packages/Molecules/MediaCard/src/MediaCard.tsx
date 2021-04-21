@@ -1,7 +1,7 @@
 import React from 'react';
-import { Block } from './../../../Elements/Block/';
+import { Block, Card, Image, Grid, Base, Icon } from './../../../entry';
 
-function MediaCard(props) {
+function MediaCard(props: any) {
   const {
     src,
     action,
@@ -12,17 +12,17 @@ function MediaCard(props) {
     ...otherProps
   } = props;
   return (
-    <nu-card padding={padding} columns={columns} {...otherProps}>
-      <nu-img src={src} width="100%" height="9.875rem"></nu-img>
-      <nu-grid columns="auto 1fr" content="stretch end" items="stretch end" padding="2x 0x">
-        <nu-el text="bold">{heading}</nu-el>
-        <nu-icon align-self="end" name="ellipsis-horizontal-outline"></nu-icon>
-      </nu-grid>
-      <nu-grid columns="auto" gap>
-        {description ? <nu-el row="1">{description}</nu-el> : null}
+    <Card padding={padding} columns={columns} {...otherProps}>
+      <Image src={src} width="100%" height="9.875rem"></Image>
+      <Grid columns="auto 1fr" content="stretch end" items="stretch end" padding="2x 0x">
+        <Base text="bold">{heading}</Base>
+        <Icon align-self="end" name="ellipsis-horizontal-outline"></Icon>
+      </Grid>
+      <Grid columns="auto" gap>
+        {description ? <Base row="1">{description}</Base> : null}
         {action ? <Block row="2">{action}</Block> : null}
-      </nu-grid>
-    </nu-card>
+      </Grid>
+    </Card>
   );
 }
 

@@ -53,19 +53,19 @@ const Template = function (props: any) {
         </Grid.Row>
         <Grid.Row row="4">
           <Grid.Column column="1" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="0.8x 1.2x">
+            <Button {...otherProps} special gap padding="0.8x 1.2x">
               <Button.Label>{label}</Button.Label>
             </Button>
           </Grid.Column>
 
           <Grid.Column column="2" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="1x 2x">
+            <Button {...otherProps} special gap padding="1x 2x">
               <Button.Label>{label}</Button.Label>
             </Button>
           </Grid.Column>
 
           <Grid.Column column="3" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="1.2x 1.2">
+            <Button {...otherProps} special gap padding="1.2x 1.2">
               <Button.Label>{label}</Button.Label>
               <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
             </Button>

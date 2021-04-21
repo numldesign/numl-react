@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
+import { Button, Input } from '../../../entry';
 
-function Form(props) {
+function Form(props: any) {
   const { gap, children, ...otherProps } = props;
 
   return (
@@ -23,12 +24,12 @@ Form.Field = function FormField(allProps: any) {
 
   return <nu-field {...otherProps}>{children}</nu-field>;
 };
-Form.Input = function FormInput(props) {
+Form.Input = function FormInput(props: any) {
   let { name, ...otherProps } = props;
-  return <nu-input id={name} {...otherProps}></nu-input>;
+  return <Input id={name} {...otherProps}></Input>;
 };
 
-Form.Check = function FormCheck(allProps) {
+Form.Check = function FormCheck(allProps: any) {
   var { message, name, assertFunction } = allProps;
   var ref: any = useRef(null);
 
@@ -44,12 +45,12 @@ Form.Check = function FormCheck(allProps) {
   );
 };
 
-Form.Submit = function FormSubmit(allProps) {
+Form.Submit = function FormSubmit(allProps: any) {
   const { children, ...otherProps } = allProps;
   return (
-    <nu-btn type="submit" {...otherProps}>
+    <Button type="submit" {...otherProps}>
       {children}
-    </nu-btn>
+    </Button>
   );
 };
 

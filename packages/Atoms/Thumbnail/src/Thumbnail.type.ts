@@ -1,7 +1,7 @@
-import { BaseProps, screenSizes } from '../../../numl';
+import { BaseProps } from '../../../numl';
 
 export interface TThumbnailProps extends BaseProps {
-  size: screenSizes;
+  size: any;
   source: any;
   alt: any;
   fit: any;

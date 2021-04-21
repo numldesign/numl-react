@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Heading = (props) => {
+export const Heading = (props: any) => {
   const { children, level = '1', ...otherProps } = props;
   return (
     <nu-heading level={level} {...otherProps}>

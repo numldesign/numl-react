@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Dropzone(props) {
+function Dropzone(props: any) {
   const { width = '100%', height = '15.625rem', children, ...otherProps } = props;
 
   return (

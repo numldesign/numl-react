@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../Shared/numl';
+import { BaseProps } from './../../numl';
 
 export interface TActionProps extends BaseProps {
   checked?: any;

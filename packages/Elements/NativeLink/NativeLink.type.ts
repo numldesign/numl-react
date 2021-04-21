@@ -1,4 +1,4 @@
-import { BaseProps } from '../../../Shared/numl';
+import { BaseProps } from './../../numl';
 
 export interface TNativeLinkProps extends BaseProps {
   to?: any;

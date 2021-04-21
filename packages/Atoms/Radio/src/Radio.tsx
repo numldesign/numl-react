@@ -22,7 +22,7 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener('input', (evt) => onChange(evt.detail));
+      ref.current.addEventListener('input', (evt: any) => onChange(evt.detail));
     }
   }, []);
 

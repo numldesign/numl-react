@@ -1,5 +1,6 @@
 import React from 'react';
 import { TCardProps } from './Card.type';
+import { Flow, Block, Pane } from '../../../entry';
 
 function Card(allProps: TCardProps) {
   const {
@@ -16,31 +17,31 @@ function Card(allProps: TCardProps) {
   return (
     <nu-card padding={padding} {...otherProps}>
       {heading || body ? (
-        <nu-flow padding="2x" gap="1x">
+        <Flow padding="2x" gap="1x">
           {heading && (
-            <nu-pane>
-              <nu-block flex="1" size="1" text="sb" color="#text-soft">
+            <Pane>
+              <Block flex="1" size="1" text="sb" color="#text-soft">
                 {heading}
-              </nu-block>
+              </Block>
               {headerActions}
-            </nu-pane>
+            </Pane>
           )}
           {body ? (
-            <nu-pane items="flex-start">
-              <nu-block flex="1">
-                {subheading ? <nu-block size="xs">{subheading}</nu-block> : null}
-                <nu-block size="sm">{body}</nu-block>
-              </nu-block>
+            <Pane items="flex-start">
+              <Block flex="1">
+                {subheading ? <Block size="xs">{subheading}</Block> : null}
+                <Block size="sm">{body}</Block>
+              </Block>
               {bodyActions}
-            </nu-pane>
+            </Pane>
           ) : null}
-        </nu-flow>
+        </Flow>
       ) : null}
       {children}
       {footerActions ? (
-        <nu-pane content="flex-end" gap="0.3" padding="0.5">
+        <Pane content="flex-end" gap="0.3" padding="0.5">
           {footerActions}
-        </nu-pane>
+        </Pane>
       ) : null}
     </nu-card>
   );

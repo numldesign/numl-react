@@ -35,7 +35,7 @@ Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Elem
   );
 };
 
-Checkbox.Label = function CheckboxLabel(props) {
+Checkbox.Label = function CheckboxLabel(props: any) {
   const { id, children, ...otherProps } = props;
   return (
     <nu-label for={id} {...otherProps}>

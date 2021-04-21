@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-declare global {
+export declare global {
   interface Window {
     Nude: any;
   }
   namespace JSX {
-    interface IntrinsicElements {
+    export interface IntrinsicElements {
       'nu-circle': any;
       'nu-icon': any;
       'nu-label': any;
@@ -13,6 +13,7 @@ declare global {
       'nu-card': any;
       'nu-badge': any;
       'nu-btngroup': any;
+      'nu-btn': any;
       'nu-field': any;
       'nu-checkbox': any;
       'nu-radiogroup': any;
@@ -20,6 +21,7 @@ declare global {
       'nu-slider': any;
       'nu-tooltip': any;
       'nu-progressbar': any;
+      'nu-props': any;
       'nu-inputgroup': any;
       'nu-flex': any;
       'nu-input': any;
@@ -35,6 +37,7 @@ declare global {
       'nu-table': any;
       'nu-attrs': any;
       'nu-rowgroup': any;
+      'nu-buttongroup': any;
       'nu-row': any;
       'nu-columnheader': any;
       'nu-cell': any;

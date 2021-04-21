@@ -6,5 +6,4 @@ export interface TCardProps extends BaseProps {
   headerActions?: any;
   footerActions?: any;
   bodyActions?: any;
-  children?: any;
 }

@@ -39,7 +39,7 @@ function CalloutCard(allProps: TCalloutCardProps): JSX.Element {
   );
 }
 
-CalloutCard.Landscape = function CalloutCardLandScape(props) {
+CalloutCard.Landscape = function CalloutCardLandScape(props: any) {
   const { children, padding, src, heading, actions, description, ...otherProps } = props;
   return (
     <nu-card padding={padding} gap="0.5" block {...otherProps}>

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Block, Grid, Base, Icon } from '../.././../entry';
 
-function Toast(props) {
+function Toast(props: any) {
   const { action, text, helpText, icon, theme, ...otherprops } = props;
   return (
-    <nu-block width="17rem">
-      <nu-grid
+    <Block width="17rem" {...otherprops}>
+      <Grid
         columns="auto 3fr auto auto"
         cursor="pointer"
         theme={theme}
@@ -16,29 +17,29 @@ function Toast(props) {
         padding
         items="start"
       >
-        {!icon ? null : <nu-icon column="1" name="eye-outline"></nu-icon>}
-        <nu-block>
-          <nu-block>
-            <nu-el column="2" size="16px auto">
+        {!icon ? null : <Icon column="1" name="eye-outline"></Icon>}
+        <Block>
+          <Block>
+            <Base column="2" size="16px auto">
               {text}
-            </nu-el>
-          </nu-block>
+            </Base>
+          </Block>
           {!helpText ? null : (
-            <nu-block>
-              <nu-el column="2" size="14px auto">
+            <Block>
+              <Base column="2" size="14px auto">
                 {helpText}
-              </nu-el>
-            </nu-block>
+              </Base>
+            </Block>
           )}
-        </nu-block>
+        </Block>
         {!action ? null : (
-          <nu-el column="3" size="15px auto">
+          <Base column="3" size="15px auto">
             Button
-          </nu-el>
+          </Base>
         )}
-        <nu-icon column="4" name="close-outline"></nu-icon>
-      </nu-grid>
-    </nu-block>
+        <Icon column="4" name="close-outline"></Icon>
+      </Grid>
+    </Block>
   );
 }
 

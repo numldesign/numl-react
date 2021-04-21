@@ -1,28 +1,36 @@
 import React from 'react';
+import { Card, Block, Button, Grid, Input, Base, Icon } from '../../../entry';
 
-function ColorPicker(props) {
+function ColorPicker() {
   return (
-    <nu-card block width="22rem">
+    <Card block width="22rem">
       <ColorSelector></ColorSelector>
       <ColorCode></ColorCode>
       <ColorModifier></ColorModifier>
-    </nu-card>
+    </Card>
   );
 }
 
-function ColorModifier(props) {
+function ColorModifier() {
   return (
-    <nu-block padding>
-      <nu-btn radius="0.5rem" block width="min 100%">
+    <Block padding>
+      <Button radius="0.5rem" block width="min 100%">
         Modifiers
-      </nu-btn>
-    </nu-block>
+      </Button>
+    </Block>
   );
 }
 
 function ColorSelector(props: any) {
+  let {
+    columns = 'auto',
+    padding = '2x 0x',
+    items = 'center',
+    gap = '2x',
+    content = 'center',
+  } = props;
   return (
-    <nu-grid columns="auto" padding="2x 0x" items="center" gap="2x" content="center">
+    <Grid columns={columns} padding={padding} items={items} gap={gap} content={content}>
       <nu-slider
         column="1"
         width="15.375rem"
@@ -49,24 +57,42 @@ function ColorSelector(props: any) {
         orient="v"
         image="linear(to bottom, white, transparent)"
       ></nu-slider>
-    </nu-grid>
+    </Grid>
   );
 }
 
-function ColorCode(props) {
+function ColorCode(props: any) {
   return (
-    <nu-block {...props} padding>
-      <nu-grid columns="1fr 3fr 1fr " items="center" gap="2x" content="stretch">
-        <nu-btn column="1" height="2.25rem" toggle text="normal">
-          <nu-el>RGB</nu-el>
-          <nu-icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></nu-icon>
-        </nu-btn>
-        <nu-btngroup column="2" height="2.25rem" value="rgb">
-          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
-          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
-          <nu-numinput precision="0" min="0" max="255" value="0" label="Number input"></nu-numinput>
-        </nu-btngroup>
-        <nu-numinput
+    <Block {...props} padding>
+      <Grid columns="1fr 3fr 1fr " items="center" gap="2x" content="stretch">
+        <Button column="1" height="2.25rem" toggle text="normal">
+          <Base>RGB</Base>
+          <Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></Icon>
+        </Button>
+        <nu-buttongroup column="2" height="2.25rem" value="rgb">
+          <Input.Number
+            precision="0"
+            min="0"
+            max="255"
+            value="0"
+            label="Number input"
+          ></Input.Number>
+          <Input.Number
+            precision="0"
+            min="0"
+            max="255"
+            value="0"
+            label="Number input"
+          ></Input.Number>
+          <Input.Number
+            precision="0"
+            min="0"
+            max="255"
+            value="0"
+            label="Number input"
+          ></Input.Number>
+        </nu-buttongroup>
+        <Input.Number
           column="3"
           height="2.25rem"
           value="100%"
@@ -74,9 +100,9 @@ function ColorCode(props) {
           max="100"
           precision="0"
           label="Percents input"
-        ></nu-numinput>
-      </nu-grid>
-    </nu-block>
+        ></Input.Number>
+      </Grid>
+    </Block>
   );
 }
 

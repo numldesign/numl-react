@@ -108,7 +108,7 @@ export function copyToClipboard(text: any) {
     : Promise.reject(new DOMException('The request is not allowed', 'NotAllowedError'));
 }
 
-export function JsxInnerText(children: any, counter = 0): any {
+export function JsxInnerText(children: any): any {
   if (typeof children === 'object' && !Array.isArray(children)) {
     return JsxInnerText(children.props.children);
   }
