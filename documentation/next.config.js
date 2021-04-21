@@ -6,15 +6,20 @@ const withMDX = require('@next/mdx')({
 })
 
 module.exports = withLayer0(
-    withMDX({
-        pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-        typescript: {
-            // !! WARN !!
-            // Dangerously allow production builds to successfully complete even if
-            // your project has type errors.
-            // !! WARN !!
-            ignoreBuildErrors: true,
-        },
-    })
+    withServiceWorker(
+        withMDX({
+            pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+            typescript: {
+                // !! WARN !!
+                // Dangerously allow production builds to successfully complete even if
+                // your project has type errors.
+                // !! WARN !!
+                ignoreBuildErrors: true,
+                // Output sourcemaps so that stacktraces have original source filenames and line numbers when tailing
+                // the logs in the Layer0 developer console.
+                layer0SourceMaps: true,
+            },
+        })
+    )
 )
 
