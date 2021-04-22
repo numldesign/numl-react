@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { Avatar } from './../../../Atoms/Avatar';
-import { Button } from './../../../Atoms/Button';
 import { TAccountConnectionProps } from './AccountConnection.type';
+import { Avatar, Button, Pane, Block } from '../../../entry';
 
 function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
   const {
@@ -27,7 +26,7 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
   }, [isConnected]);
 
   return (
-    <nu-pane
+    <Pane
       radius={radius}
       border={border}
       fill={fill}
@@ -37,30 +36,30 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
       items={items}
       {...otherProps}
     >
-      <nu-pane content="space-between" flow="row wrap" gap="1x">
+      <Pane content="space-between" flow="row wrap" gap="1x">
         {true ? (
           <>
             <Avatar.Icon size="2" username={username} />
-            <Avatar.Profile size="2" username={username} subtitle={subtitle} />
+            <Avatar.Profile size="sm" username={username} subtitle={subtitle} />
           </>
         ) : (
-          <nu-block>
-            <nu-block size="md" text="sb">
+          <Block>
+            <Block size="md" text="sb">
               {username}
-            </nu-block>
-            <nu-block size="sm" color="#text-soft">
+            </Block>
+            <Block size="sm" color="#text-soft">
               {subtitle}
-            </nu-block>
-          </nu-block>
+            </Block>
+          </Block>
         )}
-        <nu-block>
+        <Block>
           <Button theme={!isConnected ? 'special' : 'default'} onClick={handleConnect}>
             {isConnected ? 'Disconnect' : 'Connect'}
           </Button>
-        </nu-block>
-      </nu-pane>
-      {children ? <nu-block>{children}</nu-block> : null}
-    </nu-pane>
+        </Block>
+      </Pane>
+      {children ? <Block>{children}</Block> : null}
+    </Pane>
   );
 }
 

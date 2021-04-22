@@ -1,9 +1,9 @@
 import React from 'react';
 import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
+import { Base, DropdownIcon, Block, Card, Icon, Popup } from '../../../entry';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   let {
-    size = 1,
     username,
     subtitle,
     fill,
@@ -20,12 +20,8 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
 
-  let childSize = size;
-  if (childSize && !isNaN(+childSize)) {
-    childSize = +size / 2;
-  }
   return (
-    <nu-card
+    <Card
       display={display}
       content={content}
       items={items}
@@ -43,16 +39,15 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
 
       {showArrow ? (
         <Avatar.DropDown toggle>
-          <Avatar.Popup>uemr</Avatar.Popup>
+          <Avatar.Popup>Lorem Ipsum</Avatar.Popup>
         </Avatar.DropDown>
       ) : null}
-    </nu-card>
+    </Card>
   );
 };
 
 Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   let {
-    size = 2,
     username,
     showIcon = true,
     border = '0.1',
@@ -63,66 +58,42 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
     children,
     ...otherProps
   } = allProps;
-  let childSize = size;
-  if (childSize && !isNaN(+childSize)) {
-    childSize = +size - +size / 3;
-  }
 
   return (
-    <nu-circle
-      display={display}
-      content={content}
-      items={items}
-      padding={padding}
-      border={border}
-      size={size}
-      {...otherProps}
-    >
+    <nu-circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
       {!showIcon && username ? (
-        <nu-el size={childSize} text="uppercase">
+        <Base size="lg" text="uppercase">
           {username.slice(0, 2)}
-        </nu-el>
+        </Base>
       ) : (
-        <nu-icon size={childSize} name={'person'} />
+        <Icon size="lg" name={'person'} />
       )}
     </nu-circle>
   );
 };
 
 Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
-  let { size = 2, username, subtitle, ...otherProps } = allProps;
+  let { username, subtitle, ...otherProps } = allProps;
 
-  let childSize = size;
-  if (childSize && !isNaN(+childSize)) {
-    childSize = +size / 2;
-  }
   return (
-    <nu-block grow="1" {...otherProps}>
-      {username ? (
-        <nu-block size={childSize} padding="0.2">
-          {username}
-        </nu-block>
-      ) : null}
-      {subtitle ? (
-        <nu-block size={childSize} padding="0.2">
-          {subtitle}
-        </nu-block>
-      ) : null}
-    </nu-block>
+    <Block {...otherProps}>
+      {username ? <Base size="md">{username}</Base> : null}
+      {subtitle ? <Base size="sm">{subtitle}</Base> : null}
+    </Block>
   );
 };
 
 Avatar.DropDown = function AvatarDropDown(props: any) {
   const { children, ...otherProps } = props;
-  return <nu-dropdownicon {...otherProps}>{children}</nu-dropdownicon>;
+  return <DropdownIcon {...otherProps}>{children}</DropdownIcon>;
 };
 
 Avatar.Popup = function AvatarPopup(props: any) {
   const { padding = '1x 0', flow = 'column', display = 'flex', children, ...otherProps } = props;
   return (
-    <nu-popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
+    <Popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
       {children}
-    </nu-popup>
+    </Popup>
   );
 };
 

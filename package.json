@@ -14,7 +14,6 @@
     "build:checkbox": "vite build --config ./packages/Atoms/Checkbox/vite.config.ts",
     "build:chip": "vite build --config ./packages/Atoms/Chip/vite.config.ts",
     "build:exceptionlist": "vite build --config ./packages/Atoms/ExceptionList/vite.config.ts",
-    "build:footerhelp": "vite build --config ./packages/Atoms/FooterHelp/vite.config.ts",
     "build:icon": "vite build --config ./packages/Atoms/Icon/vite.config.ts",
     "build:link": "vite build --config ./packages/Atoms/Link/vite.config.ts",
     "build:messageerror": "vite build --config ./packages/Atoms/MessageError/vite.config.ts",

@@ -36,7 +36,7 @@ Default.args = {
   heading: 'You need permission to view this page',
   description: 'Email the account owner to get access to this page.',
   actions: [
-    <Button key="1" special>
+    <Button key="1" theme="special">
       Request Access
     </Button>,
   ],
@@ -52,7 +52,7 @@ WithIcon.args = {
   heading: 'You need permission to view this page',
   description: 'Email the account owner to get access to this page.',
   actions: [
-    <Button key="1" special>
+    <Button key="1" theme="special">
       Request Access
     </Button>,
   ],
@@ -72,7 +72,7 @@ WithImage.args = {
     <Button key="1">
       <Icon name="swap-vertical-outline" /> Import products
     </Button>,
-    <Button key="2" special>
+    <Button key="2" theme="special">
       Request Access
     </Button>,
   ],

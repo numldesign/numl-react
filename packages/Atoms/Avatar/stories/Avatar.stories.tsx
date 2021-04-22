@@ -5,12 +5,6 @@ export default {
   title: 'Example/Atoms/Avatar',
   component: Avatar,
   argTypes: {
-    size: {
-      defaultValue: 1.75,
-      control: {
-        type: 'text',
-      },
-    },
     fill: {
       defaultValue: '#special-bg',
       control: {

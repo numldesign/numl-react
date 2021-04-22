@@ -17,7 +17,6 @@ const Template = ({ ...args }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75"></ThemeProvider>
     <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-
     <AccountConnection {...args}></AccountConnection>
   </NumlProvider>
 );
