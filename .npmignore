@@ -35,3 +35,4 @@ npm-shrinkwrap.json
 .prettierrc.json
 .prettierignore
 .pre-commit-config.yaml
+docs

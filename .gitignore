@@ -10,6 +10,7 @@ build-storybook.log
 lerna-debug.log
 **/.next
 documentation/.next
+docs
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 

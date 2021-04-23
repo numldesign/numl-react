@@ -1,5 +1,4 @@
 import React from 'react';
-import { TBadgeProps } from './Badge.type';
 
 function Badge(allProps: any): JSX.Element {
   const { children, size, label, icon, ...otherProps } = allProps;

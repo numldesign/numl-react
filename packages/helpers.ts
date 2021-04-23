@@ -25,7 +25,7 @@ export function LoadNuml(): Promise<any> {
   } else {
     return new Promise((resolve) => {
       const script = document.createElement('script');
-      script.src = 'https://cdn.skypack.dev/numl@v1.1.0';
+      script.src = 'https://cdn.jsdelivr.net/npm/numl@1.1.0/dist/index.js';
       script.type = 'module';
       script.id = 'numl-script';
       document.body.appendChild(script);

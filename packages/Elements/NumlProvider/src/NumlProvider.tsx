@@ -13,6 +13,7 @@ export const NumlProvider = (props: any) => {
           window.Nude = Nude;
           Nude.init();
           document.documentElement.dataset['nuIcons'] = icons;
+          document.documentElement.dataset['scheme'] = theme;
           window.Nude.scheme(theme);
           onInit && onInit(Nude);
           setStatus(true);
