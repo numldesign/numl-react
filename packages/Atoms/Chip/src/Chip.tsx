@@ -11,7 +11,6 @@ function Chip(allProps: TChipProps): JSX.Element {
     icon,
     selectable = 'n',
     actionIcon,
-    theme = 'default',
     ...otherProp
   } = allProps;
 

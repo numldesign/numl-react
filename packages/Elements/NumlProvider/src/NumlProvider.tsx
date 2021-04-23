@@ -3,15 +3,17 @@ import { LoadNuml } from '../../../helpers';
 import Root from '../../Root';
 
 export const NumlProvider = (props: any) => {
-  const { children, onInit, height = '100%', fill, ...otherProps } = props;
+  const { icons = 'ion', theme = 'dark', children, onInit, height = '100%', fill, ...otherProps } = props;
   let [status, setStatus] = useState(false);
 
   useEffect(() => {
     if (!status) {
       LoadNuml()
         .then((Nude: any) => {
+          window.Nude = Nude;
           Nude.init();
-          document.documentElement.dataset['nuIcons'] = 'ion';
+          document.documentElement.dataset['nuIcons'] = icons;
+          window.Nude.scheme(theme);
           onInit && onInit(Nude);
           setStatus(true);
         })

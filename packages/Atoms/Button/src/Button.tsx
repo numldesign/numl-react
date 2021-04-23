@@ -10,10 +10,19 @@ function Button(props: TButtonProps): JSX.Element {
     padding = '0.5 1 0.5 1',
     color = '#text',
     selectable = false,
+    height = '3rem',
     ...otherProps
   } = props;
   return (
-    <nu-btn size={size} theme={theme} color={color} selectable={selectable} padding={padding} {...otherProps}>
+    <nu-btn
+      height={height}
+      size={size}
+      theme={theme}
+      color={color}
+      selectable={selectable}
+      padding={padding}
+      {...otherProps}
+    >
       {children ? children : null}
     </nu-btn>
   );

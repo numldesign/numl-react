@@ -1,7 +1,7 @@
 import React from 'react';
 import { TBadgeProps } from './Badge.type';
 
-function Badge(allProps: TBadgeProps): JSX.Element {
+function Badge(allProps: any): JSX.Element {
   const { children, size, label, icon, ...otherProps } = allProps;
   return (
     <nu-badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>

@@ -15,19 +15,28 @@ export function requireNude(): Promise<any> {
 export function LoadNuml(): Promise<any> {
   if (typeof window === 'undefined') return new Promise((_resolve, reject) => reject('window not found'));
 
-  return new Promise((resolve) => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.skypack.dev/numl@v1.1.0';
-    script.type = 'module';
-    document.body.appendChild(script);
-    script.onload = () => {
-      console.log('Numl loading');
-      if (window.Nude && window.Nude.initialized) {
-        console.log('Numl loaded');
-        return resolve(window.Nude);
-      }
-    };
-  });
+  var numlScript = document.getElementById('numl-script');
+  if (numlScript) {
+    Promise.resolve(true);
+  }
+
+  if (window.Nude) {
+    return Promise.resolve(window.Nude);
+  } else {
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.skypack.dev/numl@v1.1.0';
+      script.type = 'module';
+      script.id = 'numl-script';
+      document.body.appendChild(script);
+      script.onload = () => {
+        console.log('Numl loading');
+        window.addEventListener('nudeReady', () => {
+          resolve(window.Nude);
+        });
+      };
+    });
+  }
 }
 
 export function extractText(html = '') {

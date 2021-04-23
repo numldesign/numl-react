@@ -10,13 +10,6 @@ export default {
         type: 'text',
       },
     },
-    theme: {
-      defaultValue: undefined,
-      control: {
-        type: 'select',
-        options: [undefined, 'special', 'success', 'warning', 'danger'],
-      },
-    },
   },
 };
 

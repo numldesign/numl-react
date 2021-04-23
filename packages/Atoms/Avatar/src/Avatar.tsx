@@ -77,15 +77,19 @@ Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Elem
 
   return (
     <Block {...otherProps}>
-      {username ? <Base size="md">{username}</Base> : null}
-      {subtitle ? <Base size="sm">{subtitle}</Base> : null}
+      <Block> {username ? <Base size="md">{username}</Base> : null} </Block>
+      <Block> {subtitle ? <Base size="sm">{subtitle}</Base> : null} </Block>
     </Block>
   );
 };
 
 Avatar.DropDown = function AvatarDropDown(props: any) {
   const { children, ...otherProps } = props;
-  return <DropdownIcon {...otherProps}>{children}</DropdownIcon>;
+  return (
+    <DropdownIcon name="chevron-down-outline" {...otherProps}>
+      {children}
+    </DropdownIcon>
+  );
 };
 
 Avatar.Popup = function AvatarPopup(props: any) {

@@ -7,8 +7,8 @@ function FooterHelp(allProps: TFooterHelp) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;
   return (
     <Block radius="4x" border="1bw" padding="2x" {...otherProps}>
-      {typeof icon === 'string' ? <Icon name={icon} color="special" /> : icon}
-      <Base padding="0 4px" theme="special">
+      {typeof icon === 'string' ? <Icon name={icon} color="light" /> : icon}
+      <Base padding="0 4px" color="light">
         {label}
       </Base>
       {typeof link === 'string' ? <Link to={link} label={linkLabel} icon="exit-outline" /> : link}
