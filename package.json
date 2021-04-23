@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
@@ -8,8 +8,8 @@
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "clean": "npm-run-all clean:*",
-    "clean:node_modules": "npx lerna exec -- rm ./node_modules -rf",
-    "clean:package_lock": "npx lerna exec -- rm package-lock.json || true",
+    "clean:node_modules": "npx lerna exec -- rimraf ./node_modules",
+    "clean:package_lock": "npx lerna exec -- rimraf ./package-lock.json || true",
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
     "install:all": "npx lerna exec -- yarn install",
     "upgrade:all": "npx lerna exec -- yarn upgrade",
