@@ -9,7 +9,7 @@
     "dev": "vite",
     "clean": "npm-run-all clean:*",
     "clean:node_modules": "npx lerna exec -- rimraf ./node_modules",
-    "clean:package_lock": "npx lerna exec -- rimraf ./package-lock.json || true",
+    "clean:package_lock": "npx lerna exec -- rimraf ./package-lock.json",
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
     "install:all": "npx lerna exec -- yarn install",
     "upgrade:all": "npx lerna exec -- yarn upgrade",
