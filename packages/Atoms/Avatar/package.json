@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/avatar",
-  "version": "0.0.14",
+  "version": "0.0.14-1",
   "description": "Avatars are used to show a thumbnail representation of an individual or business in the interface.",
   "keywords": [
     "component",
