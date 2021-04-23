@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/svg",
-  "version": "0.0.13",
+  "version": "0.0.14-1",
   "description": "SVG for Numl React by NUML.Design.",
   "keywords": [
     "component",
@@ -18,8 +18,8 @@
   "module": "./dist/core.es.js",
   "exports": {
     ".": {
-      "require": "./dist/core.cjs.js",
-      "default": "./dist/core.es.js"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
   "files": [

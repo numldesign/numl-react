@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/badge",
-  "version": "0.0.13",
+  "version": "0.0.14-1",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -15,6 +15,12 @@
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
+  "exports": {
+    ".": {
+      "require": "./index.ts",
+      "default": "./index.ts"
+    }
+  },
   "files": [
     "dist"
   ],

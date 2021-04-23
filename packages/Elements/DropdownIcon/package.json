@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/dropdown-icon",
-  "version": "0.0.13",
+  "version": "0.0.14-1",
   "description": "DropdownIcon component by Numl Design.",
   "keywords": [
     "component",
@@ -19,8 +19,8 @@
   "module": "./dist/core.es.js",
   "exports": {
     ".": {
-      "require": "./dist/core.cjs.js",
-      "default": "./dist/core.es.js"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
   "files": [

@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/datatable",
-  "version": "0.0.13",
+  "version": "0.0.14-1",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -18,6 +18,12 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "require": "./index.ts",
+      "default": "./index.ts"
+    }
+  },
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
