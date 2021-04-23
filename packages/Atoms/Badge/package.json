@@ -15,6 +15,12 @@
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
+  "exports": {
+    ".": {
+      "require": "./index.ts",
+      "default": "./index.ts"
+    }
+  },
   "files": [
     "dist"
   ],

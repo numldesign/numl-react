@@ -19,8 +19,8 @@
   "module": "./dist/core.es.js",
   "exports": {
     ".": {
-      "require": "./dist/core.cjs.js",
-      "default": "./dist/core.es.js"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
   "files": [
