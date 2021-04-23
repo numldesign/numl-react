@@ -7,6 +7,7 @@
     "build-storybook": "build-storybook",
     "prettier": "prettier --write ./packages",
     "dev": "vite",
+    "clean": "npx lerna exec -- rm ./dist -rf",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
     "build": "npm-run-all build:*",
     "build:avatar": "vite build --config ./packages/Atoms/Avatar/vite.config.ts",
