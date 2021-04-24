@@ -25,16 +25,17 @@ function ColorSelector(props: any) {
   let { columns = 'auto', padding = '2x 0x', items = 'center', gap = '2x', content = 'center' } = props;
   return (
     <Grid columns={columns} padding={padding} items={items} gap={gap} content={content}>
-      <nu-slider
+      <nu-slider2d
         column="1"
         width="15.375rem"
         height="15.375rem"
         radius="0.5rem"
+        value="0,1"
+        step="1"
         min="0"
         max="255"
-        orient="v"
         image="linear(to bottom, hue(0 s), hue(90 s), hue(90,transparent s), hue(270 s), hue(0 s))"
-      ></nu-slider>
+      ></nu-slider2d>
       <nu-slider
         column="2"
         height="15.375rem"
@@ -64,9 +65,11 @@ function ColorCode(props: any) {
           <Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></Icon>
         </Button>
         <nu-buttongroup column="2" height="2.25rem" value="rgb">
-          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
-          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
-          <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+          <Grid columns="1fr 1fr 1fr " items="center" gap="2x" content="stretch">
+            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
+          </Grid>
         </nu-buttongroup>
         <Input.Number
           column="3"
