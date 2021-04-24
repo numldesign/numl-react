@@ -1,9 +1,9 @@
 name: Publish to NPM
 
-on: 
+on:
   [push, pull_request]:
     paths:
-      - "packages/**"
+      - 'packages/**'
     branches:
       - master
 
@@ -12,10 +12,6 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - id: yarn-cache
-        name: Get Yarn cache path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
       - name: Checkout Repo
         uses: actions/checkout@master
         with:
@@ -42,17 +38,18 @@ jobs:
           git config --global user.email "nsk9195@gmail.com"
           git config --global user.name "shubhamkaushal"
 
-      # - name: Build packages
-      #   run: yarn build
+      - name: Build packages
+        run: yarn build
 
-      # - name: Run tests
-      #   run: yarn test
+      - name: Install Dependencies
+        run: yarn
 
-      - name: Publish packages
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
         uses: changesets/action@master
         with:
-          publish: yarn build
-          commit: "chore(build): version packages"
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: yarn release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
