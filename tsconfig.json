@@ -3,6 +3,8 @@
     "types": [
       "vite/client",
       "node", 
+      "@types/jest",
+      "@types/mocha"
     ],
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     /* Basic Options */
@@ -72,7 +74,8 @@
     "*.config.js",
     "node_modules",
     "./packages/Molecules/**/**/*.stories.tsx",
-    "**/**/vite.config.ts"
+    "**/**/vite.config.ts",
+    "**/**/__tests__/*.test.tsx"
   ],
   "include": [
     "packages/declarations.d.ts",
