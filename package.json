@@ -81,6 +81,7 @@
     "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
     "build:numl-react": "vite build --config ./vite.config.ts",
     "test": "jest",
+    "release" : "npx lerna publish",
     "test:watch": "jest --watch",
     "serve": "vite preview"
   },
