@@ -22,18 +22,6 @@ OR
 yarn add @numl-react/core
 ```
 
-via [JsDelivr](https://cdn.jsdelivr.net/):
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/@numl/numl-react@1.1.0/"></script>
-```
-
-via [Unpkg](https://www.skypack.dev/):
-
-```html
-<script type="module" src="https://unpkg.com/@numl/numl-react@1.1.0/"></script>
-```
-
 For discussions, suggestions and contributions, create an issue or join our [Discord](https://discord.gg/sHnHPnAPZj) channel to chat. 
 
 ## License
