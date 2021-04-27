@@ -36,3 +36,4 @@ npm-shrinkwrap.json
 .prettierignore
 .pre-commit-config.yaml
 docs
+.yarn
