@@ -22,3 +22,5 @@ export { ButtonGroup } from './ButtonGroup';
 export { Svg } from './Svg';
 export { default as Root } from './Root';
 export { Icon } from './Icon';
+export { Card } from './Card';
+export { Image } from './Image';
