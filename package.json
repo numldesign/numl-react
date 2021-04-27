@@ -3,7 +3,7 @@
   "version": "0.0.14-1",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
-    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "storybook": "start-storybook -p 6006  --allow-console-errors",
     "build-storybook": "build-storybook",
     "prettier": "prettier --write ./packages",
     "dev": "vite",
