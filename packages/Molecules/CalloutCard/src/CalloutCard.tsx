@@ -1,58 +1,55 @@
 import React from 'react';
-import { Block } from './../../../Elements/Block';
-import { Grid } from './../../../Elements/Grid';
-import { Image } from './../../../Elements/Image';
-import { TCalloutCardProps } from './CalloutCard.type';
+import { El } from '../../../entry';
 
-function CalloutCard(allProps: TCalloutCardProps): JSX.Element {
-  const { heading, description, actions, padding = 1, src, extra, closeAction, ...otherProps } = allProps;
+function CalloutCard(allProps: any): JSX.Element {
+  const { heading, description, actions, padding = '2x', src, ...otherProps } = allProps;
   return (
-    <nu-card padding={padding} {...otherProps}>
-      <Grid columns="auto" content="space-between">
+    <El.Card padding={padding} {...otherProps}>
+      <El.Grid columns="auto" content="space-between">
         {src ? (
-          <Grid.Row row="1">
-            <Image width="100%" fit="fill" src={src}></Image>
-          </Grid.Row>
+          <El.Base row="1">
+            <El.Image width="100%" fit="fill" src={src}></El.Image>
+          </El.Base>
         ) : null}
         {heading ? (
-          <Grid.Row row="2">
-            <nu-el text="sb">{heading}</nu-el>
-          </Grid.Row>
+          <El.Base size="md" row="2" padding="0.5x 0">
+            {heading}
+          </El.Base>
         ) : null}
         {description ? (
-          <Grid.Row row="3">
-            <nu-el size="sm">{description}</nu-el>
-          </Grid.Row>
+          <El.Base size="sm" row="3" padding="0.5x 0">
+            {description}
+          </El.Base>
         ) : null}
-        {actions ? <Grid.Row row="4">{actions}</Grid.Row> : null}
-      </Grid>
-    </nu-card>
+        {actions ? (
+          <El.Base size="xs" row="4" padding="0.5x 0">
+            {actions}
+          </El.Base>
+        ) : null}
+      </El.Grid>
+    </El.Card>
   );
 }
 
 CalloutCard.Landscape = function CalloutCardLandScape(props: any) {
-  const { children, padding, src, heading, actions, description, ...otherProps } = props;
+  const { children, src, heading, actions, description, ...otherProps } = props;
   return (
-    <nu-card padding={padding} gap="0.5" block {...otherProps}>
-      <Grid responsive="800px|801px" columns="auto auto|auto" gap="1" content="space-between">
-        {heading && description ? (
-          <Grid.Column column="1|1" row="1|2">
-            <Block>
-              <nu-el text="sb">{heading}</nu-el>
-            </Block>
-            <Block>
-              <nu-el size="sm">{description}</nu-el>
-            </Block>
-            {actions ? <nu-el padding="1 0">{actions}</nu-el> : null}
-          </Grid.Column>
+    <El.Card block {...otherProps}>
+      <El.Grid responsive="800px|801px" columns="auto auto|auto" gap="1" content="space-between">
+        {heading || description ? (
+          <El.Block column="1|1" row="1|2">
+            <El.Base block text="sb" padding="0.5x 0">
+              {heading}
+            </El.Base>
+            <El.Base block size="sm" padding="0.5x 0">
+              {description}
+            </El.Base>
+            {actions ? <El.Base padding="1x 0">{actions}</El.Base> : null}
+          </El.Block>
         ) : null}
-        {src ? (
-          <Grid.Column column="2|1" row="1|1">
-            <Image height="auto" src={src}></Image>
-          </Grid.Column>
-        ) : null}
-      </Grid>
-    </nu-card>
+        {src ? <El.Image column="2|1" row="1|1" height="auto" src={src}></El.Image> : null}
+      </El.Grid>
+    </El.Card>
   );
 };
 
