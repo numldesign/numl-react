@@ -1,58 +1,93 @@
 import React from 'react';
-import { ActionElement } from './../../../Elements/Action';
-import { TButtonGroupProps, TButtonProps } from './Button.type';
+import { El } from '../../../entry';
 
-function Button(props: TButtonProps): JSX.Element {
+function Button(props: any): JSX.Element {
   const {
     children,
-    size = 0.9,
-    theme = 'default',
-    padding = '0.5 1 0.5 1',
-    color = '#text',
+    size = 'md',
+    padding = '2x 2x',
     selectable = false,
-    height = '3rem',
+    theme = 'default',
+    height = '2x',
     ...otherProps
   } = props;
   return (
-    <nu-btn
+    <El.Button
+      block
       height={height}
-      size={size}
       theme={theme}
-      color={color}
+      size={size}
       selectable={selectable}
       padding={padding}
       {...otherProps}
     >
       {children ? children : null}
-    </nu-btn>
+    </El.Button>
   );
 }
 
-Button.Label = function ButtonLabel(props: any) {
-  const { children, padding = '0.5', ...otherProps } = props;
+Button.Small = ({ children = null, size = 'sm', padding = '2x 2x', ...props }) => {
   return (
-    <nu-el padding={padding} {...otherProps}>
+    <Button padding={padding} size={size} {...props}>
       {children}
-    </nu-el>
+    </Button>
+  );
+};
+Button.Medium = ({ children = null, size = 'md', padding = '2.5x 3x', ...props }) => {
+  return (
+    <Button padding={padding} size={size} {...props}>
+      {children}
+    </Button>
+  );
+};
+Button.Large = ({ children = null, size = 'lg', padding = '3x 4x', ...props }) => {
+  return (
+    <Button padding={padding} size={size} {...props}>
+      {children}
+    </Button>
+  );
+};
+Button.ExtraLarge = ({ children = null, size = 'xl', padding = '3.5x 5x', ...props }) => {
+  return (
+    <Button padding={padding} size={size} {...props}>
+      {children}
+    </Button>
+  );
+};
+
+Button.Label = function ButtonLabel(props: any) {
+  const { children, color = '#text', ...otherProps } = props;
+  return (
+    <El.Base color={color} {...otherProps}>
+      {children}
+    </El.Base>
   );
 };
 
 Button.Icon = function ButtonIcon(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-icon {...otherProps}>{children}</nu-icon>;
+  const { children, padding = '0 0.5x', color = '#text', ...otherProps } = props;
+  return (
+    <El.Icon color={color} padding={padding} {...otherProps}>
+      {children}
+    </El.Icon>
+  );
 };
 
 Button.DropDown = function ButtonDropDown(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-dropdownicon {...otherProps}>{children}</nu-dropdownicon>;
+  const { children, color = '#text', ...otherProps } = props;
+  return (
+    <El.DropdownIcon color={color} {...otherProps}>
+      {children}
+    </El.DropdownIcon>
+  );
 };
 
 Button.Popup = function ButtonDropDownPopup(props: any) {
-  const { padding = '1x 0', flow = 'column', display = 'flex', children, ...otherProps } = props;
+  const { children, ...otherProps } = props;
   return (
-    <nu-popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
+    <El.Popup use-menu block {...otherProps}>
       {children}
-    </nu-popup>
+    </El.Popup>
   );
 };
 
@@ -70,18 +105,17 @@ Button.Checkbox = function ButtonCheckbox(props: any) {
   );
 };
 
-Button.Group = function ButtonGroup(allProps: TButtonGroupProps): JSX.Element {
+Button.Group = function ButtonGroup(allProps: any): JSX.Element {
   let { children, flow, groupRadius, ...otherProps } = allProps;
 
   flow = flow || 'row';
   groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
-    <nu-btngroup use-radiogroup="no" flow={flow} group-radius={groupRadius} border="#clear" {...otherProps}>
+    <El.ButtonGroup flow={flow} group-radius={groupRadius} border="#clear" {...otherProps}>
       {children}
-    </nu-btngroup>
+    </El.ButtonGroup>
   );
 };
 
-Button.propTypes = ActionElement.propTypes;
 export default Button;

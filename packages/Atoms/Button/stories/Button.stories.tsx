@@ -1,136 +1,132 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Button, Grid, Heading } from '../../../entry';
+import { El, Button } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Button',
   component: Button,
-  argTypes: {
-    label: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
-const Template = function (props: any) {
-  const { label, ...otherProps } = props;
+const Template = function ({ theme }) {
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Grid columns="auto" rows="1fr" gap>
-        <Grid.Row row="1">
-          <Grid.Column column="1" padding="0x 2x">
-            <Heading.Two>Default</Heading.Two>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row row="2">
-          <Grid.Column column="1" padding="0x 2x">
-            <Button {...otherProps} gap padding="0.8x 1.2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
 
-          <Grid.Column column="2" padding="0x 2x">
-            <Button {...otherProps} gap padding="1x 2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
+      <El.Base padding="2x">
+        <Button.Small theme={theme}>
+          <Button.Label size="sm">Button</Button.Label>
+        </Button.Small>
+      </El.Base>
 
-          <Grid.Column column="3" padding="0x 2x">
-            <Button {...otherProps} gap padding="1.2x 1.2">
-              <Button.Label>{label}</Button.Label>
-              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
-            </Button>
-          </Grid.Column>
-        </Grid.Row>
+      <El.Base padding="2x">
+        <Button.Medium theme={theme}>
+          <Button.Label size="md">Button</Button.Label>
+        </Button.Medium>
+      </El.Base>
 
-        <Grid.Row row="3">
-          <Grid.Column column="1" padding="0x 2x">
-            <Heading.Two>Special</Heading.Two>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row row="4">
-          <Grid.Column column="1" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="0.8x 1.2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
+      <El.Base padding="2x">
+        <Button.Large theme={theme}>
+          <Button.Label size="lg">Button</Button.Label>
+        </Button.Large>
+      </El.Base>
 
-          <Grid.Column column="2" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="1x 2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
-
-          <Grid.Column column="3" padding="0x 2x">
-            <Button {...otherProps} theme="special" gap padding="1.2x 1.2">
-              <Button.Label>{label}</Button.Label>
-              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
-            </Button>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row row="5">
-          <Grid.Column column="1" padding="0x 2x">
-            <Heading.Two>Danger</Heading.Two>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row row="6">
-          <Grid.Column column="1" padding="0x 2x">
-            <Button {...otherProps} theme="danger" gap padding="0.8x 1.2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
-
-          <Grid.Column column="2" padding="0x 2x">
-            <Button {...otherProps} theme="danger" gap padding="1x 2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
-
-          <Grid.Column column="3" padding="0x 2x">
-            <Button {...otherProps} theme="danger" gap padding="1.2x 1.2">
-              <Button.Label>{label}</Button.Label>
-              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
-            </Button>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row row="7">
-          <Grid.Column column="1" padding="0x 2x">
-            <Heading.Two>Warning</Heading.Two>
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row row="8">
-          <Grid.Column column="1" padding="0x 2x">
-            <Button {...otherProps} theme="warning" gap padding="0.8x 1.2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
-
-          <Grid.Column column="2" padding="0x 2x">
-            <Button {...otherProps} theme="warning" gap padding="1x 2x">
-              <Button.Label>{label}</Button.Label>
-            </Button>
-          </Grid.Column>
-
-          <Grid.Column column="3" padding="0x 2x">
-            <Button {...otherProps} theme="warning" gap padding="1.2x 1.2">
-              <Button.Label>{label}</Button.Label>
-              <Button.Icon name="chevron-down ^:pressed[chevron-up]"></Button.Icon>
-            </Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </NumlProvider>
+      <El.Base padding="2x">
+        <Button.ExtraLarge theme={theme}>
+          <Button.Label size="lg">Button</Button.Label>
+        </Button.ExtraLarge>
+      </El.Base>
+    </El.NumlProvider>
   );
 };
 
 export const Default: any = Template.bind({});
-Default.args = {
-  label: 'Button',
+Default.args = {};
+
+export const Special: any = Template.bind({});
+Special.args = {
+  theme: 'special',
 };
+
+const Template2 = function ({ theme }) {
+  return (
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+
+      <El.Base padding="2x">
+        <Button.Small theme={theme}>
+          <Button.Icon size="sm" name="swap-vertical-outline"></Button.Icon>
+          <Button.Label size="sm">Button</Button.Label>
+        </Button.Small>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.Medium theme={theme}>
+          <Button.Icon size="md" name="swap-vertical-outline"></Button.Icon>
+          <Button.Label size="md">Button</Button.Label>
+        </Button.Medium>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.Large theme={theme}>
+          <Button.Icon size="lg" name="swap-vertical-outline"></Button.Icon>
+          <Button.Label size="lg">Button</Button.Label>
+        </Button.Large>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.ExtraLarge theme={theme}>
+          <Button.Icon size="xl" name="swap-vertical-outline"></Button.Icon>
+          <Button.Label size="xl">Button</Button.Label>
+        </Button.ExtraLarge>
+      </El.Base>
+    </El.NumlProvider>
+  );
+};
+
+export const BasicWithIcon: any = Template2.bind({});
+BasicWithIcon.args = {};
+
+const Template3 = function ({ theme }) {
+  return (
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+
+      <El.Base padding="2x">
+        <Button.Small theme={theme} height="" padding="0.5 2x" gap="2">
+          <Button.Label size="sm">Button</Button.Label>
+          <Button.DropDown size="sm"></Button.DropDown>
+          <Button.Popup size="sm"> Lorem Ipsum</Button.Popup>
+        </Button.Small>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.Medium theme={theme} height="" padding="0.75 2x" gap="2">
+          <Button.Label size="md">Button</Button.Label>
+          <Button.DropDown size="md"></Button.DropDown>
+          <Button.Popup size="md">Lorem Ipsum</Button.Popup>
+        </Button.Medium>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.Large theme={theme} height="" padding="1x 3x" gap="2">
+          <Button.Label size="lg">Button</Button.Label>
+          <Button.DropDown size="lg"></Button.DropDown>
+          <Button.Popup size="lg">Lorem Ipsum</Button.Popup>
+        </Button.Large>
+      </El.Base>
+
+      <El.Base padding="2x">
+        <Button.ExtraLarge theme={theme} height="" padding="1.5x 4x" gap="2">
+          <Button.Label size="xl">Button</Button.Label>
+          <Button.DropDown size="xl"></Button.DropDown>
+          <Button.Popup size="xl">Lorem Ipsum</Button.Popup>
+        </Button.ExtraLarge>
+      </El.Base>
+    </El.NumlProvider>
+  );
+};
+
+export const BasicWithDiscloser: any = Template3.bind({});
+BasicWithDiscloser.args = {};
