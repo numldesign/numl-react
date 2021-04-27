@@ -154,11 +154,13 @@
     "access": "public"
   },
   "keywords": [
-    "design",
-    "system",
+    "design-system",
+    "react-components",
     "components",
     "react",
-    "numl",
+    "numl-react",
+    "accessible",
+    "ui-library",
     "uikit"
   ],
   "author": "Numl.Design Team",
