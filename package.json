@@ -101,6 +101,7 @@
   "typings": "./dist/typings/entry.d.ts",
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-typescript": "^7.13.0",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@changesets/cli": "^2.16.0",
@@ -118,6 +119,7 @@
     "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-viewport": "^6.2.9",
     "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",

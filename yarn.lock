@@ -3215,6 +3215,7 @@ __metadata:
   resolution: "@numl-react/core@workspace:."
   dependencies:
     "@babel/core": ^7.10.5
+    "@babel/plugin-transform-typescript": ^7.13.0
     "@babel/preset-env": ^7.10.4
     "@babel/preset-react": ^7.10.4
     "@changesets/cli": ^2.16.0
@@ -3232,6 +3233,7 @@ __metadata:
     "@storybook/addon-docs": ^6.2.9
     "@storybook/addon-essentials": ^6.2.9
     "@storybook/addon-links": ^6.2.9
+    "@storybook/addon-viewport": ^6.2.9
     "@storybook/addons": ^6.2.9
     "@storybook/react": ^6.2.9
     "@storybook/theming": ^6.2.9
@@ -3961,7 +3963,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-viewport@npm:6.2.9":
+"@storybook/addon-viewport@npm:6.2.9, @storybook/addon-viewport@npm:^6.2.9":
   version: 6.2.9
   resolution: "@storybook/addon-viewport@npm:6.2.9"
   dependencies:
