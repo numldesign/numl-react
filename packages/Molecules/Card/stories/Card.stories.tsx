@@ -7,11 +7,11 @@ export default {
   component: Card,
 };
 
-const Template = ({ ...args }) => (
+const Template: any = (props) => (
   <El.NumlProvider>
     <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
     <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-    <Card {...args} />
+    <Card {...props} />
   </El.NumlProvider>
 );
 
