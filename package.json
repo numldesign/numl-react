@@ -92,10 +92,6 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "numl": "^1.1.0",
-    "typedoc": "^0.20.36"
-  },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
   "typings": "./dist/typings/entry.d.ts",
@@ -150,7 +146,8 @@
     "react-test-library": "^0.0.1",
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.4",
-    "typescript": "4.2.4",
+    "typedoc": "^0.20.36",
+    "typescript": "^4.2.4",
     "vite": "^2.1.5"
   },
   "publishConfig": {
