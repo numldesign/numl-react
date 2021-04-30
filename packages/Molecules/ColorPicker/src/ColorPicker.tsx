@@ -1,23 +1,23 @@
 import React from 'react';
-import { Card, Block, Button, Grid, Input, Base, Icon } from '../../../entry';
+import { El } from '../../../entry';
 
 function ColorPicker() {
   return (
-    <Card block width="22rem">
+    <El.Card block width="22rem">
       <ColorSelector></ColorSelector>
       <ColorCode></ColorCode>
       <ColorModifier></ColorModifier>
-    </Card>
+    </El.Card>
   );
 }
 
 function ColorModifier() {
   return (
-    <Block padding>
-      <Button radius="0.5rem" block width="min 100%">
+    <El.Block padding>
+      <El.Button radius="0.5rem" block width="min 100%">
         Modifiers
-      </Button>
-    </Block>
+      </El.Button>
+    </El.Block>
   );
 }
 
@@ -146,7 +146,7 @@ class ColorSelector extends React.Component {
 
   render() {
     return (
-      <Grid
+      <El.Grid
         columns={this.state.columns}
         padding={this.state.padding}
         items={this.state.items}
@@ -193,29 +193,29 @@ class ColorSelector extends React.Component {
           orient="v"
           image="linear(to bottom, white, transparent)"
         ></nu-slider>
-      </Grid>
+      </El.Grid>
     );
   }
 }
 
 function ColorCode(props: any) {
   return (
-    <Block {...props} padding>
-      <Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
-        <Button column="1" height="2.25rem" toggle text="normal">
-          <Base>RGB</Base>
-          <Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></Icon>
-        </Button>
+    <El.Block {...props} padding>
+      <El.Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
+        <El.Button column="1" height="2.25rem" toggle text="normal">
+          <El.Base>RGB</El.Base>
+          <El.Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></El.Icon>
+        </El.Button>
         <nu-buttongroup column="2" height="2.25rem" value="rgb">
-          <Grid columns="auto auto auto" items="center" content="stretch">
-            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
-            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
-            <Input.Number precision="0" min="0" max="255" value="0" label="Number input"></Input.Number>
-          </Grid>
+          <El.Grid columns="auto auto auto" items="center" content="stretch">
+            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
+            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
+            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
+          </El.Grid>
         </nu-buttongroup>
-        <Input.Number precision="0" min="0" max="100" value="0" label="Percents input"></Input.Number>
-      </Grid>
-    </Block>
+        <El.Input.Number precision="0" min="0" max="100" value="0" label="Percents input"></El.Input.Number>
+      </El.Grid>
+    </El.Block>
   );
 }
 

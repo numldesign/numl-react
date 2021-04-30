@@ -1,37 +1,38 @@
 import * as React from 'react';
-import { Modal } from '../../../entry';
-import { El } from '../../../entry';
+import { El, Molecules } from '../../../entry';
+import { isRefernceNull } from '../../../Utilities';
 
 export default {
   title: 'Example/Molecules/Modal',
-  component: Modal,
+  component: El.Button,
 };
 
 const Template = function ({ ...args }) {
   const input: any = React.useRef();
-  const button: any = React.useRef();
   const [show, setShow] = React.useState('n');
+  console.log('reinitializes', Molecules);
 
-  const hideModal = (event) => {
-    event.preventDefault();
-    console.log('I am called');
-    console.log(input);
-    console.log(button);
-    // if(button && button.current){
-    //   setShow
-    // }
+  const hideModal = () => {
+    console.log('Button is clicked', show);
+    if (isRefernceNull(input)) {
+      if (show == 'y') {
+        console.log('Show == yes');
+        setShow('n');
+      } else {
+        console.log('Show == no');
+        setShow('y');
+      }
+    }
   };
 
   return (
     <El.NumlProvider>
+      {show == 'y' ? 'YES SHOW' : 'NO Show'}
       <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
       <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-      <Modal {...args} ref={input} onCloseAction={hideModal} show={show}>
-        Click me
-      </Modal>
-      <El.Button ref={button} onTap={() => console.log('onClick')}>
-        Click Me
-      </El.Button>
+      {/* <Modal {...args} ref={input} onCloseAction={hideModal} show={show} /> */}
+
+      <El.Button onTap={hideModal}>Click Me</El.Button>
     </El.NumlProvider>
   );
 };
@@ -89,11 +90,11 @@ const Template2 = ({ ...args }) => (
     <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
     <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
     <El.Button>Show Button</El.Button>
-    <Modal modalId="modalId" width="50">
-      <Modal.Header heading="This is my heading" onCloseAction="true"></Modal.Header>
-      <Modal.Body>Hello I am umer</Modal.Body>
-      <Modal.Footer>This is muy footer</Modal.Footer>
-    </Modal>
+    {/* <Molecules.Modal modalId="modalId" width="50">
+      <Molecules.Modal.Header heading="This is my heading" onCloseAction="true"></Molecules.Modal.Header>
+      <Molecules.Modal.Body>Hello I am umer</Molecules.Modal.Body>
+      <Molecules.Modal.Footer>This is muy footer</Molecules.Modal.Footer>
+    </Molecules.Modal> */}
   </El.NumlProvider>
 );
 

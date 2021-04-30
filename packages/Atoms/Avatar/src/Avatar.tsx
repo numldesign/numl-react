@@ -1,6 +1,6 @@
 import React from 'react';
 import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
-import { Base, DropdownIcon, Block, Card, Icon, Popup } from '../../../entry';
+import { El } from '../../../entry';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   let {
@@ -21,7 +21,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
   } = allProps;
 
   return (
-    <Card
+    <El.Card
       display={display}
       content={content}
       items={items}
@@ -42,7 +42,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
           <Avatar.Popup>Lorem Ipsum</Avatar.Popup>
         </Avatar.DropDown>
       ) : null}
-    </Card>
+    </El.Card>
   );
 };
 
@@ -62,11 +62,11 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   return (
     <nu-circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
       {!showIcon && username ? (
-        <Base size="lg" text="uppercase">
+        <El.Base size="lg" text="uppercase">
           {username.slice(0, 2)}
-        </Base>
+        </El.Base>
       ) : (
-        <Icon size="lg" name={'person'} />
+        <El.Icon size="lg" name={'person'} />
       )}
     </nu-circle>
   );
@@ -76,28 +76,28 @@ Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Elem
   let { username, subtitle, ...otherProps } = allProps;
 
   return (
-    <Block {...otherProps}>
-      <Block> {username ? <Base size="md">{username}</Base> : null} </Block>
-      <Block> {subtitle ? <Base size="sm">{subtitle}</Base> : null} </Block>
-    </Block>
+    <El.Block {...otherProps}>
+      <El.Block> {username ? <El.Base size="md">{username}</El.Base> : null} </El.Block>
+      <El.Block> {subtitle ? <El.Base size="sm">{subtitle}</El.Base> : null} </El.Block>
+    </El.Block>
   );
 };
 
 Avatar.DropDown = function AvatarDropDown(props: any) {
   const { children, ...otherProps } = props;
   return (
-    <DropdownIcon name="chevron-down-outline" {...otherProps}>
+    <El.DropdownIcon name="chevron-down-outline" {...otherProps}>
       {children}
-    </DropdownIcon>
+    </El.DropdownIcon>
   );
 };
 
 Avatar.Popup = function AvatarPopup(props: any) {
   const { padding = '1x 0', flow = 'column', display = 'flex', children, ...otherProps } = props;
   return (
-    <Popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
+    <El.Popup use-menu display={display} padding={padding} flow={flow} {...otherProps}>
       {children}
-    </Popup>
+    </El.Popup>
   );
 };
 

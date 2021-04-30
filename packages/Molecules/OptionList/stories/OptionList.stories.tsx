@@ -1,18 +1,5 @@
 import React from 'react';
-import {
-  NumlProvider,
-  Badge,
-  Button,
-  Icon,
-  Thumbnail,
-  OptionList,
-  Block,
-  Grid,
-  Pane,
-  ThemeProvider,
-  Heading,
-  Input,
-} from '../../../entry';
+import { Badge, El, Thumbnail, OptionList } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -20,12 +7,12 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
 
     <OptionList {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});
@@ -44,9 +31,9 @@ Default.args = {
     return item.label;
   },
   renderHeader: (
-    <Heading padding="1x 1.5x" level="6" text="cap">
+    <El.Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
-    </Heading>
+    </El.Heading>
   ),
   options: [
     { value: 'byward_market', label: 'Byward Market' },
@@ -79,9 +66,9 @@ WithSection.args = {
     },
     {
       renderHeader: (
-        <Heading padding="1x 1.5x" level="6" text="cap">
+        <El.Heading padding="1x 1.5x" level="6" text="cap">
           Inventory Location
-        </Heading>
+        </El.Heading>
       ),
       options: [
         { index: 3, value: 'source', label: 'Traffic referrer source' },
@@ -110,17 +97,17 @@ WithMultiSelectThumbnailBadge.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <Pane>
+      <El.Pane>
         <Thumbnail width="40px" source="https://source.unsplash.com/user/erondu/100x100" />
         {item.label}
         <Badge label="Neutral" padding="0 1x" />
-      </Pane>
+      </El.Pane>
     );
   },
   renderHeader: (
-    <Heading padding="1x 1.5x" level="6" text="cap">
+    <El.Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
-    </Heading>
+    </El.Heading>
   ),
   options: [
     { value: 'byward_market', label: 'Byward Market' },
@@ -150,63 +137,63 @@ OptionListWithTable.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <Grid columns="repeat(5, 1fr)" flow="column" items="center start">
-        <Block>{item.label}</Block>
-        <Block>{item.col1}</Block>
-        <Block>{item.col2}</Block>
-        <Block>{item.badge}</Block>
-        <Block>{item.icon}</Block>
-      </Grid>
+      <El.Grid columns="repeat(5, 1fr)" flow="column" items="center start">
+        <El.Block>{item.label}</El.Block>
+        <El.Block>{item.col1}</El.Block>
+        <El.Block>{item.col2}</El.Block>
+        <El.Block>{item.badge}</El.Block>
+        <El.Block>{item.icon}</El.Block>
+      </El.Grid>
     );
   },
   options: [
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Byward Market
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
-      icon: <Icon name="help-circle-outline" />,
+      icon: <El.Icon name="help-circle-outline" />,
     },
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Centretown
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
-      icon: <Icon name="help-circle-outline" />,
+      icon: <El.Icon name="help-circle-outline" />,
     },
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Hintonburg
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
-      icon: <Icon name="help-circle-outline" />,
+      icon: <El.Icon name="help-circle-outline" />,
     },
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Westboro
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
-      icon: <Icon name="help-circle-outline" />,
+      icon: <El.Icon name="help-circle-outline" />,
     },
   ],
 };
@@ -225,76 +212,76 @@ OptionListWithTableAndInput.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <Grid columns="repeat(6, 1fr)" flow="column" items="center start">
-        <Block>{item.label}</Block>
-        <Block>{item.col1}</Block>
-        <Block>{item.col2}</Block>
-        <Block>{item.badge}</Block>
-        <Block>{item.icon}</Block>
+      <El.Grid columns="repeat(6, 1fr)" flow="column" items="center start">
+        <El.Block>{item.label}</El.Block>
+        <El.Block>{item.col1}</El.Block>
+        <El.Block>{item.col2}</El.Block>
+        <El.Block>{item.badge}</El.Block>
+        <El.Block>{item.icon}</El.Block>
         {item.custom ? (
-          <Block>
-            <Pane padding="0.5x 0" key="1">
-              <Button.Group>
-                <Button key="1">Add</Button>
-                <Button key="2">Set</Button>
-              </Button.Group>
-              <Input.Number placeholder="Enter Amount" width="min 6x" />
-            </Pane>
-            <Button key="2" width="100%">
+          <El.Block>
+            <El.Pane padding="0.5x 0" key="1">
+              <El.ButtonGroup>
+                <El.Button key="1">Add</El.Button>
+                <El.Button key="2">Set</El.Button>
+              </El.ButtonGroup>
+              <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+            </El.Pane>
+            <El.Button key="2" width="100%">
               Button
-            </Button>
-          </Block>
+            </El.Button>
+          </El.Block>
         ) : null}
-      </Grid>
+      </El.Grid>
     );
   },
   options: [
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Byward Market
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="1" label="Neutral" padding="0 1x" />,
-      icon: <Icon key="1" name="help-circle-outline" />,
+      icon: <El.Icon key="1" name="help-circle-outline" />,
       custom: [
-        <Pane padding="0.5x 0" key="1">
-          <Button.Group>
-            <Button key="1">Add</Button>
-            <Button key="2">Set</Button>
-          </Button.Group>
-          <Input.Number placeholder="Enter Amount" width="min 6x" />
-        </Pane>,
-        <Button key="2" width="100%">
+        <El.Pane padding="0.5x 0" key="1">
+          <El.ButtonGroup>
+            <El.Button key="1">Add</El.Button>
+            <El.Button key="2">Set</El.Button>
+          </El.ButtonGroup>
+          <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+        </El.Pane>,
+        <El.Button key="2" width="100%">
           Button
-        </Button>,
+        </El.Button>,
       ],
     },
     {
       label: (
-        <Pane>
+        <El.Pane>
           <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
           Centretown
-        </Pane>
+        </El.Pane>
       ),
       col1: 'Default',
       col2: 'Default',
       badge: <Badge key="2" label="Neutral" padding="0 1x" />,
-      icon: <Icon key="2" name="help-circle-outline" />,
+      icon: <El.Icon key="2" name="help-circle-outline" />,
       custom: [
-        <Pane padding="0.5x 0" key="1">
-          <Button.Group>
-            <Button key="1">Add</Button>
-            <Button key="2">Set</Button>
-          </Button.Group>
-          <Input.Number placeholder="Enter Amount" width="min 6x" />
-        </Pane>,
-        <Button key="2" width="100%">
+        <El.Pane padding="0.5x 0" key="1">
+          <El.ButtonGroup>
+            <El.Button key="1">Add</El.Button>
+            <El.Button key="2">Set</El.Button>
+          </El.ButtonGroup>
+          <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+        </El.Pane>,
+        <El.Button key="2" width="100%">
           Button
-        </Button>,
+        </El.Button>,
       ],
     },
   ],
@@ -318,41 +305,41 @@ OptionListWithCardDesign.args = {
   },
   renderContent: ({ item }) => {
     return (
-      <Grid columns="40px 1fr" flow="column" gap="2x">
+      <El.Grid columns="40px 1fr" flow="column" gap="2x">
         <Thumbnail width="40px" key="1" source={item.image} />
-        <Grid gap="0.5x" size="sm">
-          <Block>
-            <Block>{item.name}</Block>
-            <Block color="#text-soft">{item.modelNo}</Block>
-          </Block>
-          <Block>
-            <Block>When sold out</Block>
-            <Block color="#text-soft">{item.status}</Block>
-          </Block>
-          <Pane>
-            <Block>
-              <Block>Available</Block>
-              <Block color="#text-soft">{item.available}</Block>
-            </Block>
-            <Block>
-              <Block>Available</Block>
-              <Block color="#text-soft">{item.available}</Block>
-            </Block>
-          </Pane>
-          <Block>
-            <Pane padding="0.5x 0" key="1">
-              <Button.Group>
-                <Button key="1">Add</Button>
-                <Button key="2">Set</Button>
-              </Button.Group>
-              <Input.Number placeholder="Enter Amount" width="min 6x" />
-            </Pane>
-            <Button key="2" width="100%">
+        <El.Grid gap="0.5x" size="sm">
+          <El.Block>
+            <El.Block>{item.name}</El.Block>
+            <El.Block color="#text-soft">{item.modelNo}</El.Block>
+          </El.Block>
+          <El.Block>
+            <El.Block>When sold out</El.Block>
+            <El.Block color="#text-soft">{item.status}</El.Block>
+          </El.Block>
+          <El.Pane>
+            <El.Block>
+              <El.Block>Available</El.Block>
+              <El.Block color="#text-soft">{item.available}</El.Block>
+            </El.Block>
+            <El.Block>
+              <El.Block>Available</El.Block>
+              <El.Block color="#text-soft">{item.available}</El.Block>
+            </El.Block>
+          </El.Pane>
+          <El.Block>
+            <El.Pane padding="0.5x 0" key="1">
+              <El.ButtonGroup>
+                <El.Button key="1">Add</El.Button>
+                <El.Button key="2">Set</El.Button>
+              </El.ButtonGroup>
+              <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+            </El.Pane>
+            <El.Button key="2" width="100%">
               Button
-            </Button>
-          </Block>
-        </Grid>
-      </Grid>
+            </El.Button>
+          </El.Block>
+        </El.Grid>
+      </El.Grid>
     );
   },
   options: [

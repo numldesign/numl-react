@@ -1,9 +1,9 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Avatar } from '../../../entry';
+import { Atoms, El } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Avatar',
-  component: Avatar,
+  component: Atoms.Avatar,
   argTypes: {
     fill: {
       defaultValue: '#special-bg',
@@ -17,11 +17,11 @@ export default {
 
 const Template = ({ ...args }) => {
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Avatar.Icon {...args}></Avatar.Icon>
-    </NumlProvider>
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+      <Atoms.Avatar.Icon {...args}></Atoms.Avatar.Icon>
+    </El.NumlProvider>
   );
 };
 

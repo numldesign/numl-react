@@ -1,11 +1,11 @@
 import React from 'react';
-import { Block, Grid, Base, Icon } from '../.././../entry';
+import { El } from '../.././../entry';
 
 function Toast(props: any) {
   const { action, text, helpText, icon, theme, ...otherprops } = props;
   return (
-    <Block width="17rem" {...otherprops}>
-      <Grid
+    <El.Block width="17rem" {...otherprops}>
+      <El.Grid
         columns="auto 3fr auto auto"
         cursor="pointer"
         theme={theme}
@@ -17,29 +17,29 @@ function Toast(props: any) {
         padding
         items="start"
       >
-        {!icon ? null : <Icon column="1" name="eye-outline"></Icon>}
-        <Block>
-          <Block>
-            <Base column="2" size="16px auto">
+        {!icon ? null : <El.Icon column="1" name="eye-outline"></El.Icon>}
+        <El.Block>
+          <El.Block>
+            <El.Base column="2" size="16px auto">
               {text}
-            </Base>
-          </Block>
+            </El.Base>
+          </El.Block>
           {!helpText ? null : (
-            <Block>
-              <Base column="2" size="14px auto">
+            <El.Block>
+              <El.Base column="2" size="14px auto">
                 {helpText}
-              </Base>
-            </Block>
+              </El.Base>
+            </El.Block>
           )}
-        </Block>
+        </El.Block>
         {!action ? null : (
-          <Base column="3" size="15px auto">
+          <El.Base column="3" size="15px auto">
             Button
-          </Base>
+          </El.Base>
         )}
-        <Icon column="4" name="close-outline"></Icon>
-      </Grid>
-    </Block>
+        <El.Icon column="4" name="close-outline"></El.Icon>
+      </El.Grid>
+    </El.Block>
   );
 }
 

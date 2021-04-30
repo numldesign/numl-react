@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, Button, Grid, Icon, NumlProvider, ThemeProvider } from '../../../entry';
+import { Banner, Button, Icon, NumlProvider, ThemeProvider, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Banner',
@@ -30,14 +30,14 @@ export const Default = Template.bind({});
 Default.args = {
   heading: 'Default Banner',
   footerActions: [
-    <Grid gap="1" columns="auto auto">
+    <El.Grid gap="1" columns="auto auto">
       <Button key="1" gap="1" theme="danger">
         Close
       </Button>
       <Button key="2" gap="1">
         Save
       </Button>
-    </Grid>,
+    </El.Grid>,
   ],
   closeAction: (
     <Button

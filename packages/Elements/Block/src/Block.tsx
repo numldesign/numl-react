@@ -12,6 +12,5 @@ const Block = React.forwardRef((props: any, ref) => {
     [children]
   );
 });
-Block.displayName = 'El.Block';
 
 export default Block;

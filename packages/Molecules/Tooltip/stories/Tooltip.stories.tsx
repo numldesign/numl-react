@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Tooltip, Button } from '../../../entry';
+import { NumlProvider, ThemeProvider, Tooltip, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Tooltip',
@@ -17,10 +17,10 @@ const Template = ({ ...args }) => (
   <NumlProvider padding="6x 2x">
     <ThemeProvider hue="290" saturation="75"></ThemeProvider>
     <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-    <Button>
+    <El.Button>
       Hover me
       <Tooltip {...args} />
-    </Button>
+    </El.Button>
   </NumlProvider>
 );
 

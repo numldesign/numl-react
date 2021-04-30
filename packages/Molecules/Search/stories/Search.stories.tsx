@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Search, Icon, Link, Block, Grid, Base, Pane } from '../../../entry';
+import { Search, Link, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Search',
@@ -7,31 +7,31 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
     <Search {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 const resultTemplate = (item) => {
   return (
-    <Grid gap flow="column" columns="4x auto 6x">
+    <El.Grid gap flow="column" columns="4x auto 6x">
       {item.prefix && (
-        <Block text="center">
-          <Icon name={item.prefix} />
-        </Block>
+        <El.Block text="center">
+          <El.Icon name={item.prefix} />
+        </El.Block>
       )}
-      {item.emptyGap && <Base />}
+      {item.emptyGap && <El.Base />}
       {item.title && (
-        <Block>
-          <Block text="sb">{item.title}</Block>
-          {item.description && <Block color="#text-strong">{item.description}</Block>}
-          {item.description2 && <Block color="#text-strong">{item.description2}</Block>}
-        </Block>
+        <El.Block>
+          <El.Block text="sb">{item.title}</El.Block>
+          {item.description && <El.Block color="#text-strong">{item.description}</El.Block>}
+          {item.description2 && <El.Block color="#text-strong">{item.description2}</El.Block>}
+        </El.Block>
       )}
       {item.suffix}
-    </Grid>
+    </El.Grid>
   );
 };
 
@@ -49,9 +49,9 @@ Default.args = {
     fill: 'bg',
   },
   extraActions: (
-    <Pane width="4x">
+    <El.Pane width="4x">
       <Link to="https://numl.design" icon={<Icon name="exit-outline" />} />
-    </Pane>
+    </El.Pane>
   ),
   value: 'acb',
   resultList: [
@@ -70,14 +70,14 @@ Default.args = {
       title: 'Draft orders',
       description: 'Process, track, and fulfill your orders',
       suffix: (
-        <Pane text="center" gap=".4x">
-          <Base fill="bg" radius padding="0 .4x">
+        <El.Pane text="center" gap=".4x">
+          <El.Base fill="bg" radius padding="0 .4x">
             G
-          </Base>
-          <Base fill="bg" radius padding="0 .4x">
+          </El.Base>
+          <El.Base fill="bg" radius padding="0 .4x">
             O
-          </Base>
-        </Pane>
+          </El.Base>
+        </El.Pane>
       ),
       value: 'value_3',
     },
@@ -87,9 +87,9 @@ Default.args = {
       description: 'Process, track, and fulfill your orders',
       description2: 'Orders / Drafts',
       suffix: (
-        <Block text="center">
-          <Link to="https://numl.design" icon={<Icon name="exit-outline" />} />
-        </Block>
+        <El.Block text="center">
+          <Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
+        </El.Block>
       ),
       value: 'value_4',
     },

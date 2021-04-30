@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { TAccountConnectionProps } from './AccountConnection.type';
-import { Avatar, Button, Pane, Block } from '../../../entry';
+import { Avatar, El } from '../../../entry';
 
 function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
   const {
@@ -26,7 +26,7 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
   }, [isConnected]);
 
   return (
-    <Pane
+    <El.Pane
       radius={radius}
       border={border}
       fill={fill}
@@ -36,30 +36,30 @@ function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {
       items={items}
       {...otherProps}
     >
-      <Pane content="space-between" flow="row wrap" gap="1x">
+      <El.Pane content="space-between" flow="row wrap" gap="1x">
         {true ? (
           <>
             <Avatar.Icon size="2" username={username} />
             <Avatar.Profile size="sm" username={username} subtitle={subtitle} />
           </>
         ) : (
-          <Block>
-            <Block size="md" text="sb">
+          <El.Block>
+            <El.Block size="md" text="sb">
               {username}
-            </Block>
-            <Block size="sm" color="#text-soft">
+            </El.Block>
+            <El.Block size="sm" color="#text-soft">
               {subtitle}
-            </Block>
-          </Block>
+            </El.Block>
+          </El.Block>
         )}
-        <Block>
-          <Button theme={!isConnected ? 'special' : 'default'} onClick={handleConnect}>
+        <El.Block>
+          <El.Button theme={!isConnected ? 'special' : 'default'} onClick={handleConnect}>
             {isConnected ? 'Disconnect' : 'Connect'}
-          </Button>
-        </Block>
-      </Pane>
-      {children ? <Block>{children}</Block> : null}
-    </Pane>
+          </El.Button>
+        </El.Block>
+      </El.Pane>
+      {children ? <El.Block>{children}</El.Block> : null}
+    </El.Pane>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Sheet, Button, Block } from '../../../entry';
+import { NumlProvider, ThemeProvider, Sheet, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Sheet',
@@ -27,19 +27,19 @@ Default.args = {
   ],
   onChange: (props) => console.log(props),
   heading: (
-    <Block size="xl" color="#text-soft">
+    <El.Block size="xl" color="#text-soft">
       Manage sales channels
-    </Block>
+    </El.Block>
   ),
   footerActions: [
-    <Button key="1">Cancel</Button>,
-    <Button key="2" special>
+    <El.Button key="1">Cancel</El.Button>,
+    <El.Button key="2" special>
       Done
-    </Button>,
+    </El.Button>,
   ],
   closeAction: (
-    <Button padding="0">
-      <Icon name="close" />
-    </Button>
+    <El.Button padding="0">
+      <El.Icon name="close" />
+    </El.Button>
   ),
 };

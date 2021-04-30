@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { El } from '../../../entry';
+import ModalBody from './Modal.Body';
+import ModalFooter from './Modal.Footer';
+import ModalHeader from './Modal.Header';
 
-let Modal: any = React.forwardRef((props, ref: any) => {
+const ModalFactory: any = React.forwardRef((props, ref: any) => {
   const {
     heading,
     onCloseAction,
@@ -11,22 +14,11 @@ let Modal: any = React.forwardRef((props, ref: any) => {
     show = 'n',
     radius = '0.5',
     children,
-    onTap,
     body,
     footerActions,
     closeAction,
     ...otherProps
   }: any = props;
-
-  React.useEffect(() => {
-    if (ref && ref.current) {
-      console.log(ref);
-      onTap && ref.current.addEventListener('tap', onTap);
-      return () => {
-        onTap ? ref.current.removeEventListener('tap', onTap) : null;
-      };
-    }
-  }, [ref]);
 
   return (
     <El.Block
@@ -40,81 +32,26 @@ let Modal: any = React.forwardRef((props, ref: any) => {
       show={show}
       {...otherProps}
     >
-      {heading && <Modal.Header flex heading={heading} onCloseAction={onCloseAction}></Modal.Header>}
+      {heading && <ModalFactory.Header flex heading={heading} onCloseAction={onCloseAction}></ModalFactory.Header>}
 
-      {body ? <Modal.Body> {body} </Modal.Body> : { ...children }}
+      {body ? <ModalFactory.Body> {body} </ModalFactory.Body> : { ...children }}
 
-      {footerActions && <Modal.Footer> {footerActions} </Modal.Footer>}
+      {footerActions && <ModalFactory.Footer> {footerActions} </ModalFactory.Footer>}
     </El.Block>
   );
 });
+ModalFactory.displayName = 'Modal';
+
+const Modal: any = React.memo(ModalFactory);
 Modal.displayName = 'Modal';
 
-/***
- * Modal Header
- */
-const ModalHeader = (props: any) => {
-  const {
-    padding = '2x',
-    items = 'start',
-    content = 'space-between',
-    border = 'bottom',
-    gap = '1',
-    heading,
-    onCloseAction,
-    children,
-    ...otherProps
-  }: any = props;
-  return (
-    <El.Pane block items={items} content={content} border={border} padding={padding} gap={gap} {...otherProps}>
-      {typeof heading === 'string' ? <El.Base size="md">{heading}</El.Base> : heading}
-      {onCloseAction ? (
-        <El.Button
-          cursor="pointer"
-          border="0"
-          onClick={() => {
-            onCloseAction;
-          }}
-        >
-          <El.Icon size="md" name="close-outline"></El.Icon>
-        </El.Button>
-      ) : null}
-    </El.Pane>
-  );
-};
-ModalHeader.displayName = 'ModalHeader';
 Modal.Header = ModalHeader;
+Modal.Header.displayName = 'ModalHeader';
 
-/**
- * Modal Body
- * @param props
- * @returns
- */
-const ModalBody = function (props: any) {
-  const { padding = '2x', border = 'bottom', items = 'start', children, ...otherProps } = props;
-  return (
-    <El.Pane block border={border} items={items} padding={padding} {...otherProps}>
-      {children}
-    </El.Pane>
-  );
-};
-ModalBody.displayName = 'ModalBody';
 Modal.Body = ModalBody;
+Modal.Body.displayName = 'ModalBody';
 
-/**
- * Modal Footer
- * @param props
- * @returns
- */
-const ModalFooter = function (props: any) {
-  const { content = 'flex-end', gap = '1x', padding = '2x', children, ...otherProps } = props;
-  return (
-    <El.Pane block content={content} gap={gap} padding={padding} {...otherProps}>
-      {children}
-    </El.Pane>
-  );
-};
-ModalFooter.displayName = 'ModalFooter';
 Modal.Footer = ModalFooter;
+Modal.Footer.displayName = 'ModalFooter';
 
 export default Modal;
