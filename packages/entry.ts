@@ -10,7 +10,7 @@ export * from './Molecules';
  * collision between naming conventions of
  * Elements and Atomic Design Component
  * */
-export * from './Elements';
+// export * from './Elements';
 
 /** Exporting all Atoms, Molucules and Elements,
  * So that user will have flexibility to access all

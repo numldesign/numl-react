@@ -1,6 +1,17 @@
 import React from 'react';
 
-export default function Pane(props: any) {
+const Pane = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-pane {...otherProps}>{children}</nu-pane>;
-}
+
+  return React.createElement(
+    'nu-pane',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+Pane.displayName = 'El.Pane';
+
+export default Pane;
