@@ -9,28 +9,20 @@ export default {
 };
 
 const Template = function ({ ...args }) {
-  const input = React.useRef();
   const [show, setShow] = React.useState('no');
-  const toggleShow = () => {
-    setShow(show == 'yes' ? 'no' : 'yes');
-  };
-  let storycount = 0;
-  React.useEffect(() => {
-    console.log('storycount => ' + storycount++);
-  });
 
-  const hideModal = () => {
-    console.log('Button is clicked', show);
-    toggleShow();
-  };
+  const toggleShow = React.useCallback(() => {
+    setShow((tempShow) => (tempShow == 'yes' ? 'no' : 'yes'));
+  }, [setShow]);
+
+  React.useEffect(() => {}, [toggleShow]);
 
   return (
     <El.NumlProvider>
-      {show == 'y' ? 'YES SHOW' : 'NO Show'}
       <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
       <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-      <Modal {...args} ref={input} onCloseAction={hideModal} show={show} />
-      <El.Button onTap={hideModal}>Click Me</El.Button>
+      <Modal {...args} onCloseAction={toggleShow} show={show} />
+      <El.Button onTap={toggleShow}>Click Me</El.Button>
     </El.NumlProvider>
   );
 };
@@ -46,23 +38,50 @@ Default.args = {
       This will reset your device to its default factor settings
     </El.Block>
   ),
+  footerActions: {
+    primary: {
+      text: 'Save',
+      onTap: function () {
+        console.log('Primary Button is tapped');
+      },
+    },
+    secondary: {
+      text: 'Close',
+      onTap: function () {
+        console.log('Secondary Button is tapped');
+      },
+    },
+  },
+};
+
+export const CustomFooter = Template.bind({});
+CustomFooter.args = {
+  heading: 'Reach more shoppers with Instagram product tags',
+  onCloseAction: function () {
+    console.log('onCloseAction triggered');
+  },
+  body: (
+    <El.Block size="md" color="#text-soft">
+      This will reset your device to its default factor settings
+    </El.Block>
+  ),
   footerActions: [
     <El.Button
       key="1"
-      onClick={() => {
-        console.log('Secondary clicked');
+      onTap={() => {
+        console.log('This is custom Close Button');
       }}
     >
       Close
     </El.Button>,
     <El.Button
       key="2"
-      theme="special"
-      onClick={() => {
-        console.log('umer');
+      special
+      onTap={() => {
+        console.log('This is custom Save Button');
       }}
     >
-      Primary
+      Save
     </El.Button>,
   ],
 };

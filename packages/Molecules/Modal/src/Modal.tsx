@@ -4,6 +4,10 @@ import ModalBody from './Modal.Body';
 import ModalFooter from './Modal.Footer';
 import ModalHeader from './Modal.Header';
 
+/**
+ * Forwad reference is used to get reference of element
+ * from numldesign - webcomponents
+ */
 const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
   const {
     heading,
@@ -19,11 +23,6 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
     closeAction,
     ...otherProps
   }: any = props;
-
-  let modalcount = 0;
-  React.useEffect(() => {
-    console.log('modalcount => ' + modalcount++, 'show => ' + show);
-  });
 
   return (
     <El.Block
@@ -41,16 +40,17 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
 
       {body ? <ModalBody> {body} </ModalBody> : { ...children }}
 
-      {footerActions && <ModalFooter> {footerActions} </ModalFooter>}
+      {footerActions && <ModalFooter footerActions={footerActions}></ModalFooter>}
     </El.Block>
   );
 });
 ModalForwardRef.displayName = 'Modal';
 
-// ModalForwardRef.Header = ModalHeader
-// ModalFactory.Body = ModalBody;
-// ModalFactory.Footer = ModalFooter;
-
+/**
+ * Modal memo is exported to outer library,
+ * Due to performance optimization
+ */
 const Modal = React.memo(ModalForwardRef);
 Modal.displayName = 'Modal';
+
 export default Modal;
