@@ -16,6 +16,7 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
     place = 'inside',
     fill = 'bg',
     box = 'y',
+    width = '50',
     show = 'n',
     radius = '0.5',
     children,
@@ -37,6 +38,7 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
         shadow
         nu-overlay
         place={place}
+        width={width}
         fill={fill}
         box={box}
         radius={radius}
@@ -45,7 +47,7 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
       >
         {heading && <ModalHeader flex heading={heading}></ModalHeader>}
 
-        {body ? <ModalBody> {body} </ModalBody> : { ...children }}
+        {body ? <ModalBody> {body} </ModalBody> : [...children]}
 
         {footerContent && <ModalFooter footerContent={footerContent}></ModalFooter>}
       </El.Block>
@@ -58,7 +60,6 @@ ModalForwardRef.displayName = 'Modal';
  * Modal memo is exported to outer library,
  * Due to performance optimization
  */
-const Modal = React.memo(ModalForwardRef);
-Modal.displayName = 'Modal';
+let Modal = React.memo(ModalForwardRef);
 
 export default Modal;

@@ -12,6 +12,5 @@ const Pane = React.forwardRef((props: any, ref) => {
     [children]
   );
 });
-Pane.displayName = 'El.Pane';
 
 export default Pane;

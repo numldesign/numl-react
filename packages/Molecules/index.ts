@@ -17,7 +17,7 @@ export { Form } from './Form/';
 export { LocationCard } from './LocationCard/';
 export { MediaCard } from './MediaCard/';
 export { Menu } from './Menu/';
-export { Modal } from './Modal/';
+export { Modal, ModalBody, ModalFooter, ModalHeader } from './Modal/';
 export { OptionList } from './OptionList/';
 export { PageAction } from './PageAction/';
 export { Popover } from './Popover/';
