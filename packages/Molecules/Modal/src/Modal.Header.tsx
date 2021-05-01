@@ -1,9 +1,13 @@
+import * as React from 'react';
 import { El } from '../../../entry';
+import ModalContext from './ModalContext';
 
 /***
  * Modal Header
  */
 const ModalHeader = function (props: any) {
+  const { onCloseAction } = React.useContext(ModalContext);
+
   const {
     padding = '2x',
     items = 'start',
@@ -11,7 +15,6 @@ const ModalHeader = function (props: any) {
     border = 'bottom',
     gap = '1',
     heading,
-    onCloseAction,
     children,
     ...otherProps
   }: any = props;

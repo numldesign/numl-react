@@ -3,6 +3,7 @@ import { El } from '../../../entry';
 import ModalBody from './Modal.Body';
 import ModalFooter from './Modal.Footer';
 import ModalHeader from './Modal.Header';
+import ModalContext from './ModalContext';
 
 /**
  * Forwad reference is used to get reference of element
@@ -19,29 +20,36 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
     radius = '0.5',
     children,
     body,
-    footerActions,
-    closeAction,
+    footerContent,
     ...otherProps
   }: any = props;
 
   return (
-    <El.Block
-      ref={ref}
-      shadow
-      nu-overlay
-      place={place}
-      fill={fill}
-      box={box}
-      radius={radius}
-      show={show}
-      {...otherProps}
+    <ModalContext.Provider
+      value={{
+        onCloseAction,
+        footerContent,
+        show,
+      }}
     >
-      {heading && <ModalHeader flex heading={heading} onCloseAction={onCloseAction}></ModalHeader>}
+      <El.Block
+        ref={ref}
+        shadow
+        nu-overlay
+        place={place}
+        fill={fill}
+        box={box}
+        radius={radius}
+        show={show}
+        {...otherProps}
+      >
+        {heading && <ModalHeader flex heading={heading}></ModalHeader>}
 
-      {body ? <ModalBody> {body} </ModalBody> : { ...children }}
+        {body ? <ModalBody> {body} </ModalBody> : { ...children }}
 
-      {footerActions && <ModalFooter footerActions={footerActions} onCloseAction={onCloseAction}></ModalFooter>}
-    </El.Block>
+        {footerContent && <ModalFooter footerContent={footerContent}></ModalFooter>}
+      </El.Block>
+    </ModalContext.Provider>
   );
 });
 ModalForwardRef.displayName = 'Modal';

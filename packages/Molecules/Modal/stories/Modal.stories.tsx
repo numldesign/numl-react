@@ -35,7 +35,7 @@ Default.args = {
       This will reset your device to its default factor settings
     </El.Block>
   ),
-  footerActions: {
+  footerContent: {
     primary: {
       text: 'Save',
       onTap: function () {
@@ -56,7 +56,7 @@ CustomFooter.args = {
       This will reset your device to its default factor settings
     </El.Block>
   ),
-  footerActions: [
+  footerContent: [
     <El.Button
       key="1"
       onTap={() => {
@@ -85,7 +85,7 @@ WithoutHeader.args = {
       leaving Instagram.
     </El.Block>
   ),
-  footerActions: [
+  footerContent: [
     <El.Button key="1">Close</El.Button>,
     <El.Button key="2" special>
       Primary
@@ -117,7 +117,7 @@ ModalWithChlidrens.args = {
       This will reset your device to its default factor settings
     </El.Block>
   ),
-  footerActions: [
+  footerContent: [
     <El.Button
       key="1"
       onClick={() => {

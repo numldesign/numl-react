@@ -1,33 +1,23 @@
 import React from 'react';
 import { El } from '../../../entry';
 import { isPlainObject } from '../../../Utilities';
+import ModalContext from './ModalContext';
 /**
  * Modal Footer
  * @param props
  * @returns
  */
 const ModalFooter = (props: any) => {
-  const {
-    content = 'flex-end',
-    gap = '1x',
-    onCloseAction,
-    padding = '2x',
-    footerActions,
-    children,
-    ...otherProps
-  } = props;
-
+  const { content = 'flex-end', gap = '1x', padding = '2x', footerContent, children, ...otherProps } = props;
   return (
     <El.Pane block content={content} gap={gap} padding={padding} {...otherProps}>
-      {isPlainObject(footerActions) ? (
+      {isPlainObject(footerContent) ? (
         <>
-          <SecondaryAction {...footerActions.secondary} onCloseAction={onCloseAction}>
-            {footerActions.secondary.text}
-          </SecondaryAction>
-          <PrimaryAction {...footerActions.primary}>{footerActions.primary.text}</PrimaryAction>
+          <SecondaryAction {...footerContent.secondary}>{footerContent.secondary.text}</SecondaryAction>
+          <PrimaryAction {...footerContent.primary}>{footerContent.primary.text}</PrimaryAction>
         </>
       ) : (
-        [footerActions]
+        [footerContent]
       )}
     </El.Pane>
   );
@@ -40,7 +30,9 @@ ModalFooter.displayName = 'ModalFooter';
  * @returns
  */
 const SecondaryAction = (props: any) => {
-  const { children, onCloseAction, onTap, theme = 'default', ...otherProps } = props;
+  const { children, onTap, theme = 'default', ...otherProps } = props;
+  const { onCloseAction } = React.useContext(ModalContext);
+
   return (
     <El.Button key="secondary" onTap={onTap || onCloseAction} theme={theme} {...otherProps}>
       {children || 'Close'}
