@@ -9,6 +9,7 @@ function Button(props: any): JSX.Element {
     selectable = false,
     theme = 'default',
     height = '2x',
+    onClick,
     ...otherProps
   } = props;
   return (
@@ -19,6 +20,7 @@ function Button(props: any): JSX.Element {
       size={size}
       selectable={selectable}
       padding={padding}
+      onClick={onClick}
       {...otherProps}
     >
       {children ? children : null}

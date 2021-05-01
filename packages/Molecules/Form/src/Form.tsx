@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Button, Input } from '../../../entry';
+import { El } from '../../../entry';
 
 function Form(props: any) {
   const { gap, children, ...otherProps } = props;
@@ -26,7 +26,7 @@ Form.Field = function FormField(allProps: any) {
 };
 Form.Input = function FormInput(props: any) {
   let { name, ...otherProps } = props;
-  return <Input id={name} {...otherProps}></Input>;
+  return <El.Input id={name} {...otherProps}></El.Input>;
 };
 
 Form.Check = function FormCheck(allProps: any) {
@@ -48,9 +48,9 @@ Form.Check = function FormCheck(allProps: any) {
 Form.Submit = function FormSubmit(allProps: any) {
   const { children, ...otherProps } = allProps;
   return (
-    <Button type="submit" {...otherProps}>
+    <El.Button type="submit" {...otherProps}>
       {children}
-    </Button>
+    </El.Button>
   );
 };
 

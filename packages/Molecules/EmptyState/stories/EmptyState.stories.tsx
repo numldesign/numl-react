@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, Image, ThemeProvider, Icon, Button, EmptyState } from '../../../entry';
+import { NumlProvider, El, ThemeProvider, Icon, Button, EmptyState } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/EmptyState',
@@ -77,11 +77,11 @@ WithImage.args = {
     </Button>,
   ],
   children: (
-    <Image
+    <El.Image
       src="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
       fit="fill"
       width="14x"
       height="14x"
-    ></Image>
+    ></El.Image>
   ),
 };

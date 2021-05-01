@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, TextInput, Icon, Button, Menu, Filters, Popup } from '../../../entry';
+import { NumlProvider, ThemeProvider, TextInput, Menu, Filters, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Filters',
@@ -18,13 +18,13 @@ export const Default = Template.bind({});
 Default.args = {
   responsive: '601px',
   flow: 'column|row',
-  filterSearch: <TextInput placeholder="Text Field" prefix={<Icon name="search-outline" padding="1x" />} />,
+  filterSearch: <TextInput placeholder="Text Field" prefix={<El.Icon name="search-outline" padding="1x" />} />,
   filterGroup: (
-    <Button.Group>
-      <Button key="one">
+    <El.ButtonGroup>
+      <El.Button key="one">
         Button
-        <Icon name="chevron-down-outline" />
-        <Popup use-menu display="flex" padding="1x 0" flow="column">
+        <El.Icon name="chevron-down-outline" />
+        <El.Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
             <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
@@ -33,24 +33,24 @@ Default.args = {
               Action 2
             </Menu.Item>
           </Menu>
-        </Popup>
-      </Button>
-      <Button key="two">
+        </El.Popup>
+      </El.Button>
+      <El.Button key="two">
         Button
-        <Icon name="chevron-down-outline" />
-      </Button>
-      <Button key="three">
+        <El.Icon name="chevron-down-outline" />
+      </El.Button>
+      <El.Button key="three">
         Button
-        <Icon name="chevron-down-outline" />
-      </Button>
-      <Button key="four">More Filters</Button>
-    </Button.Group>
+        <El.Icon name="chevron-down-outline" />
+      </El.Button>
+      <El.Button key="four">More Filters</El.Button>
+    </El.ButtonGroup>
   ),
   extra: (
-    <Button disabled>
-      <Icon name="star-outline" />
+    <El.Button disabled>
+      <El.Icon name="star-outline" />
       Saved
-    </Button>
+    </El.Button>
   ),
 };
 
@@ -59,11 +59,11 @@ WithoutSearch.args = {
   responsive: '601px',
   flow: 'column|row',
   filterGroup: (
-    <Button.Group>
-      <Button key="one">
+    <El.ButtonGroup>
+      <El.Button key="one">
         Button
-        <Icon name="chevron-down-outline" />
-        <Popup use-menu display="flex" padding="1x 0" flow="column">
+        <El.Icon name="chevron-down-outline" />
+        <El.Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
             <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
               Action 1
@@ -72,23 +72,23 @@ WithoutSearch.args = {
               Action 2
             </Menu.Item>
           </Menu>
-        </Popup>
-      </Button>
-      <Button key="two">
+        </El.Popup>
+      </El.Button>
+      <El.Button key="two">
         Button
-        <Icon name="chevron-down-outline" />
-      </Button>
-      <Button key="three">
+        <El.Icon name="chevron-down-outline" />
+      </El.Button>
+      <El.Button key="three">
         Button
-        <Icon name="chevron-down-outline" />
-      </Button>
-      <Button key="four">More Filters</Button>
-    </Button.Group>
+        <El.Icon name="chevron-down-outline" />
+      </El.Button>
+      <El.Button key="four">More Filters</El.Button>
+    </El.ButtonGroup>
   ),
   extra: (
-    <Button disabled>
-      <Icon name="star-outline" />
+    <El.Button disabled>
+      <El.Icon name="star-outline" />
       Saved
-    </Button>
+    </El.Button>
   ),
 };

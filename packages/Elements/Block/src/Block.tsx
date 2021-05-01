@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Block(props: any) {
+const Block = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-block {...otherProps}>{children}</nu-block>;
-}
+
+  return React.createElement(
+    'nu-block',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default Block;

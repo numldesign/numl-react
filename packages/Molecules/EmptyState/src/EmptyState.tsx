@@ -1,29 +1,29 @@
 import React from 'react';
 import { TEmptyStateProps } from './EmptyState.type';
-import { Pane, Block, Flex } from '../../../entry';
+import { El } from '../../../entry';
 
 function EmptyState(allProps: TEmptyStateProps): JSX.Element {
   const { heading, description, flow = 'column', radius = '1x', actions, children, ...otherProps } = allProps;
 
   return (
-    <Pane flow={flow} radius={radius} {...otherProps}>
+    <El.Pane flow={flow} radius={radius} {...otherProps}>
       {children}
       {heading ? (
-        <Block size="md" text="center">
+        <El.Block size="md" text="center">
           {heading}
-        </Block>
+        </El.Block>
       ) : null}
       {description ? (
-        <Block size="xs" color="#text-strong" text="center">
+        <El.Block size="xs" color="#text-strong" text="center">
           {description}
-        </Block>
+        </El.Block>
       ) : null}
       {actions ? (
-        <Flex gap="0.5" flow="row wrap" content="center">
+        <El.Flex gap="0.5" flow="row wrap" content="center">
           {actions}
-        </Flex>
+        </El.Flex>
       ) : null}
-    </Pane>
+    </El.Pane>
   );
 }
 

@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  ActionList,
-  Popover,
-  Button,
-  Input,
-  TextInput,
-  DropdownIcon,
-  Flex,
-} from '../../../entry';
+import { NumlProvider, ThemeProvider, ActionList, Popover, Button, TextInput, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Popover',
@@ -21,8 +11,8 @@ const Template = ({ ...args }) => (
     <ThemeProvider hue="290" saturation="75"></ThemeProvider>
     <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Button width="10" columns="1fr auto" value="Select">
-      <Input.Value />
-      <DropdownIcon></DropdownIcon>
+      <El.Input.Value />
+      <El.DropdownIcon></El.DropdownIcon>
       <Popover {...args} />
     </Button>
   </NumlProvider>
@@ -49,10 +39,10 @@ Default.args = {
 export const WithForm = Template.bind({});
 WithForm.args = {
   children: (
-    <Flex gap="2x" flow="column" width="max-content" padding="1x">
+    <El.Flex gap="2x" flow="column" width="max-content" padding="1x">
       <TextInput.Field label="Show all customers where:" placeholder="Today" />
       <TextInput.Field label="Tags" value="Jaded Pixel" />
       <Button width="min-content">Add Filter</Button>
-    </Flex>
+    </El.Flex>
   ),
 };

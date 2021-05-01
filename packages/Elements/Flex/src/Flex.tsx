@@ -1,6 +1,15 @@
 import React from 'react';
 
-export default function Flex(props: any) {
+const Flex = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-flex {...otherProps}>{children}</nu-flex>;
-}
+
+  return React.createElement(
+    'nu-flex',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+export default Flex;

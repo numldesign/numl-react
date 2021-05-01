@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
+import { ThemeProvider, NumlProvider } from '../../../entry';
 import { Button } from '../index';
 
 export default {
@@ -25,8 +25,8 @@ export default {
 
 const Template = (args: any) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Button.Group {...args} />
   </NumlProvider>
 );

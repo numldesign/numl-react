@@ -1,16 +1,14 @@
 /** Export all declared Atoms */
 export * from './Atoms';
 
+/** Application Configuration Numl Tags */
+export { NumlProvider } from './Elements/NumlProvider/';
+export { AttributeProvider } from './Elements/AttributeProvider';
+export { PropsProvider } from './Elements/PropsProvider';
+export { ThemeProvider } from './Elements/ThemeProvider';
+
 /** Exporting all declared molecules */
 export * from './Molecules';
-
-/**
- * In Beta Release, This Elements expression
- * is going to be depreceated, Since there are
- * collision between naming conventions of
- * Elements and Atomic Design Component
- * */
-export * from './Elements';
 
 /** Exporting all Atoms, Molucules and Elements,
  * So that user will have flexibility to access all

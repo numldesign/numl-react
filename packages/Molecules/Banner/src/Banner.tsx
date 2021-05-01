@@ -1,32 +1,30 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { Pane } from '../../../Elements/Pane';
-import { Block } from './../../../Elements/Block';
 import { TBannerProps } from './Banner.type';
+import { El } from '../../../entry';
 
 function Banner(allProps: TBannerProps): JSX.Element {
   const { prefix, heading, children, footerActions, closeAction, ...otherProps } = allProps;
 
   return (
-    <Pane radius="1x" border="1bw" fill="bg" padding="2x" gap="2x" items="start" {...otherProps}>
+    <El.Pane radius="1x" border="1bw" fill="bg" padding="2x" gap="2x" items="start" {...otherProps}>
       {prefix && typeof prefix === 'string' ? <Icon name={prefix} /> : prefix}
-      <Pane flex="1" items="flex-start" flow="column" gap="2x">
-        <Block>
+      <El.Pane flex="1" items="flex-start" flow="column" gap="2x">
+        <El.Block>
           {heading ? (
-            <Block text="sb" size="lg" color="#text-soft">
+            <El.Block text="sb" size="lg" color="#text-soft">
               {heading}
-            </Block>
+            </El.Block>
           ) : null}
           {children ? (
-            <Block text="sb" size="md" color="#text">
+            <El.Block text="sb" size="md" color="#text">
               {children}
-            </Block>
+            </El.Block>
           ) : null}
-        </Block>
-        {footerActions ? <Block>{footerActions}</Block> : null}
-      </Pane>
+        </El.Block>
+        {footerActions ? <El.Block>{footerActions}</El.Block> : null}
+      </El.Pane>
       {closeAction ? closeAction : null}
-    </Pane>
+    </El.Pane>
   );
 }
 

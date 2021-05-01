@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NumlProvider, ThemeProvider, Icon, Menu, Base, Popup, DropdownIcon } from '../../../entry';
+import { NumlProvider, ThemeProvider, Menu, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Menu',
@@ -48,23 +48,23 @@ export const WithIcons = (args) => {
         <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
         <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
-          <Icon name="eye-outline" />
+          <El.Icon name="eye-outline" />
           Preview
         </Menu.Item>
         <Menu.Item value="Share" columns="auto 1fr" onClick={handleMenuClick}>
-          <Icon name="share-social-outline" />
+          <El.Icon name="share-social-outline" />
           Share
         </Menu.Item>
         <Menu.Item value="Getlink" border="bottom" columns="auto 1fr" onClick={handleMenuClick}>
-          <Icon name="link-outline" />
+          <El.Icon name="link-outline" />
           Get link
         </Menu.Item>
         <Menu.Item value="Copy" columns="auto 1fr" onClick={handleMenuClick}>
-          <Icon name="copy-outline" />
+          <El.Icon name="copy-outline" />
           Copy
         </Menu.Item>
         <Menu.Item value="Download" columns="auto 1fr" onClick={handleMenuClick}>
-          <Icon name="download-outline" />
+          <El.Icon name="download-outline" />
           Download
         </Menu.Item>
       </Menu>
@@ -90,11 +90,11 @@ export const WithHotKeyAndPopup = (args) => {
           to={handleMenuClick}
           onClick={handleMenuClick}
         >
-          <Icon name="cut-outline" />
+          <El.Icon name="cut-outline" />
           Cut
-          <Base>
-            <Icon name="logo-windows" />X
-          </Base>
+          <El.Base>
+            <El.Icon name="logo-windows" />X
+          </El.Base>
         </Menu.Item>
         <Menu.Item
           value="Copy"
@@ -103,11 +103,11 @@ export const WithHotKeyAndPopup = (args) => {
           to={handleMenuClick}
           onClick={handleMenuClick}
         >
-          <Icon name="copy-outline" />
+          <El.Icon name="copy-outline" />
           Copy
-          <Base>
-            <Icon name="logo-windows" />C
-          </Base>
+          <El.Base>
+            <El.Icon name="logo-windows" />C
+          </El.Base>
         </Menu.Item>
         <Menu.Item
           border="bottom"
@@ -117,17 +117,17 @@ export const WithHotKeyAndPopup = (args) => {
           to={handleMenuClick}
           onClick={handleMenuClick}
         >
-          <Icon name="clipboard-outline" />
+          <El.Icon name="clipboard-outline" />
           Paste
-          <Base>
-            <Icon name="logo-windows" />P
-          </Base>
+          <El.Base>
+            <El.Icon name="logo-windows" />P
+          </El.Base>
         </Menu.Item>
         <Menu.Item value="Webclipboard" columns="auto 1fr auto">
-          <Icon name="cloudy-outline" />
+          <El.Icon name="cloudy-outline" />
           Web clipboard
-          <DropdownIcon width="6x" />
-          <Popup use-menu display="flex" padding="1x 0" flow="column">
+          <El.DropdownIcon width="6x" />
+          <El.Popup use-menu display="flex" padding="1x 0" flow="column">
             <Menu.Item value="Label1" onClick={handleMenuClick}>
               Label 1
             </Menu.Item>
@@ -137,7 +137,7 @@ export const WithHotKeyAndPopup = (args) => {
             <Menu.Item value="Label3" onClick={handleMenuClick}>
               Label 3
             </Menu.Item>
-          </Popup>
+          </El.Popup>
         </Menu.Item>
       </Menu>
     </NumlProvider>
@@ -167,7 +167,7 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Single' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon name="checkmark-outline" opacity={selected === 'Single' ? '1' : '0'} transition="opacity .1s" />
+          <El.Icon name="checkmark-outline" opacity={selected === 'Single' ? '1' : '0'} transition="opacity .1s" />
           Single
         </Menu.Item>
         <Menu.Item
@@ -179,7 +179,7 @@ export const WithSelectableItems = (args) => {
           color={selected === '1.15' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon name="checkmark-outline" opacity={selected === '1.15' ? '1' : '0'} transition="opacity .1s" />
+          <El.Icon name="checkmark-outline" opacity={selected === '1.15' ? '1' : '0'} transition="opacity .1s" />
           1.15
         </Menu.Item>
         <Menu.Item
@@ -191,7 +191,7 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Default' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon name="checkmark-outline" opacity={selected === 'Default' ? 1 : 0} transition="opacity .1s" />
+          <El.Icon name="checkmark-outline" opacity={selected === 'Default' ? 1 : 0} transition="opacity .1s" />
           Default
         </Menu.Item>
         <Menu.Item
@@ -204,13 +204,13 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Custom:_1.2' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <Icon name="checkmark-outline" opacity={selected === 'Custom:_1.2' ? 1 : 0} transition="opacity .1s" />
+          <El.Icon name="checkmark-outline" opacity={selected === 'Custom:_1.2' ? 1 : 0} transition="opacity .1s" />
           Custom: 1.2
         </Menu.Item>
         <Menu.Item value="add_space_before" columns="1fr auto">
           Add space before paragraph
-          <DropdownIcon width="6x" />
-          <Popup use-menu display="flex" padding="1x 0" flow="column">
+          <El.DropdownIcon width="6x" />
+          <El.Popup use-menu display="flex" padding="1x 0" flow="column">
             <Menu.Item value="Label1" onClick={handleMenuClick}>
               Label 1
             </Menu.Item>
@@ -220,7 +220,7 @@ export const WithSelectableItems = (args) => {
             <Menu.Item value="Label3" onClick={handleMenuClick}>
               Label 3
             </Menu.Item>
-          </Popup>
+          </El.Popup>
         </Menu.Item>
         <Menu.Item value="add_space_before" onClick={handleMenuClick}>
           Add space after paragraph

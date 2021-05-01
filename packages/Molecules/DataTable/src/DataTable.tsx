@@ -1,5 +1,6 @@
 import React from 'react';
 import { TDataTableProps } from './DataTable.type';
+import { El } from '../../../entry';
 
 function DataTable(allProps: TDataTableProps) {
   const { headings, rows, width = '100%', height = '100%', totals, footerContent, ...otherProps } = allProps;
@@ -9,7 +10,7 @@ function DataTable(allProps: TDataTableProps) {
   let totalList = totals && totals.length ? [...totals] : [];
 
   return (
-    <nu-block {...otherProps}>
+    <El.Block {...otherProps}>
       <nu-table width={width} height={height}>
         {headingList.length ? (
           <nu-rowgroup>
@@ -55,10 +56,10 @@ function DataTable(allProps: TDataTableProps) {
           </nu-rowgroup>
         ) : null}
       </nu-table>
-      <nu-pane height="3" content="center" fill="subtle">
+      <El.Pane height="3" content="center" fill="subtle">
         Showing {rows.length} of {rows.length}
-      </nu-pane>
-    </nu-block>
+      </El.Pane>
+    </El.Block>
   );
 }
 

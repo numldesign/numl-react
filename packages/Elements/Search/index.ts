@@ -1,2 +1,2 @@
 export * from './src/Search';
-// export { default as Search } './src/Search';
+export { default as Search } from './src/Search';

@@ -16,7 +16,7 @@ export { Grid } from './Grid';
 export { Input } from './Input';
 export { Pane } from './Pane';
 export { Popup } from './Popup';
-// export { Search } from './Search';
+export { Search } from './Search';
 export { Button } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { Svg } from './Svg';

@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Icon } from '../../../Atoms/Icon';
+import { El } from '../../../entry';
 import { TCarouselProps } from './Carousel.type';
 
 function Carousel(allProps: TCarouselProps): JSX.Element {
@@ -35,22 +35,22 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
   }, [currentSlide]);
 
   return (
-    <nu-block style={{ position: 'relative' }} width={width} height={height} {...otherProps}>
-      <nu-block overflow="hidden">
-        <nu-pane flow="row nowrap" gap="0" width={`${slides}00%`}>
+    <El.Block style={{ position: 'relative' }} width={width} height={height} {...otherProps}>
+      <El.Block overflow="hidden">
+        <El.Pane flow="row nowrap" gap="0" width={`${slides}00%`}>
           {items.map((_image: any, _index: any) => {
             const move = currentSlide === 0 ? '0 0' : `-${currentSlide}00% 0`;
             return (
-              <nu-flex key={_index} width="100%" move={move} transition="move .2s" content="center">
-                <nu-img src={_image} fit="fill" height={height} width={width}></nu-img>
-              </nu-flex>
+              <El.Flex key={_index} width="100%" move={move} transition="move .2s" content="center">
+                <El.Image src={_image} fit="fill" height={height} width={width}></El.Image>
+              </El.Flex>
             );
           })}
-        </nu-pane>
-      </nu-block>
-      <Icon name="chevron-back" place="left" cursor="pointer" onClick={handlePreviousClick} />
-      <Icon name="chevron-forward" place="right" cursor="pointer" onClick={handleNextClick} />
-      <nu-pane content="center" place="bottom" width="100%">
+        </El.Pane>
+      </El.Block>
+      <El.Icon name="chevron-back" place="left" cursor="pointer" onClick={handlePreviousClick} />
+      <El.Icon name="chevron-forward" place="right" cursor="pointer" onClick={handleNextClick} />
+      <El.Pane content="center" place="bottom" width="100%">
         {itemList.map((_item, _index) => {
           const isActive = currentSlide === _index;
           return (
@@ -65,8 +65,8 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
             />
           );
         })}
-      </nu-pane>
-    </nu-block>
+      </El.Pane>
+    </El.Block>
   );
 }
 

@@ -12,29 +12,42 @@ export function requireNude(): Promise<any> {
   }
 }
 
+const loadDynamicScript = (callback: () => any) => {
+  const existingScript = document.getElementById('numl-script');
+
+  if (!existingScript) {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/numl@1.1.0/dist/index.js';
+    script.type = 'module';
+    script.id = 'numl-script';
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (callback) callback();
+    };
+  }
+
+  if (existingScript && callback) callback();
+};
+
 export function LoadNuml(): Promise<any> {
   if (typeof window === 'undefined') return new Promise((_resolve, reject) => reject('window not found'));
-
-  var numlScript = document.getElementById('numl-script');
-  if (numlScript) {
-    Promise.resolve(true);
-  }
 
   if (window.Nude) {
     return Promise.resolve(window.Nude);
   } else {
     return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/numl@1.1.0/dist/index.js';
-      script.type = 'module';
-      script.id = 'numl-script';
-      document.body.appendChild(script);
-      script.onload = () => {
+      loadDynamicScript(function () {
         console.log('Numl loading');
         window.addEventListener('nudeReady', () => {
+          console.log('Nude Ready');
           resolve(window.Nude);
         });
-      };
+        window.addEventListener('numlReady', () => {
+          console.log('Numl Ready');
+          resolve(window.Nude);
+        });
+      });
     });
   }
 }

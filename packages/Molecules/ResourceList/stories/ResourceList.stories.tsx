@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, ResourceList, Block, Pane } from '../../../entry';
+import { NumlProvider, ThemeProvider, ResourceList, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/ResourceList',
@@ -21,10 +21,10 @@ Default.args = {
   },
   renderItem: ({ item }) => {
     return (
-      <Block text="wrap">
-        <Block>{item.name}</Block>
-        <Block color="#text-soft">{item.location}</Block>
-      </Block>
+      <El.Block text="wrap">
+        <El.Block>{item.name}</El.Block>
+        <El.Block color="#text-soft">{item.location}</El.Block>
+      </El.Block>
     );
   },
   items: [
@@ -57,16 +57,16 @@ WithMultiSelect.args = {
   },
   renderItem: ({ item }) => {
     return (
-      <Pane content="space-between|flex-start" items="center|flex-start" flow="row|column" text="wrap">
-        <Block>
-          <Block>{item.name}</Block>
-          <Block color="#text-soft">{item.location}</Block>
-        </Block>
-        <Pane gap="3x">
-          <Block>{item.totalOrders}</Block>
-          <Block>{item.cost}</Block>
-        </Pane>
-      </Pane>
+      <El.Pane content="space-between|flex-start" items="center|flex-start" flow="row|column" text="wrap">
+        <El.Block>
+          <El.Block>{item.name}</El.Block>
+          <El.Block color="#text-soft">{item.location}</El.Block>
+        </El.Block>
+        <El.Pane gap="3x">
+          <El.Block>{item.totalOrders}</El.Block>
+          <El.Block>{item.cost}</El.Block>
+        </El.Pane>
+      </El.Pane>
     );
   },
   items: [

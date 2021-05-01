@@ -1,5 +1,6 @@
 import React from 'react';
 import { TDialogueBoxProps } from './DialogueBox.type';
+import { El } from '../../../entry';
 
 function DialogueBox(allProps: TDialogueBoxProps) {
   const {
@@ -14,11 +15,11 @@ function DialogueBox(allProps: TDialogueBoxProps) {
     ...otherProps
   } = allProps;
   return (
-    <nu-flex nu-overlay place={place} fill={fill} box={box} gap={gap} radius={radius} {...otherProps}>
-      {heading ? <nu-block text="sb">{heading}</nu-block> : null}
-      {children ? <nu-block size="sm">{children}</nu-block> : null}
-      <nu-pane content="flex-end">{actions}</nu-pane>
-    </nu-flex>
+    <El.Flex nu-overlay place={place} fill={fill} box={box} gap={gap} radius={radius} {...otherProps}>
+      {heading ? <El.Block text="sb">{heading}</El.Block> : null}
+      {children ? <El.Block size="sm">{children}</El.Block> : null}
+      <El.Pane content="flex-end">{actions}</El.Pane>
+    </El.Flex>
   );
 }
 

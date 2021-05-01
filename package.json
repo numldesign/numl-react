@@ -3,8 +3,6 @@
   "version": "0.0.14-1",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "clean": "npm-run-all clean:*",
@@ -83,7 +81,9 @@
     "test": "jest",
     "release": "npx lerna publish",
     "test:watch": "jest --watch",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -112,13 +112,9 @@
     "@semantic-release/npm": "^7.1.1",
     "@semantic-release/release-notes-generator": "^9.0.2",
     "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
-    "@storybook/addon-viewport": "^6.2.9",
-    "@storybook/addons": "^6.2.9",
     "@storybook/react": "^6.2.9",
-    "@storybook/theming": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@types/jest": "^26.0.23",
@@ -147,7 +143,7 @@
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.4",
     "typedoc": "^0.20.36",
-    "typescript": "^4.2.4",
+    "typescript": "4.2.4",
     "vite": "^2.1.5"
   },
   "publishConfig": {
@@ -177,5 +173,13 @@
   "lint-staged": {
     "**/*": "prettier --write ./packages --ignore-unknown"
   },
-  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a"
+  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
+  "dependencies": {
+    "uuidv4": "^6.2.7"
+  },
+  "dependenciesMeta": {
+    "open@7.4.2": {
+      "unplugged": true
+    }
+  }
 }

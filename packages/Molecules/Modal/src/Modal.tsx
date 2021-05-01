@@ -1,40 +1,64 @@
-import React from 'react';
-import { TModalProps } from './Modal.type';
+import * as React from 'react';
+import { El } from '../../../entry';
+import ModalBody from './Modal.Body';
+import ModalFooter from './Modal.Footer';
+import ModalHeader from './Modal.Header';
+import ModalContext from './ModalContext';
 
-function Modal(allProps: TModalProps) {
+/**
+ * Forwad reference is used to get reference of element
+ * from numldesign - webcomponents
+ */
+const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
   const {
     heading,
+    onCloseAction,
     place = 'inside',
-    fill = '#dark.50',
+    fill = 'bg',
     box = 'y',
+    show = 'n',
     radius = '0.5',
+    children,
     body,
-    footerActions,
-    closeAction,
+    footerContent,
     ...otherProps
-  } = allProps;
+  }: any = props;
 
   return (
-    <nu-block nu-overlay place={place} fill={fill} box={box} radius={radius} {...otherProps}>
-      {heading ? (
-        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
-          {heading}
-          {closeAction}
-        </nu-pane>
-      ) : null}
-      {body ? (
-        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
-          {body}
-          {!heading ? closeAction : null}
-        </nu-pane>
-      ) : null}
-      {footerActions ? (
-        <nu-pane content="flex-end" gap="1x" padding="2x">
-          {footerActions}
-        </nu-pane>
-      ) : null}
-    </nu-block>
+    <ModalContext.Provider
+      value={{
+        onCloseAction,
+        footerContent,
+        show,
+      }}
+    >
+      <El.Block
+        ref={ref}
+        shadow
+        nu-overlay
+        place={place}
+        fill={fill}
+        box={box}
+        radius={radius}
+        show={show}
+        {...otherProps}
+      >
+        {heading && <ModalHeader flex heading={heading}></ModalHeader>}
+
+        {body ? <ModalBody> {body} </ModalBody> : { ...children }}
+
+        {footerContent && <ModalFooter footerContent={footerContent}></ModalFooter>}
+      </El.Block>
+    </ModalContext.Provider>
   );
-}
+});
+ModalForwardRef.displayName = 'Modal';
+
+/**
+ * Modal memo is exported to outer library,
+ * Due to performance optimization
+ */
+const Modal = React.memo(ModalForwardRef);
+Modal.displayName = 'Modal';
 
 export default Modal;

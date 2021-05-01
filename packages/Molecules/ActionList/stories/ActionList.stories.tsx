@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionList, Icon, NumlProvider, ThemeProvider, Block } from '../../../entry';
+import { ActionList, NumlProvider, ThemeProvider, El } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/ActionList',
@@ -44,19 +44,19 @@ export const WithIcons = Template.bind({});
 WithIcons.args = {
   children: [
     <ActionList.Item key="1" gap="2x">
-      <Icon name="download-outline" />
+      <El.Icon name="download-outline" />
       Import
     </ActionList.Item>,
     <ActionList.Item key="2" gap="2x">
-      <Icon name="cloud-upload-outline" />
+      <El.Icon name="cloud-upload-outline" />
       Export
     </ActionList.Item>,
     <ActionList.Item key="3" gap="2x">
-      <Icon name="duplicate-outline" />
+      <El.Icon name="duplicate-outline" />
       Duplicate
     </ActionList.Item>,
     <ActionList.Item key="4" gap="2x" disabled>
-      <Icon name="share-social-outline" />
+      <El.Icon name="share-social-outline" />
       Share
     </ActionList.Item>,
   ],
@@ -66,20 +66,20 @@ export const WithHelperText = Template.bind({});
 WithHelperText.args = {
   children: [
     <ActionList.Item key="1" flow="row" gap="0">
-      <Block>Blog posts</Block>
-      <Block color="#text-soft">Manage your blog articles</Block>
+      <El.Block>Blog posts</El.Block>
+      <El.Block color="#text-soft">Manage your blog articles</El.Block>
     </ActionList.Item>,
     <ActionList.Item key="2" flow="row" gap="0">
-      <Block>Blog posts</Block>
-      <Block color="#text-soft">Manage your blog articles</Block>
+      <El.Block>Blog posts</El.Block>
+      <El.Block color="#text-soft">Manage your blog articles</El.Block>
     </ActionList.Item>,
     <ActionList.Item key="3" flow="row" gap="0">
-      <Block>Blog posts</Block>
-      <Block color="#text-soft">Manage your blog articles</Block>
+      <El.Block>Blog posts</El.Block>
+      <El.Block color="#text-soft">Manage your blog articles</El.Block>
     </ActionList.Item>,
     <ActionList.Item key="4" flow="row" gap="0" disabled>
-      <Block>Blog posts</Block>
-      <Block color="#text-soft">Manage blogs published to your Online Store</Block>
+      <El.Block>Blog posts</El.Block>
+      <El.Block color="#text-soft">Manage blogs published to your Online Store</El.Block>
     </ActionList.Item>,
   ],
 };

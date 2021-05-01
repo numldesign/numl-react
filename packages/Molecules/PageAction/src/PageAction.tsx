@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../../../Atoms/Button';
+import { El } from '../../../entry';
 import { TPageActionProps } from './PageAction.type';
 
 function PageAction(allProps: TPageActionProps) {
@@ -7,24 +7,24 @@ function PageAction(allProps: TPageActionProps) {
   const flowContent = !!secondaryActions ? 'space-between' : 'flex-end';
 
   return (
-    <nu-pane content={flowContent} {...otherProps}>
+    <El.Pane content={flowContent} {...otherProps}>
       {!!secondaryActions ? (
-        <nu-pane>
+        <El.Pane>
           {secondaryActions.map((action: any) => {
             return (
-              <Button key={action.content} theme={action.destructive ? 'danger' : undefined} {...action}>
+              <El.Button key={action.content} theme={action.destructive ? 'danger' : undefined} {...action}>
                 {action.content}
-              </Button>
+              </El.Button>
             );
           })}
-        </nu-pane>
+        </El.Pane>
       ) : null}
       {!!primaryAction ? (
-        <Button special {...primaryAction}>
+        <El.Button special {...primaryAction}>
           {primaryAction.content}
-        </Button>
+        </El.Button>
       ) : null}
-    </nu-pane>
+    </El.Pane>
   );
 }
 
