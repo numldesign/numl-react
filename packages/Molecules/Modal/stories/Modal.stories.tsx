@@ -85,12 +85,17 @@ WithoutHeader.args = {
       leaving Instagram.
     </El.Block>
   ),
-  footerContent: [
-    <El.Button key="1">Close</El.Button>,
-    <El.Button key="2" special>
-      Primary
-    </El.Button>,
-  ],
+  footerContent: {
+    primary: {
+      text: 'Save',
+      onTap: function () {
+        console.log('Primary Button is tapped');
+      },
+    },
+    secondary: {
+      text: 'Close',
+    },
+  },
 };
 
 const Template2 = ({ ...args }) => (
