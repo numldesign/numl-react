@@ -1,11 +1,16 @@
 import React from 'react';
 
-export default function Root(props: any) {
-  let { children, onInit, padding = '', ...otherProps } = props;
+const Root = React.forwardRef((props: any, ref) => {
+  let { children, ...otherProps } = props;
 
-  return (
-    <nu-root padding={padding} {...otherProps}>
-      {children}
-    </nu-root>
+  return React.createElement(
+    'nu-root',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
   );
-}
+});
+
+export default Root;

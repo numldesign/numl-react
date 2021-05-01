@@ -1,28 +1,27 @@
 import * as React from 'react';
 import { El, Molecules } from '../../../entry';
 import { isRefernceNull } from '../../../Utilities';
+import Modal from '../src/Modal';
 
 export default {
   title: 'Example/Molecules/Modal',
-  component: El.Button,
+  component: Modal,
 };
 
 const Template = function ({ ...args }) {
-  const input: any = React.useRef();
-  const [show, setShow] = React.useState('n');
-  console.log('reinitializes', Molecules);
+  const input = React.useRef();
+  const [show, setShow] = React.useState('no');
+  const toggleShow = () => {
+    setShow(show == 'yes' ? 'no' : 'yes');
+  };
+  let storycount = 0;
+  React.useEffect(() => {
+    console.log('storycount => ' + storycount++);
+  });
 
   const hideModal = () => {
     console.log('Button is clicked', show);
-    if (isRefernceNull(input)) {
-      if (show == 'y') {
-        console.log('Show == yes');
-        setShow('n');
-      } else {
-        console.log('Show == no');
-        setShow('y');
-      }
-    }
+    toggleShow();
   };
 
   return (
@@ -30,8 +29,7 @@ const Template = function ({ ...args }) {
       {show == 'y' ? 'YES SHOW' : 'NO Show'}
       <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
       <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-      {/* <Modal {...args} ref={input} onCloseAction={hideModal} show={show} /> */}
-
+      <Modal {...args} ref={input} onCloseAction={hideModal} show={show} />
       <El.Button onTap={hideModal}>Click Me</El.Button>
     </El.NumlProvider>
   );

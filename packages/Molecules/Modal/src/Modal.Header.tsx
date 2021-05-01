@@ -3,7 +3,7 @@ import { El } from '../../../entry';
 /***
  * Modal Header
  */
-const ModalHeaderFactory = React.forwardRef((props, ref) => {
+const ModalHeader = function (props: any) {
   const {
     padding = '2x',
     items = 'start',
@@ -16,16 +16,7 @@ const ModalHeaderFactory = React.forwardRef((props, ref) => {
     ...otherProps
   }: any = props;
   return (
-    <El.Pane
-      ref={ref}
-      block
-      items={items}
-      content={content}
-      border={border}
-      padding={padding}
-      gap={gap}
-      {...otherProps}
-    >
+    <El.Pane block items={items} content={content} border={border} padding={padding} gap={gap} {...otherProps}>
       {typeof heading === 'string' ? <El.Base size="md">{heading}</El.Base> : heading}
       {onCloseAction ? (
         <El.Button cursor="pointer" border="0" onTap={onCloseAction}>
@@ -34,9 +25,6 @@ const ModalHeaderFactory = React.forwardRef((props, ref) => {
       ) : null}
     </El.Pane>
   );
-});
-ModalHeaderFactory.displayName = 'ModalHeader';
-
-const ModalHeader = React.memo(ModalHeaderFactory);
-
+};
+ModalHeader.displayName = 'ModalHeader';
 export default ModalHeader;

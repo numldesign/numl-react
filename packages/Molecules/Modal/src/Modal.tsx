@@ -4,7 +4,7 @@ import ModalBody from './Modal.Body';
 import ModalFooter from './Modal.Footer';
 import ModalHeader from './Modal.Header';
 
-const ModalFactory: any = React.forwardRef((props, ref: any) => {
+const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
   const {
     heading,
     onCloseAction,
@@ -20,6 +20,11 @@ const ModalFactory: any = React.forwardRef((props, ref: any) => {
     ...otherProps
   }: any = props;
 
+  let modalcount = 0;
+  React.useEffect(() => {
+    console.log('modalcount => ' + modalcount++, 'show => ' + show);
+  });
+
   return (
     <El.Block
       ref={ref}
@@ -32,26 +37,20 @@ const ModalFactory: any = React.forwardRef((props, ref: any) => {
       show={show}
       {...otherProps}
     >
-      {heading && <ModalFactory.Header flex heading={heading} onCloseAction={onCloseAction}></ModalFactory.Header>}
+      {heading && <ModalHeader flex heading={heading} onCloseAction={onCloseAction}></ModalHeader>}
 
-      {body ? <ModalFactory.Body> {body} </ModalFactory.Body> : { ...children }}
+      {body ? <ModalBody> {body} </ModalBody> : { ...children }}
 
-      {footerActions && <ModalFactory.Footer> {footerActions} </ModalFactory.Footer>}
+      {footerActions && <ModalFooter> {footerActions} </ModalFooter>}
     </El.Block>
   );
 });
-ModalFactory.displayName = 'Modal';
+ModalForwardRef.displayName = 'Modal';
 
-const Modal: any = React.memo(ModalFactory);
+// ModalForwardRef.Header = ModalHeader
+// ModalFactory.Body = ModalBody;
+// ModalFactory.Footer = ModalFooter;
+
+const Modal = React.memo(ModalForwardRef);
 Modal.displayName = 'Modal';
-
-Modal.Header = ModalHeader;
-Modal.Header.displayName = 'ModalHeader';
-
-Modal.Body = ModalBody;
-Modal.Body.displayName = 'ModalBody';
-
-Modal.Footer = ModalFooter;
-Modal.Footer.displayName = 'ModalFooter';
-
 export default Modal;

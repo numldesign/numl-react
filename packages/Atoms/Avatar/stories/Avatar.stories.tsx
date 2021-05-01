@@ -1,5 +1,5 @@
 import React from 'react';
-import { Atoms, El } from '../../../entry';
+import { Atoms, El, Avatar } from '../../../entry';
 
 export default {
   title: 'Example/Atoms/Avatar',
@@ -20,7 +20,7 @@ const Template = ({ ...args }) => {
     <El.NumlProvider>
       <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
       <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-      <Atoms.Avatar.Icon {...args}></Atoms.Avatar.Icon>
+      <Avatar.Icon {...args}></Avatar.Icon>
     </El.NumlProvider>
   );
 };
@@ -30,11 +30,11 @@ Basic.args = {};
 
 const Profile = ({ ...args }) => {
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
       <Avatar {...args}></Avatar>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 export const AvatarProfile = Profile.bind({});

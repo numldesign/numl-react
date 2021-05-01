@@ -5,16 +5,15 @@ import { El } from '../../../entry';
  * @param props
  * @returns
  */
-const ModalFooterFactory = React.forwardRef((props: any, ref) => {
+const ModalFooter = (props: any) => {
   const { content = 'flex-end', gap = '1x', padding = '2x', children, ...otherProps } = props;
   return (
-    <El.Pane ref={ref} block content={content} gap={gap} padding={padding} {...otherProps}>
+    <El.Pane block content={content} gap={gap} padding={padding} {...otherProps}>
       {children}
     </El.Pane>
   );
-});
+};
 
-ModalFooterFactory.displayName = 'ModalFooter';
-const ModalFooter = React.memo(ModalFooterFactory);
+ModalFooter.displayName = 'ModalFooter';
 
 export default ModalFooter;
