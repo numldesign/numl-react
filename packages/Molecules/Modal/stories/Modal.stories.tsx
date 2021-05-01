@@ -30,9 +30,6 @@ const Template = function ({ ...args }) {
 export const Default = Template.bind({});
 Default.args = {
   heading: 'Reach more shoppers with Instagram product tags',
-  onCloseAction: function () {
-    console.log('onCloseAction triggered');
-  },
   body: (
     <El.Block size="md" color="#text-soft">
       This will reset your device to its default factor settings
@@ -47,9 +44,6 @@ Default.args = {
     },
     secondary: {
       text: 'Close',
-      onTap: function () {
-        console.log('Secondary Button is tapped');
-      },
     },
   },
 };
@@ -57,9 +51,6 @@ Default.args = {
 export const CustomFooter = Template.bind({});
 CustomFooter.args = {
   heading: 'Reach more shoppers with Instagram product tags',
-  onCloseAction: function () {
-    console.log('onCloseAction triggered');
-  },
   body: (
     <El.Block size="md" color="#text-soft">
       This will reset your device to its default factor settings

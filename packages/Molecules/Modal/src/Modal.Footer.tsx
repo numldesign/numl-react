@@ -7,13 +7,23 @@ import { isPlainObject } from '../../../Utilities';
  * @returns
  */
 const ModalFooter = (props: any) => {
-  const { content = 'flex-end', gap = '1x', padding = '2x', footerActions, children, ...otherProps } = props;
+  const {
+    content = 'flex-end',
+    gap = '1x',
+    onCloseAction,
+    padding = '2x',
+    footerActions,
+    children,
+    ...otherProps
+  } = props;
 
   return (
     <El.Pane block content={content} gap={gap} padding={padding} {...otherProps}>
       {isPlainObject(footerActions) ? (
         <>
-          <SecondaryAction {...footerActions.secondary}>{footerActions.secondary.text}</SecondaryAction>
+          <SecondaryAction {...footerActions.secondary} onCloseAction={onCloseAction}>
+            {footerActions.secondary.text}
+          </SecondaryAction>
           <PrimaryAction {...footerActions.primary}>{footerActions.primary.text}</PrimaryAction>
         </>
       ) : (
@@ -30,9 +40,9 @@ ModalFooter.displayName = 'ModalFooter';
  * @returns
  */
 const SecondaryAction = (props: any) => {
-  const { children, theme = 'default', ...otherProps } = props;
+  const { children, onCloseAction, onTap, theme = 'default', ...otherProps } = props;
   return (
-    <El.Button key="secondary" theme={theme} {...otherProps}>
+    <El.Button key="secondary" onTap={onTap || onCloseAction} theme={theme} {...otherProps}>
       {children || 'Close'}
     </El.Button>
   );

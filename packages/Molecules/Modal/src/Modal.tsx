@@ -40,7 +40,7 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
 
       {body ? <ModalBody> {body} </ModalBody> : { ...children }}
 
-      {footerActions && <ModalFooter footerActions={footerActions}></ModalFooter>}
+      {footerActions && <ModalFooter footerActions={footerActions} onCloseAction={onCloseAction}></ModalFooter>}
     </El.Block>
   );
 });
