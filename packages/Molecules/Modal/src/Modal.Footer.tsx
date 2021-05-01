@@ -7,11 +7,11 @@ import ModalContext from './ModalContext';
  * @param props
  * @returns
  */
-const ModalFooter = (props: any) => {
+const ModalFooterForwardRef = React.forwardRef((props: any, ref) => {
   const { content = 'flex-end', gap = '1x', padding = '2x', footerContent, children, ...otherProps } = props;
   return (
-    <El.Pane block content={content} gap={gap} padding={padding} {...otherProps}>
-      {isPlainObject(footerContent) ? (
+    <El.Pane block ref={ref} content={content} gap={gap} padding={padding} {...otherProps}>
+      {isPlainObject(footerContent) && (footerContent.secondary || footerContent.primary) ? (
         <>
           <SecondaryAction {...footerContent.secondary}>{footerContent.secondary.text}</SecondaryAction>
           <PrimaryAction {...footerContent.primary}>{footerContent.primary.text}</PrimaryAction>
@@ -21,8 +21,8 @@ const ModalFooter = (props: any) => {
       )}
     </El.Pane>
   );
-};
-ModalFooter.displayName = 'ModalFooter';
+});
+ModalFooterForwardRef.displayName = 'ModalFooter';
 
 /**
  * Default Secondary Button for Modal
@@ -55,5 +55,12 @@ const PrimaryAction = (props: any) => {
   );
 };
 PrimaryAction.displayName = 'PrimaryAction';
+
+/**
+ * ModalFooter memo is exported to outer library,
+ * Due to performance optimization
+ */
+const ModalFooter = React.memo(ModalFooterForwardRef);
+ModalFooter.displayName = 'ModalFooter';
 
 export default ModalFooter;

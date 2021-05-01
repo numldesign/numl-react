@@ -5,12 +5,12 @@ import ModalContext from './ModalContext';
 /***
  * Modal Header
  */
-const ModalHeader = function (props: any) {
+const ModalHeaderForwardRef = React.forwardRef((props: any, ref) => {
   const { onCloseAction } = React.useContext(ModalContext);
 
   const {
-    padding = '2x',
-    items = 'start',
+    padding = '1x 2x',
+    items = 'center',
     content = 'space-between',
     border = 'bottom',
     gap = '1',
@@ -19,8 +19,23 @@ const ModalHeader = function (props: any) {
     ...otherProps
   }: any = props;
   return (
-    <El.Pane block items={items} content={content} border={border} padding={padding} gap={gap} {...otherProps}>
-      {typeof heading === 'string' ? <El.Base size="md">{heading}</El.Base> : heading}
+    <El.Pane
+      block
+      ref={ref}
+      items={items}
+      content={content}
+      border={border}
+      padding={padding}
+      gap={gap}
+      {...otherProps}
+    >
+      {typeof heading === 'string' ? (
+        <El.Block size="md" text="middle">
+          {heading}
+        </El.Block>
+      ) : (
+        heading
+      )}
       {onCloseAction ? (
         <El.Button cursor="pointer" border="0" onTap={onCloseAction}>
           <El.Icon size="md" name="close-outline"></El.Icon>
@@ -28,6 +43,14 @@ const ModalHeader = function (props: any) {
       ) : null}
     </El.Pane>
   );
-};
+});
+ModalHeaderForwardRef.displayName = 'ModalHeader';
+
+/**
+ * ModalHeader memo is exported to outer library,
+ * Due to performance optimization
+ */
+const ModalHeader = React.memo(ModalHeaderForwardRef);
 ModalHeader.displayName = 'ModalHeader';
+
 export default ModalHeader;
