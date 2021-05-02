@@ -2,6 +2,7 @@
   "lerna": "2.0.0",
   "packages": [
     "./",
+    "./*",
     "./documentation/*",
     "./packages/*",
     "./packages/Atoms/*",
