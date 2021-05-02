@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/image",
-  "version": "0.0.14-1",
+  "version": "0.0.14",
   "description": "Image Tag for Numl React by Numl Design.",
   "keywords": [
     "component",
@@ -15,6 +15,9 @@
   "author": "Numl.Design Team",
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
+  "scripts": {
+    "build": "vite build"
+  },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
   "exports": {

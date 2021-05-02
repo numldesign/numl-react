@@ -7,14 +7,15 @@
 // })
 
 // vite.config.js
+
 const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/Icon/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Icon',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },
