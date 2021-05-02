@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Elements/ThemeProvider/dist',
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'ThemeProvider',

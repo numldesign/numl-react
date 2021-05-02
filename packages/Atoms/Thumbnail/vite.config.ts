@@ -11,7 +11,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/Thumbnail/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Thumbnail',

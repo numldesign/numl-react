@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Elements/DropdownIcon/dist',
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'DropdownIcon',

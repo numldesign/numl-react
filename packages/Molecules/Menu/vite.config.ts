@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/Menu/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Menu',

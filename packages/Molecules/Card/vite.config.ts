@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/Card/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Card',

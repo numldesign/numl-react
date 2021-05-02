@@ -3,7 +3,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/ExceptionList/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'ExceptionList',

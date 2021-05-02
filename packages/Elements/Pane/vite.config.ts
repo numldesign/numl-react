@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Elements/Pane/dist',
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'Pane',
