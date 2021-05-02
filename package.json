@@ -11,7 +11,7 @@
     "typedoc": "npx typedoc --out docs packages/entry.ts",
     "build": "npx lerna exec -- npm run build",
     "test": "jest",
-    "release": "npx lerna publish",
+    "release": "npx lerna exec -- npm run build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
