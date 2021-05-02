@@ -25,6 +25,7 @@
     "dist"
   ],
   "workspaces": [
+    "./*",
     "packages/*",
     "packages/Atoms/*",
     "packages/Molecules/*",
