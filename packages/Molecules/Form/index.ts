@@ -1,2 +1,2 @@
 export * from './src/Form';
-export { default as Form } from './src/Form';
+export { Form, FormCheck, FormField, FormInput, FormLabel, FormSubmit } from './src/Form';
