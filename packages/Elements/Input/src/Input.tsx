@@ -1,15 +1,41 @@
 import React from 'react';
 
-function Input(props: any) {
+const Input = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-input {...otherProps}>{children}</nu-input>;
-}
 
-Input.Number = function (props: any) {
-  return <nu-numinput {...props}></nu-numinput>;
-};
-Input.Value = function (props: any) {
-  return <nu-value {...props}></nu-value>;
-};
+  return React.createElement(
+    'nu-input',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
 
-export default Input;
+const NumberInput = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
+
+  return React.createElement(
+    'nu-numinput',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+const InputValue = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
+
+  return React.createElement(
+    'nu-value',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export { Input, NumberInput, InputValue };

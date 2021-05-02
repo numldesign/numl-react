@@ -1,12 +1,13 @@
 import * as React from 'react';
-import * as Object from '../../../Utilities';
+import { isRefernceNull } from '../../../Utilities/index';
+
 const Button = React.forwardRef((props: any, ref: any) => {
   const { children, onTap, ...otherProps } = props;
   const [refer] = React.useState(ref || React.useRef());
 
   React.useEffect(
     function () {
-      if (Object.isRefernceNull(refer)) {
+      if (isRefernceNull(refer)) {
         /** Bind tap event to react element */
         onTap && refer.current.addEventListener('tap', onTap);
 

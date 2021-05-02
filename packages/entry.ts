@@ -1,19 +1,13 @@
 /** Export all declared Atoms */
 export * from './Atoms';
-
+export * as Atoms from './Atoms';
+/** Export all declared Elements */
+export * as El from './Elements';
 /** Application Configuration Numl Tags */
-export { NumlProvider } from './Elements/NumlProvider/';
 export { AttributeProvider } from './Elements/AttributeProvider';
+export { NumlProvider } from './Elements/NumlProvider/';
 export { PropsProvider } from './Elements/PropsProvider';
 export { ThemeProvider } from './Elements/ThemeProvider';
-
 /** Exporting all declared molecules */
 export * from './Molecules';
-
-/** Exporting all Atoms, Molucules and Elements,
- * So that user will have flexibility to access all
- * Atoms, Molecules and
- */
-export * as El from './Elements';
-export * as Atoms from './Atoms';
 export * as Molecules from './Molecules';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Form } from '../../../entry';
+import { Form, NumlProvider, ThemeProvider } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Form',
@@ -10,7 +10,6 @@ const Template = ({ ...args }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75"></ThemeProvider>
     <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-
     <Form {...args}>
       <Form.Field name="name">
         <Form.Label>Name</Form.Label>

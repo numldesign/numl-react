@@ -1,6 +1,18 @@
 import React from 'react';
 
-export default function Flow(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-flow {...otherProps}>{children}</nu-flow>;
-}
+const Flow = React.forwardRef((props: any, ref: any) => {
+  const { children, onTap, ...otherProps } = props;
+  const [refer] = React.useState(ref || React.useRef());
+
+  return React.createElement(
+    'nu-flow',
+    {
+      ...otherProps,
+      ref: refer,
+    },
+    [children]
+  );
+});
+Flow.displayName = 'El.Flow';
+
+export default Flow;

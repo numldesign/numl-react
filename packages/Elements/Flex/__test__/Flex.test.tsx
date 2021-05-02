@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ButtonGroup } from '../index';
+import { Flex } from '../index';
 
+/** Flex element test */
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ButtonGroup />, div);
+  ReactDOM.render(<Flex />, div);
 });
 
 it('Renders without crashing with children', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ButtonGroup clear> Hello World!</ButtonGroup>, div);
+  ReactDOM.render(<Flex> Hello World!</Flex>, div);
 });

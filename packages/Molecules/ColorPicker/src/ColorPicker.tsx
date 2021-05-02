@@ -209,12 +209,12 @@ function ColorCode(props: any) {
         </El.Button>
         <nu-buttongroup column="2" height="2.25rem" value="rgb">
           <El.Grid columns="auto auto auto" items="center" content="stretch">
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
           </El.Grid>
         </nu-buttongroup>
-        <El.Input.Number precision="0" min="0" max="100" value="0" label="Percents input"></El.Input.Number>
+        <El.NumberInput precision="0" min="0" max="100" value="0" label="Percents input"></El.NumberInput>
       </El.Grid>
     </El.Block>
   );

@@ -1,26 +1,18 @@
 import React from 'react';
 
-function Grid(props: any) {
-  const { children, ...otherProps } = props;
-  return <nu-grid {...otherProps}>{children}</nu-grid>;
-}
+const Grid = React.forwardRef((props: any, ref: any) => {
+  const { children, onTap, ...otherProps } = props;
+  const [refer] = React.useState(ref || React.useRef());
 
-Grid.Row = function (props: any) {
-  const { row, children, ...otherProps } = props;
-  return (
-    <nu-el row={row} {...otherProps}>
-      {children}
-    </nu-el>
+  return React.createElement(
+    'nu-grid',
+    {
+      ...otherProps,
+      ref: refer,
+    },
+    [children]
   );
-};
-
-Grid.Column = function (props: any) {
-  const { column, children, ...otherProps } = props;
-  return (
-    <nu-el column={column} {...otherProps}>
-      {children}
-    </nu-el>
-  );
-};
+});
+Grid.displayName = 'El.Grid';
 
 export default Grid;

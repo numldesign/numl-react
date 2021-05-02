@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ButtonGroup } from '../index';
+import { Grid } from '../index';
 
+/** Grid element test */
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ButtonGroup />, div);
+  ReactDOM.render(<Grid />, div);
 });
 
 it('Renders without crashing with children', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ButtonGroup clear> Hello World!</ButtonGroup>, div);
+  ReactDOM.render(<Grid> Hello World!</Grid>, div);
 });
