@@ -18,7 +18,7 @@
     "@numl-react/badge": "^0.1.0",
     "@numl-react/block": "^0.1.0",
     "@numl-react/button": "^0.1.0",
-    "@numl-react/core": "0.1.0",
+    "@numl-react/core": "^0.1.0",
     "@numl-react/grid": "^0.1.0",
     "@numl-react/heading": "^0.1.0",
     "@numl-react/icon": "^0.1.0",
@@ -39,5 +39,6 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.24.0"
-  }
+  },
+  "gitHead": "f38fd6194db962a2ff9c20b118c54ead986fe82e"
 }
