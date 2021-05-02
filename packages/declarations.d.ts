@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export declare global {
   interface Window {
     Nude: any;
@@ -65,6 +63,8 @@ export declare global {
       'nu-h4': any;
       'nu-h5': any;
       'nu-h6': any;
+      'nu-search': any;
+      'nu-slider2d': any;
       'nu-popuplistbox': any;
       'nu-heading': any;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { El } from '../../../entry';
-
+// @ts-ignore
 function ColorPicker() {
   return (
     <El.Card block width="22rem">
@@ -83,33 +83,33 @@ class ColorSelector extends React.Component {
     this.ctx2.fillStyle = grd1;
     this.ctx2.fill();
   }
-  click(e) {
+  click = (e: any) => {
     console.log('click');
     this.x = e.offsetX;
     this.y = e.offsetY;
     var imageData = this.ctx2.getImageData(this.x, this.y, 1, 1).data;
     this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
     this.fillGradient();
-  }
-  mousedown(e) {
+  };
+  mousedown = (e: any) => {
     console.log('mousedown');
     this.drag = true;
     this.changeColor(e);
-  }
+  };
 
-  mousemove(e) {
+  mousemove = (e: any) => {
     console.log('mousemove');
     if (this.drag) {
       this.changeColor(e);
     }
-  }
+  };
 
-  mouseup(e) {
+  mouseup = () => {
     console.log(this.rgbaColor);
     this.drag = false;
-  }
+  };
 
-  changeColor(e) {
+  changeColor(e: any) {
     console.log(this.rgbaColor);
     this.x = e.offsetX;
     this.y = e.offsetY;
@@ -145,13 +145,14 @@ class ColorSelector extends React.Component {
   }
 
   render() {
+    let state: any = this.state;
     return (
       <El.Grid
-        columns={this.state.columns}
-        padding={this.state.padding}
-        items={this.state.items}
-        gap={this.state.gap}
-        content={this.state.content}
+        columns={state.columns}
+        padding={state.padding}
+        items={state.items}
+        gap={state.gap}
+        content={state.content}
       >
         <nu-slider2d
           column="1"
