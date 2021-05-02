@@ -7,7 +7,7 @@
     "dev": "vite",
     "clean": "npm-run-all clean:*",
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
-    "install:all": "npx lerna exec -- npm install",
+    "install:all": "npx lerna exec -- npm ci",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
     "build": "npx lerna exec -- npm run build",
     "test": "jest",
