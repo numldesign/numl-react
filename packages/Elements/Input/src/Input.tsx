@@ -1,5 +1,7 @@
 import React from 'react';
-
+/**
+ * Form Input Field
+ */
 const Input = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
@@ -13,6 +15,9 @@ const Input = React.forwardRef((props: any, ref) => {
   );
 });
 
+/**
+ * Form Number Input field
+ */
 const NumberInput = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
@@ -25,6 +30,9 @@ const NumberInput = React.forwardRef((props: any, ref) => {
     [children]
   );
 });
+/**
+ * Form Input Value
+ */
 const InputValue = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
