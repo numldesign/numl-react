@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+=======
+
+> > > > > > > 6bae6b71e3e86473de398e3d21ea36f9b2963de2
+
 # @numl-react/filters
 
 ## 0.1.0
