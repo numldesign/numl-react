@@ -8,6 +8,6 @@
     "./packages/Molecules/*",
     "./packages/Elements/*"
   ],
-  "useWorkspaces" : true,
-  "version": "0.0.14-1"
+  "useWorkspaces": true,
+  "version": "0.0.14"
 }
