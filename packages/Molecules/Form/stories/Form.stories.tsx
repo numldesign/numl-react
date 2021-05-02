@@ -21,7 +21,6 @@ const Template = function (props: any) {
       <ThemeProvider hue="290" saturation="75"></ThemeProvider>
       <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
       <Form {...props}>
-        Hello Umer
         <FormField name="name">
           <FormLabel>Name</FormLabel>
           <FormInput grow="1" placeholder="Focus"></FormInput>
