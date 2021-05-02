@@ -4,7 +4,8 @@ module.exports = {
   build: {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
-      name: 'AttributeProvider',
+      name: 'core',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

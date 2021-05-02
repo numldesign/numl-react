@@ -5,6 +5,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'Pane',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

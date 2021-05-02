@@ -5,6 +5,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Banner',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

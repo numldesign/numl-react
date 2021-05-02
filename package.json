@@ -9,10 +9,7 @@
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
     "install:all": "npx lerna exec -- npm install",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
-    "build": "npx lerna --exec npm run build && npm-run-all build:*",
-    "build:atoms": "vite build --config ./packages/Atoms/vite.config.ts",
-    "build:molecules": "vite build --config ./packages/Molecules/vite.config.ts",
-    "build:numl-react": "vite build --config ./vite.config.ts",
+    "build": "npx lerna exec -- npm run build",
     "test": "jest",
     "release": "npx lerna publish",
     "test:watch": "jest --watch",
@@ -26,6 +23,12 @@
   },
   "files": [
     "dist"
+  ],
+  "workspaces": [
+    "packages/*",
+    "packages/Atoms/*",
+    "packages/Molecules/*",
+    "packages/Elements/*"
   ],
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",

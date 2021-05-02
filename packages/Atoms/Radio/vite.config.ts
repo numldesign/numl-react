@@ -7,6 +7,7 @@
 // })
 
 // vite.config.js
+
 const path = require('path');
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Radio',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },
