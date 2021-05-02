@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/PageAction/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'PageAction',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

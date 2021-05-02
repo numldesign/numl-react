@@ -7,14 +7,15 @@
 // })
 
 // vite.config.js
+
 const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/Button/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Button',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

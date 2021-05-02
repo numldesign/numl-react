@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/AccountConnection/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'AccountConnection',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

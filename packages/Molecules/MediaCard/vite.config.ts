@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/MediaCard/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'MediaCard',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },
