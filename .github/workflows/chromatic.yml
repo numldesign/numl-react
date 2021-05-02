@@ -13,10 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v1
+      - name: Removes cache
+        run: npm cache clean -f
+
+      - name: NPM Version
+        run: npm --version
+
+      - name: NPM Version
+        run: node --version
+
       - name: Install dependencies
-        run: yarn
+      - uses: actions/checkout@v1
+        run: npm ci
         # 👇 Adds Chromatic as a step in the workflow
+
+      - name: Build NUML-REACT
+        run: npm run build
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options

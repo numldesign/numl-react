@@ -4,7 +4,7 @@ module.exports = {
   build: {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
-      name: 'ButtonGroup',
+      name: 'elements',
       fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,

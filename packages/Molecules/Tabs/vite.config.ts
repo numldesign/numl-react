@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Molecules/Tabs/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Tabs',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

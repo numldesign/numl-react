@@ -7,14 +7,15 @@
 // })
 
 // vite.config.js
+
 const path = require('path');
 
 module.exports = {
   build: {
-    outDir: './packages/Atoms/Checkbox/dist',
     lib: {
       entry: path.resolve(__dirname, './index'),
       name: 'Checkbox',
+      fileName: 'core',
       formats: ['es', 'cjs'],
       minify: false,
     },

@@ -13,6 +13,9 @@
   "author": "Numl.Design Team",
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
+  "scripts": {
+    "build": "vite build"
+  },
   "main": "./dist/core.cjs.js",
   "modules": "./dist/core.es.js",
   "files": [
