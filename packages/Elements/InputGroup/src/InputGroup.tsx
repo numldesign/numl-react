@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Image = React.forwardRef((props: any, ref) => {
+const InputGroup = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-img',
+    'nu-inputgroup',
     {
       ...otherProps,
       ref,
@@ -12,5 +12,4 @@ const Image = React.forwardRef((props: any, ref) => {
     [children]
   );
 });
-
-export default Image;
+export default InputGroup;

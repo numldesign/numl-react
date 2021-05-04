@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Image = React.forwardRef((props: any, ref) => {
+const Header = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-img',
+    'nu-header',
     {
       ...otherProps,
       ref,
@@ -13,4 +13,4 @@ const Image = React.forwardRef((props: any, ref) => {
   );
 });
 
-export default Image;
+export default Header;

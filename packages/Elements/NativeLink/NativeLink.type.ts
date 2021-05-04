@@ -1,7 +1,0 @@
-import { BaseProps } from './../../numl';
-
-export interface TNativeLinkProps extends BaseProps {
-  to?: any;
-  label?: any;
-  children?: any;
-}
