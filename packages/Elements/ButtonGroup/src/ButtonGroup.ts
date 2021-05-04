@@ -1,5 +1,16 @@
 import React from 'react';
 
-const ButtonGroup = (props: any) => React.createElement('nu-btngroup', [props], [props['children']]);
+const ButtonGroup = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
+
+  return React.createElement(
+    'nu-btngroup',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
 
 export default ButtonGroup;

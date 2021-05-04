@@ -1,26 +1,16 @@
 import React from 'react';
 
-function Grid(props: any) {
+const Grid = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-grid {...otherProps}>{children}</nu-grid>;
-}
 
-Grid.Row = function (props: any) {
-  const { row, children, ...otherProps } = props;
-  return (
-    <nu-el row={row} {...otherProps}>
-      {children}
-    </nu-el>
+  return React.createElement(
+    'nu-grid',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
   );
-};
-
-Grid.Column = function (props: any) {
-  const { column, children, ...otherProps } = props;
-  return (
-    <nu-el column={column} {...otherProps}>
-      {children}
-    </nu-el>
-  );
-};
+});
 
 export default Grid;

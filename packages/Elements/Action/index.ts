@@ -1,2 +1,2 @@
-export * from './Action';
-export { default as ActionElement } from './Action';
+export * from './src/Action';
+export { default as Action } from './src/Action';

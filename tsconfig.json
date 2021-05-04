@@ -78,7 +78,7 @@
     "**/**/__tests__/*.test.tsx"
   ],
   "include": [
-    "packages/declarations.d.ts",
+    "packages/Elements/declarations.d.ts",
     "packages/global.d.ts",
     "packages/*",
     "**/**/.ts",

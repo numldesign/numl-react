@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function AttributeProvider(props: any) {
-  const { ...otherProps } = props;
-  return <nu-attrs {...otherProps}></nu-attrs>;
-}
+const AttributeProvider = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
+
+  return React.createElement('nu-attrs', {
+    ...otherProps,
+    ref,
+  });
+});
+
+export default AttributeProvider;

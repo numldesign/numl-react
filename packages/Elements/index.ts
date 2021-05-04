@@ -6,7 +6,7 @@ export { ThemeProvider } from './ThemeProvider';
 
 /** UI Elements */
 export { Heading } from './Heading/';
-export { ActionElement } from './Action';
+export { Action } from './Action';
 export { Base } from './Base';
 export { Block } from './Block';
 export { DropdownIcon } from './DropdownIcon';
