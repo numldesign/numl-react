@@ -1,57 +1,86 @@
-import React, { useEffect, useRef } from 'react';
+import * as React from 'react';
 import { El } from '../../../entry';
 
-function Form(props: any) {
+/**
+ * Form Component for Numl React
+ */
+const Form = React.forwardRef((props: any, ref) => {
   const { gap, children, ...otherProps } = props;
 
   return (
-    <nu-form gap={gap} {...otherProps}>
+    <El.Form ref={ref} gap={gap} {...otherProps}>
       {children}
-    </nu-form>
+    </El.Form>
   );
-}
+});
+Form.displayName = 'Molecules.Form';
 
-Form.Label = function FormLabel(allProps: any) {
+/**
+ * Form label
+ */
+const FormLabel = React.forwardRef((allProps: any, ref) => {
   let { children, name, ...otherProps } = allProps;
   return (
-    <nu-label for={name} {...otherProps}>
+    <El.Label ref={ref} for={name} {...otherProps}>
       {children}
-    </nu-label>
+    </El.Label>
   );
-};
-Form.Field = function FormField(allProps: any) {
-  let { label, name, assert, message, children, ...otherProps } = allProps;
+});
+FormLabel.displayName = 'Molecules.FormLabel';
 
-  return <nu-field {...otherProps}>{children}</nu-field>;
-};
-Form.Input = function FormInput(props: any) {
+/**
+ * Form Field
+ */
+const FormField = React.forwardRef((allProps: any, ref) => {
+  let { children, ...otherProps } = allProps;
+
+  return (
+    <El.Field ref={ref} {...otherProps}>
+      {children}
+    </El.Field>
+  );
+});
+
+/**
+ * Form Input
+ */
+const FormInput = React.forwardRef((props: any, ref) => {
   let { name, ...otherProps } = props;
-  return <El.Input id={name} {...otherProps}></El.Input>;
-};
+  return <El.Input ref={ref} id={name} {...otherProps}></El.Input>;
+});
+FormInput.displayName = 'Molecules.FormInput';
 
-Form.Check = function FormCheck(allProps: any) {
+/**
+ * Form Check
+ */
+const FormCheck = React.forwardRef((allProps: any, ref: any) => {
   var { message, name, assertFunction } = allProps;
-  var ref: any = useRef(null);
 
-  useEffect(() => {
-    ref.current.assert = assertFunction;
-    return;
+  React.useEffect(() => {
+    if (ref && ref.current && ref.current != undefined) {
+      ref.current.assert = assertFunction;
+    }
   }, []);
 
   return (
-    <nu-check for={name} ref={ref} color="hue(1)">
+    <El.Check for={name} ref={ref}>
       {message}
-    </nu-check>
+    </El.Check>
   );
-};
+});
+FormCheck.displayName = 'Molecules.FormCheck';
 
-Form.Submit = function FormSubmit(allProps: any) {
+/**
+ * Form Submit
+ */
+const FormSubmit = React.forwardRef((allProps: any, ref) => {
   const { children, ...otherProps } = allProps;
   return (
-    <El.Button type="submit" {...otherProps}>
+    <El.Button ref={ref} type="submit" {...otherProps}>
       {children}
     </El.Button>
   );
-};
+});
+FormSubmit.displayName = 'Molecules.FormSubmit';
 
-export default Form;
+export { Form, FormCheck, FormField, FormInput, FormLabel, FormSubmit };

@@ -1,17 +1,17 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.14-1",
+  "version": "0.1.0",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "prettier": "prettier --write ./packages",
     "dev": "vite",
     "clean": "npm-run-all clean:*",
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
-    "install:all": "npx lerna exec -- npm ci",
+    "install:all": "npx lerna exec -- npm install",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
-    "build": "npx lerna exec -- npm run build",
+    "build": "npx lerna exec -- npm run build && npx tsc",
     "test": "jest",
-    "release": "npx lerna exec -- npm run build && changeset publish",
+    "release": "npm run build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
@@ -25,6 +25,7 @@
     "dist"
   ],
   "workspaces": [
+    "./*",
     "packages/*",
     "packages/Atoms/*",
     "packages/Molecules/*",

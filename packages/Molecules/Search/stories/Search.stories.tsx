@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Link, El } from '../../../entry';
+import { El, Link, Search } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/Search',
@@ -50,7 +50,7 @@ Default.args = {
   },
   extraActions: (
     <El.Pane width="4x">
-      <Link to="https://numl.design" icon={<Icon name="exit-outline" />} />
+      <Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
     </El.Pane>
   ),
   value: 'acb',

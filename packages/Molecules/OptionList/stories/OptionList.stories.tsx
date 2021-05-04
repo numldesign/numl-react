@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, El, Thumbnail, OptionList } from '../../../entry';
+import { Badge, El, OptionList, Thumbnail } from '../../../entry';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -225,7 +225,7 @@ OptionListWithTableAndInput.args = {
                 <El.Button key="1">Add</El.Button>
                 <El.Button key="2">Set</El.Button>
               </El.ButtonGroup>
-              <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+              <El.NumberInput placeholder="Enter Amount" width="min 6x" />
             </El.Pane>
             <El.Button key="2" width="100%">
               Button
@@ -253,7 +253,7 @@ OptionListWithTableAndInput.args = {
             <El.Button key="1">Add</El.Button>
             <El.Button key="2">Set</El.Button>
           </El.ButtonGroup>
-          <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+          <El.NumberInput placeholder="Enter Amount" width="min 6x" />
         </El.Pane>,
         <El.Button key="2" width="100%">
           Button
@@ -277,7 +277,7 @@ OptionListWithTableAndInput.args = {
             <El.Button key="1">Add</El.Button>
             <El.Button key="2">Set</El.Button>
           </El.ButtonGroup>
-          <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+          <El.NumberInput placeholder="Enter Amount" width="min 6x" />
         </El.Pane>,
         <El.Button key="2" width="100%">
           Button
@@ -332,7 +332,7 @@ OptionListWithCardDesign.args = {
                 <El.Button key="1">Add</El.Button>
                 <El.Button key="2">Set</El.Button>
               </El.ButtonGroup>
-              <El.Input.Number placeholder="Enter Amount" width="min 6x" />
+              <El.NumberInput placeholder="Enter Amount" width="min 6x" />
             </El.Pane>
             <El.Button key="2" width="100%">
               Button

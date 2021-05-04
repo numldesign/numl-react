@@ -1,7 +1,6 @@
 {
   "lerna": "2.0.0",
   "packages": [
-    "./",
     "./*",
     "./documentation/*",
     "./packages/*",
@@ -10,5 +9,5 @@
     "./packages/Elements/*"
   ],
   "useWorkspaces": true,
-  "version": "0.0.14"
+  "version": "0.1.0"
 }
