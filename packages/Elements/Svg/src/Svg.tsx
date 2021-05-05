@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Svg(props: any) {
+const Svg = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-svg {...otherProps}>{children}</nu-svg>;
-}
+
+  return React.createElement(
+    'nu-svg',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default Svg;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Search = React.forwardRef((props: any, ref) => {
+const Spacer = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-search',
+    'nu-spacer',
     {
       ...otherProps,
       ref,
@@ -13,4 +13,4 @@ const Search = React.forwardRef((props: any, ref) => {
   );
 });
 
-export default Search;
+export default Spacer;
