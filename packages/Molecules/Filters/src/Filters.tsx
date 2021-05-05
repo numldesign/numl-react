@@ -5,11 +5,11 @@ function Filters(allProps: TFiltersProps): JSX.Element {
   const { filterSearch, filterGroup, extra, responsive, ...otherProps } = allProps;
   return (
     <El.Block responsive={responsive}>
-      <nu-grid gap {...otherProps}>
+      <El.Grid gap {...otherProps}>
         {filterSearch}
         {filterGroup}
         {extra}
-      </nu-grid>
+      </El.Grid>
     </El.Block>
   );
 }

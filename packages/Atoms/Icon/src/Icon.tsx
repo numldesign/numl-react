@@ -3,7 +3,7 @@ import React from 'react';
 import { TIconProps } from './Icon.type';
 
 function Icon(otherProps: TIconProps) {
-  return <nu-icon {...otherProps} />;
+  return <El.Icon {...otherProps} />;
 }
 
 Icon.propTypes = {

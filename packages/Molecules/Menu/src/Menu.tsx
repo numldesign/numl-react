@@ -17,9 +17,9 @@ Menu.Item = function MenuItem(allProps: TMenuItemProps) {
   }, []);
 
   return (
-    <nu-menuitem ref={ref} {...otherProps}>
+    <El.Menuitem ref={ref} {...otherProps}>
       {children}
-    </nu-menuitem>
+    </El.Menuitem>
   );
 };
 

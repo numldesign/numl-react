@@ -16,9 +16,9 @@ function Pagination(allProps: TPaginationProps) {
         previous
       )}
       {label && !isVertical && (
-        <nu-label display="flex" content="center" items="center" fill="transparent">
+        <El.Label display="flex" content="center" items="center" fill="transparent">
           {label}
-        </nu-label>
+        </El.Label>
       )}
       {typeof next === 'string' ? (
         <nu-btn id="next">

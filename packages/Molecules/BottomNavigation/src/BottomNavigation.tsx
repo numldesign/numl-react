@@ -15,9 +15,9 @@ BottomNavigation.Item = function BottomNavigationItem(allProps: TBottomNavigatio
   const { children, ...otherProps } = allProps;
 
   return (
-    <nu-menuitem flex="1" content="center" {...otherProps}>
+    <El.Menuitem flex="1" content="center" {...otherProps}>
       {children}
-    </nu-menuitem>
+    </El.Menuitem>
   );
 };
 

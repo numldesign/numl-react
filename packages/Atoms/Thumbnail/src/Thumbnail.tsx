@@ -6,9 +6,9 @@ function Thumbnail(allProps: TThumbnailProps) {
   let { source, alt, fit, ...otherProps } = allProps;
 
   return (
-    <nu-el display="flex" content="center" items="center" radius=".5r" overflow="no" {...otherProps}>
+    <El.BaseElement display="flex" content="center" items="center" radius=".5r" overflow="no" {...otherProps}>
       <nu-img src={source} width="100%" label={alt} fit={fit} />
-    </nu-el>
+    </El.BaseElement>
   );
 }
 

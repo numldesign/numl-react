@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionElement } from '../../../Elements/Action';
+import { Action } from '../../../Elements/Action';
 import { TSwitchFieldProps, TSwitchProps } from './Switch.type';
 
 function Switch(allProps: TSwitchProps) {
@@ -8,7 +8,7 @@ function Switch(allProps: TSwitchProps) {
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: 'nu-switch', checked, disabled, ...otherProps });
+  return Action({ as: 'nu-switch', checked, disabled, ...otherProps });
 }
 
 Switch.Field = function SwitchField(allProps: TSwitchFieldProps) {
@@ -18,16 +18,16 @@ Switch.Field = function SwitchField(allProps: TSwitchFieldProps) {
   disabled = !!disabled || null;
 
   return (
-    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {ActionElement({
+    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
+      {Action({
         as: 'nu-switch',
         checked,
         disabled,
         id,
         ...otherProps,
       })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ''}
-    </nu-field>
+      {children ? <El.Label for={id}>{children}</El.Label> : ''}
+    </El.Field>
   );
 };
 

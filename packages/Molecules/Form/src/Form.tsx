@@ -14,15 +14,15 @@ function Form(props: any) {
 Form.Label = function FormLabel(allProps: any) {
   let { children, name, ...otherProps } = allProps;
   return (
-    <nu-label for={name} {...otherProps}>
+    <El.Label for={name} {...otherProps}>
       {children}
-    </nu-label>
+    </El.Label>
   );
 };
 Form.Field = function FormField(allProps: any) {
   let { label, name, assert, message, children, ...otherProps } = allProps;
 
-  return <nu-field {...otherProps}>{children}</nu-field>;
+  return <El.Field {...otherProps}>{children}</El.Field>;
 };
 Form.Input = function FormInput(props: any) {
   let { name, ...otherProps } = props;

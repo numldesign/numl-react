@@ -10,12 +10,12 @@ function TextInput(allProps: any) {
 
   return (
     <nu-inputgroup width={inputSize} padding="2px">
-      {prefix && (typeof prefix === 'string' ? <nu-icon name={prefix} /> : prefix)}
+      {prefix && (typeof prefix === 'string' ? <El.Icon name={prefix} /> : prefix)}
       <nu-input disabled={disabled || undefined} {...otherInputProps} />
       {suffix && (
-        <nu-flex items="center">
+        <El.Flex items="center">
           <El.Block padding="0 1x">{suffix}</El.Block>
-        </nu-flex>
+        </El.Flex>
       )}
       {clearButton && !disabled && (
         <Button
@@ -25,7 +25,7 @@ function TextInput(allProps: any) {
             console.log('close');
           }}
         >
-          <nu-icon name="close-circle-outline" />
+          <El.Icon name="close-circle-outline" />
         </Button>
       )}
     </nu-inputgroup>
@@ -38,23 +38,23 @@ TextInput.Field = function TextField(allProps: any) {
   let inputSize = otherProps.size === 'sm' ? '20em' : '100%';
 
   return (
-    <nu-field width={inputSize}>
-      <nu-flex content="space-between">
-        <nu-label for={label}>
-          {label} {required && <nu-el theme="danger">{` * `}</nu-el>}
-        </nu-label>
+    <El.Field width={inputSize}>
+      <El.Flex content="space-between">
+        <El.Label for={label}>
+          {label} {required && <El.BaseElement theme="danger">{` * `}</El.BaseElement>}
+        </El.Label>
         {link && (
           <nu-link to={link} text="n">
             Link
           </nu-link>
         )}
-      </nu-flex>
+      </El.Flex>
       <TextInput id={label} {...otherProps} />
       {helpText && (
-        <nu-flex content="space-between" items="flex-start" color="#text-soft">
-          <nu-el text="middle" color="#text-soft">
+        <El.Flex content="space-between" items="flex-start" color="#text-soft">
+          <El.BaseElement text="middle" color="#text-soft">
             {helpText}
-          </nu-el>
+          </El.BaseElement>
           {helpTextClear && (
             <Button
               clear
@@ -64,20 +64,20 @@ TextInput.Field = function TextField(allProps: any) {
                 console.log('clear');
               }}
             >
-              <nu-icon name="close" color="#text-soft" />
+              <El.Icon name="close" color="#text-soft" />
             </Button>
           )}
-        </nu-flex>
+        </El.Flex>
       )}
       {validationMessage ? (
-        <nu-flex content="flex-start" items="flex-start" theme="danger">
+        <El.Flex content="flex-start" items="flex-start" theme="danger">
           <Icon name="alert-circle-outline" size="2.4x" padding=".4x 0"></Icon>
-          <nu-el text="middle" padding="0 1x">
+          <El.BaseElement text="middle" padding="0 1x">
             {validationMessage}
-          </nu-el>
-        </nu-flex>
+          </El.BaseElement>
+        </El.Flex>
       ) : null}
-    </nu-field>
+    </El.Field>
   );
 };
 

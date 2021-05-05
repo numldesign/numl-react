@@ -30,7 +30,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
           {closeAction}
         </nu-pane>
       ) : null}
-      <nu-flex flow="column" padding="2x" gap="2x" height={contentHeight}>
+      <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
         {choiceList.length
           ? choiceList.map((choice) => {
               const { label, value } = choice;
@@ -42,7 +42,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
               );
             })
           : null}
-      </nu-flex>
+      </El.Flex>
       {footerActions ? (
         <nu-pane content="space-between" gap="1x" padding="2x">
           {footerActions}

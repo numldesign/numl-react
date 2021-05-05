@@ -3,7 +3,7 @@ import React from 'react';
 function ProductCard(props) {
   let { width = '350px', name, image, detail, price, color, currency, sizes, rating, ...otherProps } = props;
   return (
-    <nu-grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
+    <El.Grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
       <nu-card padding="20px" radius="8px">
         <nu-img column="1" width="100%" src={image} fit="fill"></nu-img>
         <El.Block>
@@ -19,7 +19,7 @@ function ProductCard(props) {
           ></ProductDetail>
         </El.Block>
       </nu-card>
-    </nu-grid>
+    </El.Grid>
   );
 }
 
@@ -33,21 +33,21 @@ function ProductRating(props) {
   if (rating.avgRating < 0) rating.avgRating = 0;
   let tempRating = rating.avgRating;
   return (
-    <nu-flex gap content="space-between" items="center" padding>
+    <El.Flex gap content="space-between" items="center" padding>
       <nu-in>
         {[0, 1, 2, 3, 4].map(function () {
           if (tempRating > 0) {
             tempRating--;
-            return <nu-icon name="star" color="#special"></nu-icon>;
+            return <El.Icon name="star" color="#special"></El.Icon>;
           }
-          return <nu-icon name="star-outline" cursor="pointer"></nu-icon>;
+          return <El.Icon name="star-outline" cursor="pointer"></El.Icon>;
         })}
         <nu-in padding>({rating.count})</nu-in>
       </nu-in>
       <nu-in border="bg" radius="4x" padding="5px 15px" size="12px 16px">
         Neutral
       </nu-in>
-    </nu-flex>
+    </El.Flex>
   );
 }
 
@@ -79,17 +79,17 @@ function ProductTitle(props) {
 function ProductColors(props: { color: any }) {
   const { color } = props;
   return color && color.length > 0 ? (
-    <nu-grid>
+    <El.Grid>
       <El.Block row="1" text="bold" size="14px 20px" padding="5px 0px">
         Colors
       </El.Block>
-      <nu-flex row="2" gap items="center">
+      <El.Flex row="2" gap items="center">
         {color &&
           color.map(function (color) {
             return <nu-circle size="3x" fill={color} cursor="pointer"></nu-circle>;
           })}
-      </nu-flex>
-    </nu-grid>
+      </El.Flex>
+    </El.Grid>
   ) : null;
 }
 
@@ -130,7 +130,7 @@ function ProductSizes(props) {
 function AddToCart(props) {
   const { price, currency } = props;
   return (
-    <nu-flex gap content="space-between" items="center" padding="14px 0px">
+    <El.Flex gap content="space-between" items="center" padding="14px 0px">
       <nu-in>
         <nu-btn cursor="pointer">Add To Cart</nu-btn>
       </nu-in>
@@ -138,7 +138,7 @@ function AddToCart(props) {
         {currency}
         {price}
       </nu-in>
-    </nu-flex>
+    </El.Flex>
   );
 }
 
@@ -159,9 +159,9 @@ ProductCard.Landscape = function (props) {
   let { width = '280px', name, image, detail, price, color, sizes, currency, rating, ...otherProps } = props;
 
   return (
-    <nu-flex gap content="space-between" items="center" padding>
+    <El.Flex gap content="space-between" items="center" padding>
       <nu-card padding="20px" radius="8px">
-        <nu-grid columns="auto" row="auto" gap="3x" content="start">
+        <El.Grid columns="auto" row="auto" gap="3x" content="start">
           <nu-img column="1" width={width} src={image} fit="fill"></nu-img>
           <El.Block column="2">
             <ProductDetail
@@ -175,9 +175,9 @@ ProductCard.Landscape = function (props) {
               sizes={sizes}
             ></ProductDetail>
           </El.Block>
-        </nu-grid>
+        </El.Grid>
       </nu-card>
-    </nu-flex>
+    </El.Flex>
   );
 };
 

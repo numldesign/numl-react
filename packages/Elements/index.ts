@@ -1,3 +1,4 @@
+import { BaseElement } from './BaseElement';
 /** UI Elements */
 export { Action } from './Action';
 export { Article } from './Article';
@@ -5,6 +6,7 @@ export { Aside } from './Aside';
 export { AttributeProvider } from './AttributeProvider';
 export { Badge } from './Badge';
 export { Base } from './Base';
+export { BaseElement } from './BaseElement';
 export { Block } from './Block';
 export { BlockLink } from './BlockLink';
 export { BlockQuote } from './BlockQuote';
@@ -95,12 +97,13 @@ export { Superscript } from './Superscript';
 export { Svg } from './Svg';
 export { Switch } from './Switch';
 export { Tab } from './Tab';
-export { TabList } from './TabList';
 export { Table } from './Table';
 export { TableHeader } from './TableHeader';
+export { TabList } from './TabList';
 export { TelephoneInput } from './TelephoneInput';
 export { TextArea } from './TextArea';
 export { ThemeProvider } from './ThemeProvider';
 export { Tooltip } from './Tooltip';
 export { Triangle } from './Triangle';
 export { Value } from './Value';
+export default BaseElement;

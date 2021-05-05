@@ -203,7 +203,7 @@ function ColorCode(props: any) {
     <El.Block {...props} padding>
       <El.Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
         <El.Button column="1" height="2.25rem" toggle text="normal">
-          <El.Base>RGB</El.Base>
+          <El>RGB</El>
           <El.Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></El.Icon>
         </El.Button>
         <nu-buttongroup column="2" height="2.25rem" value="rgb">

@@ -9,14 +9,14 @@ function ChoiceList(allProps: TChoiceListProps) {
   const choiceList = choices && choices.length ? [...choices] : [];
 
   return (
-    <nu-grid display="inline-grid" gap {...otherProps}>
+    <El.Grid display="inline-grid" gap {...otherProps}>
       {heading ? <El.Block>{heading}</El.Block> : null}
       {multiSelect ? (
         <ChoiceList.CheckList choiceList={choiceList} selected={selected} onChange={onChange} />
       ) : (
         <ChoiceList.RadioList choiceList={choiceList} selected={selected} onChange={onChange} />
       )}
-    </nu-grid>
+    </El.Grid>
   );
 }
 

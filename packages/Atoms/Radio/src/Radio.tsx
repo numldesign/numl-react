@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { ActionElement } from '../../../Elements/Action';
+import { Action } from '../../../Elements/Action';
 import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
 function Radio(allProps: TRadioProps): JSX.Element {
@@ -9,7 +9,7 @@ function Radio(allProps: TRadioProps): JSX.Element {
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: 'nu-radio', checked, disabled, ...otherProps });
+  return Action({ as: 'nu-radio', checked, disabled, ...otherProps });
 }
 
 Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
@@ -47,21 +47,21 @@ Radio.Field = function RadioField(allProps: TRadioFieldProps) {
   disabled = !!disabled || null;
 
   return (
-    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {ActionElement({
+    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
+      {Action({
         as: 'nu-radio',
         checked,
         disabled,
         id,
         ...otherProps,
       })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ''}
-    </nu-field>
+      {children ? <El.Label for={id}>{children}</El.Label> : ''}
+    </El.Field>
   );
 };
 
 Radio.propTypes = {
-  ...ActionElement.propTypes,
+  ...Action.propTypes,
   checked: T.bool,
 };
 

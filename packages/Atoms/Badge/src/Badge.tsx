@@ -3,25 +3,25 @@ import React from 'react';
 function Badge(allProps: any): JSX.Element {
   const { children, size, label, icon, ...otherProps } = allProps;
   return (
-    <nu-badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>
-      {typeof icon === 'string' ? <nu-icon name={icon} /> : icon}
+    <El.Badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>
+      {typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
       {children ? children : <Badge.Label size={size}>{label}</Badge.Label>}
-    </nu-badge>
+    </El.Badge>
   );
 }
 
 Badge.Label = function BadgeLabel(props: any): JSX.Element {
   let { children, size, ...otherProps } = props;
   return (
-    <nu-el size={size} {...otherProps}>
+    <El.BaseElement size={size} {...otherProps}>
       {children}
-    </nu-el>
+    </El.BaseElement>
   );
 };
 
 Badge.Icon = function BadgeIcon(props: any): JSX.Element {
   let { name, ...otherProps } = props;
-  return <nu-icon name={name} {...otherProps}></nu-icon>;
+  return <El.Icon name={name} {...otherProps}></El.Icon>;
 };
 
 export default Badge;

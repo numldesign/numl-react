@@ -60,9 +60,9 @@ Button.ExtraLarge = ({ children = null, size = 'xl', padding = '3.5x 5x', ...pro
 Button.Label = function ButtonLabel(props: any) {
   const { children, color = '#text', ...otherProps } = props;
   return (
-    <El.Base color={color} {...otherProps}>
+    <El color={color} {...otherProps}>
       {children}
-    </El.Base>
+    </El>
   );
 };
 
@@ -95,7 +95,7 @@ Button.Popup = function ButtonDropDownPopup(props: any) {
 
 Button.Item = function ButtonDropDownPopupList(props: any) {
   const { children, ...otherProps } = props;
-  return <nu-menuitem {...otherProps}>{children}</nu-menuitem>;
+  return <El.Menuitem {...otherProps}>{children}</El.Menuitem>;
 };
 
 Button.Checkbox = function ButtonCheckbox(props: any) {

@@ -32,7 +32,7 @@ function Search(allProps: TSearchProps): JSX.Element {
   const renderList = resultList && Array.isArray(resultList) ? resultList : [];
 
   return (
-    <nu-grid gap="1x" {...otherProps}>
+    <El.Grid gap="1x" {...otherProps}>
       <nu-inputgroup {...inputGroupProps}>
         <Icon name="search-outline" width="5x" />
         <nu-input ref={ref} value={value} {...inputProps} />
@@ -53,7 +53,7 @@ function Search(allProps: TSearchProps): JSX.Element {
             })
           : null}
       </nu-listbox>
-    </nu-grid>
+    </El.Grid>
   );
 }
 

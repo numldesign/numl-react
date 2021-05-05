@@ -5,7 +5,7 @@ function ContextualSaveBar(props) {
   /** working on this */
   let { message, buttonWidth = '5.25rem', ...otherprops } = props;
   return (
-    <nu-grid
+    <El.Grid
       padding="0.563rem 0.1rem"
       fill="#light"
       responsive="62.5rem|56.25rem"
@@ -18,9 +18,9 @@ function ContextualSaveBar(props) {
         <ForunIcon></ForunIcon>
       </nu-in>
       <nu-in>
-        <nu-el text={`bold`} color="#bg">
+        <El.BaseElement text={`bold`} color="#bg">
           {message}
-        </nu-el>
+        </El.BaseElement>
       </nu-in>
       <nu-btngroup gap border="0" fill="">
         <nu-btn fill="#bg" radius width={buttonWidth}>
@@ -30,7 +30,7 @@ function ContextualSaveBar(props) {
           Save
         </nu-btn>
       </nu-btngroup>
-    </nu-grid>
+    </El.Grid>
   );
 }
 

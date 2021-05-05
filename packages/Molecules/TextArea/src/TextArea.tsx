@@ -10,10 +10,10 @@ TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
   const { children, fieldProps = {}, ...otherProps } = allProps;
 
   return (
-    <nu-field {...fieldProps}>
+    <El.Field {...fieldProps}>
       {children}
       <TextArea {...otherProps} />
-    </nu-field>
+    </El.Field>
   );
 };
 

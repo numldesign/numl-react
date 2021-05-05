@@ -3,11 +3,11 @@ import React from 'react';
 function NavigationBarRow(props) {
   let { items, ...otherProps } = props;
   return (
-    <nu-grid content="start stretch" item="start stretch" height="90vh" overflow="auto">
+    <El.Grid content="start stretch" item="start stretch" height="90vh" overflow="auto">
       {items &&
         items.map(function (eachItem) {
           return (
-            <nu-grid
+            <El.Grid
               content="space-between"
               padding="1x 2x"
               cursor="pointer"
@@ -18,29 +18,29 @@ function NavigationBarRow(props) {
               mark="hover"
             >
               <El.Block column="1" gap>
-                <nu-icon column="1" name={eachItem.icon}></nu-icon>
-                <nu-el text="middle" padding column="2">
+                <El.Icon column="1" name={eachItem.icon}></El.Icon>
+                <El.BaseElement text="middle" padding column="2">
                   {eachItem.text}
-                </nu-el>
+                </El.BaseElement>
               </El.Block>
               {eachItem.count ? (
-                <nu-el column="2" fill="#bg" radius="round" border="1px #352D3B" padding="5px 15px">
+                <El.BaseElement column="2" fill="#bg" radius="round" border="1px #352D3B" padding="5px 15px">
                   {eachItem.count}
-                </nu-el>
+                </El.BaseElement>
               ) : (
                 ''
               )}
-            </nu-grid>
+            </El.Grid>
           );
         })}
-    </nu-grid>
+    </El.Grid>
   );
 }
 
 function NavigationBar(props) {
   let { items, ...otherProps } = props;
   return (
-    <nu-grid content="stretch" height="100vh" width="min 256px">
+    <El.Grid content="stretch" height="100vh" width="min 256px">
       <NavigationBarRow items={items}></NavigationBarRow>
       <nu-footer
         column="0"
@@ -53,12 +53,12 @@ function NavigationBar(props) {
         use-hover
         mark="hover"
       >
-        <nu-icon column="1" name="settings-outline"></nu-icon>
-        <nu-el text="middle" padding column="2">
+        <El.Icon column="1" name="settings-outline"></El.Icon>
+        <El.BaseElement text="middle" padding column="2">
           Settings
-        </nu-el>
+        </El.BaseElement>
       </nu-footer>
-    </nu-grid>
+    </El.Grid>
   );
 }
 

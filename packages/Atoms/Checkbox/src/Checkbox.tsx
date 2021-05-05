@@ -1,6 +1,7 @@
 import T from 'prop-types';
 import React from 'react';
-import { ActionElement } from '../../../Elements/Action';
+import { El } from '../../../Core';
+import { Action } from '../../../Elements/Action';
 import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
 function Checkbox(allProps: TCheckboxProps): JSX.Element {
@@ -9,7 +10,7 @@ function Checkbox(allProps: TCheckboxProps): JSX.Element {
   checked = !!checked || null;
   disabled = !!disabled || null;
 
-  return ActionElement({ as: 'nu-checkbox', checked, disabled, ...otherProps });
+  return Action({ as: 'nu-checkbox', checked, disabled, ...otherProps });
 }
 
 Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
@@ -19,8 +20,8 @@ Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Elem
   disabled = !!disabled || null;
 
   return (
-    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {ActionElement({
+    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
+      {Action({
         as: 'nu-checkbox',
         checked,
         disabled,
@@ -31,22 +32,17 @@ Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Elem
       })}
       {label && !children ? label : ''}
       {children ? children : ''}
-    </nu-field>
+    </El.Field>
   );
 };
 
 Checkbox.Label = function CheckboxLabel(props: any) {
   const { id, children, theme = 'special', ...otherProps } = props;
   return (
-    <nu-label for={id} color="white" {...otherProps}>
+    <El.Label for={id} color="white" {...otherProps}>
       {children}
-    </nu-label>
+    </El.Label>
   );
-};
-
-Checkbox.propTypes = {
-  ...ActionElement.propTypes,
-  checked: T.bool,
 };
 
 export default Checkbox;

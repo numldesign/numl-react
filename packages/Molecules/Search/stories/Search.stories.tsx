@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Link, El } from '../../../Core';
+import { El, Link, Search } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Search',
@@ -22,7 +22,7 @@ const resultTemplate = (item) => {
           <El.Icon name={item.prefix} />
         </El.Block>
       )}
-      {item.emptyGap && <El.Base />}
+      {item.emptyGap && <El />}
       {item.title && (
         <El.Block>
           <El.Block text="sb">{item.title}</El.Block>
@@ -71,12 +71,12 @@ Default.args = {
       description: 'Process, track, and fulfill your orders',
       suffix: (
         <El.Pane text="center" gap=".4x">
-          <El.Base fill="bg" radius padding="0 .4x">
+          <El fill="bg" radius padding="0 .4x">
             G
-          </El.Base>
-          <El.Base fill="bg" radius padding="0 .4x">
+          </El>
+          <El fill="bg" radius padding="0 .4x">
             O
-          </El.Base>
+          </El>
         </El.Pane>
       ),
       value: 'value_3',
