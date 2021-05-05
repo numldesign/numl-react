@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Popup = React.forwardRef((props: any, ref) => {
+const Nav = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-popup',
+    'nu-nav',
     {
       ...otherProps,
       ref,
@@ -12,5 +12,4 @@ const Popup = React.forwardRef((props: any, ref) => {
     [children]
   );
 });
-
-export default Popup;
+export default Nav;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Popup = React.forwardRef((props: any, ref) => {
+const Password = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-popup',
+    'nu-password',
     {
       ...otherProps,
       ref,
@@ -13,4 +13,4 @@ const Popup = React.forwardRef((props: any, ref) => {
   );
 });
 
-export default Popup;
+export default Password;
