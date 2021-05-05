@@ -4,7 +4,7 @@ const Superscript = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-superscript',
+    'nu-sup',
     {
       ...otherProps,
       ref,

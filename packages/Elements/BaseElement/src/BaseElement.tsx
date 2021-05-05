@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Subscript = React.forwardRef((props: any, ref) => {
+const BaseElement = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-sub',
+    'nu-el',
     {
       ...otherProps,
       ref,
@@ -13,4 +13,4 @@ const Subscript = React.forwardRef((props: any, ref) => {
   );
 });
 
-export default Subscript;
+export default BaseElement;

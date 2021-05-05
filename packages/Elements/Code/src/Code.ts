@@ -4,7 +4,7 @@ const Code = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
-    'nu-cd',
+    'nu-code',
     {
       ...otherProps,
       ref,
