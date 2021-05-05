@@ -175,7 +175,7 @@ class ColorSelector extends React.Component {
         >
           <canvas ref={(elem) => (this.colorBlock = elem)} width="246px" height="246px"></canvas>
         </nu-slider2d>
-        <nu-slider
+        <El.RangeSlider
           column="2"
           height="15.375rem"
           min="0"
@@ -184,15 +184,15 @@ class ColorSelector extends React.Component {
           image="linear(to bottom, hue(0 s), hue(90 s), hue(180 s), hue(270 s), hue(0 s))"
         >
           <canvas ref={(elem) => (this.colorStrip = elem)} height="246px" width="10px"></canvas>
-        </nu-slider>
-        <nu-slider
+        </El.RangeSlider>
+        <El.RangeSlider
           column="3"
           min="0"
           max="255"
           height="15.375rem"
           orient="v"
           image="linear(to bottom, white, transparent)"
-        ></nu-slider>
+        ></El.RangeSlider>
       </El.Grid>
     );
   }

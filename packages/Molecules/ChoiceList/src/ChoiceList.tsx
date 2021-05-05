@@ -10,7 +10,7 @@ function ChoiceList(allProps: TChoiceListProps) {
 
   return (
     <nu-grid display="inline-grid" gap {...otherProps}>
-      {heading ? <nu-block>{heading}</nu-block> : null}
+      {heading ? <El.Block>{heading}</El.Block> : null}
       {multiSelect ? (
         <ChoiceList.CheckList choiceList={choiceList} selected={selected} onChange={onChange} />
       ) : (
@@ -71,8 +71,8 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
           return (
             <nu-listitem key={value}>
               <Checkbox.Field checked={isChecked} value={value} items="start" onInput={handleChecklistChange}>
-                <nu-block>{label}</nu-block>
-                <nu-block color="#text-soft">{helpText}</nu-block>
+                <El.Block>{label}</El.Block>
+                <El.Block color="#text-soft">{helpText}</El.Block>
               </Checkbox.Field>
             </nu-listitem>
           );

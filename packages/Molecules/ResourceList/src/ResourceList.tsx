@@ -25,7 +25,7 @@ function ResourceList(allProps: TResourceListProps) {
   }, []);
 
   return (
-    <nu-block {...otherProps}>
+    <El.Block {...otherProps}>
       <nu-listbox ref={ref} border={border} padding={padding} value={selected} multiple={multiSelect || undefined}>
         {items && items.length
           ? items.map((item: { id: any; avatar: string | undefined }, index: any) => {
@@ -44,13 +44,13 @@ function ResourceList(allProps: TResourceListProps) {
                     {multiSelect ? <Checkbox checked={checked} /> : null}
                     <Avatar.Icon fill="danger" special border="0" />
                   </nu-pane>
-                  <nu-block {...itemWrapperProps}>{renderItem && renderItem({ item, value, index })}</nu-block>
+                  <El.Block {...itemWrapperProps}>{renderItem && renderItem({ item, value, index })}</El.Block>
                 </nu-option>
               );
             })
           : null}
       </nu-listbox>
-    </nu-block>
+    </El.Block>
   );
 }
 

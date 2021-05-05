@@ -8,9 +8,9 @@ function ActionList(allProps: TActionListProps): JSX.Element {
   return (
     <Menu border="1bw" padding="0" {...otherProps}>
       {header ? (
-        <nu-block padding="1x 1.5x" text="sb" border="bottom">
+        <El.Block padding="1x 1.5x" text="sb" border="bottom">
           {header}
-        </nu-block>
+        </El.Block>
       ) : null}
       {children}
     </Menu>

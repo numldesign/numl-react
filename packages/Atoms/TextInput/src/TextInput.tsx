@@ -14,7 +14,7 @@ function TextInput(allProps: any) {
       <nu-input disabled={disabled || undefined} {...otherInputProps} />
       {suffix && (
         <nu-flex items="center">
-          <nu-block padding="0 1x">{suffix}</nu-block>
+          <El.Block padding="0 1x">{suffix}</El.Block>
         </nu-flex>
       )}
       {clearButton && !disabled && (

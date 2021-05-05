@@ -1,5 +1,6 @@
 import T from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
+import { El } from '../../../Core';
 import { TRangeSliderProps } from './RangeSlider.type';
 
 const getPlace = (place: string, value: string) => {
@@ -30,12 +31,12 @@ function RangeSlider(allProps: TRangeSliderProps): JSX.Element {
   }, []);
 
   return (
-    <nu-block use-hover box="y">
-      <nu-slider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
-      <nu-tooltip width="max-content" place={place} move="(-50% + .25x) 0">
+    <El.Block use-hover box="y">
+      <El.RangeSlider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
+      <El.Tooltip width="max-content" place={place} move="(-50% + .25x) 0">
         {sliderValue}
-      </nu-tooltip>
-    </nu-block>
+      </El.Tooltip>
+    </El.Block>
   );
 }
 

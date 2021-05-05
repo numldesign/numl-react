@@ -12,9 +12,9 @@ function SettingToggle(allProps: TSettingToggleProps) {
 
   return (
     <nu-pane {...otherProps}>
-      <nu-block>
+      <El.Block>
         <nu-el>{text}</nu-el> <nu-el text="sb">{isActive ? activeText : inactiveText}</nu-el>
-      </nu-block>
+      </El.Block>
       <Button special={isActive ? true : undefined} onTap={handleStatusChange}>
         {isActive ? activeText : inactiveText}
       </Button>

@@ -6,7 +6,7 @@ function ProductCard(props) {
     <nu-grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
       <nu-card padding="20px" radius="8px">
         <nu-img column="1" width="100%" src={image} fit="fill"></nu-img>
-        <nu-block>
+        <El.Block>
           <ProductDetail
             name={name}
             rating={rating}
@@ -17,7 +17,7 @@ function ProductCard(props) {
             currency={currency}
             sizes={sizes}
           ></ProductDetail>
-        </nu-block>
+        </El.Block>
       </nu-card>
     </nu-grid>
   );
@@ -56,16 +56,16 @@ function ProductTitle(props) {
   return (
     <>
       {name ? (
-        <nu-block size="16px 24px" text="bold" cursor="pointer">
+        <El.Block size="16px 24px" text="bold" cursor="pointer">
           {name}
-        </nu-block>
+        </El.Block>
       ) : (
         ''
       )}
       {detail ? (
-        <nu-block size="14px 20px" cursor="pointer">
+        <El.Block size="14px 20px" cursor="pointer">
           {detail}
-        </nu-block>
+        </El.Block>
       ) : (
         ''
       )}
@@ -80,9 +80,9 @@ function ProductColors(props: { color: any }) {
   const { color } = props;
   return color && color.length > 0 ? (
     <nu-grid>
-      <nu-block row="1" text="bold" size="14px 20px" padding="5px 0px">
+      <El.Block row="1" text="bold" size="14px 20px" padding="5px 0px">
         Colors
-      </nu-block>
+      </El.Block>
       <nu-flex row="2" gap items="center">
         {color &&
           color.map(function (color) {
@@ -105,10 +105,10 @@ function ProductSizes(props) {
 
   return (
     <>
-      <nu-block text="bold" size="14px 20px" padding="5px 0px">
+      <El.Block text="bold" size="14px 20px" padding="5px 0px">
         Sizes
-      </nu-block>
-      <nu-block>
+      </El.Block>
+      <El.Block>
         {sizes &&
           sizes.map(function (sizes) {
             return (
@@ -117,7 +117,7 @@ function ProductSizes(props) {
               </nu-btn>
             );
           })}
-      </nu-block>
+      </El.Block>
     </>
   );
 }
@@ -163,7 +163,7 @@ ProductCard.Landscape = function (props) {
       <nu-card padding="20px" radius="8px">
         <nu-grid columns="auto" row="auto" gap="3x" content="start">
           <nu-img column="1" width={width} src={image} fit="fill"></nu-img>
-          <nu-block column="2">
+          <El.Block column="2">
             <ProductDetail
               currency={currency}
               name={name}
@@ -174,7 +174,7 @@ ProductCard.Landscape = function (props) {
               color={color}
               sizes={sizes}
             ></ProductDetail>
-          </nu-block>
+          </El.Block>
         </nu-grid>
       </nu-card>
     </nu-flex>

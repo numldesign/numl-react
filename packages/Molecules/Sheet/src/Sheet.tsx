@@ -23,7 +23,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
   );
 
   return (
-    <nu-block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
+    <El.Block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
       {heading ? (
         <nu-pane padding="2x" border="bottom" items="start" content="space-between">
           {heading}
@@ -48,7 +48,7 @@ function Sheet(allProps: TSheetProps): JSX.Element {
           {footerActions}
         </nu-pane>
       ) : null}
-    </nu-block>
+    </El.Block>
   );
 }
 

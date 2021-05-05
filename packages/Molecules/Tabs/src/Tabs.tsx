@@ -15,19 +15,19 @@ function Tabs(allProps: TTabsProps) {
   }, []);
 
   return (
-    <nu-block>
+    <El.Block>
       <nu-tablist ref={ref} content={content} value={defaultValue} {...otherProps}>
         {prefix}
         {children}
       </nu-tablist>
       {children.map((child: any) => {
         return (
-          <nu-block key={child.props.tab} id={child.props.tab}>
+          <El.Block key={child.props.tab} id={child.props.tab}>
             {child.props.children}
-          </nu-block>
+          </El.Block>
         );
       })}
-    </nu-block>
+    </El.Block>
   );
 }
 

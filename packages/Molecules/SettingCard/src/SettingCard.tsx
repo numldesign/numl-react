@@ -21,12 +21,12 @@ function SettingCard(allProps: TSettingCardProps) {
       ) : (
         icon
       )}
-      <nu-block height="min 10x">
-        <nu-block text="sb" color="#special">
+      <El.Block height="min 10x">
+        <El.Block text="sb" color="#special">
           {title}
-        </nu-block>
-        <nu-block>{subtitle}</nu-block>
-      </nu-block>
+        </El.Block>
+        <El.Block>{subtitle}</El.Block>
+      </El.Block>
     </nu-pane>
   );
 }

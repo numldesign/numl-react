@@ -17,12 +17,12 @@ function NavigationBarRow(props) {
               use-hover
               mark="hover"
             >
-              <nu-block column="1" gap>
+              <El.Block column="1" gap>
                 <nu-icon column="1" name={eachItem.icon}></nu-icon>
                 <nu-el text="middle" padding column="2">
                   {eachItem.text}
                 </nu-el>
-              </nu-block>
+              </El.Block>
               {eachItem.count ? (
                 <nu-el column="2" fill="#bg" radius="round" border="1px #352D3B" padding="5px 15px">
                   {eachItem.count}

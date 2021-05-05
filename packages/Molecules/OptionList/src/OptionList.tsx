@@ -24,7 +24,7 @@ function OptionList(allProps: TOptionListProps) {
   }, []);
 
   return (
-    <nu-block {...otherProps}>
+    <El.Block {...otherProps}>
       {renderHeader}
       <nu-listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
         {options && options.length
@@ -33,9 +33,9 @@ function OptionList(allProps: TOptionListProps) {
               return (
                 <nu-option key={index} value={index} {...contentWrapperProps}>
                   {multiSelect ? (
-                    <nu-block {...checkboxWrapperProps}>
+                    <El.Block {...checkboxWrapperProps}>
                       <Checkbox checked={checked} />
-                    </nu-block>
+                    </El.Block>
                   ) : null}
                   {renderContent && renderContent({ item, index })}
                 </nu-option>
@@ -48,7 +48,7 @@ function OptionList(allProps: TOptionListProps) {
               const sectionHeader = option.renderHeader ? option.renderHeader : null;
               const optionList: any = option.options && option.options.length ? option.options : [];
               return (
-                <nu-block key={sectionIndex}>
+                <El.Block key={sectionIndex}>
                   {sectionHeader}
                   {optionList.map((item: { index: any }) => {
                     const index = item.index;
@@ -56,20 +56,20 @@ function OptionList(allProps: TOptionListProps) {
                     return (
                       <nu-option key={index} value={index} {...contentWrapperProps}>
                         {multiSelect ? (
-                          <nu-block {...checkboxWrapperProps}>
+                          <El.Block {...checkboxWrapperProps}>
                             <Checkbox checked={checked} />
-                          </nu-block>
+                          </El.Block>
                         ) : null}
                         {renderContent && renderContent({ item, index, sectionIndex })}
                       </nu-option>
                     );
                   })}
-                </nu-block>
+                </El.Block>
               );
             })
           : null}
       </nu-listbox>
-    </nu-block>
+    </El.Block>
   );
 }
 
