@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function PropsProvider(props: any) {
+const PropsProvider = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-props {...otherProps}>{children}</nu-props>;
-}
+
+  return React.createElement(
+    'nu-props',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default PropsProvider;

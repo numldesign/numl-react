@@ -1,21 +1,21 @@
-# @numl-react/attribute-provider
+# @numl-react/elements
 
 Intro: WIP
 
 ## Installation
 
 ```sh
-yarn add @numl-react/attribute-provider
+yarn add @numl-react/elements
 
 # or
 
-npm i @numl-react/attribute-provider
+npm i @numl-react/elements
 ```
 
 ## Import Components
 
 ```jsx
-import { AttributeProvider } from '@numl-react/attribute-provider';
+import { El } from '@numl-react/elements';
 ```
 
 ## Component

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Root = React.forwardRef((props: any, ref) => {
-  let { children, ...otherProps } = props;
+  const { children, ...otherProps } = props;
 
   return React.createElement(
     'nu-root',
