@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Tabs, Icon } from '../../../entry';
+import { NumlProvider, ThemeProvider, Tabs, Icon } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Tabs',

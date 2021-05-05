@@ -1,6 +1,6 @@
 import React from 'react';
 import { TBannerProps } from './Banner.type';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 function Banner(allProps: TBannerProps): JSX.Element {
   const { prefix, heading, children, footerActions, closeAction, ...otherProps } = allProps;

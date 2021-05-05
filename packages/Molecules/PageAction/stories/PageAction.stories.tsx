@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, PageAction } from '../../../entry';
+import { NumlProvider, ThemeProvider, PageAction } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/PageAction',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '../../../entry';
+import { NumlProvider, ThemeProvider } from '../../../Core';
 import { ProgressBar } from '../index';
 
 export default {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, ColorPicker } from '../../../entry';
+import { NumlProvider, ThemeProvider, ColorPicker } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/ColorPicker',

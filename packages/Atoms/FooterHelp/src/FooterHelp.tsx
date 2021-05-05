@@ -1,7 +1,7 @@
 import T from 'prop-types';
 import React from 'react';
 import { TFooterHelp } from './FooterHelp.type';
-import { El, Link } from './../../../entry';
+import { El, Link } from './../../../Core';
 
 function FooterHelp(allProps: TFooterHelp) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;

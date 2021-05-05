@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 function Button(props: any): JSX.Element {
   const {

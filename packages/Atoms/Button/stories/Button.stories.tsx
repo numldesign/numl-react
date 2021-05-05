@@ -1,5 +1,5 @@
 import React from 'react';
-import { El, Button } from '../../../entry';
+import { El, Button } from '../../../Core';
 
 export default {
   title: 'Example/Atoms/Button',

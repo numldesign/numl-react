@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, SettingToggle } from '../../../entry';
+import { NumlProvider, ThemeProvider, SettingToggle } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/SettingToggle',

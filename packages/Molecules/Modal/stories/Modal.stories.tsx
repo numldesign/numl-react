@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { El, Molecules, ModalHeader, ModalBody, ModalFooter } from '../../../entry';
+import { El, Molecules, ModalHeader, ModalBody, ModalFooter } from '../../../Core';
 import { isRefernceNull } from '../../../Utilities';
 import Modal from '../src/Modal';
 

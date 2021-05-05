@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 import { TCarouselProps } from './Carousel.type';
 
 function Carousel(allProps: TCarouselProps): JSX.Element {

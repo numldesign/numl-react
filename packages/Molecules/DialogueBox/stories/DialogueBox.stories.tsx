@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, Radio, DialogueBox, Button, Avatar, ThemeProvider } from '../../../entry';
+import { NumlProvider, Radio, DialogueBox, Button, Avatar, ThemeProvider } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/DialogueBox',

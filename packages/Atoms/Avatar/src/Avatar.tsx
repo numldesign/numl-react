@@ -1,6 +1,6 @@
 import React from 'react';
 import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   let {
@@ -60,7 +60,7 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   } = allProps;
 
   return (
-    <nu-circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
+    <El.Circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
       {!showIcon && username ? (
         <El.Base size="lg" text="uppercase">
           {username.slice(0, 2)}
@@ -68,7 +68,7 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
       ) : (
         <El.Icon size="lg" name={'person'} />
       )}
-    </nu-circle>
+    </El.Circle>
   );
 };
 

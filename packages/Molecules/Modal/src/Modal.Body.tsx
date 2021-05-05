@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 /**
  * Modal Body

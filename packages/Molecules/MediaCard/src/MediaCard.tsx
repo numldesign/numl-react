@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, El } from './../../../entry';
+import { Card, El } from './../../../Core';
 
 function MediaCard(props: any) {
   const { src, action, heading, description, padding = '2x', columns = 'auto', ...otherProps } = props;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NumlProvider, ExceptionList, ThemeProvider } from '../../../entry';
+import { NumlProvider, ExceptionList, ThemeProvider } from '../../../Core';
 import { Icon } from '../../Icon/';
 
 export default {

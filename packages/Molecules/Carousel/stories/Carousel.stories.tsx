@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Carousel } from '../../../entry';
+import { NumlProvider, ThemeProvider, Carousel } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Carousel',

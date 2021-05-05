@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, AccountConnection, Link } from '../../../entry';
+import { NumlProvider, ThemeProvider, AccountConnection, Link } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/AccountConnection',

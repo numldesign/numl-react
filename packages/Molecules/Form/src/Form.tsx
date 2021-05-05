@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 function Form(props: any) {
   const { gap, children, ...otherProps } = props;

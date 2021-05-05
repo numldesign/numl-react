@@ -1,6 +1,6 @@
 import React from 'react';
 import { TEmptyStateProps } from './EmptyState.type';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 function EmptyState(allProps: TEmptyStateProps): JSX.Element {
   const { heading, description, flow = 'column', radius = '1x', actions, children, ...otherProps } = allProps;

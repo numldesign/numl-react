@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, SettingCard } from '../../../entry';
+import { NumlProvider, ThemeProvider, SettingCard } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/SettingCard',

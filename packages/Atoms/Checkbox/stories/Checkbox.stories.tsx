@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Checkbox } from '../../../entry';
+import { NumlProvider, ThemeProvider, Checkbox } from '../../../Core';
 
 export default {
   title: 'Example/Atoms/Checkbox',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Atoms, El, Avatar } from '../../../entry';
+import { Atoms, El, Avatar } from '../../../Core';
 
 export default {
   title: 'Example/Atoms/Avatar',

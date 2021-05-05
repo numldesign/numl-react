@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, El, ThemeProvider, Icon, Button, EmptyState } from '../../../entry';
+import { NumlProvider, El, ThemeProvider, Icon, Button, EmptyState } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/EmptyState',

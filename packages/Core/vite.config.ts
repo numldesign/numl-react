@@ -3,10 +3,10 @@ const path = require('path');
 module.exports = {
   build: {
     lib: {
-      entry: path.resolve(__dirname, './packages/entry.ts'),
+      entry: path.resolve(__dirname, './index.ts'),
       name: 'NumlReact',
-      formats : ['es','cjs'],
-      minify : false
+      formats: ['es', 'cjs'],
+      minify: false,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

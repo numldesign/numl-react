@@ -1,6 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Card, Button } from '../../../entry';
-import { El } from '../../../entry';
+import { NumlProvider, ThemeProvider, Card, Button } from '../../../Core';
+import { El } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Card',

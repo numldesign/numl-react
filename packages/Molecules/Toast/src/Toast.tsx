@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../.././../entry';
+import { El } from '../.././../Core';
 
 function Toast(props: any) {
   const { action, text, helpText, icon, theme, ...otherprops } = props;

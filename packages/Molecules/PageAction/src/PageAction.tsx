@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 import { TPageActionProps } from './PageAction.type';
 
 function PageAction(allProps: TPageActionProps) {

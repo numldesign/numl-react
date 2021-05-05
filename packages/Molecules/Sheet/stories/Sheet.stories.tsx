@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Sheet, El } from '../../../entry';
+import { NumlProvider, ThemeProvider, Sheet, El } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Sheet',

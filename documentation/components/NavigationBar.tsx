@@ -9,6 +9,7 @@ import {
     Svg,
   } from "@numl-react/core";
 import { Icon } from "@numl-react/icon";
+
   
 export default () => {
     return (
@@ -34,7 +35,7 @@ export default () => {
                   Numl React .
                   <Button padding="1x right">
                     <Base>
-                      <nu-value>Handbook</nu-value>
+                      <>Handbook</>
                     </Base>
                     <nu-dropdownicon
                       role="img"

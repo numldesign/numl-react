@@ -1,6 +1,6 @@
 import React from 'react';
 import { TDataTableProps } from './DataTable.type';
-import { El } from '../../../entry';
+import { El } from '../../../Core';
 
 function DataTable(allProps: TDataTableProps) {
   const { headings, rows, width = '100%', height = '100%', totals, footerContent, ...otherProps } = allProps;

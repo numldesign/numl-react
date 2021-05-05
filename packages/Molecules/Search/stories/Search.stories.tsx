@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Link, El } from '../../../entry';
+import { Search, Link, El } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/Search',

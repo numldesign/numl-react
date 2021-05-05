@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Link, FooterHelp } from '../../../entry';
+import { NumlProvider, ThemeProvider, Icon, Link, FooterHelp } from '../../../Core';
 
 export default {
   title: 'Example/Atoms/FooterHelp',

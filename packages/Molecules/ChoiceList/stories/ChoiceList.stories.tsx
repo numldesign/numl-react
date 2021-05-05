@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { NumlProvider, ThemeProvider, TextInput, ChoiceList } from '../../../entry';
+import { NumlProvider, ThemeProvider, TextInput, ChoiceList } from '../../../Core';
 
 export default {
   title: 'Example/Molecules/ChoiceList',
