@@ -1,4 +1,5 @@
 import React from 'react';
+import { El } from '../../../Core';
 import { TTooltipProps } from './Tooltip.type';
 
 function Tooltip(allProps: TTooltipProps) {

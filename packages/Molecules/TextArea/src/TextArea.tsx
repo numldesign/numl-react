@@ -1,9 +1,9 @@
 import React from 'react';
+import { El } from '../../../Core';
 import { TTextAreaFieldProps, TTextAreaProps } from './TextArea.type';
-
 function TextArea(allProps: TTextAreaProps) {
   const { ...otherProps } = allProps;
-  return <nu-textarea {...otherProps} />;
+  return <El.TextArea {...otherProps} />;
 }
 
 TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
@@ -12,7 +12,7 @@ TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
   return (
     <El.Field {...fieldProps}>
       {children}
-      <TextArea {...otherProps} />
+      <El.TextArea {...otherProps} />
     </El.Field>
   );
 };
