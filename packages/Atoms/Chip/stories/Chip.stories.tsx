@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Chip } from '../../../Core';
+import { Chip, Icon, NumlProvider, ThemeProvider } from '../../../Core';
 
 export default {
   title: 'Example/Atoms/Chip',

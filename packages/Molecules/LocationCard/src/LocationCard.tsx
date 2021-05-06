@@ -1,4 +1,3 @@
-import T from 'prop-types';
 import React from 'react';
 import { El, Icon } from '../../../Core';
 import { TLocationCardProps } from './LocationCard.type';

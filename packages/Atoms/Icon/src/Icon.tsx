@@ -1,13 +1,8 @@
-import T from 'prop-types';
 import React from 'react';
-import { TIconProps } from './Icon.type';
+import { El } from '../../../Core';
 
-function Icon(otherProps: TIconProps) {
+function Icon(otherProps: any) {
   return <El.Icon {...otherProps} />;
 }
-
-Icon.propTypes = {
-  name: T.string,
-};
 
 export default Icon;

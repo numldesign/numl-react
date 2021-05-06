@@ -5,9 +5,9 @@ function Form(props: any) {
   const { gap, children, ...otherProps } = props;
 
   return (
-    <nu-form gap={gap} {...otherProps}>
+    <El.Form gap={gap} {...otherProps}>
       {children}
-    </nu-form>
+    </El.Form>
   );
 }
 
@@ -39,9 +39,9 @@ Form.Check = function FormCheck(allProps: any) {
   }, []);
 
   return (
-    <nu-check for={name} ref={ref} color="hue(1)">
+    <El.Check for={name} ref={ref} color="hue(1)">
       {message}
-    </nu-check>
+    </El.Check>
   );
 };
 

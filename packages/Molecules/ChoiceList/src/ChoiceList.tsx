@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Checkbox } from '../../../Atoms/Checkbox';
-import { Radio } from '../../../Atoms/Radio';
+import { Checkbox, El, Radio } from '../../../Core';
 import { TCheckChoiceListProps, TChoiceListProps, TRadioChoiceListProps } from './ChoiceList.type';
 
 function ChoiceList(allProps: TChoiceListProps) {
@@ -26,17 +25,17 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps)
   if (choiceList.length) {
     return (
       <Radio.Group value={selected} onChange={onChange}>
-        <nu-list type="none">
+        <El.List type="none">
           {choiceList.map((choice: { label: any; value: any; renderChildren: any }) => {
             const { label, value, renderChildren } = choice;
             return (
-              <nu-listitem key={value}>
+              <El.Listitem key={value}>
                 <Radio.Field value={value}>{label}</Radio.Field>
-                {renderChildren && value === selected ? <nu-list type="none">{renderChildren}</nu-list> : null}
-              </nu-listitem>
+                {renderChildren && value === selected ? <El.List type="none">{renderChildren}</El.List> : null}
+              </El.Listitem>
             );
           })}
-        </nu-list>
+        </El.List>
       </Radio.Group>
     );
   } else {
@@ -64,20 +63,20 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
 
   if (choiceList.length) {
     return (
-      <nu-list type="none">
+      <El.List type="none">
         {choiceList.map((choice: { label: any; value: any; helpText: any }) => {
           const { label, value, helpText } = choice;
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
-            <nu-listitem key={value}>
+            <El.Listitem key={value}>
               <Checkbox.Field checked={isChecked} value={value} items="start" onInput={handleChecklistChange}>
                 <El.Block>{label}</El.Block>
                 <El.Block color="#text-soft">{helpText}</El.Block>
               </Checkbox.Field>
-            </nu-listitem>
+            </El.Listitem>
           );
         })}
-      </nu-list>
+      </El.List>
     );
   } else {
     return null;

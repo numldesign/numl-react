@@ -1,7 +1,7 @@
 import React from 'react';
-import { TMessageErrorProps } from './MessageError.type';
+import { El } from '../../../Core';
 
-function MessageError(allProps: TMessageErrorProps) {
+function MessageError(allProps: any) {
   let { icon, theme, children, ...otherProps } = allProps;
 
   return (

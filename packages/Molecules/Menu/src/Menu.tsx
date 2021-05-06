@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { TMenuItemProps, TMenuProps } from './Menu.type';
-
-function Menu(allProps: TMenuProps) {
+import { El } from '../../../Core';
+function Menu(allProps: any) {
   const { children, ...otherProps } = allProps;
-  return <nu-menu {...otherProps}>{children}</nu-menu>;
+  return <El.Menu {...otherProps}>{children}</El.Menu>;
 }
 
-Menu.Item = function MenuItem(allProps: TMenuItemProps) {
+Menu.Item = function MenuItem(allProps: any) {
   const ref: any = useRef();
   const { children, onClick, ...otherProps } = allProps;
 

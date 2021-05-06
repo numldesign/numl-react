@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Checkbox from '../../../Atoms/Checkbox/src/Checkbox';
+import { El } from '../../../Core';
 import { TOptionListProps } from './OptionList.type';
 
 function OptionList(allProps: TOptionListProps) {
@@ -26,19 +26,19 @@ function OptionList(allProps: TOptionListProps) {
   return (
     <El.Block {...otherProps}>
       {renderHeader}
-      <nu-listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
+      <El.Listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
         {options && options.length
           ? options.map((item: any, index: any) => {
               const checked = multiSelect && selected && selected.includes(String(index));
               return (
-                <nu-option key={index} value={index} {...contentWrapperProps}>
+                <El.Option key={index} value={index} {...contentWrapperProps}>
                   {multiSelect ? (
                     <El.Block {...checkboxWrapperProps}>
-                      <Checkbox checked={checked} />
+                      <El.Checkbox checked={checked} />
                     </El.Block>
                   ) : null}
                   {renderContent && renderContent({ item, index })}
-                </nu-option>
+                </El.Option>
               );
             })
           : null}
@@ -54,21 +54,21 @@ function OptionList(allProps: TOptionListProps) {
                     const index = item.index;
                     const checked = multiSelect && selected && selected.includes(String(index));
                     return (
-                      <nu-option key={index} value={index} {...contentWrapperProps}>
+                      <El.Option key={index} value={index} {...contentWrapperProps}>
                         {multiSelect ? (
                           <El.Block {...checkboxWrapperProps}>
-                            <Checkbox checked={checked} />
+                            <El.Checkbox checked={checked} />
                           </El.Block>
                         ) : null}
                         {renderContent && renderContent({ item, index, sectionIndex })}
-                      </nu-option>
+                      </El.Option>
                     );
                   })}
                 </El.Block>
               );
             })
           : null}
-      </nu-listbox>
+      </El.Listbox>
     </El.Block>
   );
 }

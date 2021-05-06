@@ -1,16 +1,17 @@
-import T from 'prop-types';
 import React from 'react';
 import { El } from '../../../Core';
-import { Action } from '../../../Elements/Action';
 import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
 function Checkbox(allProps: TCheckboxProps): JSX.Element {
-  let { checked, disabled, ...otherProps } = allProps;
+  let { checked, disabled, children, ...otherProps } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
-
-  return Action({ as: 'nu-checkbox', checked, disabled, ...otherProps });
+  return (
+    <El.Checkbox checked={checked} disabled={disabled} {...otherProps}>
+      {children}
+    </El.Checkbox>
+  );
 }
 
 Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
@@ -21,15 +22,14 @@ Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Elem
 
   return (
     <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {Action({
-        as: 'nu-checkbox',
-        checked,
-        disabled,
-        id,
-        onTap,
-        onInput,
-        value, // if not pass value, onInput handler return only Boolean
-      })}
+      <El.Checkbox
+        checked={checked}
+        disabled={disabled}
+        id={id}
+        onTap={onTap}
+        onInput={onInput}
+        value={value}
+      ></El.Checkbox>
       {label && !children ? label : ''}
       {children ? children : ''}
     </El.Field>

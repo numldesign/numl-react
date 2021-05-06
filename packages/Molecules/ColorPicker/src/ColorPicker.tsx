@@ -83,7 +83,7 @@ class ColorSelector extends React.Component {
     this.ctx2.fillStyle = grd1;
     this.ctx2.fill();
   }
-  click(e) {
+  click(e: any) {
     console.log('click');
     this.x = e.offsetX;
     this.y = e.offsetY;
@@ -91,25 +91,24 @@ class ColorSelector extends React.Component {
     this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
     this.fillGradient();
   }
-  mousedown(e) {
+  mousedown(e: any) {
     console.log('mousedown');
     this.drag = true;
     this.changeColor(e);
   }
 
-  mousemove(e) {
+  mousemove(e: any) {
     console.log('mousemove');
     if (this.drag) {
       this.changeColor(e);
     }
   }
 
-  mouseup(e) {
-    console.log(this.rgbaColor);
+  mouseup(_e: any) {
     this.drag = false;
   }
 
-  changeColor(e) {
+  changeColor(e: any) {
     console.log(this.rgbaColor);
     this.x = e.offsetX;
     this.y = e.offsetY;
@@ -145,15 +144,16 @@ class ColorSelector extends React.Component {
   }
 
   render() {
+    let tempState: any = this.state;
     return (
       <El.Grid
-        columns={this.state.columns}
-        padding={this.state.padding}
-        items={this.state.items}
-        gap={this.state.gap}
-        content={this.state.content}
+        columns={tempState.columns}
+        padding={tempState.padding}
+        items={tempState.items}
+        gap={tempState.gap}
+        content={tempState.content}
       >
-        <nu-slider2d
+        <El.RangeSlider2d
           column="1"
           width="15.375rem"
           height="15.375rem"
@@ -174,7 +174,7 @@ class ColorSelector extends React.Component {
           max="255"
         >
           <canvas ref={(elem) => (this.colorBlock = elem)} width="246px" height="246px"></canvas>
-        </nu-slider2d>
+        </El.RangeSlider2d>
         <El.RangeSlider
           column="2"
           height="15.375rem"
@@ -203,17 +203,17 @@ function ColorCode(props: any) {
     <El.Block {...props} padding>
       <El.Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
         <El.Button column="1" height="2.25rem" toggle text="normal">
-          <El>RGB</El>
+          <El.BaseElement>RGB</El.BaseElement>
           <El.Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></El.Icon>
         </El.Button>
-        <nu-buttongroup column="2" height="2.25rem" value="rgb">
+        <El.ButtonGroup column="2" height="2.25rem" value="rgb">
           <El.Grid columns="auto auto auto" items="center" content="stretch">
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
-            <El.Input.Number precision="0" min="0" max="255" value="0" label="Number input"></El.Input.Number>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
+            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
           </El.Grid>
-        </nu-buttongroup>
-        <El.Input.Number precision="0" min="0" max="100" value="0" label="Percents input"></El.Input.Number>
+        </El.ButtonGroup>
+        <El.NumberInput precision="0" min="0" max="100" value="0" label="Percents input"></El.NumberInput>
       </El.Grid>
     </El.Block>
   );

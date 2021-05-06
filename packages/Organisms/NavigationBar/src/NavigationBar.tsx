@@ -1,11 +1,12 @@
 import React from 'react';
+import { El } from '../../../Core';
 
-function NavigationBarRow(props) {
+function NavigationBarRow(props: any) {
   let { items, ...otherProps } = props;
   return (
-    <El.Grid content="start stretch" item="start stretch" height="90vh" overflow="auto">
+    <El.Grid content="start stretch" item="start stretch" height="90vh" overflow="auto" {...otherProps}>
       {items &&
-        items.map(function (eachItem) {
+        items.map(function (eachItem: any) {
           return (
             <El.Grid
               content="space-between"
@@ -37,27 +38,17 @@ function NavigationBarRow(props) {
   );
 }
 
-function NavigationBar(props) {
+function NavigationBar(props: any) {
   let { items, ...otherProps } = props;
   return (
-    <El.Grid content="stretch" height="100vh" width="min 256px">
+    <El.Grid content="stretch" height="100vh" width="min 256px" {...otherProps}>
       <NavigationBarRow items={items}></NavigationBarRow>
-      <nu-footer
-        column="0"
-        fill=""
-        border
-        height="10vh"
-        padding="1x 2x"
-        cursor="pointer"
-        height="max 70px"
-        use-hover
-        mark="hover"
-      >
+      <El.Footer column="0" fill="" border padding="1x 2x" cursor="pointer" height="max 70px" use-hover mark="hover">
         <El.Icon column="1" name="settings-outline"></El.Icon>
         <El.BaseElement text="middle" padding column="2">
           Settings
         </El.BaseElement>
-      </nu-footer>
+      </El.Footer>
     </El.Grid>
   );
 }

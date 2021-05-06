@@ -1,6 +1,5 @@
-import T from 'prop-types';
 import React from 'react';
-import { Action } from '../../../Elements/Action';
+import { El } from '../../../Core';
 import { Icon } from '../../Icon';
 import { TTagProps } from './Tag.type';
 
@@ -11,18 +10,12 @@ function Tag(allProps: TTagProps): JSX.Element {
     <El.Badge size={size} theme={theme} radius="left right" padding="0.5x 1x 0.5x 1x" space="50% 0" {...otherProps}>
       {label}
       {deletable ? (
-        <Action>
+        <El.Action>
           <Icon name="close-outline" />
-        </Action>
+        </El.Action>
       ) : null}
     </El.Badge>
   );
 }
-
-Tag.propTypes = {
-  size: T.string,
-  label: T.string,
-  deletable: T.bool,
-};
 
 export default Tag;

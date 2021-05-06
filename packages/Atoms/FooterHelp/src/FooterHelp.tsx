@@ -8,9 +8,9 @@ function FooterHelp(allProps: TFooterHelp) {
   return (
     <El.Block radius="4x" border="1bw" padding="2x" {...otherProps}>
       {typeof icon === 'string' ? <El.Icon name={icon} color="light" /> : icon}
-      <El padding="0 4px" color="light">
+      <El.BaseElement padding="0 4px" color="light">
         {label}
-      </El>
+      </El.BaseElement>
       {typeof link === 'string' ? <Link to={link} label={linkLabel} icon="exit-outline" /> : link}
     </El.Block>
   );

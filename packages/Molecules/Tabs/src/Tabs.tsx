@@ -1,5 +1,5 @@
-import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
+import { El } from '../../../Core';
 import { TTabItemProps, TTabsProps } from './Tabs.type';
 
 function Tabs(allProps: TTabsProps) {
@@ -16,10 +16,10 @@ function Tabs(allProps: TTabsProps) {
 
   return (
     <El.Block>
-      <nu-tablist ref={ref} content={content} value={defaultValue} {...otherProps}>
+      <El.TabList ref={ref} content={content} value={defaultValue} {...otherProps}>
         {prefix}
         {children}
-      </nu-tablist>
+      </El.TabList>
       {children.map((child: any) => {
         return (
           <El.Block key={child.props.tab} id={child.props.tab}>
@@ -34,18 +34,12 @@ function Tabs(allProps: TTabsProps) {
 Tabs.Item = function TabItem(allProps: TTabItemProps) {
   const { label, tab, prefix, suffix, ...otherProps } = allProps;
   return (
-    <nu-tab content="center" value={tab} control={tab} trigger {...otherProps}>
+    <El.Tab content="center" value={tab} control={tab} trigger {...otherProps}>
       {prefix}
       {label}
       {suffix}
-    </nu-tab>
+    </El.Tab>
   );
-};
-
-Tabs.propTypes = {
-  prefix: T.oneOfType([T.string, T.element]),
-  defaultValue: T.string,
-  onChange: T.func,
 };
 
 export default Tabs;

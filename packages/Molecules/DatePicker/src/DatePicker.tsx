@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Card } from '../../../Core';
 import { TDatePickerProps } from './DatePicker.type';
 
 function DatePicker(allProps: TDatePickerProps) {
@@ -11,7 +12,7 @@ function DatePicker(allProps: TDatePickerProps) {
     }
   }, []);
 
-  return <nu-card ref={ref} use-datePicker width="min-content" {...otherProps} />;
+  return <Card ref={ref} use-datePicker width="min-content" {...otherProps} />;
 }
 
 export default DatePicker;

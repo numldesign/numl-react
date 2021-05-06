@@ -33,10 +33,10 @@ Card.Header = function CardHeader(props: any) {
   const { heading, subheading, headerActions, ...otherProps } = props;
   return (
     <El.Pane gap="1x" content="stretch space-between" {...otherProps}>
-      <El>
+      <El.BaseElement>
         {heading ? <El.Block size="lg"> {heading}</El.Block> : null}
         {subheading ? <El.Block size="xs"> {subheading}</El.Block> : null}
-      </El>
+      </El.BaseElement>
       {typeof headerActions === 'string' ? (
         <El.Button color="special" size="lg" border="0">
           {headerActions}

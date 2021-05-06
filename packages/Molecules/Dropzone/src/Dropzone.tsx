@@ -1,10 +1,11 @@
 import React from 'react';
+import { El } from '../../../Core';
 
 function Dropzone(props: any) {
   const { width = '100%', height = '15.625rem', children, ...otherProps } = props;
 
   return (
-    <nu-fileinput width={width} height={height} {...otherProps} flow="row">
+    <El.FileInput width={width} height={height} {...otherProps} flow="row">
       <El.Block row="-3">
         <svg width="97" viewBox="0 0 97 88" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -48,10 +49,10 @@ function Dropzone(props: any) {
           />
         </svg>
       </El.Block>
-      <nu-btn row="-2">Add file</nu-btn>
+      <El.Button row="-2">Add file</El.Button>
       <El.Block row="-1">or drop files to upload</El.Block>
       {children}
-    </nu-fileinput>
+    </El.FileInput>
   );
 }
 

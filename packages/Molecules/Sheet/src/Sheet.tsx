@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Checkbox } from '../../../Atoms/Checkbox';
+import { Checkbox, El } from '../../../Core';
 import { TSheetProps } from './Sheet.type';
 
 function Sheet(allProps: TSheetProps): JSX.Element {
@@ -25,10 +25,10 @@ function Sheet(allProps: TSheetProps): JSX.Element {
   return (
     <El.Block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
       {heading ? (
-        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
+        <El.Pane padding="2x" border="bottom" items="start" content="space-between">
           {heading}
           {closeAction}
-        </nu-pane>
+        </El.Pane>
       ) : null}
       <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
         {choiceList.length
@@ -44,9 +44,9 @@ function Sheet(allProps: TSheetProps): JSX.Element {
           : null}
       </El.Flex>
       {footerActions ? (
-        <nu-pane content="space-between" gap="1x" padding="2x">
+        <El.Pane content="space-between" gap="1x" padding="2x">
           {footerActions}
-        </nu-pane>
+        </El.Pane>
       ) : null}
     </El.Block>
   );

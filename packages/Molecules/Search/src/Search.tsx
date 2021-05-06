@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Icon } from '../../../Atoms/Icon';
+import { El } from '../../../Core';
 import { TSearchProps } from './Search.type';
 
 function Search(allProps: TSearchProps): JSX.Element {
@@ -33,26 +34,26 @@ function Search(allProps: TSearchProps): JSX.Element {
 
   return (
     <El.Grid gap="1x" {...otherProps}>
-      <nu-inputgroup {...inputGroupProps}>
+      <El.InputGroup {...inputGroupProps}>
         <Icon name="search-outline" width="5x" />
-        <nu-input ref={ref} value={value} {...inputProps} />
+        <El.Input ref={ref} value={value} {...inputProps} />
         {extraActions}
-      </nu-inputgroup>
+      </El.InputGroup>
 
-      <nu-listbox ref={listBoxRef} border="0" padding="0" gap {...resultContainerProps}>
+      <El.Listbox ref={listBoxRef} border="0" padding="0" gap {...resultContainerProps}>
         {renderList.length
           ? renderList.map((item) => {
               if (renderResultItem) {
                 return (
-                  <nu-option key={item.value} value={item.value} columns="1fr">
+                  <El.Option key={item.value} value={item.value} columns="1fr">
                     {renderResultItem(item)}
-                  </nu-option>
+                  </El.Option>
                 );
               }
               return;
             })
           : null}
-      </nu-listbox>
+      </El.Listbox>
     </El.Grid>
   );
 }

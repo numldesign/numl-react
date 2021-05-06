@@ -1,16 +1,16 @@
 import T from 'prop-types';
 import React from 'react';
-import { Action } from '../../../Elements/Action';
+import { El } from '../../../Core';
 import { TLinkProps } from './Link.type';
 
 function Link(allProps: TLinkProps) {
   const { label, icon, ...otherProps } = allProps;
 
   return (
-    <Action as="nu-link" text="n" {...otherProps}>
+    <El.Action as="nu-link" text="n" {...otherProps}>
       {label}
       {icon && (typeof icon === 'string' ? <El.Icon name={icon} text="middle" /> : icon)}
-    </Action>
+    </El.Action>
   );
 }
 

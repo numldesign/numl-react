@@ -1,6 +1,5 @@
-import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { Action } from '../../../Elements/Action';
+import { El } from '../../../Core';
 import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
 function Radio(allProps: TRadioProps): JSX.Element {
@@ -8,8 +7,7 @@ function Radio(allProps: TRadioProps): JSX.Element {
 
   checked = !!checked || null;
   disabled = !!disabled || null;
-
-  return Action({ as: 'nu-radio', checked, disabled, ...otherProps });
+  return <El.Radio checked={checked} disabled={disabled} {...otherProps}></El.Radio>;
 }
 
 Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
@@ -27,7 +25,7 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
   }, []);
 
   return (
-    <nu-radiogroup
+    <El.RadioGroup
       ref={ref}
       disabled={disabled}
       gap="1x :inline[2x]"
@@ -36,7 +34,7 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
       {...otherProps}
     >
       {children}
-    </nu-radiogroup>
+    </El.RadioGroup>
   );
 };
 
@@ -48,21 +46,10 @@ Radio.Field = function RadioField(allProps: TRadioFieldProps) {
 
   return (
     <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {Action({
-        as: 'nu-radio',
-        checked,
-        disabled,
-        id,
-        ...otherProps,
-      })}
+      <El.Radio checked disabled id {...otherProps}></El.Radio>
       {children ? <El.Label for={id}>{children}</El.Label> : ''}
     </El.Field>
   );
-};
-
-Radio.propTypes = {
-  ...Action.propTypes,
-  checked: T.bool,
 };
 
 export default Radio;

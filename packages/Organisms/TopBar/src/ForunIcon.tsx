@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ForunIcon = (props) => {
+export const ForunIcon = (props: any) => {
   return (
     <svg width="143" height="32" viewBox="0 0 143 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

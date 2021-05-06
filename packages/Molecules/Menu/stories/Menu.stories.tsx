@@ -92,9 +92,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="cut-outline" />
           Cut
-          <El>
-            <El.Icon name="logo-windows" />X
-          </El>
+          <El.BaseElement>
+            <El.Icon name="logo-windows" />
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item
           value="Copy"
@@ -105,9 +105,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="copy-outline" />
           Copy
-          <El>
+          <El.BaseElement>
             <El.Icon name="logo-windows" />C
-          </El>
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item
           border="bottom"
@@ -119,9 +119,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="clipboard-outline" />
           Paste
-          <El>
+          <El.BaseElement>
             <El.Icon name="logo-windows" />P
-          </El>
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item value="Webclipboard" columns="auto 1fr auto">
           <El.Icon name="cloudy-outline" />

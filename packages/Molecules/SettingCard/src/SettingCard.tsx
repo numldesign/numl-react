@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
+import { El } from '../../../Core';
 import { TSettingCardProps } from './SettingCard.type';
 
 function SettingCard(allProps: TSettingCardProps) {
@@ -15,9 +15,9 @@ function SettingCard(allProps: TSettingCardProps) {
   } = allProps;
 
   return (
-    <nu-pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
+    <El.Pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
       {typeof icon === 'string' ? (
-        <Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
+        <El.Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
       ) : (
         icon
       )}
@@ -27,7 +27,7 @@ function SettingCard(allProps: TSettingCardProps) {
         </El.Block>
         <El.Block>{subtitle}</El.Block>
       </El.Block>
-    </nu-pane>
+    </El.Pane>
   );
 }
 

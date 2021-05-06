@@ -20,22 +20,22 @@ function Toast(props: any) {
         {!icon ? null : <El.Icon column="1" name="eye-outline"></El.Icon>}
         <El.Block>
           <El.Block>
-            <El column="2" size="16px auto">
+            <El.BaseElement column="2" size="16px auto">
               {text}
-            </El>
+            </El.BaseElement>
           </El.Block>
           {!helpText ? null : (
             <El.Block>
-              <El column="2" size="14px auto">
+              <El.BaseElement column="2" size="14px auto">
                 {helpText}
-              </El>
+              </El.BaseElement>
             </El.Block>
           )}
         </El.Block>
         {!action ? null : (
-          <El column="3" size="15px auto">
+          <El.BaseElement column="3" size="15px auto">
             Button
-          </El>
+          </El.BaseElement>
         )}
         <El.Icon column="4" name="close-outline"></El.Icon>
       </El.Grid>
