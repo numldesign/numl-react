@@ -54,7 +54,7 @@ function Carousel(allProps: TCarouselProps): JSX.Element {
         {itemList.map((_item, _index) => {
           const isActive = currentSlide === _index;
           return (
-            <nu-circle
+            <El.Circle
               key={_index}
               value={_index}
               size="1x"

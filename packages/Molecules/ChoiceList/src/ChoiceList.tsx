@@ -87,7 +87,7 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
  *
  * @param {*} value handle user input values and convert it into Set
  */
-const getDefaultCheckValue = (value: any): Set<any> => {
+const getDefaultCheckValue = (value: any): any => {
   if (typeof value === 'string') {
     return new Set([value]);
   } else if (Array.isArray(value)) {
