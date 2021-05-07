@@ -40,10 +40,10 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
-    "@numl-react/core": "^0.0.15",
-    "rimraf": "^3.0.2"
+    "@numl-react/core": "^0.0.15"
   },
   "devDependencies": {
+    "prop-types": "^15.7.2",
     "vite": "^2.2.4"
   }
 }

@@ -1,9 +1,7 @@
-import T from 'prop-types';
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TLinkProps } from './Link.type';
 
-function Link(allProps: TLinkProps) {
+function Link(allProps: any) {
   const { label, icon, ...otherProps } = allProps;
 
   return (
@@ -13,11 +11,5 @@ function Link(allProps: TLinkProps) {
     </El.Action>
   );
 }
-
-Link.propTypes = {
-  to: T.string,
-  label: T.string,
-  icon: T.oneOfType([T.string, T.element]),
-};
 
 export default Link;

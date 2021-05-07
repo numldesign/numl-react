@@ -51,6 +51,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "prop-types": "^15.7.2",
     "vite": "^2.2.4"
   }
 }
