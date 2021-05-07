@@ -3,14 +3,15 @@
   "version": "0.0.14",
   "description": "Core Packages of Numl React by NUML.Design.",
   "keywords": [
-    "component",
+    "components",
     "elements",
-    "initials",
     "react",
-    "react-components",
-    "profile-image",
     "numl-react",
-    "photo"
+    "design-system",
+    "react-components",
+    "accessible",
+    "ui-library",
+    "ui-kit"
   ],
   "author": "Numl.Design Team",
   "license": "MIT",
