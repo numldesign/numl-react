@@ -25,8 +25,8 @@
   "typings": "./dist/types/Atoms/index.d.ts",
   "exports": {
     ".": {
-      "require": "./index",
-      "default": "./index"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
   "files": [

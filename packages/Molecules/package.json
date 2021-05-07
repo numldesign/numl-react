@@ -25,8 +25,8 @@
   "typings": "./dist/types/Core/index.d.ts",
   "exports": {
     ".": {
-      "require": "./index",
-      "default": "./index"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
   "files": [
