@@ -1,16 +1,9 @@
-import {
-  Button,
-  Heading,
-  Base,
-  PropsProvider,
-  Link,
-  Block,
-} from "@numl-react/core";
+import { Button, El, PropsProvider } from '@numl-react/core';
 
-export default function () {
+export default () => {
   return (
-    <Block order="2|||1" show="y|||n" is-responsive="root">
-      <Block
+    <El.Block order="2|||1" show="y|||n" is-responsive="root">
+      <El.Block
         display="flex"
         flow="column"
         items="stretch"
@@ -29,28 +22,27 @@ export default function () {
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
- 
+
         <TableOfContentSection heading="Table of contents" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
         <TableOfContentItem text="Next JS Project" to="/nextjs" />
-        
-      </Block>
-    </Block>
-  );
-}
-
-const TableOfContentSection = ({ heading = "" }) => {
-  return (
-    <Heading.Two size="sm" text="up b" color="#text.60" padding="0 0 2x 1x">
-      {heading}
-    </Heading.Two>
+      </El.Block>
+    </El.Block>
   );
 };
 
-const TableOfContentItem = ({ text = "", to = "" }) => {
+const TableOfContentSection = ({ heading = '' }) => {
+  return (
+    <El.H2 size="sm" text="up b" color="#text.60" padding="0 0 2x 1x">
+      {heading}
+    </El.H2>
+  );
+};
+
+const TableOfContentItem = ({ text = '', to = '' }) => {
   return (
     <Button
       to={to}
@@ -69,8 +61,7 @@ const TableOfContentItem = ({ text = "", to = "" }) => {
       is-action
       is-focusable
     >
-      <PropsProvider offset="0 * 1x"></PropsProvider>{" "}
-      <Base text="ellipsis">{text}</Base>
+      <PropsProvider offset="0 * 1x"></PropsProvider> <El.BaseElement text="ellipsis">{text}</El.BaseElement>
     </Button>
   );
 };

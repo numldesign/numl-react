@@ -1,9 +1,8 @@
-import { Base, Block, Button, Heading, Pane, PropsProvider } from '@numl-react/core';
-import { Icon } from '@numl-react/icon';
+import { El, PropsProvider } from '@numl-react/core';
 
 export default () => {
   return (
-    <Block
+    <El.Block
       border="bottom"
       padding="1.5x 0|||.5x 0"
       place="fixed top"
@@ -13,43 +12,43 @@ export default () => {
       is-responsive="root"
     >
       <PropsProvider grid-gap="8x||4x"></PropsProvider>
-      <Pane gap="1gp" width="@content-width" space="around" content="space-between">
-        <Block id="logo">
-          <Block text="nowrap" width="@sidebar-width" gap="1x">
-            <Heading.Two size="xl">
+      <El.Pane gap="1gp" width="@content-width" space="around" content="space-between">
+        <El.Block id="logo">
+          <El.Block text="nowrap" width="@sidebar-width" gap="1x">
+            <El.H2 size="xl">
               Numl React .
-              <Button padding="1x right">
-                <Base>
+              <El.Button padding="1x right">
+                <El.BaseElement>
                   <>Handbook</>
-                </Base>
-                <nu-dropdownicon role="img" aria-hidden="true" is-provider="ion" name="chevron-down"></nu-dropdownicon>
-                <nu-popuplistbox size="md" gap="0" place="top -1x">
-                  <nu-option value="storybook" aria-selected="false">
+                </El.BaseElement>
+                <El.DropdownIcon role="img" aria-hidden="true" is-provider="ion" name="chevron-down"></El.DropdownIcon>
+                <El.PopupListBox size="md" gap="0" place="top -1x">
+                  <El.Option value="storybook" aria-selected="false">
                     Storybook
-                  </nu-option>
-                  <nu-option value="handbook" aria-selected="true">
+                  </El.Option>
+                  <El.Option value="handbook" aria-selected="true">
                     Handbook
-                  </nu-option>
-                  <nu-option value="reference" aria-selected="false">
+                  </El.Option>
+                  <El.Option value="reference" aria-selected="false">
                     Reference
-                  </nu-option>
-                  <nu-option value="repl" aria-selected="false">
+                  </El.Option>
+                  <El.Option value="repl" aria-selected="false">
                     REPL
-                  </nu-option>
-                </nu-popuplistbox>
-              </Button>
-            </Heading.Two>
-          </Block>
-        </Block>
-        <Block grow="1" show="y||n" is-responsive="root">
-          <Block>
-            <nu-inputgroup
+                  </El.Option>
+                </El.PopupListBox>
+              </El.Button>
+            </El.H2>
+          </El.Block>
+        </El.Block>
+        <El.Block grow="1" show="y||n" is-responsive="root">
+          <El.Block>
+            <El.InputGroup
               radius
               fill="^root #subtle :dark[#input]"
               border="hidden :hover[#special.50]"
               transition="all"
             >
-              <Icon name="search" opacity=".5" padding="0 1x" role="img" grow="0" />
+              <El.Icon name="search" opacity=".5" padding="0 1x" role="img" grow="0" />
               <El.Search
                 grow="1"
                 fill="#clear"
@@ -57,13 +56,13 @@ export default () => {
                 use-hotkey="/"
                 border="0"
               ></El.Search>
-            </nu-inputgroup>
-          </Block>
-        </Block>
-        <Pane content="space-between" width="@sidebar-width|||auto" size="lg" gap="1x" is-responsive="root">
+            </El.InputGroup>
+          </El.Block>
+        </El.Block>
+        <El.Pane content="space-between" width="@sidebar-width|||auto" size="lg" gap="1x" is-responsive="root">
           v0.1.0
-        </Pane>
-      </Pane>
-    </Block>
+        </El.Pane>
+      </El.Pane>
+    </El.Block>
   );
 };
