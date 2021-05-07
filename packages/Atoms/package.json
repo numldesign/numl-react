@@ -47,5 +47,8 @@
   "dependencies": {
     "@numl-react/core": "^0.0.14",
     "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "vite": "^2.2.4"
   }
 }
