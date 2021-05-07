@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@numl-react/core": "^0.0.15"
+  }
+}

@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/numldesign/numl-react/issues"
   },
-  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a"
+  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
+  "dependencies": {
+    "@numl-react/core": "^0.0.15"
+  }
 }

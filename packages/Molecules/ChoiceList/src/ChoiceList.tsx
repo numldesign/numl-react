@@ -1,5 +1,6 @@
+import { Checkbox, Radio } from '@numl-react/atoms';
+import { El } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
-import { Checkbox, El, Radio } from '@numl-react/core';
 import { TCheckChoiceListProps, TChoiceListProps, TRadioChoiceListProps } from './ChoiceList.type';
 
 function ChoiceList(allProps: TChoiceListProps) {

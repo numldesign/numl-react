@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { Checkbox, El } from '@numl-react/core';
+import { El } from '@numl-react/core';
+import { Checkbox } from '@numl-react/atoms';
 import { TSheetProps } from './Sheet.type';
 
 function Sheet(allProps: TSheetProps): JSX.Element {
