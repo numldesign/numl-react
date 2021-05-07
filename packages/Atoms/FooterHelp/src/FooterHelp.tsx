@@ -1,8 +1,7 @@
 import { El } from '@numl-react/core';
 import React from 'react';
-import { TFooterHelp } from './FooterHelp.type';
 
-function FooterHelp(allProps: TFooterHelp) {
+function FooterHelp(allProps: any) {
   const { label, icon, link, linkLabel, ...otherProps } = allProps;
   return (
     <El.Block radius="4x" border="1bw" padding="2x" {...otherProps}>

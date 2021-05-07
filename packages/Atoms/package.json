@@ -15,8 +15,7 @@
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
     "build": "vite build",
-    "postbuild": "npm run build:types && npm run index",
-    "index": "echo 'export * from \"./dist/core.es.js\";' > index.js ",
+    "postbuild": "npm run build:types",
     "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
   },
   "main": "./dist/core.cjs.js",
@@ -46,6 +45,7 @@
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
     "@numl-react/core": "^0.0.14",
+    "@numl-react/utility": "^0.0.15",
     "@types/mocha": "^8.2.2",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",

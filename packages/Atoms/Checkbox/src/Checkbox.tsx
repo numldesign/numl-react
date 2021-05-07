@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
-function Checkbox(allProps: TCheckboxProps): JSX.Element {
+function Checkbox(allProps: any): JSX.Element {
   let { checked, disabled, children, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -14,7 +13,7 @@ function Checkbox(allProps: TCheckboxProps): JSX.Element {
   );
 }
 
-Checkbox.Field = function CheckboxField(allProps: TCheckboxFieldProps): JSX.Element {
+Checkbox.Field = function CheckboxField(allProps: any): JSX.Element {
   let { checked, disabled, id, children, onTap, label, onInput, value, ...otherProps } = allProps;
 
   checked = !!checked || null;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TTextAreaFieldProps, TTextAreaProps } from './TextArea.type';
-function TextArea(allProps: TTextAreaProps) {
+
+function TextArea(allProps: any) {
   const { ...otherProps } = allProps;
   return <El.TextArea {...otherProps} />;
 }
 
-TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
+TextArea.Field = function TextAreaField(allProps: any) {
   const { children, fieldProps = {}, ...otherProps } = allProps;
 
   return (

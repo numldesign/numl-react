@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TLocationCardProps } from './LocationCard.type';
 
-function LocationCard(allProps: TLocationCardProps): JSX.Element {
+function LocationCard(allProps: any): JSX.Element {
   const { name, radius = '1x', border = '1bw', fill = 'bg', address, ...otherProps } = allProps;
 
   return (

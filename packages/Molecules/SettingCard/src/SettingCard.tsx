@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TSettingCardProps } from './SettingCard.type';
 
-function SettingCard(allProps: TSettingCardProps) {
+function SettingCard(allProps: any) {
   const {
     title,
     fill = 'bg',

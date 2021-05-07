@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TExceptionListProps } from './ExceptionList.type';
 
-function ExceptionList(allProps: TExceptionListProps) {
+function ExceptionList(allProps: any) {
   let { items, ...otherProps } = allProps;
 
   return (

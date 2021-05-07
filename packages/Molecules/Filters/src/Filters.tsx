@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TFiltersProps } from './Filters.type';
 
-function Filters(allProps: TFiltersProps): JSX.Element {
+function Filters(allProps: any): JSX.Element {
   const { filterSearch, filterGroup, extra, responsive, ...otherProps } = allProps;
   return (
     <El.Block responsive={responsive}>

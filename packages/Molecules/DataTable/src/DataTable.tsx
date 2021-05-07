@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TDataTableProps } from './DataTable.type';
 
-function DataTable(allProps: TDataTableProps) {
+function DataTable(allProps: any) {
   const { headings, rows, width = '100%', height = '100%', totals, footerContent, ...otherProps } = allProps;
 
   let headingList = headings && headings.length ? [...headings] : [];

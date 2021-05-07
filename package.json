@@ -107,6 +107,7 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
+    "@numl-react/utility": "file:packages/Utilities",
     "uuidv4": "^6.2.7"
   },
   "dependenciesMeta": {

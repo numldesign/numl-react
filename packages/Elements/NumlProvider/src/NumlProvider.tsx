@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LoadNuml } from '../../../helpers';
+import { LoadNuml } from '@numl-react/utility';
 import { Root } from './../../Root';
 
 export const NumlProvider = (props: any) => {
@@ -17,7 +17,7 @@ export const NumlProvider = (props: any) => {
       .then(function () {
         setState(true);
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error);
       });
   }, []);

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { El, Molecules, ModalHeader, ModalBody, ModalFooter } from '@numl-react/core';
-import { isRefernceNull } from '../../../Utilities';
+import { isRefernceNull } from '@numl-react/utility';
 import Modal from '../src/Modal';
 
 export default {

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Avatar } from '../../../Atoms/Avatar';
-import { Checkbox } from '../../../Atoms/Checkbox';
+import { Avatar, Checkbox } from '@numl-react/atoms';
 import { El } from '@numl-react/core';
-import { TResourceListProps } from './ResourceList.type';
 
-function ResourceList(allProps: TResourceListProps) {
+function ResourceList(allProps: any) {
   const ref: any = useRef();
   const {
     selected,

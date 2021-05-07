@@ -1,9 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { El } from '@numl-react/core';
 import { Checkbox } from '@numl-react/atoms';
-import { TSheetProps } from './Sheet.type';
 
-function Sheet(allProps: TSheetProps): JSX.Element {
+function Sheet(allProps: any): JSX.Element {
   const { heading, footerActions, closeAction, choices, selected, onChange, contentHeight, ...otherProps } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];

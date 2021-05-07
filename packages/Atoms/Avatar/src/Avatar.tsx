@@ -1,6 +1,5 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   let {
@@ -46,7 +45,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
   );
 };
 
-Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
+Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
   let {
     username,
     showIcon = true,
@@ -72,7 +71,7 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   );
 };
 
-Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
+Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
   let { username, subtitle, ...otherProps } = allProps;
 
   return (

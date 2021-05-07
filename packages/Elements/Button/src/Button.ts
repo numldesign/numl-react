@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import * as Object from '../../../Utilities/';
+import * as Object from '@numl-react/utility';
 const Button = React.forwardRef((props: any, ref: any) => {
   const { children, onTap, ...otherProps } = props;
   const [refer] = React.useState(ref || React.useRef());

@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
-import { TTabItemProps, TTabsProps } from './Tabs.type';
 
-function Tabs(allProps: TTabsProps) {
+function Tabs(allProps: any) {
   const ref: any = useRef();
 
   const { prefix, defaultValue, onChange, children, ...otherProps } = allProps;
@@ -31,7 +30,7 @@ function Tabs(allProps: TTabsProps) {
   );
 }
 
-Tabs.Item = function TabItem(allProps: TTabItemProps) {
+Tabs.Item = function TabItem(allProps: any) {
   const { label, tab, prefix, suffix, ...otherProps } = allProps;
   return (
     <El.Tab content="center" value={tab} control={tab} trigger {...otherProps}>

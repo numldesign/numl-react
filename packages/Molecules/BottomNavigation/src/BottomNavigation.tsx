@@ -1,7 +1,6 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TBottomNavigationItemProps, TBottomNavigationProps } from './BottomNavigation.type';
-function BottomNavigation(allProps: TBottomNavigationProps): JSX.Element {
+function BottomNavigation(allProps: any): JSX.Element {
   const { header, children, ...otherProps } = allProps;
 
   return (
@@ -11,7 +10,7 @@ function BottomNavigation(allProps: TBottomNavigationProps): JSX.Element {
   );
 }
 
-BottomNavigation.Item = function BottomNavigationItem(allProps: TBottomNavigationItemProps) {
+BottomNavigation.Item = function BottomNavigationItem(allProps: any) {
   const { children, ...otherProps } = allProps;
 
   return (

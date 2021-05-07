@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TTooltipProps } from './Tooltip.type';
 
-function Tooltip(allProps: TTooltipProps) {
+function Tooltip(allProps: any) {
   const { description, width, ...otherProps } = allProps;
   return (
     <El.Tooltip width={width || 'max-content'} {...otherProps}>

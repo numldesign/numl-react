@@ -1,8 +1,7 @@
 import React, { useCallback } from 'react';
 import { El } from '@numl-react/core';
-import { TSettingToggleProps } from './SettingToggle.type';
 
-function SettingToggle(allProps: TSettingToggleProps) {
+function SettingToggle(allProps: any) {
   const { text, activeText, inactiveText, isActive, onAction, ...otherProps } = allProps;
 
   const handleStatusChange = useCallback(() => {

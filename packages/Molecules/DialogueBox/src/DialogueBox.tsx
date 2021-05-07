@@ -1,8 +1,7 @@
 import React from 'react';
-import { TDialogueBoxProps } from './DialogueBox.type';
 import { El } from '@numl-react/core';
 
-function DialogueBox(allProps: TDialogueBoxProps) {
+function DialogueBox(allProps: any) {
   const {
     heading,
     place = 'inside',

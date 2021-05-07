@@ -1,9 +1,8 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 import Icon from '../../Icon/src/Icon';
-import { TPaginationProps } from './Pagination.type';
 
-function Pagination(allProps: TPaginationProps) {
+function Pagination(allProps: any) {
   const { flow, label, previous, next, ...otherProps } = allProps;
   const isVertical = flow === 'column';
 

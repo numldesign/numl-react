@@ -1,9 +1,8 @@
 import { Checkbox, Radio } from '@numl-react/atoms';
 import { El } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
-import { TCheckChoiceListProps, TChoiceListProps, TRadioChoiceListProps } from './ChoiceList.type';
 
-function ChoiceList(allProps: TChoiceListProps) {
+function ChoiceList(allProps: any) {
   const { heading, choices, selected, onChange, multiSelect, ...otherProps } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
@@ -20,7 +19,7 @@ function ChoiceList(allProps: TChoiceListProps) {
   );
 }
 
-ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps) {
+ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
   const { choiceList, selected, onChange } = allProps;
 
   if (choiceList.length) {
@@ -44,7 +43,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps)
   }
 };
 
-ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps) {
+ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
   const { choiceList, selected, onChange } = allProps;
 
   const [selectedValues, setSelectedValues] = useState(getDefaultCheckValue(selected));

@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TTagProps } from './Tag.type';
 
-function Tag(allProps: TTagProps): JSX.Element {
+function Tag(allProps: any): JSX.Element {
   const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;
 
   return (

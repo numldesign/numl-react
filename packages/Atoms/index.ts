@@ -1,5 +1,5 @@
 /** Exporting Methods */
-export { requireNude } from '../helpers';
+export { requireNude } from '@numl-react/utility';
 
 /*** Exporting Modules */
 export { Avatar } from './Avatar';

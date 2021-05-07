@@ -1,9 +1,8 @@
 import React from 'react';
 import { Menu } from './../../Menu';
 import { El } from '@numl-react/core';
-import { TActionListItemProps, TActionListProps } from './ActionList.type';
 
-function ActionList(allProps: TActionListProps): JSX.Element {
+function ActionList(allProps: any): JSX.Element {
   const { header, children, ...otherProps } = allProps;
 
   return (
@@ -18,7 +17,7 @@ function ActionList(allProps: TActionListProps): JSX.Element {
   );
 }
 
-ActionList.Item = function ActionItem(allProps: TActionListItemProps) {
+ActionList.Item = function ActionItem(allProps: any) {
   const { children, ...otherProps } = allProps;
 
   return (

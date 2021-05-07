@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
-import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
-function Radio(allProps: TRadioProps): JSX.Element {
+function Radio(allProps: any): JSX.Element {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
@@ -10,7 +9,7 @@ function Radio(allProps: TRadioProps): JSX.Element {
   return <El.Radio checked={checked} disabled={disabled} {...otherProps}></El.Radio>;
 }
 
-Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
+Radio.Group = function RadioGroup(allProps: any): JSX.Element {
   const ref: any = useRef();
 
   let { disabled, children, inline, onChange, ...otherProps } = allProps;
@@ -38,7 +37,7 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
   );
 };
 
-Radio.Field = function RadioField(allProps: TRadioFieldProps) {
+Radio.Field = function RadioField(allProps: any) {
   let { checked, disabled, id, label, children, ...otherProps } = allProps;
 
   checked = !!checked || null;

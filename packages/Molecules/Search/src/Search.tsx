@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Icon } from '../../../Atoms/Icon';
+import { Icon } from '@numl-react/atoms';
 import { El } from '@numl-react/core';
-import { TSearchProps } from './Search.type';
 
-function Search(allProps: TSearchProps): JSX.Element {
+function Search(allProps: any): JSX.Element {
   const ref: any = useRef();
   const listBoxRef: any = useRef();
 

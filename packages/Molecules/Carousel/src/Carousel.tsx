@@ -1,8 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { El } from '@numl-react/core';
-import { TCarouselProps } from './Carousel.type';
 
-function Carousel(allProps: TCarouselProps): JSX.Element {
+function Carousel(allProps: any): JSX.Element {
   const {
     items,
     activeIndex,

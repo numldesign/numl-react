@@ -1,8 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { TChipProps } from './Chip.type';
 
-function Chip(allProps: TChipProps): JSX.Element {
+function Chip(allProps: any): JSX.Element {
   const {
     children,
     size,
