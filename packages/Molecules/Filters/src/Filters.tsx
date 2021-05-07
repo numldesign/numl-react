@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TFiltersProps } from './Filters.type';
 
 function Filters(allProps: TFiltersProps): JSX.Element {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 function Menu(allProps: any) {
   const { children, ...otherProps } = allProps;
   return <El.Menu {...otherProps}>{children}</El.Menu>;

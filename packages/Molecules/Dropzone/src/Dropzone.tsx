@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function Dropzone(props: any) {
   const { width = '100%', height = '15.625rem', children, ...otherProps } = props;

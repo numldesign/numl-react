@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, Button, Icon, NumlProvider, ThemeProvider, El } from '../../../Core';
+import { Banner, Button, Icon, NumlProvider, ThemeProvider, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Banner',

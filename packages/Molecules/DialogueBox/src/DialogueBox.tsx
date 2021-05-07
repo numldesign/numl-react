@@ -1,6 +1,6 @@
 import React from 'react';
 import { TDialogueBoxProps } from './DialogueBox.type';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function DialogueBox(allProps: TDialogueBoxProps) {
   const {

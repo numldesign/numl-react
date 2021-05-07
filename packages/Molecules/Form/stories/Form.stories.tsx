@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Form } from '../../../Core';
+import { NumlProvider, ThemeProvider, Form } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Form',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, TextInput, Menu, Filters, El } from '../../../Core';
+import { NumlProvider, ThemeProvider, TextInput, Menu, Filters, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Filters',

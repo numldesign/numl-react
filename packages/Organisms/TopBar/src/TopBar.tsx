@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { ForunIcon } from './ForunIcon';
 function TopBar(props: any) {
   /** working on this */

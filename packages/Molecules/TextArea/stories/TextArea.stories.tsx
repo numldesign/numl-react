@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Radio, TextArea } from '../../../Core';
+import { NumlProvider, ThemeProvider, Radio, TextArea } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/TextArea',

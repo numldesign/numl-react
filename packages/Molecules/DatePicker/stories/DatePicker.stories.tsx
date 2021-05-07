@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, DatePicker } from '../../../Core';
+import { NumlProvider, ThemeProvider, DatePicker } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/DatePicker',

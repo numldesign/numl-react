@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TTextAreaFieldProps, TTextAreaProps } from './TextArea.type';
 function TextArea(allProps: TTextAreaProps) {
   const { ...otherProps } = allProps;

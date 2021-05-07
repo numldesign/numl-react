@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function CalloutCard(allProps: any): JSX.Element {
   const { heading, description, actions, padding = '2x', src, ...otherProps } = allProps;

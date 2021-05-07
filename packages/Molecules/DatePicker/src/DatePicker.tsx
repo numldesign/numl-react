@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Card } from '../../../Core';
+import { Card } from '@numl-react/core';
 import { TDatePickerProps } from './DatePicker.type';
 
 function DatePicker(allProps: TDatePickerProps) {

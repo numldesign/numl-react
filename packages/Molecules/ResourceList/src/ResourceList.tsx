@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Avatar } from '../../../Atoms/Avatar';
 import { Checkbox } from '../../../Atoms/Checkbox';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TResourceListProps } from './ResourceList.type';
 
 function ResourceList(allProps: TResourceListProps) {

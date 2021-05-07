@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TPageActionProps } from './PageAction.type';
 
 function PageAction(allProps: TPageActionProps) {

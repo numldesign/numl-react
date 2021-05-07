@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Toast } from '../../../Core';
+import { NumlProvider, ThemeProvider, Toast } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Toast',

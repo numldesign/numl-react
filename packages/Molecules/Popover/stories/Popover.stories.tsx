@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionList, Button, El, NumlProvider, Popover, TextInput, ThemeProvider } from '../../../Core';
+import { ActionList, Button, El, NumlProvider, Popover, TextInput, ThemeProvider } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Popover',

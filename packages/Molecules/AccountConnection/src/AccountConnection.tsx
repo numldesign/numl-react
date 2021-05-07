@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Avatar } from '../../../Atoms/Avatar';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TAccountConnectionProps } from './AccountConnection.type';
 
 function AccountConnection(allProps: TAccountConnectionProps): JSX.Element {

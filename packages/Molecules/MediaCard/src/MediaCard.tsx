@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, El } from './../../../Core';
+import { Card, El } from '@numl-react/core';
 
 function MediaCard(props: any) {
   const { src, action, heading, description, padding = '2x', columns = 'auto', ...otherProps } = props;

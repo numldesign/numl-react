@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function Form(props: any) {
   const { gap, children, ...otherProps } = props;

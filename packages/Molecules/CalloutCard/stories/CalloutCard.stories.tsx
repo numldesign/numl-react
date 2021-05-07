@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalloutCard, El } from './../../../Core';
+import { CalloutCard, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/CalloutCard',

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TSettingToggleProps } from './SettingToggle.type';
 
 function SettingToggle(allProps: TSettingToggleProps) {

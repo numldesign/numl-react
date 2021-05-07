@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TOptionListProps } from './OptionList.type';
 
 function OptionList(allProps: TOptionListProps) {

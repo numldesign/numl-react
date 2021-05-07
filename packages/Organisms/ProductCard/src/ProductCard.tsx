@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 function ProductCard(props: any) {
   let { width = '350px', name, image, detail, price, color, currency, sizes, rating, ...otherProps } = props;
   return (

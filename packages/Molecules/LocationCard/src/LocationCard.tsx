@@ -1,5 +1,5 @@
 import React from 'react';
-import { El, Icon } from '../../../Core';
+import { El, Icon } from '@numl-react/core';
 import { TLocationCardProps } from './LocationCard.type';
 
 function LocationCard(allProps: TLocationCardProps): JSX.Element {

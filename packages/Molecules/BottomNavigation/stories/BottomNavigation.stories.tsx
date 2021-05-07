@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, BottomNavigation, Icon } from '../../../Core';
+import { NumlProvider, ThemeProvider, BottomNavigation, Icon } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/BottomNavigation',

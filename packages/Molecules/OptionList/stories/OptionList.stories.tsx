@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, El, OptionList, Thumbnail } from '../../../Core';
+import { Badge, El, OptionList, Thumbnail } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/OptionList',

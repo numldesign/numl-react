@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Icon } from '../../../Atoms/Icon';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TSearchProps } from './Search.type';
 
 function Search(allProps: TSearchProps): JSX.Element {

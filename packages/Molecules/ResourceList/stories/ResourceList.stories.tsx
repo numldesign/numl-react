@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, ResourceList, El } from '../../../Core';
+import { NumlProvider, ThemeProvider, ResourceList, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/ResourceList',

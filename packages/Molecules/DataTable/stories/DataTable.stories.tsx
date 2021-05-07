@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, DataTable, Link } from '../../../Core';
+import { NumlProvider, ThemeProvider, DataTable, Link } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/DataTable',
