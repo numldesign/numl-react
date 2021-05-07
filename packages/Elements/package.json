@@ -47,9 +47,15 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
+    "@numl-react/atoms": "^0.0.14",
     "@numl-react/core": "^0.0.15"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "jest": "^26.6.3",
     "prop-types": "^15.7.2",
     "vite": "^2.2.4"
   }
