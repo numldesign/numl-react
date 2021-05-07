@@ -17,10 +17,9 @@
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
-    "prebuild": "rimraf index.js",
     "build": "vite build",
     "postbuild": "npm run build:types && npm run index",
-    "index": "rimraf index.js && echo 'export * from \"./dist/core.es.js\";' > index.js ",
+    "index": "echo 'export * from \"./dist/core.es.js\";' > index.js ",
     "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
   },
   "main": "./dist/core.cjs.js",
