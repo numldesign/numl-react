@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, MessageError } from '../../../Core';
+import { NumlProvider, ThemeProvider, Icon, MessageError } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/MessageError',

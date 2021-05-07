@@ -1,5 +1,5 @@
 {
-  "name": "@numl-react/core",
+  "name": "numl-react",
   "version": "0.0.14-1",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
@@ -21,18 +21,12 @@
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
   },
-  "files": [
-    "dist"
-  ],
   "workspaces": [
     "packages/*",
     "packages/Atoms/*",
     "packages/Molecules/*",
     "packages/Elements/*"
   ],
-  "main": "./dist/core.cjs.js",
-  "module": "./dist/core.es.js",
-  "typings": "./dist/typings/entry.d.ts",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-typescript": "^7.13.0",

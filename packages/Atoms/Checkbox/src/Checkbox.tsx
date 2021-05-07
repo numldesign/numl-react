@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TCheckboxFieldProps, TCheckboxProps } from './Checkbox.type';
 
 function Checkbox(allProps: TCheckboxProps): JSX.Element {

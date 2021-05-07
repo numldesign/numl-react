@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, TextInput } from '../../../Core';
+import { NumlProvider, ThemeProvider, TextInput } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/TextInput',

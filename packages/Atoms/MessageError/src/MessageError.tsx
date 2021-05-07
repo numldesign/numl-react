@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function MessageError(allProps: any) {
   let { icon, theme, children, ...otherProps } = allProps;

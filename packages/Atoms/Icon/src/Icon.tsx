@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function Icon(otherProps: any) {
   return <El.Icon {...otherProps} />;

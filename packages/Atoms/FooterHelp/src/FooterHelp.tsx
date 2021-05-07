@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React from 'react';
-import { El, Link } from './../../../Core';
+import { El, Link } from '@numl-react/core';
 import { TFooterHelp } from './FooterHelp.type';
 
 function FooterHelp(allProps: TFooterHelp) {

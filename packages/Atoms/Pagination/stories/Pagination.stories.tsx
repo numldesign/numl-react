@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Pagination, Button } from '../../../Core';
+import { NumlProvider, ThemeProvider, Icon, Pagination, Button } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/Pagination',

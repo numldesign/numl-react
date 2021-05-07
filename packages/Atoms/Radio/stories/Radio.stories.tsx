@@ -1,6 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '../../../Core';
-import { Radio } from '../index';
+import { NumlProvider, ThemeProvider, Radio } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/Radio',

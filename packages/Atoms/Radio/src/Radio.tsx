@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
 
 function Radio(allProps: TRadioProps): JSX.Element {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function Badge(allProps: any): JSX.Element {
   const { children, size, label, icon, ...otherProps } = allProps;

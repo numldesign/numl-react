@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Badge } from '../../../Core';
+import { NumlProvider, ThemeProvider, Badge } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/Badge',

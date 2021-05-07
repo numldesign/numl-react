@@ -1,6 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
-import { Icon } from '../../Icon';
+import { El } from '@numl-react/core';
 import { TTagProps } from './Tag.type';
 
 function Tag(allProps: TTagProps): JSX.Element {
@@ -11,7 +10,7 @@ function Tag(allProps: TTagProps): JSX.Element {
       {label}
       {deletable ? (
         <El.Action>
-          <Icon name="close-outline" />
+          <El.Icon name="close-outline" />
         </El.Action>
       ) : null}
     </El.Badge>

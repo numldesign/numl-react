@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {

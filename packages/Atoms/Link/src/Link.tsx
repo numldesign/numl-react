@@ -1,6 +1,6 @@
 import T from 'prop-types';
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TLinkProps } from './Link.type';
 
 function Link(allProps: TLinkProps) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 
 function Switch(allProps: any) {
   let { checked, disabled, ...otherProps } = allProps;

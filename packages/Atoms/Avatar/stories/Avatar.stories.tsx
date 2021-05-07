@@ -1,5 +1,5 @@
 import React from 'react';
-import { Atoms, El, Avatar } from '../../../Core';
+import { Atoms, El, Avatar } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/Avatar',

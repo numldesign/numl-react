@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Link } from '../../../Core';
+import { NumlProvider, ThemeProvider, Icon, Link } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/Link',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../Core';
+import { El } from '@numl-react/core';
 import { TChipProps } from './Chip.type';
 
 function Chip(allProps: TChipProps): JSX.Element {

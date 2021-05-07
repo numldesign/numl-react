@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { NumlProvider, ExceptionList, ThemeProvider } from '../../../Core';
-import { Icon } from '../../Icon/';
+import { NumlProvider, ExceptionList, ThemeProvider, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/ExceptionList',
@@ -51,7 +50,7 @@ LabelWithIcon.args = {
   theme: 'special',
   title: 'Title',
   label: 'Label',
-  icon: <Icon name="reader-outline"></Icon>,
+  icon: <El.Icon name="reader-outline"></El.Icon>,
 };
 
 const Template3 = ({ title, label, icon, ...args }) => {

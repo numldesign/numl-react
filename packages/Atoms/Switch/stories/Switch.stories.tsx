@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '../../../Core';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import { Switch } from '../index';
 
 export default {
