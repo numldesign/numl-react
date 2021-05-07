@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
       - uses: actions/checkout@v1
-        run: npm ci
+        run: npm run install:all
         # 👇 Adds Chromatic as a step in the workflow
 
       - name: Build NUML-REACT
