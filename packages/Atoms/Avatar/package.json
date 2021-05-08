@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/avatar",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Avatars are used to show a thumbnail representation of an individual or business in the interface.",
   "keywords": [
     "component",
@@ -42,11 +42,11 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
-    "@numl-react/atoms": "^0.0.19",
-    "@numl-react/core": "^0.0.19",
-    "@numl-react/elements": "^0.0.19",
-    "@numl-react/molecules": "^0.0.19",
-    "@numl-react/utility": "^0.0.19"
+    "@numl-react/atoms": "^0.0.20",
+    "@numl-react/core": "^0.0.20",
+    "@numl-react/elements": "^0.0.20",
+    "@numl-react/molecules": "^0.0.20",
+    "@numl-react/utility": "^0.0.20"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",

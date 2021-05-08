@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/utility",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -59,6 +59,6 @@
     "vite": "^2.2.4"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.19"
+    "@numl-react/core": "^0.0.20"
   }
 }
