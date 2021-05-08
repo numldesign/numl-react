@@ -43,5 +43,8 @@
     "@numl-react/atoms": "^0.0.14",
     "@numl-react/core": "^0.0.15",
     "@numl-react/utility": "^0.0.15"
+  },
+  "devDependencies": {
+    "vite": "^2.2.4"
   }
 }
