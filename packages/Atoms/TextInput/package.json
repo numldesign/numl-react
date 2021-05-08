@@ -41,7 +41,7 @@
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
     "@numl-react/atoms": "^0.0.15",
-    "@numl-react/core": "0.0.17",
+    "@numl-react/core": "0.0.18",
     "@numl-react/elements": "0.0.15",
     "@numl-react/molecules": "^0.0.15",
     "@numl-react/utility": "^0.0.17"

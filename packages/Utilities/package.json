@@ -59,6 +59,6 @@
     "vite": "^2.2.4"
   },
   "dependencies": {
-    "@numl-react/core": "0.0.17"
+    "@numl-react/core": "0.0.18"
   }
 }
