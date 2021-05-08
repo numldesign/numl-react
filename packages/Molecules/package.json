@@ -46,6 +46,7 @@
   "dependencies": {
     "@numl-react/atoms": "^0.0.15",
     "@numl-react/core": "^0.0.16",
+    "@numl-react/elements": "0.0.15",
     "@numl-react/utility": "^0.0.17"
   },
   "devDependencies": {
