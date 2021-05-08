@@ -22,7 +22,6 @@
     "url": "git+https://github.com/numldesign/numl-react.git"
   },
   "workspaces": [
-    "packages/*",
     "./packages/Atoms/*",
     "./packages/Core/*",
     "./packages/Molecules/*",
