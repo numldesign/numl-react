@@ -4,7 +4,8 @@
     "./packages/*",
     "./packages/Atoms/*",
     "./packages/Molecules/*",
-    "./packages/Elements/*"
+    "./packages/Elements/*",
+    "./packages/Utilities/*"
   ],
   "useWorkspaces": true,
   "version": "0.0.14"

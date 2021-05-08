@@ -22,7 +22,7 @@
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
-  "typings": "./dist/types/Core/index.d.ts",
+  "typings": "./dist/types/Elements/index.d.ts",
   "exports": {
     ".": {
       "require": "./index.ts",

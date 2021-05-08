@@ -25,7 +25,8 @@
     "packages/*",
     "packages/Atoms/*",
     "packages/Molecules/*",
-    "packages/Elements/*"
+    "packages/Elements/*",
+    "packages/Utilities/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
