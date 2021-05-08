@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Search(props: any) {
+const Search = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-search {...otherProps}>{children}</nu-search>;
-}
+
+  return React.createElement(
+    'nu-search',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default Search;

@@ -1,16 +1,16 @@
 import React from 'react';
-import { TFiltersProps } from './Filters.type';
+import { El } from '@numl-react/core';
 
-function Filters(allProps: TFiltersProps): JSX.Element {
+function Filters(allProps: any): JSX.Element {
   const { filterSearch, filterGroup, extra, responsive, ...otherProps } = allProps;
   return (
-    <nu-block responsive={responsive}>
-      <nu-grid gap {...otherProps}>
+    <El.Block responsive={responsive}>
+      <El.Grid gap {...otherProps}>
         {filterSearch}
         {filterGroup}
         {extra}
-      </nu-grid>
-    </nu-block>
+      </El.Grid>
+    </El.Block>
   );
 }
 

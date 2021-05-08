@@ -10,5 +10,5 @@ it('Renders without crashing', async () => {
 
 it('Renders without crashing with children', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Flow> Hello World!</Flow>, div);
+  ReactDOM.render(<Flow clear> Hello World!</Flow>, div);
 });

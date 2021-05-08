@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Avatar } from '../../../Atoms/Avatar';
-import { Checkbox } from '../../../Atoms/Checkbox';
-import { TResourceListProps } from './ResourceList.type';
+import { Avatar, Checkbox } from '@numl-react/atoms';
+import { El } from '@numl-react/core';
 
-function ResourceList(allProps: TResourceListProps) {
+function ResourceList(allProps: any) {
   const ref: any = useRef();
   const {
     selected,
@@ -25,14 +24,14 @@ function ResourceList(allProps: TResourceListProps) {
   }, []);
 
   return (
-    <nu-block {...otherProps}>
-      <nu-listbox ref={ref} border={border} padding={padding} value={selected} multiple={multiSelect || undefined}>
+    <El.Block {...otherProps}>
+      <El.Listbox ref={ref} border={border} padding={padding} value={selected} multiple={multiSelect || undefined}>
         {items && items.length
           ? items.map((item: { id: any; avatar: string | undefined }, index: any) => {
               const value = item.id || index;
               const checked = multiSelect && selected && selected.includes(String(value));
               return (
-                <nu-option
+                <El.Option
                   key={value}
                   value={value}
                   columns="auto 1fr"
@@ -40,17 +39,17 @@ function ResourceList(allProps: TResourceListProps) {
                   items="start stretch"
                   {...contentWrapperProps}
                 >
-                  <nu-pane gap="2x">
+                  <El.Pane gap="2x">
                     {multiSelect ? <Checkbox checked={checked} /> : null}
                     <Avatar.Icon fill="danger" special border="0" />
-                  </nu-pane>
-                  <nu-block {...itemWrapperProps}>{renderItem && renderItem({ item, value, index })}</nu-block>
-                </nu-option>
+                  </El.Pane>
+                  <El.Block {...itemWrapperProps}>{renderItem && renderItem({ item, value, index })}</El.Block>
+                </El.Option>
               );
             })
           : null}
-      </nu-listbox>
-    </nu-block>
+      </El.Listbox>
+    </El.Block>
   );
 }
 

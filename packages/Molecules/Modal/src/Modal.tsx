@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { El } from '../../../entry';
+import { El } from '@numl-react/core';
 import ModalBody from './Modal.Body';
 import ModalFooter from './Modal.Footer';
 import ModalHeader from './Modal.Header';

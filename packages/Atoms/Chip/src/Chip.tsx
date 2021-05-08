@@ -1,7 +1,7 @@
 import React from 'react';
-import { TChipProps } from './Chip.type';
+import { El } from '@numl-react/core';
 
-function Chip(allProps: TChipProps): JSX.Element {
+function Chip(allProps: any): JSX.Element {
   const {
     children,
     size,
@@ -15,12 +15,12 @@ function Chip(allProps: TChipProps): JSX.Element {
   } = allProps;
 
   return (
-    <nu-badge radius={radius} padding={padding} cursor="pointer" selectable={selectable} {...otherProp}>
-      {typeof icon === 'string' ? <nu-icon name={icon} size={size} /> : icon}
+    <El.Badge radius={radius} padding={padding} cursor="pointer" selectable={selectable} {...otherProp}>
+      {typeof icon === 'string' ? <El.Icon name={icon} size={size} /> : icon}
       {children && children.trim().length > 0 ? children : null}
       {label && children.trim().length == 0 ? label : null}
       {actionIcon ? actionIcon : null}
-    </nu-badge>
+    </El.Badge>
   );
 }
 

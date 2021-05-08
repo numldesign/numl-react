@@ -1,18 +1,16 @@
 import React from 'react';
 
-const Grid = React.forwardRef((props: any, ref: any) => {
-  const { children, onTap, ...otherProps } = props;
-  const [refer] = React.useState(ref || React.useRef());
+const Grid = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
 
   return React.createElement(
     'nu-grid',
     {
       ...otherProps,
-      ref: refer,
+      ref,
     },
     [children]
   );
 });
-Grid.displayName = 'El.Grid';
 
 export default Grid;

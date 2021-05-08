@@ -1,9 +1,7 @@
-import T from 'prop-types';
 import React, { useCallback } from 'react';
-import { Button } from '../../../Atoms/Button';
-import { TSettingToggleProps } from './SettingToggle.type';
+import { El } from '@numl-react/core';
 
-function SettingToggle(allProps: TSettingToggleProps) {
+function SettingToggle(allProps: any) {
   const { text, activeText, inactiveText, isActive, onAction, ...otherProps } = allProps;
 
   const handleStatusChange = useCallback(() => {
@@ -11,23 +9,16 @@ function SettingToggle(allProps: TSettingToggleProps) {
   }, [isActive]);
 
   return (
-    <nu-pane {...otherProps}>
-      <nu-block>
-        <nu-el>{text}</nu-el> <nu-el text="sb">{isActive ? activeText : inactiveText}</nu-el>
-      </nu-block>
-      <Button special={isActive ? true : undefined} onTap={handleStatusChange}>
+    <El.Pane {...otherProps}>
+      <El.Block>
+        <El.BaseElement>{text}</El.BaseElement>{' '}
+        <El.BaseElement text="sb">{isActive ? activeText : inactiveText}</El.BaseElement>
+      </El.Block>
+      <El.Button special={isActive ? true : undefined} onTap={handleStatusChange}>
         {isActive ? activeText : inactiveText}
-      </Button>
-    </nu-pane>
+      </El.Button>
+    </El.Pane>
   );
 }
-
-SettingToggle.propTypes = {
-  text: T.string,
-  activeText: T.string,
-  inactiveText: T.string,
-  isActive: T.bool,
-  onAction: T.func,
-};
 
 export default SettingToggle;

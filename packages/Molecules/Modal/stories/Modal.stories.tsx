@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { El, Modal, ModalBody, ModalFooter, ModalHeader } from '../../../entry';
+import { El, Molecules, ModalHeader, ModalBody, ModalFooter } from '@numl-react/core';
+import { isRefernceNull } from '@numl-react/utility';
+import Modal from '../src/Modal';
 
 export default {
   title: 'Example/Molecules/Modal',

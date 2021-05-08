@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Popup(props: any) {
+const Popup = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-popup {...otherProps}>{children}</nu-popup>;
-}
+
+  return React.createElement(
+    'nu-popup',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default Popup;

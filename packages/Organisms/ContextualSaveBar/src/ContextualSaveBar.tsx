@@ -1,11 +1,12 @@
 import React from 'react';
+import { El } from '@numl-react/core';
 import { ForunIcon } from './../../TopBar/src/ForunIcon';
 
-function ContextualSaveBar(props) {
+function ContextualSaveBar(props: any) {
   /** working on this */
   let { message, buttonWidth = '5.25rem', ...otherprops } = props;
   return (
-    <nu-grid
+    <El.Grid
       padding="0.563rem 0.1rem"
       fill="#light"
       responsive="62.5rem|56.25rem"
@@ -14,26 +15,24 @@ function ContextualSaveBar(props) {
       content="space-between"
       items="center"
     >
-      <nu-in show="y|n">
+      <El.Inline show="y|n">
         <ForunIcon></ForunIcon>
-      </nu-in>
-      <nu-in>
-        <nu-el text={`bold`} color="#bg">
+      </El.Inline>
+      <El.Inline>
+        <El.BaseElement text={`bold`} color="#bg">
           {message}
-        </nu-el>
-      </nu-in>
-      <nu-btngroup gap border="0" fill="">
-        <nu-btn fill="#bg" radius width={buttonWidth}>
+        </El.BaseElement>
+      </El.Inline>
+      <El.ButtonGroup gap border="0" fill="">
+        <El.Button fill="#bg" radius width={buttonWidth}>
           Discard
-        </nu-btn>
-        <nu-btn fill="special-bg" radius width={buttonWidth}>
+        </El.Button>
+        <El.Button fill="special-bg" radius width={buttonWidth}>
           Save
-        </nu-btn>
-      </nu-btngroup>
-    </nu-grid>
+        </El.Button>
+      </El.ButtonGroup>
+    </El.Grid>
   );
 }
-
-ContextualSaveBar.propTypes = {};
 
 export default ContextualSaveBar;

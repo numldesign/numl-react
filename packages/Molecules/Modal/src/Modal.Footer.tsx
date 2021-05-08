@@ -1,6 +1,6 @@
 import React from 'react';
-import { El } from '../../../entry';
-import { isPlainObject } from '../../../Utilities';
+import { El } from '@numl-react/core';
+import { isPlainObject } from '@numl-react/utility';
 import ModalContext from './ModalContext';
 /**
  * Modal Footer

@@ -40,7 +40,7 @@
     /* Additional Checks */
     "noUnusedLocals": true, /* Report errors on unused locals. */
     "noUnusedParameters": true, /* Report errors on unused parameters. */
-    "noImplicitReturns": false, /* Report error when not all code paths in function return a value. */
+    "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
     "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
     "noUncheckedIndexedAccess": true, /* Include 'undefined' in index signature results */
     "noPropertyAccessFromIndexSignature": true, /* Require undeclared properties from index signatures to use element accesses. */
@@ -78,7 +78,7 @@
     "**/**/__tests__/*.test.tsx"
   ],
   "include": [
-    "packages/declarations.d.ts",
+    "packages/Elements/declarations.d.ts",
     "packages/global.d.ts",
     "packages/*",
     "**/**/.ts",

@@ -34,31 +34,15 @@ jobs:
         run: node --version
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm run install:all
 
       - name: Setup CI Git User
         run: |
           git config --global user.email "nsk9195@gmail.com"
           git config --global user.name "shubhamkaushal"
 
-      - name: Numl test
-        run: npm run test
-
-      - name: Create .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Build packages
         run: npm run build
-
-      - name: Release snapshot
-        run:  npx changeset version --snapshot
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets

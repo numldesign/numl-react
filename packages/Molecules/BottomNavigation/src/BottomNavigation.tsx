@@ -1,23 +1,22 @@
 import React from 'react';
-import { TBottomNavigationItemProps, TBottomNavigationProps } from './BottomNavigation.type';
-
-function BottomNavigation(allProps: TBottomNavigationProps): JSX.Element {
+import { El } from '@numl-react/core';
+function BottomNavigation(allProps: any): JSX.Element {
   const { header, children, ...otherProps } = allProps;
 
   return (
-    <nu-menu border="1bw" padding="0" flow="row" items="stretch" {...otherProps}>
+    <El.Menu border="1bw" padding="0" flow="row" items="stretch" {...otherProps}>
       {children}
-    </nu-menu>
+    </El.Menu>
   );
 }
 
-BottomNavigation.Item = function BottomNavigationItem(allProps: TBottomNavigationItemProps) {
+BottomNavigation.Item = function BottomNavigationItem(allProps: any) {
   const { children, ...otherProps } = allProps;
 
   return (
-    <nu-menuitem flex="1" content="center" {...otherProps}>
+    <El.Menuitem flex="1" content="center" {...otherProps}>
       {children}
-    </nu-menuitem>
+    </El.Menuitem>
   );
 };
 

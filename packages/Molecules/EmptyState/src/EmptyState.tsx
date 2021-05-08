@@ -1,8 +1,7 @@
 import React from 'react';
-import { TEmptyStateProps } from './EmptyState.type';
-import { El } from '../../../entry';
+import { El } from '@numl-react/core';
 
-function EmptyState(allProps: TEmptyStateProps): JSX.Element {
+function EmptyState(allProps: any): JSX.Element {
   const { heading, description, flow = 'column', radius = '1x', actions, children, ...otherProps } = allProps;
 
   return (

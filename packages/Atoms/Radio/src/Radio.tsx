@@ -1,18 +1,15 @@
-import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { ActionElement } from '../../../Elements/Action';
-import { TRadioFieldProps, TRadioGroupProps, TRadioProps } from './Radio.type';
+import { El } from '@numl-react/core';
 
-function Radio(allProps: TRadioProps): JSX.Element {
+function Radio(allProps: any): JSX.Element {
   let { checked, disabled, ...otherProps } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
-
-  return ActionElement({ as: 'nu-radio', checked, disabled, ...otherProps });
+  return <El.Radio checked={checked} disabled={disabled} {...otherProps}></El.Radio>;
 }
 
-Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
+Radio.Group = function RadioGroup(allProps: any): JSX.Element {
   const ref: any = useRef();
 
   let { disabled, children, inline, onChange, ...otherProps } = allProps;
@@ -27,7 +24,7 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
   }, []);
 
   return (
-    <nu-radiogroup
+    <El.RadioGroup
       ref={ref}
       disabled={disabled}
       gap="1x :inline[2x]"
@@ -36,33 +33,22 @@ Radio.Group = function RadioGroup(allProps: TRadioGroupProps): JSX.Element {
       {...otherProps}
     >
       {children}
-    </nu-radiogroup>
+    </El.RadioGroup>
   );
 };
 
-Radio.Field = function RadioField(allProps: TRadioFieldProps) {
+Radio.Field = function RadioField(allProps: any) {
   let { checked, disabled, id, label, children, ...otherProps } = allProps;
 
   checked = !!checked || null;
   disabled = !!disabled || null;
 
   return (
-    <nu-field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      {ActionElement({
-        as: 'nu-radio',
-        checked,
-        disabled,
-        id,
-        ...otherProps,
-      })}
-      {children ? <nu-label for={id}>{children}</nu-label> : ''}
-    </nu-field>
+    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
+      <El.Radio checked disabled id {...otherProps}></El.Radio>
+      {children ? <El.Label for={id}>{children}</El.Label> : ''}
+    </El.Field>
   );
-};
-
-Radio.propTypes = {
-  ...ActionElement.propTypes,
-  checked: T.bool,
 };
 
 export default Radio;

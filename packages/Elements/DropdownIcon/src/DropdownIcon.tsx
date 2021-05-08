@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function DropdownIcon(props: any) {
+const DropdownIcon = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-dropdownicon {...otherProps}>{children}</nu-dropdownicon>;
-}
+
+  return React.createElement(
+    'nu-dropdownicon',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default DropdownIcon;

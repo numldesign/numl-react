@@ -13,7 +13,7 @@ export { DialogueBox } from './DialogueBox/';
 export { Dropzone } from './Dropzone/';
 export { EmptyState } from './EmptyState/';
 export { Filters } from './Filters/';
-export { Form, FormCheck, FormField, FormInput, FormLabel, FormSubmit } from './Form/';
+export { Form } from './Form/';
 export { LocationCard } from './LocationCard/';
 export { MediaCard } from './MediaCard/';
 export { Menu } from './Menu/';

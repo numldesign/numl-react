@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function ThemeProvider(props: any) {
-  const { src, children, ...otherProps } = props;
-  return <nu-theme {...otherProps}></nu-theme>;
-}
+const ThemeProvider = React.forwardRef((props: any, ref) => {
+  const { children, ...otherProps } = props;
+
+  return React.createElement(
+    'nu-theme',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default ThemeProvider;

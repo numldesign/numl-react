@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Tooltip, El } from '../../../entry';
+import { NumlProvider, ThemeProvider, Tooltip, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Tooltip',

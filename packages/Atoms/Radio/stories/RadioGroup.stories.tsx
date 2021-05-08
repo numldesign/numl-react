@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider } from '../../../Elements/NumlProvider';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import { Radio } from '../index';
 
 export default {
@@ -22,8 +22,8 @@ export default {
 
 const Template = (args) => (
   <NumlProvider>
-    <nu-theme hue="290" saturation="75"></nu-theme>
-    <nu-theme name="secondary" hue="240" saturation="75"></nu-theme>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
 
     <Radio.Group {...args} />
   </NumlProvider>

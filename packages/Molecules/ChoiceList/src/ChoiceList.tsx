@@ -1,42 +1,41 @@
+import { Checkbox, Radio } from '@numl-react/atoms';
+import { El } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
-import { Checkbox } from '../../../Atoms/Checkbox';
-import { Radio } from '../../../Atoms/Radio';
-import { TCheckChoiceListProps, TChoiceListProps, TRadioChoiceListProps } from './ChoiceList.type';
 
-function ChoiceList(allProps: TChoiceListProps) {
+function ChoiceList(allProps: any) {
   const { heading, choices, selected, onChange, multiSelect, ...otherProps } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
 
   return (
-    <nu-grid display="inline-grid" gap {...otherProps}>
-      {heading ? <nu-block>{heading}</nu-block> : null}
+    <El.Grid display="inline-grid" gap {...otherProps}>
+      {heading ? <El.Block>{heading}</El.Block> : null}
       {multiSelect ? (
         <ChoiceList.CheckList choiceList={choiceList} selected={selected} onChange={onChange} />
       ) : (
         <ChoiceList.RadioList choiceList={choiceList} selected={selected} onChange={onChange} />
       )}
-    </nu-grid>
+    </El.Grid>
   );
 }
 
-ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps) {
+ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
   const { choiceList, selected, onChange } = allProps;
 
   if (choiceList.length) {
     return (
       <Radio.Group value={selected} onChange={onChange}>
-        <nu-list type="none">
+        <El.List type="none">
           {choiceList.map((choice: { label: any; value: any; renderChildren: any }) => {
             const { label, value, renderChildren } = choice;
             return (
-              <nu-listitem key={value}>
+              <El.Listitem key={value}>
                 <Radio.Field value={value}>{label}</Radio.Field>
-                {renderChildren && value === selected ? <nu-list type="none">{renderChildren}</nu-list> : null}
-              </nu-listitem>
+                {renderChildren && value === selected ? <El.List type="none">{renderChildren}</El.List> : null}
+              </El.Listitem>
             );
           })}
-        </nu-list>
+        </El.List>
       </Radio.Group>
     );
   } else {
@@ -44,7 +43,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: TRadioChoiceListProps)
   }
 };
 
-ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps) {
+ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
   const { choiceList, selected, onChange } = allProps;
 
   const [selectedValues, setSelectedValues] = useState(getDefaultCheckValue(selected));
@@ -64,20 +63,20 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
 
   if (choiceList.length) {
     return (
-      <nu-list type="none">
+      <El.List type="none">
         {choiceList.map((choice: { label: any; value: any; helpText: any }) => {
           const { label, value, helpText } = choice;
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
-            <nu-listitem key={value}>
+            <El.Listitem key={value}>
               <Checkbox.Field checked={isChecked} value={value} items="start" onInput={handleChecklistChange}>
-                <nu-block>{label}</nu-block>
-                <nu-block color="#text-soft">{helpText}</nu-block>
+                <El.Block>{label}</El.Block>
+                <El.Block color="#text-soft">{helpText}</El.Block>
               </Checkbox.Field>
-            </nu-listitem>
+            </El.Listitem>
           );
         })}
-      </nu-list>
+      </El.List>
     );
   } else {
     return null;
@@ -88,7 +87,7 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: TCheckChoiceListProps)
  *
  * @param {*} value handle user input values and convert it into Set
  */
-const getDefaultCheckValue = (value: any): Set<any> => {
+const getDefaultCheckValue = (value: any): any => {
   if (typeof value === 'string') {
     return new Set([value]);
   } else if (Array.isArray(value)) {

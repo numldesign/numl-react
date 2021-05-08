@@ -10,5 +10,5 @@ it('Renders without crashing', async () => {
 
 it('Renders without crashing with children', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Form> Hello World!</Form>, div);
+  ReactDOM.render(<Form clear> Hello World!</Form>, div);
 });

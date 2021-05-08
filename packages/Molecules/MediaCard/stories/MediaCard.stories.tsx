@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, MediaCard, Button } from '../../../entry';
+import { NumlProvider, ThemeProvider, MediaCard, Button } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/MediaCard',

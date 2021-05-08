@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, LocationCard, ThemeProvider } from '../../../entry';
+import { NumlProvider, LocationCard, ThemeProvider } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/LocationCard',

@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
-import { Checkbox } from '../../../Atoms/Checkbox';
-import { TSheetProps } from './Sheet.type';
+import { El } from '@numl-react/core';
+import { Checkbox } from '@numl-react/atoms';
 
-function Sheet(allProps: TSheetProps): JSX.Element {
+function Sheet(allProps: any): JSX.Element {
   const { heading, footerActions, closeAction, choices, selected, onChange, contentHeight, ...otherProps } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
@@ -23,14 +23,14 @@ function Sheet(allProps: TSheetProps): JSX.Element {
   );
 
   return (
-    <nu-block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
+    <El.Block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
       {heading ? (
-        <nu-pane padding="2x" border="bottom" items="start" content="space-between">
+        <El.Pane padding="2x" border="bottom" items="start" content="space-between">
           {heading}
           {closeAction}
-        </nu-pane>
+        </El.Pane>
       ) : null}
-      <nu-flex flow="column" padding="2x" gap="2x" height={contentHeight}>
+      <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
         {choiceList.length
           ? choiceList.map((choice) => {
               const { label, value } = choice;
@@ -42,13 +42,13 @@ function Sheet(allProps: TSheetProps): JSX.Element {
               );
             })
           : null}
-      </nu-flex>
+      </El.Flex>
       {footerActions ? (
-        <nu-pane content="space-between" gap="1x" padding="2x">
+        <El.Pane content="space-between" gap="1x" padding="2x">
           {footerActions}
-        </nu-pane>
+        </El.Pane>
       ) : null}
-    </nu-block>
+    </El.Block>
   );
 }
 

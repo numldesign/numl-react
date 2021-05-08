@@ -1,19 +1,19 @@
 import React from 'react';
-import { TTextAreaFieldProps, TTextAreaProps } from './TextArea.type';
+import { El } from '@numl-react/core';
 
-function TextArea(allProps: TTextAreaProps) {
+function TextArea(allProps: any) {
   const { ...otherProps } = allProps;
-  return <nu-textarea {...otherProps} />;
+  return <El.TextArea {...otherProps} />;
 }
 
-TextArea.Field = function TextAreaField(allProps: TTextAreaFieldProps) {
+TextArea.Field = function TextAreaField(allProps: any) {
   const { children, fieldProps = {}, ...otherProps } = allProps;
 
   return (
-    <nu-field {...fieldProps}>
+    <El.Field {...fieldProps}>
       {children}
-      <TextArea {...otherProps} />
-    </nu-field>
+      <El.TextArea {...otherProps} />
+    </El.Field>
   );
 };
 

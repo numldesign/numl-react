@@ -1,6 +1,6 @@
 import React from 'react';
-import { El } from '../../../entry';
-// @ts-ignore
+import { El } from '@numl-react/core';
+
 function ColorPicker() {
   return (
     <El.Card block width="22rem">
@@ -83,31 +83,30 @@ class ColorSelector extends React.Component {
     this.ctx2.fillStyle = grd1;
     this.ctx2.fill();
   }
-  click = (e: any) => {
+  click(e: any) {
     console.log('click');
     this.x = e.offsetX;
     this.y = e.offsetY;
     var imageData = this.ctx2.getImageData(this.x, this.y, 1, 1).data;
     this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
     this.fillGradient();
-  };
-  mousedown = (e: any) => {
+  }
+  mousedown(e: any) {
     console.log('mousedown');
     this.drag = true;
     this.changeColor(e);
-  };
+  }
 
-  mousemove = (e: any) => {
+  mousemove(e: any) {
     console.log('mousemove');
     if (this.drag) {
       this.changeColor(e);
     }
-  };
+  }
 
-  mouseup = () => {
-    console.log(this.rgbaColor);
+  mouseup(_e: any) {
     this.drag = false;
-  };
+  }
 
   changeColor(e: any) {
     console.log(this.rgbaColor);
@@ -145,16 +144,16 @@ class ColorSelector extends React.Component {
   }
 
   render() {
-    let state: any = this.state;
+    let tempState: any = this.state;
     return (
       <El.Grid
-        columns={state.columns}
-        padding={state.padding}
-        items={state.items}
-        gap={state.gap}
-        content={state.content}
+        columns={tempState.columns}
+        padding={tempState.padding}
+        items={tempState.items}
+        gap={tempState.gap}
+        content={tempState.content}
       >
-        <nu-slider2d
+        <El.RangeSlider2d
           column="1"
           width="15.375rem"
           height="15.375rem"
@@ -175,8 +174,8 @@ class ColorSelector extends React.Component {
           max="255"
         >
           <canvas ref={(elem) => (this.colorBlock = elem)} width="246px" height="246px"></canvas>
-        </nu-slider2d>
-        <nu-slider
+        </El.RangeSlider2d>
+        <El.RangeSlider
           column="2"
           height="15.375rem"
           min="0"
@@ -185,15 +184,15 @@ class ColorSelector extends React.Component {
           image="linear(to bottom, hue(0 s), hue(90 s), hue(180 s), hue(270 s), hue(0 s))"
         >
           <canvas ref={(elem) => (this.colorStrip = elem)} height="246px" width="10px"></canvas>
-        </nu-slider>
-        <nu-slider
+        </El.RangeSlider>
+        <El.RangeSlider
           column="3"
           min="0"
           max="255"
           height="15.375rem"
           orient="v"
           image="linear(to bottom, white, transparent)"
-        ></nu-slider>
+        ></El.RangeSlider>
       </El.Grid>
     );
   }
@@ -204,16 +203,16 @@ function ColorCode(props: any) {
     <El.Block {...props} padding>
       <El.Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
         <El.Button column="1" height="2.25rem" toggle text="normal">
-          <El.Base>RGB</El.Base>
+          <El.BaseElement>RGB</El.BaseElement>
           <El.Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></El.Icon>
         </El.Button>
-        <nu-buttongroup column="2" height="2.25rem" value="rgb">
+        <El.ButtonGroup column="2" height="2.25rem" value="rgb">
           <El.Grid columns="auto auto auto" items="center" content="stretch">
             <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
             <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
             <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
           </El.Grid>
-        </nu-buttongroup>
+        </El.ButtonGroup>
         <El.NumberInput precision="0" min="0" max="100" value="0" label="Percents input"></El.NumberInput>
       </El.Grid>
     </El.Block>

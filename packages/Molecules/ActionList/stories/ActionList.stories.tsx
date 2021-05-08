@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionList, NumlProvider, ThemeProvider, El } from '../../../entry';
+import { ActionList, NumlProvider, ThemeProvider, El } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/ActionList',

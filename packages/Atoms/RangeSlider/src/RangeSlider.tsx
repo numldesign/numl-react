@@ -1,6 +1,5 @@
-import T from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
-import { TRangeSliderProps } from './RangeSlider.type';
+import { El } from '@numl-react/core';
 
 const getPlace = (place: string, value: string) => {
   place = place === 'bottom' ? 'bottom' : 'top';
@@ -8,7 +7,7 @@ const getPlace = (place: string, value: string) => {
   return `outside-${place} left 1.5x ${value}%`;
 };
 
-function RangeSlider(allProps: TRangeSliderProps): JSX.Element {
+function RangeSlider(allProps: any): JSX.Element {
   const { id, value, tooltipPlace, ...otherProps } = allProps;
   const [sliderValue, setSliderValue] = useState(value || 0);
   const ref: any = useRef();
@@ -30,22 +29,13 @@ function RangeSlider(allProps: TRangeSliderProps): JSX.Element {
   }, []);
 
   return (
-    <nu-block use-hover box="y">
-      <nu-slider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
-      <nu-tooltip width="max-content" place={place} move="(-50% + .25x) 0">
+    <El.Block use-hover box="y">
+      <El.RangeSlider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
+      <El.Tooltip width="max-content" place={place} move="(-50% + .25x) 0">
         {sliderValue}
-      </nu-tooltip>
-    </nu-block>
+      </El.Tooltip>
+    </El.Block>
   );
 }
-
-RangeSlider.propTypes = {
-  id: T.string,
-  size: T.string,
-  min: T.string,
-  max: T.string,
-  value: T.string,
-  step: T.string,
-};
 
 export default RangeSlider;

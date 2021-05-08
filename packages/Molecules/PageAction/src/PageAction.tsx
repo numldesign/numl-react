@@ -1,8 +1,7 @@
 import React from 'react';
-import { El } from '../../../entry';
-import { TPageActionProps } from './PageAction.type';
+import { El } from '@numl-react/core';
 
-function PageAction(allProps: TPageActionProps) {
+function PageAction(allProps: any) {
   const { primaryAction, secondaryActions, ...otherProps } = allProps;
   const flowContent = !!secondaryActions ? 'space-between' : 'flex-end';
 

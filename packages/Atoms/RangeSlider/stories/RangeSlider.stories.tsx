@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, RangeSlider } from '../../../entry';
+import { NumlProvider, ThemeProvider, RangeSlider } from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/RangeSlider',

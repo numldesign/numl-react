@@ -1,22 +1,23 @@
 import React from 'react';
-import { TExceptionListProps } from './ExceptionList.type';
+import { El } from '@numl-react/core';
 
-function ExceptionList(allProps: TExceptionListProps) {
+function ExceptionList(allProps: any) {
   let { items, ...otherProps } = allProps;
 
   return (
-    <nu-el {...otherProps}>
+    <El.BaseElement {...otherProps}>
       {typeof items == 'object' && items.length > 0
         ? items.map((eachItem: any, index: any) => {
             return (
-              <nu-grid gap columns="auto auto auto auto" key={index}>
-                {typeof eachItem.icon == 'string' ? <nu-icon name={eachItem.icon} /> : eachItem.icon}
-                <nu-el text="middle">{eachItem.title}</nu-el>-<nu-el text="middle">{eachItem.label}</nu-el>
-              </nu-grid>
+              <El.Grid gap columns="auto auto auto auto" key={index}>
+                {typeof eachItem.icon == 'string' ? <El.Icon name={eachItem.icon} /> : eachItem.icon}
+                <El.BaseElement text="middle">{eachItem.title}</El.BaseElement>-
+                <El.BaseElement text="middle">{eachItem.label}</El.BaseElement>
+              </El.Grid>
             );
           })
         : null}
-    </nu-el>
+    </El.BaseElement>
   );
 }
 

@@ -1,12 +1,8 @@
-import T from 'prop-types';
 import React from 'react';
+import { El } from '@numl-react/core';
 
 function ProgressBar(allProps: any) {
-  return <nu-progressbar {...allProps} />;
+  return <El.ProgressBar {...allProps} />;
 }
-
-ProgressBar.propTypes = {
-  size: T.string,
-};
 
 export default ProgressBar;

@@ -1,49 +1,39 @@
 import React from 'react';
-import {
-  Form,
-  FormCheck,
-  FormField,
-  FormInput,
-  FormLabel,
-  FormSubmit,
-  NumlProvider,
-  ThemeProvider,
-} from '../../../entry';
+import { NumlProvider, ThemeProvider, Form } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Form',
   component: Form,
 };
 
-const Template = function (props: any) {
-  return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Form {...props}>
-        <FormField name="name">
-          <FormLabel>Name</FormLabel>
-          <FormInput grow="1" placeholder="Focus"></FormInput>
-          <FormCheck
-            message="Name should not contain digits or any special characters"
-            assert={(val) => typeof val === 'string' && val.match(/^[a-z]*$/i)}
-          ></FormCheck>
-        </FormField>
-        <FormField name="username">
-          <FormLabel>User Name</FormLabel>
-          <FormInput grow="1"></FormInput>
-          <FormCheck message="This field is required" assert="required"></FormCheck>
-        </FormField>
-        <FormField name="email">
-          <FormLabel>Email Address</FormLabel>
-          <FormInput grow="1"></FormInput>
-          <FormCheck message="Email Address is required" assert="required"></FormCheck>
-        </FormField>
-        <FormSubmit>Submit</FormSubmit>
-      </Form>
-    </NumlProvider>
-  );
-};
+const Template = ({ ...args }) => (
+  <NumlProvider>
+    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
+    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+
+    <Form {...args}>
+      <Form.Field name="name">
+        <Form.Label>Name</Form.Label>
+        <Form.Input grow="1" placeholder="Focus"></Form.Input>
+        <Form.Check
+          message="Name should not contain digits or any special characters"
+          assert={(val) => typeof val === 'string' && val.match(/^[a-z]*$/i)}
+        ></Form.Check>
+      </Form.Field>
+      <Form.Field name="username">
+        <Form.Label>User Name</Form.Label>
+        <Form.Input grow="1"></Form.Input>
+        <Form.Check message="This field is required" assert="required"></Form.Check>
+      </Form.Field>
+      <Form.Field name="email">
+        <Form.Label>Email Address</Form.Label>
+        <Form.Input grow="1"></Form.Input>
+        <Form.Check message="Email Address is required" assert="required"></Form.Check>
+      </Form.Field>
+      <Form.Submit>Submit</Form.Submit>
+    </Form>
+  </NumlProvider>
+);
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Icon } from '../../../Atoms/Icon';
-import { TSettingCardProps } from './SettingCard.type';
+import { El } from '@numl-react/core';
 
-function SettingCard(allProps: TSettingCardProps) {
+function SettingCard(allProps: any) {
   const {
     title,
     fill = 'bg',
@@ -15,19 +14,19 @@ function SettingCard(allProps: TSettingCardProps) {
   } = allProps;
 
   return (
-    <nu-pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
+    <El.Pane fill={fill} gap={gap} padding={padding} items={items} {...otherProps}>
       {typeof icon === 'string' ? (
-        <Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
+        <El.Icon name={icon} padding="1x" width="4x" height="4x" fill="special-mark" radius="1.2x" />
       ) : (
         icon
       )}
-      <nu-block height="min 10x">
-        <nu-block text="sb" color="#special">
+      <El.Block height="min 10x">
+        <El.Block text="sb" color="#special">
           {title}
-        </nu-block>
-        <nu-block>{subtitle}</nu-block>
-      </nu-block>
-    </nu-pane>
+        </El.Block>
+        <El.Block>{subtitle}</El.Block>
+      </El.Block>
+    </El.Pane>
   );
 }
 

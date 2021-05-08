@@ -1,8 +1,7 @@
 import React from 'react';
-import { TDataTableProps } from './DataTable.type';
-import { El } from '../../../entry';
+import { El } from '@numl-react/core';
 
-function DataTable(allProps: TDataTableProps) {
+function DataTable(allProps: any) {
   const { headings, rows, width = '100%', height = '100%', totals, footerContent, ...otherProps } = allProps;
 
   let headingList = headings && headings.length ? [...headings] : [];
@@ -11,51 +10,51 @@ function DataTable(allProps: TDataTableProps) {
 
   return (
     <El.Block {...otherProps}>
-      <nu-table width={width} height={height}>
+      <El.Table width={width} height={height}>
         {headingList.length ? (
-          <nu-rowgroup>
-            <nu-row>
+          <El.RowGroup>
+            <El.Row>
               {headingList.map((header) => {
                 return (
-                  <nu-columnheader border="bottom" key={header}>
+                  <El.ColumnHeader border="bottom" key={header}>
                     {header}
-                  </nu-columnheader>
+                  </El.ColumnHeader>
                 );
               })}
-            </nu-row>
-          </nu-rowgroup>
+            </El.Row>
+          </El.RowGroup>
         ) : null}
         {totalList.length ? (
-          <nu-rowgroup fill="subtle">
-            <nu-row>
+          <El.RowGroup fill="subtle">
+            <El.Row>
               {totalList.map((total, index) => {
                 return (
-                  <nu-cell height="3" key={index}>
+                  <El.Cell height="3" key={index}>
                     {total}
-                  </nu-cell>
+                  </El.Cell>
                 );
               })}
-            </nu-row>
-          </nu-rowgroup>
+            </El.Row>
+          </El.RowGroup>
         ) : null}
         {rowList.length ? (
-          <nu-rowgroup>
+          <El.RowGroup>
             {rowList.map((row, rowIndex) => {
               return (
-                <nu-row key={rowIndex}>
+                <El.Row key={rowIndex}>
                   {row.map((rowData: any, index: any) => {
                     return (
-                      <nu-cell height="3" key={index}>
+                      <El.Cell height="3" key={index}>
                         {rowData}
-                      </nu-cell>
+                      </El.Cell>
                     );
                   })}
-                </nu-row>
+                </El.Row>
               );
             })}
-          </nu-rowgroup>
+          </El.RowGroup>
         ) : null}
-      </nu-table>
+      </El.Table>
       <El.Pane height="3" content="center" fill="subtle">
         Showing {rows.length} of {rows.length}
       </El.Pane>

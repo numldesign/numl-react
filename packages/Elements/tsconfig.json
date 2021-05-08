@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["../globals.ts", "./index.ts"],
+  "exclude": [
+    "*.config.js",
+    "./node_modules/*",
+    "../node_modules/*",
+    "**/**/*.stories.tsx",
+    "**/**/vite.config.ts",
+    "**/**/__tests__/*.test.tsx"
+  ]
+}

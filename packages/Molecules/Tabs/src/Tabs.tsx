@@ -1,8 +1,7 @@
-import T from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { TTabItemProps, TTabsProps } from './Tabs.type';
+import { El } from '@numl-react/core';
 
-function Tabs(allProps: TTabsProps) {
+function Tabs(allProps: any) {
   const ref: any = useRef();
 
   const { prefix, defaultValue, onChange, children, ...otherProps } = allProps;
@@ -15,37 +14,31 @@ function Tabs(allProps: TTabsProps) {
   }, []);
 
   return (
-    <nu-block>
-      <nu-tablist ref={ref} content={content} value={defaultValue} {...otherProps}>
+    <El.Block>
+      <El.TabList ref={ref} content={content} value={defaultValue} {...otherProps}>
         {prefix}
         {children}
-      </nu-tablist>
+      </El.TabList>
       {children.map((child: any) => {
         return (
-          <nu-block key={child.props.tab} id={child.props.tab}>
+          <El.Block key={child.props.tab} id={child.props.tab}>
             {child.props.children}
-          </nu-block>
+          </El.Block>
         );
       })}
-    </nu-block>
+    </El.Block>
   );
 }
 
-Tabs.Item = function TabItem(allProps: TTabItemProps) {
+Tabs.Item = function TabItem(allProps: any) {
   const { label, tab, prefix, suffix, ...otherProps } = allProps;
   return (
-    <nu-tab content="center" value={tab} control={tab} trigger {...otherProps}>
+    <El.Tab content="center" value={tab} control={tab} trigger {...otherProps}>
       {prefix}
       {label}
       {suffix}
-    </nu-tab>
+    </El.Tab>
   );
-};
-
-Tabs.propTypes = {
-  prefix: T.oneOfType([T.string, T.element]),
-  defaultValue: T.string,
-  onChange: T.func,
 };
 
 export default Tabs;

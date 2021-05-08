@@ -44,3 +44,13 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 .npmrc
+
+dist/*
+**/dist/*
+**/**/dist/*
+**/**/**/dist/*
+
+package-lock.json
+**/package-lock.json
+**/**/package-lock.json
+**/**/**/package-lock.json

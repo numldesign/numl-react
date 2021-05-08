@@ -1,8 +1,8 @@
-import { Base, Heading, Button } from "@numl-react/core";
-export default (props) => {
+import { El } from '@numl-react/core';
+export default (props: any) => {
   const { data } = props;
   return (
-    <nu-nav
+    <El.Nav
       label="Main"
       display="flex"
       flow="column"
@@ -15,34 +15,29 @@ export default (props) => {
       space="1x left"
       is-responsive="root"
     >
-      {data.map(function (eachData, key) {
+      {data.map(function (eachData: any, key: string) {
         const { heading, children } = eachData;
         return (
           <>
-            <Heading.Two
-              size="sm"
-              text="up b"
-              color="#text.60"
-              padding="0 0 1x 1x"
-              key={key}
-            >
+            <El.H2 size="sm" text="up b" color="#text.60" padding="0 0 1x 1x" key={key}>
               {heading}
-            </Heading.Two>
+            </El.H2>
             <NavigationList data={children} />
           </>
         );
       })}
-    </nu-nav>
+    </El.Nav>
   );
 };
 
-const NavigationList = ({ data }) => {
+const NavigationList = (props: any) => {
+  const { data } = props;
   return (
     <>
       {data.length > 0 &&
-        data.map((eachChild, key) => {
+        data.map((eachChild: any, key: any) => {
           return (
-            <Button
+            <El.Button
               key={key}
               to={eachChild.link}
               padding=".5x 1x"
@@ -59,7 +54,7 @@ const NavigationList = ({ data }) => {
               is-focusable
             >
               {eachChild.value}
-            </Button>
+            </El.Button>
           );
         })}
     </>

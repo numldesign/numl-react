@@ -1,33 +1,33 @@
 import React from 'react';
+import { El } from '@numl-react/core';
 import Icon from '../../Icon/src/Icon';
-import { TPaginationProps } from './Pagination.type';
 
-function Pagination(allProps: TPaginationProps) {
+function Pagination(allProps: any) {
   const { flow, label, previous, next, ...otherProps } = allProps;
   const isVertical = flow === 'column';
 
   return (
-    <nu-btngroup flow={flow} group-radius={isVertical ? 'column' : 'row'} {...otherProps}>
+    <El.ButtonGroup flow={flow} group-radius={isVertical ? 'column' : 'row'} {...otherProps}>
       {typeof previous === 'string' ? (
-        <nu-btn id="previous">
+        <El.Button id="previous">
           <Icon name={previous} />
-        </nu-btn>
+        </El.Button>
       ) : (
         previous
       )}
       {label && !isVertical && (
-        <nu-label display="flex" content="center" items="center" fill="transparent">
+        <El.Label display="flex" content="center" items="center" fill="transparent">
           {label}
-        </nu-label>
+        </El.Label>
       )}
       {typeof next === 'string' ? (
-        <nu-btn id="next">
+        <El.Button id="next">
           <Icon name={next} />
-        </nu-btn>
+        </El.Button>
       ) : (
         next
       )}
-    </nu-btngroup>
+    </El.ButtonGroup>
   );
 }
 

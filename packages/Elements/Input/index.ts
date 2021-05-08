@@ -1,2 +1,2 @@
 export * from './src/Input';
-export { Input, InputValue, NumberInput } from './src/Input';
+export { default as Input } from './src/Input';

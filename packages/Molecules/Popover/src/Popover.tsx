@@ -1,9 +1,9 @@
 import React from 'react';
-import { TPopoverProps } from './Popover.type';
+import { El } from '@numl-react/core';
 
-function Popover(allProps: TPopoverProps) {
+function Popover(allProps: any) {
   const { children, ...otherProps } = allProps;
-  return <nu-popup {...otherProps}>{children}</nu-popup>;
+  return <El.Popup {...otherProps}>{children}</El.Popup>;
 }
 
 export default Popover;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { TTooltipProps } from './Tooltip.type';
+import { El } from '@numl-react/core';
 
-function Tooltip(allProps: TTooltipProps) {
+function Tooltip(allProps: any) {
   const { description, width, ...otherProps } = allProps;
   return (
-    <nu-tooltip width={width || 'max-content'} {...otherProps}>
+    <El.Tooltip width={width || 'max-content'} {...otherProps}>
       {description}
-    </nu-tooltip>
+    </El.Tooltip>
   );
 }
 

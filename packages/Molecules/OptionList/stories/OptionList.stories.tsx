@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, El, OptionList, Thumbnail } from '../../../entry';
+import { Badge, El, OptionList, Thumbnail } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/OptionList',
@@ -10,7 +10,6 @@ const Template = ({ ...args }) => (
   <El.NumlProvider>
     <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
     <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
-
     <OptionList {...args} />
   </El.NumlProvider>
 );

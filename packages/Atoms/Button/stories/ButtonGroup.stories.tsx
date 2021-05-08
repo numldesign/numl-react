@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, NumlProvider } from '../../../entry';
+import { ThemeProvider, NumlProvider } from '@numl-react/core';
 import { Button } from '../index';
 
 export default {

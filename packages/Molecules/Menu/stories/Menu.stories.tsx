@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NumlProvider, ThemeProvider, Menu, El } from '../../../entry';
+import { El, Menu, NumlProvider, ThemeProvider } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Menu',
@@ -92,9 +92,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="cut-outline" />
           Cut
-          <El.Base>
-            <El.Icon name="logo-windows" />X
-          </El.Base>
+          <El.BaseElement>
+            <El.Icon name="logo-windows" />
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item
           value="Copy"
@@ -105,9 +105,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="copy-outline" />
           Copy
-          <El.Base>
+          <El.BaseElement>
             <El.Icon name="logo-windows" />C
-          </El.Base>
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item
           border="bottom"
@@ -119,9 +119,9 @@ export const WithHotKeyAndPopup = (args) => {
         >
           <El.Icon name="clipboard-outline" />
           Paste
-          <El.Base>
+          <El.BaseElement>
             <El.Icon name="logo-windows" />P
-          </El.Base>
+          </El.BaseElement>
         </Menu.Item>
         <Menu.Item value="Webclipboard" columns="auto 1fr auto">
           <El.Icon name="cloudy-outline" />

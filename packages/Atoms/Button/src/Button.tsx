@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '../../../entry';
+import { El } from '@numl-react/core';
 
 function Button(props: any): JSX.Element {
   const {
@@ -60,9 +60,9 @@ Button.ExtraLarge = ({ children = null, size = 'xl', padding = '3.5x 5x', ...pro
 Button.Label = function ButtonLabel(props: any) {
   const { children, color = '#text', ...otherProps } = props;
   return (
-    <El.Base color={color} {...otherProps}>
+    <El.BaseElement color={color} {...otherProps}>
       {children}
-    </El.Base>
+    </El.BaseElement>
   );
 };
 
@@ -95,15 +95,15 @@ Button.Popup = function ButtonDropDownPopup(props: any) {
 
 Button.Item = function ButtonDropDownPopupList(props: any) {
   const { children, ...otherProps } = props;
-  return <nu-menuitem {...otherProps}>{children}</nu-menuitem>;
+  return <El.Menuitem {...otherProps}>{children}</El.Menuitem>;
 };
 
 Button.Checkbox = function ButtonCheckbox(props: any) {
   const { children, padding = '0', ...otherProps } = props;
   return (
-    <nu-checkbox padding={padding} {...otherProps}>
+    <El.Checkbox padding={padding} {...otherProps}>
       {children}
-    </nu-checkbox>
+    </El.Checkbox>
   );
 };
 

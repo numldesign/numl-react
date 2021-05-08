@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import Checkbox from '../../../Atoms/Checkbox/src/Checkbox';
-import { TOptionListProps } from './OptionList.type';
+import { El } from '@numl-react/core';
 
-function OptionList(allProps: TOptionListProps) {
+function OptionList(allProps: any) {
   const ref: any = useRef();
   const {
     selected,
@@ -24,21 +23,21 @@ function OptionList(allProps: TOptionListProps) {
   }, []);
 
   return (
-    <nu-block {...otherProps}>
+    <El.Block {...otherProps}>
       {renderHeader}
-      <nu-listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
+      <El.Listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
         {options && options.length
           ? options.map((item: any, index: any) => {
               const checked = multiSelect && selected && selected.includes(String(index));
               return (
-                <nu-option key={index} value={index} {...contentWrapperProps}>
+                <El.Option key={index} value={index} {...contentWrapperProps}>
                   {multiSelect ? (
-                    <nu-block {...checkboxWrapperProps}>
-                      <Checkbox checked={checked} />
-                    </nu-block>
+                    <El.Block {...checkboxWrapperProps}>
+                      <El.Checkbox checked={checked} />
+                    </El.Block>
                   ) : null}
                   {renderContent && renderContent({ item, index })}
-                </nu-option>
+                </El.Option>
               );
             })
           : null}
@@ -48,28 +47,28 @@ function OptionList(allProps: TOptionListProps) {
               const sectionHeader = option.renderHeader ? option.renderHeader : null;
               const optionList: any = option.options && option.options.length ? option.options : [];
               return (
-                <nu-block key={sectionIndex}>
+                <El.Block key={sectionIndex}>
                   {sectionHeader}
                   {optionList.map((item: { index: any }) => {
                     const index = item.index;
                     const checked = multiSelect && selected && selected.includes(String(index));
                     return (
-                      <nu-option key={index} value={index} {...contentWrapperProps}>
+                      <El.Option key={index} value={index} {...contentWrapperProps}>
                         {multiSelect ? (
-                          <nu-block {...checkboxWrapperProps}>
-                            <Checkbox checked={checked} />
-                          </nu-block>
+                          <El.Block {...checkboxWrapperProps}>
+                            <El.Checkbox checked={checked} />
+                          </El.Block>
                         ) : null}
                         {renderContent && renderContent({ item, index, sectionIndex })}
-                      </nu-option>
+                      </El.Option>
                     );
                   })}
-                </nu-block>
+                </El.Block>
               );
             })
           : null}
-      </nu-listbox>
-    </nu-block>
+      </El.Listbox>
+    </El.Block>
   );
 }
 

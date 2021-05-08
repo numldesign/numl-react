@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Base(props: any) {
+const Base = React.forwardRef((props: any, ref) => {
   const { children, ...otherProps } = props;
-  return <nu-el {...otherProps}>{children}</nu-el>;
-}
+
+  return React.createElement(
+    'nu-base',
+    {
+      ...otherProps,
+      ref,
+    },
+    [children]
+  );
+});
+
+export default Base;

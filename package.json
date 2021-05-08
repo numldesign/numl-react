@@ -1,6 +1,6 @@
 {
-  "name": "@numl-react/core",
-  "version": "0.1.0",
+  "name": "numl-react",
+  "version": "0.0.14-1",
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "prettier": "prettier --write ./packages",
@@ -9,9 +9,9 @@
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
     "install:all": "npx lerna exec -- npm install",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
-    "build": "npx lerna exec -- npm run build && npx tsc",
+    "build": "npx lerna exec -- npm run build",
     "test": "jest",
-    "release": "npm run build && changeset publish",
+    "release": "npx lerna exec -- npm run build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
@@ -21,19 +21,14 @@
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
   },
-  "files": [
-    "dist"
-  ],
   "workspaces": [
-    "./*",
     "packages/*",
-    "packages/Atoms/*",
-    "packages/Molecules/*",
-    "packages/Elements/*"
+    "./packages/Atoms/*",
+    "./packages/Core/*",
+    "./packages/Molecules/*",
+    "./packages/Elements/*",
+    "./packages/Utilities/*"
   ],
-  "main": "./dist/core.cjs.js",
-  "module": "./dist/core.es.js",
-  "typings": "./dist/typings/entry.d.ts",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-typescript": "^7.13.0",
@@ -82,7 +77,7 @@
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.4",
     "typedoc": "^0.20.36",
-    "typescript": "4.2.4",
+    "typescript": "^4.2.4",
     "vite": "^2.1.5"
   },
   "publishConfig": {
@@ -114,6 +109,7 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
+    "@numl-react/utility": "file:packages/Utilities",
     "uuidv4": "^6.2.7"
   },
   "dependenciesMeta": {

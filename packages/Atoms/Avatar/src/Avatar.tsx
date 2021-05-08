@@ -1,6 +1,5 @@
 import React from 'react';
-import { TAvatarIconProps, TAvatarProfileProps } from './Avatar.type';
-import { El } from '../../../entry';
+import { El } from '@numl-react/core';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   let {
@@ -46,7 +45,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
   );
 };
 
-Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
+Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
   let {
     username,
     showIcon = true,
@@ -60,25 +59,25 @@ Avatar.Icon = function AvatarIcon(allProps: TAvatarIconProps): JSX.Element {
   } = allProps;
 
   return (
-    <nu-circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
+    <El.Circle display={display} content={content} items={items} padding={padding} border={border} {...otherProps}>
       {!showIcon && username ? (
-        <El.Base size="lg" text="uppercase">
+        <El.BaseElement size="lg" text="uppercase">
           {username.slice(0, 2)}
-        </El.Base>
+        </El.BaseElement>
       ) : (
         <El.Icon size="lg" name={'person'} />
       )}
-    </nu-circle>
+    </El.Circle>
   );
 };
 
-Avatar.Profile = function AvatarProfile(allProps: TAvatarProfileProps): JSX.Element {
+Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
   let { username, subtitle, ...otherProps } = allProps;
 
   return (
     <El.Block {...otherProps}>
-      <El.Block> {username ? <El.Base size="md">{username}</El.Base> : null} </El.Block>
-      <El.Block> {subtitle ? <El.Base size="sm">{subtitle}</El.Base> : null} </El.Block>
+      <El.Block> {username ? <El.BaseElement size="md">{username}</El.BaseElement> : null} </El.Block>
+      <El.Block> {subtitle ? <El.BaseElement size="sm">{subtitle}</El.BaseElement> : null} </El.Block>
     </El.Block>
   );
 };

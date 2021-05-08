@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionList, Button, El, NumlProvider, Popover, TextInput, ThemeProvider } from '../../../entry';
+import { ActionList, Button, El, NumlProvider, Popover, TextInput, ThemeProvider } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Popover',
@@ -11,7 +11,7 @@ const Template = ({ ...args }) => (
     <ThemeProvider hue="290" saturation="75"></ThemeProvider>
     <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
     <Button width="10" columns="1fr auto" value="Select">
-      <El.InputValue />
+      <El.Value />
       <El.DropdownIcon></El.DropdownIcon>
       <Popover {...args} />
     </Button>

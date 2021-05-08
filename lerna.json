@@ -1,13 +1,12 @@
 {
   "lerna": "2.0.0",
   "packages": [
-    "./*",
-    "./documentation/*",
-    "./packages/*",
     "./packages/Atoms/*",
+    "./packages/Core/*",
     "./packages/Molecules/*",
-    "./packages/Elements/*"
+    "./packages/Elements/*",
+    "./packages/Utilities/*"
   ],
   "useWorkspaces": true,
-  "version": "0.1.0"
+  "version": "0.0.20"
 }

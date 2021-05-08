@@ -1,5 +1,5 @@
 import React from 'react';
-import { El, Link, Search } from '../../../entry';
+import { El, Search } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Search',
@@ -22,7 +22,7 @@ const resultTemplate = (item) => {
           <El.Icon name={item.prefix} />
         </El.Block>
       )}
-      {item.emptyGap && <El.Base />}
+      {item.emptyGap && <El.BaseElement />}
       {item.title && (
         <El.Block>
           <El.Block text="sb">{item.title}</El.Block>
@@ -50,7 +50,7 @@ Default.args = {
   },
   extraActions: (
     <El.Pane width="4x">
-      <Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
+      <El.Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
     </El.Pane>
   ),
   value: 'acb',
@@ -71,12 +71,12 @@ Default.args = {
       description: 'Process, track, and fulfill your orders',
       suffix: (
         <El.Pane text="center" gap=".4x">
-          <El.Base fill="bg" radius padding="0 .4x">
+          <El.BaseElement fill="bg" radius padding="0 .4x">
             G
-          </El.Base>
-          <El.Base fill="bg" radius padding="0 .4x">
+          </El.BaseElement>
+          <El.BaseElement fill="bg" radius padding="0 .4x">
             O
-          </El.Base>
+          </El.BaseElement>
         </El.Pane>
       ),
       value: 'value_3',
@@ -88,14 +88,14 @@ Default.args = {
       description2: 'Orders / Drafts',
       suffix: (
         <El.Block text="center">
-          <Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
+          <El.Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
         </El.Block>
       ),
       value: 'value_4',
     },
     {
       emptyGap: true,
-      title: <Link to="https://numl.design" label="Show all 8 results" />,
+      title: <El.Link to="https://numl.design" label="Show all 8 results" />,
       value: 'value_5',
     },
     {

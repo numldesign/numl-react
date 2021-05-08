@@ -1,28 +1,19 @@
-import T from 'prop-types';
 import React from 'react';
-import { ActionElement } from '../../../Elements/Action';
-import { Icon } from '../../Icon';
-import { TTagProps } from './Tag.type';
+import { El } from '@numl-react/core';
 
-function Tag(allProps: TTagProps): JSX.Element {
+function Tag(allProps: any): JSX.Element {
   const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;
 
   return (
-    <nu-badge size={size} theme={theme} radius="left right" padding="0.5x 1x 0.5x 1x" space="50% 0" {...otherProps}>
+    <El.Badge size={size} theme={theme} radius="left right" padding="0.5x 1x 0.5x 1x" space="50% 0" {...otherProps}>
       {label}
       {deletable ? (
-        <ActionElement>
-          <Icon name="close-outline" />
-        </ActionElement>
+        <El.Action>
+          <El.Icon name="close-outline" />
+        </El.Action>
       ) : null}
-    </nu-badge>
+    </El.Badge>
   );
 }
-
-Tag.propTypes = {
-  size: T.string,
-  label: T.string,
-  deletable: T.bool,
-};
 
 export default Tag;
