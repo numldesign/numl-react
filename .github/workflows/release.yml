@@ -3,11 +3,7 @@ name: Publish to NPM
 on:
   push:
     paths:
-      - 'packages/**'
-    branches:
-      - master
-  pull_request:
-    paths:
+      - '.changeset/**'
       - 'packages/**'
     branches:
       - master
