@@ -1,4 +1,5 @@
 {
+  "installCommand": "install",
   "buildCommand": "build",
   "packages": ["packages/Atoms", "packages/Core", "packages/Elements", "packages/Utilities"],
   "publishDirectory": {
