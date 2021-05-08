@@ -1,4 +1,3 @@
-import { BaseElement } from './BaseElement';
 /** UI Elements */
 export { Action } from './Action';
 export { Article } from './Article';
@@ -106,4 +105,3 @@ export { ThemeProvider } from './ThemeProvider';
 export { Tooltip } from './Tooltip';
 export { Triangle } from './Triangle';
 export { Value } from './Value';
-export default BaseElement;

@@ -14,8 +14,8 @@
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
+    "prebuild": "npm run build:types",
     "build": "vite build",
-    "postbuild": "npm run build:types",
     "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
   },
   "main": "./dist/core.cjs.js",

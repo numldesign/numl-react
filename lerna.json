@@ -1,8 +1,8 @@
 {
   "lerna": "2.0.0",
   "packages": [
-    "./packages/*",
     "./packages/Atoms/*",
+    "./packages/Core/*",
     "./packages/Molecules/*",
     "./packages/Elements/*",
     "./packages/Utilities/*"
