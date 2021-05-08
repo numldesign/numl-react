@@ -59,6 +59,8 @@
     "vite": "^2.2.4"
   },
   "dependencies": {
-    "@numl-react/atoms": "^0.0.15"
+    "@numl-react/atoms": "^0.0.15",
+    "@numl-react/core": "^0.0.16",
+    "@numl-react/molecules": "^0.0.15"
   }
 }
