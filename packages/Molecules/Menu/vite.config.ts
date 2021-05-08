@@ -12,7 +12,7 @@ module.exports = {
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react', '@numl-react/core', '@numl-react/atoms'],
+      external: ['react', '@numl-react/core', '@numl-react/atoms', '@numl-react/utility'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
@@ -20,6 +20,7 @@ module.exports = {
           react: 'React',
           '@numl-react/core': 'NumlReactCore',
           '@numl-react/atoms': 'NumlReactAtoms',
+          '@numl-react/utility': 'NumlReactUtility',
         },
       },
     },
