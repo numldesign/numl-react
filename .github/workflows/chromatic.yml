@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: npm run install:all
+        run: yarn install --no-lockfile
+
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1

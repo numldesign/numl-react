@@ -21,14 +21,6 @@
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
   },
-  "workspaces": [
-    "packages/*",
-    "./packages/Atoms/*",
-    "./packages/Core/*",
-    "./packages/Molecules/*",
-    "./packages/Elements/*",
-    "./packages/Utilities/*"
-  ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-typescript": "^7.13.0",
@@ -110,6 +102,7 @@
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
     "@numl-react/utility": "file:packages/Utilities",
+    "commitlint": "^12.1.1",
     "uuidv4": "^6.2.7"
   },
   "dependenciesMeta": {
