@@ -16,10 +16,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install
-
-      - name: Library Build
-        run: yarn build
+        run: yarn install --no-lockfile
 
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
