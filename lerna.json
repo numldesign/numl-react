@@ -7,6 +7,5 @@
     "./packages/Elements/*",
     "./packages/Utilities/*"
   ],
-  "useWorkspaces": true,
   "version": "0.0.21"
 }
