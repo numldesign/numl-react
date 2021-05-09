@@ -3,7 +3,8 @@
 Modular & Accessible React Components made on top of Numl 🚀
 
 [![NPM Version](https://img.shields.io/npm/v/@numl-react/core.svg?style=flat)](https://www.npmjs.com/package/@numl-react/core)
-[![](https://img.shields.io/npm/dt/numl-react.svg?style=flat)](https://www.npmjs.com/package/@numl-react/core)
+<img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/@numl-react/core"/>
+[![](https://img.shields.io/npm/dm/@numl-react/core)](https://www.npmjs.com/package/@numl-react/core)
 [![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
 
 Warning: This project is WIP, API might change without notice.
