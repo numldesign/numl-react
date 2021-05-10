@@ -19,13 +19,6 @@
     "build-storybook": "build-storybook",
     "eslint:fix": "eslint --fix"
   },
-  "workspaces": [
-    "./packages/Atoms/*",
-    "./packages/Core/*",
-    "./packages/Molecules/*",
-    "./packages/Elements/*",
-    "./packages/Utilities/*"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
