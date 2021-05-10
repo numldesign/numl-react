@@ -1,10 +1,6 @@
 {
-  "installCommand": "install:all",
+  "node": "14",
   "buildCommand": "build",
-  "packages": ["packages/Atoms", "packages/Core", "packages/Elements", "packages/Utilities"],
-  "publishDirectory": {
-    "react": "build/node_modules/react",
-    "react-dom": "build/node_modules/react-dom"
-  },
-  "sandboxes": ["new"]
+  "sandboxes": ["/examples/create-react-app"],
+  "packages": ["packages/Atoms", "packages/Core", "packages/Elements", "packages/Utilities"]
 }
