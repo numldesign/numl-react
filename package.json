@@ -20,6 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
   },
+  "workspaces": [
+    "./packages/Atoms/*",
+    "./packages/Core/*",
+    "./packages/Molecules/*",
+    "./packages/Elements/*",
+    "./packages/Utilities/*"
+  ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/plugin-transform-typescript": "^7.13.0",
