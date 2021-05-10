@@ -14,7 +14,10 @@
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
-    "build": "vite build"
+    "prebuild": "yarn build:types",
+    "index": "echo 'export * from \"./dist/core.es.js\";' > index.js ",
+    "build": "vite build",
+    "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",

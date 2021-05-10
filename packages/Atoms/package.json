@@ -15,6 +15,7 @@
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
     "prebuild": "yarn build:types",
+    "index": "echo 'export * from \"./dist/core.es.js\";' > index.js ",
     "build": "vite build",
     "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
   },
