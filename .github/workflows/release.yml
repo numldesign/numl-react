@@ -12,17 +12,15 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-        with:
-          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
-          fetch-depth: 0
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-      - name: Setup Node.js 12.x
+      - name: Setup Node.js 14.x
         uses: actions/setup-node@master
         with:
-          node-version: 12.x
+          node-version: 14.x
 
       - name: Install Dependencies
         run: yarn install

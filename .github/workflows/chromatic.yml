@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
