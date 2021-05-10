@@ -1835,6 +1835,168 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/cli@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/cli@npm:12.1.2"
+  dependencies:
+    "@commitlint/format": ^12.1.2
+    "@commitlint/lint": ^12.1.2
+    "@commitlint/load": ^12.1.2
+    "@commitlint/read": ^12.1.2
+    "@commitlint/types": ^12.1.2
+    lodash: ^4.17.19
+    resolve-from: 5.0.0
+    resolve-global: 1.0.0
+    yargs: ^16.2.0
+  bin:
+    commitlint: cli.js
+  checksum: 1191a9f35f88b459f11be9d0c3a68acf8b2dfb7510c1cf25a0095cbb7deb2e30daf8ab893988880d44ab65206148694c654a12fdc4ccc60b43d910a9daf56f57
+  languageName: node
+  linkType: hard
+
+"@commitlint/ensure@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/ensure@npm:12.1.2"
+  dependencies:
+    "@commitlint/types": ^12.1.2
+    lodash: ^4.17.19
+  checksum: 615849bb7bb8fe3a4ec23b83ea51c27c5fe261a83efed456f01fa4fe320e7025e1f6f4490b722803cdd43b73501dfe7fffec4ab9783fe73e2804a6b3a1d0364a
+  languageName: node
+  linkType: hard
+
+"@commitlint/execute-rule@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/execute-rule@npm:12.1.1"
+  checksum: 46ed03f716373f9a8195dd478159f400af5fe01caa15ebeffc7d894deafe856dc5af4486351471c15b89dc63bf4e2a7a0381791fbe175a0e99830b863c0fc952
+  languageName: node
+  linkType: hard
+
+"@commitlint/format@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/format@npm:12.1.2"
+  dependencies:
+    "@commitlint/types": ^12.1.2
+    chalk: ^4.0.0
+  checksum: 31069375d816a305d36427f70f6593802301537bbc3f38eb90c643e50b53d4f6e6ac1a36b930dc197d658338a0c91dd0a89c12080112d2da5a08ecaff02f1f7d
+  languageName: node
+  linkType: hard
+
+"@commitlint/is-ignored@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/is-ignored@npm:12.1.2"
+  dependencies:
+    "@commitlint/types": ^12.1.2
+    semver: 7.3.5
+  checksum: 41b5cbd09fc919b55dc4e9ed2dc6899798ce5ed6ae6f56ffe3ae4347b7c34d3a42d6ab9f8c5dcfc9c75736ba3a9c2075fb91a293641c483cb1c6201cee3b59e7
+  languageName: node
+  linkType: hard
+
+"@commitlint/lint@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/lint@npm:12.1.2"
+  dependencies:
+    "@commitlint/is-ignored": ^12.1.2
+    "@commitlint/parse": ^12.1.2
+    "@commitlint/rules": ^12.1.2
+    "@commitlint/types": ^12.1.2
+  checksum: 07c7fa23f93c0dff0af1dc128e35c752e7a3110b8211081b4bf718a29221926fa978bc255856f0e3b466df269f821f5139cc58bdbd64be4f9458cb64cc7b5106
+  languageName: node
+  linkType: hard
+
+"@commitlint/load@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/load@npm:12.1.2"
+  dependencies:
+    "@commitlint/execute-rule": ^12.1.1
+    "@commitlint/resolve-extends": ^12.1.1
+    "@commitlint/types": ^12.1.2
+    chalk: ^4.0.0
+    cosmiconfig: ^7.0.0
+    lodash: ^4.17.19
+    resolve-from: ^5.0.0
+  checksum: 4116372d9f8c1619527804927eee4932bc1337f425899286e67ad25140a5d11f45f5d15588a375129730432b4ad9c71db793fd4debb145cccbc7038d9a36d073
+  languageName: node
+  linkType: hard
+
+"@commitlint/message@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/message@npm:12.1.1"
+  checksum: 4a5ffffab099397b7602b0c8a463ab1d2bca96bf20e7b3818e0fca6344e4fa7c5edf62a82394a138303683cbbbd875c7ead1664ebba8429e73a5d914784e85da
+  languageName: node
+  linkType: hard
+
+"@commitlint/parse@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/parse@npm:12.1.2"
+  dependencies:
+    "@commitlint/types": ^12.1.2
+    conventional-changelog-angular: ^5.0.11
+    conventional-commits-parser: ^3.0.0
+  checksum: d425f7fd1cf9b838ae3f20659c3706ec3a69f78615f7e6ed4f85410dd978f19d57f17449eb0aaf76c58a4e6862f9083a010c3686df854587bbe321b5479eea23
+  languageName: node
+  linkType: hard
+
+"@commitlint/read@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/read@npm:12.1.2"
+  dependencies:
+    "@commitlint/top-level": ^12.1.1
+    "@commitlint/types": ^12.1.2
+    fs-extra: ^9.0.0
+    git-raw-commits: ^2.0.0
+  checksum: 96819a67aba7e2a1443fb008f73cb3944bc187a30012ad2d16c4b895d02d6d4d2f6dd5195b8f83fd0c43216d872992bb20092dc9f83fad603ce499f33cacf0b6
+  languageName: node
+  linkType: hard
+
+"@commitlint/resolve-extends@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/resolve-extends@npm:12.1.1"
+  dependencies:
+    import-fresh: ^3.0.0
+    lodash: ^4.17.19
+    resolve-from: ^5.0.0
+    resolve-global: ^1.0.0
+  checksum: 6826bc4d8d6f55352b26c9481fbb8b16af02499d6db03494085085fa848c3ae34df86c182a6027336cc96d6e2e04d4798faa6d73be4d0875fb1d3e83720bbd02
+  languageName: node
+  linkType: hard
+
+"@commitlint/rules@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/rules@npm:12.1.2"
+  dependencies:
+    "@commitlint/ensure": ^12.1.2
+    "@commitlint/message": ^12.1.1
+    "@commitlint/to-lines": ^12.1.1
+    "@commitlint/types": ^12.1.2
+  checksum: b52ff7b1891feb1a3cac13a023785008518b8b21f1e57fbdcc335f38bc8c1c3562185201a19d11082f3fcbe319354a77b6ebe6829aeadbdea42d50ef38f2b71e
+  languageName: node
+  linkType: hard
+
+"@commitlint/to-lines@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/to-lines@npm:12.1.1"
+  checksum: 5119752fe17097d69f0361ae5ffa8c5cac6d302371543911bc697fb1647414d7fcf90e3857ca66844ff74a708c85553d0811edd6a776fd526bb1bfb4646b09d3
+  languageName: node
+  linkType: hard
+
+"@commitlint/top-level@npm:^12.1.1":
+  version: 12.1.1
+  resolution: "@commitlint/top-level@npm:12.1.1"
+  dependencies:
+    find-up: ^5.0.0
+  checksum: 918b96e70a698d3fd3e6664fd6051faae4e7e92a9b3a816b2a61f313995129c90bcf640dbd023da53d7d42b6b9457fc4ad077a13e42b8e20b3aaf159a9ecf873
+  languageName: node
+  linkType: hard
+
+"@commitlint/types@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@commitlint/types@npm:12.1.2"
+  dependencies:
+    chalk: ^4.0.0
+  checksum: 20ddac5171dc43a23893db74ebe624ebef86c7834dfc756bb90d17dff2c04b2fee0b738e908906ca06b277f62421c1eea2ff21634dc008761fc2d9b855dd2b13
+  languageName: node
+  linkType: hard
+
 "@emotion/cache@npm:^10.0.27":
   version: 10.0.29
   resolution: "@emotion/cache@npm:10.0.29"
@@ -3263,1374 +3425,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@numl-react/account-connection@workspace:packages/Molecules/AccountConnection":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/account-connection@workspace:packages/Molecules/AccountConnection"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/action-list@workspace:packages/Molecules/ActionList":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/action-list@workspace:packages/Molecules/ActionList"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/atoms@^0.0.20, @numl-react/atoms@workspace:packages/Atoms":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/atoms@workspace:packages/Atoms"
-  dependencies:
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/avatar@workspace:packages/Atoms/Avatar":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/avatar@workspace:packages/Atoms/Avatar"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/badge@workspace:packages/Atoms/Badge":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/badge@workspace:packages/Atoms/Badge"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/banner@workspace:packages/Molecules/Banner":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/banner@workspace:packages/Molecules/Banner"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/bottom-navigation@workspace:packages/Molecules/BottomNavigation":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/bottom-navigation@workspace:packages/Molecules/BottomNavigation"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/button@workspace:packages/Atoms/Button":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/button@workspace:packages/Atoms/Button"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/callout-card@workspace:packages/Molecules/CalloutCard":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/callout-card@workspace:packages/Molecules/CalloutCard"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/card@workspace:packages/Molecules/Card":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/card@workspace:packages/Molecules/Card"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/carousel@workspace:packages/Molecules/Carousel":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/carousel@workspace:packages/Molecules/Carousel"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/checkbox@workspace:packages/Atoms/Checkbox":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/checkbox@workspace:packages/Atoms/Checkbox"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/chip@workspace:packages/Atoms/Chip":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/chip@workspace:packages/Atoms/Chip"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/choice-list@workspace:packages/Molecules/ChoiceList":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/choice-list@workspace:packages/Molecules/ChoiceList"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/color-picker@workspace:packages/Molecules/ColorPicker":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/color-picker@workspace:packages/Molecules/ColorPicker"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/core@^0.0.20, @numl-react/core@workspace:packages/Core":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/core@workspace:packages/Core"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: ^26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/datatable@workspace:packages/Molecules/DataTable":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/datatable@workspace:packages/Molecules/DataTable"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/date-picker@workspace:packages/Molecules/DatePicker":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/date-picker@workspace:packages/Molecules/DatePicker"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/dialogue-box@workspace:packages/Molecules/DialogueBox":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/dialogue-box@workspace:packages/Molecules/DialogueBox"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/dropzone@workspace:packages/Molecules/Dropzone":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/dropzone@workspace:packages/Molecules/Dropzone"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/elements@^0.0.20, @numl-react/elements@workspace:packages/Elements":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/elements@workspace:packages/Elements"
-  dependencies:
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/empty-state@workspace:packages/Molecules/EmptyState":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/empty-state@workspace:packages/Molecules/EmptyState"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/exception-list@workspace:packages/Atoms/ExceptionList":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/exception-list@workspace:packages/Atoms/ExceptionList"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/filters@workspace:packages/Molecules/Filters":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/filters@workspace:packages/Molecules/Filters"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/footer-help@workspace:packages/Atoms/FooterHelp":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/footer-help@workspace:packages/Atoms/FooterHelp"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/form@workspace:packages/Molecules/Form":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/form@workspace:packages/Molecules/Form"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/icon@workspace:packages/Atoms/Icon":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/icon@workspace:packages/Atoms/Icon"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/link@workspace:packages/Atoms/Link":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/link@workspace:packages/Atoms/Link"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/location-card@workspace:packages/Molecules/LocationCard":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/location-card@workspace:packages/Molecules/LocationCard"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/media-card@workspace:packages/Molecules/Menu":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/media-card@workspace:packages/Molecules/Menu"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/menu@workspace:packages/Molecules/MediaCard":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/menu@workspace:packages/Molecules/MediaCard"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/message-error@workspace:packages/Atoms/MessageError":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/message-error@workspace:packages/Atoms/MessageError"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/modal@workspace:packages/Molecules/Modal":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/modal@workspace:packages/Molecules/Modal"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/molecules@^0.0.20, @numl-react/molecules@workspace:packages/Molecules":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/molecules@workspace:packages/Molecules"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/option-list@workspace:packages/Molecules/OptionList":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/option-list@workspace:packages/Molecules/OptionList"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/page-action@workspace:packages/Molecules/PageAction":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/page-action@workspace:packages/Molecules/PageAction"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/pagination@workspace:packages/Atoms/Pagination":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/pagination@workspace:packages/Atoms/Pagination"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/pop-over@workspace:packages/Molecules/Popover":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/pop-over@workspace:packages/Molecules/Popover"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/progress-bar@workspace:packages/Atoms/ProgressBar":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/progress-bar@workspace:packages/Atoms/ProgressBar"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/radio@workspace:packages/Atoms/Radio":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/radio@workspace:packages/Atoms/Radio"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/range-slider@workspace:packages/Atoms/RangeSlider":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/range-slider@workspace:packages/Atoms/RangeSlider"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/resource-list@workspace:packages/Molecules/ResourceList":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/resource-list@workspace:packages/Molecules/ResourceList"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/search@workspace:packages/Molecules/Search":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/search@workspace:packages/Molecules/Search"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/setting-card@workspace:packages/Molecules/SettingCard":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/setting-card@workspace:packages/Molecules/SettingCard"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/setting-toggle@workspace:packages/Molecules/SettingToggle":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/setting-toggle@workspace:packages/Molecules/SettingToggle"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/sheet@workspace:packages/Molecules/Sheet":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/sheet@workspace:packages/Molecules/Sheet"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/switch@workspace:packages/Atoms/Switch":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/switch@workspace:packages/Atoms/Switch"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/tabs@workspace:packages/Molecules/Tabs":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/tabs@workspace:packages/Molecules/Tabs"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/tag@workspace:packages/Atoms/Tag":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/tag@workspace:packages/Atoms/Tag"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/text-area@workspace:packages/Molecules/TextArea":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/text-area@workspace:packages/Molecules/TextArea"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/text-input@workspace:packages/Atoms/TextInput":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/text-input@workspace:packages/Atoms/TextInput"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/thumbnail@workspace:packages/Atoms/Thumbnail":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/thumbnail@workspace:packages/Atoms/Thumbnail"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/toast@workspace:packages/Molecules/Toast":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/toast@workspace:packages/Molecules/Toast"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/tool-tip@workspace:packages/Molecules/Tooltip":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/tool-tip@workspace:packages/Molecules/Tooltip"
-  dependencies:
-    "@numl-react/atoms": ^0.0.20
-    "@numl-react/core": ^0.0.20
-    "@numl-react/elements": ^0.0.20
-    "@numl-react/molecules": ^0.0.20
-    "@numl-react/utility": ^0.0.20
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/utility@^0.0.20, @numl-react/utility@workspace:packages/Utilities":
-  version: 0.0.0-use.local
-  resolution: "@numl-react/utility@workspace:packages/Utilities"
-  dependencies:
-    "@types/jest": ^26.0.23
-    "@types/mocha": ^8.2.2
-    "@types/node": ^15.0.2
-    "@types/react": ^17.0.5
-    "@types/react-dom": ^17.0.3
-    jest: 26.6.3
-    prop-types: ^15.7.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    ts-jest: ^26.5.6
-    tslib: ^2.2.0
-    typescript: ^4.2.4
-    vite: ^2.2.4
-  languageName: unknown
-  linkType: soft
-
-"@numl-react/utility@file:packages/Utilities::locator=numl-react%40workspace%3A.":
-  version: 0.0.20
-  resolution: "@numl-react/utility@file:packages/Utilities#packages/Utilities::hash=6d000b&locator=numl-react%40workspace%3A."
-  checksum: dabbbf0a2173e8dc9f4556ddc313f55ded042105ceae5c347a10f144bec35c11244a9a6f2f1df4198f23bbe7609bd147330a329f40d0cbc11ca4669be3e34f52
-  languageName: node
-  linkType: hard
-
 "@octokit/auth-token@npm:^2.4.4":
   version: 2.4.5
   resolution: "@octokit/auth-token@npm:2.4.5"
@@ -4873,9 +3667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^11.2.1":
-  version: 11.2.1
-  resolution: "@rollup/plugin-node-resolve@npm:11.2.1"
+"@rollup/plugin-node-resolve@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "@rollup/plugin-node-resolve@npm:13.0.0"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     "@types/resolve": 1.17.1
@@ -4884,8 +3678,8 @@ __metadata:
     is-module: ^1.0.0
     resolve: ^1.19.0
   peerDependencies:
-    rollup: ^1.20.0||^2.0.0
-  checksum: ae1bed46a949a1d8c077e021751c0140a523f731bea464ed0bfc3d335096493d1638be2a756f72d96f1f3a00fbdad8ba8fad8e86381d3eafce5ea2dffd62f175
+    rollup: ^2.42.0
+  checksum: 4b323e8ad5f1245449cd44b4857ed94a8dd3b998178ce139e74542c216a5abeb5a9e44885f3809ac747296a108f0562f986f9561055e76d1b0b268cf788a5c83
   languageName: node
   linkType: hard
 
@@ -6261,7 +5055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^15.0.2":
+"@types/node@npm:*":
   version: 15.0.2
   resolution: "@types/node@npm:15.0.2"
   checksum: ea8dd741bf16ad3318cca505783b7c211a5c8bea49202f99ba88d2ce8a804e994e1fd1b575b994e434e8b8ead810da966d588ea112998f8fe8d95cd74c396f8a
@@ -6354,7 +5148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.2, @types/react-dom@npm:^17.0.3":
+"@types/react-dom@npm:^17.0.2":
   version: 17.0.3
   resolution: "@types/react-dom@npm:17.0.3"
   dependencies:
@@ -6372,7 +5166,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.3, @types/react@npm:^17.0.5":
+"@types/react@npm:*, @types/react@npm:^17.0.3":
   version: 17.0.5
   resolution: "@types/react@npm:17.0.5"
   dependencies:
@@ -8989,6 +7783,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commitlint@npm:^12.1.1":
+  version: 12.1.2
+  resolution: "commitlint@npm:12.1.2"
+  dependencies:
+    "@commitlint/cli": ^12.1.2
+    "@commitlint/types": ^12.1.2
+  bin:
+    commitlint: cli.js
+  checksum: 6c2c4f141efd8c47a8752ba5f2dfcd0975b4a77dcee60bb92097d40a75437664fe8ba25737cb44c7cd73ddb75205b8ba91eab7290df8d5b613239ce3a09c9711
+  languageName: node
+  linkType: hard
+
 "common-ancestor-path@npm:^1.0.1":
   version: 1.0.1
   resolution: "common-ancestor-path@npm:1.0.1"
@@ -9105,7 +7911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-angular@npm:^5.0.0, conventional-changelog-angular@npm:^5.0.12":
+"conventional-changelog-angular@npm:^5.0.0, conventional-changelog-angular@npm:^5.0.11, conventional-changelog-angular@npm:^5.0.12":
   version: 5.0.12
   resolution: "conventional-changelog-angular@npm:5.0.12"
   dependencies:
@@ -11772,7 +10578,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"git-raw-commits@npm:^2.0.8":
+"git-raw-commits@npm:^2.0.0, git-raw-commits@npm:^2.0.8":
   version: 2.0.10
   resolution: "git-raw-commits@npm:2.0.10"
   dependencies:
@@ -11913,6 +10719,15 @@ fsevents@^1.2.7:
     once: ^1.3.0
     path-is-absolute: ^1.0.0
   checksum: 352f74f08247db5420161a2f68f2bd84b53228b5fcfc9dcc37cd54d3f19ec0232495d84aeff1286d0727059e9fdc1031400e00b971bdc59e30f8f82b199c9d02
+  languageName: node
+  linkType: hard
+
+"global-dirs@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "global-dirs@npm:0.1.1"
+  dependencies:
+    ini: ^1.3.4
+  checksum: 0d46e90b45e35fef757ef468fd497ea249787dafb20b76597ac0a1c129d8e8d7f09db4640a2f7ed12d1057159197af94ef4eea74c0be9c7c1c2c3bec5f0a6834
   languageName: node
   linkType: hard
 
@@ -12625,7 +11440,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"import-fresh@npm:^3.1.0, import-fresh@npm:^3.2.1":
+"import-fresh@npm:^3.0.0, import-fresh@npm:^3.1.0, import-fresh@npm:^3.2.1":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
   dependencies:
@@ -14051,7 +12866,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"jest@npm:26.6.3, jest@npm:^26.6.3":
+"jest@npm:^26.6.3":
   version: 26.6.3
   resolution: "jest@npm:26.6.3"
   dependencies:
@@ -16464,10 +15279,9 @@ fsevents@^1.2.7:
     "@babel/preset-env": ^7.10.4
     "@babel/preset-react": ^7.10.4
     "@changesets/cli": ^2.16.0
-    "@numl-react/utility": "file:packages/Utilities"
     "@rollup/plugin-babel": ^5.1.0
     "@rollup/plugin-commonjs": ^18.0.0
-    "@rollup/plugin-node-resolve": ^11.2.1
+    "@rollup/plugin-node-resolve": ^13.0.0
     "@rollup/plugin-url": ^6.0.0
     "@semantic-release/changelog": ^5.0.1
     "@semantic-release/commit-analyzer": ^8.0.1
@@ -16490,6 +15304,7 @@ fsevents@^1.2.7:
     awesome-typescript-loader: ^5.2.1
     babel-loader: ^8.2.2
     chromatic: ^5.6.1
+    commitlint: ^12.1.1
     eslint-plugin-jest: ^24.3.6
     eslint-plugin-testing-library: ^4.2.1
     husky: ^6.0.0
@@ -18187,7 +17002,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.1, react-dom@npm:^17.0.2":
+"react-dom@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -18391,7 +17206,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.1, react@npm:^17.0.2":
+"react@npm:^17.0.1":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
@@ -18953,6 +17768,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"resolve-from@npm:5.0.0, resolve-from@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "resolve-from@npm:5.0.0"
+  checksum: 0d29fc7012eb21f34d2637fa0602694f60e64c14bf5fbd5395b72f6ea5540a6906cbeef062edefc34c22fd802bfe8ae46ef936e6c4a3f1b1047390f9738dd76f
+  languageName: node
+  linkType: hard
+
 "resolve-from@npm:^4.0.0":
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
@@ -18960,10 +17782,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"resolve-from@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "resolve-from@npm:5.0.0"
-  checksum: 0d29fc7012eb21f34d2637fa0602694f60e64c14bf5fbd5395b72f6ea5540a6906cbeef062edefc34c22fd802bfe8ae46ef936e6c4a3f1b1047390f9738dd76f
+"resolve-global@npm:1.0.0, resolve-global@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "resolve-global@npm:1.0.0"
+  dependencies:
+    global-dirs: ^0.1.1
+  checksum: 337635c53b22fcaf1fa2a49ef3da34167893582ab3200bc28f7f013cb0a617db03c7f21ab7b124a6a85e8725cade7f3fb0f4618e54fed2e507078ce8a4c5c58b
   languageName: node
   linkType: hard
 
@@ -19327,7 +18151,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"semver@npm:7.x, semver@npm:^7.1.1, semver@npm:^7.1.2, semver@npm:^7.1.3, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5":
+"semver@npm:7.3.5, semver@npm:7.x, semver@npm:^7.1.1, semver@npm:^7.1.2, semver@npm:^7.1.3, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5":
   version: 7.3.5
   resolution: "semver@npm:7.3.5"
   dependencies:
@@ -20903,7 +19727,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^26.5.4, ts-jest@npm:^26.5.6":
+"ts-jest@npm:^26.5.4":
   version: 26.5.6
   resolution: "ts-jest@npm:26.5.6"
   dependencies:
@@ -20943,7 +19767,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.2.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3":
   version: 2.2.0
   resolution: "tslib@npm:2.2.0"
   checksum: 2d35468c470410871c5246e43f12dcb6d0fc363b617c176f26443b9530e5c5ee8448966892a42956168d8f495da7865bda33dfe82c26c91991e28999974a618f
@@ -21697,7 +20521,7 @@ typescript@^4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:^2.1.5, vite@npm:^2.2.4":
+"vite@npm:^2.1.5":
   version: 2.2.4
   resolution: "vite@npm:2.2.4"
   dependencies:
