@@ -1,3 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-lerna run precommit --concurrency 2 --stream
+yarn prettier
+git add . 
