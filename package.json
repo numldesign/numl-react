@@ -5,6 +5,7 @@
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "prettier": "prettier --write ./packages",
+    "prettier:check": "prettier --check ./packages",
     "dev": "vite",
     "clean:dist": "lerna exec -- rm ./dist -rf",
     "install:all": "lerna exec -- yarn",
