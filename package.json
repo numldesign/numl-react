@@ -1,6 +1,7 @@
 {
   "name": "numl-react",
   "version": "0.0.14-1",
+  "private": true,
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "prettier": "prettier --write ./packages",
@@ -17,6 +18,13 @@
     "build-storybook": "build-storybook",
     "eslint:fix": "eslint packages/Core* --fix"
   },
+  "workspaces": [
+    "./packages/Atoms/*",
+    "./packages/Core/*",
+    "./packages/Molecules/*",
+    "./packages/Elements/*",
+    "./packages/Utilities/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/numldesign/numl-react.git"
@@ -27,6 +35,9 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@changesets/cli": "^2.16.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-lerna-scopes": "^12.1.1",
     "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
@@ -56,6 +67,7 @@
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-google": "^0.14.0",
+    "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.3.6",

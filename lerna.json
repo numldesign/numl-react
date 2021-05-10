@@ -8,5 +8,6 @@
     "./packages/Utilities/*"
   ],
   "npmClient": "yarn",
+  "useWorkspaces": true,
   "version": "0.0.20"
 }
