@@ -7,11 +7,7 @@
     "./packages/Elements/*",
     "./packages/Utilities/*"
   ],
-<<<<<<< HEAD
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "0.0.20"
-=======
-  "version": "0.0.21"
->>>>>>> 7e7ed30047d9b7df8e4e71308a1dd7de0f29751e
 }
