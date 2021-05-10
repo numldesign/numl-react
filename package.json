@@ -5,13 +5,12 @@
   "scripts": {
     "prettier": "prettier --write ./packages",
     "dev": "vite",
-    "clean": "npm-run-all clean:*",
     "clean:dist": "npx lerna exec -- rm ./dist -rf",
-    "install:all": "npx lerna exec -- npm install",
+    "install:all": "npx lerna exec -- yarn",
     "typedoc": "npx typedoc --out docs packages/entry.ts",
-    "build": "npx lerna exec -- npm run build",
+    "build": "npx lerna exec -- yarn build",
     "test": "jest",
-    "release": "npx lerna exec -- npm run build && changeset publish",
+    "release": "npx lerna exec -- yarn build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
@@ -27,8 +26,7 @@
     "./packages/Core/*",
     "./packages/Molecules/*",
     "./packages/Elements/*",
-    "./packages/Utilities/*",
-    "./examples/*"
+    "./packages/Utilities/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.10.5",
