@@ -23,7 +23,7 @@ jobs:
           node-version: 14.x
 
       - name: Install Dependencies
-        run: yarn install:all
+        run: yarn install
 
       - name: Setup CI Git User
         run: |

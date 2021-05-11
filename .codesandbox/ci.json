@@ -1,6 +1,5 @@
 {
   "node": "14",
-  "installCommand": "install:all",
   "buildCommand": "build",
   "sandboxes": ["/examples/create-react-app"],
   "packages": ["packages/Atoms", "packages/Molecules", "packages/Core", "packages/Elements", "packages/Utilities"]
