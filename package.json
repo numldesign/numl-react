@@ -7,12 +7,12 @@
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
     "dev": "vite",
-    "clean:dist": "npx lerna exec -- rm ./dist -rf",
-    "install:all": "npx lerna exec -- yarn install",
+    "clean:dist": "lerna exec -- rm ./dist -rf",
+    "install:all": "lerna exec -- yarn install",
     "typedoc": "typedoc --out docs packages/entry.ts",
-    "build": "npx lerna exec -- yarn build",
+    "build": "lerna exec -- yarn build",
     "test": "jest",
-    "release": "npx lerna exec -- yarn build && changeset publish",
+    "release": "lerna exec -- yarn build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
@@ -113,5 +113,8 @@
     "open@7.4.2": {
       "unplugged": true
     }
+  },
+  "dependencies": {
+    "lerna": "3.22.1"
   }
 }
