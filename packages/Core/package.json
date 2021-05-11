@@ -19,7 +19,7 @@
   "scripts": {
     "prebuild": "yarn build:types",
     "build": "vite build",
-    "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
+    "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir ./dist/types"
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
