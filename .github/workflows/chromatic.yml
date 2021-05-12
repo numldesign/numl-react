@@ -13,13 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
+      # Runs a single command using the runners shell
+      - name: Cleaning Yarn Cache
+        run: yarn cache clean
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout to Chromatic Branch and Install dependencies
       - uses: actions/checkout@v1
-      - name: Install dependencies
-        run: yarn install
+        run: yarn install:all
+
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1
+
         # Chromatic GitHub Action options
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

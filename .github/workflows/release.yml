@@ -22,8 +22,13 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Install Dependencies
-        run: yarn install
+      # Runs a single command using the runners shell
+      - name: Cleaning Yarn Cache
+        run: yarn cache clean
+
+        # Runs a single command using the runners shell
+      - name: Installation of NPM Modules
+        run: yarn install:all
 
       - name: Setup CI Git User
         run: |
