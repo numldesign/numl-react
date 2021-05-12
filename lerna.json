@@ -1,5 +1,13 @@
 {
-  "packages": ["packages/*", "documentation"],
+  "packages": [
+    "packages/*",
+    "packages/Atoms/*",
+    "packages/Core/*",
+    "packages/Molecules/*",
+    "packages/Elements/*",
+    "packages/Utilities/*",
+    "documentation"
+  ],
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
