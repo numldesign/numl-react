@@ -50,12 +50,6 @@ dist/*
 **/**/dist/*
 **/**/**/dist/*
 
-
-yarn.lock
-**/yarn.lock
-**/**/yarn.lock
-**/**/**/yarn.lock
-
 package-lock.json
 **/package-lock.json
 **/**/package-lock.json

@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/utility",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -14,13 +14,14 @@
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
-    "prebuild": "npm run build:types",
+    "postbuild": "yarn build:types",
     "build": "vite build",
-    "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir dist/types"
+    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
-  "typings": "./dist/types/Utilities/index.d.ts",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "require": "./index.ts",
@@ -29,7 +30,8 @@
   },
   "files": [
     "dist",
-    "index.js"
+    "index.js",
+    "CHANGELOG.md"
   ],
   "sideEffects": false,
   "publishConfig": {
@@ -53,8 +55,12 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4",
     "vite": "^2.2.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }

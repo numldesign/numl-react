@@ -1,4 +1,5 @@
 /** Exporting Methods */
+// @ts-ignore
 export { requireNude } from '@numl-react/utility';
 
 /*** Exporting Modules */

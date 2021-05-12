@@ -1,21 +1,22 @@
 {
   "name": "numl-react",
-  "version": "0.0.14-1",
+  "version": "0.0.1",
+  "private": true,
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
     "prettier": "prettier --write ./packages",
+    "prettier:check": "prettier --check ./packages",
     "dev": "vite",
-    "clean": "npm-run-all clean:*",
-    "clean:dist": "npx lerna exec -- rm ./dist -rf",
-    "install:all": "npx lerna exec -- npm install",
-    "typedoc": "npx typedoc --out docs packages/entry.ts",
-    "build": "npx lerna exec -- npm run build",
+    "install:all": "npx lerna exec -- yarn install --frozen-lock",
+    "typedoc": "typedoc --out docs packages/entry.ts",
+    "build": "npx lerna exec -- yarn build",
     "test": "jest",
-    "release": "npx lerna exec -- npm run build && changeset publish",
+    "release": "npx lerna exec -- yarn build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eslint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,12 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@changesets/cli": "^2.16.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-lerna-scopes": "^12.1.1",
     "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-commonjs": "^18.0.0",
-    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-url": "^6.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
@@ -48,29 +52,41 @@
     "@types/node": "^14.14.35",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "@vitejs/plugin-react-refresh": "^1.3.1",
-    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.2.2",
     "chromatic": "^5.6.1",
+    "commitlint": "^12.1.1",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^4.2.1",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
-    "jsx-native-events": "^2.0.0",
-    "lerna": "^4.0.0",
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
+    "react": "^17.0.2",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.0.2",
     "react-test-library": "^0.0.1",
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.4",
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4",
-    "vite": "^2.1.5"
+    "uuidv4": "^6.2.7",
+    "vite": "^2.2.4"
   },
   "publishConfig": {
     "access": "public"
@@ -91,23 +107,17 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*": "prettier --write ./packages --ignore-unknown"
-  },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
-  "dependencies": {
-    "@numl-react/utility": "file:packages/Utilities",
-    "commitlint": "^12.1.1",
-    "uuidv4": "^6.2.7"
-  },
   "dependenciesMeta": {
     "open@7.4.2": {
       "unplugged": true
     }
+  },
+  "dependencies": {
+    "@numl-react/atoms": "0.0.22",
+    "@numl-react/core": "0.0.22",
+    "@numl-react/molecules": "0.0.22",
+    "@numl-react/utility": "0.0.22",
+    "lerna": "3.2.0"
   }
 }

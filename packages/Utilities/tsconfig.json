@@ -3,10 +3,13 @@
   "include": ["../globals.ts", "./index.ts"],
   "exclude": [
     "*.config.js",
-    "./node_modules/*",
-    "../node_modules/*",
-    "**/**/*.stories.tsx",
+    "node_modules",
+    "./packages/Molecules/**/**/*.stories.tsx",
     "**/**/vite.config.ts",
-    "**/**/__tests__/*.test.tsx"
+    "**/**/__tests__/*.test.tsx",
+    "build",
+    "dist",
+    "**/*.js",
+    "**/*.jsx"
   ]
 }
