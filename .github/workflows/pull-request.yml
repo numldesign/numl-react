@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Installation of NPM Modules
-        run: yarn install
+        run: yarn install:all
 
       # Runs a set of commands using the runners shell
       - name: Build Project
