@@ -24,7 +24,8 @@
   "typings": "./dist/types/index.d.ts",
   "files": [
     "dist",
-    "index.js"
+    "index.js",
+    "CHANGELOG.md"
   ],
   "exports": {
     ".": {

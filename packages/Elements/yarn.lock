@@ -482,52 +482,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@numl-react/atoms@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@numl-react/atoms/-/atoms-0.0.20.tgz#7c6c7361d12f063c6d7cbb34ef7c5c263caecf5c"
-  integrity sha512-giGOrWncuk9gfQfboxUkE04eLwGrwnU/DZdxQJTkRPurQBX0i+pZ5ddTgT4HH2HZOlnHOhC5bL5+uOd1QJ1PGw==
+"@numl-react/utility@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@numl-react/utility/-/utility-0.0.22.tgz#1e8787caffabd658a6c628a21ae3cae07c689504"
+  integrity sha512-EWq7C/6eBl+6F6S3BjThMgbJ+T38JSIZiJPSLLhhjBLzv4oFitD/m2ktrwtZNcgGCszIHyFQ3jES/no9Gtnh8w==
   dependencies:
-    "@numl-react/core" "^0.0.20"
-    "@numl-react/elements" "^0.0.20"
-    "@numl-react/molecules" "^0.0.20"
-    "@numl-react/utility" "^0.0.20"
-
-"@numl-react/core@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@numl-react/core/-/core-0.0.20.tgz#6d44ec71b47eb29d6711a5171de175ed1ff1a1ed"
-  integrity sha512-0iOcKH+OBYhJnWoNqqqkAfUiNAVlsJfYFDNnNOHdLuQrJePg2MCZpAcZzx0mG8n6RpqSYjHj702NF+b7dJO9Og==
-  dependencies:
-    "@numl-react/atoms" "^0.0.20"
-    "@numl-react/elements" "^0.0.20"
-    "@numl-react/molecules" "^0.0.20"
-    "@numl-react/utility" "^0.0.20"
-
-"@numl-react/elements@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@numl-react/elements/-/elements-0.0.20.tgz#0ed51b483f25243884e19087594840cd0be3f13f"
-  integrity sha512-SGQBG5G7nl4d0u9J0MF2BiJuTUeWB74UenMlXCPH3xGOBaR9Jj9qkkTJRgMcTey1Lv2c5U9yx/jIAR22pj8naA==
-  dependencies:
-    "@numl-react/atoms" "^0.0.20"
-    "@numl-react/core" "^0.0.20"
-    "@numl-react/molecules" "^0.0.20"
-    "@numl-react/utility" "^0.0.20"
-
-"@numl-react/molecules@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@numl-react/molecules/-/molecules-0.0.20.tgz#bc84c3ab05bf9699fed7d91d4a916cb366f25d9d"
-  integrity sha512-kn4wDUjce9ObP5H2jofVERbRg9RWO5MWXom8t6/p6xllS+QODOddm2ch4xXnTjq1MGwm/Juu/PIh2lJ4RbT2PA==
-  dependencies:
-    "@numl-react/atoms" "^0.0.20"
-    "@numl-react/core" "^0.0.20"
-    "@numl-react/elements" "^0.0.20"
-    "@numl-react/utility" "^0.0.20"
-
-"@numl-react/utility@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@numl-react/utility/-/utility-0.0.20.tgz#2c5ed778e3fc781c891726dce1dc291ab482b124"
-  integrity sha512-++/MP8CQrFUoE6g6LHLDYBHmvxUR8cIFp39da0946ZUFJqGQNfpM0rIeCo2XapJZCMp1yoQXKqmrNbEgj1w14g==
-  dependencies:
-    "@numl-react/core" "^0.0.20"
+    rimraf "^3.0.2"
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"

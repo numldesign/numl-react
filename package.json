@@ -7,7 +7,7 @@
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
     "dev": "vite",
-    "install:all": "lerna exec -- yarn install --frozen-lockfile",
+    "install:all": "lerna exec -- yarn install",
     "typedoc": "typedoc --out docs packages/entry.ts",
     "build": "lerna exec -- yarn build",
     "test": "jest",
