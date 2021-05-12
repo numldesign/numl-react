@@ -1,13 +1,16 @@
 {
-  "lerna": "2.0.0",
-  "packages": [
-    "packages/*",
-    "packages/Atoms/*",
-    "packages/Core/*",
-    "packages/Molecules/*",
-    "packages/Elements/*",
-    "packages/Utilities/*"
-  ],
+  "packages": ["packages/*", "documentation"],
+  "version": "independent",
   "npmClient": "yarn",
-  "version": "0.0.20"
+  "useWorkspaces": true,
+  "registry": "https://registry.npmjs.org/",
+  "command": {
+    "version": { "exact": true },
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "ignoreChanges": ["**/stories/**", "**/__tests__/**"],
+      "allowBranch": "master"
+    }
+  }
 }
