@@ -16,8 +16,7 @@
     "publish": {
       "conventionalCommits": true,
       "message": "chore(release): publish",
-      "ignoreChanges": ["**/stories/**", "**/__tests__/**"],
-      "allowBranch": "master"
+      "ignoreChanges": ["**/stories/**", "**/__tests__/**"]
     }
   }
 }
