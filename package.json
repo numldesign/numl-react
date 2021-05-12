@@ -115,7 +115,6 @@
     }
   },
   "dependencies": {
-    "lerna": "3.2.0",
-    "rimraf": "^3.0.2"
+    "lerna": "3.2.0"
   }
 }
