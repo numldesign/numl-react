@@ -7,7 +7,7 @@
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
     "dev": "vite",
-    "install:all": "lerna exec -- yarn install",
+    "install:all": "lerna exec -- yarn install --frozen-lock",
     "typedoc": "typedoc --out docs packages/entry.ts",
     "build": "lerna exec -- yarn build",
     "test": "jest",
@@ -114,6 +114,10 @@
     }
   },
   "dependencies": {
+    "@numl-react/atoms": "0.0.22",
+    "@numl-react/core": "0.0.22",
+    "@numl-react/molecules": "0.0.22",
+    "@numl-react/utility": "0.0.22",
     "lerna": "3.2.0"
   }
 }
