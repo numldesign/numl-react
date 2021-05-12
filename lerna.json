@@ -8,7 +8,6 @@
     "packages/Utilities/*",
     "documentation"
   ],
-  "version": "independent",
   "npmClient": "yarn",
   "registry": "https://registry.npmjs.org/",
   "command": {
