@@ -1,3 +1,10 @@
+declare global {
+  interface Window {
+    Nude: any;
+  }
+}
+
+window.Nude = window.Nude || {};
 export function requireNude(): Promise<any> {
   if (typeof window === 'undefined') return new Promise(() => {});
 

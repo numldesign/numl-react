@@ -1,5 +1,6 @@
 import React from 'react';
 import { El } from '@numl-react/core';
+// @ts-ignore
 import { isPlainObject } from '@numl-react/utility';
 import ModalContext from './ModalContext';
 /**

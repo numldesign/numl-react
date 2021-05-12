@@ -1,11 +1,12 @@
 {
   "lerna": "2.0.0",
   "packages": [
-    "./packages/Atoms/*",
-    "./packages/Core/*",
-    "./packages/Molecules/*",
-    "./packages/Elements/*",
-    "./packages/Utilities/*"
+    "packages/*",
+    "packages/Atoms/*",
+    "packages/Core/*",
+    "packages/Molecules/*",
+    "packages/Elements/*",
+    "packages/Utilities/*"
   ],
   "npmClient": "yarn",
   "version": "0.0.20"

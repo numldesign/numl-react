@@ -16,12 +16,14 @@
   "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
   "scripts": {
-    "prebuild": "yarn build:types",
+    "postbuild": "yarn build:types",
     "build": "vite build",
-    "build:types": "tsc --skipLibCheck --esModuleInterop --emitDeclarationOnly --declaration --jsx react --declarationDir ./dist/types"
+    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "require": "./index.ts",
@@ -29,7 +31,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "index.js"
   ],
   "sideEffects": false,
   "publishConfig": {
