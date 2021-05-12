@@ -7,7 +7,6 @@
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
     "dev": "vite",
-    "preinstall": "lerna exec -- rimraf dist -Rf",
     "install:all": "lerna exec -- yarn install",
     "typedoc": "typedoc --out docs packages/entry.ts",
     "build": "lerna exec -- yarn build",
