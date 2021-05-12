@@ -27,6 +27,10 @@ jobs:
           node-version: 14.x
 
       # Runs a single command using the runners shell
+      - name: Cleaning Yarn Cache
+        run: yarn cache clean
+
+        # Runs a single command using the runners shell
       - name: Installation of NPM Modules
         run: yarn install:all
 
