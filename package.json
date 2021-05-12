@@ -1,6 +1,6 @@
 {
   "name": "numl-react",
-  "version": "0.0.14-1",
+  "version": "0.0.1",
   "private": true,
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
