@@ -47,7 +47,7 @@
   "dependencies": {
     "@numl-react/atoms": "^0.0.22",
     "@numl-react/elements": "^0.0.22",
-    "@numl-react/utility": "^0.0.20"
+    "@numl-react/utility": "^0.0.22"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
