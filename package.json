@@ -4,6 +4,7 @@
   "private": true,
   "description": "React wrappers and components for Numl.Design",
   "scripts": {
+    "commit": "cz",
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
     "dev": "vite",
@@ -58,6 +59,7 @@
     "babel-loader": "^8.2.2",
     "chromatic": "^5.6.1",
     "commitlint": "^12.1.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-google": "^0.14.0",
@@ -90,6 +92,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "keywords": [
     "design-system",
