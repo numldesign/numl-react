@@ -11,7 +11,7 @@
     "install:all": "npx lerna exec -- yarn install --frozen-lock",
     "typedoc": "typedoc --out docs packages/entry.ts",
     "build": "npx lerna exec -- yarn build",
-    "test": "jest",
+    "test": "npx jest",
     "release": "npx lerna exec -- yarn build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
