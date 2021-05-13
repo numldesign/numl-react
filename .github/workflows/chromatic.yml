@@ -16,16 +16,22 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout to Chromatic Branch and Install dependencies
       - uses: actions/checkout@v2.3.4
-        run: yarn cache clean
 
-        # Runs a single command using the runners shell
-      - name: Install dependencies
+        # Install all Dependencies
+      - name: Install all Dependencies
         run: yarn install:all
+
+        # Build All Modules
+      - name: Build All Modules
+        run: yarn test
+
+        # Test All Modules
+      - name: Test All Modules
+        run: yarn test
 
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1
-        run: yarn test
 
         # Chromatic GitHub Action options
         with:
