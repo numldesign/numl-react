@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { LoadNuml } from '@numl-react/utility';
 import { Root } from '../../Root';
 
-const NumlProvider = function (props: unknown) {
+const NumlProvider = function (props: any) {
   const {
     icons = 'ion',
     theme = 'dark',
