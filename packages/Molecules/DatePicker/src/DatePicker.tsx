@@ -7,7 +7,9 @@ function DatePicker(allProps: any) {
 
   useEffect(() => {
     if (ref.current && onChange) {
-      ref.current.addEventListener('input', (evt: InputEvent) => onChange(evt.detail));
+      ref.current.addEventListener('input', (evt: InputEvent) =>
+        onChange(evt.detail)
+      );
     }
   }, []);
 

@@ -16,8 +16,8 @@ export default {
 
 const Template = ({ children, fieldProps, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
 
     {children || fieldProps ? (
       <TextArea.Field {...args} children={children} fieldProps={fieldProps} />
@@ -48,7 +48,11 @@ export const WithRadio = Template.bind({});
 WithRadio.args = {
   placeholder: 'Here is a simple placeholder',
   children: (
-    <Radio.Group inline size="sm" onChange={(props) => console.log('selected ', props)}>
+    <Radio.Group
+      inline
+      size="sm"
+      onChange={(props) => console.log('selected ', props)}
+    >
       <Radio.Field key="label_1" value="label_1">
         Label 1
       </Radio.Field>

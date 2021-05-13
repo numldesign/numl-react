@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Action } from '../index';
 
 /** Action element test */
+
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
   ReactDOM.render(<Action />, div);

@@ -22,9 +22,9 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-    <Checkbox.Field {...args}></Checkbox.Field>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <Checkbox.Field {...args} />
   </NumlProvider>
 );
 
@@ -36,8 +36,8 @@ Basic.args = {
 
 const Template2 = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Checkbox.Field {...args}>
       <Checkbox.Label>{children}</Checkbox.Label>
     </Checkbox.Field>

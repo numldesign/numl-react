@@ -9,7 +9,11 @@ function FooterHelp(allProps: any) {
       <El.BaseElement padding="0 4px" color="light">
         {label}
       </El.BaseElement>
-      {typeof link === 'string' ? <El.Link to={link} label={linkLabel} icon="exit-outline" /> : link}
+      {typeof link === 'string' ? (
+        <El.Link to={link} label={linkLabel} icon="exit-outline" />
+      ) : (
+        link
+      )}
     </El.Block>
   );
 }

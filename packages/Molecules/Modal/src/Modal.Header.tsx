@@ -2,9 +2,10 @@ import * as React from 'react';
 import { El } from '@numl-react/core';
 import ModalContext from './ModalContext';
 
-/***
+/** *
  * Modal Header
  */
+
 const ModalHeaderForwardRef = React.forwardRef((props: any, ref) => {
   const { onCloseAction } = React.useContext(ModalContext);
 
@@ -38,7 +39,7 @@ const ModalHeaderForwardRef = React.forwardRef((props: any, ref) => {
       )}
       {onCloseAction ? (
         <El.Button cursor="pointer" border="0" onTap={onCloseAction}>
-          <El.Icon size="md" name="close-outline"></El.Icon>
+          <El.Icon size="md" name="close-outline" />
         </El.Button>
       ) : null}
     </El.Pane>
@@ -50,6 +51,7 @@ ModalHeaderForwardRef.displayName = 'ModalHeader';
  * ModalHeader memo is exported to outer library,
  * Due to performance optimization
  */
+
 const ModalHeader = React.memo(ModalHeaderForwardRef);
 ModalHeader.displayName = 'ModalHeader';
 

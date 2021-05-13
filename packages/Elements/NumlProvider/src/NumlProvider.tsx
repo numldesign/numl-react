@@ -1,21 +1,31 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable dot-notation */
 import React, { useEffect, useState } from 'react';
-// @ts-ignore
 import { LoadNuml } from '@numl-react/utility';
-import { Root } from './../../Root';
+import { Root } from '../../Root';
 
-export const NumlProvider = (props: any) => {
-  const { icons = 'ion', theme = 'dark', children, onInit, height = '100%', fill, ...otherProps } = props;
+const NumlProvider = function (props: unknown) {
+  const {
+    icons = 'ion',
+    theme = 'dark',
+    children,
+    onInit,
+    height = '100%',
+    fill,
+    ...otherProps
+  } = props;
   const [state, setState] = useState(false);
   useEffect(() => {
     LoadNuml()
       .then((Nude: any) => {
-        Nude.scheme(theme);
+        Nude.scheme && Nude.scheme(theme);
         Nude.init();
         document.documentElement.dataset['nuIcons'] = icons;
         document.documentElement.dataset['scheme'] = theme;
-        onInit && onInit(Nude);
+        // eslint-disable-next-line no-unused-expressions
+        onInit && onInit();
       })
-      .then(function () {
+      .then(() => {
         setState(true);
       })
       .catch((error: any) => {
@@ -26,8 +36,10 @@ export const NumlProvider = (props: any) => {
   return !state ? (
     <div>Loading...</div>
   ) : (
-    <Root {...otherProps} fill={fill} height={height}>
+    <Root fill={fill} height={height} {...otherProps}>
       {children}
     </Root>
   );
 };
+
+export { NumlProvider };

@@ -15,17 +15,20 @@ function Tabs(allProps: any) {
 
   return (
     <El.Block>
-      <El.TabList ref={ref} content={content} value={defaultValue} {...otherProps}>
+      <El.TabList
+        ref={ref}
+        content={content}
+        value={defaultValue}
+        {...otherProps}
+      >
         {prefix}
         {children}
       </El.TabList>
-      {children.map((child: any) => {
-        return (
-          <El.Block key={child.props.tab} id={child.props.tab}>
-            {child.props.children}
-          </El.Block>
-        );
-      })}
+      {children.map((child: any) => (
+        <El.Block key={child.props.tab} id={child.props.tab}>
+          {child.props.children}
+        </El.Block>
+      ))}
     </El.Block>
   );
 }

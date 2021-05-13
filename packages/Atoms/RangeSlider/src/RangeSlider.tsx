@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { El } from '@numl-react/core';
 
 const getPlace = (place: string, value: string) => {
-  place = place === 'bottom' ? 'bottom' : 'top';
+  const xplace = place === 'bottom' ? 'bottom' : 'top';
 
-  return `outside-${place} left 1.5x ${value}%`;
+  return `outside-${xplace} left 1.5x ${value}%`;
 };
 
 function RangeSlider(allProps: any): JSX.Element {
@@ -24,13 +24,19 @@ function RangeSlider(allProps: any): JSX.Element {
     }
 
     return () => {
+      // eslint-disable-next-line no-unused-expressions
       ref.current && ref.current.removeEventListener('input', setValue);
     };
   }, []);
 
   return (
     <El.Block use-hover box="y">
-      <El.RangeSlider ref={ref} id={id} control={`${id}[value]`} {...otherProps} />
+      <El.RangeSlider
+        ref={ref}
+        id={id}
+        control={`${id}[value]`}
+        {...otherProps}
+      />
       <El.Tooltip width="max-content" place={place} move="(-50% + .25x) 0">
         {sliderValue}
       </El.Tooltip>

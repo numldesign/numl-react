@@ -3,22 +3,24 @@ import { El } from '@numl-react/core';
 
 function PageAction(allProps: any) {
   const { primaryAction, secondaryActions, ...otherProps } = allProps;
-  const flowContent = !!secondaryActions ? 'space-between' : 'flex-end';
+  const flowContent = secondaryActions ? 'space-between' : 'flex-end';
 
   return (
     <El.Pane content={flowContent} {...otherProps}>
-      {!!secondaryActions ? (
+      {secondaryActions ? (
         <El.Pane>
-          {secondaryActions.map((action: any) => {
-            return (
-              <El.Button key={action.content} theme={action.destructive ? 'danger' : undefined} {...action}>
-                {action.content}
-              </El.Button>
-            );
-          })}
+          {secondaryActions.map((action: any) => (
+            <El.Button
+              key={action.content}
+              theme={action.destructive ? 'danger' : undefined}
+              {...action}
+            >
+              {action.content}
+            </El.Button>
+          ))}
         </El.Pane>
       ) : null}
-      {!!primaryAction ? (
+      {primaryAction ? (
         <El.Button special {...primaryAction}>
           {primaryAction.content}
         </El.Button>

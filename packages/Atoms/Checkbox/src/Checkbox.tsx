@@ -2,10 +2,8 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function Checkbox(allProps: any): JSX.Element {
-  let { checked, disabled, children, ...otherProps } = allProps;
+  const { checked, disabled, children, ...otherProps } = allProps;
 
-  checked = !!checked || null;
-  disabled = !!disabled || null;
   return (
     <El.Checkbox checked={checked} disabled={disabled} {...otherProps}>
       {children}
@@ -14,13 +12,26 @@ function Checkbox(allProps: any): JSX.Element {
 }
 
 Checkbox.Field = function CheckboxField(allProps: any): JSX.Element {
-  let { checked, disabled, id, children, onTap, label, onInput, value, ...otherProps } = allProps;
-
-  checked = !!checked || null;
-  disabled = !!disabled || null;
+  const {
+    checked,
+    disabled,
+    id,
+    children,
+    onTap,
+    label,
+    onInput,
+    value,
+    ...otherProps
+  } = allProps;
 
   return (
-    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
+    <El.Field
+      display="flex"
+      flow="row"
+      items="center start"
+      gap="1x"
+      {...otherProps}
+    >
       <El.Checkbox
         checked={checked}
         disabled={disabled}
@@ -28,15 +39,15 @@ Checkbox.Field = function CheckboxField(allProps: any): JSX.Element {
         onTap={onTap}
         onInput={onInput}
         value={value}
-      ></El.Checkbox>
+      />
       {label && !children ? label : ''}
-      {children ? children : ''}
+      {children || ''}
     </El.Field>
   );
 };
 
 Checkbox.Label = function CheckboxLabel(props: any) {
-  const { id, children, theme = 'special', ...otherProps } = props;
+  const { id, children, ...otherProps } = props;
   return (
     <El.Label for={id} color="white" {...otherProps}>
       {children}

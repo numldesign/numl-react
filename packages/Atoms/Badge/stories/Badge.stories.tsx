@@ -4,29 +4,15 @@ import { NumlProvider, ThemeProvider, Badge } from '@numl-react/core';
 export default {
   title: 'Example/Atoms/Badge',
   component: Badge,
-  argTypes: {
-    size: {
-      control: {
-        type: 'text',
-      },
-    },
-    theme: {
-      defaultValue: 'special',
-      control: {
-        type: 'select',
-        options: ['bg', 'special', 'success', 'warning', 'danger'],
-      },
-    },
-  },
 };
 
-const DefaultTemplate = function (props) {
+const DefaultTemplate = (props: any) => {
   const { ...otherProps } = props;
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Badge {...otherProps}></Badge>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
+      <Badge {...otherProps} />
     </NumlProvider>
   );
 };
@@ -36,14 +22,14 @@ Default.args = {
   label: 'Neutral',
 };
 
-const WithIconTemplate = function (props) {
-  const { label, ...otherProps } = props;
+const WithIconTemplate = (props: any) => {
+  const { label, icon, ...otherProps } = props;
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-      <Badge {...otherProps} icon={props.icon}>
-        <Badge.Label>{props.label}</Badge.Label>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
+      <Badge {...otherProps} icon={icon}>
+        <Badge.Label>{label}</Badge.Label>
       </Badge>
     </NumlProvider>
   );
@@ -53,5 +39,5 @@ export const WithIcon = WithIconTemplate.bind({});
 
 WithIcon.args = {
   label: 'Informational',
-  icon: <Badge.Icon name="alert-circle-outline"></Badge.Icon>,
+  icon: <Badge.Icon name="alert-circle-outline" />,
 };

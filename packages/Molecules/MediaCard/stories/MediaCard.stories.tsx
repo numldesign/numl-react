@@ -1,5 +1,10 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, MediaCard, Button } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  MediaCard,
+  Button,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/MediaCard',
@@ -8,9 +13,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-    <MediaCard {...args}></MediaCard>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <MediaCard {...args} />
   </NumlProvider>
 );
 

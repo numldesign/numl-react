@@ -8,8 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Tabs {...args} />
   </NumlProvider>
 );
@@ -27,7 +27,13 @@ Basic.args = {
     <Tabs.Item key="1" flex="1" padding="1.5x" tab="library" label="Library">
       Library Content
     </Tabs.Item>,
-    <Tabs.Item key="2" flex="1" padding="1.5x" tab="accept" label="Accepts Marketing">
+    <Tabs.Item
+      key="2"
+      flex="1"
+      padding="1.5x"
+      tab="accept"
+      label="Accepts Marketing"
+    >
       Accepts Marketing Content
     </Tabs.Item>,
   ],

@@ -23,9 +23,13 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-    {children ? <Radio.Field children={children} {...args} /> : <Radio {...args} />}
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
+    {children ? (
+      <Radio.Field children={children} {...args} />
+    ) : (
+      <Radio {...args} />
+    )}
   </NumlProvider>
 );
 

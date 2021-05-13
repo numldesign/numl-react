@@ -9,6 +9,7 @@ import ModalContext from './ModalContext';
  * Forwad reference is used to get reference of element
  * from numldesign - webcomponents
  */
+
 const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
   const {
     heading,
@@ -45,11 +46,11 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
         show={show}
         {...otherProps}
       >
-        {heading && <ModalHeader flex heading={heading}></ModalHeader>}
+        {heading && <ModalHeader flex heading={heading} />}
 
         {body ? <ModalBody> {body} </ModalBody> : [...children]}
 
-        {footerContent && <ModalFooter footerContent={footerContent}></ModalFooter>}
+        {footerContent && <ModalFooter footerContent={footerContent} />}
       </El.Block>
     </ModalContext.Provider>
   );
@@ -60,6 +61,7 @@ ModalForwardRef.displayName = 'Modal';
  * Modal memo is exported to outer library,
  * Due to performance optimization
  */
-let Modal = React.memo(ModalForwardRef);
+
+const Modal = React.memo(ModalForwardRef);
 
 export default Modal;

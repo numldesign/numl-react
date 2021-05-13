@@ -2,20 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
 function Radio(allProps: any): JSX.Element {
-  let { checked, disabled, ...otherProps } = allProps;
+  const { checked, disabled, ...otherProps } = allProps;
 
-  checked = !!checked || null;
-  disabled = !!disabled || null;
-  return <El.Radio checked={checked} disabled={disabled} {...otherProps}></El.Radio>;
+  return <El.Radio checked={checked} disabled={disabled} {...otherProps} />;
 }
 
 Radio.Group = function RadioGroup(allProps: any): JSX.Element {
   const ref: any = useRef();
 
-  let { disabled, children, inline, onChange, ...otherProps } = allProps;
-
-  disabled = !!disabled || null;
-  inline = !!inline || null;
+  const { disabled, children, inline, onChange, ...otherProps } = allProps;
 
   useEffect(() => {
     if (ref.current && onChange) {
@@ -38,14 +33,17 @@ Radio.Group = function RadioGroup(allProps: any): JSX.Element {
 };
 
 Radio.Field = function RadioField(allProps: any) {
-  let { checked, disabled, id, label, children, ...otherProps } = allProps;
-
-  checked = !!checked || null;
-  disabled = !!disabled || null;
+  const { id, children, ...otherProps } = allProps;
 
   return (
-    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      <El.Radio checked disabled id {...otherProps}></El.Radio>
+    <El.Field
+      display="flex"
+      flow="row"
+      items="center start"
+      gap="1x"
+      {...otherProps}
+    >
+      <El.Radio checked disabled id {...otherProps} />
       {children ? <El.Label for={id}>{children}</El.Label> : ''}
     </El.Field>
   );

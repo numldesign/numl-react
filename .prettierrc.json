@@ -1,6 +1,7 @@
 {
   "semi": true,
   "singleQuote": true,
-  "endOfLine":"auto",
-  "printWidth": 120
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "arrowParens": "always"
 }

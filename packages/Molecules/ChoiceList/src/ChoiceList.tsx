@@ -2,8 +2,24 @@ import { Checkbox, Radio } from '@numl-react/atoms';
 import { El } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
 
+/**
+ *
+ * @param {*} value handle user input values and convert it into Set
+ */
+
+const getDefaultCheckValue = (value: any): any => {
+  if (typeof value === 'string') {
+    return new Set([value]);
+  }
+  if (Array.isArray(value)) {
+    return new Set(value);
+  }
+  return new Set();
+};
+
 function ChoiceList(allProps: any) {
-  const { heading, choices, selected, onChange, multiSelect, ...otherProps } = allProps;
+  const { heading, choices, selected, onChange, multiSelect, ...otherProps } =
+    allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
 
@@ -11,9 +27,17 @@ function ChoiceList(allProps: any) {
     <El.Grid display="inline-grid" gap {...otherProps}>
       {heading ? <El.Block>{heading}</El.Block> : null}
       {multiSelect ? (
-        <ChoiceList.CheckList choiceList={choiceList} selected={selected} onChange={onChange} />
+        <ChoiceList.CheckList
+          choiceList={choiceList}
+          selected={selected}
+          onChange={onChange}
+        />
       ) : (
-        <ChoiceList.RadioList choiceList={choiceList} selected={selected} onChange={onChange} />
+        <ChoiceList.RadioList
+          choiceList={choiceList}
+          selected={selected}
+          onChange={onChange}
+        />
       )}
     </El.Grid>
   );
@@ -26,27 +50,32 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
     return (
       <Radio.Group value={selected} onChange={onChange}>
         <El.List type="none">
-          {choiceList.map((choice: { label: any; value: any; renderChildren: any }) => {
-            const { label, value, renderChildren } = choice;
-            return (
-              <El.Listitem key={value}>
-                <Radio.Field value={value}>{label}</Radio.Field>
-                {renderChildren && value === selected ? <El.List type="none">{renderChildren}</El.List> : null}
-              </El.Listitem>
-            );
-          })}
+          {choiceList.map(
+            (choice: { label: any; value: any; renderChildren: any }) => {
+              const { label, value, renderChildren } = choice;
+              return (
+                <El.Listitem key={value}>
+                  <Radio.Field value={value}>{label}</Radio.Field>
+                  {renderChildren && value === selected ? (
+                    <El.List type="none">{renderChildren}</El.List>
+                  ) : null}
+                </El.Listitem>
+              );
+            }
+          )}
         </El.List>
       </Radio.Group>
     );
-  } else {
-    return null;
   }
+  return null;
 };
 
 ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
   const { choiceList, selected, onChange } = allProps;
 
-  const [selectedValues, setSelectedValues] = useState(getDefaultCheckValue(selected));
+  const [selectedValues, setSelectedValues] = useState(
+    getDefaultCheckValue(selected)
+  );
 
   const handleChecklistChange = useCallback(
     (checkboxName) => {
@@ -69,7 +98,12 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
             <El.Listitem key={value}>
-              <Checkbox.Field checked={isChecked} value={value} items="start" onInput={handleChecklistChange}>
+              <Checkbox.Field
+                checked={isChecked}
+                value={value}
+                items="start"
+                onInput={handleChecklistChange}
+              >
                 <El.Block>{label}</El.Block>
                 <El.Block color="#text-soft">{helpText}</El.Block>
               </Checkbox.Field>
@@ -78,23 +112,8 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
         })}
       </El.List>
     );
-  } else {
-    return null;
   }
-};
-
-/**
- *
- * @param {*} value handle user input values and convert it into Set
- */
-const getDefaultCheckValue = (value: any): any => {
-  if (typeof value === 'string') {
-    return new Set([value]);
-  } else if (Array.isArray(value)) {
-    return new Set(value);
-  } else {
-    return new Set();
-  }
+  return null;
 };
 
 export default ChoiceList;

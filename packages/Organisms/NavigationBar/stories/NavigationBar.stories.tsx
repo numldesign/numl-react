@@ -10,8 +10,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider padding="0">
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <NavigationBar {...args} />
   </NumlProvider>

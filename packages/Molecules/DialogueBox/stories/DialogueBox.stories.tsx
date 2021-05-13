@@ -1,5 +1,12 @@
 import React from 'react';
-import { NumlProvider, Radio, DialogueBox, Button, Avatar, ThemeProvider } from '@numl-react/core';
+import {
+  NumlProvider,
+  Radio,
+  DialogueBox,
+  Button,
+  Avatar,
+  ThemeProvider,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
@@ -15,8 +22,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <DialogueBox {...args} />
   </NumlProvider>
@@ -48,7 +55,11 @@ WithRadioGroup.args = {
   flow: 'column',
   heading: 'Reset Settings',
   children: (
-    <Radio.Group padding="1x 0" border="top bottom" onChange={(props) => console.log('selected ', props)}>
+    <Radio.Group
+      padding="1x 0"
+      border="top bottom"
+      onChange={(props) => console.log('selected ', props)}
+    >
       <Radio.Field key="one" value="one">
         One
       </Radio.Field>

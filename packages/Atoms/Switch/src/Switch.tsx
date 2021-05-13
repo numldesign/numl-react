@@ -2,22 +2,28 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function Switch(allProps: any) {
-  let { checked, disabled, ...otherProps } = allProps;
+  const { checked, disabled } = allProps;
 
-  checked = !!checked || null;
-  disabled = !!disabled || null;
-  return <El.Switch checked={checked} disabled={disabled} {...otherProps}></El.Switch>;
+  return <El.Switch checked={checked} disabled={disabled} {...allProps} />;
 }
 
 Switch.Field = function SwitchField(allProps: any) {
-  let { checked, disabled, id, children, ...otherProps } = allProps;
-
-  checked = !!checked || null;
-  disabled = !!disabled || null;
+  const { checked, disabled, id, children, ...otherProps } = allProps;
 
   return (
-    <El.Field display="flex" flow="row" items="center start" gap="1x" {...otherProps}>
-      <El.Switch checked={checked} disabled={disabled} id={id} {...otherProps}></El.Switch>;
+    <El.Field
+      display="flex"
+      flow="row"
+      items="center start"
+      gap="1x"
+      {...otherProps}
+    >
+      <El.Switch
+        checked={checked}
+        disabled={disabled}
+        id={id}
+        {...otherProps}
+      />
       {children ? <El.Label for={id}>{children}</El.Label> : ''}
     </El.Field>
   );

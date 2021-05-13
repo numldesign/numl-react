@@ -3,11 +3,22 @@ import { El } from '@numl-react/core';
 import { Checkbox } from '@numl-react/atoms';
 
 function Sheet(allProps: any): JSX.Element {
-  const { heading, footerActions, closeAction, choices, selected, onChange, contentHeight, ...otherProps } = allProps;
+  const {
+    heading,
+    footerActions,
+    closeAction,
+    choices,
+    selected,
+    onChange,
+    contentHeight,
+    ...otherProps
+  } = allProps;
 
   const choiceList = choices && choices.length ? [...choices] : [];
 
-  const [selectedValues, setSelectedValues] = useState(getDefaultCheckValue(selected));
+  const [selectedValues, setSelectedValues] = useState(
+    getDefaultCheckValue(selected)
+  );
 
   const handleChecklistChange = useCallback(
     (checkboxName) => {
@@ -23,9 +34,21 @@ function Sheet(allProps: any): JSX.Element {
   );
 
   return (
-    <El.Block nu-overlay place="inside" fill="#dark.50" box="y" radius="1x" {...otherProps}>
+    <El.Block
+      nu-overlay
+      place="inside"
+      fill="#dark.50"
+      box="y"
+      radius="1x"
+      {...otherProps}
+    >
       {heading ? (
-        <El.Pane padding="2x" border="bottom" items="start" content="space-between">
+        <El.Pane
+          padding="2x"
+          border="bottom"
+          items="start"
+          content="space-between"
+        >
           {heading}
           {closeAction}
         </El.Pane>
@@ -36,7 +59,12 @@ function Sheet(allProps: any): JSX.Element {
               const { label, value } = choice;
               const isChecked = selectedValues.has(value) ? true : undefined;
               return (
-                <Checkbox.Field key={value} checked={isChecked} value={value} onInput={handleChecklistChange}>
+                <Checkbox.Field
+                  key={value}
+                  checked={isChecked}
+                  value={value}
+                  onInput={handleChecklistChange}
+                >
                   {label}
                 </Checkbox.Field>
               );
@@ -56,14 +84,15 @@ function Sheet(allProps: any): JSX.Element {
  *
  * @param {*} value handle user input values and convert it into Set
  */
+
 const getDefaultCheckValue = (value: any): Set<any> => {
   if (typeof value === 'string') {
     return new Set([value]);
-  } else if (Array.isArray(value)) {
-    return new Set(value);
-  } else {
-    return new Set();
   }
+  if (Array.isArray(value)) {
+    return new Set(value);
+  }
+  return new Set();
 };
 
 export default Sheet;

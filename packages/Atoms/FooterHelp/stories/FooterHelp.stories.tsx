@@ -1,45 +1,21 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Link, FooterHelp } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  Icon,
+  Link,
+  FooterHelp,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/FooterHelp',
   component: FooterHelp,
-  argTypes: {
-    size: {
-      defaultValue: undefined,
-      control: {
-        type: 'inline-radio',
-        options: ['sm', 'md', 'lg', undefined],
-      },
-    },
-    label: {
-      control: {
-        type: 'text',
-      },
-    },
-    icon: {
-      defaultValue: 'help-circle-outline',
-      control: {
-        type: 'text',
-      },
-    },
-    link: {
-      control: {
-        type: 'text',
-      },
-    },
-    linkLabel: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <FooterHelp {...args} />
   </NumlProvider>
 );
@@ -56,5 +32,7 @@ export const WithCustom = Template.bind({});
 WithCustom.args = {
   label: 'Learn more about',
   icon: <Icon color="special" name="help" />,
-  link: <Link to="https://numl.design" label="product" icon="help-circle-outline" />,
+  link: (
+    <Link to="https://numl.design" label="product" icon="help-circle-outline" />
+  ),
 };

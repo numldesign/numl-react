@@ -17,7 +17,7 @@ function Toast(props: any) {
         padding
         items="start"
       >
-        {!icon ? null : <El.Icon column="1" name="eye-outline"></El.Icon>}
+        {!icon ? null : <El.Icon column="1" name="eye-outline" />}
         <El.Block>
           <El.Block>
             <El.BaseElement column="2" size="16px auto">
@@ -37,7 +37,7 @@ function Toast(props: any) {
             Button
           </El.BaseElement>
         )}
-        <El.Icon column="4" name="close-outline"></El.Icon>
+        <El.Icon column="4" name="close-outline" />
       </El.Grid>
     </El.Block>
   );

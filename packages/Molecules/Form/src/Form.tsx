@@ -12,7 +12,7 @@ function Form(props: any) {
 }
 
 Form.Label = function FormLabel(allProps: any) {
-  let { children, name, ...otherProps } = allProps;
+  const { children, name, ...otherProps } = allProps;
   return (
     <El.Label for={name} {...otherProps}>
       {children}
@@ -20,22 +20,21 @@ Form.Label = function FormLabel(allProps: any) {
   );
 };
 Form.Field = function FormField(allProps: any) {
-  let { label, name, assert, message, children, ...otherProps } = allProps;
+  const { label, name, assert, message, children, ...otherProps } = allProps;
 
   return <El.Field {...otherProps}>{children}</El.Field>;
 };
 Form.Input = function FormInput(props: any) {
-  let { name, ...otherProps } = props;
-  return <El.Input id={name} {...otherProps}></El.Input>;
+  const { name, ...otherProps } = props;
+  return <El.Input id={name} {...otherProps} />;
 };
 
 Form.Check = function FormCheck(allProps: any) {
-  var { message, name, assertFunction } = allProps;
-  var ref: any = useRef(null);
+  const { message, name, assertFunction } = allProps;
+  const ref: any = useRef(null);
 
   useEffect(() => {
     ref.current.assert = assertFunction;
-    return;
   }, []);
 
   return (

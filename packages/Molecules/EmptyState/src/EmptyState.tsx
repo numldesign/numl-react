@@ -2,7 +2,15 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function EmptyState(allProps: any): JSX.Element {
-  const { heading, description, flow = 'column', radius = '1x', actions, children, ...otherProps } = allProps;
+  const {
+    heading,
+    description,
+    flow = 'column',
+    radius = '1x',
+    actions,
+    children,
+    ...otherProps
+  } = allProps;
 
   return (
     <El.Pane flow={flow} radius={radius} {...otherProps}>

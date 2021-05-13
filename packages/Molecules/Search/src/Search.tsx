@@ -14,7 +14,7 @@ function Search(allProps: any): JSX.Element {
     inputGroupProps,
     resultContainerProps,
     extraActions,
-    border = '0',
+    border = 0,
     resultList,
     renderResultItem,
     ...otherProps
@@ -22,11 +22,16 @@ function Search(allProps: any): JSX.Element {
 
   useEffect(() => {
     if (ref && ref.current && onSearchInput) {
-      ref.current.addEventListener('input', (evt: any) => onSearchInput(evt.detail));
+      ref.current.addEventListener('input', (evt: any) =>
+        onSearchInput(evt.detail)
+      );
     }
     if (listBoxRef && listBoxRef.current && onResultItemInput) {
-      listBoxRef.current.addEventListener('input', (evt: any) => onResultItemInput(evt.detail));
+      listBoxRef.current.addEventListener('input', (evt: any) =>
+        onResultItemInput(evt.detail)
+      );
     }
+    return undefined;
   }, []);
 
   const renderList = resultList && Array.isArray(resultList) ? resultList : [];
@@ -39,8 +44,14 @@ function Search(allProps: any): JSX.Element {
         {extraActions}
       </El.InputGroup>
 
-      <El.Listbox ref={listBoxRef} border="0" padding="0" gap {...resultContainerProps}>
-        {renderList.length
+      <El.Listbox
+        ref={listBoxRef}
+        border={border}
+        padding="0"
+        gap
+        {...resultContainerProps}
+      >
+        {renderList && renderList.length
           ? renderList.map((item) => {
               if (renderResultItem) {
                 return (
@@ -49,7 +60,7 @@ function Search(allProps: any): JSX.Element {
                   </El.Option>
                 );
               }
-              return;
+              return '';
             })
           : null}
       </El.Listbox>

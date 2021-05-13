@@ -21,10 +21,12 @@ function Card(allProps: any) {
         heading={heading}
         subheading={subheading}
         headerActions={headerActions}
-      ></Card.Header>
-      <Card.Body padding={padding} body={body} bodyActions={bodyActions}></Card.Body>
+      />
+      <Card.Body padding={padding} body={body} bodyActions={bodyActions} />
       {children ? <El.Block>{children}</El.Block> : null}
-      {footerActions ? <Card.Footer padding={padding} footerActions={footerActions}></Card.Footer> : null}
+      {footerActions ? (
+        <Card.Footer padding={padding} footerActions={footerActions} />
+      ) : null}
     </El.Card>
   );
 }
@@ -63,7 +65,15 @@ Card.Body = function CardBody(props: any) {
 };
 
 Card.Section = function CardSection(props: any) {
-  const { heading, border = 'bottom', subheading, bodyActions, children, padding = '1.5x 0x', ...otherProps } = props;
+  const {
+    heading,
+    border = 'bottom',
+    subheading,
+    bodyActions,
+    children,
+    padding = '1.5x 0x',
+    ...otherProps
+  } = props;
   return (
     <El.Block border={border} padding={padding} {...otherProps}>
       <Card.Header
@@ -71,8 +81,8 @@ Card.Section = function CardSection(props: any) {
         heading={heading}
         subheading={subheading}
         headerActions={bodyActions}
-      ></Card.Header>
-      {children ? <Card.Body padding="0.5x 2x" body={children}></Card.Body> : null}
+      />
+      {children ? <Card.Body padding="0.5x 2x" body={children} /> : null}
     </El.Block>
   );
 };
@@ -80,7 +90,13 @@ Card.Section = function CardSection(props: any) {
 Card.Footer = function CardFooter(props: any) {
   const { footerActions, padding, ...otherProps } = props;
   return (
-    <El.Flex content="flex-end|flex-start" gap="1x" size="md" padding="2x" {...otherProps}>
+    <El.Flex
+      content="flex-end|flex-start"
+      gap="1x"
+      size="md"
+      padding="2x"
+      {...otherProps}
+    >
       {typeof footerActions === 'string' ? (
         <El.Pane content="flex-end" size="md" border="0">
           {footerActions}

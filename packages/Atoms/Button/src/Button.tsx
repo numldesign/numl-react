@@ -23,39 +23,51 @@ function Button(props: any): JSX.Element {
       onClick={onClick}
       {...otherProps}
     >
-      {children ? children : null}
+      {children || null}
     </El.Button>
   );
 }
 
-Button.Small = ({ children = null, size = 'sm', padding = '2x 2x', ...props }) => {
-  return (
-    <Button padding={padding} size={size} {...props}>
-      {children}
-    </Button>
-  );
-};
-Button.Medium = ({ children = null, size = 'md', padding = '2.5x 3x', ...props }) => {
-  return (
-    <Button padding={padding} size={size} {...props}>
-      {children}
-    </Button>
-  );
-};
-Button.Large = ({ children = null, size = 'lg', padding = '3x 4x', ...props }) => {
-  return (
-    <Button padding={padding} size={size} {...props}>
-      {children}
-    </Button>
-  );
-};
-Button.ExtraLarge = ({ children = null, size = 'xl', padding = '3.5x 5x', ...props }) => {
-  return (
-    <Button padding={padding} size={size} {...props}>
-      {children}
-    </Button>
-  );
-};
+Button.Small = ({
+  children = null,
+  size = 'sm',
+  padding = '2x 2x',
+  ...props
+}) => (
+  <Button padding={padding} size={size} {...props}>
+    {children}
+  </Button>
+);
+Button.Medium = ({
+  children = null,
+  size = 'md',
+  padding = '2.5x 3x',
+  ...props
+}) => (
+  <Button padding={padding} size={size} {...props}>
+    {children}
+  </Button>
+);
+Button.Large = ({
+  children = null,
+  size = 'lg',
+  padding = '3x 4x',
+  ...props
+}) => (
+  <Button padding={padding} size={size} {...props}>
+    {children}
+  </Button>
+);
+Button.ExtraLarge = ({
+  children = null,
+  size = 'xl',
+  padding = '3.5x 5x',
+  ...props
+}) => (
+  <Button padding={padding} size={size} {...props}>
+    {children}
+  </Button>
+);
 
 Button.Label = function ButtonLabel(props: any) {
   const { children, color = '#text', ...otherProps } = props;
@@ -67,7 +79,12 @@ Button.Label = function ButtonLabel(props: any) {
 };
 
 Button.Icon = function ButtonIcon(props: any) {
-  const { children, padding = '0 0.5x', color = '#text', ...otherProps } = props;
+  const {
+    children,
+    padding = '0 0.5x',
+    color = '#text',
+    ...otherProps
+  } = props;
   return (
     <El.Icon color={color} padding={padding} {...otherProps}>
       {children}
@@ -108,13 +125,20 @@ Button.Checkbox = function ButtonCheckbox(props: any) {
 };
 
 Button.Group = function ButtonGroup(allProps: any): JSX.Element {
-  let { children, flow, groupRadius, ...otherProps } = allProps;
+  const { children, ...otherProps } = allProps;
+  const { flow, groupRadius } = otherProps;
 
-  flow = flow || 'row';
-  groupRadius = groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
+  const xflow = flow || 'row';
+  const xgroupRadius =
+    groupRadius || (flow && flow.includes('column') ? '1r column' : '1r row');
 
   return (
-    <El.ButtonGroup flow={flow} group-radius={groupRadius} border="#clear" {...otherProps}>
+    <El.ButtonGroup
+      flow={xflow}
+      group-radius={xgroupRadius}
+      border="#clear"
+      {...otherProps}
+    >
       {children}
     </El.ButtonGroup>
   );

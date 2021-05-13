@@ -9,5 +9,5 @@ it('Renders without crashing', async () => {
 
 it('Renders without crashing with children', async () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Icon name="person"></Icon>, div);
+  ReactDOM.render(<Icon name="person" />, div);
 });

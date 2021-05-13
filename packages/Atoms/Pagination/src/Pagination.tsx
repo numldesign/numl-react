@@ -7,7 +7,11 @@ function Pagination(allProps: any) {
   const isVertical = flow === 'column';
 
   return (
-    <El.ButtonGroup flow={flow} group-radius={isVertical ? 'column' : 'row'} {...otherProps}>
+    <El.ButtonGroup
+      flow={flow}
+      group-radius={isVertical ? 'column' : 'row'}
+      {...otherProps}
+    >
       {typeof previous === 'string' ? (
         <El.Button id="previous">
           <Icon name={previous} />
@@ -16,7 +20,12 @@ function Pagination(allProps: any) {
         previous
       )}
       {label && !isVertical && (
-        <El.Label display="flex" content="center" items="center" fill="transparent">
+        <El.Label
+          display="flex"
+          content="center"
+          items="center"
+          fill="transparent"
+        >
           {label}
         </El.Label>
       )}

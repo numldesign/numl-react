@@ -27,10 +27,14 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
 
-    {children ? <Switch.Field children={children} {...args} /> : <Switch {...args} />}
+    {children ? (
+      <Switch.Field {...args}>{children}</Switch.Field>
+    ) : (
+      <Switch {...args} />
+    )}
   </NumlProvider>
 );
 

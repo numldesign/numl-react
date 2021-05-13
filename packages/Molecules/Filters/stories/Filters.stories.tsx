@@ -1,5 +1,12 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, TextInput, Menu, Filters, El } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  TextInput,
+  Menu,
+  Filters,
+  El,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Filters',
@@ -8,8 +15,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Filters {...args} />
   </NumlProvider>
 );
@@ -18,7 +25,12 @@ export const Default = Template.bind({});
 Default.args = {
   responsive: '601px',
   flow: 'column|row',
-  filterSearch: <TextInput placeholder="Text Field" prefix={<El.Icon name="search-outline" padding="1x" />} />,
+  filterSearch: (
+    <TextInput
+      placeholder="Text Field"
+      prefix={<El.Icon name="search-outline" padding="1x" />}
+    />
+  ),
   filterGroup: (
     <El.ButtonGroup>
       <El.Button key="one">
@@ -26,10 +38,16 @@ Default.args = {
         <El.Icon name="chevron-down-outline" />
         <El.Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
-            <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
+            <Menu.Item
+              value="Action 1"
+              onClick={(evt) => console.log(evt.target.value)}
+            >
               Action 1
             </Menu.Item>
-            <Menu.Item value="Action 2" onClick={(evt) => console.log(evt.target.value)}>
+            <Menu.Item
+              value="Action 2"
+              onClick={(evt) => console.log(evt.target.value)}
+            >
               Action 2
             </Menu.Item>
           </Menu>
@@ -65,10 +83,16 @@ WithoutSearch.args = {
         <El.Icon name="chevron-down-outline" />
         <El.Popup use-menu display="flex" padding="1x 0" flow="column">
           <Menu size="sm">
-            <Menu.Item value="Action 1" onClick={(evt) => console.log(evt.target.value)}>
+            <Menu.Item
+              value="Action 1"
+              onClick={(evt) => console.log(evt.target.value)}
+            >
               Action 1
             </Menu.Item>
-            <Menu.Item value="Action 2" onClick={(evt) => console.log(evt.target.value)}>
+            <Menu.Item
+              value="Action 2"
+              onClick={(evt) => console.log(evt.target.value)}
+            >
               Action 2
             </Menu.Item>
           </Menu>

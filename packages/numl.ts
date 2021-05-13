@@ -119,7 +119,7 @@ export interface BaseProps {
   checked?: string;
   selected?: string;
   target?: string;
-  to?: string | any;
+  to?: string;
   begin?: string;
   end?: string;
   for?: string;
@@ -159,6 +159,5 @@ export interface BaseProps {
   success?: string;
   danger?: string;
   warning?: string;
-  onClick?: any;
   clear?: boolean;
 }

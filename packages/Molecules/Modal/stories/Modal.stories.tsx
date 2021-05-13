@@ -1,6 +1,14 @@
 import * as React from 'react';
-import { El, Molecules, ModalHeader, ModalBody, ModalFooter } from '@numl-react/core';
+import {
+  El,
+  Molecules,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from '@numl-react/core';
+
 // @ts-ignore
+
 import { isRefernceNull } from '@numl-react/utility';
 import Modal from '../src/Modal';
 
@@ -20,8 +28,8 @@ const Template = function ({ ...args }) {
 
   return (
     <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <Modal {...args} onCloseAction={toggleShow} show={show} />
       <El.Button onTap={toggleShow}>Click Me</El.Button>
     </El.NumlProvider>
@@ -39,7 +47,7 @@ Default.args = {
   footerContent: {
     primary: {
       text: 'Save',
-      onTap: function () {
+      onTap() {
         console.log('Primary Button is tapped');
       },
     },
@@ -82,14 +90,14 @@ export const WithoutHeader = Template.bind({});
 WithoutHeader.args = {
   body: (
     <El.Block size="md" color="#text-soft">
-      Use Instagram posts to share your products with millions of people. Let shoppers buy from your store without
-      leaving Instagram.
+      Use Instagram posts to share your products with millions of people. Let
+      shoppers buy from your store without leaving Instagram.
     </El.Block>
   ),
   footerContent: {
     primary: {
       text: 'Save',
-      onTap: function () {
+      onTap() {
         console.log('Primary Button is tapped');
       },
     },
@@ -110,12 +118,12 @@ const Template2 = function ({ ...args }) {
 
   return (
     <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-      <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <Modal onCloseAction={toggleShow} show={show} {...args}>
-        <ModalHeader heading="This is my heading" onCloseAction="true"></ModalHeader>
+        <ModalHeader heading="This is my heading" onCloseAction="true" />
         <ModalBody>This is my Custom Modal Body</ModalBody>
-        <ModalFooter footerContent={<>This is Custom Modal Footer</>}></ModalFooter>
+        <ModalFooter footerContent={<>This is Custom Modal Footer</>} />
       </Modal>
       <El.Button onTap={toggleShow}>Click Me</El.Button>
     </El.NumlProvider>

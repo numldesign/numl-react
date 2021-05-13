@@ -18,6 +18,7 @@ function AccountConnection(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
 
+  // eslint-disable-next-line react/destructuring-assignment
   const [isConnected, setIsConnected] = useState(Boolean(allProps.isConnected));
 
   const handleConnect = useCallback(() => {
@@ -37,7 +38,7 @@ function AccountConnection(allProps: any): JSX.Element {
       {...otherProps}
     >
       <El.Pane content="space-between" flow="row wrap" gap="1x">
-        {true ? (
+        {isConnected ? (
           <>
             <Avatar.Icon size="2" username={username} />
             <Avatar.Profile size="sm" username={username} subtitle={subtitle} />
@@ -53,7 +54,10 @@ function AccountConnection(allProps: any): JSX.Element {
           </El.Block>
         )}
         <El.Block>
-          <El.Button theme={!isConnected ? 'special' : 'default'} onClick={handleConnect}>
+          <El.Button
+            theme={!isConnected ? 'special' : 'default'}
+            onClick={handleConnect}
+          >
             {isConnected ? 'Disconnect' : 'Connect'}
           </El.Button>
         </El.Block>

@@ -73,11 +73,16 @@ export default {
 
 const Template = ({ theme, ...args }) => {
   const showInputField =
-    args.label || args.required || args.link || args.validationMessage || args.helpText || args.helpTextClear;
+    args.label ||
+    args.required ||
+    args.link ||
+    args.validationMessage ||
+    args.helpText ||
+    args.helpTextClear;
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
 
       {showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}
     </NumlProvider>

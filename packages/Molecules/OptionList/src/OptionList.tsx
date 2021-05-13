@@ -25,12 +25,19 @@ function OptionList(allProps: any) {
   return (
     <El.Block {...otherProps}>
       {renderHeader}
-      <El.Listbox ref={ref} border="n" padding="0" value={selected} multiple={multiSelect || undefined}>
+      <El.Listbox
+        ref={ref}
+        border="n"
+        padding="0"
+        value={selected}
+        multiple={multiSelect || undefined}
+      >
         {options && options.length
           ? options.map((item: any, index: any) => {
-              const checked = multiSelect && selected && selected.includes(String(index));
+              const checked =
+                multiSelect && selected && selected.includes(String(index));
               return (
-                <El.Option key={index} value={index} {...contentWrapperProps}>
+                <El.Option value={index} {...contentWrapperProps}>
                   {multiSelect ? (
                     <El.Block {...checkboxWrapperProps}>
                       <El.Checkbox checked={checked} />
@@ -43,29 +50,45 @@ function OptionList(allProps: any) {
           : null}
 
         {sections && sections.length
-          ? sections.map((option: { renderHeader: any; options: string | any[] }, sectionIndex: any) => {
-              const sectionHeader = option.renderHeader ? option.renderHeader : null;
-              const optionList: any = option.options && option.options.length ? option.options : [];
-              return (
-                <El.Block key={sectionIndex}>
-                  {sectionHeader}
-                  {optionList.map((item: { index: any }) => {
-                    const index = item.index;
-                    const checked = multiSelect && selected && selected.includes(String(index));
-                    return (
-                      <El.Option key={index} value={index} {...contentWrapperProps}>
-                        {multiSelect ? (
-                          <El.Block {...checkboxWrapperProps}>
-                            <El.Checkbox checked={checked} />
-                          </El.Block>
-                        ) : null}
-                        {renderContent && renderContent({ item, index, sectionIndex })}
-                      </El.Option>
-                    );
-                  })}
-                </El.Block>
-              );
-            })
+          ? sections.map(
+              (
+                option: { renderHeader: any; options: string | any[] },
+                sectionIndex: any
+              ) => {
+                const sectionHeader = option.renderHeader
+                  ? option.renderHeader
+                  : null;
+                const optionList: any =
+                  option.options && option.options.length ? option.options : [];
+                return (
+                  <El.Block>
+                    {sectionHeader}
+                    {optionList.map((item: { index: any }) => {
+                      const { index } = item;
+                      const checked =
+                        multiSelect &&
+                        selected &&
+                        selected.includes(String(index));
+                      return (
+                        <El.Option
+                          key={index}
+                          value={index}
+                          {...contentWrapperProps}
+                        >
+                          {multiSelect ? (
+                            <El.Block {...checkboxWrapperProps}>
+                              <El.Checkbox checked={checked} />
+                            </El.Block>
+                          ) : null}
+                          {renderContent &&
+                            renderContent({ item, index, sectionIndex })}
+                        </El.Option>
+                      );
+                    })}
+                  </El.Block>
+                );
+              }
+            )
           : null}
       </El.Listbox>
     </El.Block>

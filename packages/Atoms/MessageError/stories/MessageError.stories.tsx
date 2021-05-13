@@ -1,5 +1,10 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, MessageError } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  Icon,
+  MessageError,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/MessageError',
@@ -15,8 +20,8 @@ export default {
 
 const Template = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <MessageError {...args}>{children}</MessageError>
   </NumlProvider>
 );
@@ -30,15 +35,15 @@ Basic.args = {
 
 const Template2 = ({ children, ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <MessageError {...args}>{children}</MessageError>
   </NumlProvider>
 );
 
 export const WithIcon = Template2.bind({});
 WithIcon.args = {
-  icon: <Icon name="information-circle-outline"></Icon>,
+  icon: <Icon name="information-circle-outline" />,
   children: 'This is not valid',
   theme: 'danger',
 };

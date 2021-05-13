@@ -8,8 +8,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <OptionList {...args} />
   </El.NumlProvider>
 );
@@ -26,9 +26,7 @@ Default.args = {
     text: 'wrap',
     items: 'center',
   },
-  renderContent: ({ item }) => {
-    return item.label;
-  },
+  renderContent: ({ item }) => item.label,
   renderHeader: (
     <El.Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
@@ -55,7 +53,9 @@ WithSection.args = {
   fill: 'bg',
   padding: '1x',
   onChange: (props) => console.log(props),
+
   // for section > options data, index should be unique
+
   sections: [
     {
       options: [
@@ -76,9 +76,7 @@ WithSection.args = {
       ],
     },
   ],
-  renderContent: ({ item }) => {
-    return item.label;
-  },
+  renderContent: ({ item }) => item.label,
   selected: '3',
 };
 
@@ -94,15 +92,16 @@ WithMultiSelectThumbnailBadge.args = {
     text: 'wrap',
     items: 'center',
   },
-  renderContent: ({ item }) => {
-    return (
-      <El.Pane>
-        <Thumbnail width="40px" source="https://source.unsplash.com/user/erondu/100x100" />
-        {item.label}
-        <Badge label="Neutral" padding="0 1x" />
-      </El.Pane>
-    );
-  },
+  renderContent: ({ item }) => (
+    <El.Pane>
+      <Thumbnail
+        width="40px"
+        source="https://source.unsplash.com/user/erondu/100x100"
+      />
+      {item.label}
+      <Badge label="Neutral" padding="0 1x" />
+    </El.Pane>
+  ),
   renderHeader: (
     <El.Heading padding="1x 1.5x" level="6" text="cap">
       Inventory Location
@@ -134,22 +133,24 @@ OptionListWithTable.args = {
     columns: '1fr',
     items: 'center stretch',
   },
-  renderContent: ({ item }) => {
-    return (
-      <El.Grid columns="repeat(5, 1fr)" flow="column" items="center start">
-        <El.Block>{item.label}</El.Block>
-        <El.Block>{item.col1}</El.Block>
-        <El.Block>{item.col2}</El.Block>
-        <El.Block>{item.badge}</El.Block>
-        <El.Block>{item.icon}</El.Block>
-      </El.Grid>
-    );
-  },
+  renderContent: ({ item }) => (
+    <El.Grid columns="repeat(5, 1fr)" flow="column" items="center start">
+      <El.Block>{item.label}</El.Block>
+      <El.Block>{item.col1}</El.Block>
+      <El.Block>{item.col2}</El.Block>
+      <El.Block>{item.badge}</El.Block>
+      <El.Block>{item.icon}</El.Block>
+    </El.Grid>
+  ),
   options: [
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Byward Market
         </El.Pane>
       ),
@@ -161,7 +162,11 @@ OptionListWithTable.args = {
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Centretown
         </El.Pane>
       ),
@@ -173,7 +178,11 @@ OptionListWithTable.args = {
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Hintonburg
         </El.Pane>
       ),
@@ -185,7 +194,11 @@ OptionListWithTable.args = {
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Westboro
         </El.Pane>
       ),
@@ -209,36 +222,38 @@ OptionListWithTableAndInput.args = {
     columns: '36px 1fr',
     items: 'center stretch',
   },
-  renderContent: ({ item }) => {
-    return (
-      <El.Grid columns="repeat(6, 1fr)" flow="column" items="center start">
-        <El.Block>{item.label}</El.Block>
-        <El.Block>{item.col1}</El.Block>
-        <El.Block>{item.col2}</El.Block>
-        <El.Block>{item.badge}</El.Block>
-        <El.Block>{item.icon}</El.Block>
-        {item.custom ? (
-          <El.Block>
-            <El.Pane padding="0.5x 0" key="1">
-              <El.ButtonGroup>
-                <El.Button key="1">Add</El.Button>
-                <El.Button key="2">Set</El.Button>
-              </El.ButtonGroup>
-              <El.NumberInput placeholder="Enter Amount" width="min 6x" />
-            </El.Pane>
-            <El.Button key="2" width="100%">
-              Button
-            </El.Button>
-          </El.Block>
-        ) : null}
-      </El.Grid>
-    );
-  },
+  renderContent: ({ item }) => (
+    <El.Grid columns="repeat(6, 1fr)" flow="column" items="center start">
+      <El.Block>{item.label}</El.Block>
+      <El.Block>{item.col1}</El.Block>
+      <El.Block>{item.col2}</El.Block>
+      <El.Block>{item.badge}</El.Block>
+      <El.Block>{item.icon}</El.Block>
+      {item.custom ? (
+        <El.Block>
+          <El.Pane padding="0.5x 0" key="1">
+            <El.ButtonGroup>
+              <El.Button key="1">Add</El.Button>
+              <El.Button key="2">Set</El.Button>
+            </El.ButtonGroup>
+            <El.NumberInput placeholder="Enter Amount" width="min 6x" />
+          </El.Pane>
+          <El.Button key="2" width="100%">
+            Button
+          </El.Button>
+        </El.Block>
+      ) : null}
+    </El.Grid>
+  ),
   options: [
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Byward Market
         </El.Pane>
       ),
@@ -262,7 +277,11 @@ OptionListWithTableAndInput.args = {
     {
       label: (
         <El.Pane>
-          <Thumbnail width="40px" key="1" source="https://source.unsplash.com/user/erondu/100x100" />
+          <Thumbnail
+            width="40px"
+            key="1"
+            source="https://source.unsplash.com/user/erondu/100x100"
+          />
           Centretown
         </El.Pane>
       ),
@@ -302,45 +321,43 @@ OptionListWithCardDesign.args = {
   checkboxWrapperProps: {
     padding: '1x 0',
   },
-  renderContent: ({ item }) => {
-    return (
-      <El.Grid columns="40px 1fr" flow="column" gap="2x">
-        <Thumbnail width="40px" key="1" source={item.image} />
-        <El.Grid gap="0.5x" size="sm">
+  renderContent: ({ item }) => (
+    <El.Grid columns="40px 1fr" flow="column" gap="2x">
+      <Thumbnail width="40px" key="1" source={item.image} />
+      <El.Grid gap="0.5x" size="sm">
+        <El.Block>
+          <El.Block>{item.name}</El.Block>
+          <El.Block color="#text-soft">{item.modelNo}</El.Block>
+        </El.Block>
+        <El.Block>
+          <El.Block>When sold out</El.Block>
+          <El.Block color="#text-soft">{item.status}</El.Block>
+        </El.Block>
+        <El.Pane>
           <El.Block>
-            <El.Block>{item.name}</El.Block>
-            <El.Block color="#text-soft">{item.modelNo}</El.Block>
+            <El.Block>Available</El.Block>
+            <El.Block color="#text-soft">{item.available}</El.Block>
           </El.Block>
           <El.Block>
-            <El.Block>When sold out</El.Block>
-            <El.Block color="#text-soft">{item.status}</El.Block>
+            <El.Block>Available</El.Block>
+            <El.Block color="#text-soft">{item.available}</El.Block>
           </El.Block>
-          <El.Pane>
-            <El.Block>
-              <El.Block>Available</El.Block>
-              <El.Block color="#text-soft">{item.available}</El.Block>
-            </El.Block>
-            <El.Block>
-              <El.Block>Available</El.Block>
-              <El.Block color="#text-soft">{item.available}</El.Block>
-            </El.Block>
+        </El.Pane>
+        <El.Block>
+          <El.Pane padding="0.5x 0" key="1">
+            <El.ButtonGroup>
+              <El.Button key="1">Add</El.Button>
+              <El.Button key="2">Set</El.Button>
+            </El.ButtonGroup>
+            <El.NumberInput placeholder="Enter Amount" width="min 6x" />
           </El.Pane>
-          <El.Block>
-            <El.Pane padding="0.5x 0" key="1">
-              <El.ButtonGroup>
-                <El.Button key="1">Add</El.Button>
-                <El.Button key="2">Set</El.Button>
-              </El.ButtonGroup>
-              <El.NumberInput placeholder="Enter Amount" width="min 6x" />
-            </El.Pane>
-            <El.Button key="2" width="100%">
-              Button
-            </El.Button>
-          </El.Block>
-        </El.Grid>
+          <El.Button key="2" width="100%">
+            Button
+          </El.Button>
+        </El.Block>
       </El.Grid>
-    );
-  },
+    </El.Grid>
+  ),
   options: [
     {
       image: 'https://source.unsplash.com/user/erondu/100x100',

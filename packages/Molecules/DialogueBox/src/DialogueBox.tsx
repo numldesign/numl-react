@@ -14,7 +14,15 @@ function DialogueBox(allProps: any) {
     ...otherProps
   } = allProps;
   return (
-    <El.Flex nu-overlay place={place} fill={fill} box={box} gap={gap} radius={radius} {...otherProps}>
+    <El.Flex
+      nu-overlay
+      place={place}
+      fill={fill}
+      box={box}
+      gap={gap}
+      radius={radius}
+      {...otherProps}
+    >
       {heading ? <El.Block text="sb">{heading}</El.Block> : null}
       {children ? <El.Block size="sm">{children}</El.Block> : null}
       <El.Pane content="flex-end">{actions}</El.Pane>

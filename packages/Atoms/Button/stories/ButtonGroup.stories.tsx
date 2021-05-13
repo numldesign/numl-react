@@ -25,8 +25,8 @@ export default {
 
 const Template = (args: any) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Button.Group {...args} />
   </NumlProvider>
 );
@@ -47,7 +47,7 @@ BasicWithDisclosure.args = {
   children: [
     <Button key="one">
       <Button.Label text="center">Button</Button.Label>
-      <Button.DropDown></Button.DropDown>
+      <Button.DropDown />
       <Button.Popup>
         <Button.Item>PopupItem</Button.Item>
         <Button.Item>PopupItem</Button.Item>
@@ -56,7 +56,7 @@ BasicWithDisclosure.args = {
     </Button>,
     <Button key="two">
       <Button.Label text="center">Button</Button.Label>
-      <Button.DropDown></Button.DropDown>
+      <Button.DropDown />
       <Button.Popup>
         <Button.Item>PopupItem</Button.Item>
         <Button.Item>PopupItem</Button.Item>
@@ -65,7 +65,7 @@ BasicWithDisclosure.args = {
     </Button>,
     <Button key="three">
       Button
-      <Button.DropDown></Button.DropDown>
+      <Button.DropDown />
       <Button.Popup>
         <Button.Item>PopupItem</Button.Item>
         <Button.Item>PopupItem</Button.Item>
@@ -79,15 +79,15 @@ export const BasicWithCheckbox: any = Template.bind({});
 BasicWithCheckbox.args = {
   children: [
     <Button key="one">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Checkbox is-hover="false" />
       <Button.Label>Button</Button.Label>
     </Button>,
     <Button key="two">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Checkbox is-hover="false" />
       <Button.Label>Button</Button.Label>
     </Button>,
     <Button key="three">
-      <Button.Checkbox is-hover="false"></Button.Checkbox>
+      <Button.Checkbox is-hover="false" />
       <Button.Label>Button</Button.Label>
     </Button>,
   ],

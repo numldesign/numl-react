@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Button } from '../index';
 
 /** Button element test */
+
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
   ReactDOM.render(<Button />, div);

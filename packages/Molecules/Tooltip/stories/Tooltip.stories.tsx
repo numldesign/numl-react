@@ -15,8 +15,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider padding="6x 2x">
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <El.Button>
       Hover me
       <Tooltip {...args} />

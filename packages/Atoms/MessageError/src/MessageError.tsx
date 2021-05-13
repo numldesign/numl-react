@@ -2,7 +2,7 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function MessageError(allProps: any) {
-  let { icon, theme, children, ...otherProps } = allProps;
+  const { icon, theme, children, ...otherProps } = allProps;
 
   return (
     <El.BaseElement theme={theme} {...otherProps}>

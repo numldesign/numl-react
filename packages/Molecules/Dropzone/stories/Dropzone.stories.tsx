@@ -9,9 +9,9 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
-    <Dropzone {...args} content="center center"></Dropzone>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <Dropzone {...args} content="center center" />
   </NumlProvider>
 );
 

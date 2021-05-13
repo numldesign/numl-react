@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { DateInput } from '../index';
 
 /** DateInput element test */
+
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
   ReactDOM.render(<DateInput />, div);

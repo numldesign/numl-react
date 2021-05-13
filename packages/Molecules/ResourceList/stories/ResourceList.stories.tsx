@@ -1,5 +1,10 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, ResourceList, El } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  ResourceList,
+  El,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/ResourceList',
@@ -8,8 +13,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <ResourceList {...args} />
   </NumlProvider>
 );
@@ -19,14 +24,12 @@ Default.args = {
   itemWrapperProps: {
     responsive: '601px',
   },
-  renderItem: ({ item }) => {
-    return (
-      <El.Block text="wrap">
-        <El.Block>{item.name}</El.Block>
-        <El.Block color="#text-soft">{item.location}</El.Block>
-      </El.Block>
-    );
-  },
+  renderItem: ({ item }) => (
+    <El.Block text="wrap">
+      <El.Block>{item.name}</El.Block>
+      <El.Block color="#text-soft">{item.location}</El.Block>
+    </El.Block>
+  ),
   items: [
     {
       id: 100,
@@ -55,20 +58,23 @@ WithMultiSelect.args = {
   itemWrapperProps: {
     responsive: '601px',
   },
-  renderItem: ({ item }) => {
-    return (
-      <El.Pane content="space-between|flex-start" items="center|flex-start" flow="row|column" text="wrap">
-        <El.Block>
-          <El.Block>{item.name}</El.Block>
-          <El.Block color="#text-soft">{item.location}</El.Block>
-        </El.Block>
-        <El.Pane gap="3x">
-          <El.Block>{item.totalOrders}</El.Block>
-          <El.Block>{item.cost}</El.Block>
-        </El.Pane>
+  renderItem: ({ item }) => (
+    <El.Pane
+      content="space-between|flex-start"
+      items="center|flex-start"
+      flow="row|column"
+      text="wrap"
+    >
+      <El.Block>
+        <El.Block>{item.name}</El.Block>
+        <El.Block color="#text-soft">{item.location}</El.Block>
+      </El.Block>
+      <El.Pane gap="3x">
+        <El.Block>{item.totalOrders}</El.Block>
+        <El.Block>{item.cost}</El.Block>
       </El.Pane>
-    );
-  },
+    </El.Pane>
+  ),
   items: [
     {
       id: 100,

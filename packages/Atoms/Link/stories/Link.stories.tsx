@@ -4,38 +4,12 @@ import { NumlProvider, ThemeProvider, Icon, Link } from '@numl-react/core';
 export default {
   title: 'Example/Atoms/Link',
   component: Link,
-  argTypes: {
-    size: {
-      defaultValue: undefined,
-      control: {
-        type: 'inline-radio',
-        options: ['xs', 'sm', 'md', 'lg', 'xl', undefined],
-      },
-    },
-    to: {
-      defaultValue: 'https://numl.design',
-      control: {
-        type: 'text',
-      },
-    },
-    label: {
-      defaultValue: 'fulfulling orders',
-      control: {
-        type: 'text',
-      },
-    },
-    icon: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Link {...args} />
   </NumlProvider>
 );

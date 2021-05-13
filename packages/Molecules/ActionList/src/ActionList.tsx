@@ -1,6 +1,6 @@
 import React from 'react';
-import { Menu } from './../../Menu';
 import { El } from '@numl-react/core';
+import { Menu } from '../../Menu';
 
 function ActionList(allProps: any): JSX.Element {
   const { header, children, ...otherProps } = allProps;

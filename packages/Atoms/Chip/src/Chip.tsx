@@ -15,11 +15,17 @@ function Chip(allProps: any): JSX.Element {
   } = allProps;
 
   return (
-    <El.Badge radius={radius} padding={padding} cursor="pointer" selectable={selectable} {...otherProp}>
+    <El.Badge
+      radius={radius}
+      padding={padding}
+      cursor="pointer"
+      selectable={selectable}
+      {...otherProp}
+    >
       {typeof icon === 'string' ? <El.Icon name={icon} size={size} /> : icon}
       {children && children.trim().length > 0 ? children : null}
-      {label && children.trim().length == 0 ? label : null}
-      {actionIcon ? actionIcon : null}
+      {label && children.trim().length === 0 ? label : null}
+      {actionIcon || null}
     </El.Badge>
   );
 }

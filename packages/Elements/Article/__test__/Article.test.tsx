@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Article } from '../index';
 
 /** Article element test */
+
 it('Renders without crashing', async () => {
   const div = document.createElement('div');
   ReactDOM.render(<Article />, div);

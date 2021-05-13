@@ -3,7 +3,13 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:@typescript-eslint/recommended", "eslint:recommended"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -21,24 +27,31 @@
     }
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
-  "ignorePatterns": ["*.json"],
+  "ignorePatterns": [
+    "ForunIcon.tsx",
+    "*.json",
+    "*.config.ts",
+    "*.js",
+    "dist/*",
+    "*.d.ts",
+    "*.stories.tsx",
+    "*.test.tsx",
+    "*.test.ts"
+  ],
   "rules": {
+    "no-mixed-operators": "error",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
     "max-len": ["warn", { "code": 80 }],
     "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    // disable the rule for all files
+    "@typescript-eslint/explicit-function-return-type": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -46,6 +59,24 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeBlockComment": true,
+        "afterBlockComment": true,
+        "beforeLineComment": true,
+        "afterLineComment": true,
+        "allowBlockStart": true,
+        "allowBlockEnd": true,
+        "allowObjectStart": true,
+        "allowObjectEnd": true,
+        "allowArrayStart": true,
+        "allowArrayEnd": true
+      }
     ]
+  },
+  "globals": {
+    "JSX": true
   }
 }

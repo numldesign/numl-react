@@ -1,10 +1,11 @@
 import React from 'react';
 import { El } from '@numl-react/core';
-import { ForunIcon } from './../../TopBar/src/ForunIcon';
+import { ForunIcon } from '../../TopBar/src/ForunIcon';
 
 function ContextualSaveBar(props: any) {
   /** working on this */
-  let { message, buttonWidth = '5.25rem', ...otherprops } = props;
+
+  const { message, buttonWidth = '5.25rem' } = props;
   return (
     <El.Grid
       padding="0.563rem 0.1rem"
@@ -16,10 +17,10 @@ function ContextualSaveBar(props: any) {
       items="center"
     >
       <El.Inline show="y|n">
-        <ForunIcon></ForunIcon>
+        <ForunIcon />
       </El.Inline>
       <El.Inline>
-        <El.BaseElement text={`bold`} color="#bg">
+        <El.BaseElement text="bold" color="#bg">
           {message}
         </El.BaseElement>
       </El.Inline>

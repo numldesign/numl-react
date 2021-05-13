@@ -7,7 +7,12 @@ function Link(allProps: any) {
   return (
     <El.Action as="nu-link" text="n" {...otherProps}>
       {label}
-      {icon && (typeof icon === 'string' ? <El.Icon name={icon} text="middle" /> : icon)}
+      {icon &&
+        (typeof icon === 'string' ? (
+          <El.Icon name={icon} text="middle" />
+        ) : (
+          icon
+        ))}
     </El.Action>
   );
 }

@@ -1,16 +1,6 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 
-function ColorPicker() {
-  return (
-    <El.Card block width="22rem">
-      <ColorSelector></ColorSelector>
-      <ColorCode></ColorCode>
-      <ColorModifier></ColorModifier>
-    </El.Card>
-  );
-}
-
 function ColorModifier() {
   return (
     <El.Block padding>
@@ -23,16 +13,27 @@ function ColorModifier() {
 
 class ColorSelector extends React.Component {
   colorBlock: any;
+
   ctx1: any;
+
   width1: any;
+
   height1: any;
+
   colorStrip: any;
+
   ctx2: any;
+
   width2: any;
+
   height2: any;
+
   x = 0;
+
   y = 0;
+
   drag = false;
+
   rgbaColor = 'rgba(255,0,0,1)';
 
   constructor(props: any) {
@@ -47,15 +48,15 @@ class ColorSelector extends React.Component {
     };
     this.colorBlock = React.createRef();
     this.colorStrip = React.createRef();
-    console.log('umer');
   }
 
-  componentWillUnmount() {
-    // Make sure to remove the DOM listener when the component is unmounted.
-    // this.colorBlock.removeEventListener("mousedown", this.mousedown, false);
-    // this.colorBlock.removeEventListener("mouseup", this.mouseup, false);
-    // this.colorBlock.removeEventListener("mousemove", this.mousemove, false);
-  }
+  // componentWillUnmount() {
+  //   // Make sure to remove the DOM listener when the component is unmounted.
+  //   // this.colorBlock.removeEventListener("mousedown", this.mousedown, false);
+  //   // this.colorBlock.removeEventListener("mouseup", this.mouseup, false);
+  //   // this.colorBlock.removeEventListener("mousemove", this.mousemove, false);
+  // }
+
   componentDidMount() {
     // this.colorBlock.addEventListener("mousedown", this.mousedown, false);
     // this.colorBlock.addEventListener("mouseup", this.mouseup, false);
@@ -72,7 +73,7 @@ class ColorSelector extends React.Component {
     this.ctx2.rect(0, 0, this.width2, this.height2);
 
     this.fillGradient();
-    var grd1 = this.ctx2.createLinearGradient(0, 0, 0, this.height1);
+    const grd1 = this.ctx2.createLinearGradient(0, 0, 0, this.height1);
     grd1.addColorStop(0, 'rgba(255, 0, 0, 1)');
     grd1.addColorStop(0.17, 'rgba(255, 255, 0, 1)');
     grd1.addColorStop(0.34, 'rgba(0, 255, 0, 1)');
@@ -83,14 +84,16 @@ class ColorSelector extends React.Component {
     this.ctx2.fillStyle = grd1;
     this.ctx2.fill();
   }
+
   click(e: any) {
     console.log('click');
     this.x = e.offsetX;
     this.y = e.offsetY;
-    var imageData = this.ctx2.getImageData(this.x, this.y, 1, 1).data;
-    this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
+    const imageData = this.ctx2.getImageData(this.x, this.y, 1, 1).data;
+    this.rgbaColor = `rgba(${imageData[0]},${imageData[1]},${imageData[2]},1)`;
     this.fillGradient();
   }
+
   mousedown(e: any) {
     console.log('mousedown');
     this.drag = true;
@@ -104,21 +107,23 @@ class ColorSelector extends React.Component {
     }
   }
 
-  mouseup(_e: any) {
+  mouseup() {
     this.drag = false;
   }
 
   changeColor(e: any) {
-    console.log(this.rgbaColor);
+    // console.log(this.rgbaColor);
+
     this.x = e.offsetX;
     this.y = e.offsetY;
-    var imageData = this.ctx1.getImageData(this.x, this.y, 1, 1).data;
-    this.rgbaColor = 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
-    this.setState({
-      ctx1: this.ctx1,
-      rgbaColor: this.rgbaColor,
-    });
-    console.log(this.rgbaColor);
+    const imageData = this.ctx1.getImageData(this.x, this.y, 1, 1).data;
+    this.rgbaColor = `rgba(${imageData[0]},${imageData[1]},${imageData[2]},1)`;
+
+    // this.setState({
+    //   ctx1: this.ctx1,
+    //   rgbaColor: this.rgbaColor,
+    // });
+    // console.log(this.rgbaColor);
   }
 
   fillGradient() {
@@ -126,25 +131,26 @@ class ColorSelector extends React.Component {
     this.ctx1.fillStyle = this.rgbaColor;
     this.ctx1.fillRect(0, 0, this.width1, this.height1);
 
-    var grdWhite = this.ctx2.createLinearGradient(0, 0, this.width1, 0);
+    const grdWhite = this.ctx2.createLinearGradient(0, 0, this.width1, 0);
     grdWhite.addColorStop(0, 'rgba(255,255,255,1)');
     grdWhite.addColorStop(1, 'rgba(255,255,255,0)');
     this.ctx1.fillStyle = grdWhite;
     this.ctx1.fillRect(0, 0, this.width1, this.height1);
 
-    var grdBlack = this.ctx2.createLinearGradient(0, 0, 0, this.height1);
+    const grdBlack = this.ctx2.createLinearGradient(0, 0, 0, this.height1);
     grdBlack.addColorStop(0, 'rgba(0,0,0,0)');
     grdBlack.addColorStop(1, 'rgba(0,0,0,1)');
     this.ctx1.fillStyle = grdBlack;
     this.ctx1.fillRect(0, 0, this.width1, this.height1);
-    this.setState({
-      ctx1: this.ctx1,
-      rgbaColor: this.rgbaColor,
-    });
+
+    // this.setState({
+    //   ctx1: this.ctx1,
+    //   rgbaColor: this.rgbaColor,
+    // });
   }
 
   render() {
-    let tempState: any = this.state;
+    const tempState: any = this.state;
     return (
       <El.Grid
         columns={tempState.columns}
@@ -162,18 +168,12 @@ class ColorSelector extends React.Component {
           onClick={this.click}
           step="1"
           min="0"
-          onDragEnd={() => {
-            this.mousedown;
-          }}
-          onDragStart={() => {
-            this.mouseup;
-          }}
-          onDragging={() => {
-            this.mousemove;
-          }}
+          onDragEnd={this.mousedown}
+          onDragStart={this.mouseup}
+          onDragging={this.mousemove}
           max="255"
         >
-          <canvas ref={(elem) => (this.colorBlock = elem)} width="246px" height="246px"></canvas>
+          <canvas ref={this.colorBlock} width="246px" height="246px" />
         </El.RangeSlider2d>
         <El.RangeSlider
           column="2"
@@ -183,7 +183,7 @@ class ColorSelector extends React.Component {
           orient="v"
           image="linear(to bottom, hue(0 s), hue(90 s), hue(180 s), hue(270 s), hue(0 s))"
         >
-          <canvas ref={(elem) => (this.colorStrip = elem)} height="246px" width="10px"></canvas>
+          <canvas ref={this.colorStrip} height="246px" width="10px" />
         </El.RangeSlider>
         <El.RangeSlider
           column="3"
@@ -192,7 +192,7 @@ class ColorSelector extends React.Component {
           height="15.375rem"
           orient="v"
           image="linear(to bottom, white, transparent)"
-        ></El.RangeSlider>
+        />
       </El.Grid>
     );
   }
@@ -204,18 +204,55 @@ function ColorCode(props: any) {
       <El.Grid columns="1fr 3fr 1fr" items="center" gap="2x" content="stretch">
         <El.Button column="1" height="2.25rem" toggle text="normal">
           <El.BaseElement>RGB</El.BaseElement>
-          <El.Icon name="chevron-down ^:pressed[chevron-up]" size="md" text="normal"></El.Icon>
+          <El.Icon
+            name="chevron-down ^:pressed[chevron-up]"
+            size="md"
+            text="normal"
+          />
         </El.Button>
         <El.ButtonGroup column="2" height="2.25rem" value="rgb">
           <El.Grid columns="auto auto auto" items="center" content="stretch">
-            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
-            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
-            <El.NumberInput precision="0" min="0" max="255" value="0" label="Number input"></El.NumberInput>
+            <El.NumberInput
+              precision="0"
+              min="0"
+              max="255"
+              value="0"
+              label="Number input"
+            />
+            <El.NumberInput
+              precision="0"
+              min="0"
+              max="255"
+              value="0"
+              label="Number input"
+            />
+            <El.NumberInput
+              precision="0"
+              min="0"
+              max="255"
+              value="0"
+              label="Number input"
+            />
           </El.Grid>
         </El.ButtonGroup>
-        <El.NumberInput precision="0" min="0" max="100" value="0" label="Percents input"></El.NumberInput>
+        <El.NumberInput
+          precision="0"
+          min="0"
+          max="100"
+          value="0"
+          label="Percents input"
+        />
       </El.Grid>
     </El.Block>
+  );
+}
+function ColorPicker() {
+  return (
+    <El.Card block width="22rem">
+      <ColorSelector />
+      <ColorCode />
+      <ColorModifier />
+    </El.Card>
   );
 }
 

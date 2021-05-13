@@ -1,6 +1,6 @@
 import React from 'react';
 import { NumlProvider, ThemeProvider } from '@numl-react/core';
-import ContextualSaveBar from './../src/ContextualSaveBar';
+import ContextualSaveBar from '../src/ContextualSaveBar';
 
 export default {
   title: 'Example/Organisms/ContextualSaveBar',
@@ -10,8 +10,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider padding="0">
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <ContextualSaveBar {...args} />
   </NumlProvider>

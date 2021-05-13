@@ -20,8 +20,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <CalloutCard {...args} width="500px" />
   </El.NumlProvider>
@@ -58,8 +58,8 @@ WithoutAction.args = {
 
 const Template2 = ({ ...args }) => (
   <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />
     <CalloutCard.Landscape {...args} />

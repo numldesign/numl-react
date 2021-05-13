@@ -8,32 +8,34 @@ export default {
 
 const Template = ({ ...args }) => (
   <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75"></El.ThemeProvider>
-    <El.ThemeProvider name="secondary" hue="240" saturation="75"></El.ThemeProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <Search {...args} />
   </El.NumlProvider>
 );
 
-const resultTemplate = (item) => {
-  return (
-    <El.Grid gap flow="column" columns="4x auto 6x">
-      {item.prefix && (
-        <El.Block text="center">
-          <El.Icon name={item.prefix} />
-        </El.Block>
-      )}
-      {item.emptyGap && <El.BaseElement />}
-      {item.title && (
-        <El.Block>
-          <El.Block text="sb">{item.title}</El.Block>
-          {item.description && <El.Block color="#text-strong">{item.description}</El.Block>}
-          {item.description2 && <El.Block color="#text-strong">{item.description2}</El.Block>}
-        </El.Block>
-      )}
-      {item.suffix}
-    </El.Grid>
-  );
-};
+const resultTemplate = (item) => (
+  <El.Grid gap flow="column" columns="4x auto 6x">
+    {item.prefix && (
+      <El.Block text="center">
+        <El.Icon name={item.prefix} />
+      </El.Block>
+    )}
+    {item.emptyGap && <El.BaseElement />}
+    {item.title && (
+      <El.Block>
+        <El.Block text="sb">{item.title}</El.Block>
+        {item.description && (
+          <El.Block color="#text-strong">{item.description}</El.Block>
+        )}
+        {item.description2 && (
+          <El.Block color="#text-strong">{item.description2}</El.Block>
+        )}
+      </El.Block>
+    )}
+    {item.suffix}
+  </El.Grid>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -50,7 +52,10 @@ Default.args = {
   },
   extraActions: (
     <El.Pane width="4x">
-      <El.Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
+      <El.Link
+        to="https://numl.design"
+        icon={<El.Icon name="exit-outline" />}
+      />
     </El.Pane>
   ),
   value: 'acb',
@@ -88,7 +93,10 @@ Default.args = {
       description2: 'Orders / Drafts',
       suffix: (
         <El.Block text="center">
-          <El.Link to="https://numl.design" icon={<El.Icon name="exit-outline" />} />
+          <El.Link
+            to="https://numl.design"
+            icon={<El.Icon name="exit-outline" />}
+          />
         </El.Block>
       ),
       value: 'value_4',

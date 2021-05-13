@@ -13,8 +13,8 @@ export const Default = (args) => {
 
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
       <Menu {...args} border radius size="sm">
         <Menu.Item value="undo" onClick={handleMenuClick}>
           Undo
@@ -44,8 +44,8 @@ export const WithIcons = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+        <ThemeProvider hue="290" saturation="75" />
+        <ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
           <El.Icon name="eye-outline" />
@@ -55,7 +55,12 @@ export const WithIcons = (args) => {
           <El.Icon name="share-social-outline" />
           Share
         </Menu.Item>
-        <Menu.Item value="Getlink" border="bottom" columns="auto 1fr" onClick={handleMenuClick}>
+        <Menu.Item
+          value="Getlink"
+          border="bottom"
+          columns="auto 1fr"
+          onClick={handleMenuClick}
+        >
           <El.Icon name="link-outline" />
           Get link
         </Menu.Item>
@@ -63,7 +68,11 @@ export const WithIcons = (args) => {
           <El.Icon name="copy-outline" />
           Copy
         </Menu.Item>
-        <Menu.Item value="Download" columns="auto 1fr" onClick={handleMenuClick}>
+        <Menu.Item
+          value="Download"
+          columns="auto 1fr"
+          onClick={handleMenuClick}
+        >
           <El.Icon name="download-outline" />
           Download
         </Menu.Item>
@@ -80,8 +89,8 @@ export const WithHotKeyAndPopup = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+        <ThemeProvider hue="290" saturation="75" />
+        <ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item
           value="Cut"
@@ -155,8 +164,8 @@ export const WithSelectableItems = (args) => {
   return (
     <NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-        <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+        <ThemeProvider hue="290" saturation="75" />
+        <ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item
           value="Single"
@@ -167,7 +176,11 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Single' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <El.Icon name="checkmark-outline" opacity={selected === 'Single' ? '1' : '0'} transition="opacity .1s" />
+          <El.Icon
+            name="checkmark-outline"
+            opacity={selected === 'Single' ? '1' : '0'}
+            transition="opacity .1s"
+          />
           Single
         </Menu.Item>
         <Menu.Item
@@ -179,7 +192,11 @@ export const WithSelectableItems = (args) => {
           color={selected === '1.15' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <El.Icon name="checkmark-outline" opacity={selected === '1.15' ? '1' : '0'} transition="opacity .1s" />
+          <El.Icon
+            name="checkmark-outline"
+            opacity={selected === '1.15' ? '1' : '0'}
+            transition="opacity .1s"
+          />
           1.15
         </Menu.Item>
         <Menu.Item
@@ -191,7 +208,11 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Default' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <El.Icon name="checkmark-outline" opacity={selected === 'Default' ? 1 : 0} transition="opacity .1s" />
+          <El.Icon
+            name="checkmark-outline"
+            opacity={selected === 'Default' ? 1 : 0}
+            transition="opacity .1s"
+          />
           Default
         </Menu.Item>
         <Menu.Item
@@ -204,7 +225,11 @@ export const WithSelectableItems = (args) => {
           color={selected === 'Custom:_1.2' ? '#text' : '#text-strong'}
           transition="color .1s"
         >
-          <El.Icon name="checkmark-outline" opacity={selected === 'Custom:_1.2' ? 1 : 0} transition="opacity .1s" />
+          <El.Icon
+            name="checkmark-outline"
+            opacity={selected === 'Custom:_1.2' ? 1 : 0}
+            transition="opacity .1s"
+          />
           Custom: 1.2
         </Menu.Item>
         <Menu.Item value="add_space_before" columns="1fr auto">

@@ -1,11 +1,29 @@
 import React from 'react';
 import { El } from '@numl-react/core';
+
 function ProductCard(props: any) {
-  let { width = '350px', name, image, detail, price, color, currency, sizes, rating, ...otherProps } = props;
+  const {
+    width = '350px',
+    name,
+    image,
+    detail,
+    price,
+    color,
+    currency,
+    sizes,
+    rating,
+    ...otherProps
+  } = props;
   return (
-    <El.Grid columns="auto" row="auto" content="start" width={width} {...otherProps}>
+    <El.Grid
+      columns="auto"
+      row="auto"
+      content="start"
+      width={width}
+      {...otherProps}
+    >
       <El.Card padding="20px" radius="8px">
-        <El.Image column="1" width="100%" src={image} fit="fill"></El.Image>
+        <El.Image column="1" width="100%" src={image} fit="fill" />
         <El.Block>
           <ProductDetail
             name={name}
@@ -16,7 +34,7 @@ function ProductCard(props: any) {
             color={color}
             currency={currency}
             sizes={sizes}
-          ></ProductDetail>
+          />
         </El.Block>
       </El.Card>
     </El.Grid>
@@ -24,23 +42,24 @@ function ProductCard(props: any) {
 }
 
 function ProductRating(props: any) {
-  let { rating, ...otherProps } = props;
+  const { rating, ...otherProps } = props;
+  let tempRating: number = rating.avgRating;
 
   /** Incase if rating is not provided, dont show ProductRating */
+
   if (!rating) return null;
 
   if (rating.avgRating > 5) rating.avgRating = 5;
   if (rating.avgRating < 0) rating.avgRating = 0;
-  let tempRating = rating.avgRating;
   return (
     <El.Flex gap content="space-between" items="center" padding {...otherProps}>
       <El.Inline>
-        {[0, 1, 2, 3, 4].map(function () {
+        {[0, 1, 2, 3, 4].map(() => {
           if (tempRating > 0) {
-            tempRating--;
-            return <El.Icon name="star" color="#special"></El.Icon>;
+            tempRating -= 1;
+            return <El.Icon name="star" color="#special" />;
           }
-          return <El.Icon name="star-outline" cursor="pointer"></El.Icon>;
+          return <El.Icon name="star-outline" cursor="pointer" />;
         })}
         <El.Inline padding>({rating.count})</El.Inline>
       </El.Inline>
@@ -73,9 +92,10 @@ function ProductTitle(props: any) {
   );
 }
 
-/***
+/** *
  *
  */
+
 function ProductColors(props: { color: any }) {
   const { color } = props;
   return color && color.length > 0 ? (
@@ -85,9 +105,9 @@ function ProductColors(props: { color: any }) {
       </El.Block>
       <El.Flex row="2" gap items="center">
         {color &&
-          color.map(function (color: string) {
-            return <El.Circle size="3x" fill={color} cursor="pointer"></El.Circle>;
-          })}
+          color.map((color: string) => (
+            <El.Circle size="3x" fill={color} cursor="pointer" />
+          ))}
       </El.Flex>
     </El.Grid>
   ) : null;
@@ -98,8 +118,9 @@ function ProductColors(props: { color: any }) {
  * @param props
  * @returns
  */
+
 function ProductSizes(props: any) {
-  let { sizes } = props;
+  const { sizes } = props;
 
   if (!sizes) return null;
 
@@ -110,13 +131,11 @@ function ProductSizes(props: any) {
       </El.Block>
       <El.Block>
         {sizes &&
-          sizes.map(function (sizes: any) {
-            return (
-              <El.Button toggle cursor="pointer" text="uppercase">
-                {sizes}
-              </El.Button>
-            );
-          })}
+          sizes.map((sizes: any) => (
+            <El.Button toggle cursor="pointer" text="uppercase">
+              {sizes}
+            </El.Button>
+          ))}
       </El.Block>
     </>
   );
@@ -127,6 +146,7 @@ function ProductSizes(props: any) {
  * @param props
  * @returns React.FC<AddToCart>
  */
+
 function AddToCart(props: any) {
   const { price, currency } = props;
   return (
@@ -142,42 +162,47 @@ function AddToCart(props: any) {
   );
 }
 
-function ProductDetail(props: any) {
-  let { name, detail, price, color, sizes, currency, rating } = props;
+ProductCard.Landscape = ({
+  width = '280px',
+  name,
+  image,
+  detail,
+  price,
+  color,
+  sizes,
+  currency,
+  rating,
+}) => {
+  <El.Flex gap content="space-between" items="center" padding>
+    <El.Card padding="20px" radius="8px">
+      <El.Grid columns="auto" row="auto" gap="3x" content="start">
+        <El.Image column="1" width={width} src={image} fit="fill" />
+        <El.Block column="2">
+          <ProductDetail
+            currency={currency}
+            name={name}
+            rating={rating}
+            image={image}
+            detail={detail}
+            price={price}
+            color={color}
+            sizes={sizes}
+          />
+        </El.Block>
+      </El.Grid>
+    </El.Card>
+  </El.Flex>;
+};
+const ProductDetail = (props: any) => {
+  const { name, detail, price, color, sizes, currency, rating } = props;
   return (
     <>
-      <ProductRating rating={rating}></ProductRating>
-      <ProductTitle name={name} detail={detail}></ProductTitle>
-      <ProductColors color={color}></ProductColors>
-      <ProductSizes sizes={sizes}></ProductSizes>
-      <AddToCart price={price} currency={currency}></AddToCart>
+      <ProductRating rating={rating} />
+      <ProductTitle name={name} detail={detail} />
+      <ProductColors color={color} />
+      <ProductSizes sizes={sizes} />
+      <AddToCart price={price} currency={currency} />
     </>
-  );
-}
-
-ProductCard.Landscape = function (props: any) {
-  let { width = '280px', name, image, detail, price, color, sizes, currency, rating, ...otherProps } = props;
-
-  return (
-    <El.Flex gap content="space-between" items="center" padding>
-      <El.Card padding="20px" radius="8px">
-        <El.Grid columns="auto" row="auto" gap="3x" content="start">
-          <El.Image column="1" width={width} src={image} fit="fill"></El.Image>
-          <El.Block column="2">
-            <ProductDetail
-              currency={currency}
-              name={name}
-              rating={rating}
-              image={image}
-              detail={detail}
-              price={price}
-              color={color}
-              sizes={sizes}
-            ></ProductDetail>
-          </El.Block>
-        </El.Grid>
-      </El.Card>
-    </El.Flex>
   );
 };
 

@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { NumlProvider, ExceptionList, ThemeProvider, El } from '@numl-react/core';
+import {
+  NumlProvider,
+  ExceptionList,
+  ThemeProvider,
+  El,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Atoms/ExceptionList',
@@ -15,11 +20,11 @@ export default {
 };
 
 const Template = ({ title, label, icon, ...args }) => {
-  let items = [{ title, label, icon }];
+  const items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );
@@ -35,11 +40,11 @@ Default.args = {
 };
 
 const Template2 = ({ title, label, icon, ...args }) => {
-  let items = [{ title, label, icon }];
+  const items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );
@@ -50,15 +55,15 @@ LabelWithIcon.args = {
   theme: 'special',
   title: 'Title',
   label: 'Label',
-  icon: <El.Icon name="reader-outline"></El.Icon>,
+  icon: <El.Icon name="reader-outline" />,
 };
 
 const Template3 = ({ title, label, icon, ...args }) => {
-  let items = [{ title, label, icon }];
+  const items = [{ title, label, icon }];
   return (
     <NumlProvider>
-      <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
       <ExceptionList items={items} {...args} />
     </NumlProvider>
   );

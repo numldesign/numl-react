@@ -6,13 +6,13 @@ function Badge(allProps: any): JSX.Element {
   return (
     <El.Badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>
       {typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
-      {children ? children : <Badge.Label size={size}>{label}</Badge.Label>}
+      {children || <Badge.Label size={size}>{label}</Badge.Label>}
     </El.Badge>
   );
 }
 
 Badge.Label = function BadgeLabel(props: any): JSX.Element {
-  let { children, size, ...otherProps } = props;
+  const { children, size, ...otherProps } = props;
   return (
     <El.BaseElement size={size} {...otherProps}>
       {children}
@@ -21,8 +21,8 @@ Badge.Label = function BadgeLabel(props: any): JSX.Element {
 };
 
 Badge.Icon = function BadgeIcon(props: any): JSX.Element {
-  let { name, ...otherProps } = props;
-  return <El.Icon name={name} {...otherProps}></El.Icon>;
+  const { name, ...otherProps } = props;
+  return <El.Icon name={name} {...otherProps} />;
 };
 
 export default Badge;

@@ -1,5 +1,12 @@
 import React from 'react';
-import { Banner, Button, Icon, NumlProvider, ThemeProvider, El } from '@numl-react/core';
+import {
+  Banner,
+  Button,
+  Icon,
+  NumlProvider,
+  ThemeProvider,
+  El,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Banner',
@@ -20,8 +27,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NumlProvider>
-    <ThemeProvider hue="290" saturation="75"></ThemeProvider>
-    <ThemeProvider name="secondary" hue="240" saturation="75"></ThemeProvider>
+    <ThemeProvider hue="290" saturation="75" />
+    <ThemeProvider name="secondary" hue="240" saturation="75" />
     <Banner {...args} />
   </NumlProvider>
 );

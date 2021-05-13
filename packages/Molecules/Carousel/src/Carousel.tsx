@@ -7,8 +7,8 @@ function Carousel(allProps: any): JSX.Element {
     activeIndex,
     width = 'auto',
     height = 'auto',
-    onPreviousClick = () => {},
-    onNextClick = () => {},
+    onPreviousClick,
+    onNextClick,
     ...otherProps
   } = allProps;
 
@@ -34,27 +34,51 @@ function Carousel(allProps: any): JSX.Element {
   }, [currentSlide]);
 
   return (
-    <El.Block style={{ position: 'relative' }} width={width} height={height} {...otherProps}>
+    <El.Block
+      style={{ position: 'relative' }}
+      width={width}
+      height={height}
+      {...otherProps}
+    >
       <El.Block overflow="hidden">
         <El.Pane flow="row nowrap" gap="0" width={`${slides}00%`}>
-          {items.map((_image: any, _index: any) => {
+          {items.map((_image: any) => {
             const move = currentSlide === 0 ? '0 0' : `-${currentSlide}00% 0`;
             return (
-              <El.Flex key={_index} width="100%" move={move} transition="move .2s" content="center">
-                <El.Image src={_image} fit="fill" height={height} width={width}></El.Image>
+              <El.Flex
+                width="100%"
+                move={move}
+                transition="move .2s"
+                content="center"
+              >
+                <El.Image
+                  src={_image}
+                  fit="fill"
+                  height={height}
+                  width={width}
+                />
               </El.Flex>
             );
           })}
         </El.Pane>
       </El.Block>
-      <El.Icon name="chevron-back" place="left" cursor="pointer" onClick={handlePreviousClick} />
-      <El.Icon name="chevron-forward" place="right" cursor="pointer" onClick={handleNextClick} />
+      <El.Icon
+        name="chevron-back"
+        place="left"
+        cursor="pointer"
+        onClick={handlePreviousClick}
+      />
+      <El.Icon
+        name="chevron-forward"
+        place="right"
+        cursor="pointer"
+        onClick={handleNextClick}
+      />
       <El.Pane content="center" place="bottom" width="100%">
         {itemList.map((_item, _index) => {
           const isActive = currentSlide === _index;
           return (
             <El.Circle
-              key={_index}
               value={_index}
               size="1x"
               fill="input"
