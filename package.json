@@ -16,7 +16,7 @@
     "release": "npx lerna exec -- yarn build && changeset publish",
     "test:watch": "jest --watch",
     "serve": "vite preview",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "eslint:fix": "eslint --fix packages/* --quiet"
   },
