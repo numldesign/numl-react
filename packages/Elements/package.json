@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/elements",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Attribute Provider Box for Numl React by NUML.Design.",
   "keywords": [
     "component",
@@ -48,7 +48,7 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
-    "@numl-react/utility": "0.0.22",
+    "@numl-react/utility": "^0.0.23",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },

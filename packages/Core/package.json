@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Core Packages of Numl React by NUML.Design.",
   "keywords": [
     "components",
@@ -49,10 +49,10 @@
   },
   "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
-    "@numl-react/atoms": "0.0.22",
-    "@numl-react/elements": "0.0.22",
-    "@numl-react/molecules": "0.0.22",
-    "@numl-react/utility": "0.0.22",
+    "@numl-react/atoms": "^0.0.23",
+    "@numl-react/elements": "^0.0.23",
+    "@numl-react/molecules": "^0.0.23",
+    "@numl-react/utility": "^0.0.23",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
