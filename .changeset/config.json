@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.0/schema.json",
   "changelog": [
     "@changesets/cli/changelog",
-    { "repo": "chakra-ui/chakra-ui" }
+    { "repo": "numldesign/numl-react" }
   ],
   "commit": false,
   "linked": [],
