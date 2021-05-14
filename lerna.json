@@ -8,6 +8,7 @@
     "packages/Elements/*",
     "packages/Utilities/*"
   ],
+  "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "0.0.22"
 }
