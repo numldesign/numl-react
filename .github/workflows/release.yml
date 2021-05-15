@@ -25,10 +25,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Cleaning Yarn Cache
         run: yarn cache clean
-
+        
         # Runs a single command using the runners shell
       - name: Installation of NPM Modules
-        run: yarn install:all
+        run: yarn install
+
+      - name: Bootstrap Package
+        run: npx lerna bootstrap
 
       - name: Setup CI Git User
         run: |
