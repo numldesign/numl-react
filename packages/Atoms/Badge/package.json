@@ -10,54 +10,44 @@
     "numl",
     "uikit"
   ],
-  "author": "Numl.Design Team",
-  "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "scripts": {
-    "postbuild": "yarn build:types",
-    "build": "vite build",
-    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
+  "bugs": {
+    "url": "https://github.com/numldesign/numl-react/issues"
   },
-  "main": "./dist/core.cjs.js",
-  "module": "./dist/core.es.js",
-  "types": "./dist/types/index.d.ts",
-  "typings": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numldesign/numl-react.git"
+  },
+  "license": "MIT",
+  "author": "Numl.Design Team",
+  "sideEffects": false,
   "exports": {
     ".": {
       "require": "./index.ts",
       "default": "./index.ts"
     }
   },
+  "main": "./dist/core.cjs.js",
+  "module": "./dist/core.es.js",
+  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "files": [
     "dist",
     "index.js",
     "CHANGELOG.md"
   ],
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "yarn build:types",
+    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/numldesign/numl-react.git"
-  },
-  "bugs": {
-    "url": "https://github.com/numldesign/numl-react/issues"
-  },
-  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
   "dependencies": {
-    "@numl-react/atoms": "^0.0.23",
-    "@numl-react/core": "^0.0.23",
-    "@numl-react/elements": "^0.0.23",
-    "@numl-react/molecules": "^0.0.23",
-    "@numl-react/utility": "^0.0.23",
-    "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "@numl-react/core": "0.0.23"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
     "@types/mocha": "8.2.2",
-    "@types/node": "15.0.2",
+    "@types/node": "15.3.0",
     "@types/react": "17.0.5",
     "@types/react-dom": "17.0.3",
     "jest": "26.6.3",
@@ -66,5 +56,15 @@
     "tslib": "2.2.0",
     "typescript": "4.2.4",
     "vite": "2.2.4"
-  }
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "typescript": "4.2.0 || 4.2.4",
+    "vite": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a"
 }
