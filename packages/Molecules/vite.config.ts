@@ -9,7 +9,6 @@ module.exports = {
       formats: ['es', 'cjs'],
       minify: false,
     },
-    root: path.resolve(__dirname, './index.ts'),
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library

@@ -4,5 +4,3 @@ declare global {
     Nude: any;
   }
 }
-
-window.Nude = window.Nude || {};

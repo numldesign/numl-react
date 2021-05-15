@@ -4,7 +4,6 @@ declare global {
   }
 }
 
-window.Nude = window.Nude || {};
 export function requireNude(): Promise<any> {
   if (typeof window === 'undefined')
     return Promise.reject(new Error('window not found'));

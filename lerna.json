@@ -5,9 +5,9 @@
     "packages/Atoms/*",
     "packages/Core/*",
     "packages/Molecules/*",
-    "packages/Elements/*",
-    "packages/Utilities/*"
+    "packages/Elements/*"
   ],
+  "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "0.0.22"
+  "version": "0.0.23"
 }

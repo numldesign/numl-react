@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/banner",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -10,13 +10,22 @@
     "numl",
     "uikit"
   ],
-  "author": "Numl.Design Team",
-  "license": "MIT",
   "homepage": "https://github.com/numldesign/numl-react#readme",
-  "scripts": {
-    "postbuild": "yarn build:types",
-    "build": "vite build",
-    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
+  "bugs": {
+    "url": "https://github.com/numldesign/numl-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numldesign/numl-react.git"
+  },
+  "license": "MIT",
+  "author": "Numl.Design Team",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./index.ts",
+      "default": "./index.ts"
+    }
   },
   "main": "./dist/core.cjs.js",
   "module": "./dist/core.es.js",
@@ -27,44 +36,37 @@
     "index.js",
     "CHANGELOG.md"
   ],
-  "exports": {
-    ".": {
-      "require": "./index.ts",
-      "default": "./index.ts"
-    }
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "yarn build:types",
+    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
-  "sideEffects": false,
+  "dependencies": {
+    "@numl-react/core": "0.0.23",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.23",
+    "@types/mocha": "8.2.2",
+    "@types/node": "15.3.0",
+    "@types/react": "17.0.5",
+    "@types/react-dom": "17.0.5",
+    "jest": "26.6.3",
+    "prop-types": "15.7.2",
+    "rimraf": "3.0.2",
+    "tslib": "2.2.0",
+    "typescript": "4.2.4",
+    "vite": "2.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
+    "typescript": "4.2.0 || 4.2.4",
+    "vite": "*"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/numldesign/numl-react.git"
-  },
-  "bugs": {
-    "url": "https://github.com/numldesign/numl-react/issues"
-  },
-  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a",
-  "dependencies": {
-    "@numl-react/atoms": "0.0.22",
-    "@numl-react/core": "0.0.22",
-    "@numl-react/elements": "0.0.22",
-    "@numl-react/molecules": "0.0.22",
-    "@numl-react/utility": "0.0.22",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/mocha": "^8.2.2",
-    "@types/node": "^15.0.2",
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.3",
-    "jest": "26.6.3",
-    "prop-types": "^15.7.2",
-    "rimraf": "^3.0.2",
-    "tslib": "^2.2.0",
-    "typescript": "^4.2.4",
-    "vite": "^2.2.4"
-  }
+  "gitHead": "3f2d9bc03b831b7d51e0fe93290501a7ba44153a"
 }

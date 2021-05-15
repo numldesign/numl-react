@@ -23,13 +23,17 @@ jobs:
         with:
           node-version: 14.x
 
+      # Runs a single command using the runners shell
+      - name: Cleaning Yarn Cache
+        run: yarn cache clean
+
         # Install Dependencies of Monorepo base
       - name: Install Base Dependencies
         run: yarn install
 
-        # Install all Publishable repo Dependencies
-      - name: Install all Dependencies
-        run: yarn install:all
+        # Bootstrap all Dependencies
+      - name: Bootstrap all Dependencies
+        run: npx lerna bootstrap
 
         # Build All Modules
       - name: Build All Modules
