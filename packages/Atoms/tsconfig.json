@@ -8,7 +8,7 @@
     "**/**/vite.config.ts",
     "**/**/__tests__/*.test.tsx",
     "build",
-    "dist",
+    "dist/*",
     "**/*.js",
     "**/*.jsx"
   ]
