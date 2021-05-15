@@ -31,9 +31,9 @@ jobs:
       - name: Install Base Dependencies
         run: yarn install
 
-        # Install all Publishable repo Dependencies
-      - name: Install all Dependencies
-        run: yarn install:all:dev
+        # Bootstrap all Dependencies
+      - name: Bootstrap all Dependencies
+        run: npx lerna bootstrap
 
         # Build All Modules
       - name: Build All Modules
