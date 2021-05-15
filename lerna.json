@@ -5,8 +5,7 @@
     "packages/Atoms/*",
     "packages/Core/*",
     "packages/Molecules/*",
-    "packages/Elements/*",
-    "packages/Utilities/*"
+    "packages/Elements/*"
   ],
   "useWorkspaces": true,
   "npmClient": "yarn",

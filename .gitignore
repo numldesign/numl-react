@@ -56,3 +56,13 @@ package-lock.json
 **/package-lock.json
 **/**/package-lock.json
 **/**/**/package-lock.json
+
+.pnp.js
+**/.pnp.js
+**/**/.pnp.js
+**/**/**/.pnp.js
+
+.yarn
+**/.yarn
+**/**/.yarn
+**/**/**/.yarn
