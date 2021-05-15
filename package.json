@@ -38,7 +38,7 @@
     "fix:pkgs": "manypkg fix",
     "prettier": "prettier --write ./packages",
     "prettier:check": "prettier --check ./packages",
-    "install:all": "npx lerna exec -- yarn install --frozen-lock",
+    "install:all": "npx lerna exec -- yarn install --immutable",
     "install:all:dev": "npx lerna exec -- yarn install",
     "typedoc": "typedoc --out docs packages/entry.ts",
     "postbuild": "npx lerna exec -- yarn postbuild",
