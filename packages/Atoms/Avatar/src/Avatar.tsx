@@ -5,124 +5,96 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
   const {
     username,
     subtitle,
-    fill,
+    theme = 'default',
     children,
+    fill,
+    showIcon = true,
     showArrow = false,
-    display = 'flex',
-    content = 'center stretch',
-    items = 'center stretch',
-    flow = 'row',
-    gap = '1x',
+    gap = '2x 1x',
     cursor = 'pointer',
     padding = '1x',
     ...otherProps
   } = allProps;
 
   return (
-    <El.Card
-      display={display}
-      content={content}
-      items={items}
-      flow={flow}
+    <El.Button
       gap={gap}
-      toggle
+      theme={theme}
+      fill={fill}
       cursor={cursor}
       padding={padding}
-      fill={fill}
       {...otherProps}
     >
-      {children}
-      <Avatar.Icon {...allProps} />
-      {username && !children ? <Avatar.Profile {...allProps} /> : null}
-
-      {showArrow ? (
-        <Avatar.DropDown toggle>
-          <Avatar.Popup>Lorem Ipsum</Avatar.Popup>
-        </Avatar.DropDown>
-      ) : null}
-    </El.Card>
+      <El.Grid columns="auto auto" flow="row wrap">
+        <Avatar.Profile
+          column="1"
+          gap={gap}
+          fill={fill}
+          username={username}
+          subtitle={subtitle}
+          showIcon={showIcon}
+        />
+        {showArrow ? (
+          <>
+            <El.Inline column="2">
+              <El.DropdownIcon
+                name="chevron-down-outline"
+                fill={fill}
+                theme={theme}
+              />
+              <Avatar.Popup>{children}</Avatar.Popup>
+            </El.Inline>
+          </>
+        ) : null}
+      </El.Grid>
+    </El.Button>
   );
 };
 
 Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
-  const {
-    username,
-    showIcon = true,
-    border = '0.1',
-    content = 'center',
-    padding = '1',
-    items = 'center',
-    display = 'flex',
-    children,
-    ...otherProps
-  } = allProps;
+  const { username, showIcon = true, ...otherProps } = allProps;
 
   return (
-    <El.Circle
-      display={display}
-      content={content}
-      items={items}
-      padding={padding}
-      border={border}
-      {...otherProps}
-    >
+    <El.Circle text="uppercase" size="6x" inline {...otherProps}>
+      <El.AttributeProvider for="nu-el" size="special" />
+
       {!showIcon && username ? (
-        <El.BaseElement size="lg" text="uppercase">
+        <El.BaseElement padding="1x" size="3x 4x">
           {username.slice(0, 2)}
         </El.BaseElement>
       ) : (
-        <El.Icon size="lg" name="person" />
+        <El.Icon padding="0.75x" size="4x" sp name="person" />
       )}
     </El.Circle>
   );
 };
 
 Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
-  const { username, subtitle, ...otherProps } = allProps;
+  const { username, subtitle, showIcon, ...otherProps } = allProps;
 
   return (
-    <El.Block {...otherProps}>
-      <El.Block>
-        {' '}
-        {username ? (
-          <El.BaseElement size="md">{username}</El.BaseElement>
-        ) : null}{' '}
-      </El.Block>
-      <El.Block>
-        {' '}
-        {subtitle ? (
-          <El.BaseElement size="sm">{subtitle}</El.BaseElement>
-        ) : null}{' '}
-      </El.Block>
-    </El.Block>
-  );
-};
-
-Avatar.DropDown = function AvatarDropDown(props: any) {
-  const { children, ...otherProps } = props;
-  return (
-    <El.DropdownIcon name="chevron-down-outline" {...otherProps}>
-      {children}
-    </El.DropdownIcon>
+    <El.Grid columns="auto auto" {...otherProps}>
+      <Avatar.Icon username={username} showIcon={showIcon} />
+      <El.BaseElement>
+        <El.Block>
+          {username ? (
+            <El.BaseElement size="md">{username}</El.BaseElement>
+          ) : null}
+        </El.Block>
+        <El.Block>
+          {subtitle ? (
+            <El.BaseElement size="sm">{subtitle}</El.BaseElement>
+          ) : null}
+        </El.Block>
+      </El.BaseElement>
+    </El.Grid>
   );
 };
 
 Avatar.Popup = function AvatarPopup(props: any) {
-  const {
-    padding = '1x 0',
-    flow = 'column',
-    display = 'flex',
-    children,
-    ...otherProps
-  } = props;
+  const { children, ...otherProps } = props;
   return (
-    <El.Popup
-      use-menu
-      display={display}
-      padding={padding}
-      flow={flow}
-      {...otherProps}
-    >
+    <El.Popup use-menu {...otherProps}>
       {children}
     </El.Popup>
   );

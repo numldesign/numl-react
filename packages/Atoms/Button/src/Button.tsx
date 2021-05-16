@@ -8,14 +8,12 @@ function Button(props: any): JSX.Element {
     padding = '2x 2x',
     selectable = false,
     theme = 'default',
-    height = '2x',
     onClick,
     ...otherProps
   } = props;
   return (
     <El.Button
       block
-      height={height}
       theme={theme}
       size={size}
       selectable={selectable}
@@ -31,7 +29,7 @@ function Button(props: any): JSX.Element {
 Button.Small = ({
   children = null,
   size = 'sm',
-  padding = '2x 2x',
+  padding = '1x 2x',
   ...props
 }) => (
   <Button padding={padding} size={size} {...props}>
@@ -41,7 +39,7 @@ Button.Small = ({
 Button.Medium = ({
   children = null,
   size = 'md',
-  padding = '2.5x 3x',
+  padding = '1.5x 2.5x',
   ...props
 }) => (
   <Button padding={padding} size={size} {...props}>
@@ -51,7 +49,7 @@ Button.Medium = ({
 Button.Large = ({
   children = null,
   size = 'lg',
-  padding = '3x 4x',
+  padding = '2x 3x',
   ...props
 }) => (
   <Button padding={padding} size={size} {...props}>
@@ -61,7 +59,7 @@ Button.Large = ({
 Button.ExtraLarge = ({
   children = null,
   size = 'xl',
-  padding = '3.5x 5x',
+  padding = '2x 4x',
   ...props
 }) => (
   <Button padding={padding} size={size} {...props}>
@@ -89,15 +87,6 @@ Button.Icon = function ButtonIcon(props: any) {
     <El.Icon color={color} padding={padding} {...otherProps}>
       {children}
     </El.Icon>
-  );
-};
-
-Button.DropDown = function ButtonDropDown(props: any) {
-  const { children, color = '#text', ...otherProps } = props;
-  return (
-    <El.DropdownIcon color={color} {...otherProps}>
-      {children}
-    </El.DropdownIcon>
   );
 };
 
