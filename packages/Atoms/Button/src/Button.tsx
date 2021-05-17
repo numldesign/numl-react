@@ -5,7 +5,7 @@ function Button(props: any): JSX.Element {
   const {
     children,
     size = 'md',
-    padding = '2x 2x',
+    padding = '1.5x 2.5x',
     selectable = false,
     theme = 'default',
     onClick,
@@ -112,6 +112,48 @@ Button.Checkbox = function ButtonCheckbox(props: any) {
     </El.Checkbox>
   );
 };
+
+Button.Dropdown = function ButtonDropdown(props: any): JSX.Element {
+  const {
+    children,
+    label,
+    theme = '',
+    icon,
+    type = 'medium',
+    ...otherProps
+  } = props;
+  let size = '';
+  let padding = '';
+  if (type === 'small') {
+    size = 'sm';
+    padding = '1x 2x';
+  } else if (type === 'medium') {
+    size = 'md';
+    padding = '1.5x 2.5x';
+  } else if (type === 'large') {
+    size = 'lg';
+    padding = '2x 3x';
+  } else if (type === 'extralarge') {
+    size = 'xl';
+    padding = '2x 4x';
+  } else {
+    size = 'md';
+    padding = '1.5x 2.5x';
+  }
+  return (
+    <Button {...otherProps} size={size} padding={padding}>
+      {icon && typeof icon === 'string' ? <Button.Icon name={icon} /> : icon}
+      {label && typeof label === 'string' ? (
+        <Button.Label>{label}</Button.Label>
+      ) : (
+        { label }
+      )}
+      <El.DropdownIcon theme={theme} size={size} />
+      <Button.Popup size={size}>{children}</Button.Popup>
+    </Button>
+  );
+};
+(Button.Dropdown as React.FC).displayName = 'ButtonDropdown';
 
 Button.Group = function ButtonGroup(allProps: any): JSX.Element {
   const { children, ...otherProps } = allProps;

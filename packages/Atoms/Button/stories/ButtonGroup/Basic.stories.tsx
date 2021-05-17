@@ -15,11 +15,47 @@ const Template = (args: any) => (
   </NumlProvider>
 );
 
-export const Basic: any = Template.bind({});
-Basic.args = {
+export const Small: any = Template.bind({});
+Small.args = {
   children: [
-    <Button.Large key="one">Button</Button.Large>,
-    <Button.Large key="two">Button</Button.Large>,
-    <Button.Large key="three">Button</Button.Large>,
+    <Button.Small key="one">
+      <Button.Icon name="play-back" />
+      Left
+    </Button.Small>,
+    <Button.Small key="two">Center</Button.Small>,
+    <Button.Small key="three">
+      Right
+      <Button.Icon name="play-forward" />
+    </Button.Small>,
+  ],
+};
+
+export const Medium: any = Template.bind({});
+Medium.args = {
+  children: [
+    <Button.Medium key="one">
+      <Button.Icon name="play-back" />
+      Left
+    </Button.Medium>,
+    <Button.Medium key="two">Center</Button.Medium>,
+    <Button.Medium key="three">
+      Right
+      <Button.Icon name="play-forward" />
+    </Button.Medium>,
+  ],
+};
+
+export const Large: any = Template.bind({});
+Large.args = {
+  children: [
+    <Button.Large key="one">
+      <Button.Icon name="play-back" />
+      Left
+    </Button.Large>,
+    <Button.Large key="two">Center</Button.Large>,
+    <Button.Large key="three">
+      Right
+      <Button.Icon name="play-forward" />
+    </Button.Large>,
   ],
 };

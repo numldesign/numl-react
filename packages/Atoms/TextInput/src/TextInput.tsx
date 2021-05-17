@@ -49,7 +49,7 @@ TextInput.Field = function TextField(allProps: any) {
     <El.Field width={inputSize}>
       <El.Flex content="space-between">
         <El.Label for={label}>
-          {label}{' '}
+          {label}
           {required && <El.BaseElement theme="danger">{` * `}</El.BaseElement>}
         </El.Label>
         {link && (

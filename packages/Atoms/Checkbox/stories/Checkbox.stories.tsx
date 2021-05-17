@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Checkbox } from '@numl-react/core';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import Checkbox from '../src/Checkbox';
 
 export default {
   title: 'Example/Atoms/Checkbox',
@@ -24,27 +25,24 @@ const Template = ({ children, ...args }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Checkbox.Field {...args} />
+    <Checkbox {...args} />
+    <Checkbox checked {...args} />
+    <Checkbox disabled {...args} />
+    <Checkbox checked disabled {...args} />
   </NumlProvider>
 );
 
 export const Basic: any = Template.bind({});
 Basic.args = {
-  checked: true,
-  label: 'Label Name',
+  label: 'Hello World!',
 };
 
-const Template2 = ({ children, ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Checkbox.Field {...args}>
-      <Checkbox.Label>{children}</Checkbox.Label>
-    </Checkbox.Field>
-  </NumlProvider>
-);
-export const WithLabel: any = Template2.bind({});
+export const WithLabel: any = Template.bind({});
 WithLabel.args = {
-  checked: true,
-  children: 'Label Name',
+  label: 'Hello World!',
+};
+
+export const WithLabelElement: any = Template.bind({});
+WithLabelElement.args = {
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
 };

@@ -3,14 +3,15 @@ import { El } from '@numl-react/core';
 
 function Chip(allProps: any): JSX.Element {
   const {
-    children,
     size,
-    padding = '0.3rem 0.7rem',
+    padding = '1x 2x',
     radius = 'round',
     label,
+    hover = true,
+    theme = 'text',
     icon,
     selectable = 'n',
-    actionIcon,
+    action,
     ...otherProp
   } = allProps;
 
@@ -19,13 +20,28 @@ function Chip(allProps: any): JSX.Element {
       radius={radius}
       padding={padding}
       cursor="pointer"
+      size={size}
+      use-hover={hover}
       selectable={selectable}
       {...otherProp}
     >
-      {typeof icon === 'string' ? <El.Icon name={icon} size={size} /> : icon}
-      {children && children.trim().length > 0 ? children : null}
-      {label && children.trim().length === 0 ? label : null}
-      {actionIcon || null}
+      {icon && typeof icon === 'string' ? (
+        <El.Icon theme={theme} name={icon} size={size} />
+      ) : (
+        icon
+      )}
+      {label && typeof label === 'string' ? (
+        <El.Label theme={theme} size={size}>
+          {label}
+        </El.Label>
+      ) : (
+        label
+      )}
+      {action && typeof action === 'string' ? (
+        <El.Icon theme={theme} name={action} size={size} />
+      ) : (
+        action
+      )}
     </El.Badge>
   );
 }

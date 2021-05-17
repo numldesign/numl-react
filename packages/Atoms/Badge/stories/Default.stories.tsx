@@ -17,7 +17,7 @@ const DefaultTemplate = (props: any) => {
   );
 };
 
-export const Neutral = DefaultTemplate.bind({});
-Neutral.args = {
+export const Basic = DefaultTemplate.bind({});
+Basic.args = {
   label: 'default',
 };

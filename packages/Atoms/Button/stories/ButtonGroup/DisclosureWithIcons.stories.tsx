@@ -3,7 +3,7 @@ import { ThemeProvider, NumlProvider, El } from '@numl-react/core';
 import { Button } from '../../index';
 
 export default {
-  title: 'Example/Atoms/ButtonGroup/Disclosure',
+  title: 'Example/Atoms/ButtonGroup/Disclosure With Icons',
   component: Button.Group,
 };
 
@@ -18,13 +18,13 @@ const Template = (args: any) => (
 export const Small: any = Template.bind({});
 Small.args = {
   children: [
-    <Button.Dropdown key="one" label="Left" type="small">
+    <Button.Dropdown key="one" label="Left" type="small" icon="play-back">
       Hello
     </Button.Dropdown>,
     <Button.Dropdown key="two" label="Center" type="small">
       Hello
     </Button.Dropdown>,
-    <Button.Dropdown key="three" label="Right" type="small">
+    <Button.Dropdown key="three" label="Right" type="small" icon="play-forward">
       Hello
     </Button.Dropdown>,
   ],
@@ -33,13 +33,18 @@ Small.args = {
 export const Medium: any = Template.bind({});
 Medium.args = {
   children: [
-    <Button.Dropdown key="one" label="Left" type="medium">
+    <Button.Dropdown key="one" label="Left" type="medium" icon="play-back">
       Hello
     </Button.Dropdown>,
     <Button.Dropdown key="two" label="Center" type="medium">
       Hello
     </Button.Dropdown>,
-    <Button.Dropdown key="three" label="Right" type="medium">
+    <Button.Dropdown
+      key="three"
+      label="Right"
+      type="medium"
+      icon="play-forward"
+    >
       Hello
     </Button.Dropdown>,
   ],
@@ -48,13 +53,13 @@ Medium.args = {
 export const Large: any = Template.bind({});
 Large.args = {
   children: [
-    <Button.Dropdown key="one" label="Left" type="large">
+    <Button.Dropdown key="one" label="Left" type="large" icon="play-back">
       Hello
     </Button.Dropdown>,
     <Button.Dropdown key="two" label="Center" type="large">
       Hello
     </Button.Dropdown>,
-    <Button.Dropdown key="three" label="Right" type="large">
+    <Button.Dropdown key="three" label="Right" type="large" icon="play-forward">
       Hello
     </Button.Dropdown>,
   ],
@@ -63,13 +68,18 @@ Large.args = {
 export const ExtraLarge: any = Template.bind({});
 ExtraLarge.args = {
   children: [
-    <Button.Dropdown key="one" label="Left" type="extralarge">
+    <Button.Dropdown key="one" label="Left" type="extralarge" icon="play-back">
       Hello
     </Button.Dropdown>,
     <Button.Dropdown key="two" label="Center" type="extralarge">
       Hello
     </Button.Dropdown>,
-    <Button.Dropdown key="three" label="Right" type="extralarge">
+    <Button.Dropdown
+      key="three"
+      label="Right"
+      type="extralarge"
+      icon="play-forward"
+    >
       Hello
     </Button.Dropdown>,
   ],
