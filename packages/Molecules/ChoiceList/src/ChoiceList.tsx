@@ -98,15 +98,18 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
             <El.Listitem key={value}>
-              <Checkbox.Field
+              <Checkbox
                 checked={isChecked}
                 value={value}
+                label={
+                  <>
+                    <El.Block>{label}</El.Block>
+                    <El.Block color="#text-soft">{helpText}</El.Block>
+                  </>
+                }
                 items="start"
                 onInput={handleChecklistChange}
-              >
-                <El.Block>{label}</El.Block>
-                <El.Block color="#text-soft">{helpText}</El.Block>
-              </Checkbox.Field>
+              />
             </El.Listitem>
           );
         })}
