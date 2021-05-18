@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, TextInput } from '@numl-react/core';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import TextInput from '../src/TextInput';
 
 export default {
   title: 'Example/Atoms/TextInput',
@@ -17,11 +18,6 @@ export default {
       },
     },
     prefix: {
-      control: {
-        type: 'text',
-      },
-    },
-    suffix: {
       control: {
         type: 'text',
       },

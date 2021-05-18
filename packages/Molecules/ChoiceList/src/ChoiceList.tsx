@@ -55,7 +55,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
               const { label, value, renderChildren } = choice;
               return (
                 <El.Listitem key={value}>
-                  <Radio.Field value={value}>{label}</Radio.Field>
+                  <Radio value={value}>{label}</Radio>
                   {renderChildren && value === selected ? (
                     <El.List type="none">{renderChildren}</El.List>
                   ) : null}
@@ -98,15 +98,18 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
           const isChecked = selectedValues.has(value) ? true : undefined;
           return (
             <El.Listitem key={value}>
-              <Checkbox.Field
+              <Checkbox
                 checked={isChecked}
                 value={value}
+                label={
+                  <>
+                    <El.Block>{label}</El.Block>
+                    <El.Block color="#text-soft">{helpText}</El.Block>
+                  </>
+                }
                 items="start"
                 onInput={handleChecklistChange}
-              >
-                <El.Block>{label}</El.Block>
-                <El.Block color="#text-soft">{helpText}</El.Block>
-              </Checkbox.Field>
+              />
             </El.Listitem>
           );
         })}

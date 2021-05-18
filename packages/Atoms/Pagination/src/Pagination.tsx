@@ -2,7 +2,7 @@ import React from 'react';
 import { El } from '@numl-react/core';
 import Icon from '../../Icon/src/Icon';
 
-function Pagination(allProps: any) {
+function Pagination(allProps: any): JSX.Element {
   const { flow, label, previous, next, ...otherProps } = allProps;
   const isVertical = flow === 'column';
 
@@ -19,16 +19,7 @@ function Pagination(allProps: any) {
       ) : (
         previous
       )}
-      {label && !isVertical && (
-        <El.Label
-          display="flex"
-          content="center"
-          items="center"
-          fill="transparent"
-        >
-          {label}
-        </El.Label>
-      )}
+      {label && !isVertical && <El.Label>{label}</El.Label>}
       {typeof next === 'string' ? (
         <El.Button id="next">
           <Icon name={next} />

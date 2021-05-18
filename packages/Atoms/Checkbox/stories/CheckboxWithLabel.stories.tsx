@@ -3,7 +3,7 @@ import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import Checkbox from '../src/Checkbox';
 
 export default {
-  title: 'Example/Atoms/Checkbox/Themes',
+  title: 'Example/Atoms/Checkbox/With Label',
   component: Checkbox,
   argTypes: {
     size: {
@@ -34,30 +34,30 @@ const Template = ({ children, ...args }) => (
 
 export const Default: any = Template.bind({});
 Default.args = {
-  label: 'Hello World!',
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
   theme: 'default',
 };
 
 export const Special: any = Template.bind({});
 Special.args = {
-  label: 'Hello World!',
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
   theme: 'special',
 };
 
 export const Danger: any = Template.bind({});
 Danger.args = {
-  label: 'Hello World!',
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
   theme: 'danger',
 };
 
 export const Warning: any = Template.bind({});
 Warning.args = {
-  label: 'Hello World!',
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
   theme: 'warning',
 };
 
 export const Success: any = Template.bind({});
 Success.args = {
-  label: 'Hello World!',
+  label: <Checkbox.Label> Hello World! </Checkbox.Label>,
   theme: 'success',
 };

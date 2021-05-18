@@ -7,7 +7,7 @@ import {
 } from '@numl-react/core';
 
 export default {
-  title: 'Example/Atoms/MessageError/Basic',
+  title: 'Example/Atoms/MessageError/CustomIcon',
   component: MessageError,
 };
 
@@ -21,29 +21,34 @@ const Template = ({ children, ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'This is not valid',
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is default message',
 };
 
 export const Special = Template.bind({});
 Special.args = {
-  children: 'This is not valid',
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is special',
   theme: 'special',
 };
 
 export const Danger = Template.bind({});
 Danger.args = {
-  children: 'This is not valid',
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is danger',
   theme: 'danger',
 };
 
 export const Success = Template.bind({});
 Success.args = {
-  children: 'This is not valid',
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is success',
   theme: 'success',
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
-  children: 'This is not valid',
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is warning',
   theme: 'warning',
 };

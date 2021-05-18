@@ -2,9 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
 function Radio(allProps: any): JSX.Element {
-  const { checked, disabled, ...otherProps } = allProps;
+  const { label, size, value, ...otherProps } = allProps;
 
-  return <El.Radio checked={checked} disabled={disabled} {...otherProps} />;
+  return (
+    <El.Flex gap>
+      <El.Radio inline size={size} {...otherProps} value={value} />
+      {label && typeof label === 'string' ? (
+        <El.Label inline size={size}>
+          {label}
+        </El.Label>
+      ) : (
+        label
+      )}
+    </El.Flex>
+  );
 }
 
 Radio.Group = function RadioGroup(allProps: any): JSX.Element {
@@ -32,19 +43,18 @@ Radio.Group = function RadioGroup(allProps: any): JSX.Element {
   );
 };
 
-Radio.Field = function RadioField(allProps: any) {
-  const { id, children, ...otherProps } = allProps;
+Radio.List = function RadioList(allProps: any) {
+  const { list, value, ...otherProps } = allProps;
 
   return (
-    <El.Field
-      display="flex"
-      flow="row"
-      items="center start"
-      gap="1x"
-      {...otherProps}
-    >
-      <El.Radio checked disabled id {...otherProps} />
-      {children ? <El.Label for={id}>{children}</El.Label> : ''}
+    <El.Field>
+      <Radio.Group value={value}>
+        {list && typeof list === 'object'
+          ? list.map((item: any) => (
+              <Radio label={item.label} value={item.value} {...otherProps} />
+            ))
+          : null}
+      </Radio.Group>
     </El.Field>
   );
 };

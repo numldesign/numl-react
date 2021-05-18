@@ -2,29 +2,23 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function TextInput(allProps: any) {
-  const { size, prefix, suffix, disabled, clearButton, ...otherInputProps } =
+  const { size, prefix, onEnter, limit, disabled, clearButton, ...otherProps } =
     allProps;
 
-  const inputSize = size === 'sm' ? '20em' : '100%';
+  const width = size === 'sm' ? '20em' : '100%';
 
   return (
-    <El.InputGroup width={inputSize} padding="2px">
+    <El.InputGroup width={width} padding="0.5x">
       {prefix &&
         (typeof prefix === 'string' ? <El.Icon name={prefix} /> : prefix)}
-      <El.Input disabled={disabled || undefined} {...otherInputProps} />
-      {suffix && (
+      <El.Input disabled={disabled || undefined} {...otherProps} />
+      {limit && (
         <El.Flex items="center">
-          <El.Block padding="0 1x">{suffix}</El.Block>
+          <El.Block padding="0 1x">{limit}</El.Block>
         </El.Flex>
       )}
       {clearButton && !disabled && (
-        <El.Button
-          clear
-          padding="0"
-          onClick={() => {
-            console.log('close');
-          }}
-        >
+        <El.Button clear padding="0" onClick={onEnter}>
           <El.Icon name="close-circle-outline" />
         </El.Button>
       )}
@@ -49,7 +43,7 @@ TextInput.Field = function TextField(allProps: any) {
     <El.Field width={inputSize}>
       <El.Flex content="space-between">
         <El.Label for={label}>
-          {label}{' '}
+          {label}
           {required && <El.BaseElement theme="danger">{` * `}</El.BaseElement>}
         </El.Label>
         {link && (

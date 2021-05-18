@@ -59,14 +59,13 @@ function Sheet(allProps: any): JSX.Element {
               const { label, value } = choice;
               const isChecked = selectedValues.has(value) ? true : undefined;
               return (
-                <Checkbox.Field
+                <Checkbox
                   key={value}
+                  label={label}
                   checked={isChecked}
                   value={value}
                   onInput={handleChecklistChange}
-                >
-                  {label}
-                </Checkbox.Field>
+                />
               );
             })
           : null}

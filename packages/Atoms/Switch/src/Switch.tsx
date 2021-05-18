@@ -1,32 +1,19 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 
-function Switch(allProps: any) {
-  const { checked, disabled } = allProps;
-
-  return <El.Switch checked={checked} disabled={disabled} {...allProps} />;
-}
-
-Switch.Field = function SwitchField(allProps: any) {
-  const { checked, disabled, id, children, ...otherProps } = allProps;
+export default function Switch(allProps: any): JSX.Element {
+  const { label, size, value, ...otherProps } = allProps;
 
   return (
-    <El.Field
-      display="flex"
-      flow="row"
-      items="center start"
-      gap="1x"
-      {...otherProps}
-    >
-      <El.Switch
-        checked={checked}
-        disabled={disabled}
-        id={id}
-        {...otherProps}
-      />
-      {children ? <El.Label for={id}>{children}</El.Label> : ''}
-    </El.Field>
+    <El.Flex gap>
+      <El.Switch inline size={size} {...otherProps} value={value} />
+      {label && typeof label === 'string' ? (
+        <El.Label inline size={size}>
+          {label}
+        </El.Label>
+      ) : (
+        label
+      )}
+    </El.Flex>
   );
-};
-
-export default Switch;
+}

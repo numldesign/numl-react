@@ -2,54 +2,30 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function Checkbox(allProps: any): JSX.Element {
-  const { checked, disabled, children, ...otherProps } = allProps;
+  const { id, onTap, label, onInput, value, ...otherProps } = allProps;
 
   return (
-    <El.Checkbox checked={checked} disabled={disabled} {...otherProps}>
-      {children}
-    </El.Checkbox>
-  );
-}
-
-Checkbox.Field = function CheckboxField(allProps: any): JSX.Element {
-  const {
-    checked,
-    disabled,
-    id,
-    children,
-    onTap,
-    label,
-    onInput,
-    value,
-    ...otherProps
-  } = allProps;
-
-  return (
-    <El.Field
-      display="flex"
-      flow="row"
-      items="center start"
-      gap="1x"
-      {...otherProps}
-    >
+    <El.Pane items="center start" gap="1x">
       <El.Checkbox
-        checked={checked}
-        disabled={disabled}
         id={id}
         onTap={onTap}
         onInput={onInput}
         value={value}
+        {...otherProps}
       />
-      {label && !children ? label : ''}
-      {children || ''}
-    </El.Field>
+      {label && typeof label === 'string' ? (
+        <Checkbox.Label>{label}</Checkbox.Label>
+      ) : (
+        label
+      )}
+    </El.Pane>
   );
-};
+}
 
 Checkbox.Label = function CheckboxLabel(props: any) {
-  const { id, children, ...otherProps } = props;
+  const { id, children, color = 'text', ...otherProps } = props;
   return (
-    <El.Label for={id} color="white" {...otherProps}>
+    <El.Label for={id} color={color} {...otherProps}>
       {children}
     </El.Label>
   );

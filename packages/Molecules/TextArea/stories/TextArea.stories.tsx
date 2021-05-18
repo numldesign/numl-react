@@ -53,15 +53,15 @@ WithRadio.args = {
       size="sm"
       onChange={(props) => console.log('selected ', props)}
     >
-      <Radio.Field key="label_1" value="label_1">
+      <Radio key="label_1" value="label_1">
         Label 1
-      </Radio.Field>
-      <Radio.Field key="label_2" value="label_2">
+      </Radio>
+      <Radio key="label_2" value="label_2">
         Label 2
-      </Radio.Field>
-      <Radio.Field key="label_3" value="label_3">
+      </Radio>
+      <Radio key="label_3" value="label_3">
         Label 3
-      </Radio.Field>
+      </Radio>
     </Radio.Group>
   ),
   fieldProps: {

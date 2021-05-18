@@ -12,7 +12,7 @@ function SettingToggle(allProps: any) {
   return (
     <El.Pane {...otherProps}>
       <El.Block>
-        <El.BaseElement>{text}</El.BaseElement>{' '}
+        <El.BaseElement>{text}</El.BaseElement>
         <El.BaseElement text="sb">
           {isActive ? activeText : inactiveText}
         </El.BaseElement>

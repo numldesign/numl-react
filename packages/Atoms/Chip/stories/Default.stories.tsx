@@ -1,24 +1,18 @@
 import React from 'react';
-
-import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
-import ExceptionList from '../src/ExceptionList';
+import { Icon, NumlProvider, ThemeProvider } from '@numl-react/core';
+import Chip from '../src/Chip';
 
 export default {
-  title: 'Example/Atoms/ExceptionList/Themes',
-  component: ExceptionList,
+  title: 'Example/Atoms/Chip/themes',
+  component: Chip,
 };
 
-const Template = ({ title, label, icon, ...args }) => {
-  const items = [
-    { title, label, icon },
-    { title, label, icon },
-    { title, label, icon },
-  ];
+const Template = function ({ ...args }) {
   return (
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75" />
       <ThemeProvider name="secondary" hue="240" saturation="75" />
-      <ExceptionList items={items} {...args} />
+      <Chip {...args}></Chip>
     </NumlProvider>
   );
 };
@@ -26,30 +20,24 @@ const Template = ({ title, label, icon, ...args }) => {
 export const Default: any = Template.bind({});
 Default.args = {
   label: 'Neutral',
-  title: 'Title',
-  icon: 'alert-circle-outline',
 };
-
+export const Special: any = Template.bind({});
+Special.args = {
+  label: 'Neutral',
+  theme: 'special',
+};
 export const Danger: any = Template.bind({});
 Danger.args = {
   label: 'Neutral',
   theme: 'danger',
-  title: 'Title',
-  icon: 'alert-circle-outline',
 };
-
 export const Warning: any = Template.bind({});
 Warning.args = {
   label: 'Neutral',
   theme: 'warning',
-  title: 'Title',
-  icon: 'alert-circle-outline',
 };
-
 export const Success: any = Template.bind({});
 Success.args = {
   label: 'Neutral',
   theme: 'success',
-  title: 'Title',
-  icon: 'alert-circle-outline',
 };
