@@ -10,31 +10,6 @@ import {
 export default {
   title: 'Example/Atoms/Pagination',
   component: Pagination,
-  argTypes: {
-    size: {
-      control: {
-        type: 'text',
-      },
-    },
-    label: {
-      defaultValue: 'result',
-      control: {
-        type: 'text',
-      },
-    },
-    previous: {
-      defaultValue: 'chevron-back',
-      control: {
-        type: 'text',
-      },
-    },
-    next: {
-      defaultValue: 'chevron-forward',
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (

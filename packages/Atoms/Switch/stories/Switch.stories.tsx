@@ -1,40 +1,17 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
 import { Switch } from '../index';
 
 export default {
   title: 'Example/Atoms/Switch',
   component: Switch,
-  argTypes: {
-    size: {
-      control: {
-        type: 'text',
-      },
-    },
-    label: {
-      defaultValue: 'Switchtoggle',
-      control: {
-        type: 'text',
-      },
-    },
-    fill: {
-      control: {
-        type: 'color',
-      },
-    },
-  },
 };
 
-const Template = ({ children, ...args }) => (
+const Template = ({ ...args }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-
-    {children ? (
-      <Switch.Field {...args}>{children}</Switch.Field>
-    ) : (
-      <Switch {...args} />
-    )}
+    <Switch {...args} />
   </NumlProvider>
 );
 
@@ -46,5 +23,5 @@ Basic.args = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   checked: false,
-  children: 'Switch',
+  label: <El.Label inline>This is my Label</El.Label>,
 };

@@ -3,7 +3,7 @@ import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import Radio from '../src/Radio';
 
 export default {
-  title: 'Example/Atoms/Radio/Basic',
+  title: 'Example/Atoms/Radio/Size',
   component: Radio,
 };
 
@@ -11,7 +11,10 @@ const Template = ({ children, ...args }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Radio {...args} />
+    <Radio size="sm" {...args} />
+    <Radio size="md" {...args} />
+    <Radio size="lg" {...args} />
+    <Radio size="xl" {...args} />
   </NumlProvider>
 );
 

@@ -4,7 +4,7 @@ import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
 import ExceptionList from '../src/ExceptionList';
 
 export default {
-  title: 'Example/Atoms/ExceptionList/Themes',
+  title: 'Example/Atoms/ExceptionList/With Icons',
   component: ExceptionList,
 };
 
@@ -27,7 +27,7 @@ export const Default: any = Template.bind({});
 Default.args = {
   label: 'Neutral',
   title: 'Title',
-  icon: 'alert-circle-outline',
+  icon: <El.Icon name="reader-outline" />,
 };
 
 export const Danger: any = Template.bind({});
@@ -35,7 +35,7 @@ Danger.args = {
   label: 'Neutral',
   theme: 'danger',
   title: 'Title',
-  icon: 'alert-circle-outline',
+  icon: <El.Icon name="reader-outline" />,
 };
 
 export const Warning: any = Template.bind({});
@@ -43,7 +43,7 @@ Warning.args = {
   label: 'Neutral',
   theme: 'warning',
   title: 'Title',
-  icon: 'alert-circle-outline',
+  icon: <El.Icon name="reader-outline" />,
 };
 
 export const Success: any = Template.bind({});
@@ -51,5 +51,5 @@ Success.args = {
   label: 'Neutral',
   theme: 'success',
   title: 'Title',
-  icon: 'alert-circle-outline',
+  icon: <El.Icon name="reader-outline" />,
 };
