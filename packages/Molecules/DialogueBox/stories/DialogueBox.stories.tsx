@@ -60,15 +60,15 @@ WithRadioGroup.args = {
       border="top bottom"
       onChange={(props) => console.log('selected ', props)}
     >
-      <Radio.Field key="one" value="one">
+      <Radio key="one" value="one">
         One
-      </Radio.Field>
-      <Radio.Field key="two" value="two">
+      </Radio>
+      <Radio key="two" value="two">
         Two
-      </Radio.Field>
-      <Radio.Field key="three" value="Three">
+      </Radio>
+      <Radio key="three" value="Three">
         Three
-      </Radio.Field>
+      </Radio>
     </Radio.Group>
   ),
   actions: (

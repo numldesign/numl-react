@@ -55,7 +55,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
               const { label, value, renderChildren } = choice;
               return (
                 <El.Listitem key={value}>
-                  <Radio.Field value={value}>{label}</Radio.Field>
+                  <Radio value={value}>{label}</Radio>
                   {renderChildren && value === selected ? (
                     <El.List type="none">{renderChildren}</El.List>
                   ) : null}
