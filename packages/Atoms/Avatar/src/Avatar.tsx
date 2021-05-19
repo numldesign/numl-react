@@ -53,10 +53,26 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
 };
 
 Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
-  const { username, showIcon = true, ...otherProps } = allProps;
+  const { username, showIcon = true, size, padding, ...otherProps } = allProps;
+
+  var _size = '1';
+  var _padding = '1';
+  if (size == 'sm') {
+    _size = '4x';
+    _padding = '0.5x';
+  } else if (size == 'md') {
+    _size = '5x';
+    _padding = '1x';
+  } else if (size == 'lg') {
+    _size = '6x';
+    _padding = '1.5x';
+  } else {
+    _size = '6x';
+    _padding = '1.5x';
+  }
 
   return (
-    <El.Circle text="uppercase" size="6x" inline {...otherProps}>
+    <El.Circle text="uppercase" size={_size} inline {...otherProps}>
       <El.AttributeProvider for="nu-el" size="special" />
 
       {!showIcon && username ? (
@@ -64,7 +80,7 @@ Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
           {username.slice(0, 2)}
         </El.BaseElement>
       ) : (
-        <El.Icon padding="0.75x" size="4x" sp name="person" />
+        <El.Icon padding={_padding} size="4x" sp name="person" />
       )}
     </El.Circle>
   );
