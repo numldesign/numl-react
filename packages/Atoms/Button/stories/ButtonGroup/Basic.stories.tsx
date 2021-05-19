@@ -15,6 +15,21 @@ const Template = (args: any) => (
   </NumlProvider>
 );
 
+export const Primary: any = Template.bind({});
+Primary.args = {
+  width: '20',
+  flex: true,
+  gap: '2x',
+  children: [
+    <Button.Small key="two" radius>
+      Cancel
+    </Button.Small>,
+    <Button.Small theme="special" key="one" radius>
+      Submit
+    </Button.Small>,
+  ],
+};
+
 export const Small: any = Template.bind({});
 Small.args = {
   children: [

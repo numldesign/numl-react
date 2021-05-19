@@ -16,7 +16,7 @@ function Banner(allProps: any): JSX.Element {
       radius="1x"
       border="1bw"
       fill="bg"
-      padding="2x"
+      padding="1.25"
       gap="2x"
       items="start"
       {...otherProps}

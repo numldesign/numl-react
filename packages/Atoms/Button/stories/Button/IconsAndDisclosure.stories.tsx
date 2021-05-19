@@ -17,7 +17,7 @@ const Template = function ({ theme }) {
         <Button.Small theme={theme}>
           <Button.Icon size="sm" name="swap-vertical-outline" />
           <Button.Label size="sm">Button</Button.Label>
-          <El.DropdownIcon size="sm" />
+          <El.DropdownIcon size="sm" theme={theme} />
           <Button.Popup size="sm"> Lorem Ipsum</Button.Popup>
         </Button.Small>
       </El.BaseElement>
@@ -26,7 +26,7 @@ const Template = function ({ theme }) {
         <Button.Medium theme={theme}>
           <Button.Icon size="md" name="swap-vertical-outline" />
           <Button.Label size="md">Button</Button.Label>
-          <El.DropdownIcon size="md" />
+          <El.DropdownIcon size="md" theme={theme} />
           <Button.Popup size="md"> Lorem Ipsum</Button.Popup>
         </Button.Medium>
       </El.BaseElement>
@@ -35,7 +35,7 @@ const Template = function ({ theme }) {
         <Button.Large theme={theme}>
           <Button.Icon size="lg" name="swap-vertical-outline" />
           <Button.Label size="lg">Button</Button.Label>
-          <El.DropdownIcon size="lg" />
+          <El.DropdownIcon size="lg" theme={theme} />
           <Button.Popup size="lg"> Lorem Ipsum</Button.Popup>
         </Button.Large>
       </El.BaseElement>
@@ -44,7 +44,7 @@ const Template = function ({ theme }) {
         <Button.ExtraLarge theme={theme}>
           <Button.Icon size="xl" name="swap-vertical-outline" />
           <Button.Label size="xl">Button</Button.Label>
-          <El.DropdownIcon size="xl" />
+          <El.DropdownIcon size="xl" theme={theme} />
           <Button.Popup size="xl"> Lorem Ipsum</Button.Popup>
         </Button.ExtraLarge>
       </El.BaseElement>

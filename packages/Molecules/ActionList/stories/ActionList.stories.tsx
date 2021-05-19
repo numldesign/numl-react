@@ -1,16 +1,10 @@
 import React from 'react';
-import { ActionList, NumlProvider, ThemeProvider, El } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
+import ActionList from '../src/ActionList';
 
 export default {
   title: 'Example/Molecules/ActionList',
   component: ActionList,
-  argTypes: {
-    header: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (
@@ -23,6 +17,7 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
+  width: '10',
   header: 'FILE OPTIONS',
   children: [
     <ActionList.Item key="1" onClick={(e) => console.log('import clicked ', e)}>
@@ -49,6 +44,7 @@ Default.args = {
 
 export const WithIcons = Template.bind({});
 WithIcons.args = {
+  width: '10',
   children: [
     <ActionList.Item key="1" gap="2x">
       <El.Icon name="download-outline" />
@@ -71,6 +67,8 @@ WithIcons.args = {
 
 export const WithHelperText = Template.bind({});
 WithHelperText.args = {
+  width: '23',
+  block: true,
   children: [
     <ActionList.Item key="1" flow="row" gap="0">
       <El.Block>Blog posts</El.Block>

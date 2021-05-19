@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import { Avatar } from '@numl-react/atoms';
 import { El } from '@numl-react/core';
+import { Avatar } from '../../../Atoms/Avatar';
 
 function AccountConnection(allProps: any): JSX.Element {
   const {
@@ -14,7 +14,7 @@ function AccountConnection(allProps: any): JSX.Element {
     flow = 'column',
     fill = 'bg',
     items = 'stretch',
-    padding = '0.5',
+    padding = '1.25',
     ...otherProps
   } = allProps;
 
@@ -39,10 +39,12 @@ function AccountConnection(allProps: any): JSX.Element {
     >
       <El.Pane content="space-between" flow="row wrap" gap="1x">
         {isConnected ? (
-          <>
-            <Avatar.Icon size="2" username={username} />
-            <Avatar.Profile size="sm" username={username} subtitle={subtitle} />
-          </>
+          <Avatar.Profile
+            gap
+            username={username}
+            subtitle={subtitle}
+            showIcon="false"
+          />
         ) : (
           <El.Block>
             <El.Block size="md" text="sb">
