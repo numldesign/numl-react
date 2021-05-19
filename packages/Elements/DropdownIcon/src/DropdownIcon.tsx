@@ -5,7 +5,7 @@ const DropdownIcon = React.forwardRef((props: any, ref) => {
 
   otherProps.size = '1.25rem';
   otherProps.padding = '0 1x';
-  otherProps.theme = theme || '0 1x';
+  otherProps.theme = theme || 'default';
 
   return React.createElement(
     'nu-dropdownicon',
