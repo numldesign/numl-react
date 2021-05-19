@@ -38,12 +38,6 @@ Default.args = {
   theme: 'default',
 };
 
-export const Special: any = Template.bind({});
-Special.args = {
-  label: 'Hello World!',
-  theme: 'special',
-};
-
 export const Danger: any = Template.bind({});
 Danger.args = {
   label: 'Hello World!',

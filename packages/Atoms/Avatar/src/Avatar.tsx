@@ -38,6 +38,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
           <>
             <El.Inline column="2">
               <El.DropdownIcon
+                padding="0 1x"
                 name="chevron-down-outline"
                 fill={fill}
                 theme={theme}
