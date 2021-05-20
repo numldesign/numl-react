@@ -203,7 +203,7 @@ const ProductDetail = (props: any) => {
     <>
       <ProductRating rating={rating} />
       <ProductTitle name={name} detail={detail} />
-      <ProductColors color={color} />
+      {/* <ProductColors color={color} /> */}
       <ProductSizes sizes={sizes} />
       <AddToCart price={price} currency={currency} />
     </>
