@@ -54,13 +54,13 @@ function ProductRating(props: any) {
   return (
     <El.Flex gap content="space-between" items="center" padding {...otherProps}>
       <El.Inline>
-        {/* {[0, 1, 2, 3, 4].map(() => {
+        {[0, 1, 2, 3, 4].map((a) => {
           if (tempRating > 0) {
             tempRating -= 1;
-            return <El.Icon name="star" color="#special" />;
+            return <El.Icon name="star" key={a} color="#special" />;
           }
           return <El.Icon name="star-outline" cursor="pointer" />;
-        })} */}
+        })}
         <El.Inline padding>({rating.count})</El.Inline>
       </El.Inline>
       <El.Inline border="bg" radius="4x" padding="5px 15px" size="12px 16px">
@@ -96,9 +96,9 @@ function ProductTitle(props: any) {
  *
  */
 
-function ProductColors(props: { color: any }) {
+function ProductColors(props: any): JSX.Element {
   const { color } = props;
-  return color && color.length > 0 ? (
+  return (
     <El.Grid>
       <El.Block row="1" text="bold" size="14px 20px" padding="5px 0px">
         Colors
@@ -106,11 +106,11 @@ function ProductColors(props: { color: any }) {
       <El.Flex row="2" gap items="center">
         {color &&
           color.map((color: string) => (
-            <El.Circle size="3x" fill={color} cursor="pointer" />
+            <El.Circle size="3x" fill={color} key={color} cursor="pointer" />
           ))}
       </El.Flex>
     </El.Grid>
-  ) : null;
+  );
 }
 
 /**
@@ -132,7 +132,7 @@ function ProductSizes(props: any) {
       <El.Block>
         {sizes &&
           sizes.map((sizes: any) => (
-            <El.Button toggle cursor="pointer" text="uppercase">
+            <El.Button toggle key={sizes} cursor="pointer" text="uppercase">
               {sizes}
             </El.Button>
           ))}
@@ -162,37 +162,41 @@ function AddToCart(props: any) {
   );
 }
 
-ProductCard.Landscape = ({
-  width = '280px',
-  name,
-  image,
-  detail,
-  price,
-  color,
-  sizes,
-  currency,
-  rating,
-}) => {
-  <El.Flex gap content="space-between" items="center" padding>
-    <El.Card padding="20px" radius="8px">
-      <El.Grid columns="auto" row="auto" gap="3x" content="start">
-        <El.Image column="1" width={width} src={image} fit="fill" />
-        <El.Block column="2">
-          <ProductDetail
-            currency={currency}
-            name={name}
-            rating={rating}
-            image={image}
-            detail={detail}
-            price={price}
-            color={color}
-            sizes={sizes}
-          />
-        </El.Block>
-      </El.Grid>
-    </El.Card>
-  </El.Flex>;
+ProductCard.Landscape = function (props) {
+  const {
+    width = '280px',
+    name,
+    image,
+    detail,
+    price,
+    color,
+    sizes,
+    currency,
+    rating,
+  } = props;
+  return (
+    <El.Flex gap content="space-between" items="center" padding>
+      <El.Card padding="20px" radius="8px">
+        <El.Grid columns="auto" row="auto" gap="3x" content="start">
+          <El.Image column="1" width={width} src={image} fit="fill" />
+          <El.Block column="2">
+            <ProductDetail
+              currency={currency}
+              name={name}
+              rating={rating}
+              image={image}
+              detail={detail}
+              price={price}
+              color={color}
+              sizes={sizes}
+            />
+          </El.Block>
+        </El.Grid>
+      </El.Card>
+    </El.Flex>
+  );
 };
+
 const ProductDetail = (props: any) => {
   const { name, detail, price, color, sizes, currency, rating } = props;
   return (
