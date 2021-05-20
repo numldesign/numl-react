@@ -2,22 +2,15 @@ import React from 'react';
 import {
   NumlProvider,
   Radio,
-  DialogueBox,
   Button,
   Avatar,
+  DialogueBox,
   ThemeProvider,
-} from '@numl-react/core';
+} from '../../../Core';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
   component: DialogueBox,
-  argTypes: {
-    heading: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (
@@ -31,16 +24,12 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  fill: 'bg',
-  padding: '2x',
-  border: '1bw',
-  flow: 'column',
   heading: 'Reset Settings',
   children: 'This will reset your device to its default factor settings',
   actions: (
-    <Button.Group>
-      <Button key="Cancel">Cancel</Button>
-      <Button key="Ok" clear>
+    <Button.Group width="10" flex gap="2x">
+      <Button radius="1r">Cancel</Button>
+      <Button radius="1r" theme="special">
         Ok
       </Button>
     </Button.Group>
@@ -49,10 +38,6 @@ Default.args = {
 
 export const WithRadioGroup = Template.bind({});
 WithRadioGroup.args = {
-  fill: 'bg',
-  padding: '2x',
-  border: '1bw',
-  flow: 'column',
   heading: 'Reset Settings',
   children: (
     <Radio.Group
@@ -85,27 +70,18 @@ WithRadioGroup.args = {
 
 export const WithAvatarList = Template.bind({});
 WithAvatarList.args = {
-  fill: 'bg',
-  padding: '2x',
-  border: '1bw',
-  flow: 'column',
   heading: 'Set Backup Account',
   children: [
-    <Avatar.Profile key="1" username="Van Gogh" border="0">
-      <Avatar showDefaultAvatar />
-    </Avatar.Profile>,
-    <Avatar.Profile key="2" username="Van Gogh" border="0">
-      <Avatar showDefaultAvatar />
-    </Avatar.Profile>,
-    <Avatar.Profile key="3" username="Van Gogh" border="0">
-      <Avatar showDefaultAvatar />
-    </Avatar.Profile>,
+    <Avatar.Profile username="Van Gogh" />,
+    <Avatar.Profile username="Van Gogh" />,
+    <Avatar.Profile username="Van Gogh" />,
   ],
-  actions: (
-    <Button.Group flow="column">
-      <Button key="Ok" clear>
-        Ok
-      </Button>
-    </Button.Group>
-  ),
+  actions: [
+    <Button key="Ok" clear>
+      Ok
+    </Button>,
+    <Button key="Ok" clear>
+      Ok
+    </Button>,
+  ],
 };

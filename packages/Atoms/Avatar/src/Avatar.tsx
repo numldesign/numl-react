@@ -96,16 +96,20 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
     <El.Grid columns="auto auto" {...otherProps}>
       <Avatar.Icon username={username} showIcon={showIcon} />
       <El.BaseElement>
-        <El.Block>
-          {username ? (
-            <El.BaseElement size="md">{username}</El.BaseElement>
-          ) : null}
-        </El.Block>
-        <El.Block>
-          {subtitle ? (
-            <El.BaseElement size="sm">{subtitle}</El.BaseElement>
-          ) : null}
-        </El.Block>
+        {username ? (
+          <El.Block>
+            {username ? (
+              <El.BaseElement size="md">{username}</El.BaseElement>
+            ) : null}
+          </El.Block>
+        ) : null}
+        {subtitle ? (
+          <El.Block>
+            {subtitle ? (
+              <El.BaseElement size="sm">{subtitle}</El.BaseElement>
+            ) : null}
+          </El.Block>
+        ) : null}
       </El.BaseElement>
     </El.Grid>
   );

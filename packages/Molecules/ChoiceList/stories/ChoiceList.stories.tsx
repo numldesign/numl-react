@@ -1,10 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  TextInput,
-  ChoiceList,
-} from '@numl-react/core';
+import { NumlProvider, ThemeProvider, TextInput } from '@numl-react/core';
+import ChoiceList from '../src/ChoiceList';
 
 export default {
   title: 'Example/Molecules/ChoiceList',
