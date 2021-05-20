@@ -36,33 +36,6 @@ Default.args = {
   ),
 };
 
-export const WithRadioGroup = Template.bind({});
-WithRadioGroup.args = {
-  heading: 'Reset Settings',
-  children: (
-    <Radio.Group
-      padding="1x 0"
-      border="top bottom"
-      onChange={(props) => console.log('selected ', props)}
-      list={[
-        { label: 'One', value: 'one' },
-        { label: 'Two', value: 'two' },
-        { label: 'Three', value: 'three' },
-      ]}
-    />
-  ),
-  actions: (
-    <Button.Group flow="column">
-      <Button key="Cancel" padding="0.5x 1x">
-        Cancel
-      </Button>
-      <Button key="Ok" clear padding="0.5x 1x">
-        Ok
-      </Button>
-    </Button.Group>
-  ),
-};
-
 export const WithAvatarList = Template.bind({});
 WithAvatarList.args = {
   heading: 'Set Backup Account',
