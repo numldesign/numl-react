@@ -18,7 +18,7 @@ might have asked the same thing before!
 
 > Please provide valid reason(s) why this should added to Numl-React.
 >
-> If this feaure is related to a problem you've noticed. Mention it as well
+> If this feaure is related to a problem you've noticed, mention it as well.
 
 ## ✅ Proposed solution or API
 
