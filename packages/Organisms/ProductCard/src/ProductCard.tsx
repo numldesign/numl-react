@@ -3,7 +3,7 @@ import { El } from '@numl-react/core';
 
 function ProductCard(props: any) {
   const {
-    width = '350px',
+    width = '22',
     name,
     image,
     detail,
@@ -54,13 +54,13 @@ function ProductRating(props: any) {
   return (
     <El.Flex gap content="space-between" items="center" padding {...otherProps}>
       <El.Inline>
-        {[0, 1, 2, 3, 4].map(() => {
+        {/* {[0, 1, 2, 3, 4].map(() => {
           if (tempRating > 0) {
             tempRating -= 1;
             return <El.Icon name="star" color="#special" />;
           }
           return <El.Icon name="star-outline" cursor="pointer" />;
-        })}
+        })} */}
         <El.Inline padding>({rating.count})</El.Inline>
       </El.Inline>
       <El.Inline border="bg" radius="4x" padding="5px 15px" size="12px 16px">
@@ -150,11 +150,11 @@ function ProductSizes(props: any) {
 function AddToCart(props: any) {
   const { price, currency } = props;
   return (
-    <El.Flex gap content="space-between" items="center" padding="14px 0px">
+    <El.Flex gap content="space-between" items="center" padding="0.75 0">
       <El.Inline>
         <El.Button cursor="pointer">Add To Cart</El.Button>
       </El.Inline>
-      <El.Inline size="20px 28px">
+      <El.Inline size="1.25 1.5">
         {currency}
         {price}
       </El.Inline>

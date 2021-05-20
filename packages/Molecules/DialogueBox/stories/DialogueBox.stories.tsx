@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  NumlProvider,
-  Radio,
-  Button,
-  Avatar,
-  ThemeProvider,
-} from '../../../Core';
+import { NumlProvider, Button, ThemeProvider } from '../../../Core';
 import DialogueBox from '../src/DialogueBox';
+import Avatar from '../../../Atoms/Avatar/src/Avatar';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
@@ -40,16 +35,14 @@ export const WithAvatarList = Template.bind({});
 WithAvatarList.args = {
   heading: 'Set Backup Account',
   children: [
-    <Avatar.Profile username="Van Gogh" />,
+    <Avatar.Profile username="Van Gogh" subtitle="umer" />,
     <Avatar.Profile username="Van Gogh" />,
     <Avatar.Profile username="Van Gogh" />,
   ],
   actions: [
-    <Button key="Ok" clear>
-      Ok
-    </Button>,
-    <Button key="Ok" clear>
-      Ok
+    <Button>Cancel</Button>,
+    <Button key="Ok" clear theme="special">
+      Submit
     </Button>,
   ],
 };
