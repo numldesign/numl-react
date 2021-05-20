@@ -44,17 +44,12 @@ WithRadioGroup.args = {
       padding="1x 0"
       border="top bottom"
       onChange={(props) => console.log('selected ', props)}
-    >
-      <Radio key="one" value="one">
-        One
-      </Radio>
-      <Radio key="two" value="two">
-        Two
-      </Radio>
-      <Radio key="three" value="Three">
-        Three
-      </Radio>
-    </Radio.Group>
+      list={[
+        { label: 'One', value: 'one' },
+        { label: 'Two', value: 'two' },
+        { label: 'Three', value: 'three' },
+      ]}
+    />
   ),
   actions: (
     <Button.Group flow="column">
