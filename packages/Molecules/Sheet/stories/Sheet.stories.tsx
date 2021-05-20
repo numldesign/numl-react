@@ -1,5 +1,11 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Sheet, El } from '@numl-react/core';
+import {
+  NumlProvider,
+  ThemeProvider,
+  Button,
+  Sheet,
+  El,
+} from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Sheet',
@@ -38,8 +44,8 @@ Default.args = {
     </El.Button>,
   ],
   closeAction: (
-    <El.Button padding="0">
-      <El.Icon name="close" />
-    </El.Button>
+    <Button>
+      <Button.Icon name="close"></Button.Icon>
+    </Button>
   ),
 };

@@ -4,9 +4,9 @@ import {
   Radio,
   Button,
   Avatar,
-  DialogueBox,
   ThemeProvider,
 } from '../../../Core';
+import DialogueBox from '../src/DialogueBox';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
