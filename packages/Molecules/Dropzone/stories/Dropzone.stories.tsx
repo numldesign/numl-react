@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Dropzone } from '@numl-react/core';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import Dropzone from '../src/Dropzone';
 
 export default {
   title: 'Example/Molecules/Dropzone',

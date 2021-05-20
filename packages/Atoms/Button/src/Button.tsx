@@ -117,7 +117,7 @@ Button.Dropdown = function ButtonDropdown(props: any): JSX.Element {
   const {
     children,
     label,
-    theme = '',
+    theme,
     icon,
     type = 'medium',
     ...otherProps
@@ -148,7 +148,7 @@ Button.Dropdown = function ButtonDropdown(props: any): JSX.Element {
       ) : (
         { label }
       )}
-      <El.DropdownIcon theme={theme} size={size} />
+      <El.DropdownIcon theme={theme} />
       <Button.Popup size={size}>{children}</Button.Popup>
     </Button>
   );

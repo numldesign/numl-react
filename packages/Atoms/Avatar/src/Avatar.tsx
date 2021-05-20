@@ -38,6 +38,7 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
           <>
             <El.Inline column="2">
               <El.DropdownIcon
+                padding="0 1x"
                 name="chevron-down-outline"
                 fill={fill}
                 theme={theme}
@@ -52,18 +53,37 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
 };
 
 Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
-  const { username, showIcon = true, ...otherProps } = allProps;
+  const { username, showIcon = true, size, padding, ...otherProps } = allProps;
+
+  // eslint-disable-next-line no-underscore-dangle
+  let _size = '';
+  // eslint-disable-next-line no-underscore-dangle
+  let _padding = padding;
+
+  if (size === 'sm') {
+    _size = '4x';
+    _padding = '0.5x';
+  } else if (size === 'md') {
+    _size = '5x';
+    _padding = '1x';
+  } else if (size === 'lg') {
+    _size = '6x';
+    _padding = '1.5x';
+  } else {
+    _size = '6x';
+    _padding = '1.5x';
+  }
 
   return (
-    <El.Circle text="uppercase" size="6x" inline {...otherProps}>
+    <El.Circle text="uppercase" size={_size} inline {...otherProps}>
       <El.AttributeProvider for="nu-el" size="special" />
 
-      {!showIcon && username ? (
+      {(!showIcon || showIcon === 'false') && username ? (
         <El.BaseElement padding="1x" size="3x 4x">
           {username.slice(0, 2)}
         </El.BaseElement>
       ) : (
-        <El.Icon padding="0.75x" size="4x" sp name="person" />
+        <El.Icon padding={_padding} size="4x" sp name="person" />
       )}
     </El.Circle>
   );
@@ -76,16 +96,20 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
     <El.Grid columns="auto auto" {...otherProps}>
       <Avatar.Icon username={username} showIcon={showIcon} />
       <El.BaseElement>
-        <El.Block>
-          {username ? (
-            <El.BaseElement size="md">{username}</El.BaseElement>
-          ) : null}
-        </El.Block>
-        <El.Block>
-          {subtitle ? (
-            <El.BaseElement size="sm">{subtitle}</El.BaseElement>
-          ) : null}
-        </El.Block>
+        {username ? (
+          <El.Block>
+            {username ? (
+              <El.BaseElement size="md">{username}</El.BaseElement>
+            ) : null}
+          </El.Block>
+        ) : null}
+        {subtitle ? (
+          <El.Block>
+            {subtitle ? (
+              <El.BaseElement size="sm">{subtitle}</El.BaseElement>
+            ) : null}
+          </El.Block>
+        ) : null}
       </El.BaseElement>
     </El.Grid>
   );

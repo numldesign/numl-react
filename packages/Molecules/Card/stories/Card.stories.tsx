@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  Card,
-  Button,
-  El,
-} from '@numl-react/core';
+import { El } from '@numl-react/core';
+import Card from '../src/Card';
 
 export default {
   title: 'Example/Molecules/Card',
@@ -58,14 +53,6 @@ WithFooterAction.args = {
   ],
 };
 
-export const WithBodyAction = Template.bind({});
-WithBodyAction.args = {
-  heading: 'Heading',
-  subheading: 'Subheading',
-  body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  bodyActions: [<El.Button color="special">Click Me</El.Button>],
-};
-
 export const WithHeaderAndFooterAction = Template.bind({});
 WithHeaderAndFooterAction.args = {
   heading: 'Heading',
@@ -89,14 +76,7 @@ SectionExample.args = {
     <El.Button special>Click Me</El.Button>,
   ],
   children: [
-    <Card.Section
-      subheading="Subheading"
-      bodyActions={[
-        <El.Button key="1" border="0" color="special">
-          Click Me
-        </El.Button>,
-      ]}
-    >
+    <Card.Section subheading="Subheading">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industrys standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to
@@ -107,14 +87,7 @@ SectionExample.args = {
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </Card.Section>,
-    <Card.Section
-      subheading="Subheading"
-      bodyActions={[
-        <El.Button key="1" border="0" color="special">
-          Click Me
-        </El.Button>,
-      ]}
-    >
+    <Card.Section subheading="Subheading">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industrys standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to

@@ -1,32 +1,31 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 
-function DialogueBox(allProps: any) {
+function DialogueBox(allProps: any): JSX.Element {
   const {
     heading,
     place = 'inside',
-    radius = '0.5',
-    gap = '0.5',
-    box = 'y',
-    fill = '#dark.50',
+    gap = '1x',
+    radius = '0.5x',
+    padding = '1.25',
     actions,
     children,
     ...otherProps
   } = allProps;
   return (
-    <El.Flex
+    <El.Card
       nu-overlay
+      flex
       place={place}
-      fill={fill}
-      box={box}
       gap={gap}
+      padding={padding}
       radius={radius}
       {...otherProps}
     >
-      {heading ? <El.Block text="sb">{heading}</El.Block> : null}
-      {children ? <El.Block size="sm">{children}</El.Block> : null}
+      <El.Block text="sb">{heading || null}</El.Block>
+      <El.Block size="sm">{children || null}</El.Block>
       <El.Pane content="flex-end">{actions}</El.Pane>
-    </El.Flex>
+    </El.Card>
   );
 }
 

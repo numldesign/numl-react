@@ -1,17 +1,24 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 
-function Dropzone(props: any) {
+function Dropzone(props: any): JSX.Element {
   const {
     width = '100%',
-    height = '15.625rem',
-    children,
+    gap = '1x',
+    padding = '2.3125',
     ...otherProps
   } = props;
 
   return (
-    <El.FileInput width={width} height={height} {...otherProps} flow="row">
-      <El.Block row="-3">
+    <El.FileInput
+      flex
+      flow="row"
+      width={width}
+      padding={padding}
+      gap={gap}
+      {...otherProps}
+    >
+      <El.Block>
         <svg
           width="97"
           viewBox="0 0 97 88"
@@ -64,9 +71,8 @@ function Dropzone(props: any) {
           />
         </svg>
       </El.Block>
-      <El.Button row="-2">Add file</El.Button>
-      <El.Block row="-1">or drop files to upload</El.Block>
-      {children}
+      <El.Button>Add file</El.Button>
+      <El.Block>or drop files to upload</El.Block>
     </El.FileInput>
   );
 }

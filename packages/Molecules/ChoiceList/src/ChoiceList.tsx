@@ -49,21 +49,7 @@ ChoiceList.RadioList = function RadioChoiceList(allProps: any) {
   if (choiceList.length) {
     return (
       <Radio.Group value={selected} onChange={onChange}>
-        <El.List type="none">
-          {choiceList.map(
-            (choice: { label: any; value: any; renderChildren: any }) => {
-              const { label, value, renderChildren } = choice;
-              return (
-                <El.Listitem key={value}>
-                  <Radio value={value}>{label}</Radio>
-                  {renderChildren && value === selected ? (
-                    <El.List type="none">{renderChildren}</El.List>
-                  ) : null}
-                </El.Listitem>
-              );
-            }
-          )}
-        </El.List>
+        <Radio.List list={choiceList} />
       </Radio.Group>
     );
   }

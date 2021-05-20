@@ -1,7 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 
-function MediaCard(props: any) {
+function MediaCard(props: any): JSX.Element {
   const {
     src,
     action,
