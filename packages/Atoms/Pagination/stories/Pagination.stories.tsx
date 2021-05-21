@@ -22,17 +22,17 @@ const Template = ({ ...args }) => (
 
 export const Basic = Template.bind({});
 
-export const Horizontal = Template.bind({});
-Horizontal.args = {
+export const Vertical = Template.bind({});
+Vertical.args = {
   flow: 'column',
   previous: (
     <Button>
-      <Icon name="chevron-up" />
+      <Icon name="chevron-up-outline" />
     </Button>
   ),
   next: (
     <Button>
-      <Icon name="chevron-down" />
+      <Icon name="chevron-down-outline" />
     </Button>
   ),
 };
@@ -45,16 +45,16 @@ const AttributeTemplate = ({ ...args }) => (
   </NumlProvider>
 );
 
-export const WithCustomIcon = AttributeTemplate.bind({});
-WithCustomIcon.args = {
+export const Horizontal = AttributeTemplate.bind({});
+Horizontal.args = {
   previous: (
     <Button>
-      <Icon name="hand-left-outline" />
+      <Icon name="chevron-back-outline" />
     </Button>
   ),
   next: (
     <Button>
-      <Icon name="hand-left-outline" />
+      <Icon name="chevron-forward-outline" />
     </Button>
   ),
 };
