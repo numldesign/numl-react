@@ -37,7 +37,7 @@ const ModalForwardRef = React.forwardRef((props: any, ref: any) => {
       <El.Block
         ref={ref}
         shadow
-        nu-overlay
+        z="front"
         place={place}
         width={width}
         fill={fill}

@@ -1,96 +1,69 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
 import TextInput from '../src/TextInput';
 
 export default {
   title: 'Example/Atoms/TextInput',
   component: TextInput,
-  argTypes: {
-    size: {
-      control: {
-        type: 'text',
-      },
-    },
-    placeholder: {
-      defaultValue: 'Text Field',
-      control: {
-        type: 'text',
-      },
-    },
-    prefix: {
-      control: {
-        type: 'text',
-      },
-    },
-    disabled: {
-      defaultValue: false,
-      control: {
-        type: 'boolean',
-      },
-    },
-    clearButton: {
-      defaultValue: false,
-      control: {
-        type: 'boolean',
-      },
-    },
-    label: {
-      control: {
-        type: 'text',
-      },
-    },
-    required: {
-      control: {
-        type: 'boolean',
-      },
-    },
-    link: {
-      control: {
-        type: 'text',
-      },
-    },
-    validationMessage: {
-      control: {
-        type: 'text',
-      },
-    },
-    helpText: {
-      control: {
-        type: 'text',
-      },
-    },
-    helpTextClear: {
-      control: {
-        type: 'boolean',
-      },
-    },
-  },
 };
 
 const Template = ({ theme, ...args }) => {
-  const showInputField =
-    args.label ||
-    args.required ||
-    args.link ||
-    args.validationMessage ||
-    args.helpText ||
-    args.helpTextClear;
   return (
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75" />
       <ThemeProvider name="secondary" hue="240" saturation="75" />
-
-      {showInputField ? <TextInput.Field {...args} /> : <TextInput {...args} />}
+      <El.Form>
+        <TextInput {...args} />
+        <TextInput.IFTALabels {...args} />
+      </El.Form>
     </NumlProvider>
   );
 };
 
 export const Basic = Template.bind({});
+Basic.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  icon: 'search-outline',
+  suffix: '11/20',
+  link: {
+    to: 'https://numl.design/',
+    text: 'link',
+  },
+  helpText: 'umer',
+  validation: [
+    {
+      assert: 'required',
+      message: 'This field is required',
+    },
+    {
+      assert: 'email',
+      message: 'A valid email address is required',
+    },
+  ],
+};
+
+export const WithLimit = Template.bind({});
+WithLimit.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  icon: 'search-outline',
+  suffix: '11/20',
+  link: {
+    to: 'https://numl.design/',
+    text: 'link',
+  },
+  helpText: 'umer',
+  clear: true,
+  onClear: () => {
+    console.log('onClear');
+  },
+};
 
 export const WithPrefixSuffix = Template.bind({});
 WithPrefixSuffix.args = {
   placeholder: 'Text Field',
-  prefix: 'search-outline',
+  icon: 'search-outline',
   suffix: '11/20',
 };
 

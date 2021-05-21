@@ -1,86 +1,186 @@
 import React from 'react';
 import { El } from '@numl-react/core';
+import { v4 } from 'uuid';
 
-function TextInput(allProps: any) {
-  const { size, prefix, onEnter, limit, disabled, clearButton, ...otherProps } =
-    allProps;
-
-  const width = size === 'sm' ? '20em' : '100%';
-
-  return (
-    <El.InputGroup width={width} padding="0.5x">
-      {prefix &&
-        (typeof prefix === 'string' ? <El.Icon name={prefix} /> : prefix)}
-      <El.Input disabled={disabled || undefined} {...otherProps} />
-      {limit && (
-        <El.Flex items="center">
-          <El.Block padding="0 1x">{limit}</El.Block>
-        </El.Flex>
-      )}
-      {clearButton && !disabled && (
-        <El.Button clear padding="0" onClick={onEnter}>
-          <El.Icon name="close-circle-outline" />
-        </El.Button>
-      )}
-    </El.InputGroup>
-  );
-}
-
-TextInput.Field = function TextField(allProps: any) {
+function TextInput(allProps: any): JSX.Element {
   const {
-    label,
+    icon,
+    onClear = undefined,
+    limit,
     required,
     link,
-    validationMessage,
+    label,
     helpText,
-    helpTextClear,
+    validation,
+    disabled = false,
     ...otherProps
   } = allProps;
 
-  const inputSize = otherProps.size === 'sm' ? '20em' : '100%';
+  const id = v4();
 
   return (
-    <El.Field width={inputSize}>
-      <El.Flex content="space-between">
-        <El.Label for={label}>
-          {label}
-          {required && <El.BaseElement theme="danger">{` * `}</El.BaseElement>}
-        </El.Label>
-        {link && (
-          <El.Link to={link} text="n">
-            Link
-          </El.Link>
-        )}
-      </El.Flex>
-      <TextInput id={label} {...otherProps} />
-      {helpText && (
-        <El.Flex content="space-between" items="flex-start" color="#text-soft">
-          <El.BaseElement text="middle" color="#text-soft">
-            {helpText}
-          </El.BaseElement>
-          {helpTextClear && (
-            <El.Button
-              clear
-              use-action="no"
-              padding="0"
-              onClick={() => {
-                console.log('clear');
-              }}
-            >
-              <El.Icon name="close" color="#text-soft" />
-            </El.Button>
+    <El.Flow>
+      {label ? (
+        <El.Flex content="space-between">
+          <El.Label for={id}>
+            {label}
+            {required ? (
+              <El.BaseElement padding="0 1x" theme="danger">
+                *
+              </El.BaseElement>
+            ) : null}
+          </El.Label>
+          {link ? (
+            <El.Link to={link.to} text="n">
+              {link.text}
+            </El.Link>
+          ) : (
+            link
           )}
         </El.Flex>
-      )}
-      {validationMessage ? (
-        <El.Flex content="flex-start" items="flex-start" theme="danger">
-          <El.Icon name="alert-circle-outline" size="2.4x" padding=".4x 0" />
-          <El.BaseElement text="middle" padding="0 1x">
-            {validationMessage}
-          </El.BaseElement>
+      ) : null}
+      <El.InputGroup>
+        {icon &&
+          (typeof icon === 'string' ? <El.Icon inline name={icon} /> : icon)}
+        <El.Input
+          inline
+          id={id}
+          disabled={disabled || disabled === 'true' ? true : undefined}
+          {...otherProps}
+        />
+        {limit && (
+          <El.Flex items="center">
+            <El.Block padding="0 1x">{limit}</El.Block>
+          </El.Flex>
+        )}
+        {onClear ? (
+          <El.Button
+            border="left"
+            padding="1x .5x"
+            fill="transparent"
+            onTap={onClear}
+          >
+            <El.Icon name="close-circle-outline" />
+          </El.Button>
+        ) : null}
+      </El.InputGroup>
+      {helpText ? (
+        <El.Flex content="space-between">
+          <El.Label size="sm">{helpText}</El.Label>
+          {link ? (
+            <El.Button
+              border="0"
+              padding="0 .5x"
+              fill="transparent"
+              mark="false"
+              hover="false"
+              onTap={onClear}
+            >
+              <El.Icon name="close-outline" />
+            </El.Button>
+          ) : (
+            link
+          )}
         </El.Flex>
       ) : null}
-    </El.Field>
+      {validation && validation.length > 0 ? (
+        <El.Block>
+          {validation.map((each: any) => (
+            <El.Check for={id} assert={each.assert} color="hue(1)">
+              {each.message}
+            </El.Check>
+          ))}
+        </El.Block>
+      ) : null}
+    </El.Flow>
+  );
+}
+
+TextInput.IFTALabels = function (allProps: any) {
+  const {
+    icon,
+    onClear = undefined,
+    limit,
+    required,
+    link,
+    label,
+    helpText,
+    validation,
+    disabled = false,
+    ...otherProps
+  } = allProps;
+
+  const id = v4();
+
+  return (
+    <El.Flow>
+      <El.InputGroup flex flow="row" fill="input">
+        <El.Block>
+          {label ? (
+            <El.Label for={id} padding="1x 0 0 2x" size="1.5x 2x">
+              {label}
+              {required ? (
+                <El.BaseElement padding="0 1x" theme="danger">
+                  *
+                </El.BaseElement>
+              ) : null}
+            </El.Label>
+          ) : null}
+          {icon &&
+            (typeof icon === 'string' ? <El.Icon inline name={icon} /> : icon)}
+          <El.Input
+            padding="0 0 1x 2x"
+            inline
+            id={id}
+            disabled={disabled || disabled === 'true' ? true : undefined}
+            {...otherProps}
+          />
+          {limit && (
+            <El.Flex items="center">
+              <El.Block padding="0 1x">{limit}</El.Block>
+            </El.Flex>
+          )}
+          {onClear ? (
+            <El.Button
+              border="left"
+              padding="1x .5x"
+              fill="transparent"
+              onTap={onClear}
+            >
+              <El.Icon name="close-circle-outline" />
+            </El.Button>
+          ) : null}
+        </El.Block>
+      </El.InputGroup>
+      {helpText ? (
+        <El.Flex content="space-between">
+          <El.Label size="sm">{helpText}</El.Label>
+          {link ? (
+            <El.Button
+              border="0"
+              padding="0 .5x"
+              fill="transparent"
+              mark="false"
+              hover="false"
+              onTap={onClear}
+            >
+              <El.Icon name="close-outline" />
+            </El.Button>
+          ) : (
+            link
+          )}
+        </El.Flex>
+      ) : null}
+      {validation && validation.length > 0 ? (
+        <El.Block>
+          {validation.map((each: any) => (
+            <El.Check for={id} assert={each.assert} color="hue(1)">
+              {each.message}
+            </El.Check>
+          ))}
+        </El.Block>
+      ) : null}
+    </El.Flow>
   );
 };
 
