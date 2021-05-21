@@ -3,29 +3,40 @@ import { El } from '@numl-react/core';
 import Icon from '../../Icon/src/Icon';
 
 function Pagination(allProps: any): JSX.Element {
-  const { flow, label, previous, next, ...otherProps } = allProps;
-  const isVertical = flow === 'column';
+  const {
+    flow = 'row',
+    border = '0',
+    label,
+    fill = 'transparent',
+    previous,
+    next,
+    ...otherProps
+  } = allProps;
 
   return (
     <El.ButtonGroup
+      flex
+      fill={fill}
+      border={border}
+      items="center"
       flow={flow}
-      group-radius={isVertical ? 'column' : 'row'}
+      group-radius={flow}
       {...otherProps}
     >
       {typeof previous === 'string' ? (
-        <El.Button id="previous">
+        <El.Button id="previous" border>
           <Icon name={previous} />
         </El.Button>
       ) : (
-        previous
+        <El.BaseElement border>{previous}</El.BaseElement>
       )}
-      {label && !isVertical && <El.Label>{label}</El.Label>}
+      {label ? <El.Label padding="0 1x">{label}</El.Label> : null}
       {typeof next === 'string' ? (
-        <El.Button id="next">
+        <El.Button id="next" border>
           <Icon name={next} />
         </El.Button>
       ) : (
-        next
+        <El.BaseElement border>{next}</El.BaseElement>
       )}
     </El.ButtonGroup>
   );

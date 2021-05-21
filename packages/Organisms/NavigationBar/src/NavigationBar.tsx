@@ -6,6 +6,9 @@ function NavigationBarRow(props: any) {
   return (
     <El.Grid
       content="start stretch"
+      width="100%"
+      border
+      fill="bg"
       item="start stretch"
       height="90vh"
       overflow="auto"

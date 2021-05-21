@@ -46,23 +46,19 @@ Default.args = {};
 export const Special: any = Template.bind({});
 Special.args = {
   theme: 'special',
-  mark: true,
 };
 
 export const Danger: any = Template.bind({});
 Danger.args = {
   theme: 'danger',
-  mark: true,
 };
 
 export const Warning: any = Template.bind({});
 Warning.args = {
   theme: 'warning',
-  mark: true,
 };
 
 export const Success: any = Template.bind({});
 Success.args = {
   theme: 'success',
-  mark: true,
 };

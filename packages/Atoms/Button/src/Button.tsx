@@ -29,7 +29,7 @@ function Button(props: any): JSX.Element {
 Button.Small = ({
   children = null,
   size = 'sm',
-  padding = '1x 2x',
+  padding = '0.75x 2x',
   ...props
 }) => (
   <Button padding={padding} size={size} {...props}>
