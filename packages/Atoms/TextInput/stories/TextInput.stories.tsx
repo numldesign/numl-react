@@ -3,7 +3,7 @@ import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
 import TextInput from '../src/TextInput';
 
 export default {
-  title: 'Example/Atoms/TextInput',
+  title: 'Example/Atoms/TextInput/Basic',
   component: TextInput,
 };
 
@@ -14,7 +14,6 @@ const Template = ({ theme, ...args }) => {
       <ThemeProvider name="secondary" hue="240" saturation="75" />
       <El.Form>
         <TextInput {...args} />
-        <TextInput.IFTALabels {...args} />
       </El.Form>
     </NumlProvider>
   );
@@ -27,7 +26,7 @@ Basic.args = {
   icon: 'search-outline',
   suffix: '11/20',
   link: {
-    to: 'https://numl.design/',
+    to: '#',
     text: 'link',
   },
   helpText: 'umer',
@@ -43,33 +42,44 @@ Basic.args = {
   ],
 };
 
-export const WithLimit = Template.bind({});
-WithLimit.args = {
+export const WithLabel = Template.bind({});
+WithLabel.args = {
   label: 'Text Field',
   placeholder: 'Text Field',
-  icon: 'search-outline',
-  suffix: '11/20',
+};
+
+export const WithLabelLink = Template.bind({});
+WithLabelLink.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
   link: {
     to: 'https://numl.design/',
     text: 'link',
   },
-  helpText: 'umer',
-  clear: true,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  icon: 'search-outline',
+};
+
+export const WithHelptext = Template.bind({});
+WithHelptext.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  icon: 'search-outline',
+  helpText: 'This is a help text',
+};
+
+export const WithClearNode = Template.bind({});
+WithClearNode.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  icon: 'search-outline',
+  helpText: 'This is a help text',
   onClear: () => {
     console.log('onClear');
   },
-};
-
-export const WithPrefixSuffix = Template.bind({});
-WithPrefixSuffix.args = {
-  placeholder: 'Text Field',
-  icon: 'search-outline',
-  suffix: '11/20',
-};
-
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: 'Label',
-  placeholder: 'Text Field',
-  link: 'https://numl.design/',
 };

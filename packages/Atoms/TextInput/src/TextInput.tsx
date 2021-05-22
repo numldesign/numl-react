@@ -67,20 +67,15 @@ function TextInput(allProps: any): JSX.Element {
       {helpText ? (
         <El.Flex content="space-between">
           <El.Label size="sm">{helpText}</El.Label>
-          {link ? (
-            <El.Button
-              border="0"
-              padding="0 .5x"
-              fill="transparent"
-              mark="false"
-              hover="false"
-              onTap={onClear}
-            >
-              <El.Icon name="close-outline" />
-            </El.Button>
-          ) : (
-            link
-          )}
+          <El.Button
+            border="0"
+            padding="0 0.5x"
+            fill="transparent"
+            mark="false"
+            hover="false"
+          >
+            <El.Icon name="close-outline" />
+          </El.Button>
         </El.Flex>
       ) : null}
       {validation && validation.length > 0 ? (

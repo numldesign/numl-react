@@ -32,7 +32,7 @@
     "packages/Utilities/*"
   ],
   "scripts": {
-    "commit": "cz",
+    "commit": "yarn run prettier && cz",
     "pkg": "manypkg run",
     "check:pkgs": "manypkg check",
     "fix:pkgs": "manypkg fix",
