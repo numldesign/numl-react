@@ -127,7 +127,7 @@
     "typedoc": "0.20.36",
     "typescript": "4.2.4",
     "uuid": "^8.3.2",
-    "uuidv4": "6.2.7",
+    "uuidv4": "6.2.8",
     "vite": "2.2.4"
   },
   "dependenciesMeta": {
