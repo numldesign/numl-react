@@ -98,13 +98,8 @@ function TextInput(allProps: any): JSX.Element {
 
 TextInput.IFTALabels = function (allProps: any) {
   const {
-    icon,
-    onClear = undefined,
-    limit,
     required,
-    link,
     label,
-    helpText,
     validation,
     disabled = false,
     ...otherProps
@@ -114,10 +109,10 @@ TextInput.IFTALabels = function (allProps: any) {
 
   return (
     <El.Flow>
-      <El.InputGroup flex flow="row" fill="input">
-        <El.Block>
+      <El.InputGroup block flow="row" fill="input">
+        <El.Grid gap columns="1fr" width="100%" padding="1x 2x">
           {label ? (
-            <El.Label for={id} padding="1x 0 0 2x" size="1.5x 2x">
+            <El.Label for={id} size="1.5x 2x">
               {label}
               {required ? (
                 <El.BaseElement padding="0 1x" theme="danger">
@@ -126,51 +121,14 @@ TextInput.IFTALabels = function (allProps: any) {
               ) : null}
             </El.Label>
           ) : null}
-          {icon &&
-            (typeof icon === 'string' ? <El.Icon inline name={icon} /> : icon)}
           <El.Input
-            padding="0 0 1x 2x"
-            inline
+            padding="0"
             id={id}
             disabled={disabled || disabled === 'true' ? true : undefined}
             {...otherProps}
           />
-          {limit && (
-            <El.Flex items="center">
-              <El.Block padding="0 1x">{limit}</El.Block>
-            </El.Flex>
-          )}
-          {onClear ? (
-            <El.Button
-              border="left"
-              padding="1x .5x"
-              fill="transparent"
-              onTap={onClear}
-            >
-              <El.Icon name="close-circle-outline" />
-            </El.Button>
-          ) : null}
-        </El.Block>
+        </El.Grid>
       </El.InputGroup>
-      {helpText ? (
-        <El.Flex content="space-between">
-          <El.Label size="sm">{helpText}</El.Label>
-          {link ? (
-            <El.Button
-              border="0"
-              padding="0 .5x"
-              fill="transparent"
-              mark="false"
-              hover="false"
-              onTap={onClear}
-            >
-              <El.Icon name="close-outline" />
-            </El.Button>
-          ) : (
-            link
-          )}
-        </El.Flex>
-      ) : null}
       {validation && validation.length > 0 ? (
         <El.Block>
           {validation.map((each: any) => (
