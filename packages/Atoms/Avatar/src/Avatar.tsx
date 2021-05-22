@@ -90,12 +90,12 @@ Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
 };
 
 Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
-  const { username, subtitle, showIcon, ...otherProps } = allProps;
+  const { username, subtitle, showIcon, gap = '1x', ...otherProps } = allProps;
 
   return (
-    <El.Grid columns="auto auto" {...otherProps}>
+    <El.Flex columns="auto auto" gap={gap} {...otherProps}>
       <Avatar.Icon username={username} showIcon={showIcon} />
-      <El.BaseElement>
+      <El.Flow flex items="center" flow="row">
         {username ? (
           <El.Block>
             {username ? (
@@ -110,8 +110,8 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
             ) : null}
           </El.Block>
         ) : null}
-      </El.BaseElement>
-    </El.Grid>
+      </El.Flow>
+    </El.Flex>
   );
 };
 

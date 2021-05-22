@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  Icon,
-  Pagination,
-  Button,
-} from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Icon, Button } from '@numl-react/core';
+import Pagination from '../src/Pagination';
 
 export default {
   title: 'Example/Atoms/Pagination',
@@ -21,6 +16,10 @@ const Template = ({ ...args }) => (
 );
 
 export const Basic = Template.bind({});
+Basic.args = {
+  previous: 'chevron-back',
+  next: 'chevron-forward',
+};
 
 export const Vertical = Template.bind({});
 Vertical.args = {
@@ -57,4 +56,11 @@ Horizontal.args = {
       <Icon name="chevron-forward-outline" />
     </Button>
   ),
+};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+  label: 'Label',
+  previous: 'chevron-back',
+  next: 'chevron-forward',
 };

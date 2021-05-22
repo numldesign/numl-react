@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import { El, NumlProvider, ThemeProvider } from '@numl-react/core';
 import { ProgressBar } from '../index';
 
 export default {
@@ -12,7 +12,9 @@ const Template = function ({ ...args }) {
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75" />
       <ThemeProvider name="secondary" hue="240" saturation="75" />
-      <ProgressBar {...args} />
+      <El.Block>
+        <ProgressBar {...args} />
+      </El.Block>
     </NumlProvider>
   );
 };

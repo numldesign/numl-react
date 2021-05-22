@@ -3,7 +3,7 @@ import { Icon, NumlProvider, ThemeProvider } from '@numl-react/core';
 import Chip from '../src/Chip';
 
 export default {
-  title: 'Example/Atoms/Chip/With Icon Text',
+  title: 'Example/Atoms/Chip/With Icon Text And Action',
   component: Chip,
 };
 

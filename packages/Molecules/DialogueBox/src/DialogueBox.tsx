@@ -6,6 +6,7 @@ function DialogueBox(allProps: any): JSX.Element {
     heading,
     place = 'inside',
     gap = '1x',
+
     radius = '0.5x',
     padding = '1.25',
     actions,
@@ -16,6 +17,7 @@ function DialogueBox(allProps: any): JSX.Element {
     <El.Card
       nu-overlay
       flex
+      responsive="1400px|1200px|992px|768px|576px|0px"
       place={place}
       gap={gap}
       padding={padding}
