@@ -20,34 +20,44 @@ const Template = function ({ ...args }) {
 export const Default: any = Template.bind({});
 Default.args = {
   label: 'Neutral',
-  icon: 'happy',
-  action: 'close-circle-outline',
+  icon: 'checkmark-outline',
+  onAction: () => {
+    console.log('Action Clicked');
+  },
 };
 export const Special: any = Template.bind({});
 Special.args = {
   label: 'Neutral',
   theme: 'special',
-  icon: 'happy',
-  action: 'close-circle-outline',
+  icon: 'checkmark-outline',
+  onAction: () => {
+    console.log('Action Clicked');
+  },
 };
 export const Danger: any = Template.bind({});
 Danger.args = {
   label: 'Neutral',
   theme: 'danger',
-  icon: 'happy',
-  action: 'close-circle-outline',
+  icon: 'checkmark-outline',
+  onAction: () => {
+    console.log('Action Clicked');
+  },
 };
 export const Warning: any = Template.bind({});
 Warning.args = {
   label: 'Neutral',
   theme: 'warning',
-  icon: 'happy',
-  action: 'close-circle-outline',
+  icon: 'checkmark-outline',
+  onAction: () => {
+    console.log('Action Clicked');
+  },
 };
 export const Success: any = Template.bind({});
 Success.args = {
   label: 'Neutral',
   theme: 'success',
-  icon: 'happy',
-  action: 'close-circle-outline',
+  icon: 'checkmark-outline',
+  onAction: () => {
+    console.log('Action Clicked');
+  },
 };

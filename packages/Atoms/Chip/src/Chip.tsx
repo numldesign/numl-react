@@ -11,6 +11,7 @@ function Chip(allProps: any): JSX.Element {
     theme = 'text',
     icon,
     selectable = 'n',
+    onAction,
     action,
     ...otherProp
   } = allProps;
@@ -26,7 +27,7 @@ function Chip(allProps: any): JSX.Element {
       {...otherProp}
     >
       {icon && typeof icon === 'string' ? (
-        <El.Icon theme={theme} name={icon} size={size} />
+        <El.Icon theme={theme} name={icon} padding="0" size={size} />
       ) : (
         icon
       )}
@@ -37,8 +38,14 @@ function Chip(allProps: any): JSX.Element {
       ) : (
         label
       )}
-      {action && typeof action === 'string' ? (
-        <El.Icon theme={theme} name={action} size={size} />
+      {onAction ? (
+        <El.Icon
+          theme={theme}
+          padding="0"
+          name="close-circle-outline"
+          size={size}
+          onClick={onAction}
+        />
       ) : (
         action
       )}

@@ -7,7 +7,7 @@ function MessageError(allProps: any): JSX.Element {
   return (
     <El.BaseElement theme={theme} {...otherProps}>
       {icon && typeof icon === 'string' ? (
-        <El.Icon name={icon} text="middle" />
+        <El.Icon padding="0" name={icon} text="middle" />
       ) : (
         icon
       )}
