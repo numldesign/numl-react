@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  Button,
-  Sheet,
-  El,
-} from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Button, El } from '@numl-react/core';
+import Sheet from '../src/Sheet';
 
 export default {
   title: 'Example/Molecules/Sheet',
@@ -22,9 +17,6 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  fill: 'bg',
-  border: '1bw',
-  contentHeight: 'min 50x',
   choices: [
     { label: 'Online Store', value: 'online_store' },
     { label: 'Facebook', value: 'facebook' },
@@ -43,9 +35,7 @@ Default.args = {
       Done
     </El.Button>,
   ],
-  closeAction: (
-    <Button>
-      <Button.Icon name="close"></Button.Icon>
-    </Button>
-  ),
+  closeAction: () => {
+    console.log('Close clicked');
+  },
 };

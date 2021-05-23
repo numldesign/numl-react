@@ -35,9 +35,9 @@ export const WithAvatarList = Template.bind({});
 WithAvatarList.args = {
   heading: 'Set Backup Account',
   children: [
-    <Avatar.Profile username="Van Gogh" subtitle="umer" />,
-    <Avatar.Profile username="Van Gogh" />,
-    <Avatar.Profile username="Van Gogh" />,
+    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
+    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
+    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
   ],
   actions: [
     <Button>Cancel</Button>,

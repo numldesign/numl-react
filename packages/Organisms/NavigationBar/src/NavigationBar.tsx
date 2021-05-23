@@ -9,7 +9,7 @@ function NavigationBarRow(props: any) {
       width="100%"
       border
       fill="bg"
-      item="start stretch"
+      items="start stretch"
       height="90vh"
       overflow="auto"
       {...otherProps}
