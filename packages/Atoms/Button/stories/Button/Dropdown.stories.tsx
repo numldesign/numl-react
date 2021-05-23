@@ -3,7 +3,7 @@ import { El } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/Dropdown',
+  title: 'Example/Atoms/Button',
   component: Button,
 };
 
@@ -12,10 +12,6 @@ const Template = function (args: any) {
     <El.NumlProvider>
       <El.ThemeProvider hue="290" saturation="75" />
       <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
-      <El.BaseElement padding="2x">
-        <Button {...args}>Button</Button>
-      </El.BaseElement>
 
       <El.BaseElement padding="2x">
         <Button.Small {...args}>Button</Button.Small>
@@ -38,7 +34,7 @@ const Template = function (args: any) {
 
 export const Default: any = Template.bind({});
 Default.args = {
-  menu: 'umer',
+  menu: 'Hello World!',
 };
 
 export const Special: any = Template.bind({});

@@ -8,6 +8,7 @@ function Button(props: any): JSX.Element {
     icon,
     menu,
     selectable = false,
+    color = 'text',
     theme,
     onTap,
     ...otherProps
@@ -34,21 +35,22 @@ function Button(props: any): JSX.Element {
       block
       theme={theme}
       size={size}
+      color={color}
       selectable={selectable}
       padding={padding}
       onTap={onTap}
       {...otherProps}
     >
       {icon && typeof icon === 'string' ? (
-        <Button.Icon padding="0" name={icon} />
+        <Button.Icon padding="0" name={icon} theme={theme} color={color} />
       ) : (
         icon
       )}
       {children}
       {menu && typeof menu === 'string' ? (
         <>
-          <El.DropdownIcon theme={theme} />
-          <Button.Popup use-menu size={size} theme={theme}>
+          <El.DropdownIcon theme={theme} color={color} />
+          <Button.Popup use-menu size={size} theme={theme} color={color}>
             {menu}
           </Button.Popup>
         </>
