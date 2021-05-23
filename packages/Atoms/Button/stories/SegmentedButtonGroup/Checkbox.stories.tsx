@@ -3,15 +3,15 @@ import { ThemeProvider, NumlProvider } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/ButtonGroup/Checkbox',
-  component: Button.Group,
+  title: 'Example/Atoms/ButtonSegment/Checkbox',
+  component: Button.SegmentedGroup,
 };
 
 const Template = (args: any) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Button.Group {...args} />
+    <Button.SegmentedGroup {...args} />
   </NumlProvider>
 );
 
