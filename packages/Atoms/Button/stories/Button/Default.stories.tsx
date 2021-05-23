@@ -3,7 +3,7 @@ import { El } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/Default',
+  title: 'Example/Atoms/Button/States/Default',
   component: Button,
 };
 
