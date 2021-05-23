@@ -96,7 +96,6 @@ export const WithHotKeyAndPopup = (args) => {
           value="Cut"
           columns="auto 1fr auto"
           use-hotkey="X" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
         >
           <El.Icon name="cut-outline" />
@@ -109,7 +108,6 @@ export const WithHotKeyAndPopup = (args) => {
           value="Copy"
           columns="auto 1fr auto"
           use-hotkey="C" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
         >
           <El.Icon name="copy-outline" />
@@ -123,7 +121,6 @@ export const WithHotKeyAndPopup = (args) => {
           value="Paste"
           columns="auto 1fr auto"
           use-hotkey="P" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
         >
           <El.Icon name="clipboard-outline" />
@@ -171,7 +168,6 @@ export const WithSelectableItems = (args) => {
           value="Single"
           columns="auto 1fr"
           use-hotkey="X" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
           color={selected === 'Single' ? '#text' : '#text-strong'}
           transition="color .1s"
@@ -187,7 +183,6 @@ export const WithSelectableItems = (args) => {
           value="1.15"
           columns="auto 1fr"
           use-hotkey="X" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
           color={selected === '1.15' ? '#text' : '#text-strong'}
           transition="color .1s"
@@ -203,7 +198,6 @@ export const WithSelectableItems = (args) => {
           value="Default"
           columns="auto 1fr"
           use-hotkey="X" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
           color={selected === 'Default' ? '#text' : '#text-strong'}
           transition="color .1s"
@@ -219,7 +213,6 @@ export const WithSelectableItems = (args) => {
           value="Custom:_1.2"
           columns="auto 1fr"
           use-hotkey="X" // hotkey link with to property
-          to={handleMenuClick}
           onClick={handleMenuClick}
           border="bottom"
           color={selected === 'Custom:_1.2' ? '#text' : '#text-strong'}

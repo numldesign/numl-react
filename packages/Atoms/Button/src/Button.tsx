@@ -6,9 +6,11 @@ function Button(props: any): JSX.Element {
     children,
     size = 'md',
     padding = '1.5x 2.5x',
+    icon,
+    menu,
     selectable = false,
-    theme = 'default',
-    onClick,
+    theme,
+    onTap,
     ...otherProps
   } = props;
   return (
@@ -18,10 +20,25 @@ function Button(props: any): JSX.Element {
       size={size}
       selectable={selectable}
       padding={padding}
-      onClick={onClick}
+      onTap={onTap}
       {...otherProps}
     >
-      {children || null}
+      {icon && typeof icon === 'string' ? (
+        <Button.Icon padding="0" name={icon} />
+      ) : (
+        icon
+      )}
+      {children}
+      {menu && typeof menu === 'string' ? (
+        <>
+          <El.DropdownIcon theme={theme} />
+          <Button.Popup use-menu size={size} theme={theme}>
+            {menu}
+          </Button.Popup>
+        </>
+      ) : (
+        menu
+      )}
     </El.Button>
   );
 }
@@ -70,9 +87,9 @@ Button.ExtraLarge = ({
 Button.Label = function ButtonLabel(props: any) {
   const { children, color = '#text', ...otherProps } = props;
   return (
-    <El.BaseElement color={color} {...otherProps}>
+    <El.Label color={color} {...otherProps}>
       {children}
-    </El.BaseElement>
+    </El.Label>
   );
 };
 
