@@ -17,7 +17,7 @@ function FooterHelp(allProps: any): JSX.Element {
   return (
     <El.Flex gap={gap} size={size} padding={padding} {...otherProps}>
       {icon && typeof icon === 'string' ? (
-        <El.Icon name={icon} size={size} color={color} />
+        <El.Icon name={icon} padding="0" size={size} color={color} />
       ) : (
         icon
       )}

@@ -11,7 +11,7 @@ function ExceptionList(allProps: any): JSX.Element {
           ? items.map((eachItem: any) => (
               <El.Flex gap>
                 {eachItem.icon && typeof eachItem.icon === 'string' ? (
-                  <El.Icon name={eachItem.icon} />
+                  <El.Icon padding="0" name={eachItem.icon} />
                 ) : (
                   eachItem.icon
                 )}

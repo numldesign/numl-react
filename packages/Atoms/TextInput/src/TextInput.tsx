@@ -41,7 +41,11 @@ function TextInput(allProps: any): JSX.Element {
       ) : null}
       <El.InputGroup>
         {icon &&
-          (typeof icon === 'string' ? <El.Icon inline name={icon} /> : icon)}
+          (typeof icon === 'string' ? (
+            <El.Icon inline padding="0 1x" name={icon} />
+          ) : (
+            icon
+          ))}
         <El.Input
           inline
           id={id}

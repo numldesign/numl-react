@@ -3,28 +3,28 @@ import { ThemeProvider, NumlProvider } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/ButtonGroup/Disclosure',
-  component: Button.Group,
+  title: 'Example/Atoms/ButtonSegment/Disclosure With Icons',
+  component: Button.SegmentedGroup,
 };
 
 const Template = (args: any) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Button.Group {...args} />
+    <Button.SegmentedGroup {...args} />
   </NumlProvider>
 );
 
 export const Small: any = Template.bind({});
 Small.args = {
   children: [
-    <Button key="one" menu="hello" type="small">
+    <Button menu="hello" type="small" icon="play-back">
       Left
     </Button>,
-    <Button key="two" menu="hello" type="small">
+    <Button menu="hello" type="small">
       Center
     </Button>,
-    <Button key="three" menu="hello" type="small">
+    <Button menu="hello" type="small" icon="play-forward">
       Right
     </Button>,
   ],
@@ -33,13 +33,13 @@ Small.args = {
 export const Medium: any = Template.bind({});
 Medium.args = {
   children: [
-    <Button key="one" menu="hello" type="medium">
+    <Button menu="hello" type="medium" icon="play-back">
       Left
     </Button>,
-    <Button key="two" menu="hello" type="medium">
+    <Button menu="hello" type="medium">
       Center
     </Button>,
-    <Button key="three" menu="hello" type="medium">
+    <Button menu="hello" type="medium" icon="play-forward">
       Right
     </Button>,
   ],
@@ -48,13 +48,13 @@ Medium.args = {
 export const Large: any = Template.bind({});
 Large.args = {
   children: [
-    <Button key="one" menu="hello" type="large">
+    <Button menu="hello" type="large" icon="play-back">
       Left
     </Button>,
-    <Button key="two" menu="hello" type="large">
+    <Button menu="hello" type="large">
       Center
     </Button>,
-    <Button key="three" menu="hello" type="large">
+    <Button menu="hello" type="large" icon="play-forward">
       Right
     </Button>,
   ],
@@ -63,13 +63,13 @@ Large.args = {
 export const ExtraLarge: any = Template.bind({});
 ExtraLarge.args = {
   children: [
-    <Button key="one" menu="hello" type="extralarge">
+    <Button menu="hello" type="extralarge" icon="play-back">
       Left
     </Button>,
-    <Button key="two" menu="hello" type="extralarge">
+    <Button menu="hello" type="extralarge">
       Center
     </Button>,
-    <Button key="three" menu="hello" type="extralarge">
+    <Button menu="hello" type="extralarge" icon="play-forward">
       Right
     </Button>,
   ],

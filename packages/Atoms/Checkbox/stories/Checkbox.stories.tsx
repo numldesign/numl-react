@@ -5,20 +5,6 @@ import Checkbox from '../src/Checkbox';
 export default {
   title: 'Example/Atoms/Checkbox/Themes',
   component: Checkbox,
-  argTypes: {
-    size: {
-      defaultValue: undefined,
-      control: {
-        type: 'text',
-      },
-    },
-    checked: {
-      defaultValue: 'Checkbox',
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ children, ...args }) => (
@@ -42,16 +28,4 @@ export const Danger: any = Template.bind({});
 Danger.args = {
   label: 'Hello World!',
   theme: 'danger',
-};
-
-export const Warning: any = Template.bind({});
-Warning.args = {
-  label: 'Hello World!',
-  theme: 'warning',
-};
-
-export const Success: any = Template.bind({});
-Success.args = {
-  label: 'Hello World!',
-  theme: 'success',
 };

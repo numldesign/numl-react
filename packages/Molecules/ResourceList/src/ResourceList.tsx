@@ -49,7 +49,7 @@ function ResourceList(allProps: any) {
                   >
                     <El.Pane gap="2x">
                       {multiSelect ? <Checkbox checked={checked} /> : null}
-                      <Avatar.Icon fill="danger" special border="0" />
+                      <Avatar fill="danger" special border="0" />
                     </El.Pane>
                     <El.Block {...itemWrapperProps}>
                       {renderItem && renderItem({ item, value, index })}

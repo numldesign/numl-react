@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import {
   ActionList,
   Button,
@@ -14,15 +14,16 @@ export default {
   component: Popover,
 };
 
-const Template = ({ ...args }) => (
+const Template = ({ children }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Button width="10" columns="1fr auto" value="Select">
-      <El.Value />
-      <El.DropdownIcon />
-      <Popover {...args} />
-    </Button>
+    <Button
+      width="10"
+      columns="1fr auto"
+      value="Select"
+      menu={children}
+    ></Button>
   </NumlProvider>
 );
 
@@ -48,8 +49,8 @@ export const WithForm = Template.bind({});
 WithForm.args = {
   children: (
     <El.Flex gap="2x" flow="column" width="max-content" padding="1x">
-      <TextInput.Field label="Show all customers where:" placeholder="Today" />
-      <TextInput.Field label="Tags" value="Jaded Pixel" />
+      <TextInput label="Show all customers where:" placeholder="Today" />
+      <TextInput label="Tags" value="Jaded Pixel" />
       <Button width="min-content">Add Filter</Button>
     </El.Flex>
   ),

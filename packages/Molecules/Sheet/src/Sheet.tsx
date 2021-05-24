@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { El } from '@numl-react/core';
-import { Checkbox } from '@numl-react/atoms';
+import { El, Checkbox } from '@numl-react/core';
 
 function Sheet(allProps: any): JSX.Element {
   const {
@@ -34,24 +33,18 @@ function Sheet(allProps: any): JSX.Element {
   );
 
   return (
-    <El.Block
-      nu-overlay
-      place="inside"
-      fill="#dark.50"
-      box="y"
-      radius="1x"
-      {...otherProps}
-    >
+    <El.Card padding="0" nu-overlay {...otherProps}>
       {heading ? (
-        <El.Pane
+        <El.Flex
           padding="2x"
+          gap
           border="bottom"
-          items="start"
+          items="center"
           content="space-between"
         >
           {heading}
-          {closeAction}
-        </El.Pane>
+          <El.Button icon="close" onTap={closeAction} />
+        </El.Flex>
       ) : null}
       <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
         {choiceList.length
@@ -75,7 +68,7 @@ function Sheet(allProps: any): JSX.Element {
           {footerActions}
         </El.Pane>
       ) : null}
-    </El.Block>
+    </El.Card>
   );
 }
 
