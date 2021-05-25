@@ -3,7 +3,7 @@ import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import MessageError from '../src/MessageError';
 
 export default {
-  title: 'Example/Atoms/MessageError/Basic',
+  title: 'Example/Atoms/MessageError',
   component: MessageError,
 };
 
@@ -15,31 +15,19 @@ const Template = ({ children, ...args }) => (
   </NumlProvider>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const Basic = Template.bind({});
+Basic.args = {
   children: 'This is not valid',
 };
 
-export const Special = Template.bind({});
-Special.args = {
-  children: 'This is not valid',
-  theme: 'special',
+export const Icon = Template.bind({});
+Icon.args = {
+  icon: 'information-circle-outline',
+  children: 'This is okay',
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  children: 'This is not valid',
-  theme: 'danger',
-};
-
-export const Success = Template.bind({});
-Success.args = {
-  children: 'This is not valid',
-  theme: 'success',
-};
-
-export const Warning = Template.bind({});
-Warning.args = {
-  children: 'This is not valid',
-  theme: 'warning',
+export const CustomIcon = Template.bind({});
+CustomIcon.args = {
+  icon: <Icon name="information-circle-outline" />,
+  children: 'This is default message',
 };

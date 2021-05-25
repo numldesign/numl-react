@@ -6,40 +6,35 @@ function CalloutCard(allProps: any): JSX.Element {
     heading,
     description,
     actions,
+    gap = '2x',
     padding = '2x',
     src,
     ...otherProps
   } = allProps;
   return (
-    <El.Card padding={padding} {...otherProps}>
-      <El.Grid columns="auto" content="space-between">
-        {src ? (
-          <El.BaseElement row="1">
-            <El.Image width="100%" fit="fill" src={src} />
-          </El.BaseElement>
-        ) : null}
-        {heading ? (
-          <El.BaseElement size="md" row="2" padding="0.5x 0">
-            {heading}
-          </El.BaseElement>
-        ) : null}
-        {description ? (
-          <El.BaseElement size="sm" row="3" padding="0.5x 0">
-            {description}
-          </El.BaseElement>
-        ) : null}
-        {actions ? (
-          <El.BaseElement size="xs" row="4" padding="0.5x 0">
-            {actions}
-          </El.BaseElement>
-        ) : null}
-      </El.Grid>
+    <El.Card flex flow="row wrap" padding={padding} gap={gap} {...otherProps}>
+      {src ? (
+        <El.Block>
+          <El.Image width="100%" fit="fill" src={src} />
+        </El.Block>
+      ) : null}
+      {heading && typeof heading === 'string' ? (
+        heading
+      ) : (
+        <El.Block size="md">{heading}</El.Block>
+      )}
+      {description && typeof description === 'string' ? (
+        description
+      ) : (
+        <El.Block size="sm">{description}</El.Block>
+      )}
+      {actions || null}
     </El.Card>
   );
 }
 
 CalloutCard.Landscape = function CalloutCardLandScape(props: any) {
-  const { children, src, heading, actions, description, ...otherProps } = props;
+  const { src, heading, actions, description, ...otherProps } = props;
   return (
     <El.Card block {...otherProps}>
       <El.Grid

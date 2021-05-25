@@ -7,7 +7,6 @@ function Chip(allProps: any): JSX.Element {
     padding = '1x 2x',
     radius = 'round',
     label,
-    hover = true,
     theme = 'text',
     icon,
     selectable = 'n',
@@ -22,7 +21,6 @@ function Chip(allProps: any): JSX.Element {
       padding={padding}
       cursor="pointer"
       size={size}
-      use-hover={hover}
       selectable={selectable}
       {...otherProp}
     >

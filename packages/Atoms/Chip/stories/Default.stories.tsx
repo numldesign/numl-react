@@ -3,7 +3,7 @@ import { Icon, NumlProvider, ThemeProvider } from '@numl-react/core';
 import Chip from '../src/Chip';
 
 export default {
-  title: 'Example/Atoms/Chip/themes',
+  title: 'Example/Atoms/Chip/Types',
   component: Chip,
 };
 
@@ -17,27 +17,37 @@ const Template = function ({ ...args }) {
   );
 };
 
-export const Default: any = Template.bind({});
-Default.args = {
+export const Normal: any = Template.bind({});
+Normal.args = {
   label: 'Neutral',
 };
-export const Special: any = Template.bind({});
-Special.args = {
+
+export const Hover: any = Template.bind({});
+Hover.args = {
+  'is-hover': true,
   label: 'Neutral',
-  theme: 'special',
 };
-export const Danger: any = Template.bind({});
-Danger.args = {
+
+export const Pressed: any = Template.bind({});
+Pressed.args = {
+  'is-active': true,
   label: 'Neutral',
-  theme: 'danger',
 };
-export const Warning: any = Template.bind({});
-Warning.args = {
+
+export const Toggled: any = Template.bind({});
+Toggled.args = {
+  'is-pressed': true,
   label: 'Neutral',
-  theme: 'warning',
 };
-export const Success: any = Template.bind({});
-Success.args = {
+
+export const outline: any = Template.bind({});
+outline.args = {
+  outline: 'true',
   label: 'Neutral',
-  theme: 'success',
+};
+
+export const Disabled: any = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  label: 'Neutral',
 };

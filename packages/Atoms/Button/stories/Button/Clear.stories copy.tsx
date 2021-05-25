@@ -3,7 +3,7 @@ import { El } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/Types',
+  title: 'Example/Atoms/Button/States/Clear',
   component: Button,
 };
 
@@ -40,20 +40,36 @@ const Template = function (args) {
   );
 };
 
-export const Default: any = Template.bind({});
-Default.args = {};
-
-export const Special: any = Template.bind({});
-Special.args = {
-  special: true,
-};
-
-export const Clear: any = Template.bind({});
-Clear.args = {
+export const Normal: any = Template.bind({});
+Normal.args = {
   clear: true,
 };
 
-export const Danger: any = Template.bind({});
-Danger.args = {
-  theme: 'danger',
+export const Hover: any = Template.bind({});
+Hover.args = {
+  'is-hover': true,
+  clear: true,
+};
+
+export const Pressed: any = Template.bind({});
+Pressed.args = {
+  'is-active': true,
+  clear: true,
+};
+
+export const Toggled: any = Template.bind({});
+Toggled.args = {
+  'is-pressed': true,
+  clear: true,
+};
+
+export const outline: any = Template.bind({});
+outline.args = {
+  outline: 'true',
+  clear: true,
+};
+
+export const Disabled: any = Template.bind({});
+Disabled.args = {
+  disabled: true,
 };

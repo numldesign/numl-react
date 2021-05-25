@@ -32,7 +32,11 @@ export const WithHeaderAction = Template.bind({});
 WithHeaderAction.args = {
   heading: 'Heading',
   body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  headerActions: [<El.Button color="special">Click Me</El.Button>],
+  headerActions: [
+    <El.Button color="special" clear>
+      Click Me
+    </El.Button>,
+  ],
 };
 
 export const SubHeadingAction = Template.bind({});
@@ -40,7 +44,11 @@ SubHeadingAction.args = {
   heading: 'Heading',
   subheading: 'Sub Heading',
   body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  headerActions: [<El.Button color="special">Click Me</El.Button>],
+  headerActions: [
+    <El.Button color="special" clear>
+      Click Me
+    </El.Button>,
+  ],
 };
 
 export const WithFooterAction = Template.bind({});
@@ -58,7 +66,11 @@ WithHeaderAndFooterAction.args = {
   heading: 'Heading',
   subheading: 'Subheading',
   body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  headerActions: [<El.Button color="special">Click Me</El.Button>],
+  headerActions: [
+    <El.Button color="special" clear>
+      Click Me
+    </El.Button>,
+  ],
   footerActions: [
     <El.Button key="1">Button</El.Button>,
     <El.Button special>Click Me</El.Button>,
@@ -69,13 +81,17 @@ export const SectionExample = Template.bind({});
 SectionExample.args = {
   heading: 'Heading',
   subheading: 'Subheading',
-  body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  headerActions: [<El.Button color="special">Click Me</El.Button>],
+  headerActions: [
+    <El.Button color="special" clear>
+      Click Me
+    </El.Button>,
+  ],
   footerActions: [
     <El.Button>Button</El.Button>,
     <El.Button special>Click Me</El.Button>,
   ],
   children: [
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     <Card.Section subheading="Subheading">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industrys standard dummy text ever since the
@@ -87,7 +103,7 @@ SectionExample.args = {
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
     </Card.Section>,
-    <Card.Section subheading="Subheading">
+    <Card.Section heading="Heading" subheading="Subheading">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industrys standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to

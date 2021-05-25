@@ -1,5 +1,6 @@
 import React from 'react';
-import { CalloutCard, El } from '@numl-react/core';
+import { El } from '@numl-react/core';
+import CalloutCard from '../src/CalloutCard';
 
 export default {
   title: 'Example/Molecules/CalloutCard',
@@ -22,7 +23,6 @@ const Template = ({ ...args }) => (
   <El.NumlProvider>
     <El.ThemeProvider hue="290" saturation="75" />
     <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
     <CalloutCard {...args} width="500px" />
   </El.NumlProvider>
 );

@@ -3,7 +3,7 @@ import { El } from '@numl-react/core';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button',
+  title: 'Example/Atoms/Button/Dropdown Without Icon',
   component: Button,
 };
 
@@ -39,12 +39,18 @@ Default.args = {
 
 export const Special: any = Template.bind({});
 Special.args = {
-  menu: 'umer',
+  menu: 'Hello World',
   theme: 'special',
 };
 
 export const Clear: any = Template.bind({});
 Clear.args = {
-  menu: 'umer',
+  menu: 'Hello World',
   clear: true,
+};
+
+export const Danger: any = Template.bind({});
+Danger.args = {
+  menu: 'Hello World',
+  theme: 'danger',
 };

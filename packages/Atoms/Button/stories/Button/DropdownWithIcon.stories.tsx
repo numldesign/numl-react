@@ -42,17 +42,23 @@ const Template = function (args: any) {
 
 export const Default: any = Template.bind({});
 Default.args = {
-  menu: 'umer',
+  menu: 'Hello World',
 };
 
 export const Special: any = Template.bind({});
 Special.args = {
-  menu: 'umer',
+  menu: 'Hello World',
   special: true,
 };
 
 export const Clear: any = Template.bind({});
 Clear.args = {
-  menu: 'umer',
+  menu: 'Hello World',
   clear: true,
+};
+
+export const Danger: any = Template.bind({});
+Danger.args = {
+  menu: 'Hello World',
+  theme: 'danger',
 };

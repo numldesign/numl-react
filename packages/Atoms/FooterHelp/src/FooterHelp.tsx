@@ -7,15 +7,15 @@ function FooterHelp(allProps: any): JSX.Element {
     label,
     icon,
     link,
-    size = 'lg',
-    gap = '1x',
+    size = 'md',
     padding = '2x',
     color = 'text',
+    flow = 'row wrap',
     linkLabel,
     ...otherProps
   } = allProps;
   return (
-    <El.Flex gap={gap} size={size} padding={padding} {...otherProps}>
+    <El.Flex gap flow={flow} size={size} padding={padding} {...otherProps}>
       {icon && typeof icon === 'string' ? (
         <El.Icon name={icon} padding="0" size={size} color={color} />
       ) : (
