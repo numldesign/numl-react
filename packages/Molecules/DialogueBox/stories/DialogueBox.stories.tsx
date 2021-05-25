@@ -1,7 +1,8 @@
 import React from 'react';
-import { NumlProvider, Button, ThemeProvider } from '../../../Core';
+import { El, NumlProvider, ThemeProvider } from '../../../Core';
 import DialogueBox from '../src/DialogueBox';
 import Avatar from '../../../Atoms/Avatar/src/Avatar';
+import Button from '../../../Atoms/Button/src/Button';
 
 export default {
   title: 'Example/Molecules/DialogueBox',
@@ -21,28 +22,30 @@ export const Default = Template.bind({});
 Default.args = {
   heading: 'Reset Settings',
   children: 'This will reset your device to its default factor settings',
-  actions: (
-    <Button.Group width="10" flex gap="2x">
-      <Button radius="1r">Cancel</Button>
-      <Button radius="1r" theme="special">
-        Ok
-      </Button>
-    </Button.Group>
-  ),
+  footerActions: [
+    <Button.Group>
+      <Button>Cancel</Button>
+      <Button special>Submit</Button>
+    </Button.Group>,
+  ],
 };
 
 export const WithAvatarList = Template.bind({});
 WithAvatarList.args = {
   heading: 'Set Backup Account',
   children: [
-    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
-    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
-    <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />,
+    <El.Block>
+      <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />
+      <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />
+      <Avatar.Profile username="Van Gogh" subtitle="Hellow World!" />
+    </El.Block>,
   ],
-  actions: [
-    <Button>Cancel</Button>,
-    <Button key="Ok" clear theme="special">
-      Submit
-    </Button>,
+  footerActions: [
+    <Button.Group>
+      <Button>Cancel</Button>
+      <Button key="Ok" clear theme="special">
+        Submit
+      </Button>
+    </Button.Group>,
   ],
 };

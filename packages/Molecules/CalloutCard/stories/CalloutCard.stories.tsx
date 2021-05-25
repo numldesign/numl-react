@@ -1,6 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 import CalloutCard from '../src/CalloutCard';
+import Button from '../../../Atoms/Button/src/Button';
 
 export default {
   title: 'Example/Molecules/CalloutCard',
@@ -33,12 +34,12 @@ Default.args = {
   description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
   actions: [
-    <El.Button key="1" size="xs">
-      Customize Checkout
-    </El.Button>,
-    <El.Button key="2" size="xs" color="special" border="0">
-      Learn more about customizing checkout
-    </El.Button>,
+    <Button.Group>
+      <El.Button key="1">Customize Checkout</El.Button>
+      <El.Button key="2" color="special" border="0">
+        Learn more
+      </El.Button>
+    </Button.Group>,
   ],
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
 };
@@ -48,10 +49,12 @@ WithoutAction.args = {
   heading: 'Customize the style of your checkout',
   description: 'Upload your store’s logo, change colors and fonts, and more.',
   actions: [
-    <El.Button key="1">Customize Checkout</El.Button>,
-    <El.Button key="2" size="xs" color="special" border="0">
-      Learn more about customizing checkout
-    </El.Button>,
+    <Button.Group>
+      <El.Button key="1">Customize Checkout</El.Button>
+      <El.Button key="2" color="special" border="0">
+        Learn more
+      </El.Button>
+    </Button.Group>,
   ],
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
 };
@@ -60,9 +63,7 @@ const Template2 = ({ ...args }) => (
   <El.NumlProvider>
     <El.ThemeProvider hue="290" saturation="75" />
     <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-    <CalloutCard.Landscape {...args} />
-    <CalloutCard.Landscape {...args} />
-    <CalloutCard.Landscape {...args} />
+    <CalloutCard {...args} />
   </El.NumlProvider>
 );
 
@@ -72,12 +73,12 @@ Landscape.args = {
   description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
   actions: [
-    <El.Button key="1" size="xs">
-      Customize Checkout
-    </El.Button>,
-    <El.Button key="2" size="xs" color="special" border="0">
-      Learn more about customizing checkout
-    </El.Button>,
+    <Button.Group>
+      <El.Button key="1">Customize Checkout</El.Button>
+      <El.Button key="2" color="special" border="0">
+        Learn more
+      </El.Button>
+    </Button.Group>,
   ],
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
   extra: (

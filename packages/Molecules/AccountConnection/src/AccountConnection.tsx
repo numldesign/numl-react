@@ -8,11 +8,8 @@ function AccountConnection(allProps: any): JSX.Element {
     children,
     subtitle,
     onConnectionChange,
-    border = '0.1',
     gap = '1',
-    radius = '0.5',
     flow = 'column',
-    fill = 'bg',
     items = 'stretch',
     padding = '1.25',
     ...otherProps
@@ -24,12 +21,13 @@ function AccountConnection(allProps: any): JSX.Element {
   const handleConnect = useCallback(() => {
     setIsConnected(!isConnected);
     onConnectionChange({ connected: !isConnected });
-  }, [isConnected]);
+  }, [setIsConnected]);
 
   return (
     <El.Card
       padding={padding}
       gap={gap}
+      width="77.75"
       flow={flow}
       items={items}
       {...otherProps}
@@ -55,7 +53,7 @@ function AccountConnection(allProps: any): JSX.Element {
         <El.Block>
           <El.Button
             theme={!isConnected ? 'special' : 'default'}
-            onClick={handleConnect}
+            onTap={handleConnect}
           >
             {isConnected ? 'Disconnect' : 'Connect'}
           </El.Button>

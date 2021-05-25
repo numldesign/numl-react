@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  MediaCard,
-  Button,
-} from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Button } from '@numl-react/core';
+import MediaCard from '../../MediaCard/src/MediaCard';
 
 export default {
   title: 'Example/Molecules/MediaCard',
@@ -21,8 +17,7 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  width: '50%',
-  src: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/san-francisco-bay-area_web-f17b1f60e6.jpg',
+  src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80',
   heading: 'New product and the market',
   description: 'Product details',
   action: <Button> Learn More </Button>,

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { El, Menu, NumlProvider, ThemeProvider } from '@numl-react/core';
+import { El, NumlProvider, ThemeProvider } from '@numl-react/core';
+import Menu from '../src/Menu';
 
 export default {
   title: 'Example/Molecules/Menu',

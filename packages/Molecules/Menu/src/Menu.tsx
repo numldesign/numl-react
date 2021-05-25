@@ -3,7 +3,11 @@ import { El } from '@numl-react/core';
 
 function Menu(allProps: any) {
   const { children, ...otherProps } = allProps;
-  return <El.Menu {...otherProps}>{children}</El.Menu>;
+  return (
+    <El.Menu width="min 15" {...otherProps}>
+      {children}
+    </El.Menu>
+  );
 }
 
 Menu.Item = function MenuItem(allProps: any) {

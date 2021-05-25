@@ -7,7 +7,7 @@ function CalloutCard(allProps: any): JSX.Element {
     description,
     actions,
     gap = '2x',
-    padding = '2x',
+    padding = '2.5x',
     src,
     ...otherProps
   } = allProps;

@@ -1,34 +1,8 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import Card from '../../Card/src/Card';
 
 function DialogueBox(allProps: any): JSX.Element {
-  const {
-    heading,
-    place = 'inside',
-    gap = '1x',
-
-    radius = '0.5x',
-    padding = '1.25',
-    actions,
-    children,
-    ...otherProps
-  } = allProps;
-  return (
-    <El.Card
-      nu-overlay
-      flex
-      responsive="1400px|1200px|992px|768px|576px|0px"
-      place={place}
-      gap={gap}
-      padding={padding}
-      radius={radius}
-      {...otherProps}
-    >
-      <El.Block text="sb">{heading || null}</El.Block>
-      <El.Block size="sm">{children || null}</El.Block>
-      <El.Pane content="flex-end">{actions}</El.Pane>
-    </El.Card>
-  );
+  return <Card {...allProps} />;
 }
 
 export default DialogueBox;

@@ -2,7 +2,7 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function BottomNavigation(allProps: any): JSX.Element {
-  const { header, children, ...otherProps } = allProps;
+  const { children, ...otherProps } = allProps;
 
   return (
     <El.Menu

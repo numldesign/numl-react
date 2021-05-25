@@ -169,7 +169,7 @@ Button.Checkbox = function ButtonCheckbox(props: any) {
 Button.Group = function ButtonGroup(allProps: any): JSX.Element {
   const { children, ...otherProps } = allProps;
   return (
-    <El.Flex flow="row" gap {...otherProps}>
+    <El.Flex flow="row" fill="transparent" gap {...otherProps}>
       {children}
     </El.Flex>
   );
