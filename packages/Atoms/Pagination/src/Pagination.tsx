@@ -1,6 +1,7 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 import Icon from '../../Icon/src/Icon';
+import Button from '../../Button/src/Button';
 
 function Pagination(allProps: any): JSX.Element {
   const {
@@ -14,7 +15,7 @@ function Pagination(allProps: any): JSX.Element {
   } = allProps;
 
   return (
-    <El.ButtonGroup
+    <Button.Group
       flex
       fill={fill}
       border={border}
@@ -24,21 +25,21 @@ function Pagination(allProps: any): JSX.Element {
       {...otherProps}
     >
       {typeof previous === 'string' ? (
-        <El.Button id="previous" border>
+        <El.Button id="previous">
           <Icon name={previous} />
         </El.Button>
       ) : (
-        <El.BaseElement border>{previous}</El.BaseElement>
+        <El.BaseElement>{previous}</El.BaseElement>
       )}
       {label ? <El.Label padding="0 1x">{label}</El.Label> : null}
       {typeof next === 'string' ? (
-        <El.Button id="next" border>
+        <El.Button id="next">
           <Icon name={next} />
         </El.Button>
       ) : (
-        <El.BaseElement border>{next}</El.BaseElement>
+        <El.BaseElement>{next}</El.BaseElement>
       )}
-    </El.ButtonGroup>
+    </Button.Group>
   );
 }
 

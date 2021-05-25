@@ -27,10 +27,7 @@ function AccountConnection(allProps: any): JSX.Element {
   }, [isConnected]);
 
   return (
-    <El.Pane
-      radius={radius}
-      border={border}
-      fill={fill}
+    <El.Card
       padding={padding}
       gap={gap}
       flow={flow}
@@ -65,7 +62,7 @@ function AccountConnection(allProps: any): JSX.Element {
         </El.Block>
       </El.Pane>
       {children ? <El.Block>{children}</El.Block> : null}
-    </El.Pane>
+    </El.Card>
   );
 }
 

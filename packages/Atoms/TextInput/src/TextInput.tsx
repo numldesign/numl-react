@@ -11,6 +11,7 @@ function TextInput(allProps: any): JSX.Element {
     link,
     label,
     helpText,
+    onHelp,
     validation,
     disabled = false,
     ...otherProps
@@ -75,6 +76,7 @@ function TextInput(allProps: any): JSX.Element {
             border="0"
             padding="0 0.5x"
             fill="transparent"
+            onTap={onHelp}
             mark="false"
             hover="false"
           >
@@ -95,7 +97,7 @@ function TextInput(allProps: any): JSX.Element {
   );
 }
 
-TextInput.IFTALabels = function (allProps: any) {
+TextInput.IFTALabels = (allProps: any) => {
   const {
     required,
     label,
