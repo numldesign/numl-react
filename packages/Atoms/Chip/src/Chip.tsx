@@ -7,7 +7,7 @@ function Chip(allProps: any): JSX.Element {
     padding = '1x 2x',
     radius = 'round',
     label,
-    theme = 'text',
+    theme,
     icon,
     selectable = 'n',
     onAction,
@@ -16,7 +16,7 @@ function Chip(allProps: any): JSX.Element {
   } = allProps;
 
   return (
-    <El.Badge
+    <El.Button
       radius={radius}
       padding={padding}
       cursor="pointer"
@@ -25,7 +25,7 @@ function Chip(allProps: any): JSX.Element {
       {...otherProp}
     >
       {icon && typeof icon === 'string' ? (
-        <El.Icon theme={theme} name={icon} padding="0" size={size} />
+        <El.Icon theme={theme} name={icon} size={size} />
       ) : (
         icon
       )}
@@ -47,7 +47,7 @@ function Chip(allProps: any): JSX.Element {
       ) : (
         action
       )}
-    </El.Badge>
+    </El.Button>
   );
 }
 
