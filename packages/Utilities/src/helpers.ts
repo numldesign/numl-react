@@ -23,7 +23,7 @@ const loadDynamicScript = (callback: () => any) => {
 
   if (!existingScript) {
     const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/numl@1.1.0/dist/index.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/numl@1.1.2/dist/index.js';
     script.type = 'module';
     script.id = 'numl-script';
     document.body.appendChild(script);
