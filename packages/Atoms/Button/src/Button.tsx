@@ -1,14 +1,16 @@
 import React from 'react';
 import { El } from '@numl-react/core';
+import { isExist } from '../../../Utilities/src/Object';
 
 function Button(props: any): JSX.Element {
   const {
-    children,
+    children = undefined,
     type = 'medium',
-    icon,
-    menu,
+    icon = undefined,
+    menu = undefined,
     selectable = false,
     color = 'text',
+    dropdownIcon = true,
     theme,
     onTap,
     ...otherProps
@@ -33,6 +35,7 @@ function Button(props: any): JSX.Element {
   return (
     <El.Button
       block
+      outline="n"
       theme={theme}
       size={size}
       color={color}
@@ -47,16 +50,18 @@ function Button(props: any): JSX.Element {
         icon
       )}
       {children}
-      {menu && typeof menu === 'string' ? (
+      {isExist(menu) &&
+      (typeof menu === 'object' || typeof menu === 'string') ? (
         <>
-          <El.DropdownIcon theme={theme} color={color} />
+          {dropdownIcon &&
+          (dropdownIcon === 'true' || dropdownIcon === true) ? (
+            <El.DropdownIcon theme={theme} color={color} />
+          ) : null}
           <Button.Popup use-menu size={size} theme={theme} color={color}>
             {menu}
           </Button.Popup>
         </>
-      ) : (
-        menu
-      )}
+      ) : null}
     </El.Button>
   );
 }
@@ -153,8 +158,12 @@ Button.Popup = function ButtonDropDownPopup(props: any) {
 };
 
 Button.Item = function ButtonDropDownPopupList(props: any) {
-  const { children, ...otherProps } = props;
-  return <El.Menuitem {...otherProps}>{children}</El.Menuitem>;
+  const { children, width = '100%', outline = 'n', ...otherProps } = props;
+  return (
+    <El.Menuitem width={width} outline={outline} {...otherProps}>
+      {children}
+    </El.Menuitem>
+  );
 };
 
 Button.Checkbox = function ButtonCheckbox(props: any) {

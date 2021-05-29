@@ -1,13 +1,13 @@
 import React, { Children } from 'react';
 import {
   ActionList,
-  Button,
   El,
   NumlProvider,
-  Popover,
   TextInput,
   ThemeProvider,
 } from '@numl-react/core';
+import Popover from '../../../Molecules/Popover/src/Popover';
+import Button from '../../../Atoms/Button/src/Button';
 
 export default {
   title: 'Example/Molecules/Popover',
@@ -18,18 +18,15 @@ const Template = ({ children }) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <Button
-      width="10"
-      columns="1fr auto"
-      value="Select"
-      menu={children}
-    ></Button>
+    <Button width="10" columns="1fr auto" value="Select" menu={'jfs'}>
+      Click Me!
+      <Popover>{children}</Popover>
+    </Button>
   </NumlProvider>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  padding: '0',
   children: (
     <ActionList header="Availables sales channel" border="n">
       <ActionList.Item key="1" onClick={(e) => console.log('clicked ', e)}>

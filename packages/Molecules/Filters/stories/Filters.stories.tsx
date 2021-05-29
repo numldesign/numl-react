@@ -1,12 +1,8 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  TextInput,
-  Menu,
-  Filters,
-  El,
-} from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Menu, El } from '@numl-react/core';
+import Filters from '../src/Filters';
+import Button from '../../../Atoms/Button/src/Button';
+import TextInput from '../../../Atoms/TextInput/src/TextInput';
 
 export default {
   title: 'Example/Molecules/Filters',
@@ -23,59 +19,71 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  responsive: '601px',
-  flow: 'column|row',
   filterSearch: (
     <TextInput
+      height="100%"
+      width="min 15"
       placeholder="Text Field"
-      prefix={<El.Icon name="search-outline" padding="1x" />}
+      icon="search-outline"
     />
   ),
   filterGroup: (
-    <El.ButtonGroup>
-      <El.Button key="one">
-        Button
-        <El.Icon name="chevron-down-outline" />
-        <El.Popup use-menu display="flex" padding="1x 0" flow="column">
-          <Menu size="sm">
-            <Menu.Item
-              value="Action 1"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+    <El.ButtonGroup outline="n">
+      <Button
+        outline="n"
+        menu={
+          <>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
               Action 1
-            </Menu.Item>
-            <Menu.Item
-              value="Action 2"
-              onClick={(evt) => console.log(evt.target.value)}
-            >
+            </Button.Item>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
               Action 2
-            </Menu.Item>
-          </Menu>
-        </El.Popup>
-      </El.Button>
-      <El.Button key="two">
+            </Button.Item>
+          </>
+        }
+      >
         Button
-        <El.Icon name="chevron-down-outline" />
-      </El.Button>
-      <El.Button key="three">
+      </Button>
+      <Button
+        menu={
+          <>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
+              Action 1
+            </Button.Item>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
+              Action 2
+            </Button.Item>
+          </>
+        }
+      >
         Button
-        <El.Icon name="chevron-down-outline" />
-      </El.Button>
-      <El.Button key="four">More Filters</El.Button>
+      </Button>
+      <Button
+        menu={
+          <>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
+              Action 1
+            </Button.Item>
+            <Button.Item onClick={(evt) => console.log(evt.target.value)}>
+              Action 2
+            </Button.Item>
+          </>
+        }
+      >
+        Button
+      </Button>
+      <Button key="four">More Filters</Button>
     </El.ButtonGroup>
   ),
   extra: (
-    <El.Button disabled>
-      <El.Icon name="star-outline" />
+    <Button icon="star-outline" disabled>
       Saved
-    </El.Button>
+    </Button>
   ),
 };
 
 export const WithoutSearch = Template.bind({});
 WithoutSearch.args = {
-  responsive: '601px',
-  flow: 'column|row',
   filterGroup: (
     <El.ButtonGroup>
       <El.Button key="one">

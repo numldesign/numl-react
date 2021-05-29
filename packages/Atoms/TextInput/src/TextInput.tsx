@@ -12,6 +12,7 @@ function TextInput(allProps: any): JSX.Element {
     label,
     helpText,
     onHelp,
+    outline = 'y',
     validation,
     disabled = false,
     ...otherProps
@@ -20,7 +21,7 @@ function TextInput(allProps: any): JSX.Element {
   const id = v4();
 
   return (
-    <El.Flow>
+    <El.Flex flow="column">
       {label ? (
         <El.Flex content="space-between">
           <El.Label for={id}>
@@ -40,7 +41,7 @@ function TextInput(allProps: any): JSX.Element {
           )}
         </El.Flex>
       ) : null}
-      <El.InputGroup>
+      <El.InputGroup height={otherProps.height || undefined}>
         {icon &&
           (typeof icon === 'string' ? (
             <El.Icon inline padding="0 1x" name={icon} />
@@ -50,6 +51,7 @@ function TextInput(allProps: any): JSX.Element {
         <El.Input
           inline
           id={id}
+          outline={outline}
           disabled={disabled || disabled === 'true' ? true : undefined}
           {...otherProps}
         />
@@ -93,7 +95,7 @@ function TextInput(allProps: any): JSX.Element {
           ))}
         </El.Block>
       ) : null}
-    </El.Flow>
+    </El.Flex>
   );
 }
 

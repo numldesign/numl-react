@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { Avatar, Checkbox } from '@numl-react/atoms';
-import { El } from '@numl-react/core';
+import { El, Checkbox } from '@numl-react/core';
+import Avatar from '../../../Atoms/Avatar/src/Avatar';
 
-function ResourceList(allProps: any) {
+function ResourceList(allProps: any): JSX.Element {
   const ref: any = useRef();
   const {
     selected,
-    multiSelect,
+    multiSelect = undefined,
     items,
     onChange,
     padding = '0',
@@ -27,10 +27,12 @@ function ResourceList(allProps: any) {
     <El.Block {...otherProps}>
       <El.Listbox
         ref={ref}
+        flex
+        gap="2x"
         border={border}
         padding={padding}
         value={selected}
-        multiple={multiSelect || undefined}
+        multiple={multiSelect}
       >
         {items && items.length
           ? items.map(
@@ -43,17 +45,18 @@ function ResourceList(allProps: any) {
                     key={value}
                     value={value}
                     columns="auto 1fr"
+                    flex
                     gap="2x"
                     items="start stretch"
                     {...contentWrapperProps}
                   >
-                    <El.Pane gap="2x">
+                    <El.Flex flex gap="2x">
                       {multiSelect ? <Checkbox checked={checked} /> : null}
-                      <Avatar fill="danger" special border="0" />
-                    </El.Pane>
-                    <El.Block {...itemWrapperProps}>
+                      <Avatar.Icon theme="danger" clear mark="n" />
+                    </El.Flex>
+                    <El.Flex flex gap="2x" {...itemWrapperProps}>
                       {renderItem && renderItem({ item, value, index })}
-                    </El.Block>
+                    </El.Flex>
                   </El.Option>
                 );
               }

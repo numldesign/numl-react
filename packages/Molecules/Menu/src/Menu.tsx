@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
-function Menu(allProps: any) {
+function Menu(allProps: any): JSX.Element {
   const { children, ...otherProps } = allProps;
   return (
     <El.Menu width="min 15" {...otherProps}>

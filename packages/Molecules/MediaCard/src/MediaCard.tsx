@@ -6,6 +6,7 @@ function MediaCard(props: any): JSX.Element {
   const {
     src,
     action,
+    menu,
     heading,
     description,
     padding = '2.5x',
@@ -13,31 +14,29 @@ function MediaCard(props: any): JSX.Element {
     ...otherProps
   } = props;
   return (
-    <El.Card
-      flex
-      gap="2"
-      width="max 40x"
-      flow="row wrap"
-      padding={padding}
-      columns={columns}
-      {...otherProps}
-    >
-      <El.Image src={src} width="100%" height="10" />
-      <El.Flex content="space-between" items="center" gap>
-        <El.BaseElement text="bold" padding="0">
-          {heading}
-        </El.BaseElement>
-        <Button icon="ellipsis-horizontal-outline" clear />
+    <El.Card flex gap padding={padding} columns={columns} {...otherProps}>
+      <El.Image src={src} width="100%" />
+      <El.Flex gap text="bold" content="space-between" items="center">
+        {heading}
+        <Button
+          icon="ellipsis-horizontal-outline"
+          dropdownIcon="false"
+          menu={menu}
+        />
       </El.Flex>
-      <El.Flex content="start" padding="0" items="center" gap>
-        {description || null}
-      </El.Flex>
-      <El.Spacer />
-      <El.Flex content="start" items="center" gap>
-        {action || null}
-      </El.Flex>
+      <El.Flex gap>{description || null}</El.Flex>
+      <El.Flex gap>{action || null}</El.Flex>
     </El.Card>
   );
 }
+
+MediaCard.Image = (props: any): JSX.Element => {
+  const { src, ...otherProps } = props;
+  return (
+    <El.Flex {...otherProps}>
+      <El.Image src={src} width="100%" />
+    </El.Flex>
+  );
+};
 
 export default MediaCard;
