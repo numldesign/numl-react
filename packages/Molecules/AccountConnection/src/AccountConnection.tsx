@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import { El } from '@numl-react/core';
+import React from 'react';
+import * as El from '@numl-react/elements';
 import { Avatar } from '../../../Atoms/Avatar';
 
 function AccountConnection(allProps: any): JSX.Element {
@@ -15,13 +15,11 @@ function AccountConnection(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
 
-  // eslint-disable-next-line react/destructuring-assignment
-  const [isConnected, setIsConnected] = useState(Boolean(allProps.isConnected));
-
-  const handleConnect = useCallback(() => {
-    setIsConnected(!isConnected);
-    onConnectionChange({ connected: !isConnected });
-  }, [setIsConnected]);
+  const [isConnected, setValue] = React.useState(false);
+  const toggle = React.useCallback(() => {
+    setValue((v) => !v);
+    onConnectionChange();
+  }, []);
 
   return (
     <El.Card
@@ -50,14 +48,9 @@ function AccountConnection(allProps: any): JSX.Element {
             </El.Block>
           </El.Block>
         )}
-        <El.Block>
-          <El.Button
-            theme={!isConnected ? 'special' : 'default'}
-            onTap={handleConnect}
-          >
-            {isConnected ? 'Disconnect' : 'Connect'}
-          </El.Button>
-        </El.Block>
+        <El.Button theme={!isConnected ? 'special' : 'default'} onTap={toggle}>
+          {isConnected ? 'Disconnect' : 'Connect'}
+        </El.Button>
       </El.Pane>
       {children ? <El.Block>{children}</El.Block> : null}
     </El.Card>

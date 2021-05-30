@@ -1,11 +1,14 @@
 import React from 'react';
 import * as El from '@numl-react/elements';
 import ContextualSaveBar from '../src/ContextualSaveBar';
+import Button from '../../../Atoms/Button/src/Button';
 
 export default {
   title: 'Example/Organisms/ContextualSaveBar',
   component: ContextualSaveBar,
-  argTypes: {},
+  parameters: {
+    layout: '',
+  },
 };
 
 const Template = ({ ...args }) => (
@@ -20,5 +23,10 @@ const Template = ({ ...args }) => (
 export const Default = Template.bind({});
 Default.args = {
   message: 'Unsaved Changes',
-  buttonWidth: '6rem',
+  button: (
+    <>
+      <Button.Small>Discard</Button.Small>
+      <Button.Small theme="special">Save</Button.Small>
+    </>
+  ),
 };

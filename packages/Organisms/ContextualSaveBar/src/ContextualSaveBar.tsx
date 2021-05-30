@@ -1,38 +1,41 @@
 import React from 'react';
 import { El } from '@numl-react/core';
 import { ForunIcon } from '../../TopBar/src/ForunIcon';
+import Button from '../../../Atoms/Button/src/Button';
 
-function ContextualSaveBar(props: any) {
+function ContextualSaveBar(props: any): JSX.Element {
   /** working on this */
 
-  const { message, buttonWidth = '5.25rem' } = props;
+  const {
+    fill = 'light',
+    items = 'center',
+    content = 'space-between',
+    row = '30vw 70vw|100vw',
+    padding = '1.5x 2x',
+    responsive = '800px|799px',
+    message,
+    button,
+  } = props;
   return (
-    <El.Grid
-      padding="0.563rem 0.1rem"
-      fill="#light"
-      responsive="62.5rem|56.25rem"
+    <El.Flex
       gap
-      columns="1fr 2fr 1fr|auto auto"
-      content="space-between"
-      items="center"
+      fill={fill}
+      row={row}
+      items={items}
+      content={content}
+      responsive={responsive}
+      padding={padding}
     >
-      <El.Inline show="y|n">
+      <El.Block hide="n|y">
         <ForunIcon />
-      </El.Inline>
-      <El.Inline>
-        <El.BaseElement text="bold" color="#bg">
+      </El.Block>
+      <El.Flex items="center" width="70vw|100vw" content="space-between">
+        <El.Block text="bold" color="#bg">
           {message}
-        </El.BaseElement>
-      </El.Inline>
-      <El.ButtonGroup gap border="0" fill="">
-        <El.Button fill="#bg" radius width={buttonWidth}>
-          Discard
-        </El.Button>
-        <El.Button fill="special-bg" radius width={buttonWidth}>
-          Save
-        </El.Button>
-      </El.ButtonGroup>
-    </El.Grid>
+        </El.Block>
+        <Button.Group>{button}</Button.Group>
+      </El.Flex>
+    </El.Flex>
   );
 }
 
