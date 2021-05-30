@@ -2,11 +2,11 @@ import React from 'react';
 import * as El from '@numl-react/elements';
 
 function Badge(allProps: any): JSX.Element {
-  const { children, size, label, icon, ...otherProps } = allProps;
+  const { children = undefined, size, label, icon, ...otherProps } = allProps;
   return (
     <El.Badge radius="4x" padding="0.33rem 0.67rem" {...otherProps}>
       {typeof icon === 'string' ? <El.Icon padding="0" name={icon} /> : icon}
-      {children || <Badge.Label size={size}>{label}</Badge.Label>}
+      <Badge.Label size={size}>{children || label}</Badge.Label>
     </El.Badge>
   );
 }

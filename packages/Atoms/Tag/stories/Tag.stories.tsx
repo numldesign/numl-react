@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Tag } from '@numl-react/elements';
+import { NumlProvider, ThemeProvider } from '@numl-react/elements';
+import Tag from '../src/Tag';
 
 export default {
   title: 'Example/Atoms/Tag',

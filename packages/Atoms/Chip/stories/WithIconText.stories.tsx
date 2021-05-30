@@ -20,7 +20,7 @@ const Template = function ({ ...args }) {
 export const Default: any = Template.bind({});
 Default.args = {
   label: 'Neutral',
-  icon: <El.Icon name=""></El.Icon>,
+  icon: 'eye',
 };
 export const Special: any = Template.bind({});
 Special.args = {
