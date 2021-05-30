@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, ColorPicker } from '@numl-react/core';
+import { El, ColorPicker } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/ColorPicker',
@@ -7,11 +7,11 @@ export default {
 };
 
 const Template = (args) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <ColorPicker {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

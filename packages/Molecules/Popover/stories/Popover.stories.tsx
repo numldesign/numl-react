@@ -15,14 +15,14 @@ export default {
 };
 
 const Template = ({ children }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <Button width="10" columns="1fr auto" value="Select" menu={'jfs'}>
       Click Me!
       <Popover>{children}</Popover>
     </Button>
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

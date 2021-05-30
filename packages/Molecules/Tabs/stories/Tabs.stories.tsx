@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, El } from '@numl-react/core';
+import { El, Icon, El } from '@numl-react/core';
 import Tabs from '../src/Tabs';
 import Button from '../../../Atoms/Button/src/Button';
 
@@ -9,11 +9,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <Tabs {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Basic = Template.bind({});

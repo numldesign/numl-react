@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, El } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import RangeSlider from '../src/RangeSlider';
 
 export default {
@@ -35,11 +35,11 @@ export default {
 };
 
 const Template = (args: any) => (
-  <NumlProvider padding="6x 2x">
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider padding="6x 2x">
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <RangeSlider {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({

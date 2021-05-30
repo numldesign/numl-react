@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import Badge from '../src/Badge';
 
 export default {
@@ -10,13 +10,13 @@ export default {
 const Template = (props: any) => {
   const { label, icon, ...otherProps } = props;
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <Badge {...otherProps} icon={icon}>
         <Badge.Label>{label}</Badge.Label>
       </Badge>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Badge } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
+import Badge from '../src/Badge';
 
 export default {
   title: 'Example/Atoms/Badge/Themes',
@@ -9,11 +10,11 @@ export default {
 const DefaultTemplate = (props: any) => {
   const { ...otherProps } = props;
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <Badge {...otherProps} />
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 

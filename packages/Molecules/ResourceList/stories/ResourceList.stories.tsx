@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
+import { El, El } from '@numl-react/core';
 import ResourceList from '../src/ResourceList';
 
 export default {
@@ -8,11 +8,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <ResourceList {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

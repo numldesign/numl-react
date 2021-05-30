@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { NumlProvider, ThemeProvider, TextInput } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import ChoiceList from '../src/ChoiceList';
 
 export default {
@@ -8,11 +8,11 @@ export default {
 };
 
 const Template = (args) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <ChoiceList {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});
@@ -34,9 +34,9 @@ export const WithTextBox = (args) => {
   }, []);
 
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
       <ChoiceList
         {...args}
@@ -53,7 +53,7 @@ export const WithTextBox = (args) => {
         selected={selected}
         onChange={handleChange}
       />
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 

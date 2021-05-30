@@ -1,5 +1,6 @@
 import React from 'react';
-import { NumlProvider, PageAction, ThemeProvider } from '@numl-react/core';
+import * as El from '@numl-react/elements';
+import PageAction from '../src/PageAction';
 
 export default {
   title: 'Example/Molecules/PageAction',
@@ -7,11 +8,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <PageAction {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

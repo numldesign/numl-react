@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  NumlProvider,
-  ThemeProvider,
-  BottomNavigation,
-  Icon,
-} from '@numl-react/core';
+import * as El from '@numl-react/elements';
+import BottomNavigation from '../src/BottomNavigation';
 
 export default {
   title: 'Example/Molecules/BottomNavigation',
@@ -12,12 +8,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
-
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <BottomNavigation {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});
@@ -59,25 +54,25 @@ WithIcons.args = {
       key="1"
       onClick={(e) => console.log('Home clicked ', e)}
     >
-      <Icon name="home-outline" />
+      <El.Icon name="home-outline" />
     </BottomNavigation.Item>,
     <BottomNavigation.Item
       key="2"
       onClick={(e) => console.log('Heart clicked ', e)}
     >
-      <Icon name="heart-outline" />
+      <El.Icon name="heart-outline" />
     </BottomNavigation.Item>,
     <BottomNavigation.Item
       key="3"
       onClick={(e) => console.log('Profile clicked ', e)}
     >
-      <Icon name="person-outline" />
+      <El.Icon name="person-outline" />
     </BottomNavigation.Item>,
     <BottomNavigation.Item
       key="4"
       onClick={(e) => console.log('Cart clicked ', e)}
     >
-      <Icon name="cart-outline" />
+      <El.Icon name="cart-outline" />
     </BottomNavigation.Item>,
   ],
 };

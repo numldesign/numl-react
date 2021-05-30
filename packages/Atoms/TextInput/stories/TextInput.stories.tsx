@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, El } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import TextInput from '../src/TextInput';
 
 export default {
@@ -9,13 +9,13 @@ export default {
 
 const Template = ({ theme, ...args }) => {
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <El.Form>
         <TextInput {...args} />
       </El.Form>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 

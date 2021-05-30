@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Form } from '@numl-react/core';
+import { El, Form } from '@numl-react/core';
 
 export default {
   title: 'Example/Molecules/Form',
@@ -7,9 +7,9 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <Form {...args}>
       <Form.Field name="name">
@@ -32,7 +32,7 @@ const Template = ({ ...args }) => (
       </Form.Field>
       <Form.Submit>Submit</Form.Submit>
     </Form>
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

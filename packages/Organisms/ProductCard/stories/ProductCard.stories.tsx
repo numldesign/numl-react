@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import ProductCard from '../src/ProductCard';
 
 export default {
@@ -8,11 +8,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <ProductCard {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default: any = Template.bind({});
@@ -31,12 +31,12 @@ Default.args = {
 };
 
 const Template2 = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
     <ProductCard.Landscape {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const ProductCardPotrait: any = Template2.bind({});

@@ -65,7 +65,7 @@ export default function Layout({ children }) {
     });
   }, []);
   return (
-    <NumlProvider responsive="100rem|90rem|65rem|40rem|30rem" height="min 100vh" box="n" theme="main">
+    <El.NumlProvider responsive="100rem|90rem|65rem|40rem|30rem" height="min 100vh" box="n" theme="main">
       <Head>
         <title>Head tag</title>
       </Head>
@@ -115,6 +115,6 @@ export default function Layout({ children }) {
           </El.Block>
         </El.Grid>
       </El.Flow>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 }

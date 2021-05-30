@@ -6,8 +6,8 @@ import {
 export default function () {
   return (
     <>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider
         id="main-theme"
         hue="290"
         saturation="75"
@@ -34,7 +34,7 @@ export default function () {
         column-width="((@max-content-width - (@grid-gap * 11)) / 12)|((100vw - (@content-padding * 2) - (@grid-gap * (@column-number - 1))) / @column-number)"
         content-width="80%"
       ></PropsProvider>
-      <ThemeProvider name="secondary" hue="240" saturation="75" pastel="true" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" pastel="true" />
     </>
   );
 }

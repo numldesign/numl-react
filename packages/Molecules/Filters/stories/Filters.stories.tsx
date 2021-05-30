@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Menu, El } from '@numl-react/core';
+import { El, Menu, El } from '@numl-react/core';
 import Filters from '../src/Filters';
 import Button from '../../../Atoms/Button/src/Button';
 import TextInput from '../../../Atoms/TextInput/src/TextInput';
@@ -10,11 +10,11 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <Filters {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Default = Template.bind({});

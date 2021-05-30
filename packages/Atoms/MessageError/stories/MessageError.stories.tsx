@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import MessageError from '../src/MessageError';
 
 export default {
@@ -8,11 +8,11 @@ export default {
 };
 
 const Template = ({ children, ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <MessageError {...args}>{children}</MessageError>
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Basic = Template.bind({});

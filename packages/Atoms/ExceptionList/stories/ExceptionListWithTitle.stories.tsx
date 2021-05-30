@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NumlProvider, ThemeProvider, El } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import ExceptionList from '../src/ExceptionList';
 
 export default {
@@ -15,11 +15,11 @@ const Template = ({ title, label, icon, ...args }) => {
     { title, label, icon },
   ];
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <ExceptionList items={items} {...args} />
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 

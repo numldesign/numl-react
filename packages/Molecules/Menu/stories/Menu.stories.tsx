@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { El, NumlProvider, ThemeProvider } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import Menu from '../src/Menu';
 
 export default {
@@ -13,9 +13,9 @@ export const Default = (args) => {
   };
 
   return (
-    <NumlProvider>
-      <ThemeProvider hue="290" saturation="75" />
-      <ThemeProvider name="secondary" hue="240" saturation="75" />
+    <El.NumlProvider>
+      <El.ThemeProvider hue="290" saturation="75" />
+      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       <Menu {...args} border radius size="sm">
         <Menu.Item value="undo" onClick={handleMenuClick}>
           Undo
@@ -33,7 +33,7 @@ export const Default = (args) => {
           Paste
         </Menu.Item>
       </Menu>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 
@@ -43,10 +43,10 @@ export const WithIcons = (args) => {
   };
 
   return (
-    <NumlProvider>
+    <El.NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75" />
-        <ThemeProvider name="secondary" hue="240" saturation="75" />
+        <El.ThemeProvider hue="290" saturation="75" />
+        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
           <El.Icon name="eye-outline" />
@@ -78,7 +78,7 @@ export const WithIcons = (args) => {
           Download
         </Menu.Item>
       </Menu>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 
@@ -88,10 +88,10 @@ export const WithHotKeyAndPopup = (args) => {
   };
 
   return (
-    <NumlProvider>
+    <El.NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75" />
-        <ThemeProvider name="secondary" hue="240" saturation="75" />
+        <El.ThemeProvider hue="290" saturation="75" />
+        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item
           value="Cut"
@@ -147,7 +147,7 @@ export const WithHotKeyAndPopup = (args) => {
           </El.Popup>
         </Menu.Item>
       </Menu>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };
 
@@ -160,10 +160,10 @@ export const WithSelectableItems = (args) => {
   };
 
   return (
-    <NumlProvider>
+    <El.NumlProvider>
       <Menu {...args} border radius size="sm">
-        <ThemeProvider hue="290" saturation="75" />
-        <ThemeProvider name="secondary" hue="240" saturation="75" />
+        <El.ThemeProvider hue="290" saturation="75" />
+        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
         <Menu.Item
           value="Single"
@@ -248,6 +248,6 @@ export const WithSelectableItems = (args) => {
           Custom spacing..
         </Menu.Item>
       </Menu>
-    </NumlProvider>
+    </El.NumlProvider>
   );
 };

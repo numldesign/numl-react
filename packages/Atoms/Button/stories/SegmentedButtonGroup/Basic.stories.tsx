@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, NumlProvider } from '@numl-react/elements';
+import * as El from '@numl-react/elements';
 import Button from '../../src/Button';
 
 export default {
@@ -8,11 +8,11 @@ export default {
 };
 
 const Template = (args: any) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
+  <El.NumlProvider>
+    <El.ThemeProvider hue="290" saturation="75" />
+    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
     <Button.SegmentedGroup {...args} />
-  </NumlProvider>
+  </El.NumlProvider>
 );
 
 export const Primary: any = Template.bind({});

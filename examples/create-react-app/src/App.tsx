@@ -5,9 +5,9 @@ import { NumlProvider, El } from "@numl-react/core"
 function App() {
   return (
     <div>
-      <NumlProvider>
+      <El.NumlProvider>
         <El.H1>Helllo This is heading</El.H1>
-      </NumlProvider>
+      </El.NumlProvider>
     </div>
   );
 }
