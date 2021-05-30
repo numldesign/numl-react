@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import { isExist } from '../../../Utilities/src/Object';
 
 function Button(props: any): JSX.Element {

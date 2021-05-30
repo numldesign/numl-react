@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 function Radio(allProps: any): JSX.Element {
   const { label, size, value, children, ...otherProps } = allProps;

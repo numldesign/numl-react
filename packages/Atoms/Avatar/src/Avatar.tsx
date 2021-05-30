@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   const {

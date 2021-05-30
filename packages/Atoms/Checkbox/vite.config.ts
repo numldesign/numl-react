@@ -25,7 +25,6 @@ module.exports = {
 
       external: [
         'react',
-        '@numl-react/core',
         '@numl-react/atoms',
         '@numl-react/utility',
         '@numl-react/elements',
@@ -36,7 +35,6 @@ module.exports = {
 
         globals: {
           react: 'React',
-          '@numl-react/core': 'NumlReactCore',
           '@numl-react/atoms': 'NumlReactAtoms',
           '@numl-react/utility': 'NumlReactUtility',
           '@numl-react/elements': 'NumlReactElements',

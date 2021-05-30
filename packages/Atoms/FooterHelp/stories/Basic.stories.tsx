@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon, Link } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Icon, Link } from '@numl-react/elements';
 import FooterHelp from '../src/FooterHelp';
 
 export default {

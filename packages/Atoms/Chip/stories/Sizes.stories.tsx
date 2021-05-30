@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, NumlProvider, ThemeProvider } from '@numl-react/core';
+import { Icon, NumlProvider, ThemeProvider } from '@numl-react/elements';
 import Chip from '../src/Chip';
 
 export default {

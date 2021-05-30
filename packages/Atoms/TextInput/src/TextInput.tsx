@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import { v4 } from 'uuid';
 
 function TextInput(allProps: any): JSX.Element {

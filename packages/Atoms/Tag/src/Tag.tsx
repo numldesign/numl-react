@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 function Tag(allProps: any): JSX.Element {
   const { size = 'sm', label, deletable, theme, ...otherProps } = allProps;

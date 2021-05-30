@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, El } from '@numl-react/elements';
 import ExceptionList from '../src/ExceptionList';
 
 export default {

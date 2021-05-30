@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Icon } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Icon } from '@numl-react/elements';
 import Link from '../../Link/src/Link';
 
 export default {

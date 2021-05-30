@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import Icon from '../../Icon/src/Icon';
 import Button from '../../Button/src/Button';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 function Thumbnail(allProps: any) {
   const { source, alt, fit, ...otherProps } = allProps;

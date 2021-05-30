@@ -1,5 +1,5 @@
 import React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 function ProgressBar(allProps: any): JSX.Element {
   const { width = '25', ...otherProps } = allProps;

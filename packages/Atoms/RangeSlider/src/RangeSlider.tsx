@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 const getPlace = (place: string, value: string) => {
   const xplace = place === 'bottom' ? 'bottom' : 'top';

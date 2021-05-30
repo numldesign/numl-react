@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Icon } from '@numl-react/atoms';
-import { El } from '@numl-react/core';
+import { El, Icon } from '@numl-react/core';
 
 function Search(allProps: any): JSX.Element {
   const ref: any = useRef();

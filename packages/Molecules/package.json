@@ -42,7 +42,6 @@
     "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
   "dependencies": {
-    "@numl-react/atoms": "^0.0.24",
     "@numl-react/core": "^0.0.24",
     "@numl-react/elements": "^0.0.24",
     "@numl-react/utility": "^0.0.24",

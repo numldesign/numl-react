@@ -1,5 +1,4 @@
-import { Checkbox, Radio } from '@numl-react/atoms';
-import { El } from '@numl-react/core';
+import { El, Checkbox, Radio } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
 
 /**

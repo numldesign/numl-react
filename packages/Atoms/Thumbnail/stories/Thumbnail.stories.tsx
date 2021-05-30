@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import { NumlProvider, ThemeProvider } from '@numl-react/elements';
 import Thumbnail from '../src/Thumbnail';
 
 export default {
