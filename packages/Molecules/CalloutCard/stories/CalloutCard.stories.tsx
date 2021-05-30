@@ -6,18 +6,6 @@ import Button from '../../../Atoms/Button/src/Button';
 export default {
   title: 'Example/Molecules/CalloutCard',
   component: CalloutCard,
-  argTypes: {
-    heading: {
-      control: {
-        type: 'text',
-      },
-    },
-    description: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
 const Template = ({ ...args }) => (
@@ -47,15 +35,8 @@ Default.args = {
 export const WithoutAction = Template.bind({});
 WithoutAction.args = {
   heading: 'Customize the style of your checkout',
-  description: 'Upload your store’s logo, change colors and fonts, and more.',
-  actions: [
-    <Button.Group>
-      <El.Button key="1">Customize Checkout</El.Button>
-      <El.Button key="2" color="special" border="0">
-        Learn more
-      </El.Button>
-    </Button.Group>,
-  ],
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
 };
 
@@ -63,7 +44,7 @@ const Template2 = ({ ...args }) => (
   <El.NumlProvider>
     <El.ThemeProvider hue="290" saturation="75" />
     <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-    <CalloutCard {...args} />
+    <CalloutCard.Landscape {...args} />
   </El.NumlProvider>
 );
 
@@ -71,7 +52,7 @@ export const Landscape = Template2.bind({});
 Landscape.args = {
   heading: 'Customize the style of your checkout',
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
   actions: [
     <Button.Group>
       <El.Button key="1">Customize Checkout</El.Button>
@@ -81,9 +62,4 @@ Landscape.args = {
     </Button.Group>,
   ],
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
-  extra: (
-    <El.Block width="10" height="min 20x">
-      <El.Image src="https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png" />
-    </El.Block>
-  ),
 };

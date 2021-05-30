@@ -1,29 +1,17 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Radio, TextArea } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Radio } from '@numl-react/core';
+import TextArea from '../src/TextArea';
 
 export default {
   title: 'Example/Molecules/TextArea',
   component: TextArea,
-  argTypes: {
-    placeholder: {
-      defaultValue: 'Text Field',
-      control: {
-        type: 'text',
-      },
-    },
-  },
 };
 
-const Template = ({ children, fieldProps, ...args }) => (
+const Template = (args) => (
   <NumlProvider>
     <ThemeProvider hue="290" saturation="75" />
     <ThemeProvider name="secondary" hue="240" saturation="75" />
-
-    {children || fieldProps ? (
-      <TextArea.Field {...args} children={children} fieldProps={fieldProps} />
-    ) : (
-      <TextArea {...args} />
-    )}
+    <TextArea {...args} />
   </NumlProvider>
 );
 
@@ -34,40 +22,18 @@ Default.args = {
 
 export const WithField = Template.bind({});
 WithField.args = {
-  placeholder: 'Here is a simple placeholder',
+  placeholder: 'Enter Description here...',
   children: 'Value',
-  fieldProps: {
-    padding: '2x',
-    radius: '1x',
-    border: '1bw',
-    fill: 'bg',
-  },
 };
 
 export const WithRadio = Template.bind({});
 WithRadio.args = {
-  placeholder: 'Here is a simple placeholder',
+  placeholder: 'Enter Description here...',
   children: (
-    <Radio.Group
-      inline
-      size="sm"
-      onChange={(props) => console.log('selected ', props)}
-    >
-      <Radio key="label_1" value="label_1">
-        Label 1
-      </Radio>
-      <Radio key="label_2" value="label_2">
-        Label 2
-      </Radio>
-      <Radio key="label_3" value="label_3">
-        Label 3
-      </Radio>
+    <Radio.Group inline onChange={(props) => console.log('selected ', props)}>
+      <Radio key="label_1" value="label_1" label="Label 1" />
+      <Radio key="label_2" value="label_2" label="Label 2" />
+      <Radio key="label_3" value="label_3" label="Label 3" />
     </Radio.Group>
   ),
-  fieldProps: {
-    padding: '2x',
-    radius: '1x',
-    border: '1bw',
-    fill: 'bg',
-  },
 };

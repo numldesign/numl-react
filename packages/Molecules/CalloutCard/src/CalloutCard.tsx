@@ -6,29 +6,29 @@ function CalloutCard(allProps: any): JSX.Element {
     heading,
     description,
     actions,
-    gap = '2x',
+    gap = '2',
     padding = '2.5x',
     src,
     ...otherProps
   } = allProps;
   return (
-    <El.Card flex flow="row wrap" padding={padding} gap={gap} {...otherProps}>
-      {src ? (
-        <El.Block>
-          <El.Image width="100%" fit="fill" src={src} />
+    <El.Card flex flow="row unwrap" padding={padding} gap={gap} {...otherProps}>
+      <El.Block padding>
+        {src ? <El.Image width="100%" fit="fill" src={src} /> : null}
+      </El.Block>
+      <El.Block size="md" padding text="sb">
+        {heading || null}
+      </El.Block>
+      {description ? (
+        <El.Block size="sm" padding>
+          {description || null}
         </El.Block>
       ) : null}
-      {heading && typeof heading === 'string' ? (
-        heading
-      ) : (
-        <El.Block size="md">{heading}</El.Block>
-      )}
-      {description && typeof description === 'string' ? (
-        description
-      ) : (
-        <El.Block size="sm">{description}</El.Block>
-      )}
-      {actions || null}
+      {actions ? (
+        <El.Flex padding gap>
+          {actions}
+        </El.Flex>
+      ) : null}
     </El.Card>
   );
 }
@@ -36,28 +36,25 @@ function CalloutCard(allProps: any): JSX.Element {
 CalloutCard.Landscape = function CalloutCardLandScape(props: any) {
   const { src, heading, actions, description, ...otherProps } = props;
   return (
-    <El.Card block {...otherProps}>
-      <El.Grid
-        responsive="800px|801px"
-        columns="auto auto|auto"
-        gap="1"
-        content="space-between"
-      >
+    <El.Card {...otherProps}>
+      <El.Grid columns="50% 50%">
         {heading || description ? (
-          <El.Block column="1|1" row="1|2">
-            <El.BaseElement block text="sb" padding="0.5x 0">
+          <El.Grid content="start" gap>
+            <El.Block padding text="sb">
               {heading}
-            </El.BaseElement>
-            <El.BaseElement block size="sm" padding="0.5x 0">
+            </El.Block>
+            <El.Block padding content="start" size="sm">
               {description}
-            </El.BaseElement>
-            {actions ? (
-              <El.BaseElement padding="1x 0">{actions}</El.BaseElement>
-            ) : null}
-          </El.Block>
+            </El.Block>
+            <El.Flex padding gap>
+              {actions || null}
+            </El.Flex>
+          </El.Grid>
         ) : null}
         {src ? (
-          <El.Image column="2|1" row="1|1" height="auto" src={src} />
+          <El.Block padding="left">
+            <El.Image height="100%" fit="fill" src={src} />
+          </El.Block>
         ) : null}
       </El.Grid>
     </El.Card>

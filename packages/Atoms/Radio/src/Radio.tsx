@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
 function Radio(allProps: any): JSX.Element {
-  const { label, size, value, ...otherProps } = allProps;
+  const { label, size, value, children, ...otherProps } = allProps;
 
   return (
     <El.Flex gap>

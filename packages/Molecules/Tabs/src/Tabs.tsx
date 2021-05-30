@@ -1,11 +1,22 @@
 import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
-function Tabs(allProps: any) {
+const Tabs = (allProps: any) => {
+  const {
+    prefix,
+    width = 'min 65',
+    value,
+    fill = 'bg',
+    onChange,
+    ...otherProps
+  } = allProps;
+  let { children } = otherProps;
   const ref: any = useRef();
-
-  const { prefix, defaultValue, onChange, children, ...otherProps } = allProps;
   const content = prefix ? 'flex-start' : 'space-between';
+
+  /** Convert to react children array */
+
+  children = React.Children.toArray(children);
 
   useEffect(() => {
     if (ref.current && onChange) {
@@ -14,24 +25,34 @@ function Tabs(allProps: any) {
   }, []);
 
   return (
-    <El.Block>
+    <El.Card padding="0" border radius>
       <El.TabList
+        fill={fill}
         ref={ref}
+        flex
+        gap="2x"
+        width={width}
+        paddiing="0 2x"
         content={content}
-        value={defaultValue}
+        value={value}
         {...otherProps}
       >
-        {prefix}
+        {prefix || null}
         {children}
       </El.TabList>
       {children.map((child: any) => (
-        <El.Block key={child.props.tab} id={child.props.tab}>
+        <El.Block
+          padding="2x"
+          key={child.props.tab}
+          fill={fill}
+          id={child.props.tab}
+        >
           {child.props.children}
         </El.Block>
       ))}
-    </El.Block>
+    </El.Card>
   );
-}
+};
 
 Tabs.Item = function TabItem(allProps: any) {
   const { label, tab, prefix, suffix, ...otherProps } = allProps;

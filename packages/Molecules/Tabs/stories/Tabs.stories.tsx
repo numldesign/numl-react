@@ -1,5 +1,7 @@
 import React from 'react';
-import { NumlProvider, ThemeProvider, Tabs, Icon } from '@numl-react/core';
+import { NumlProvider, ThemeProvider, Icon, El } from '@numl-react/core';
+import Tabs from '../src/Tabs';
+import Button from '../../../Atoms/Button/src/Button';
 
 export default {
   title: 'Example/Molecules/Tabs',
@@ -17,15 +19,22 @@ const Template = ({ ...args }) => (
 export const Basic = Template.bind({});
 Basic.args = {
   size: 'sm',
-  padding: '0 2x',
-  radius: '1x',
-  border: '1bw',
-  fill: 'bg',
-  defaultValue: 'accept',
+  value: 'accept',
   onChange: (tab) => console.log('selected tab ', tab),
   children: [
     <Tabs.Item key="1" flex="1" padding="1.5x" tab="library" label="Library">
-      Library Content
+      <El.Block>Library Content</El.Block>
+      <El.Block>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </El.Block>
     </Tabs.Item>,
     <Tabs.Item
       key="2"
@@ -34,41 +43,67 @@ Basic.args = {
       tab="accept"
       label="Accepts Marketing"
     >
-      Accepts Marketing Content
+      <El.Block>Accepts Marketing Content</El.Block>
+      <El.Block>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </El.Block>
     </Tabs.Item>,
   ],
 };
 
 export const WithPrefixSuffixTab = Template.bind({});
 WithPrefixSuffixTab.args = {
-  prefix: <Icon name="menu" />,
-  size: 'sm',
-  padding: '0 2x',
-  radius: '1x',
-  border: '1bw',
-  fill: 'bg',
-  defaultValue: 'accept',
+  prefix: <Button icon="menu" clear />,
+  value: 'accept',
   onChange: (tab) => console.log('selected tab ', tab),
   children: [
     <Tabs.Item
       key="1"
-      padding="1.5x"
       tab="library"
       label="Library"
       prefix={<Icon name="checkmark" />}
       suffix={<Icon name="chevron-down" />}
     >
-      Library Content
+      <El.Block>Library Content</El.Block>
+      <El.Block>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </El.Block>
     </Tabs.Item>,
     <Tabs.Item
       key="2"
-      padding="1.5x"
       tab="accept"
       label="Accepts Marketing"
       prefix={<Icon name="checkmark" />}
       suffix={<Icon name="chevron-down" />}
     >
-      Accepts Marketing Content
+      <El.Block>Accepts Marketing Content</El.Block>
+      <El.Block>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </El.Block>
     </Tabs.Item>,
   ],
 };
