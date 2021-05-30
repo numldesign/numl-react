@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { NumlProvider, ThemeProvider } from '@numl-react/core';
 import SettingToggle from '../src/SettingToggle';
 
@@ -13,19 +13,26 @@ export default {
     },
   },
 };
-const Template = ({ ...args }) => (
-  <NumlProvider>
-    <ThemeProvider hue="290" saturation="75" />
-    <ThemeProvider name="secondary" hue="240" saturation="75" />
-    <SettingToggle {...args} />
-  </NumlProvider>
-);
+
+const Template = ({ ...args }) => {
+  const [value, setValue] = React.useState(false);
+  const toggle = React.useCallback(() => {
+    setValue((v) => !v);
+  }, []);
+
+  return (
+    <NumlProvider>
+      <ThemeProvider hue="290" saturation="75" />
+      <ThemeProvider name="secondary" hue="240" saturation="75" />
+
+      <SettingToggle onTap={toggle} isActive={value} {...args} />
+    </NumlProvider>
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {
   text: 'This setting is',
   activeText: 'Enable',
   inactiveText: 'Disabled',
-  isActive: true,
-  onAction: (props) => console.log(props),
 };

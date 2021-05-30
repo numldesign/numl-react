@@ -1,13 +1,9 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { El } from '@numl-react/core';
 
 function SettingToggle(allProps: any): JSX.Element {
-  const { text, activeText, inactiveText, isActive, onAction, ...otherProps } =
+  const { text, activeText, inactiveText, isActive, onTap, ...otherProps } =
     allProps;
-
-  const handleStatusChange = useCallback(() => {
-    onAction({ status: !isActive });
-  }, [isActive]);
 
   return (
     <El.Card>
@@ -24,10 +20,7 @@ function SettingToggle(allProps: any): JSX.Element {
             {isActive ? activeText : inactiveText}
           </El.BaseElement>
         </El.Inline>
-        <El.Button
-          special={isActive ? true : undefined}
-          onTap={handleStatusChange}
-        >
+        <El.Button special={isActive ? true : undefined} onTap={onTap}>
           {isActive ? activeText : inactiveText}
         </El.Button>
       </El.Flex>

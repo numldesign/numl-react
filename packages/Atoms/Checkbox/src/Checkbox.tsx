@@ -2,10 +2,19 @@ import React from 'react';
 import { El } from '@numl-react/core';
 
 function Checkbox(allProps: any): JSX.Element {
-  const { id, onTap, label, onInput, value, ...otherProps } = allProps;
+  const {
+    id,
+    onTap,
+    label,
+    items = 'center start',
+    onInput,
+    value,
+    gap = '1x',
+    ...otherProps
+  } = allProps;
 
   return (
-    <El.Pane items="center start" gap="1x">
+    <El.Pane items={items} gap={gap} {...otherProps}>
       <El.Checkbox
         id={id}
         onTap={onTap}

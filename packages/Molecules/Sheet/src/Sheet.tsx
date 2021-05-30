@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { El, Checkbox } from '@numl-react/core';
+import { Button } from '../../../Atoms/Button';
 
 function Sheet(allProps: any): JSX.Element {
   const {
@@ -9,6 +10,9 @@ function Sheet(allProps: any): JSX.Element {
     choices,
     selected,
     onChange,
+    padding = '0',
+    width = 'min 23.75',
+    height = 'min 41.25',
     contentHeight,
     ...otherProps
   } = allProps;
@@ -33,41 +37,54 @@ function Sheet(allProps: any): JSX.Element {
   );
 
   return (
-    <El.Card padding="0" nu-overlay {...otherProps}>
-      {heading ? (
-        <El.Flex
-          padding="2x"
-          gap
-          border="bottom"
-          items="center"
-          content="space-between"
-        >
-          {heading}
-          <El.Button icon="close" onTap={closeAction} />
+    <El.Card
+      height={height}
+      width={width}
+      padding={padding}
+      nu-sheet
+      {...otherProps}
+    >
+      <El.Grid
+        rows="auto 1fr auto"
+        flow="row"
+        items="space-between"
+        height={height}
+      >
+        {heading ? (
+          <El.Flex
+            padding="2x"
+            gap
+            border="bottom"
+            items="center"
+            content="space-between"
+          >
+            {heading}
+            <Button icon="close" clear onTap={closeAction} />
+          </El.Flex>
+        ) : null}
+        <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
+          {choiceList.length
+            ? choiceList.map((choice) => {
+                const { label, value } = choice;
+                const isChecked = selectedValues.has(value) ? true : undefined;
+                return (
+                  <Checkbox
+                    key={value}
+                    label={label}
+                    checked={isChecked}
+                    value={value}
+                    onInput={handleChecklistChange}
+                  />
+                );
+              })
+            : null}
         </El.Flex>
-      ) : null}
-      <El.Flex flow="column" padding="2x" gap="2x" height={contentHeight}>
-        {choiceList.length
-          ? choiceList.map((choice) => {
-              const { label, value } = choice;
-              const isChecked = selectedValues.has(value) ? true : undefined;
-              return (
-                <Checkbox
-                  key={value}
-                  label={label}
-                  checked={isChecked}
-                  value={value}
-                  onInput={handleChecklistChange}
-                />
-              );
-            })
-          : null}
-      </El.Flex>
-      {footerActions ? (
-        <El.Pane content="space-between" gap="1x" padding="2x">
-          {footerActions}
-        </El.Pane>
-      ) : null}
+        {footerActions ? (
+          <El.Pane content="space-between" gap="1x" padding="2x">
+            {footerActions}
+          </El.Pane>
+        ) : null}
+      </El.Grid>
     </El.Card>
   );
 }

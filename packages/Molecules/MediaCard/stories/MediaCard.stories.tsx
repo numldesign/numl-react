@@ -23,7 +23,8 @@ Default.args = {
   description: 'Product details',
   menu: (
     <>
-      <Button.Item>sdasdasd</Button.Item>
+      <Button.Item to="https://www.google.com">Details</Button.Item>
+      <Button.Item>Close</Button.Item>
     </>
   ),
   action: <Button> Learn More </Button>,
