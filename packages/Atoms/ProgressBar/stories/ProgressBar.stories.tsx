@@ -1,6 +1,6 @@
 import React from 'react';
-import { El, NumlProvider, ThemeProvider } from '@numl-react/core';
-import { ProgressBar } from '../index';
+import { NumlProvider, ThemeProvider } from '@numl-react/core';
+import ProgressBar from '../src/ProgressBar';
 
 export default {
   title: 'Example/Atoms/ProgressBar',
@@ -12,11 +12,12 @@ const Template = function ({ ...args }) {
     <NumlProvider>
       <ThemeProvider hue="290" saturation="75" />
       <ThemeProvider name="secondary" hue="240" saturation="75" />
-      <El.Block>
-        <ProgressBar {...args} />
-      </El.Block>
+      <ProgressBar {...args} />
     </NumlProvider>
   );
 };
 
 export const Default = Template.bind({});
+Default.args = {
+  width: '50',
+};

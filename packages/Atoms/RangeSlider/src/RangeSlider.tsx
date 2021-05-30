@@ -8,7 +8,7 @@ const getPlace = (place: string, value: string) => {
 };
 
 function RangeSlider(allProps: any): JSX.Element {
-  const { id, value, tooltipPlace, ...otherProps } = allProps;
+  const { id, value, width = '25', tooltipPlace, ...otherProps } = allProps;
   const [sliderValue, setSliderValue] = useState(value || 0);
   const ref: any = useRef();
 
@@ -30,9 +30,10 @@ function RangeSlider(allProps: any): JSX.Element {
   }, []);
 
   return (
-    <El.Block use-hover box="y">
+    <El.Block use-hover box="y" width={width}>
       <El.RangeSlider
         ref={ref}
+        width={width}
         id={id}
         control={`${id}[value]`}
         {...otherProps}
