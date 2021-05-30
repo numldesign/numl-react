@@ -1,5 +1,5 @@
 import React from 'react';
-import { El, El } from '@numl-react/core';
+import { El } from '@numl-react/core';
 import ResourceList from '../src/ResourceList';
 
 export default {

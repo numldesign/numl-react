@@ -48,33 +48,45 @@ export const WithIcons = (args) => {
         <El.ThemeProvider hue="290" saturation="75" />
         <El.ThemeProvider name="secondary" hue="240" saturation="75" />
 
-        <Menu.Item value="Preview" columns="auto 1fr" onClick={handleMenuClick}>
-          <El.Icon name="eye-outline" />
+        <Menu.Item
+          value="Preview"
+          columns="auto 1fr"
+          icon="eye-outline"
+          onClick={handleMenuClick}
+        >
           Preview
         </Menu.Item>
-        <Menu.Item value="Share" columns="auto 1fr" onClick={handleMenuClick}>
-          <El.Icon name="share-social-outline" />
+        <Menu.Item
+          value="Share"
+          columns="auto 1fr"
+          icon="share-social-outline"
+          onClick={handleMenuClick}
+        >
           Share
         </Menu.Item>
         <Menu.Item
           value="Getlink"
           border="bottom"
           columns="auto 1fr"
+          icon="link-outline"
           onClick={handleMenuClick}
         >
-          <El.Icon name="link-outline" />
           Get link
         </Menu.Item>
-        <Menu.Item value="Copy" columns="auto 1fr" onClick={handleMenuClick}>
-          <El.Icon name="copy-outline" />
+        <Menu.Item
+          value="Copy"
+          columns="auto 1fr"
+          icon="copy-outline"
+          onClick={handleMenuClick}
+        >
           Copy
         </Menu.Item>
         <Menu.Item
           value="Download"
           columns="auto 1fr"
+          icon="download-outline"
           onClick={handleMenuClick}
         >
-          <El.Icon name="download-outline" />
           Download
         </Menu.Item>
       </Menu>
@@ -96,6 +108,7 @@ export const WithHotKeyAndPopup = (args) => {
         <Menu.Item
           value="Cut"
           columns="auto 1fr auto"
+          icon="download-outline"
           use-hotkey="X" // hotkey link with to property
           onClick={handleMenuClick}
         >

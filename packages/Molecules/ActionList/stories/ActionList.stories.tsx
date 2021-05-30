@@ -1,5 +1,5 @@
 import React from 'react';
-import { El, El } from '@numl-react/core';
+import { El } from '@numl-react/core';
 import ActionList from '../src/ActionList';
 
 export default {

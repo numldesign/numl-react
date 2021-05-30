@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
 
 function Menu(allProps: any): JSX.Element {
-  const { children, ...otherProps } = allProps;
+  const { children, fill = 'bg', ...otherProps } = allProps;
   return (
-    <El.Menu width="min 15" {...otherProps}>
+    <El.Menu width="min 15" fill={fill} {...otherProps}>
       {children}
     </El.Menu>
   );
@@ -12,7 +12,7 @@ function Menu(allProps: any): JSX.Element {
 
 Menu.Item = function MenuItem(allProps: any) {
   const ref: any = useRef();
-  const { children, onClick, ...otherProps } = allProps;
+  const { children, fill = 'bg', icon, onClick, ...otherProps } = allProps;
 
   useEffect(() => {
     if (ref.current && onClick) {
@@ -21,7 +21,10 @@ Menu.Item = function MenuItem(allProps: any) {
   }, []);
 
   return (
-    <El.Menuitem ref={ref} {...otherProps}>
+    <El.Menuitem ref={ref} fill={fill} {...otherProps}>
+      {icon ? (
+        <>{icon && typeof icon === 'string' ? <El.Icon name={icon} /> : icon}</>
+      ) : null}
       {children}
     </El.Menuitem>
   );
