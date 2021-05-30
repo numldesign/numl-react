@@ -4,7 +4,7 @@ import { NumlProvider, ThemeProvider, El } from '@numl-react/core';
 import ExceptionList from '../src/ExceptionList';
 
 export default {
-  title: 'Example/Atoms/ExceptionList/Basuc',
+  title: 'Example/Atoms/ExceptionList/Basic',
   component: ExceptionList,
 };
 
