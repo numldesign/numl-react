@@ -24,4 +24,5 @@ Default.args = {
   username: 'Syed Umer Hasan',
   menuIcon: 'menu-outline',
   children: [],
+  menu: 'sdahhjasd',
 };

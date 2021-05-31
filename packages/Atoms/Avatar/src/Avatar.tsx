@@ -9,7 +9,6 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
     children,
     fill,
     showIcon = true,
-    showArrow = false,
     gap = '2x 1x',
     cursor = 'pointer',
     padding = '1x',
@@ -25,29 +24,25 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
       padding={padding}
       {...otherProps}
     >
-      <El.Grid columns="auto auto" flow="row wrap">
-        <Avatar.Profile
-          column="1"
-          gap={gap}
-          fill={fill}
-          username={username}
-          subtitle={subtitle}
-          showIcon={showIcon}
-        />
-        {showArrow ? (
-          <>
-            <El.Inline column="2">
-              <El.DropdownIcon
-                padding="0 1x"
-                name="chevron-down-outline"
-                fill={fill}
-                theme={theme}
-              />
-              <Avatar.Popup>{children}</Avatar.Popup>
-            </El.Inline>
-          </>
-        ) : null}
-      </El.Grid>
+      <Avatar.Profile
+        column="1"
+        gap={gap}
+        fill={fill}
+        username={username}
+        subtitle={subtitle}
+        showIcon={showIcon}
+      />
+      {children && (
+        <El.Inline>
+          <El.DropdownIcon
+            padding="0 1x"
+            name="chevron-down-outline"
+            fill={fill}
+            theme={theme}
+          />
+          <Avatar.Popup>{children}</Avatar.Popup>
+        </El.Inline>
+      )}
     </El.Button>
   );
 };
@@ -93,9 +88,15 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
   const { username, subtitle, showIcon, gap = '1x', ...otherProps } = allProps;
 
   return (
-    <El.Flex columns="auto auto" gap={gap} {...otherProps}>
+    <El.Flex
+      columns="auto auto"
+      responsive="781px|780px"
+      items="center"
+      gap={gap}
+      {...otherProps}
+    >
       <Avatar.Icon username={username} showIcon={showIcon} />
-      <El.Flow flex items="center" flow="row">
+      <El.Flex flow="column" items="start center" hide="n|y">
         {username ? (
           <El.Block>
             {username ? (
@@ -110,7 +111,7 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
             ) : null}
           </El.Block>
         ) : null}
-      </El.Flow>
+      </El.Flex>
     </El.Flex>
   );
 };

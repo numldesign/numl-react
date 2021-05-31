@@ -10,6 +10,7 @@ function TextInput(allProps: any): JSX.Element {
     required,
     link,
     label,
+    width,
     helpText,
     onHelp,
     outline = 'y',
@@ -21,7 +22,7 @@ function TextInput(allProps: any): JSX.Element {
   const id = v4();
 
   return (
-    <El.Flex flow="column">
+    <El.Flex flow="column" width={width}>
       {label ? (
         <El.Flex content="space-between">
           <El.Label for={id}>
