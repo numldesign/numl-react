@@ -1,4 +1,4 @@
-import { NumlProvider } from '@numl-react/core';
+import { El, NumlProvider } from '@numl-react/core';
 import React from 'react';
 import { addParameters, addDecorator } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
