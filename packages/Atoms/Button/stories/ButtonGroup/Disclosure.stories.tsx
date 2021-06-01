@@ -8,11 +8,9 @@ export default {
 };
 
 const Template = (args: any) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <Button.Group {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const Small: any = Template.bind({});

@@ -1,11 +1,5 @@
 import React, { Children } from 'react';
-import {
-  ActionList,
-  El,
-  NumlProvider,
-  TextInput,
-  ThemeProvider,
-} from '@numl-react/core';
+import { ActionList, El, TextInput, ThemeProvider } from '@numl-react/core';
 import Popover from '../../../Molecules/Popover/src/Popover';
 import Button from '../../../Atoms/Button/src/Button';
 
@@ -15,14 +9,12 @@ export default {
 };
 
 const Template = ({ children }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <Button width="10" columns="1fr auto" value="Select" menu={'jfs'}>
       Click Me!
       <Popover>{children}</Popover>
     </Button>
-  </El.NumlProvider>
+  </>
 );
 
 export const Default = Template.bind({});

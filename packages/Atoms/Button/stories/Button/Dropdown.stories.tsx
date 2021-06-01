@@ -9,10 +9,7 @@ export default {
 
 const Template = function (args: any) {
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
+    <>
       <El.BaseElement padding="2x">
         <Button.Small {...args}>Button</Button.Small>
       </El.BaseElement>
@@ -28,7 +25,7 @@ const Template = function (args: any) {
       <El.BaseElement padding="2x">
         <Button.ExtraLarge {...args}>Button</Button.ExtraLarge>
       </El.BaseElement>
-    </El.NumlProvider>
+    </>
   );
 };
 

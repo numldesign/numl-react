@@ -35,11 +35,9 @@ export default {
 };
 
 const Template = (args: any) => (
-  <El.NumlProvider padding="6x 2x">
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <RangeSlider {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const Default = Template.bind({

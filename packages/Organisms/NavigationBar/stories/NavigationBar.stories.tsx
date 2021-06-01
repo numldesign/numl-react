@@ -9,12 +9,9 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <El.NumlProvider padding="0">
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
+  <>
     <NavigationBar {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const Default = Template.bind({});

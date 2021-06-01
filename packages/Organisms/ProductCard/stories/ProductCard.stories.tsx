@@ -8,11 +8,9 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <ProductCard {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const Default: any = Template.bind({});
@@ -31,12 +29,9 @@ Default.args = {
 };
 
 const Template2 = ({ ...args }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
+  <>
     <ProductCard.Landscape {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const ProductCardPotrait: any = Template2.bind({});

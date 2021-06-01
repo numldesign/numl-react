@@ -13,9 +13,7 @@ export const Default = (args) => {
   };
 
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+    <>
       <Menu {...args} border radius size="sm">
         <Menu.Item value="undo" onClick={handleMenuClick}>
           Undo
@@ -33,7 +31,7 @@ export const Default = (args) => {
           Paste
         </Menu.Item>
       </Menu>
-    </El.NumlProvider>
+    </>
   );
 };
 
@@ -43,11 +41,8 @@ export const WithIcons = (args) => {
   };
 
   return (
-    <El.NumlProvider>
+    <>
       <Menu {...args} border radius size="sm">
-        <El.ThemeProvider hue="290" saturation="75" />
-        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
         <Menu.Item
           value="Preview"
           columns="auto 1fr"
@@ -90,7 +85,7 @@ export const WithIcons = (args) => {
           Download
         </Menu.Item>
       </Menu>
-    </El.NumlProvider>
+    </>
   );
 };
 
@@ -100,11 +95,8 @@ export const WithHotKeyAndPopup = (args) => {
   };
 
   return (
-    <El.NumlProvider>
+    <>
       <Menu {...args} border radius size="sm">
-        <El.ThemeProvider hue="290" saturation="75" />
-        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
         <Menu.Item
           value="Cut"
           columns="auto 1fr auto"
@@ -160,7 +152,7 @@ export const WithHotKeyAndPopup = (args) => {
           </El.Popup>
         </Menu.Item>
       </Menu>
-    </El.NumlProvider>
+    </>
   );
 };
 
@@ -173,11 +165,8 @@ export const WithSelectableItems = (args) => {
   };
 
   return (
-    <El.NumlProvider>
+    <>
       <Menu {...args} border radius size="sm">
-        <El.ThemeProvider hue="290" saturation="75" />
-        <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
         <Menu.Item
           value="Single"
           columns="auto 1fr"
@@ -261,6 +250,6 @@ export const WithSelectableItems = (args) => {
           Custom spacing..
         </Menu.Item>
       </Menu>
-    </El.NumlProvider>
+    </>
   );
 };

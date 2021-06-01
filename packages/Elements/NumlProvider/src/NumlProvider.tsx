@@ -7,7 +7,7 @@ import { Root } from '../../Root';
 const NumlProvider = function (props: any) {
   const {
     icons = 'ion',
-    theme = 'dark',
+    theme = 'auto',
     children,
     onInit,
     height = '100%',

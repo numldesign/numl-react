@@ -27,12 +27,10 @@ const Template = function ({ ...args }) {
   React.useEffect(() => {}, [toggleShow]);
 
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+    <>
       <Modal {...args} onCloseAction={toggleShow} show={show} />
       <El.Button onTap={toggleShow}>Click Me</El.Button>
-    </El.NumlProvider>
+    </>
   );
 };
 
@@ -117,16 +115,14 @@ const Template2 = function ({ ...args }) {
   React.useEffect(() => {}, [toggleShow]);
 
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+    <>
       <Modal onCloseAction={toggleShow} show={show} {...args}>
         <ModalHeader heading="This is my heading" onCloseAction="true" />
         <ModalBody>This is my Custom Modal Body</ModalBody>
         <ModalFooter footerContent={<>This is Custom Modal Footer</>} />
       </Modal>
       <El.Button onTap={toggleShow}>Click Me</El.Button>
-    </El.NumlProvider>
+    </>
   );
 };
 

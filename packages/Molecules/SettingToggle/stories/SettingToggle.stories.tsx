@@ -21,12 +21,9 @@ const Template = ({ ...args }) => {
   }, []);
 
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
+    <>
       <SettingToggle onTap={toggle} isActive={value} {...args} />
-    </El.NumlProvider>
+    </>
   );
 };
 

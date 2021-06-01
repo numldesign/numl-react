@@ -7,10 +7,7 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
-
+  <>
     <Form {...args}>
       <Form.Field name="name">
         <Form.Label>Name</Form.Label>
@@ -32,7 +29,7 @@ const Template = ({ ...args }) => (
       </Form.Field>
       <Form.Submit>Submit</Form.Submit>
     </Form>
-  </El.NumlProvider>
+  </>
 );
 
 export const Default = Template.bind({});

@@ -15,11 +15,9 @@ const Template = ({ title, label, icon, ...args }) => {
     { title, label, icon },
   ];
   return (
-    <El.NumlProvider>
-      <El.ThemeProvider hue="290" saturation="75" />
-      <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+    <>
       <ExceptionList items={items} {...args} />
-    </El.NumlProvider>
+    </>
   );
 };
 

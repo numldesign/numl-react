@@ -9,11 +9,9 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <CalloutCard {...args} width="500px" />
-  </El.NumlProvider>
+  </>
 );
 
 export const Default = Template.bind({});
@@ -41,11 +39,9 @@ WithoutAction.args = {
 };
 
 const Template2 = ({ ...args }) => (
-  <El.NumlProvider>
-    <El.ThemeProvider hue="290" saturation="75" />
-    <El.ThemeProvider name="secondary" hue="240" saturation="75" />
+  <>
     <CalloutCard.Landscape {...args} />
-  </El.NumlProvider>
+  </>
 );
 
 export const Landscape = Template2.bind({});
