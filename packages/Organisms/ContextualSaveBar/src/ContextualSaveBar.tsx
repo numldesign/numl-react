@@ -31,7 +31,7 @@ function ContextualSaveBar(props: any): JSX.Element {
       </El.Block>
       <El.Flex
         items="center"
-        width="70%"
+        width="70%|100%"
         content="space-between"
         text="bold"
         color="#bg"

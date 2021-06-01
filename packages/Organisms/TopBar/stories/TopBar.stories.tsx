@@ -5,7 +5,9 @@ import TopBar from '../src/TopBar';
 export default {
   title: 'Example/Organisms/TopBar',
   component: TopBar,
-  argTypes: {},
+  parameters: {
+    layout: '',
+  },
 };
 
 const Template = ({ ...args }) => (
