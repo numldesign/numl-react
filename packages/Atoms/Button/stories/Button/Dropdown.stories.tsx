@@ -3,29 +3,48 @@ import * as El from '@numl-react/elements';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/Dropdown Without Icon',
+  title: 'Example/Atoms/Button/Dropdown',
   component: Button,
 };
 
 const Template = function (args: any) {
   return (
-    <>
-      <El.BaseElement padding="2x">
-        <Button.Small {...args}>Button</Button.Small>
-      </El.BaseElement>
+    <El.Flex gap="2x" flow="column">
+      <El.Pane gap="2x">
+        <Button.Small {...args} icon="swap-vertical-outline">
+          Button
+        </Button.Small>
 
-      <El.BaseElement padding="2x">
-        <Button.Medium {...args}>Button</Button.Medium>
-      </El.BaseElement>
+        <Button.Medium {...args} icon="swap-vertical-outline">
+          Button
+        </Button.Medium>
 
-      <El.BaseElement padding="2x">
-        <Button.Large {...args}>Button</Button.Large>
-      </El.BaseElement>
+        <Button.Large {...args} icon="swap-vertical-outline">
+          Button
+        </Button.Large>
 
-      <El.BaseElement padding="2x">
-        <Button.ExtraLarge {...args}>Button</Button.ExtraLarge>
-      </El.BaseElement>
-    </>
+        <Button.ExtraLarge {...args} icon="swap-vertical-outline">
+          Button
+        </Button.ExtraLarge>
+      </El.Pane>
+      <El.Pane gap="2x">
+        <Button type="small" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="medium" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="large" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="extralarge" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+      </El.Pane>
+    </El.Flex>
   );
 };
 

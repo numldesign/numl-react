@@ -9,7 +9,6 @@ function Button(props: any): JSX.Element {
     icon = undefined,
     menu = undefined,
     selectable = false,
-    color = 'text',
     dropdownIcon = true,
     theme,
     onTap,
@@ -38,14 +37,13 @@ function Button(props: any): JSX.Element {
       outline="n"
       theme={theme}
       size={size}
-      color={color}
       selectable={selectable}
       padding={padding}
       onTap={onTap}
       {...otherProps}
     >
       {icon && typeof icon === 'string' ? (
-        <Button.Icon padding="0" name={icon} theme={theme} color={color} />
+        <Button.Icon padding="0" name={icon} theme={theme} />
       ) : (
         icon
       )}
@@ -55,9 +53,9 @@ function Button(props: any): JSX.Element {
         <>
           {dropdownIcon &&
           (dropdownIcon === 'true' || dropdownIcon === true) ? (
-            <El.DropdownIcon theme={theme} color={color} />
+            <El.DropdownIcon theme={theme} />
           ) : null}
-          <Button.Popup use-menu size={size} theme={theme} color={color}>
+          <Button.Popup use-menu size={size} theme={theme}>
             {menu}
           </Button.Popup>
         </>
@@ -126,32 +124,23 @@ Button.ExtraLarge = (props: any) => {
 };
 
 Button.Label = function ButtonLabel(props: any) {
-  const { children, color = '#text', ...otherProps } = props;
-  return (
-    <El.Label color={color} {...otherProps}>
-      {children}
-    </El.Label>
-  );
+  const { children, ...otherProps } = props;
+  return <El.Label {...otherProps}>{children}</El.Label>;
 };
 
 Button.Icon = function ButtonIcon(props: any) {
-  const {
-    children,
-    padding = '0 0.5x',
-    color = '#text',
-    ...otherProps
-  } = props;
+  const { children, padding = '0 0.5x', ...otherProps } = props;
   return (
-    <El.Icon color={color} padding={padding} {...otherProps}>
+    <El.Icon padding={padding} {...otherProps}>
       {children}
     </El.Icon>
   );
 };
 
 Button.Popup = function ButtonDropDownPopup(props: any) {
-  const { children, ...otherProps } = props;
+  const { children, fill = 'bg', color = 'text', ...otherProps } = props;
   return (
-    <El.Popup use-menu block {...otherProps}>
+    <El.Popup use-menu fill={fill} color={color} block {...otherProps}>
       {children}
     </El.Popup>
   );

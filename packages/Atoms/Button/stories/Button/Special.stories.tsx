@@ -3,67 +3,78 @@ import * as El from '@numl-react/elements';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/States/special',
+  title: 'Example/Atoms/Button/Special',
   component: Button,
 };
 
 const Template = function (args) {
   return (
-    <>
-      <El.BaseElement padding="2x">
-        <Button.Small {...args} size="sm">
+    <El.Flex gap="2x" flow="column">
+      <El.Pane gap="2x">
+        <Button.Small {...args} icon="swap-vertical-outline">
           Button
         </Button.Small>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
-        <Button.Medium {...args} size="md">
+        <Button.Medium {...args} icon="swap-vertical-outline">
           Button
         </Button.Medium>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
-        <Button.Large {...args} size="lg">
+        <Button.Large {...args} icon="swap-vertical-outline">
           Button
         </Button.Large>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
-        <Button.ExtraLarge {...args} size="xl">
+        <Button.ExtraLarge {...args} icon="swap-vertical-outline">
           Button
         </Button.ExtraLarge>
-      </El.BaseElement>
-    </>
+      </El.Pane>
+      <El.Pane gap="2x">
+        <Button type="small" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="medium" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="large" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="extralarge" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+      </El.Pane>
+    </El.Flex>
   );
 };
 
 export const Normal: any = Template.bind({});
 Normal.args = {
-  special: true,
+  theme: 'special',
 };
 
 export const Hover: any = Template.bind({});
 Hover.args = {
   'is-hover': true,
-  special: true,
+  theme: 'special',
 };
 
 export const Pressed: any = Template.bind({});
 Pressed.args = {
   'is-active': true,
-  special: true,
+  theme: 'special',
 };
 
 export const Toggled: any = Template.bind({});
 Toggled.args = {
   'is-pressed': true,
-  special: true,
+  theme: 'special',
 };
 
 export const outline: any = Template.bind({});
 outline.args = {
   outline: 'true',
-  special: true,
+  theme: 'special',
 };
 
 export const Disabled: any = Template.bind({});

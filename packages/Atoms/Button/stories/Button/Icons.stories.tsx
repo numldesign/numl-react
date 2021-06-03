@@ -9,31 +9,42 @@ export default {
 
 const Template = function (args: any) {
   return (
-    <>
-      <El.BaseElement padding="2x">
+    <El.Flex gap="2x" flow="column">
+      <El.Pane gap="2x">
         <Button.Small {...args} icon="swap-vertical-outline">
           Button
         </Button.Small>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
         <Button.Medium {...args} icon="swap-vertical-outline">
           Button
         </Button.Medium>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
         <Button.Large {...args} icon="swap-vertical-outline">
           Button
         </Button.Large>
-      </El.BaseElement>
 
-      <El.BaseElement padding="2x">
         <Button.ExtraLarge {...args} icon="swap-vertical-outline">
           Button
         </Button.ExtraLarge>
-      </El.BaseElement>
-    </>
+      </El.Pane>
+      <El.Pane gap="2x">
+        <Button type="small" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="medium" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="large" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+
+        <Button type="extralarge" {...args} icon="swap-vertical-outline">
+          Button
+        </Button>
+      </El.Pane>
+    </El.Flex>
   );
 };
 
