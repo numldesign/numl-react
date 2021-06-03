@@ -11,6 +11,25 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  themes: {
+    default: 'Dark',
+    list: [
+      { name: 'Dark', color: 'black' },
+      { name: 'Light', color: 'white' },
+    ],
+    onChange: (obj) => {
+      var iframe = document.getElementsByTagName('iframe')[0];
+      console.log(iframe);
+      var elmnt =
+        iframe.contentWindow.document.querySelector('[data-nu-scheme]');
+      console.log(elmnt);
+      setTimeout(() => {
+        if (elmnt) {
+          elmnt.dataset = obj.name;
+        }
+      }, 2000);
+    },
+  },
 };
 
 function AppProviderWithKnobs({ theme, children }, context) {

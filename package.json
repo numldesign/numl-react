@@ -124,6 +124,7 @@
     "react-scripts": "4.0.2",
     "react-test-library": "0.0.1",
     "semantic-release": "17.4.2",
+    "storybook-addon-themes": "^6.1.0",
     "ts-jest": "26.5.4",
     "typedoc": "0.20.36",
     "typescript": "4.2.4",

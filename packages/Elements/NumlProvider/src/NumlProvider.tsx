@@ -21,7 +21,7 @@ const NumlProvider = function (props: any) {
         Nude.scheme && Nude.scheme(theme);
         Nude.init();
         document.documentElement.dataset['nuIcons'] = icons;
-        document.documentElement.dataset['scheme'] = theme;
+        document.documentElement.dataset['nuScheme'] = theme;
         // eslint-disable-next-line no-unused-expressions
         onInit && onInit();
       })
