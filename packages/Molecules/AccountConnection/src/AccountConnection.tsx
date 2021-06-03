@@ -10,7 +10,8 @@ function AccountConnection(allProps: any): JSX.Element {
     onConnectionChange,
     gap = '1',
     flow = 'column',
-    items = 'stretch',
+    width = '100%',
+    items = 'space-between',
     padding = '1.25',
     ...otherProps
   } = allProps;
@@ -25,7 +26,7 @@ function AccountConnection(allProps: any): JSX.Element {
     <El.Card
       padding={padding}
       gap={gap}
-      width="77.75"
+      width={width}
       flow={flow}
       items={items}
       {...otherProps}

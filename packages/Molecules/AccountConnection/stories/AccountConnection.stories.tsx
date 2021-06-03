@@ -12,6 +12,9 @@ export default {
       },
     },
   },
+  parameters: {
+    layout: '',
+  },
 };
 
 const Template = ({ ...args }) => (

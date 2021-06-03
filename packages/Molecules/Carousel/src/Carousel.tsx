@@ -5,8 +5,8 @@ function Carousel(allProps: any): JSX.Element {
   const {
     items,
     activeIndex,
-    width = 'auto',
-    height = 'auto',
+    width = '100%',
+    height = '50%',
     onPreviousClick,
     onNextClick,
     ...otherProps
@@ -41,23 +41,19 @@ function Carousel(allProps: any): JSX.Element {
       {...otherProps}
     >
       <El.Block overflow="hidden">
-        <El.Pane flow="row nowrap" gap="0" width={`${slides}00%`}>
+        <El.Pane flow="row nowrap" gap="0">
           {items.map((_image: any) => {
             const move = currentSlide === 0 ? '0 0' : `-${currentSlide}00% 0`;
             return (
-              <El.Flex
-                width="100%"
-                move={move}
+              <El.Image
+                src={_image}
+                fit="fill"
                 transition="move .2s"
                 content="center"
-              >
-                <El.Image
-                  src={_image}
-                  fit="fill"
-                  height={height}
-                  width={width}
-                />
-              </El.Flex>
+                move={move}
+                height={height}
+                width={width}
+              />
             );
           })}
         </El.Pane>

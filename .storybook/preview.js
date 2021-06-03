@@ -1,8 +1,6 @@
 import { El, NumlProvider } from '@numl-react/core';
 import React from 'react';
-import { addParameters, addDecorator } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
-import { color, withKnobs } from '@storybook/addon-knobs';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
