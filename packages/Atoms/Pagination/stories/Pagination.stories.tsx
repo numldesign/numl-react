@@ -8,10 +8,13 @@ export default {
   component: Pagination,
 };
 
-const Template = ({ ...args }) => (
-  <>
-    <Pagination {...args} />
-  </>
+const Template = ({ flow, ...args }) => (
+  <El.Flex gap flow={flow && flow == 'column' ? 'row' : 'column'}>
+    <Pagination flow={flow} type="small" {...args} />
+    <Pagination flow={flow} type="medium" {...args} />
+    <Pagination flow={flow} type="large" {...args} />
+    <Pagination flow={flow} type="extralarge" {...args} />
+  </El.Flex>
 );
 
 export const Basic = Template.bind({});
@@ -27,16 +30,10 @@ Vertical.args = {
   next: <Button icon="chevron-down-outline" />,
 };
 
-const AttributeTemplate = ({ ...args }) => (
-  <>
-    <Pagination {...args} />
-  </>
-);
-
-export const Horizontal = AttributeTemplate.bind({});
+export const Horizontal = Template.bind({});
 Horizontal.args = {
-  previous: <Button icon="chevron-up-outline" />,
-  next: <Button icon="chevron-down-outline" />,
+  previous: <Button icon="chevron-back-outline" />,
+  next: <Button icon="chevron-forward-outline" />,
 };
 
 export const WithLabel = Template.bind({});

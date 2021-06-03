@@ -6,40 +6,43 @@ import Button from '../../Button/src/Button';
 function Pagination(allProps: any): JSX.Element {
   const {
     flow = 'row',
-    border = '0',
     label,
-    fill = 'transparent',
     previous,
+    type = 'medium',
     next,
     ...otherProps
   } = allProps;
 
   return (
-    <Button.Group
+    <Button.SegmentedGroup
+      fill="transparent"
       flex
-      fill={fill}
-      border={border}
-      items="center"
+      items="stretch"
       flow={flow}
-      group-radius={flow}
       {...otherProps}
     >
       {typeof previous === 'string' ? (
-        <El.Button id="previous">
+        <El.Button type={type} id="previous">
           <Icon name={previous} />
         </El.Button>
       ) : (
         <El.BaseElement>{previous}</El.BaseElement>
       )}
-      {label ? <El.Label padding="0 1x">{label}</El.Label> : null}
+      {label ? (
+        <El.Flex flex items="center" fill="bg">
+          <El.Label padding="0 1x" color="text">
+            {label}
+          </El.Label>
+        </El.Flex>
+      ) : null}
       {typeof next === 'string' ? (
-        <El.Button id="next">
+        <El.Button type={type} id="next">
           <Icon name={next} />
         </El.Button>
       ) : (
         <El.BaseElement>{next}</El.BaseElement>
       )}
-    </Button.Group>
+    </Button.SegmentedGroup>
   );
 }
 

@@ -26,6 +26,6 @@ Icon.args = {
 
 export const CustomIcon = Template.bind({});
 CustomIcon.args = {
-  icon: <Icon name="information-circle-outline" />,
+  icon: <El.Icon name="information-circle-outline" />,
   children: 'This is default message',
 };

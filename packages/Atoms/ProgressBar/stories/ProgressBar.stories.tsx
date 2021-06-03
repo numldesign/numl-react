@@ -5,17 +5,14 @@ import ProgressBar from '../src/ProgressBar';
 export default {
   title: 'Example/Atoms/ProgressBar',
   component: ProgressBar,
+  parameters: {
+    layout: '',
+  },
 };
 
-const Template = function ({ ...args }) {
-  return (
-    <>
-      <ProgressBar {...args} />
-    </>
-  );
+const Template = function (args) {
+  return <ProgressBar {...args} />;
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  width: '50',
-};
+Default.args = {};
