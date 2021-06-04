@@ -18,21 +18,23 @@ export const parameters = {
       { name: 'Light', value: 'light', color: 'white' },
     ],
     onChange: (obj) => {
+      localStorage.setItem('theme', obj.value);
       var iframe = document.getElementsByTagName('iframe')[0];
       var elmnt =
         iframe.contentWindow.document.querySelector('[data-nu-scheme]');
       if (obj) {
         elmnt.dataset['nuScheme'] = obj.value;
       } else {
-        elmnt.dataset['nuScheme'] = '';
+        elmnt.dataset['nuScheme'] = 'auto';
       }
     },
   },
 };
 
 function AppProviderWithKnobs({ theme, children }, context) {
+  var customtheme = localStorage.getItem('theme');
   return (
-    <NumlProvider theme={theme}>
+    <NumlProvider theme={customtheme || 'dark'}>
       <El.ThemeProvider hue="290" saturation="75" />
       <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       {children}
@@ -44,17 +46,6 @@ const withContextsDecorator = withContexts([
   {
     title: 'Color scheme',
     components: [AppProviderWithKnobs],
-    params: [
-      {
-        default: true,
-        name: 'Light Mode',
-        props: { theme: 'light' },
-      },
-      {
-        name: 'Dark Mode',
-        props: { theme: 'dark' },
-      },
-    ],
   },
 ]);
 

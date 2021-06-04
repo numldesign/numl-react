@@ -85,12 +85,19 @@ Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
 };
 
 Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
-  const { username, subtitle, showIcon, gap = '1x', ...otherProps } = allProps;
+  const {
+    username,
+    subtitle,
+    responsive = '781px|780px',
+    showIcon,
+    gap = '1x',
+    ...otherProps
+  } = allProps;
 
   return (
     <El.Flex
       columns="auto auto"
-      responsive="781px|780px"
+      responsive={responsive}
       items="center"
       gap={gap}
       {...otherProps}

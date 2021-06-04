@@ -18,6 +18,8 @@ function Pagination(allProps: any): JSX.Element {
       fill="transparent"
       flex
       items="stretch"
+      border="0"
+      group-radius={flow}
       flow={flow}
       {...otherProps}
     >

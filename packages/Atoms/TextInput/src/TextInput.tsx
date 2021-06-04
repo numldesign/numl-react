@@ -127,6 +127,7 @@ TextInput.IFTALabels = (allProps: any) => {
           ) : null}
           <El.Input
             padding="0"
+            radius="0"
             id={id}
             disabled={disabled || disabled === 'true' ? true : undefined}
             {...otherProps}

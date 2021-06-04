@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Card } from '@numl-react/elements';
 
-function DatePicker(allProps: any) {
+function DatePicker(allProps: any): JSX.Element {
   const ref: any = useRef();
   const { onChange, ...otherProps } = allProps;
 

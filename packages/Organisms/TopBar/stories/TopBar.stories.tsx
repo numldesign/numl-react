@@ -6,7 +6,7 @@ export default {
   title: 'Example/Organisms/TopBar',
   component: TopBar,
   parameters: {
-    layout: '',
+    layout: 'none',
   },
 };
 

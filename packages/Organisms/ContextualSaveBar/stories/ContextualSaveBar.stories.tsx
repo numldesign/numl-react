@@ -7,7 +7,7 @@ export default {
   title: 'Example/Organisms/ContextualSaveBar',
   component: ContextualSaveBar,
   parameters: {
-    layout: '',
+    layout: 'none',
   },
 };
 

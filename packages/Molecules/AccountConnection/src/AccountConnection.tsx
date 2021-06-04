@@ -1,27 +1,22 @@
 import React from 'react';
 import * as El from '@numl-react/elements';
-import { Avatar } from '../../../Atoms/Avatar';
+import Avatar from '../../../Atoms/Avatar/src/Avatar';
 
 function AccountConnection(allProps: any): JSX.Element {
   const {
     username,
     children,
     subtitle,
-    onConnectionChange,
+    connection,
     gap = '1',
     flow = 'column',
+    isConnected,
+    toggle,
     width = '100%',
     items = 'space-between',
     padding = '1.25',
     ...otherProps
   } = allProps;
-
-  const [isConnected, setValue] = React.useState(false);
-  const toggle = React.useCallback(() => {
-    setValue((v) => !v);
-    onConnectionChange();
-  }, []);
-
   return (
     <El.Card
       padding={padding}
@@ -32,11 +27,11 @@ function AccountConnection(allProps: any): JSX.Element {
       {...otherProps}
     >
       <El.Pane content="space-between" flow="row wrap" gap="1x">
-        {isConnected ? (
+        {isConnected && (isConnected === true || isConnected === 'true') ? (
           <Avatar.Profile
-            gap
             username={username}
             subtitle={subtitle}
+            responsive="0"
             showIcon="false"
           />
         ) : (
@@ -49,8 +44,8 @@ function AccountConnection(allProps: any): JSX.Element {
             </El.Block>
           </El.Block>
         )}
-        <El.Button theme={!isConnected ? 'special' : 'default'} onTap={toggle}>
-          {isConnected ? 'Disconnect' : 'Connect'}
+        <El.Button theme={!connection ? 'special' : 'default'} onTap={toggle}>
+          {connection ? 'Disconnect' : 'Connect'}
         </El.Button>
       </El.Pane>
       {children ? <El.Block>{children}</El.Block> : null}

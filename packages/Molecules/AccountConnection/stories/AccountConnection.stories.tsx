@@ -13,20 +13,28 @@ export default {
     },
   },
   parameters: {
-    layout: '',
+    layout: 'none',
   },
 };
 
-const Template = ({ ...args }) => (
-  <>
-    <AccountConnection {...args} />
-  </>
-);
+const Template = ({ onConnectionChange, ...args }) => {
+  const [connection, setValue] = React.useState(false);
+  const toggle = React.useCallback(() => {
+    setValue((v) => !v);
+    onConnectionChange(connection);
+  }, []);
+
+  return (
+    <>
+      <AccountConnection {...args} connection={connection} toggle={toggle} />
+    </>
+  );
+};
 
 export const Default = Template.bind({});
 Default.args = {
   username: 'Example App',
-  isConnected: false,
+  isConnected: 'false',
   onConnectionChange: (props) => console.log(props),
   subtitle: 'Account connected',
   children: [
@@ -39,7 +47,7 @@ Default.args = {
 export const WithoutChildren = Template.bind({});
 WithoutChildren.args = {
   username: 'Example App',
-  isConnected: true,
+  isConnected: 'true',
   onConnectionChange: (props) => console.log(props),
   subtitle: 'Account connected',
 };

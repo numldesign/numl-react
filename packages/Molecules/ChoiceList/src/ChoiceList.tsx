@@ -16,7 +16,7 @@ const getDefaultCheckValue = (value: any): any => {
   return new Set();
 };
 
-function ChoiceList(allProps: any) {
+function ChoiceList(allProps: any): JSX.Element {
   const { heading, choices, selected, onChange, multiSelect, ...otherProps } =
     allProps;
 

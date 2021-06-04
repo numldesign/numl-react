@@ -6,7 +6,7 @@ export default {
   title: 'Example/Atoms/ProgressBar',
   component: ProgressBar,
   parameters: {
-    layout: '',
+    layout: 'none',
   },
 };
 

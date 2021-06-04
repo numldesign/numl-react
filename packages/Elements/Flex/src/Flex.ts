@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Flex = React.forwardRef((props: any, ref) => {
+const Flex = React.forwardRef((props: any, ref): JSX.Element => {
   const { children, ...otherProps } = props;
 
   return React.createElement(
