@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/resource-list",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -42,7 +42,7 @@
     "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.24",
+    "@numl-react/core": "^0.0.25",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
