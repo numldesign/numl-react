@@ -23,23 +23,24 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./index.ts",
-      "default": "./index.ts"
+      "require": "index.ts",
+      "default": "index.ts"
     }
   },
-  "main": "./dist/core.cjs.js",
-  "module": "./dist/core.es.js",
-  "types": "./dist/types/index.d.ts",
-  "typings": "./dist/types/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/Molecules/MediaCard/index.d.ts",
+  "typings": "types/Molecules/MediaCard/index.d.ts",
   "files": [
     "dist",
+    "types",
     "index.js",
     "CHANGELOG.md"
   ],
   "scripts": {
     "build": "vite build",
     "postbuild": "yarn build:types",
-    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
+    "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
     "@numl-react/core": "^0.0.25",

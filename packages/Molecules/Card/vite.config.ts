@@ -5,7 +5,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'Card',
-      fileName: 'core',
+      fileName: 'index',
       formats: ['es', 'cjs'],
       minify: false,
     },

@@ -15,7 +15,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'Tag',
-      fileName: 'core',
+      fileName: 'index',
       formats: ['es', 'cjs'],
       minify: false,
     },

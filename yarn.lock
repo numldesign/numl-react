@@ -3204,6 +3204,15 @@
     node-gyp "^7.1.0"
     read-package-json-fast "^2.0.1"
 
+"@numl-react/elements@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@numl-react/elements/-/elements-0.0.25.tgz#bb5643a4ca019873d7c4e4c1dcd0332331a00dad"
+  integrity sha512-KMz2RrY4NjuXQtt1tEaC2KZcc1ye5hmgCcMkVFtiDtVmaR2R+aK0roVhD/iNiSJQI1m5f1c9dCtXI6fKmqQ+Vg==
+  dependencies:
+    "@numl-react/utility" "^0.0.25"
+    react "17.0.2"
+    react-dom "17.0.2"
+
 "@octokit/auth-token@^2.4.0", "@octokit/auth-token@^2.4.4":
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/@octokit/auth-token/-/auth-token-2.4.5.tgz#568ccfb8cb46f36441fac094ce34f7a875b197f3"

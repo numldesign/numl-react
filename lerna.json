@@ -4,9 +4,9 @@
     "packages/*",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*",
-    "packages/Elements/*"
+    "packages/Molecules/*"
   ],
+  "concurrency": 1,
   "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "0.0.24"

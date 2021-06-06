@@ -16,21 +16,22 @@
   "scripts": {
     "postbuild": "yarn build:types",
     "build": "vite build",
-    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
+    "build:types": "npx tsc -b --verbose"
   },
-  "main": "./dist/core.cjs.js",
-  "module": "./dist/core.es.js",
-  "types": "./dist/types/index.d.ts",
-  "typings": "./dist/types/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/index.d.ts",
+  "typings": "types/index.d.ts",
   "files": [
     "dist",
+    "types",
     "index.js",
     "CHANGELOG.md"
   ],
   "exports": {
     ".": {
-      "require": "./index.ts",
-      "default": "./index.ts"
+      "require": "index.ts",
+      "default": "index.ts"
     }
   },
   "sideEffects": false,

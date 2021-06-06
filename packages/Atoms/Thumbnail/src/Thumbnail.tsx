@@ -1,7 +1,7 @@
 import React from 'react';
 import * as El from '@numl-react/elements';
 
-function Thumbnail(allProps: any) {
+function Thumbnail(allProps: any): JSX.Element {
   const { source, alt, fit, ...otherProps } = allProps;
 
   return (
@@ -9,7 +9,7 @@ function Thumbnail(allProps: any) {
       display="flex"
       content="center"
       items="center"
-      radius=".5r"
+      radius
       overflow="no"
       {...otherProps}
     >

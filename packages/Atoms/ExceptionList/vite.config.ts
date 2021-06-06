@@ -7,7 +7,7 @@ module.exports = {
     lib: {
       entry: path.resolve(__dirname, './index.ts'),
       name: 'ExceptionList',
-      fileName: 'core',
+      fileName: 'index',
       formats: ['es', 'cjs'],
       minify: false,
     },
