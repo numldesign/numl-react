@@ -1,6 +1,6 @@
 import React from 'react';
 import * as El from '@numl-react/elements';
-import { v4 } from 'uuid';
+import { nanoid } from 'nanoid';
 
 function TextInput(allProps: any): JSX.Element {
   const {
@@ -19,22 +19,22 @@ function TextInput(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
 
-  const id = v4();
+  const id = `nu-input-${nanoid()}`;
 
   return (
-    <El.Flex flow="column" width={width}>
+    <El.Flex id={`nu-textinput-${nanoid()}`} flow="column" width={width}>
       {label ? (
         <El.Flex content="space-between">
-          <El.Label for={id}>
+          <El.Label for={id} id={`label-${nanoid()}`}>
             {label}
             {required ? (
-              <El.BaseElement padding="0 1x" theme="danger">
+              <El.Inline theme="danger" padding="0 1x">
                 *
-              </El.BaseElement>
+              </El.Inline>
             ) : null}
           </El.Label>
           {link ? (
-            <El.Link to={link.to} text="n">
+            <El.Link to={link.to} id={`label-link-${nanoid()}`}>
               {link.text}
             </El.Link>
           ) : (
@@ -42,7 +42,10 @@ function TextInput(allProps: any): JSX.Element {
           )}
         </El.Flex>
       ) : null}
-      <El.InputGroup height={otherProps.height || undefined}>
+      <El.InputGroup
+        id={`input-group-${nanoid()}`}
+        height={otherProps.height || undefined}
+      >
         {icon &&
           (typeof icon === 'string' ? (
             <El.Icon inline padding="0 1x" name={icon} />
@@ -76,9 +79,8 @@ function TextInput(allProps: any): JSX.Element {
         <El.Flex content="space-between">
           <El.Label size="sm">{helpText}</El.Label>
           <El.Button
-            border="0"
+            clear
             padding="0 0.5x"
-            fill="transparent"
             onTap={onHelp}
             mark="false"
             hover="false"
@@ -90,7 +92,12 @@ function TextInput(allProps: any): JSX.Element {
       {validation && validation.length > 0 ? (
         <El.Block>
           {validation.map((each: any) => (
-            <El.Check for={id} assert={each.assert} color="hue(1)">
+            <El.Check
+              for={id}
+              key={`check-${nanoid()}`}
+              assert={each.assert}
+              color="hue(1)"
+            >
               {each.message}
             </El.Check>
           ))}
@@ -108,8 +115,9 @@ TextInput.IFTALabels = (allProps: any) => {
     disabled = false,
     ...otherProps
   } = allProps;
+  let count = 0;
 
-  const id = v4();
+  const id = nanoid();
 
   return (
     <El.Flow>
@@ -137,7 +145,13 @@ TextInput.IFTALabels = (allProps: any) => {
       {validation && validation.length > 0 ? (
         <El.Block>
           {validation.map((each: any) => (
-            <El.Check for={id} assert={each.assert} color="hue(1)">
+            <El.Check
+              for={id}
+              // eslint-disable-next-line no-plusplus
+              key={count++}
+              assert={each.assert}
+              color="hue(1)"
+            >
               {each.message}
             </El.Check>
           ))}

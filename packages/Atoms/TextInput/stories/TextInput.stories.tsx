@@ -44,6 +44,12 @@ export const WithLabel = Template.bind({});
 WithLabel.args = {
   label: 'Text Field',
   placeholder: 'Text Field',
+  onkeydown: (e) => {
+    console.log(e);
+  },
+  onChange: (e) => {
+    console.log(e);
+  },
 };
 
 export const WithLabelLink = Template.bind({});
@@ -54,6 +60,17 @@ WithLabelLink.args = {
     to: 'https://numl.design/',
     text: 'link',
   },
+};
+
+export const Required = Template.bind({});
+Required.args = {
+  label: 'Text Field',
+  placeholder: 'Text Field',
+  link: {
+    to: 'https://numl.design/',
+    text: 'link',
+  },
+  required: true,
 };
 
 export const WithIcon = Template.bind({});

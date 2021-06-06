@@ -39,10 +39,11 @@
   "scripts": {
     "build": "vite build",
     "postbuild": "yarn build:types",
-    "build:types": "npx tsc index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
+    "build:types": "npx tsc -b index.ts --esModuleInterop --skipLibCheck --skipDefaultLibCheck --declaration --emitDeclarationOnly --outDir dist/types --jsx react"
   },
   "dependencies": {
     "@numl-react/elements": "^0.0.25",
+    "nanoid": "^3.1.23",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
