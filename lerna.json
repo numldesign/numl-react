@@ -4,7 +4,8 @@
     "packages/*",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*"
+    "packages/Molecules/*",
+    "packages/Elements/"
   ],
   "concurrency": 1,
   "useWorkspaces": true,

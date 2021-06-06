@@ -1,5 +1,23 @@
 # @numl-react/elements
 
+## 0.0.26
+
+### Patch Changes
+
+- 0.026
+
+- Updated dependencies []:
+  - @numl-react/utility@0.0.27
+
+## 0.0.25
+
+### Patch Changes
+
+- typing issue fixture
+
+- Updated dependencies []:
+  - @numl-react/utility@0.0.26
+
 ## 0.0.25
 
 ### Patch Changes
