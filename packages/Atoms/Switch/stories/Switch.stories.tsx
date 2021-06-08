@@ -1,6 +1,6 @@
 import React from 'react';
 import * as El from '@numl-react/elements';
-import { Switch } from '../index';
+import { Switch } from '@numl-react/atoms';
 
 export default {
   title: 'Example/Atoms/Switch',
