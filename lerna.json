@@ -1,11 +1,14 @@
 {
   "lerna": "2.0.0",
   "packages": [
-    "packages/*",
+    "packages/Elements",
+    "packages/Utilities",
+    "packages/Atoms",
+    "packages/Core",
+    "packages/Molecules",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*",
-    "packages/Elements"
+    "packages/Molecules/*"
   ],
   "concurrency": 1,
   "useWorkspaces": true,

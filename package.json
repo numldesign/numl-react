@@ -24,11 +24,14 @@
   "license": "MIT",
   "author": "Numl.Design Team",
   "workspaces": [
-    "packages/*",
+    "packages/Elements",
+    "packages/Utilities",
+    "packages/Atoms",
+    "packages/Core",
+    "packages/Molecules",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*",
-    "packages/Elements/*"
+    "packages/Molecules/*"
   ],
   "scripts": {
     "commit": "yarn run prettier && cz",
