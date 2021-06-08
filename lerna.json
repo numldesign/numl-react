@@ -10,5 +10,5 @@
   "concurrency": 1,
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "0.0.27-prerelease"
+  "version": "0.0.28"
 }
