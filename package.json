@@ -24,11 +24,14 @@
   "license": "MIT",
   "author": "Numl.Design Team",
   "workspaces": [
-    "packages/*",
+    "packages/Elements",
+    "packages/Utilities",
+    "packages/Atoms",
+    "packages/Core",
+    "packages/Molecules",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*",
-    "packages/Elements/*"
+    "packages/Molecules/*"
   ],
   "scripts": {
     "commit": "yarn run prettier && cz",
@@ -66,9 +69,6 @@
     "@commitlint/config-conventional": "12.1.1",
     "@commitlint/config-lerna-scopes": "12.1.1",
     "@manypkg/cli": "0.17.0",
-    "@numl-react/atoms": "0.0.27",
-    "@numl-react/core": "0.0.27",
-    "@numl-react/elements": "0.0.27",
     "@rollup/plugin-babel": "5.1.0",
     "@rollup/plugin-commonjs": "18.0.0",
     "@rollup/plugin-node-resolve": "13.0.0",
