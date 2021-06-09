@@ -17,6 +17,9 @@
   "command": {
     "version": {
       "push": false
+    },
+    "publish": {
+      "registry": "http://localhost:4873"
     }
   }
 }
