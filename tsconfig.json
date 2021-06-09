@@ -17,7 +17,7 @@
     "declarationMap": true /* Generates a sourcemap for each corresponding '.d.ts' file. */,
     "sourceMap": true /* Generates corresponding '.map' file. */,
     // "outFile": "./",                             /* Concatenate and emit output to single file. */
-    "outDir": "./dist/typings" /* Redirect output structure to the directory. */,
+    "outDir": "dist/typings" /* Redirect output structure to the directory. */,
     "rootDir": "./packages" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
     // "composite": true,                           /* Enable project compilation */
     // "tsBuildInfoFile": "./",                     /* Specify file to store incremental compilation information */
@@ -67,23 +67,5 @@
     /* Advanced Options */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
-  },
-  "exclude": [
-    "*.config.js",
-    "node_modules",
-    "./packages/Molecules/**/**/*.stories.tsx",
-    "**/**/vite.config.ts",
-    "**/**/__tests__/*.test.tsx",
-    "build",
-    "dist",
-    "**/*.js",
-    "**/*.jsx"
-  ],
-  "include": [
-    "packages/Elements/declarations.d.ts",
-    "packages/global.d.ts",
-    "packages/*",
-    "**/**/.ts",
-    "**/**/.tsx"
-  ]
+  }
 }

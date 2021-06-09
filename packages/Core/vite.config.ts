@@ -9,7 +9,7 @@ module.exports = {
       minify: false,
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
+      // make sure to externalize deps that shouldn't be bundledvite build
       // into your library
 
       external: [
