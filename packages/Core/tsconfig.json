@@ -8,5 +8,5 @@
     "skipDefaultLibCheck": true,
     "emitDeclarationOnly": true
   },
-  "include": ["index.ts"]
+  "include": ["./index.ts"]
 }

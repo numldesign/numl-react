@@ -23,14 +23,14 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "index.ts",
-      "default": "index.ts"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "types/Atoms/Pagination/index.d.ts",
-  "typings": "types/Atoms/Pagination/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/Atoms/Pagination/index.d.ts",
+  "typings": "./types/Atoms/Pagination/index.d.ts",
   "files": [
     "dist",
     "types",
