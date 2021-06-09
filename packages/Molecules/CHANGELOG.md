@@ -1,5 +1,16 @@
 # @numl-react/molecules
 
+## 0.0.30
+
+### Patch Changes
+
+- [#91](https://github.com/numldesign/numl-react/pull/91) [`7f849ce`](https://github.com/numldesign/numl-react/commit/7f849ceecc879ff5bc5dd39a8bb848ab296995aa) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - 0.0.30
+
+- Updated dependencies [[`7f849ce`](https://github.com/numldesign/numl-react/commit/7f849ceecc879ff5bc5dd39a8bb848ab296995aa)]:
+  - @numl-react/core@0.0.30
+  - @numl-react/elements@0.0.30
+  - @numl-react/utility@0.0.30
+
 ## 0.0.29
 
 ### Patch Changes
