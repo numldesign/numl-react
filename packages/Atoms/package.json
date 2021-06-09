@@ -27,10 +27,10 @@
       "default": "./index.ts"
     }
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
-  "types": "./types/Atoms/index.d.ts",
-  "typings": "./types/Atoms/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/Atoms/index.d.ts",
+  "typings": "types/Atoms/index.d.ts",
   "files": [
     "dist",
     "types",
@@ -39,14 +39,13 @@
   ],
   "scripts": {
     "build": "vite build",
+    "prebuild": "rimraf dist",
     "postbuild": "yarn build:types",
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
     "@numl-react/elements": "^0.0.30",
-    "@numl-react/utility": "^0.0.30",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@numl-react/utility": "^0.0.30"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",

@@ -27,9 +27,9 @@
       "default": "./index.ts"
     }
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
-  "types": "./types/Molecules/OptionList/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/Molecules/OptionList/index.d.ts",
   "typings": "types/Molecules/OptionList/index.d.ts",
   "files": [
     "dist",
@@ -39,13 +39,12 @@
   ],
   "scripts": {
     "build": "vite build",
+    "prebuild": "rimraf dist",
     "postbuild": "yarn build:types",
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.30",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@numl-react/core": "^0.0.30"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
@@ -62,9 +61,9 @@
     "vite": "2.2.4"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0",
-    "typescript": "4.2.0 || 4.2.4",
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.0",
+    "typescript": ">=3.51",
     "vite": "*"
   },
   "publishConfig": {
