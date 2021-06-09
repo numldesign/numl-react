@@ -13,7 +13,7 @@
   "concurrency": 1,
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "0.0.29-alpha.0",
+  "version": "0.0.29-alpha.1",
   "command": {
     "version": {
       "push": false
