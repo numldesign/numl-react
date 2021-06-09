@@ -23,13 +23,13 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "require": "index.ts",
-      "default": "index.ts"
+      "require": "./index.ts",
+      "default": "./index.ts"
     }
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "types/FooterHelp/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./types/FooterHelp/index.d.ts",
   "typings": "types/FooterHelp/index.d.ts",
   "files": [
     "dist",
