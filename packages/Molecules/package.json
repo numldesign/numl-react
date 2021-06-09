@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/molecules",
-  "version": "0.0.29-alpha.1",
+  "version": "0.0.29-alpha.2",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -43,9 +43,9 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.29-alpha.1",
-    "@numl-react/elements": "^0.0.29-alpha.1",
-    "@numl-react/utility": "^0.0.29-alpha.1",
+    "@numl-react/core": "^0.0.29-alpha.2",
+    "@numl-react/elements": "^0.0.29-alpha.2",
+    "@numl-react/utility": "^0.0.29-alpha.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
