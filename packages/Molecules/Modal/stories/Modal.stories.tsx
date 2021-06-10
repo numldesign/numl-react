@@ -1,9 +1,9 @@
 import {
-    El,
-    Modal,
-    ModalBody,
-    ModalFooter,
-    ModalHeader
+  El,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
 } from '@numl-react/core';
 import * as React from 'react';
 

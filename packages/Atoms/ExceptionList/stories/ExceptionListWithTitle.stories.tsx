@@ -1,7 +1,6 @@
 import React from 'react';
 import ExceptionList from '../src/ExceptionList';
 
-
 export default {
   title: 'Numl React/Atoms/ExceptionList/Title',
   component: ExceptionList,
