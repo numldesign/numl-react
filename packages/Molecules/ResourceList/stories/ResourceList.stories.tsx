@@ -1,9 +1,9 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 import ResourceList from '../src/ResourceList';
 
 export default {
-  title: 'Example/Molecules/ResourceList',
+  title: 'Numl React/Molecules/ResourceList',
   component: ResourceList,
 };
 

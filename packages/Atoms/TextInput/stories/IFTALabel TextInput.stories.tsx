@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import TextInput from '../src/TextInput';
 
 export default {
-  title: 'Example/Atoms/TextInput/IFTA Labels',
+  title: 'Numl React/Atoms/TextInput/IFTA Labels',
   component: TextInput,
 };
 

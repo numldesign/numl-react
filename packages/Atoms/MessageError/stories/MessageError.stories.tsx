@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import MessageError from '../src/MessageError';
 
 export default {
-  title: 'Example/Atoms/MessageError',
+  title: 'Numl React/Atoms/MessageError',
   component: MessageError,
 };
 

@@ -1,10 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import * as El from '@numl-react/elements';
+import React from 'react';
 import ChoiceList from '../src/ChoiceList';
-import TextInput from '../../../Atoms/TextInput/src/TextInput';
 
 export default {
-  title: 'Example/Molecules/ChoiceList',
+  title: 'Numl React/Molecules/ChoiceList',
   component: ChoiceList,
 };
 

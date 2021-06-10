@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import LocationCard from '../src/LocationCard';
 
 export default {
-  title: 'Example/Molecules/LocationCard',
+  title: 'Numl React/Molecules/LocationCard',
   component: LocationCard,
   argTypes: {
     name: {

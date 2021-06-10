@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Radio from '../src/Radio';
 
 export default {
-  title: 'Example/Atoms/Radio',
+  title: 'Numl React/Atoms/Radio',
   component: Radio,
 };
 

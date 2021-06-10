@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Chip from '../src/Chip';
 
 export default {
-  title: 'Example/Atoms/Chip/With Icon Text And Action',
+  title: 'Numl React/Atoms/Chip/With Icon Text And Action',
   component: Chip,
 };
 

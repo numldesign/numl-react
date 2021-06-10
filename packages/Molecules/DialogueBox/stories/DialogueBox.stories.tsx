@@ -1,11 +1,11 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
-import DialogueBox from '../src/DialogueBox';
+import React from 'react';
 import Avatar from '../../../Atoms/Avatar/src/Avatar';
 import Button from '../../../Atoms/Button/src/Button';
+import DialogueBox from '../src/DialogueBox';
 
 export default {
-  title: 'Example/Molecules/DialogueBox',
+  title: 'Numl React/Molecules/DialogueBox',
   component: DialogueBox,
 };
 

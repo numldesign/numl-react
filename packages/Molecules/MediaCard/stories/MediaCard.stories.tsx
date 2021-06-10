@@ -1,10 +1,9 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
-import MediaCard from '../../MediaCard/src/MediaCard';
 import Button from '../../../Atoms/Button/src/Button';
+import MediaCard from '../../MediaCard/src/MediaCard';
 
 export default {
-  title: 'Example/Molecules/MediaCard',
+  title: 'Numl React/Molecules/MediaCard',
   component: MediaCard,
 };
 

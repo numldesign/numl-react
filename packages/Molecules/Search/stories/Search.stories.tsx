@@ -1,8 +1,8 @@
-import React from 'react';
 import { El, Search } from '@numl-react/core';
+import React from 'react';
 
 export default {
-  title: 'Example/Molecules/Search',
+  title: 'Numl React/Molecules/Search',
   component: Search,
 };
 

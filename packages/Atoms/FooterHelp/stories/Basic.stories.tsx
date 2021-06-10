@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import FooterHelp from '../src/FooterHelp';
 
 export default {
-  title: 'Example/Atoms/FooterHelp/Basic',
+  title: 'Numl React/Atoms/FooterHelp/Basic',
   component: FooterHelp,
 };
 

@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Checkbox from '../src/Checkbox';
 
 export default {
-  title: 'Example/Atoms/Checkbox/Themes',
+  title: 'Numl React/Atoms/Checkbox/Themes',
   component: Checkbox,
 };
 

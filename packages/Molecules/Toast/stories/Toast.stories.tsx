@@ -1,8 +1,8 @@
+import { Toast } from '@numl-react/core';
 import React from 'react';
-import { El, Toast } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/Toast',
+  title: 'Numl React/Molecules/Toast',
   component: Toast,
 };
 

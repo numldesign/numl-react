@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import NavigationBar from '../src/NavigationBar';
 
 export default {
-  title: 'Example/Organisms/NavigationBar',
+  title: 'Numl React/Organisms/NavigationBar',
   component: NavigationBar,
   argTypes: {},
 };

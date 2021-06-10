@@ -1,10 +1,9 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
-import FooterHelp from '../src/FooterHelp';
 import Link from '../../Link/src/Link';
+import FooterHelp from '../src/FooterHelp';
 
 export default {
-  title: 'Example/Atoms/FooterHelp/Custom Link',
+  title: 'Numl React/Atoms/FooterHelp/Custom Link',
   component: FooterHelp,
 };
 

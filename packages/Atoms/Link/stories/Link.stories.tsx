@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Link from '../src/Link';
 
 export default {
-  title: 'Example/Atoms/Link',
+  title: 'Numl React/Atoms/Link',
   component: Link,
 };
 

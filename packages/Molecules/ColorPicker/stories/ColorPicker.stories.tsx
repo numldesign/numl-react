@@ -1,8 +1,8 @@
+import { ColorPicker } from '@numl-react/core';
 import React from 'react';
-import { El, ColorPicker } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/ColorPicker',
+  title: 'Numl React/Molecules/ColorPicker',
   component: ColorPicker,
 };
 

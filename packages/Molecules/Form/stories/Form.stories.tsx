@@ -1,8 +1,8 @@
+import { Form } from '@numl-react/core';
 import React from 'react';
-import { El, Form } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/Form',
+  title: 'Numl React/Molecules/Form',
   component: Form,
 };
 

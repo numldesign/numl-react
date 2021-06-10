@@ -1,9 +1,9 @@
+import { Link } from '@numl-react/core';
 import React from 'react';
-import { El, Link } from '@numl-react/core';
 import AccountConnection from '../src/AccountConnection';
 
 export default {
-  title: 'Example/Molecules/AccountConnection',
+  title: 'Numl React/Molecules/AccountConnection',
   component: AccountConnection,
   argTypes: {
     username: {

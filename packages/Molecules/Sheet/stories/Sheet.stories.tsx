@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Sheet from '../src/Sheet';
 
 export default {
-  title: 'Example/Molecules/Sheet',
+  title: 'Numl React/Molecules/Sheet',
   component: Sheet,
 };
 

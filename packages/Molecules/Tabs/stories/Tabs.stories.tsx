@@ -1,10 +1,10 @@
-import React from 'react';
 import { El, Icon } from '@numl-react/core';
-import Tabs from '../src/Tabs';
+import React from 'react';
 import Button from '../../../Atoms/Button/src/Button';
+import Tabs from '../src/Tabs';
 
 export default {
-  title: 'Example/Molecules/Tabs',
+  title: 'Numl React/Molecules/Tabs',
   component: Tabs,
 };
 

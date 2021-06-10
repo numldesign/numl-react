@@ -1,10 +1,8 @@
-import React, { Children } from 'react';
-import { ActionList, El, TextInput, ThemeProvider } from '@numl-react/core';
-import Popover from '../../../Molecules/Popover/src/Popover';
-import Button from '../../../Atoms/Button/src/Button';
+import { ActionList, Button, El, Popover, TextInput } from '@numl-react/core';
+import React from 'react';
 
 export default {
-  title: 'Example/Molecules/Popover',
+  title: 'Numl React/Molecules/Popover',
   component: Popover,
 };
 

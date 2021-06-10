@@ -1,12 +1,13 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
 import { nanoid } from 'nanoid';
+import React from 'react';
 
 function TextInput(allProps: any): JSX.Element {
   const {
     icon,
     onClear = undefined,
     limit,
+    children,
     required,
     link,
     label,

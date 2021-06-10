@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/Button/Dropdown',
+  title: 'Numl React/Atoms/Button/Dropdown',
   component: Button,
 };
 

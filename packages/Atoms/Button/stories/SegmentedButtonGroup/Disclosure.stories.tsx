@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Button from '../../src/Button';
 
 export default {
-  title: 'Example/Atoms/ButtonSegment/Disclosure',
+  title: 'Numl React/Atoms/ButtonSegment/Disclosure',
   component: Button.SegmentedGroup,
 };
 

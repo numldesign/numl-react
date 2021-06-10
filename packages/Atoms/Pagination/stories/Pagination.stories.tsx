@@ -1,10 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Pagination from '../src/Pagination';
-import Button from '../../Button/src/Button';
 
 export default {
-  title: 'Example/Atoms/Pagination',
+  title: 'Numl React/Atoms/Pagination',
   component: Pagination,
 };
 

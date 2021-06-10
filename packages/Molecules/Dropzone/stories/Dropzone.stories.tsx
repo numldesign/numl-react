@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Dropzone from '../src/Dropzone';
 
 export default {
-  title: 'Example/Molecules/Dropzone',
+  title: 'Numl React/Molecules/Dropzone',
   component: Dropzone,
   argTypes: {},
 };

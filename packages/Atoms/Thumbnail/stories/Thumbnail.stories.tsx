@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Thumbnail from '../src/Thumbnail';
 
 export default {
-  title: 'Example/Atoms/Thumbnail',
+  title: 'Numl React/Atoms/Thumbnail',
   component: Thumbnail,
 };
 

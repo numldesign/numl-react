@@ -65,19 +65,13 @@ Card.Section = function CardSection(props: any) {
     border = 'bottom',
     subheading,
     children,
+    headerProps,
     ...otherProps
   } = props;
   return (
-    <El.Block
-      nu-section
-      padding={padding}
-      flex
-      gap
-      border={border}
-      {...otherProps}
-    >
-      <Card.Header heading={heading} subheading={subheading} />
-      {children ? <Card.Body body={children} /> : null}
+    <El.Block nu-section padding={padding} flex gap border={border}>
+      <Card.Header heading={heading} subheading={subheading} {...headerProps} />
+      {children ? <Card.Body {...otherProps}>{children}</Card.Body> : null}
     </El.Block>
   );
 };

@@ -1,8 +1,8 @@
-import React from 'react';
 import { El, Tooltip } from '@numl-react/core';
+import React from 'react';
 
 export default {
-  title: 'Example/Molecules/Tooltip',
+  title: 'Numl React/Molecules/Tooltip',
   component: Tooltip,
   argTypes: {
     username: {

@@ -1,10 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Placeholder from '../src/Placeholder';
-import Button from '../../Button/src/Button';
 
 export default {
-  title: 'Example/Atoms/Placeholder',
+  title: 'Numl React/Atoms/Placeholder',
   component: Placeholder,
   parameters: {
     layout: 'none',

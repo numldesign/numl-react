@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Avatar from '../src/Avatar';
 
 export default {
-  title: 'Example/Atoms/Avatar/Icon',
+  title: 'Numl React/Atoms/Avatar/Icon',
   component: Avatar,
 };
 
