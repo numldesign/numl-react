@@ -10,27 +10,24 @@ function Card(allProps: any): JSX.Element {
     padding = '2.5x',
     responsive = '801px|800px',
     headerActions,
+    headerProps,
+    footerProps,
     footerActions,
     children,
     ...otherProps
   } = allProps;
   return (
-    <El.Card
-      flex
-      nu-card
-      gap={gap}
-      responsive={responsive}
-      padding={padding}
-      {...otherProps}
-    >
+    <El.Card flex nu-card gap={gap} responsive={responsive} padding={padding}>
       <Card.Header
         heading={heading}
         subheading={subheading}
         headerActions={headerActions}
+        {...headerProps}
       />
-      <Card.Body body={body || children} />
-      {/* {children ? <El.Pane gap="2x">{children}</El.Pane> : null} */}
-      {footerActions ? <Card.Footer footerActions={footerActions} /> : null}
+      <Card.Body body={body || children} {...otherProps} />
+      {footerActions ? (
+        <Card.Footer footerActions={footerActions} {...footerProps} />
+      ) : null}
     </El.Card>
   );
 }
@@ -38,31 +35,25 @@ function Card(allProps: any): JSX.Element {
 Card.Header = function CardHeader(props: any) {
   const { heading, subheading, headerActions, ...otherProps } = props;
   return (
-    <El.Pane nu-header gap content="stretch space-between" {...otherProps}>
-      <El.Block>
-        {heading ? <El.Block size="lg"> {heading}</El.Block> : null}
-        {subheading ? <El.Block size="xs"> {subheading}</El.Block> : null}
-      </El.Block>
-      {typeof headerActions === 'string' ? (
-        <El.Button color="special" clear>
-          {headerActions}
-        </El.Button>
-      ) : (
-        headerActions
-      )}
-    </El.Pane>
+    <>
+      {heading || subheading || headerActions ? (
+        <El.Pane nu-header gap content="stretch space-between" {...otherProps}>
+          <El.Block>
+            {heading ? <El.Block size="lg"> {heading}</El.Block> : null}
+            {subheading ? <El.Block size="xs"> {subheading}</El.Block> : null}
+          </El.Block>
+          <El.Block>{headerActions || null}</El.Block>
+        </El.Pane>
+      ) : null}
+    </>
   );
 };
 
 Card.Body = function CardBody(props: any) {
-  const { body, gap = '2x', ...otherProps } = props;
+  const { body, flow = 'row wrap', gap = '2x', ...otherProps } = props;
   return (
-    <El.Flex flow="row wrap" nu-body gap={gap} {...otherProps}>
-      {body && typeof body === 'string' ? (
-        <El.Block size="md">{body}</El.Block>
-      ) : (
-        body
-      )}
+    <El.Flex nu-body gap={gap} flow={flow} {...otherProps}>
+      {body ? <El.Block size="md">{body}</El.Block> : null}
     </El.Flex>
   );
 };
