@@ -1,1 +1,1 @@
-export * from './dist/core.es.js';
+export * from './dist/index.es.js';
