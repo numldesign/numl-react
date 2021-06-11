@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/sheet",
-  "version": "0.0.32-dev-1",
+  "version": "0.0.32-dev-2",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -44,7 +44,7 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.32-dev-1"
+    "@numl-react/core": "^0.0.32-dev-2"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
@@ -69,5 +69,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "471fe7593cccfbb911bd35ee4a46af8cdf393b41"
+  "gitHead": "f238706a2c3470f33f21c5a348fb42b2aecdeb44"
 }

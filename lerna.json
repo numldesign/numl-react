@@ -13,13 +13,13 @@
   "concurrency": 1,
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "0.0.32-dev-1",
+  "version": "0.0.32-dev-2",
   "command": {
     "version": {
       "push": false
     },
     "publish": {
-      "registry": "http://localhost:4000"
+      "registry": "http://localhost:4000/"
     }
   }
 }
