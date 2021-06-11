@@ -19,7 +19,7 @@
       "push": false
     },
     "publish": {
-      "registry": "http://localhost:4873"
+      "registry": "http://localhost:4000"
     }
   }
 }
