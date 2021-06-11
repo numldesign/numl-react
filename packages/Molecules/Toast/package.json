@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/toast",
-  "version": "0.0.32-dev-2",
+  "version": "0.0.32-dev-3",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -44,7 +44,7 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.32-dev-2"
+    "@numl-react/core": "^0.0.32-dev-3"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
@@ -69,5 +69,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "f238706a2c3470f33f21c5a348fb42b2aecdeb44"
+  "gitHead": "0713f0f185b3c67f8952ce49350c784c8799dcdb"
 }
