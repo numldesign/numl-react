@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/thumbnail",
-  "version": "0.0.32-dev-5",
+  "version": "0.0.32-dev-6",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -44,7 +44,7 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/elements": "^0.0.32-dev-5"
+    "@numl-react/elements": "^0.0.32-dev-6"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
