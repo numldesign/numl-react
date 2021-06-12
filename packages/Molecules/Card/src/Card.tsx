@@ -1,5 +1,5 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 
 function Card(allProps: any): JSX.Element {
   const {
@@ -53,7 +53,7 @@ Card.Body = function CardBody(props: any) {
   const { body, flow = 'row wrap', gap = '2x', ...otherProps } = props;
   return (
     <El.Flex nu-body gap={gap} flow={flow} {...otherProps}>
-      {body ? <El.Block size="md">{body}</El.Block> : null}
+      {body || null}
     </El.Flex>
   );
 };

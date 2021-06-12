@@ -28,15 +28,14 @@ auth:
 uplinks:
   npmjs:
     url: https://registry.npmjs.org/
-  local:
-    url: http://localhost:4000/
 
 packages:
-  "@numl-react/*":
+  "@*/*":
     # scoped packages
     access: $all
     publish: $all
-    proxy: local
+    proxy: npmjs
+
   "**":
     access: $all
     publish: $all
