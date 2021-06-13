@@ -49,6 +49,27 @@ Form.Submit = function FormSubmit(allProps: any): JSX.Element {
   );
 };
 
+Form.IFTAlabels = (props: any) => {
+  const { label, name, required, ...otherProps } = props;
+  return (
+    <El.InputGroup block flow="row" fill="input">
+      <El.Grid gap columns="1fr" width="100%" padding="1x 2x">
+        {label ? (
+          <El.Label size="1.5x 2x" for={name}>
+            {label}
+            {required ? (
+              <El.BaseElement padding="0 1x" theme="danger">
+                *
+              </El.BaseElement>
+            ) : null}
+          </El.Label>
+        ) : null}
+        <El.Input padding="0" radius="0" name={name} {...otherProps} />
+      </El.Grid>
+    </El.InputGroup>
+  );
+};
+
 Form.Builder = (props: any) => {
   const { form, onSubmit } = props;
 

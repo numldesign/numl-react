@@ -1,4 +1,4 @@
-import * as El from '@numl-react/elements';
+import { Form } from '@numl-react/core';
 import React from 'react';
 import TextInput from '../src/TextInput';
 
@@ -10,21 +10,24 @@ export default {
 const Template = ({ theme, ...args }) => {
   return (
     <>
-      <El.Form>
+      <Form>
         <TextInput.IFTALabels {...args} />
-      </El.Form>
+        <Form.Submit special>Submit</Form.Submit>
+      </Form>
     </>
   );
 };
 
 export const Basic = Template.bind({});
 Basic.args = {
+  name: 'name',
   label: 'Text Field',
   placeholder: 'Text Field',
 };
 
 export const WithValidation = Template.bind({});
 WithValidation.args = {
+  name: 'name',
   label: 'Text Field',
   placeholder: 'Text Field',
   validation: [
