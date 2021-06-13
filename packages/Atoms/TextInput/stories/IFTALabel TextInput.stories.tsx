@@ -29,7 +29,6 @@ export const WithValidation = Template.bind({});
 WithValidation.args = {
   name: 'name',
   label: 'Text Field',
-  placeholder: 'Text Field',
   validation: [
     {
       assert: 'required',
