@@ -1,18 +1,18 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 import Checkbox from '../../../Atoms/Checkbox/src/Checkbox';
 
 const OptionList = (props: any): JSX.Element => {
   const { items, gap = '2x', fill = 'bg', ...otherProps } = props;
   return (
     <El.Menu fill={fill} {...otherProps}>
-      {items && typeof items === 'object' ? (
-        <>
-          {items.map((eachItem: any) => (
-            <OptionList.Item gap={gap} item={eachItem} />
-          ))}
-        </>
-      ) : null}
+      {items && typeof items === 'object'
+        ? React.Children.toArray(
+            items.map((eachItem: any) => (
+              <OptionList.Item gap={gap} item={eachItem} />
+            ))
+          )
+        : null}
     </El.Menu>
   );
 };

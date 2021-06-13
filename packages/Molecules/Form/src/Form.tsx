@@ -1,17 +1,13 @@
-import React, { useEffect, useRef } from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 
-function Form(props: any) {
-  const { gap, children, ...otherProps } = props;
+const Form = (props: any): JSX.Element => {
+  const { children, ...otherProps } = props;
 
-  return (
-    <El.Form gap={gap} {...otherProps}>
-      {children}
-    </El.Form>
-  );
-}
+  return <El.Form {...otherProps}>{children}</El.Form>;
+};
 
-Form.Label = function FormLabel(allProps: any) {
+Form.Label = function FormLabel(allProps: any): JSX.Element {
   const { children, name, ...otherProps } = allProps;
   return (
     <El.Label for={name} {...otherProps}>
@@ -19,22 +15,22 @@ Form.Label = function FormLabel(allProps: any) {
     </El.Label>
   );
 };
-Form.Field = function FormField(allProps: any) {
-  const { label, name, assert, message, children, ...otherProps } = allProps;
+Form.Field = function FormField(allProps: any): JSX.Element {
+  const { children, ...otherProps } = allProps;
 
   return <El.Field {...otherProps}>{children}</El.Field>;
 };
-Form.Input = function FormInput(props: any) {
-  const { name, ...otherProps } = props;
-  return <El.Input id={name} {...otherProps} />;
+Form.Input = function FormInput(props: any): JSX.Element {
+  const { children, ...otherProps } = props;
+  return <El.Input {...otherProps} />;
 };
 
-Form.Check = function FormCheck(allProps: any) {
-  const { message, name, assertFunction } = allProps;
-  const ref: any = useRef(null);
+Form.Check = function FormCheck(allProps: any): JSX.Element {
+  const { message, name, assert } = allProps;
+  const ref: any = React.useRef(null);
 
-  useEffect(() => {
-    ref.current.assert = assertFunction;
+  React.useEffect(() => {
+    ref.current.assert = assert;
   }, []);
 
   return (
@@ -44,12 +40,33 @@ Form.Check = function FormCheck(allProps: any) {
   );
 };
 
-Form.Submit = function FormSubmit(allProps: any) {
+Form.Submit = function FormSubmit(allProps: any): JSX.Element {
   const { children, ...otherProps } = allProps;
   return (
-    <El.Button type="submit" {...otherProps}>
+    <El.Button action="submit" {...otherProps}>
       {children}
     </El.Button>
+  );
+};
+
+Form.Builder = (props: any) => {
+  const { form } = props;
+
+  return (
+    <Form>
+      {React.Children.toArray(
+        form.map((eachForm) => (
+          <Form.Field>
+            <Form.Label>{eachForm.label}</Form.Label>
+            <Form.Input name={eachForm.name} id={eachForm.name} />
+            <Form.Check name={eachForm.name} assert={eachForm.assert}>
+              {eachForm.message}
+            </Form.Check>
+          </Form.Field>
+        ))
+      )}
+      <Form.Submit special>Submit</Form.Submit>
+    </Form>
   );
 };
 

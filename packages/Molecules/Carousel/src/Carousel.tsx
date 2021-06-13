@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
 import { El } from '@numl-react/core';
+import React, { useCallback, useState } from 'react';
 
 function Carousel(allProps: any): JSX.Element {
   const {
@@ -42,20 +42,22 @@ function Carousel(allProps: any): JSX.Element {
     >
       <El.Block overflow="hidden">
         <El.Pane flow="row nowrap" gap="0">
-          {items.map((_image: any) => {
-            const move = currentSlide === 0 ? '0 0' : `-${currentSlide}00% 0`;
-            return (
-              <El.Image
-                src={_image}
-                fit="fill"
-                transition="move .2s"
-                content="center"
-                move={move}
-                height={height}
-                width={width}
-              />
-            );
-          })}
+          {React.Children.toArray(
+            items.map((_image: any) => {
+              const move = currentSlide === 0 ? '0 0' : `-${currentSlide}00% 0`;
+              return (
+                <El.Image
+                  src={_image}
+                  fit="fill"
+                  transition="move .2s"
+                  content="center"
+                  move={move}
+                  height={height}
+                  width={width}
+                />
+              );
+            })
+          )}
         </El.Pane>
       </El.Block>
       <El.Icon
@@ -71,19 +73,21 @@ function Carousel(allProps: any): JSX.Element {
         onClick={handleNextClick}
       />
       <El.Pane content="center" place="bottom" width="100%">
-        {itemList.map((_item, _index) => {
-          const isActive = currentSlide === _index;
-          return (
-            <El.Circle
-              value={_index}
-              size="1x"
-              fill="input"
-              cursor="pointer"
-              opacity={isActive ? 1 : 0.5}
-              onClick={() => setCurrentSlide(_index)}
-            />
-          );
-        })}
+        {React.Children.toArray(
+          itemList.map((_item, _index) => {
+            const isActive = currentSlide === _index;
+            return (
+              <El.Circle
+                value={_index}
+                size="1x"
+                fill="input"
+                cursor="pointer"
+                opacity={isActive ? 1 : 0.5}
+                onClick={() => setCurrentSlide(_index)}
+              />
+            );
+          })
+        )}
       </El.Pane>
     </El.Block>
   );

@@ -1,4 +1,4 @@
-import { El, Checkbox, Radio } from '@numl-react/core';
+import { Checkbox, El, Radio } from '@numl-react/core';
 import React, { useCallback, useState } from 'react';
 
 /**
@@ -78,26 +78,30 @@ ChoiceList.CheckList = function CheckChoiceList(allProps: any) {
   if (choiceList.length) {
     return (
       <El.List type="none">
-        {choiceList.map((choice: { label: any; value: any; helpText: any }) => {
-          const { label, value, helpText } = choice;
-          const isChecked = selectedValues.has(value) ? true : undefined;
-          return (
-            <El.Listitem key={value}>
-              <Checkbox
-                checked={isChecked}
-                value={value}
-                label={
-                  <>
-                    <El.Block>{label}</El.Block>
-                    <El.Block color="#text-soft">{helpText}</El.Block>
-                  </>
-                }
-                items="start"
-                onInput={handleChecklistChange}
-              />
-            </El.Listitem>
-          );
-        })}
+        {React.Children.toArray(
+          choiceList.map(
+            (choice: { label: any; value: any; helpText: any }) => {
+              const { label, value, helpText } = choice;
+              const isChecked = selectedValues.has(value) ? true : undefined;
+              return (
+                <El.Listitem>
+                  <Checkbox
+                    checked={isChecked}
+                    value={value}
+                    label={
+                      <>
+                        <El.Block>{label}</El.Block>
+                        <El.Block color="#text-soft">{helpText}</El.Block>
+                      </>
+                    }
+                    items="start"
+                    onInput={handleChecklistChange}
+                  />
+                </El.Listitem>
+              );
+            }
+          )
+        )}
       </El.List>
     );
   }

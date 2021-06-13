@@ -1,5 +1,4 @@
 import * as El from '@numl-react/elements';
-import { nanoid } from 'nanoid';
 import React from 'react';
 
 function TextInput(allProps: any): JSX.Element {
@@ -12,6 +11,7 @@ function TextInput(allProps: any): JSX.Element {
     link,
     label,
     width,
+    name,
     helpText,
     onHelp,
     outline = 'y',
@@ -20,13 +20,11 @@ function TextInput(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
 
-  const id = `nu-input-${nanoid()}`;
-
   return (
-    <El.Flex id={`nu-textinput-${nanoid()}`} flow="column" width={width}>
+    <El.Flex flow="column" width={width}>
       {label ? (
         <El.Flex content="space-between">
-          <El.Label for={id} id={`label-${nanoid()}`}>
+          <El.Label for={name}>
             {label}
             {required ? (
               <El.Inline theme="danger" padding="0 1x">
@@ -34,19 +32,10 @@ function TextInput(allProps: any): JSX.Element {
               </El.Inline>
             ) : null}
           </El.Label>
-          {link ? (
-            <El.Link to={link.to} id={`label-link-${nanoid()}`}>
-              {link.text}
-            </El.Link>
-          ) : (
-            link
-          )}
+          {link ? <El.Link to={link.to}>{link.text}</El.Link> : link}
         </El.Flex>
       ) : null}
-      <El.InputGroup
-        id={`input-group-${nanoid()}`}
-        height={otherProps.height || undefined}
-      >
+      <El.InputGroup height={otherProps.height || undefined}>
         {icon &&
           (typeof icon === 'string' ? (
             <El.Icon inline padding="0 1x" name={icon} />
@@ -55,7 +44,7 @@ function TextInput(allProps: any): JSX.Element {
           ))}
         <El.Input
           inline
-          id={id}
+          name={name}
           outline={outline}
           disabled={disabled || disabled === 'true' ? true : undefined}
           {...otherProps}
@@ -92,16 +81,13 @@ function TextInput(allProps: any): JSX.Element {
       ) : null}
       {validation && validation.length > 0 ? (
         <El.Block>
-          {validation.map((each: any) => (
-            <El.Check
-              for={id}
-              key={`check-${nanoid()}`}
-              assert={each.assert}
-              color="hue(1)"
-            >
-              {each.message}
-            </El.Check>
-          ))}
+          {React.Children.toArray(
+            validation.map((each: any) => (
+              <El.Check assert={each.assert} for={name} color="hue(1)">
+                {each.message}
+              </El.Check>
+            ))
+          )}
         </El.Block>
       ) : null}
     </El.Flex>
@@ -112,20 +98,18 @@ TextInput.IFTALabels = (allProps: any) => {
   const {
     required,
     label,
+    name,
     validation,
     disabled = false,
     ...otherProps
   } = allProps;
-  let count = 0;
-
-  const id = nanoid();
 
   return (
-    <El.Flow>
+    <El.Field>
       <El.InputGroup block flow="row" fill="input">
         <El.Grid gap columns="1fr" width="100%" padding="1x 2x">
           {label ? (
-            <El.Label for={id} size="1.5x 2x">
+            <El.Label size="1.5x 2x" for={name}>
               {label}
               {required ? (
                 <El.BaseElement padding="0 1x" theme="danger">
@@ -137,7 +121,7 @@ TextInput.IFTALabels = (allProps: any) => {
           <El.Input
             padding="0"
             radius="0"
-            id={id}
+            name={name}
             disabled={disabled || disabled === 'true' ? true : undefined}
             {...otherProps}
           />
@@ -145,20 +129,16 @@ TextInput.IFTALabels = (allProps: any) => {
       </El.InputGroup>
       {validation && validation.length > 0 ? (
         <El.Block>
-          {validation.map((each: any) => (
-            <El.Check
-              for={id}
-              // eslint-disable-next-line no-plusplus
-              key={count++}
-              assert={each.assert}
-              color="hue(1)"
-            >
-              {each.message}
-            </El.Check>
-          ))}
+          {React.Children.toArray(
+            validation.map((each: any) => (
+              <El.Check assert={each.assert} for={name} color="hue(1)">
+                {each.message}
+              </El.Check>
+            ))
+          )}
         </El.Block>
       ) : null}
-    </El.Flow>
+    </El.Field>
   );
 };
 

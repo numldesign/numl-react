@@ -1,7 +1,7 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 
-function PageAction(allProps: any) {
+function PageAction(allProps: any): JSX.Element {
   const { primaryAction, secondaryActions, ...otherProps } = allProps;
   const flowContent = secondaryActions ? 'space-between' : 'flex-end';
 
@@ -9,15 +9,16 @@ function PageAction(allProps: any) {
     <El.Pane content={flowContent} {...otherProps}>
       {secondaryActions ? (
         <El.Pane>
-          {secondaryActions.map((action: any) => (
-            <El.Button
-              key={action.content}
-              theme={action.destructive ? 'danger' : undefined}
-              {...action}
-            >
-              {action.content}
-            </El.Button>
-          ))}
+          {React.Children.toArray(
+            secondaryActions.map((action: any) => (
+              <El.Button
+                theme={action.destructive ? 'danger' : undefined}
+                {...action}
+              >
+                {action.content}
+              </El.Button>
+            ))
+          )}
         </El.Pane>
       ) : null}
       {primaryAction ? (

@@ -40,9 +40,7 @@ WithAvatarList.args = {
   footerActions: [
     <Button.Group>
       <Button>Cancel</Button>
-      <Button key="Ok" clear theme="special">
-        Submit
-      </Button>
+      <Button special>Submit</Button>
     </Button.Group>,
   ],
 };

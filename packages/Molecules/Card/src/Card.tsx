@@ -50,11 +50,11 @@ Card.Header = function CardHeader(props: any) {
 };
 
 Card.Body = function CardBody(props: any) {
-  const { body, flow = 'row wrap', gap = '2x', ...otherProps } = props;
+  const { body, gap = '2x', ...otherProps } = props;
   return (
-    <El.Flex nu-body gap={gap} flow={flow} {...otherProps}>
+    <El.Flow nu-body gap={gap} {...otherProps}>
       {body || null}
-    </El.Flex>
+    </El.Flow>
   );
 };
 

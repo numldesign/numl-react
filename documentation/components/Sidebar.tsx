@@ -1,4 +1,5 @@
 import { El } from '@numl-react/core';
+import React from 'react';
 export default (props: any) => {
   const { data } = props;
   return (
@@ -15,17 +16,26 @@ export default (props: any) => {
       space="1x left"
       is-responsive="root"
     >
-      {data.map(function (eachData: any, key: string) {
-        const { heading, children } = eachData;
-        return (
-          <>
-            <El.H2 size="sm" text="up b" color="#text.60" padding="0 0 1x 1x" key={key}>
-              {heading}
-            </El.H2>
-            <NavigationList data={children} />
-          </>
-        );
-      })}
+      {data && typeof data === 'object' && data.length > 0
+        ? React.Children.toArray(
+            data.map(function (eachData: any) {
+              const { heading, children } = eachData;
+              return (
+                <>
+                  <El.H2
+                    size="sm"
+                    text="up b"
+                    color="#text.60"
+                    padding="0 0 1x 1x"
+                  >
+                    {heading}
+                  </El.H2>
+                  <NavigationList data={children} />
+                </>
+              );
+            })
+          )
+        : null}
     </El.Nav>
   );
 };
@@ -34,29 +44,31 @@ const NavigationList = (props: any) => {
   const { data } = props;
   return (
     <>
-      {data.length > 0 &&
-        data.map((eachChild: any, key: any) => {
-          return (
-            <El.Button
-              key={key}
-              to={eachChild.link}
-              padding=".5x 1x"
-              color="text :current.hover.focus[special]"
-              fill="#clear"
-              mark="no :current[y]"
-              inset="no"
-              border="0"
-              content="start"
-              opacity="1"
-              is-action
-              is-input
-              tabindex="0"
-              is-focusable
-            >
-              {eachChild.value}
-            </El.Button>
-          );
-        })}
+      {data && typeof data === 'object' && data.length > 0
+        ? React.Children.toArray(
+            data.map((eachChild: any) => {
+              return (
+                <El.Button
+                  to={eachChild.link}
+                  padding=".5x 1x"
+                  color="text :current.hover.focus[special]"
+                  fill="#clear"
+                  mark="no :current[y]"
+                  inset="no"
+                  border="0"
+                  content="start"
+                  opacity="1"
+                  is-action
+                  is-input
+                  tabindex="0"
+                  is-focusable
+                >
+                  {eachChild.value}
+                </El.Button>
+              );
+            })
+          )
+        : null}
     </>
   );
 };
