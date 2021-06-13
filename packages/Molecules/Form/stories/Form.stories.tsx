@@ -52,50 +52,82 @@ const Template2 = ({ ...args }) => (
 export const Default = Template.bind({});
 Default.args = {};
 
-export const Main = Template2.bind({});
-Main.args = {
+export const FormBuilder = Template2.bind({});
+FormBuilder.args = {
   form: [
     {
       name: 'fname',
       label: 'First Name',
-      message: 'All characters must be Alphanumeric',
-      assert: (val) => val && val.length > 3 && val.length < 8,
+      validator: [
+        {
+          message: 'This Field is required',
+          assert: 'required',
+        },
+      ],
     },
     {
       name: 'lname',
       label: 'Last Name',
-      assert: 'required',
-      message: 'All characters must be Alphabets',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'username',
       label: 'User Name',
-      assert: 'required',
-      message: 'All characters must not contain special characters',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'email',
       label: 'Email Address',
-      assert: 'required',
-      message: 'All characters must be Alphabets',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'age',
       label: 'Age',
-      assert: 'required',
-      message: 'All characters must be numeric',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'blogurl',
       label: 'Website / Blog URL',
-      assert: 'required',
-      message: 'String must be HTTP/FTP URI',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'required',
       label: 'Required',
-      assert: 'required',
-      message: 'This field is required',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+        {
+          assert: 'minlength:5',
+          message: 'Minimum length should be greater than 5',
+        },
+      ],
     },
   ],
 };

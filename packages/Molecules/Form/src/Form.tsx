@@ -50,7 +50,7 @@ Form.Submit = function FormSubmit(allProps: any): JSX.Element {
 };
 
 Form.Builder = (props: any) => {
-  const { form } = props;
+  const { form, onSubmit } = props;
 
   return (
     <Form>
@@ -59,13 +59,22 @@ Form.Builder = (props: any) => {
           <Form.Field>
             <Form.Label>{eachForm.label}</Form.Label>
             <Form.Input name={eachForm.name} id={eachForm.name} />
-            <Form.Check name={eachForm.name} assert={eachForm.assert}>
-              {eachForm.message}
-            </Form.Check>
+            {React.Children.toArray(
+              eachForm.validator &&
+                eachForm.validator.map((eachValidator) => (
+                  <Form.Check
+                    name={eachForm.name}
+                    assert={eachValidator.assert}
+                    message={eachValidator.message}
+                  />
+                ))
+            )}
           </Form.Field>
         ))
       )}
-      <Form.Submit special>Submit</Form.Submit>
+      <Form.Submit special onTap={onSubmit}>
+        Submit
+      </Form.Submit>
     </Form>
   );
 };
