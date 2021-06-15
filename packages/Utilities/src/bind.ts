@@ -1,18 +1,15 @@
 /* eslint-disable no-param-reassign */
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-const useBinding = (
-  name: string,
-  form: { [x: string]: any },
-  initialValue: any
-): [any, any] => {
-  const [value, setValue] = useState(initialValue);
+const useBinding = (initialValue: any): [any, any] => {
+  // eslint-disable-next-line prefer-const
+  let [value, setValue] = useState(initialValue);
 
-  useEffect(() => {
-    form[name] = value;
+  const updateDate = useCallback(() => {
     setValue(value);
-    console.log(value);
-  }, []);
+  }, [value]);
+
+  useEffect(() => updateDate(), [value]);
 
   return [value, setValue];
 };

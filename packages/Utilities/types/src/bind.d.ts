@@ -1,8 +1,2 @@
-declare const useBinding: (
-  name: string,
-  form: {
-    [x: string]: any;
-  },
-  initialValue: any
-) => [any, any];
+declare const useBinding: (initialValue: any) => [any, any];
 export { useBinding };
