@@ -1,10 +1,10 @@
-import React from 'react';
 import { El } from '@numl-react/core';
-import CalloutCard from '../src/CalloutCard';
+import React from 'react';
 import Button from '../../../Atoms/Button/src/Button';
+import CalloutCard from '../src/CalloutCard';
 
 export default {
-  title: 'Example/Molecules/CalloutCard',
+  title: 'Numl React/Molecules/CalloutCard',
   component: CalloutCard,
 };
 

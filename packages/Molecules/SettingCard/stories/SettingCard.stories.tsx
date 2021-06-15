@@ -1,8 +1,8 @@
+import { SettingCard } from '@numl-react/core';
 import React from 'react';
-import { El, SettingCard } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/SettingCard',
+  title: 'Numl React/Molecules/SettingCard',
   component: SettingCard,
   argTypes: {
     title: {

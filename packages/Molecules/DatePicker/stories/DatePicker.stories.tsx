@@ -1,8 +1,8 @@
+import { DatePicker } from '@numl-react/core';
 import React from 'react';
-import { El, DatePicker } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/DatePicker',
+  title: 'Numl React/Molecules/DatePicker',
   component: DatePicker,
   argTypes: {
     username: {

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import * as El from '@numl-react/elements';
+import React, { useState } from 'react';
 import Menu from '../src/Menu';
 
 export default {
-  title: 'Example/Molecules/Menu',
+  title: 'Numl React/Molecules/Menu',
   component: Menu,
 };
 

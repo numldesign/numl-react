@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import ProductCard from '../src/ProductCard';
 
 export default {
-  title: 'Example/Organisms/ProductCard',
+  title: 'Numl React/Organisms/ProductCard',
   component: ProductCard,
 };
 

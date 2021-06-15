@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import RangeSlider from '../src/RangeSlider';
 
 export default {
-  title: 'Example/Atoms/RangeSlider',
+  title: 'Numl React/Atoms/RangeSlider',
   component: RangeSlider,
   argTypes: {
     size: {

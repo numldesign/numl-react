@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import ProgressBar from '../src/ProgressBar';
 
 export default {
-  title: 'Example/Atoms/ProgressBar',
+  title: 'Numl React/Atoms/ProgressBar',
   component: ProgressBar,
   parameters: {
     layout: 'none',

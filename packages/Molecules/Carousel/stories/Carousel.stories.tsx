@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Carousel from '../src/Carousel';
 
 export default {
-  title: 'Example/Molecules/Carousel',
+  title: 'Numl React/Molecules/Carousel',
   component: Carousel,
 };
 

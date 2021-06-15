@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import PageAction from '../src/PageAction';
 
 export default {
-  title: 'Example/Molecules/PageAction',
+  title: 'Numl React/Molecules/PageAction',
   component: PageAction,
 };
 

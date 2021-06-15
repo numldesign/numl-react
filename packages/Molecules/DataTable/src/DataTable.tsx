@@ -1,5 +1,5 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 
 function DataTable(allProps: any) {
   const {
@@ -21,32 +21,36 @@ function DataTable(allProps: any) {
         {headingList.length ? (
           <El.RowGroup>
             <El.Row>
-              {headingList.map((header) => (
-                <El.ColumnHeader border="bottom" key={header}>
-                  {header}
-                </El.ColumnHeader>
-              ))}
+              {React.Children.toArray(
+                headingList.map((header) => (
+                  <El.ColumnHeader border="bottom">{header}</El.ColumnHeader>
+                ))
+              )}
             </El.Row>
           </El.RowGroup>
         ) : null}
         {totalList.length ? (
           <El.RowGroup fill="subtle">
             <El.Row>
-              {totalList.map((total) => (
-                <El.Cell height="3">{total}</El.Cell>
-              ))}
+              {React.Children.toArray(
+                totalList.map((total) => <El.Cell height="3">{total}</El.Cell>)
+              )}
             </El.Row>
           </El.RowGroup>
         ) : null}
         {rowList.length ? (
           <El.RowGroup>
-            {rowList.map((row) => (
-              <El.Row>
-                {row.map((rowData: any) => (
-                  <El.Cell height="3">{rowData}</El.Cell>
-                ))}
-              </El.Row>
-            ))}
+            {React.Children.toArray(
+              rowList.map((row) => (
+                <El.Row>
+                  {React.Children.toArray(
+                    row.map((rowData: any) => (
+                      <El.Cell height="3">{rowData}</El.Cell>
+                    ))
+                  )}
+                </El.Row>
+              ))
+            )}
           </El.RowGroup>
         ) : null}
       </El.Table>

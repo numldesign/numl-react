@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Badge from '../src/Badge';
 
 export default {
-  title: 'Example/Atoms/Badge/IconsWithText',
+  title: 'Numl React/Atoms/Badge/IconsWithText',
   component: Badge,
 };
 

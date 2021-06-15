@@ -1,9 +1,9 @@
+import { Radio } from '@numl-react/core';
 import React from 'react';
-import { El, Radio } from '@numl-react/core';
 import TextArea from '../src/TextArea';
 
 export default {
-  title: 'Example/Molecules/TextArea',
+  title: 'Numl React/Molecules/TextArea',
   component: TextArea,
 };
 

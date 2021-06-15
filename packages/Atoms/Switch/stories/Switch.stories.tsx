@@ -1,9 +1,9 @@
-import React from 'react';
-import * as El from '@numl-react/elements';
 import { Switch } from '@numl-react/atoms';
+import * as El from '@numl-react/elements';
+import React from 'react';
 
 export default {
-  title: 'Example/Atoms/Switch',
+  title: 'Numl React/Atoms/Switch',
   component: Switch,
 };
 

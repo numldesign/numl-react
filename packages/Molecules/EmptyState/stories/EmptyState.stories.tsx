@@ -1,8 +1,8 @@
+import { Button, El, EmptyState, Icon } from '@numl-react/core';
 import React from 'react';
-import { El, Icon, Button, EmptyState } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/EmptyState',
+  title: 'Numl React/Molecules/EmptyState',
   component: EmptyState,
   argTypes: {
     heading: {

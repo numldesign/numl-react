@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
 import * as El from '@numl-react/elements';
+import React, { useEffect, useRef } from 'react';
 
 function Radio(allProps: any): JSX.Element {
   const { label, size, value, children, ...otherProps } = allProps;
@@ -49,10 +49,12 @@ Radio.List = function RadioList(allProps: any) {
   return (
     <El.Field>
       <Radio.Group value={value}>
-        {list && typeof list === 'object'
-          ? list.map((item: any) => (
-              <Radio label={item.label} value={item.value} {...otherProps} />
-            ))
+        {list && typeof list === 'object' && list.length > 0
+          ? React.Children.toArray(
+              list.map((item: any) => (
+                <Radio label={item.label} value={item.value} {...otherProps} />
+              ))
+            )
           : null}
       </Radio.Group>
     </El.Field>

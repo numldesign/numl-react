@@ -1,8 +1,8 @@
+import { Banner, Button, El, Icon } from '@numl-react/core';
 import React from 'react';
-import { Banner, Button, Icon, El } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/Banner',
+  title: 'Numl React/Molecules/Banner',
   component: Banner,
   argTypes: {
     prefix: {

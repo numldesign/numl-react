@@ -1,84 +1,133 @@
+import { Form } from '@numl-react/core';
 import React from 'react';
-import { El, Form } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/Form',
+  title: 'Numl React/Molecules/Form',
   component: Form,
 };
 
 const Template = ({ ...args }) => (
   <>
-    <Form {...args}>
-      <Form.Field name="name">
+    <Form>
+      <Form.Field>
         <Form.Label>Name</Form.Label>
-        <Form.Input grow="1" />
+        <Form.Input id="name" grow="1" />
         <Form.Check
+          name="name"
           message="Name should not contain digits or any special characters"
-          assert={(val) => typeof val === 'string' && val.match(/^[a-z]*$/i)}
+          assert={(val) => {
+            return val && val.length > 3;
+          }}
         />
       </Form.Field>
-      <Form.Field name="username">
+      <Form.Field>
         <Form.Label>User Name</Form.Label>
-        <Form.Input grow="1" />
-        <Form.Check message="This field is required" assert="required" />
+        <Form.Input id="username" grow="1" />
+        <Form.Check
+          name="username"
+          message="This field is required"
+          assert="required"
+        />
       </Form.Field>
-      <Form.Field name="email">
+      <Form.Field>
         <Form.Label>Email Address</Form.Label>
-        <Form.Input grow="1" />
-        <Form.Check message="Email Address is required" assert="required" />
+        <Form.Input id="email" grow="1" />
+        <Form.Check
+          name="email"
+          message="Email Address is required"
+          assert="required"
+        />
       </Form.Field>
       <Form.Submit>Submit</Form.Submit>
     </Form>
   </>
 );
 
+const Template2 = ({ ...args }) => (
+  <>
+    <Form.Builder {...args}></Form.Builder>
+  </>
+);
+
 export const Default = Template.bind({});
-Default.args = {
-  formData: [
+Default.args = {};
+
+export const FormBuilder = Template2.bind({});
+FormBuilder.args = {
+  form: [
     {
       name: 'fname',
       label: 'First Name',
-      assertion: 'alphanumeric',
-      message: 'All characters must be Alphanumeric',
-      expression(val: string) {
-        return typeof val === 'string' && val.match(/^[a-z\d]*$/i);
-      },
+      validator: [
+        {
+          message: 'This Field is required',
+          assert: 'required',
+        },
+      ],
     },
     {
       name: 'lname',
       label: 'Last Name',
-      assertion: 'alphabets',
-      message: 'All characters must be Alphabets',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'username',
       label: 'User Name',
-      assertion: 'specialcharacters',
-      message: 'All characters must not contain special characters',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'email',
       label: 'Email Address',
-      assertion: 'alphabets',
-      message: 'All characters must be Alphabets',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'age',
       label: 'Age',
-      assertion: 'number',
-      message: 'All characters must be numeric',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'blogurl',
       label: 'Website / Blog URL',
-      assertion: 'url',
-      message: 'String must be HTTP/FTP URI',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+      ],
     },
     {
       name: 'required',
       label: 'Required',
-      assertion: 'required',
-      message: 'This field is required',
+      validator: [
+        {
+          assert: 'required',
+          message: 'This Field is required',
+        },
+        {
+          assert: 'minlength:5',
+          message: 'Minimum length should be greater than 5',
+        },
+      ],
     },
   ],
 };

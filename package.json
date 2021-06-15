@@ -35,7 +35,7 @@
   ],
   "scripts": {
     "commit": "yarn run prettier && cz",
-    "local": "verdaccio",
+    "local": "verdaccio --listen 4000 --config ./.verdaccio.yaml",
     "pkg": "manypkg run",
     "check:pkgs": "manypkg check",
     "fix:pkgs": "manypkg fix",

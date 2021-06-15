@@ -1,8 +1,8 @@
+import { DataTable, Link } from '@numl-react/core';
 import React from 'react';
-import { El, DataTable, Link } from '@numl-react/core';
 
 export default {
-  title: 'Example/Molecules/DataTable',
+  title: 'Numl React/Molecules/DataTable',
   component: DataTable,
 };
 

@@ -1,10 +1,9 @@
+import { El } from '@numl-react/core';
 import React from 'react';
-import { Badge, El, Thumbnail } from '@numl-react/core';
 import OptionList from '../src/OptionList';
-import { Button } from '@numl-react/elements';
 
 export default {
-  title: 'Example/Molecules/OptionList',
+  title: 'Numl React/Molecules/OptionList',
   component: OptionList,
 };
 

@@ -1,19 +1,16 @@
-import * as React from 'react';
 import {
   El,
-  Molecules,
-  ModalHeader,
+  Modal,
   ModalBody,
   ModalFooter,
+  ModalHeader,
 } from '@numl-react/core';
+import * as React from 'react';
 
 // @ts-ignore
 
-import { isRefernceNull } from '@numl-react/utility';
-import Modal from '../src/Modal';
-
 export default {
-  title: 'Example/Molecules/Modal',
+  title: 'Numl React/Molecules/Modal',
   component: Modal,
 };
 

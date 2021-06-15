@@ -1,10 +1,9 @@
-import React from 'react';
-
 import * as El from '@numl-react/elements';
+import React from 'react';
 import ExceptionList from '../src/ExceptionList';
 
 export default {
-  title: 'Example/Atoms/ExceptionList/With Icons',
+  title: 'Numl React/Atoms/ExceptionList/With Icons',
   component: ExceptionList,
 };
 

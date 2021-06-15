@@ -1,5 +1,5 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 
 const Avatar = function Avatar(allProps: any): JSX.Element {
   const {
@@ -85,25 +85,12 @@ Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
 };
 
 Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
-  const {
-    username,
-    subtitle,
-    responsive = '781px|780px',
-    showIcon,
-    gap = '1x',
-    ...otherProps
-  } = allProps;
+  const { username, subtitle, showIcon, gap = '1x', ...otherProps } = allProps;
 
   return (
-    <El.Flex
-      columns="auto auto"
-      responsive={responsive}
-      items="center"
-      gap={gap}
-      {...otherProps}
-    >
+    <El.Flex columns="auto auto" items="center" gap={gap} {...otherProps}>
       <Avatar.Icon username={username} showIcon={showIcon} />
-      <El.Flex flow="column" items="start center" hide="n|y">
+      <El.Flex flow="column" items="start center">
         {username ? (
           <El.Block>
             {username ? (
@@ -116,6 +103,7 @@ Avatar.Profile = function AvatarProfile(allProps: any): JSX.Element {
             {subtitle ? (
               <El.BaseElement size="sm">{subtitle}</El.BaseElement>
             ) : null}
+            nd
           </El.Block>
         ) : null}
       </El.Flex>

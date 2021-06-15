@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import BottomNavigation from '../src/BottomNavigation';
 
 export default {
-  title: 'Example/Molecules/BottomNavigation',
+  title: 'Numl React/Molecules/BottomNavigation',
   component: BottomNavigation,
 };
 

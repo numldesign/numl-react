@@ -1,12 +1,12 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
-import Filters from '../src/Filters';
+import React from 'react';
 import Button from '../../../Atoms/Button/src/Button';
 import TextInput from '../../../Atoms/TextInput/src/TextInput';
 import Menu from '../../Menu/src/Menu';
+import Filters from '../src/Filters';
 
 export default {
-  title: 'Example/Molecules/Filters',
+  title: 'Numl React/Molecules/Filters',
   component: Filters,
 };
 

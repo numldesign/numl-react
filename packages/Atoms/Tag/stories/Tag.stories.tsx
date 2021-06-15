@@ -1,9 +1,8 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
 import Tag from '../src/Tag';
 
 export default {
-  title: 'Example/Atoms/Tag',
+  title: 'Numl React/Atoms/Tag',
   component: Tag,
 };
 

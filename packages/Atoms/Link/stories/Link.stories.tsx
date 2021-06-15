@@ -1,9 +1,9 @@
-import React from 'react';
 import * as El from '@numl-react/elements';
+import React from 'react';
 import Link from '../src/Link';
 
 export default {
-  title: 'Example/Atoms/Link',
+  title: 'Numl React/Atoms/Link',
   component: Link,
 };
 
@@ -23,7 +23,7 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Learn more about',
   to: 'https://numl.design',
-  icon: <El.Icon name="exit-outline" theme="warning" text="top" />,
+  icon: <El.Icon name="exit-outline" />,
 };
 
 export const WithIconText = Template.bind({});

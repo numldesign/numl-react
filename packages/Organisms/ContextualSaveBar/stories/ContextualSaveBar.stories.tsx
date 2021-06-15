@@ -1,10 +1,9 @@
 import React from 'react';
-import * as El from '@numl-react/elements';
-import ContextualSaveBar from '../src/ContextualSaveBar';
 import Button from '../../../Atoms/Button/src/Button';
+import ContextualSaveBar from '../src/ContextualSaveBar';
 
 export default {
-  title: 'Example/Organisms/ContextualSaveBar',
+  title: 'Numl React/Organisms/ContextualSaveBar',
   component: ContextualSaveBar,
   parameters: {
     layout: 'none',

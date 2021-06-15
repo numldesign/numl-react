@@ -51,16 +51,22 @@ function Search(allProps: any): JSX.Element {
         {...resultContainerProps}
       >
         {renderList && renderList.length
-          ? renderList.map((item) => {
-              if (renderResultItem) {
-                return (
-                  <El.Option key={item.value} value={item.value} columns="1fr">
-                    {renderResultItem(item)}
-                  </El.Option>
-                );
-              }
-              return '';
-            })
+          ? React.Children.toArray(
+              renderList.map((item) => {
+                if (renderResultItem) {
+                  return (
+                    <El.Option
+                      key={item.value}
+                      value={item.value}
+                      columns="1fr"
+                    >
+                      {renderResultItem(item)}
+                    </El.Option>
+                  );
+                }
+                return '';
+              })
+            )
           : null}
       </El.Listbox>
     </El.Grid>

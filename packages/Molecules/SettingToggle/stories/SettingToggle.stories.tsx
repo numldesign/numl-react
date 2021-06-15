@@ -1,9 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import * as El from '@numl-react/elements';
+import React from 'react';
 import SettingToggle from '../src/SettingToggle';
 
 export default {
-  title: 'Example/Molecules/SettingToggle',
+  title: 'Numl React/Molecules/SettingToggle',
   component: SettingToggle,
   argTypes: {
     isActive: {
