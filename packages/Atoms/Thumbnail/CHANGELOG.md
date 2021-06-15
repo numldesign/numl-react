@@ -1,5 +1,14 @@
 # @numl-react/thumbnail
 
+## 0.0.31
+
+### Patch Changes
+
+- [#96](https://github.com/numldesign/numl-react/pull/96) [`057b76f`](https://github.com/numldesign/numl-react/commit/057b76f043dd71a040ff0d583f97d90f7dcd555f) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - 0.0.30
+
+- Updated dependencies [[`057b76f`](https://github.com/numldesign/numl-react/commit/057b76f043dd71a040ff0d583f97d90f7dcd555f)]:
+  - @numl-react/elements@0.0.31
+
 ## 0.0.30
 
 ### Patch Changes
