@@ -16,7 +16,7 @@ const useEventListener = (
   useEffect(() => {
     if (!target?.addEventListener) return;
 
-    const eventListener = (event) => savedListener.current(event);
+    const eventListener = (event: any) => savedListener.current(event);
 
     target.addEventListener(eventType, eventListener, options);
 
