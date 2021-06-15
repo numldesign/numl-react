@@ -19,74 +19,87 @@ function Card(allProps: any): JSX.Element {
   return (
     <El.Card flex nu-card gap={gap} responsive={responsive} padding={padding}>
       <Card.Header
+        gap={gap}
         heading={heading}
         subheading={subheading}
         headerActions={headerActions}
         {...headerProps}
       />
-      <Card.Body body={body || children} {...otherProps} />
+      <Card.Body gap={gap} {...otherProps}>
+        {body || children}
+      </Card.Body>
       {footerActions ? (
-        <Card.Footer footerActions={footerActions} {...footerProps} />
+        <Card.Footer gap={gap} footerActions={footerActions} {...footerProps} />
       ) : null}
     </El.Card>
   );
 }
 
-Card.Header = function CardHeader(props: any) {
-  const { heading, subheading, headerActions, ...otherProps } = props;
+Card.Header = function CardHeader(props: any): JSX.Element {
+  const {
+    heading,
+    subheading,
+    gap = '1x',
+    headerActions,
+    ...otherProps
+  } = props;
   return (
     <>
       {heading || subheading || headerActions ? (
-        <El.Pane nu-header gap content="stretch space-between" {...otherProps}>
+        <El.Pane
+          nu-header
+          gap={gap}
+          content="stretch space-between"
+          {...otherProps}
+        >
           <El.Block>
             {heading ? <El.Block size="lg"> {heading}</El.Block> : null}
             {subheading ? <El.Block size="xs"> {subheading}</El.Block> : null}
           </El.Block>
-          <El.Block>{headerActions || null}</El.Block>
+          <El.Block gap={gap}>{headerActions || null}</El.Block>
         </El.Pane>
       ) : null}
     </>
   );
 };
 
-Card.Body = function CardBody(props: any) {
-  const { body, gap = '2x', ...otherProps } = props;
+Card.Body = function CardBody(props: any): JSX.Element {
+  const { body, children, gap = '1x', ...otherProps } = props;
   return (
     <El.Flow nu-body gap={gap} {...otherProps}>
-      {body || null}
+      {React.Children.toArray(body || children)}
     </El.Flow>
   );
 };
 
-Card.Section = function CardSection(props: any) {
+Card.Section = function CardSection(props: any): JSX.Element {
   const {
     heading,
-    padding = 'bottom 2x',
-    border = 'bottom',
     subheading,
+    gap = '1x',
+    body,
     children,
     headerProps,
     ...otherProps
   } = props;
   return (
-    <El.Block nu-section padding={padding} flex gap border={border}>
+    <El.Block nu-section flex gap={gap}>
       <Card.Header heading={heading} subheading={subheading} {...headerProps} />
-      {children ? <Card.Body {...otherProps}>{children}</Card.Body> : null}
+      <Card.Body {...otherProps}>{body || children}</Card.Body>
     </El.Block>
   );
 };
 
-Card.Footer = function CardFooter(props: any) {
-  const { footerActions, ...otherProps } = props;
+Card.Footer = function CardFooter(props: any): JSX.Element {
+  const {
+    footerActions,
+    content = 'flex-end|flex-start',
+    gap = '1x',
+    ...otherProps
+  } = props;
   return (
-    <El.Flex content="flex-end|flex-start" gap="1x" size="md" {...otherProps}>
-      {typeof footerActions === 'string' ? (
-        <El.Pane content="flex-end" size="md" border="0">
-          {footerActions}
-        </El.Pane>
-      ) : (
-        footerActions
-      )}
+    <El.Flex content={content} gap={gap} {...otherProps}>
+      {footerActions || null}
     </El.Flex>
   );
 };
