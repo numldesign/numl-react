@@ -8,7 +8,8 @@
     "packages/Molecules",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*"
+    "packages/Molecules/*",
+    "packages/Utilities/*"
   ],
   "concurrency": 1,
   "useWorkspaces": true,

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable dot-notation */
-import { LoadNuml, useLocalStorage } from '@numl-react/utility';
+import { LoadNuml, ResponsiveUtility } from '@numl-react/utility';
 import React, { useEffect, useState } from 'react';
 import { Root } from '../../Root';
 
@@ -20,13 +20,7 @@ const NumlProvider = function (props: any) {
     ...otherProps
   } = props;
   const [state, setState] = useState(false);
-  const responsive = JSON.stringify({ xs, sm, md, lg, xl });
-  console.log(JSON.stringify({ xs, sm, md, lg, xl }));
-  const [resp, setResp] = useLocalStorage('responsive', responsive);
-
-  useEffect(() => {
-    setResp(responsive);
-  }, [responsive]);
+  const { responsive } = ResponsiveUtility({ xs, sm, md, lg, xl });
 
   useEffect(() => {
     LoadNuml()
@@ -49,16 +43,7 @@ const NumlProvider = function (props: any) {
   return !state ? (
     <div>Loading...</div>
   ) : (
-    <Root
-      fill={fill}
-      height={height}
-      xs={xs}
-      sm={sm}
-      md={md}
-      lg={lg}
-      xl={xl}
-      {...otherProps}
-    >
+    <Root fill={fill} height={height} responsive={responsive} {...otherProps}>
       {children}
     </Root>
   );

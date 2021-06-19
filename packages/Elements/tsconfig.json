@@ -8,6 +8,7 @@
     "skipDefaultLibCheck": true,
     "emitDeclarationOnly": true
   },
+  "exclude": ["**/**/*.test.tsx", "**/**/*.test.ts"],
   "include": [
     "./index.ts",
     "./Action",
