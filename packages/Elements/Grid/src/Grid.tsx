@@ -1,9 +1,9 @@
-/* eslint-disable no-param-reassign */
 import { ColumnsUtility } from '@numl-react/utility';
 import React from 'react';
 
 const Grid = React.forwardRef((props: any, ref) => {
   const {
+    columns = '',
     xs = '',
     sm = '',
     md = '',
@@ -13,14 +13,18 @@ const Grid = React.forwardRef((props: any, ref) => {
     ...otherProps
   } = props;
 
-  const { columns } = ColumnsUtility({
-    xs,
-    sm,
-    md,
-    lg,
-    xl,
-  });
-  otherProps.columns = columns;
+  if (!(xs == '' && sm == '' && md == '' && lg == '' && xl == '')) {
+    const { column } = ColumnsUtility({
+      xs,
+      sm,
+      md,
+      lg,
+      xl,
+    });
+
+    otherProps.columns = column;
+  }
+
   return React.createElement(
     'nu-grid',
     {

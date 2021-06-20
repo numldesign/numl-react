@@ -15,7 +15,7 @@ type ColumnsUtilityProps = {
  */
 
 type ColumnsUtilityReturnProps = {
-  columns: string;
+  column: string;
 };
 
 /**
@@ -29,27 +29,29 @@ const ColumnsUtility = (
   props: ColumnsUtilityProps
 ): ColumnsUtilityReturnProps => {
   const { xs = '', sm = '', md = '', lg = '', xl = '' } = props;
-  let columns = '';
+  let column = '';
   if (xl && lg && md && sm && xs) {
-    columns = `${xl}|${lg}|${md}|${sm}|${xs}`;
+    column = `${xl}|${lg}|${md}|${sm}|${xs}`;
   } else if (xl && lg && md && sm && !xs) {
-    columns = `${xl}|${lg}|${md}|${sm}|${sm}`;
+    column = `${xl}|${lg}|${md}|${sm}|${sm}`;
   } else if (xl && lg && md && !sm && !xs) {
-    columns = `${xl}|${lg}|${md}|${md}|${md}`;
+    column = `${xl}|${lg}|${md}|${md}|${md}`;
   } else if (xl && lg && !md && !sm && !xs) {
-    columns = `${xl}|${lg}|${lg}|${lg}|${lg}`;
+    column = `${xl}|${lg}|${lg}|${lg}|${lg}`;
   } else if (xl && !lg && !md && !sm && !xs) {
-    columns = `${xl}|${xl}|${xl}|${xl}|${xl}`;
+    column = `${xl}|${xl}|${xl}|${xl}|${xl}`;
   } else if (!xl && lg && !md && !sm && !xs) {
-    columns = `${lg}|${lg}|${lg}|${lg}|${lg}`;
+    column = `${lg}|${lg}|${lg}|${lg}|${lg}`;
   } else if (!xl && !lg && md && !sm && !xs) {
-    columns = `${md}|${md}|${md}|${md}|${md}`;
+    column = `${md}|${md}|${md}|${md}|${md}`;
   } else if (!xl && !lg && !md && sm && !xs) {
-    columns = `${sm}|${sm}|${sm}|${sm}|${sm}`;
+    column = `${sm}|${sm}|${sm}|${sm}|${sm}`;
+  } else if (!xl && !lg && !md && !sm && xs) {
+    column = `${xs}|${xs}|${xs}|${xs}|${xs}`;
   } else {
-    columns = `${xl}|${lg}|${md}|${sm}|${xs}`;
+    column = `${xl}|${lg}|${md}|${sm}|${xs}`;
   }
-  return { columns };
+  return { column };
 };
 
 export { ColumnsUtility, ColumnsUtilityProps, ColumnsUtilityReturnProps };

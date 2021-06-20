@@ -12,7 +12,7 @@ declare type ColumnsUtilityProps = {
  * Properties that are return form the Responsive utility
  */
 declare type ColumnsUtilityReturnProps = {
-  columns: string;
+  column: string;
 };
 /**
  * This function is used to get responsive attribute,

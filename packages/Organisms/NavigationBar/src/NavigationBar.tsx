@@ -1,21 +1,14 @@
-import React from 'react';
 import { El } from '@numl-react/core';
+import React from 'react';
 import Menu from '../../../Molecules/Menu/src/Menu';
 
 function NavigationBar(props: any): JSX.Element {
-  const {
-    items,
-    fill = 'bg',
-    height = '100vh',
-    theme = 'default',
-    ...otherProps
-  } = props;
+  const { items, height = '100%', theme = 'default', ...otherProps } = props;
   return (
     <Menu
       flex
       theme={theme}
       height={height}
-      fill={fill}
       flow="column"
       content="space-between"
       width="min 256px"
@@ -23,12 +16,13 @@ function NavigationBar(props: any): JSX.Element {
     >
       <El.Block overflow="auto" theme={theme}>
         <El.Grid content="space-between" columns="1fr">
-          {items &&
+          {React.Children.toArray(
             items.map((eachItem: any) => (
               <NavigationBar.Item icon={eachItem.icon} theme={theme}>
                 {eachItem.text}
               </NavigationBar.Item>
-            ))}
+            ))
+          )}
         </El.Grid>
       </El.Block>
       <El.Footer>

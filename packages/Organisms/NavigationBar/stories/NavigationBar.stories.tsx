@@ -1,15 +1,20 @@
 import React from 'react';
 import NavigationBar from '../src/NavigationBar';
+import { El } from '@numl-react/core';
 
 export default {
   title: 'Numl React/Organisms/NavigationBar',
   component: NavigationBar,
-  argTypes: {},
+  parameters: {
+    layout: 'none',
+  },
 };
 
 const Template = ({ ...args }) => (
   <>
-    <NavigationBar {...args} />
+    <El.Block height="100vh">
+      <NavigationBar {...args} />
+    </El.Block>
   </>
 );
 
