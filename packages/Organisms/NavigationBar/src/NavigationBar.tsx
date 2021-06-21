@@ -3,30 +3,29 @@ import React from 'react';
 import Menu from '../../../Molecules/Menu/src/Menu';
 
 function NavigationBar(props: any): JSX.Element {
-  const { items, height = '100%', theme = 'default', ...otherProps } = props;
+  const { items, height = '100%', ...otherProps } = props;
   return (
     <Menu
       flex
-      theme={theme}
       height={height}
       flow="column"
       content="space-between"
       width="min 256px"
       {...otherProps}
     >
-      <El.Block overflow="auto" theme={theme}>
+      <El.Block overflow="auto">
         <El.Grid content="space-between" columns="1fr">
           {React.Children.toArray(
             items.map((eachItem: any) => (
-              <NavigationBar.Item icon={eachItem.icon} theme={theme}>
-                {eachItem.text}
+              <NavigationBar.Item icon={eachItem.icon}>
+                {eachItem.label}
               </NavigationBar.Item>
             ))
           )}
         </El.Grid>
       </El.Block>
       <El.Footer>
-        <NavigationBar.Item icon="settings-outline" theme={theme}>
+        <NavigationBar.Item icon="settings-outline">
           Settings
         </NavigationBar.Item>
       </El.Footer>
@@ -35,38 +34,73 @@ function NavigationBar(props: any): JSX.Element {
 }
 
 NavigationBar.Item = (props: any) => {
-  const { label, icon, children, theme = 'default', ...otherProps } = props;
+  const { label, icon, children, ...otherProps } = props;
   return (
-    <El.Menuitem
-      gap="1x 2x"
-      theme={theme}
-      display="flex"
-      flow="row"
-      width="100%"
-      {...otherProps}
-    >
+    <El.Menuitem gap="3x" flex width="100%" content="start" {...otherProps}>
       {icon && typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
       {label || children}
     </El.Menuitem>
   );
 };
 
-NavigationBar.Dropdown = (props: any) => {
-  const { label, theme = 'default', icon, children, ...otherProps } = props;
+const NavigationChild = function ({ item }) {
   return (
-    <El.Menuitem
-      gap="1x 2x"
-      display="flex"
-      flow="row"
-      width="100%"
-      theme={theme}
+    <>
+      <NavigationBar.Item icon={item.icon} label={item.label} to={item.to}>
+        {item.label}
+      </NavigationBar.Item>
+      {item.subNavigationItems ? (
+        <El.Block padding="left 2rem" transition="opacity .5s ease">
+          {React.Children.toArray(
+            item.subNavigationItems.length > 0 &&
+              item.subNavigationItems.map((navItem: any) => {
+                return <NavigationChild item={navItem} />;
+              })
+          )}
+        </El.Block>
+      ) : null}
+    </>
+  );
+};
+
+NavigationBar.Test = (props: any): JSX.Element => {
+  const { items, height = '100%', ...otherProps } = props;
+
+  return (
+    <Menu
+      flex
+      height={height}
+      flow="column"
+      content="space-between"
+      width="min 256px"
       {...otherProps}
     >
-      {icon && typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
-      {label}
-      <El.DropdownIcon theme={theme} />
-      <El.Popup theme={theme}>{children}</El.Popup>
-    </El.Menuitem>
+      <El.Block overflow="auto">
+        <El.Grid
+          content="space-between stretch"
+          xl="1fr"
+          lg="1fr"
+          md="1fr"
+          sm="1fr"
+          xs="1fr"
+        >
+          {React.Children.toArray(
+            items.map((eachItem: any) => (
+              <>
+                <NavigationChild item={eachItem} />
+              </>
+            ))
+          )}
+        </El.Grid>
+      </El.Block>
+      <El.Footer>
+        <El.Block border="top">
+          <NavigationBar.Item icon="settings-outline">
+            Settings
+          </NavigationBar.Item>
+        </El.Block>
+      </El.Footer>
+    </Menu>
   );
 };
 
