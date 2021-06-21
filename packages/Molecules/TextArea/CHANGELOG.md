@@ -1,5 +1,14 @@
 # @numl-react/text-area
 
+## 0.0.32
+
+### Patch Changes
+
+- [#103](https://github.com/numldesign/numl-react/pull/103) [`e535225`](https://github.com/numldesign/numl-react/commit/e535225f2caa35f20a0c9a07b20c6b941d0a01d1) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - Custom hooks added
+
+- Updated dependencies [[`e535225`](https://github.com/numldesign/numl-react/commit/e535225f2caa35f20a0c9a07b20c6b941d0a01d1)]:
+  - @numl-react/core@0.0.32
+
 ## 0.0.31
 
 ### Patch Changes
