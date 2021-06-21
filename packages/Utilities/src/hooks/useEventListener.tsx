@@ -1,30 +1,40 @@
-import { useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const useEventListener = (
-  eventType = '',
-  listener = () => null,
-  target: any = window,
-  options = null
-) => {
-  const savedListener: any = useRef();
-
-  useEffect(() => {
-    savedListener.current = listener;
-  }, [listener]);
+function useEventListener<T extends HTMLElement = HTMLDivElement>(
+  eventName: keyof WindowEventMap,
+  handler: (event: Event) => void,
+  element?: RefObject<T>
+) {
+  // Create a ref that stores handler
+  const savedHandler = useRef<(event: Event) => void>();
 
   useEffect(() => {
-    if (!target?.addEventListener) return;
+    // Define the listening target
+    const targetElement: T | Window = element?.current || window;
+    if (!(targetElement && targetElement.addEventListener)) {
+      return;
+    }
 
-    const eventListener = (event: any) => savedListener.current(event);
+    // Update saved handler if necessary
+    if (savedHandler.current !== handler) {
+      savedHandler.current = handler;
+    }
 
-    target.addEventListener(eventType, eventListener, options);
-
-    // eslint-disable-next-line consistent-return
-    return () => {
-      target.removeEventListener(eventType, eventListener, options);
+    // Create event listener that calls handler function stored in ref
+    const eventListener = (event: Event) => {
+      // eslint-disable-next-line no-extra-boolean-cast
+      if (!!savedHandler?.current) {
+        savedHandler.current(event);
+      }
     };
-  }, [eventType, target, options]);
-};
+
+    targetElement.addEventListener(eventName, eventListener, false);
+
+    // Remove event listener on cleanup
+    return () => {
+      targetElement.removeEventListener(eventName, eventListener);
+    };
+  }, [eventName, element, handler]);
+}
 
 export { useEventListener };

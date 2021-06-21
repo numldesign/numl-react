@@ -1,7 +1,7 @@
-declare const useEventListener: (
-  eventType?: string,
-  listener?: () => any,
-  target?: any,
-  options?: any
-) => void;
+import { RefObject } from 'react';
+declare function useEventListener<T extends HTMLElement = HTMLDivElement>(
+  eventName: keyof WindowEventMap,
+  handler: (event: Event) => void,
+  element?: RefObject<T>
+): void;
 export { useEventListener };
