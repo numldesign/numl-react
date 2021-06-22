@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/top-bar",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "A simple and customizable top bar component to search, access menus, and navigate by clicking on the logo",
   "keywords": [
     "design",
@@ -47,6 +47,6 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.32"
+    "@numl-react/core": "^0.0.33"
   }
 }
