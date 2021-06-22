@@ -2,10 +2,9 @@ import { El } from '@numl-react/core';
 import { useEventListener } from '@numl-react/utility';
 import React from 'react';
 import Menu from '../../../Molecules/Menu/src/Menu';
-import useEffect from 'react';
 
 function NavigationBar(props: any): JSX.Element {
-  const { items, height = '100%', children, footer, ...otherProps } = props;
+  const { height = '100%', children, footer } = props;
 
   return (
     <Menu
@@ -14,7 +13,6 @@ function NavigationBar(props: any): JSX.Element {
       flow="column"
       content="space-between"
       width="min 256px"
-      {...otherProps}
     >
       <El.Block overflow="auto">
         <El.Grid
@@ -39,9 +37,9 @@ type NavigationItem = {
   label?: string;
   icon?: string | React.ReactElement;
   children?: string | React.ReactElement;
-  onClick?: () => void;
-  beforeClick?: () => void;
-  afterClick?: () => void;
+  onClick?: (event: React.SyntheticEvent) => void;
+  beforeClick?: (event: React.SyntheticEvent) => void;
+  afterClick?: (event: React.SyntheticEvent) => void;
   to?: string;
   dropdown?: boolean;
 };
@@ -58,10 +56,10 @@ NavigationBar.Item = (props: NavigationItem) => {
   } = props;
   const buttonRef = React.useRef(null);
 
-  const clickEvent: any = (event: Event) => {
-    beforeClick && beforeClick();
-    onClick && onClick();
-    afterClick && afterClick();
+  const clickEvent: any = (event: React.SyntheticEvent) => {
+    beforeClick && beforeClick(event);
+    onClick && onClick(event);
+    afterClick && afterClick(event);
   };
 
   useEventListener('click', clickEvent, buttonRef);
@@ -78,7 +76,9 @@ NavigationBar.Item = (props: NavigationItem) => {
         {icon && typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
         <El.BaseElement>{label || children}</El.BaseElement>
       </El.Flex>
-      {dropdown || dropdown == true ? <El.DropdownIcon clear /> : null}
+      {dropdown || dropdown == true ? (
+        <El.DropdownIcon theme="default" />
+      ) : null}
     </El.Menuitem>
   );
 };
@@ -115,15 +115,17 @@ const NavigationChild = function ({ item }) {
     </>
   );
 };
-NavigationBar.Section = function ({ item }): JSX.Element {
+NavigationBar.Section = function ({ items, title = null }): JSX.Element {
   return (
     <>
+      {title ? <El.Label padding="top 2rem">{title}</El.Label> : null}
       {React.Children.toArray(
-        item.map((eachItem: any) => (
-          <>
-            <NavigationChild item={eachItem} />
-          </>
-        ))
+        items &&
+          items.map((eachItem: any) => (
+            <>
+              <NavigationChild item={eachItem} />
+            </>
+          ))
       )}
     </>
   );

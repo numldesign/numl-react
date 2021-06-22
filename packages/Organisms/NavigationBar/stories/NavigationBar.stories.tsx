@@ -14,7 +14,8 @@ const Template = ({ items, footer }) => (
   <>
     <El.Block height="100vh">
       <NavigationBar footer={footer}>
-        <NavigationBar.Section item={items} />
+        <NavigationBar.Section items={items} />
+        <NavigationBar.Section items={items} title="Analytics" />
       </NavigationBar>
     </El.Block>
   </>
