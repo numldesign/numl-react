@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import { ForunIcon } from './ForunIcon';
-import TextInput from '../../../Atoms/TextInput/src/TextInput';
-import Avatar from '../../../Atoms/Avatar/src/Avatar';
-import Button from '../../../Atoms/Button/src/Button';
+import { Button, Avatar, TextInput } from '@numl-react/atoms';
 
 const TopBar = (props: any) => {
   const { placeholder, nuLinkAction, subtitle, menu, logo, username } = props;

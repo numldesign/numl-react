@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../../Atoms/Button/src/Button';
 import ContextualSaveBar from '../src/ContextualSaveBar';
+import { Button } from '@numl-react/atoms';
 
 export default {
   title: 'Numl React/Organisms/ContextualSaveBar',
