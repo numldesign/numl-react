@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationBar from '../src/NavigationBar';
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 
 export default {
   title: 'Numl React/Organisms/NavigationBar',

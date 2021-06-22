@@ -1,7 +1,7 @@
-import { El } from '@numl-react/core';
+import * as El from '@numl-react/elements';
 import { useEventListener } from '@numl-react/utility';
 import React from 'react';
-import Menu from '../../../Molecules/Menu/src/Menu';
+import { Menu } from '@numl-react/molecules';
 
 function NavigationBar(props: any): JSX.Element {
   const { height = '100%', children, footer } = props;

@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/contextual-savebar",
-  "version": "0.0.1",
+  "version": "0.0.32",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -21,8 +21,8 @@
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
-  "types": "types/index.d.ts",
-  "typings": "types/index.d.ts",
+  "types": "types/ContextualSaveBar/index.d.ts",
+  "typings": "types/ContextualSaveBar/index.d.ts",
   "files": [
     "dist",
     "types",
@@ -47,6 +47,6 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "dependencies": {
-    "@numl-react/core": "0.0.32"
+    "@numl-react/core": "^0.0.32"
   }
 }
