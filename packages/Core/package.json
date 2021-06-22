@@ -50,8 +50,8 @@
     "@numl-react/atoms": "^0.0.32",
     "@numl-react/elements": "^0.0.32",
     "@numl-react/molecules": "^0.0.32",
-    "@numl-react/utility": "^0.0.32",
-    "@numl-react/organisms": "^0.0.32"
+    "@numl-react/organisms": "^0.0.32",
+    "@numl-react/utility": "^0.0.32"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
