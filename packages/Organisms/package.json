@@ -29,8 +29,8 @@
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
-  "types": "types/index.d.ts",
-  "typings": "types/index.d.ts",
+  "types": "types/Organisms/index.d.ts",
+  "typings": "types/Organisms/index.d.ts",
   "files": [
     "dist",
     "types",
