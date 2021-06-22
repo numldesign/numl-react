@@ -118,7 +118,11 @@ const NavigationChild = function ({ item }) {
 NavigationBar.Section = function ({ items, title = null }): JSX.Element {
   return (
     <>
-      {title ? <El.Label padding="top 2rem">{title}</El.Label> : null}
+      {title ? (
+        <El.BaseElement padding="top 2x">
+          <El.Label padding="1x">{title}</El.Label>
+        </El.BaseElement>
+      ) : null}
       {React.Children.toArray(
         items &&
           items.map((eachItem: any) => (
