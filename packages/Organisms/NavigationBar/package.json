@@ -47,6 +47,6 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "dependencies": {
-    "@numl-react/core": "0.0.15"
+    "@numl-react/core": "0.0.32"
   }
 }

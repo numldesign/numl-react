@@ -24,3 +24,4 @@ export * from '@numl-react/molecules';
 export * as El from '@numl-react/elements';
 export * as Atoms from '@numl-react/atoms';
 export * as Molecules from '@numl-react/molecules';
+export * as Organisms from '@numl-react/organisms';
