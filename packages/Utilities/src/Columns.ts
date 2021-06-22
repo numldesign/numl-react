@@ -54,4 +54,4 @@ const ColumnsUtility = (
   return { column };
 };
 
-export { ColumnsUtility, ColumnsUtilityProps, ColumnsUtilityReturnProps };
+export { ColumnsUtility };

@@ -23,4 +23,4 @@ declare type ColumnsUtilityReturnProps = {
 declare const ColumnsUtility: (
   props: ColumnsUtilityProps
 ) => ColumnsUtilityReturnProps;
-export { ColumnsUtility, ColumnsUtilityProps, ColumnsUtilityReturnProps };
+export { ColumnsUtility };

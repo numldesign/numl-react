@@ -41,8 +41,4 @@ const ResponsiveUtility = (
   return { responsive: responsiveness };
 };
 
-export {
-  ResponsiveUtility,
-  ResponsiveUtilityProps,
-  ResponsiveUtilityReturnProps,
-};
+export { ResponsiveUtility };

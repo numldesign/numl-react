@@ -23,8 +23,4 @@ declare type ResponsiveUtilityReturnProps = {
 declare const ResponsiveUtility: (
   props: ResponsiveUtilityProps
 ) => ResponsiveUtilityReturnProps;
-export {
-  ResponsiveUtility,
-  ResponsiveUtilityProps,
-  ResponsiveUtilityReturnProps,
-};
+export { ResponsiveUtility };
