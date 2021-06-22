@@ -42,7 +42,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && rimraf types",
     "postbuild": "yarn build:types",
     "build:types": "npx tsc -b --verbose"
   },
@@ -50,7 +50,8 @@
     "@numl-react/atoms": "^0.0.32",
     "@numl-react/elements": "^0.0.32",
     "@numl-react/molecules": "^0.0.32",
-    "@numl-react/utility": "^0.0.32"
+    "@numl-react/utility": "^0.0.32",
+    "@numl-react/organisms": "^0.0.32"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",

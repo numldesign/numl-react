@@ -34,7 +34,7 @@ export const parameters = {
 function AppProviderWithKnobs({ theme, children }, context) {
   var customtheme = localStorage.getItem('theme');
   return (
-    <NumlProvider theme={customtheme || 'dark'}>
+    <NumlProvider theme={customtheme || 'dark'} xs="400px" sm="600px" md="800px" lg="1000px" xl="1200px">
       <El.ThemeProvider hue="290" saturation="75" />
       <El.ThemeProvider name="secondary" hue="240" saturation="75" />
       {children}

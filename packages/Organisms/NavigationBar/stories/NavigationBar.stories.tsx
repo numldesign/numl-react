@@ -1,15 +1,23 @@
 import React from 'react';
 import NavigationBar from '../src/NavigationBar';
+import { El } from '@numl-react/core';
 
 export default {
   title: 'Numl React/Organisms/NavigationBar',
   component: NavigationBar,
-  argTypes: {},
+  parameters: {
+    layout: 'none',
+  },
 };
 
-const Template = ({ ...args }) => (
+const Template = ({ items, footer }) => (
   <>
-    <NavigationBar {...args} />
+    <El.Block height="100vh">
+      <NavigationBar footer={footer}>
+        <NavigationBar.Section items={items} />
+        <NavigationBar.Section items={items} title="Analytics" />
+      </NavigationBar>
+    </El.Block>
   </>
 );
 
@@ -18,48 +26,75 @@ Default.args = {
   items: [
     {
       icon: 'home',
-      text: 'Home',
+      label: 'Home',
     },
     {
       icon: 'download-outline',
-      text: 'Order',
+      label: 'Order',
       count: '15',
     },
     {
       icon: 'pricetag-outline',
-      text: 'Products',
+      label: 'Products',
     },
     {
       icon: 'person-outline',
-      text: 'Customer',
+      label: 'Customer',
     },
     {
       icon: 'bar-chart-outline',
-      text: 'Analytics',
+      label: 'Analytics',
     },
     {
       icon: 'megaphone-outline',
-      text: 'Marketing',
+      label: 'Marketing',
     },
     {
       icon: 'discount-outline',
-      text: 'Discount',
+      label: 'Discount',
     },
     {
       icon: 'apps-outline',
-      text: 'Apps',
+      label: 'Apps',
     },
     {
       icon: 'page-builder-outline',
-      text: 'Page Builder',
+      label: 'Page Builder',
     },
     {
       icon: 'documents-outline',
-      text: 'Form Builder',
+      label: 'Form Builder',
     },
     {
       icon: 'subscription-outline',
-      text: 'Subscription',
+      label: 'Subscription',
+      subNavigationItems: [
+        {
+          icon: 'apps-outline',
+          label: 'Apps',
+        },
+        {
+          icon: 'page-builder-outline',
+          label: 'Page Builder',
+        },
+        {
+          icon: 'documents-outline',
+          label: 'Form Builder',
+          subNavigationItems: [
+            {
+              icon: 'apps-outline',
+              label: 'Apps',
+            },
+            {
+              icon: 'page-builder-outline',
+              label: 'Page Builder',
+            },
+          ],
+        },
+      ],
     },
+  ],
+  footer: [
+    <NavigationBar.Item icon="settings-outline">Settings</NavigationBar.Item>,
   ],
 };

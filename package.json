@@ -28,10 +28,13 @@
     "packages/Utilities",
     "packages/Atoms",
     "packages/Core",
+    "packages/Organisms",
     "packages/Molecules",
     "packages/Atoms/*",
     "packages/Core/*",
-    "packages/Molecules/*"
+    "packages/Molecules/*",
+    "packages/Utilities/*",
+    "packages/Organisms/*"
   ],
   "scripts": {
     "commit": "yarn run prettier && cz",

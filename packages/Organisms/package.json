@@ -1,0 +1,73 @@
+{
+  "name": "@numl-react/organisms",
+  "version": "0.0.32",
+  "description": "A simple and accessible component for React by numl design",
+  "keywords": [
+    "design",
+    "system",
+    "components",
+    "react",
+    "numl",
+    "uikit"
+  ],
+  "homepage": "https://github.com/numldesign/numl-react#readme",
+  "bugs": {
+    "url": "https://github.com/numldesign/numl-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/numldesign/numl-react.git"
+  },
+  "license": "MIT",
+  "author": "Numl.Design Team",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./index.ts",
+      "default": "./index.ts"
+    }
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "types/Organisms/index.d.ts",
+  "typings": "types/Organisms/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "index.js",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prebuild": "rimraf dist && rimraf types",
+    "postbuild": "yarn build:types",
+    "build:types": "npx tsc -b --verbose"
+  },
+  "dependencies": {
+    "@numl-react/core": "^0.0.32"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.23",
+    "@types/mocha": "8.2.2",
+    "@types/node": "15.3.0",
+    "@types/react": "17.0.5",
+    "@types/react-dom": "17.0.5",
+    "jest": "26.6.3",
+    "prop-types": "15.7.2",
+    "rimraf": "^3.0.2",
+    "tslib": "2.2.0",
+    "typescript": "4.2.4",
+    "uuid": "^8.3.2",
+    "vite": "2.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.0",
+    "typescript": ">=3.51",
+    "vite": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "0713f0f185b3c67f8952ce49350c784c8799dcdb"
+}

@@ -10,7 +10,7 @@ export default {
 
 const Template = ({ ...args }) => (
   <>
-    <CalloutCard {...args} width="500px" />
+    <CalloutCard {...args} />
   </>
 );
 
@@ -38,13 +38,7 @@ WithoutAction.args = {
   src: 'https://media.sproutsocial.com/uploads/2017/02/facebook-business-profile.png',
 };
 
-const Template2 = ({ ...args }) => (
-  <>
-    <CalloutCard.Landscape {...args} />
-  </>
-);
-
-export const Landscape = Template2.bind({});
+export const Landscape = Template.bind({});
 Landscape.args = {
   heading: 'Customize the style of your checkout',
   description:

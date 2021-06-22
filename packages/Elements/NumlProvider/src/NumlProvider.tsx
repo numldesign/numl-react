@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable dot-notation */
+import { LoadNuml, ResponsiveUtility } from '@numl-react/utility';
 import React, { useEffect, useState } from 'react';
-import { LoadNuml } from '@numl-react/utility';
 import { Root } from '../../Root';
 
 const NumlProvider = function (props: any) {
@@ -9,12 +9,19 @@ const NumlProvider = function (props: any) {
     icons = 'ion',
     theme = 'auto',
     children,
+    xs = '576px',
+    sm = '768px',
+    md = '992px',
+    lg = '1200px',
+    xl = '1800px',
     onInit,
     height = '100%',
     fill,
     ...otherProps
   } = props;
   const [state, setState] = useState(false);
+  const { responsive } = ResponsiveUtility({ xs, sm, md, lg, xl });
+
   useEffect(() => {
     LoadNuml()
       .then((Nude: any) => {
@@ -36,7 +43,7 @@ const NumlProvider = function (props: any) {
   return !state ? (
     <div>Loading...</div>
   ) : (
-    <Root fill={fill} height={height} {...otherProps}>
+    <Root fill={fill} height={height} responsive={responsive} {...otherProps}>
       {children}
     </Root>
   );

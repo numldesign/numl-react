@@ -8,5 +8,26 @@
     "skipDefaultLibCheck": true,
     "emitDeclarationOnly": true
   },
-  "include": ["./index.ts"]
+  "exclude": ["./**/stories/*", "vite.config.ts", "./**/vite.config.ts"],
+  "include": [
+    "./index.ts",
+    "./Avatar",
+    "./Badge",
+    "./Button",
+    "./Checkbox",
+    "./Chip",
+    "./ExceptionList",
+    "./FooterHelp",
+    "./Icon",
+    "./Link",
+    "./MessageError",
+    "./Pagination",
+    "./ProgressBar",
+    "./Radio",
+    "./RangeSlider",
+    "./Switch",
+    "./Tag",
+    "./TextInput",
+    "./Thumbnail"
+  ]
 }

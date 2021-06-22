@@ -69,3 +69,4 @@ package-lock.json
 
 htpasswd
 .verdaccio
+# *.d.ts

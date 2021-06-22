@@ -41,7 +41,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && rimraf types",
     "postbuild": "yarn build:types",
     "build:types": "npx tsc -b --verbose"
   },

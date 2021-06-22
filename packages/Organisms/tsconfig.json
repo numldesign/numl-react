@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "types",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "emitDeclarationOnly": true
+  },
+  "exclude": ["node_modules/*", "../../node_modules/*"],
+  "include": ["./index.ts"]
+}
