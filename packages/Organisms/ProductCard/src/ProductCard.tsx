@@ -210,4 +210,4 @@ const ProductDetail = (props: any) => {
   );
 };
 
-export default ProductCard;
+export { ProductCard };

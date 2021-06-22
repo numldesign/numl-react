@@ -14,4 +14,4 @@ declare type NavigationItem = {
   to?: string;
   dropdown?: boolean;
 };
-export default NavigationBar;
+export { NavigationBar };

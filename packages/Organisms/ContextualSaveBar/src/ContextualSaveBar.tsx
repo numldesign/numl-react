@@ -43,4 +43,4 @@ function ContextualSaveBar(props: any): JSX.Element {
   );
 }
 
-export default ContextualSaveBar;
+export { ContextualSaveBar };
