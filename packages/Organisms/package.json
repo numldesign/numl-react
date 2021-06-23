@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/organisms",
-  "version": "0.0.33-1",
+  "version": "0.0.33",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -44,10 +44,10 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/atoms": "^0.0.33-1",
-    "@numl-react/elements": "^0.0.33-1",
-    "@numl-react/molecules": "^0.0.33-1",
-    "@numl-react/utility": "^0.0.33-1"
+    "@numl-react/atoms": "^0.0.33",
+    "@numl-react/elements": "^0.0.33",
+    "@numl-react/molecules": "^0.0.33",
+    "@numl-react/utility": "^0.0.33"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
