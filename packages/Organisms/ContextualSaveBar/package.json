@@ -1,7 +1,7 @@
 {
   "name": "@numl-react/contextual-savebar",
   "version": "0.0.33",
-  "description": "A simple and accessible component for React by numl design",
+  "description": "The contextual savebar can be used to indicate users, that they have unsaved changes that needs to be saved or discarded.",
   "keywords": [
     "design",
     "system",

@@ -37,4 +37,4 @@ const TopBar = (props: any) => {
   );
 };
 
-export default TopBar;
+export { TopBar };

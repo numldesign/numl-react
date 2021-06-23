@@ -135,4 +135,6 @@ NavigationBar.Section = function ({ items, title = null }): JSX.Element {
   );
 };
 
-export default NavigationBar;
+NavigationBar.displayName = 'NavigationBar';
+
+export { NavigationBar };

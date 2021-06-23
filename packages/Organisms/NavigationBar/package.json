@@ -1,14 +1,17 @@
 {
   "name": "@numl-react/navigation-bar",
   "version": "0.0.33",
-  "description": "A simple and accessible component for React by numl design",
+  "description": "The navigationbar component is used to display the primary navigation in the sidebar. Navigation Bar includes a list of links that wants to move between page.",
   "keywords": [
+    "navigationbar",
     "design",
     "system",
-    "components",
     "react",
+    "numl-react",
+    "components",
     "numl",
-    "uikit"
+    "uikit",
+    "fast-development"
   ],
   "author": "Numl.Design Team",
   "license": "MIT",

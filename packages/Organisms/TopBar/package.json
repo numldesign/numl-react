@@ -1,7 +1,7 @@
 {
   "name": "@numl-react/top-bar",
   "version": "0.0.33",
-  "description": "A simple and accessible component for React by numl design",
+  "description": "A simple and customizable top bar component to search, access menus, and navigate by clicking on the logo",
   "keywords": [
     "design",
     "system",

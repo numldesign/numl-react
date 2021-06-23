@@ -1,6 +1,6 @@
 import * as El from '@numl-react/elements';
 import React from 'react';
-import TopBar from '../src/TopBar';
+import { TopBar } from '../src/TopBar';
 
 export default {
   title: 'Numl React/Organisms/TopBar',

@@ -1,5 +1,5 @@
 import React from 'react';
-import ContextualSaveBar from '../src/ContextualSaveBar';
+import { ContextualSaveBar } from '../src/ContextualSaveBar';
 import { Button } from '@numl-react/atoms';
 
 export default {

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationBar from '../src/NavigationBar';
+import { NavigationBar } from '../src/NavigationBar';
 import * as El from '@numl-react/elements';
 
 export default {
