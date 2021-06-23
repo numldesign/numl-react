@@ -43,4 +43,5 @@ function ContextualSaveBar(props: any): JSX.Element {
   );
 }
 
+ContextualSaveBar.displayName = 'ContextualSaveBar';
 export { ContextualSaveBar };

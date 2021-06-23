@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from '../src/ProductCard';
+import { ProductCard } from '../src/ProductCard';
 
 export default {
   title: 'Numl React/Organisms/ProductCard',
