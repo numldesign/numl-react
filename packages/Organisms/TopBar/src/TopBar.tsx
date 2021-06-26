@@ -11,15 +11,14 @@ const TopBar = (props: any) => {
       width="100vw"
       flow="columns"
       fill="bg"
-      responsive="801px|800px"
       padding
       items="center"
       content="space-between"
     >
-      <El.Block hide="n|y" to={nuLinkAction}>
+      <El.Block hide="n|n|n|y" to={nuLinkAction}>
         {logo || <ForunIcon />}
       </El.Block>
-      <Button hide="y|n" clear>
+      <Button hide="y|n|n|n" clear>
         <El.Icon size="2" name="menu-outline" />
       </Button>
       <TextInput width="50%" placeholder={placeholder} icon="search-outline" />

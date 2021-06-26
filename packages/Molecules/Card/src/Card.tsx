@@ -8,7 +8,6 @@ function Card(allProps: any): JSX.Element {
     body,
     gap = '1x',
     padding = '2.5x',
-    responsive = '801px|800px',
     headerActions,
     headerProps,
     footerProps,
@@ -17,7 +16,7 @@ function Card(allProps: any): JSX.Element {
     ...otherProps
   } = allProps;
   return (
-    <El.Card flex nu-card gap={gap} responsive={responsive} padding={padding}>
+    <El.Card flex nu-card gap={gap} padding={padding}>
       <Card.Header
         gap={gap}
         heading={heading}
@@ -93,7 +92,7 @@ Card.Section = function CardSection(props: any): JSX.Element {
 Card.Footer = function CardFooter(props: any): JSX.Element {
   const {
     footerActions,
-    content = 'flex-end|flex-start',
+    content = 'flex-end|flex-end|flex-end|flex-start',
     gap = '1x',
     ...otherProps
   } = props;

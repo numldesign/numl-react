@@ -15,9 +15,6 @@ const Template = ({ ...args }) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  itemWrapperProps: {
-    responsive: '601px',
-  },
   renderItem: ({ item }) => (
     <El.Block text="wrap">
       <El.Block>{item.name}</El.Block>
@@ -49,9 +46,6 @@ export const WithMultiSelect = Template.bind({});
 WithMultiSelect.args = {
   multiSelect: true,
   selected: '200',
-  itemWrapperProps: {
-    responsive: '601px',
-  },
   renderItem: ({ item }) => (
     <El.Pane
       content="space-between|flex-start"
