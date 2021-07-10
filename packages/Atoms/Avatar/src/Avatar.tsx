@@ -48,7 +48,14 @@ const Avatar = function Avatar(allProps: any): JSX.Element {
 };
 
 Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
-  const { username, showIcon = true, size, padding, ...otherProps } = allProps;
+  const {
+    username,
+    showIcon = true,
+    size,
+    padding,
+    icon,
+    ...otherProps
+  } = allProps;
 
   // eslint-disable-next-line no-underscore-dangle
   let _size = '';
@@ -77,8 +84,10 @@ Avatar.Icon = function AvatarIcon(allProps: any): JSX.Element {
         <El.BaseElement padding="1x" size="3x 4x">
           {username.slice(0, 2)}
         </El.BaseElement>
-      ) : (
+      ) : !icon ? (
         <El.Icon padding={_padding} size="4x" sp name="person" />
+      ) : (
+        icon
       )}
     </El.Circle>
   );

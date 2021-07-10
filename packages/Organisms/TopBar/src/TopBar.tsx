@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as El from '@numl-react/elements';
-import { ForunIcon } from './ForunIcon';
 import { Button, Avatar, TextInput } from '@numl-react/atoms';
 
 const TopBar = (props: any) => {
@@ -8,28 +7,30 @@ const TopBar = (props: any) => {
 
   return (
     <El.Flex
-      width="100vw"
-      flow="columns"
-      fill="bg"
-      responsive="801px|800px"
-      padding
-      items="center"
-      content="space-between"
+      width={'100vw'}
+      fill={'bg'}
+      padding={'1x'}
+      items={'center'}
+      content={'space-between'}
     >
-      <El.Block hide="n|y" to={nuLinkAction}>
-        {logo || <ForunIcon />}
+      <El.Block hide={'n|n|n|y'} to={nuLinkAction}>
+        {logo}
       </El.Block>
-      <Button hide="y|n" clear>
-        <El.Icon size="2" name="menu-outline" />
+      <Button hide={'y|n|n|n'} clear>
+        <El.Icon size={'2'} name={'menu-outline'} />
       </Button>
-      <TextInput width="50%" placeholder={placeholder} icon="search-outline" />
+      <TextInput
+        width={'50%'}
+        placeholder={placeholder}
+        icon={'search-outline'}
+      />
       <Avatar
-        padding="0"
+        padding={'0'}
         username={username}
         subtitle={subtitle}
         clear
         flex
-        items="center"
+        items={'center'}
       >
         {menu}
       </Avatar>

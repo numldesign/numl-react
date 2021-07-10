@@ -10,28 +10,18 @@ function ContextualSaveBar(props: any): JSX.Element {
     fill = 'light',
     items = 'center',
     content = 'space-between',
-    row = '30vw 70vw|100vw',
     padding = '1.5x 2x',
-    responsive = '800px|799px',
     message,
     button,
   } = props;
   return (
-    <El.Flex
-      gap
-      fill={fill}
-      row={row}
-      items={items}
-      content={content}
-      responsive={responsive}
-      padding={padding}
-    >
-      <El.Block hide="n|y">
+    <El.Flex gap fill={fill} items={items} content={content} padding={padding}>
+      <El.Block hide="n|n|n|y">
         <ForunIcon />
       </El.Block>
       <El.Flex
         items="center"
-        width="70%|100%"
+        width="70%|70%|70%|100%"
         content="space-between"
         text="bold"
         color="#bg"
