@@ -1,5 +1,14 @@
 # @numl-react/media-card
 
+## 0.0.35
+
+### Patch Changes
+
+- [#117](https://github.com/numldesign/numl-react/pull/117) [`2de8bd1`](https://github.com/numldesign/numl-react/commit/2de8bd158a10010471748a09db86aa9fda58a794) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - options click event
+
+- Updated dependencies [[`2de8bd1`](https://github.com/numldesign/numl-react/commit/2de8bd158a10010471748a09db86aa9fda58a794)]:
+  - @numl-react/core@0.0.35
+
 ## 0.0.34
 
 ### Patch Changes
