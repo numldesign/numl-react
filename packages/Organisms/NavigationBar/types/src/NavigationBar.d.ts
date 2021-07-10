@@ -3,6 +3,7 @@ declare function NavigationBar(props: any): JSX.Element;
 declare namespace NavigationBar {
   var Item: (props: NavigationItem) => JSX.Element;
   var Section: ({ items, title }: { items: any; title?: any }) => JSX.Element;
+  var displayName: string;
 }
 declare type NavigationItem = {
   label?: string;

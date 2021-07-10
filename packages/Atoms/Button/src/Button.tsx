@@ -51,8 +51,7 @@ function Button(props: any): JSX.Element {
       {isExist(menu) &&
       (typeof menu === 'object' || typeof menu === 'string') ? (
         <>
-          {dropdownIcon &&
-          (dropdownIcon === 'true' || dropdownIcon === true) ? (
+          {dropdownIcon && (dropdownIcon == true || dropdownIcon === true) ? (
             <El.DropdownIcon theme={theme} />
           ) : null}
           <Button.Popup use-menu size={size} theme={theme}>
