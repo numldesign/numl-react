@@ -1,5 +1,14 @@
 # @numl-react/setting-toggle
 
+## 0.0.34
+
+### Patch Changes
+
+- [#111](https://github.com/numldesign/numl-react/pull/111) [`3e41936`](https://github.com/numldesign/numl-react/commit/3e419362c74f7c5752455bf0cd0312fd498d8ef3) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - organisms publish
+
+- Updated dependencies [[`3e41936`](https://github.com/numldesign/numl-react/commit/3e419362c74f7c5752455bf0cd0312fd498d8ef3)]:
+  - @numl-react/core@0.0.34
+
 ## 0.0.33
 
 ### Patch Changes
