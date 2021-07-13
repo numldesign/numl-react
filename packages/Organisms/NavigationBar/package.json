@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/navigation-bar",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "The navigationbar component is used to display the primary navigation in the sidebar. Navigation Bar includes a list of links that wants to move between page.",
   "keywords": [
     "navigationbar",
@@ -50,6 +50,6 @@
     "url": "https://github.com/numldesign/numl-react/issues"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.35"
+    "@numl-react/core": "^0.0.36"
   }
 }

@@ -1,5 +1,17 @@
 # @numl-react/organisms
 
+## 0.0.36
+
+### Patch Changes
+
+- [#119](https://github.com/numldesign/numl-react/pull/119) [`7c93bc3`](https://github.com/numldesign/numl-react/commit/7c93bc3232c38c3ae6497fcd353b9ccb7230c969) Thanks [@SyedUmerHasan](https://github.com/SyedUmerHasan)! - Navigation Bar issue fixes
+
+- Updated dependencies [[`7c93bc3`](https://github.com/numldesign/numl-react/commit/7c93bc3232c38c3ae6497fcd353b9ccb7230c969)]:
+  - @numl-react/atoms@0.0.36
+  - @numl-react/elements@0.0.36
+  - @numl-react/molecules@0.0.36
+  - @numl-react/utility@0.0.36
+
 ## 0.0.35
 
 ### Patch Changes

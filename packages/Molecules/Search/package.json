@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/search",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "A simple and accessible component for React by numl design",
   "keywords": [
     "design",
@@ -44,7 +44,7 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/core": "^0.0.35"
+    "@numl-react/core": "^0.0.36"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
