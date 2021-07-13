@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/elements",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "Attribute Provider Box for Numl React by NUML.Design.",
   "keywords": [
     "component",
@@ -46,7 +46,7 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/utility": "^0.0.35",
+    "@numl-react/utility": "^0.0.36",
     "nanoid": "^3.1.23"
   },
   "devDependencies": {
