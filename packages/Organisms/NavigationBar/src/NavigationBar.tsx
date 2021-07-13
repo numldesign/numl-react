@@ -45,32 +45,14 @@ type NavigationItem = {
 };
 
 NavigationBar.Item = (props: NavigationItem) => {
-  const {
-    label,
-    icon,
-    children,
-    onClick,
-    beforeClick,
-    afterClick,
-    dropdown = false,
-  } = props;
-  const buttonRef = React.useRef(null);
-
-  const clickEvent: any = (event: React.SyntheticEvent) => {
-    beforeClick && beforeClick(event);
-    onClick && onClick(event);
-    afterClick && afterClick(event);
-  };
-
-  useEventListener('click', clickEvent, buttonRef);
-
+  const { label, icon, children, dropdown = false, ...otherProps } = props;
   return (
     <El.Menuitem
       gap="2x"
       flex
       width="100%"
       content="space-between"
-      ref={buttonRef}
+      {...otherProps}
     >
       <El.Flex gap="2x">
         {icon && typeof icon === 'string' ? <El.Icon name={icon} /> : icon}
