@@ -1,6 +1,6 @@
 {
   "name": "@numl-react/core",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "Core Packages of Numl React by NUML.Design.",
   "keywords": [
     "components",
@@ -47,11 +47,11 @@
     "build:types": "npx tsc -b --verbose"
   },
   "dependencies": {
-    "@numl-react/atoms": "^0.0.34",
-    "@numl-react/elements": "^0.0.34",
-    "@numl-react/molecules": "^0.0.34",
-    "@numl-react/organisms": "^0.0.34",
-    "@numl-react/utility": "^0.0.34"
+    "@numl-react/atoms": "^0.0.35",
+    "@numl-react/elements": "^0.0.35",
+    "@numl-react/molecules": "^0.0.35",
+    "@numl-react/organisms": "^0.0.35",
+    "@numl-react/utility": "^0.0.35"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
